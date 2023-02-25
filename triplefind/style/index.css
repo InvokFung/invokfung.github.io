@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+}
+
+.container {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    position: relative;
+}
+
+.board, .board-factory {
+    width: 100%;
+    height: 100%;
+    background-image: url("../asset/image/tableBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.board-factory {
+    visibility: hidden;
+    z-index: -1;
+}
+
+.card-container, .card-factory {
+    width: 100%;
+    text-align: center;
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+.start-cover {
+    position: absolute;
+    inset: 0;    
+    background: rgba(89, 97, 91, 0.85);
+    font-weight: bold;
+    z-index: 50;
+    transition: opacity 1s;        
+}
+
+.result-cover {
+    position: absolute;
+    inset: 0;    
+    background: rgba(89, 97, 91, 0.95);
+    font-weight: bold;
+    z-index: 50;
+    transition: opacity 1s;
+}
+
+.cover-content, .result-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max(70%, 188px);
+    height: 40%;
+    text-align: center;
+    margin: 0 0 50px 0;
+    font-size: min(5vw, 30px);
+    color: rgb(233, 229, 229);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-content {
+    width: max(80%, 188px);
+}
+
+.result-title {
+    margin-bottom: 20px;
+    font-size: min(6vw, 40px);
+}
+
+.result-detail {
+    display: table;
+    font-size: min(4vw, 30px);
+    color: rgb(187, 184, 184);
+}
+
+.result-detail p {
+    display: table-row;
+}
+
+.result-detail span {
+    display: table-cell;
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+.cover-content p {
+    margin-top: 0;
+}
+
+.cover-content span {
+    font-size: min(4vw, 26px);
+}
+
+.cardNum-wrapper {
+    width: min(40%, 180px);
+    height: 3rem;
+    margin: 3vw auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardNum {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numChange {
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#start-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start-btn:hover, .numChange:hover {
+    color: rgb(170, 170, 170);
+}
+
+#start-btn i {
+    font-size: min(2vw, 23px);
+    vertical-align: +0.15em;
+}
+
+.card {
+    width: 50px;
+    aspect-ratio: 4/5;
+    margin: calc(10%/12);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card * {
+    border-radius: 5px;
+    border: 1px solid #3F292B;
+}
+
+.card-inner {        
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: transparent;    
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+
+.card-selected .card-inner {
+    transform: rotateY(180deg);
+    transition: transform 0.4s;
+    cursor: auto;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: rgb(185, 108, 73);
+}
+
+.card-back {
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transform: rotateY(180deg);    
+}
+
+.card-back div {
+    width: 88%;
+    aspect-ratio: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 450px) {    
+    .board {
+        padding: 25vw 4rem 15vw 4rem;
+    }
+
+    .result-title {
+        font-size: min(9vw, 30px);
+    }
+
+    .result-detail {
+        font-size: min(6vw, 20px);
+    }
+
+    .result-content {
+        width: max(80%, 188px);
+    }
+}
