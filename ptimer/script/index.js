@@ -1,886 +1,825 @@
-/*
-Evaluated based on functionality, user experience, the quality of the code and documentation.
-A brief explanation (readme.txt) of how to run the game.
-*/
-window.onload = function() {
-    
-    var container = document.querySelector(".container");
-    // Create app
-    var game = new TripleFind(container);
-    
-    // Initialize app
-    game.init();
+/**
+ * ETimer (Formerly P-Timer)
+ * Modern Pomodoro Timer with Vanta.js, Sidebar Playlist, and Encouragement.
+ */
 
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const app = new PomodoroApp();
+    app.init();
+});
 
-// TipleFind App
+class PomodoroApp {
+    constructor() {
+        // --- 1. Audio Data ---
+        this.trackList = [
+            { title: "Lofi: Ipanema Daydream", url: "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Ipanema%20Daydream.mp3", type: "focus" },
+            { title: "Ambient: NASA Space", url: "https://archive.org/download/SymphoniesOfThePlanets/1%20NASA%20Voyager%20Space%20Sounds.mp3", type: "focus" },
+            { title: "Jazz: Lobby Time", url: "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Lobby%20Time.mp3", type: "break" },
+            { title: "Piano: Gymnopedie No.1", url: "https://ia800501.us.archive.org/3/items/ErikSatieGymnopedieNo1/ErikSatieGymnopedieNo1.mp3", type: "break" },
+            { title: "Nature: Forest Rain", url: "https://assets.mixkit.co/sfx/preview/mixkit-light-rain-loop-2393.mp3", type: "focus" }
+        ];
 
-class TripleFind {
+        // --- 2. DOM Elements ---
+        this.timeDisplay = document.getElementById('timeDisplay');
+        this.startPauseBtn = document.getElementById('startPauseBtn');
+        this.resetBtn = document.getElementById('resetBtn');
+        this.modeBtns = document.querySelectorAll('.mode-btn');
+        this.taskInput = document.getElementById('taskInput');
+        this.encouragementDisplay = document.getElementById('encouragementDisplay');
+        this.playlistContainer = document.getElementById('playlistContainer');
+        
+        // Settings & Modal
+        this.settingsBtn = document.getElementById('settingsBtn');
+        this.closeSettingsBtn = document.getElementById('closeSettingsBtn');
+        this.saveSettingsBtn = document.getElementById('saveSettingsBtn');
+        this.settingsModal = document.getElementById('settingsModal');
+        this.inputs = {
+            pomo: document.getElementById('settingPomo'),
+            short: document.getElementById('settingShort'),
+            long: document.getElementById('settingLong')
+        };
+        this.separateMusicToggle = document.getElementById('separateMusicToggle');
+        this.focusMusicSelect = document.getElementById('focusMusicSelect');
+        this.breakMusicSelect = document.getElementById('breakMusicSelect');
+        this.breakMusicWrap = document.getElementById('breakMusicSelectWrap');
 
-    constructor(container) {
-        // User specified container to deploy the app
-        this._container = container;
+        // FAQ & ToS
+        this.faqBtn = document.getElementById('faqBtn');
+        this.faqModal = document.getElementById('faqModal');
+        this.closeFaqBtn = document.getElementById('closeFaqBtn');
+        this.tosLink = document.getElementById('tosLink');
+        this.tosModal = document.getElementById('tosModal');
+        this.closeTosBtn = document.getElementById('closeTosBtn');
+
+        // Visuals & Nav
+        this.cdDisk = document.getElementById('cdDisk');
+        this.trackNameDisplay = document.getElementById('trackNameDisplay');
+        this.prevTrackBtn = document.getElementById('prevTrackBtn');
+        this.nextTrackBtn = document.getElementById('nextTrackBtn');
+
+        this.themeToggle = document.getElementById('themeToggle'); // May not exist in new design
+        this.bgToggle = document.getElementById('bgToggle'); // May not exist in new design
+        this.pipBtn = document.getElementById('pipBtn');
+        this.fsBtn = document.getElementById('fsBtn');
+        this.vantaContainer = document.getElementById('vanta-bg');
+        this.videoContainer = document.getElementById('video-bg'); // May not exist in new design
+        
+        // Audio Elements
+        this.bgMusic = document.getElementById('bgMusic');
+        this.soundRain = document.getElementById('soundRain');
+        this.soundCafe = document.getElementById('soundCafe');
+        this.alarmSound = document.getElementById('alarmSound');
+        
+        // Mixer
+        this.soundToggles = document.querySelectorAll('.sound-toggle');
+        this.volumeSliders = document.querySelectorAll('.volume-slider');
+
+        // --- 3. State & Defaults ---
+        const savedTime = JSON.parse(localStorage.getItem('ptimer_times')) || { pomodoro: 25, shortBreak: 5, longBreak: 15 };
+        
+        this.modes = {
+            pomodoro: { time: savedTime.pomodoro, color: '#ff6b6b' },
+            shortBreak: { time: savedTime.shortBreak, color: '#4ecdc4' },
+            longBreak: { time: savedTime.longBreak, color: '#ffe66d' }
+        };
+        
+        this.currentMode = 'pomodoro';
+        this.timeLeft = this.modes.pomodoro.time * 60;
+        this.isRunning = false;
+        this.timerId = null;
+        this.vantaEffect = null;
+        
+        // Audio State
+        this.currentTrackIndex = 0;
+        this.separateMusic = localStorage.getItem('ptimer_separate_music') === 'true';
+        this.selectedFocusTrack = parseInt(localStorage.getItem('ptimer_focus_track')) || 0;
+        this.selectedBreakTrack = parseInt(localStorage.getItem('ptimer_break_track')) || 2; 
+
+        // Preferences
+        this.bgMode = localStorage.getItem('ptimer_bg') || 'vanta';
+        this.theme = localStorage.getItem('ptimer_theme') || 'light';
     }
-    
+
     init() {
-
-        // ============================================
-        // Background Setup
-        // ============================================
-
-        this.loadTemplate();
-        this.setEnvironment();
-        this.setupGuide();
-        this.assignUIEventListeners();
-        this.updateLimitDisplay();
+        this.applyTheme();
         
-    }
-
-    // Default template
-
-    loadTemplate() {
-        this._container.innerHTML = `
-            <div class="top-bar">
-                <div class="info-wrapper">
-                    <div id="timer" title="Remaining time"><font id="u-timer">-</font></div>
-                    <div id="score">
-                        <div>Score</div>
-                        <div id="u-score">-</div>
-                    </div>
-                    <div id="restart-btn" title="Restart">&#8634</div>
-                </div>
-                <div id="guide-btn" title="How to play?">&#63</div>
-            </div>
-            <div class="board">
-                <div class="card-container"></div>
-            </div>
-            <div class="start-cover">
-                <div class="cover-content">
-                    <p>Triple Find</p>
-                    <span>Choose the number of cards to begin</span>
-                    <span>Limited to <font id="cardLimit">-</font> cards</span>
-                    <div class="cardNum-wrapper">
-                        <div id="cardDec" class="numChange">-</div>
-                        <div id="cardNum">6</div>
-                        <div id="cardInc" class="numChange">+</div>
-                    </div>
-                    <div id="start-btn"><i>&#9658;</i> Start</div>
-                </div>
-            </div>
-            <div class="bottom-bar">
-                <div>Copyright &copy; 2023 Alan Fung.</div>
-                <div><a class="terms" href="">Terms of Service</a></div>
-            </div>
-        `;
-    }
-
-    setEnvironment() {
-        // ============================================
-        // Scene elements
-        // ============================================
-        this._screen = document.querySelector(".board");
-        this._cardBoard = document.querySelector(".card-container");
-        this._cardNum = document.querySelector("#cardNum");
-        this._cardLimit = document.querySelector("#cardLimit");
-
-        this._numChangeBtn = document.querySelectorAll(".numChange");
-        this._startBtn = document.querySelector("#start-btn");
-        this._guideBtn = document.querySelector("#guide-btn");
-        this._restartBtn = document.querySelector("#restart-btn");
-
-        this._utimer = document.querySelector("#u-timer");
-        this._uscore = document.querySelector("#u-score");
-        this._terms = document.querySelector(".terms");
-
-        // ============================================
-        // Settings
-        // ============================================
-
-        this._startDelay = 1000;
-        this._endDelay = 800;
-        this._hideDelay = 800;
-
-        // ============================================
-        // Controllers (Interval / Timeout)
-        // ============================================
-
-        this._timer_controller;
-        this._cover_controller;
-        this._result_controller;
-        this._event_controller;
-
-        // ============================================
-        // States
-        // ============================================
-
-        this._gameState = 0;            // Game state : started (1) or waiting (0)
-        this._timeLimit = 0;            // Game time limit
-        this._gameTime = 0;             // Game elapsed time
-
-        // ============================================
-        // Game Data
-        // ============================================
+        // Initialize background - Always Vanta/Warm
+        this.initVanta();
         
-        this._selectedCards = [];       // Latest 3 selected card {card object}        
-        this._guessedCards = [];        // Flipped successful triple cards {card object}        
-        this._flipHistory = [];         // Flipped cards {card object}        
-        this._flipHistoryCount = [];    // Cards flip count {int}        
-        this._cardSet = [];             // Game Cards {card object}        
-        this._reflipCount = 0;          // Total reflip count        
-        this._attempt = 0;              // Total triple flip attempt        
-        this._score = 0;                // Player score
-
-        // ============================================
-        // Browser Size
-        // ============================================
-
-        this._initialBrowserSize = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
-        this._browserSize = this._initialBrowserSize;
-    }
-
-    // ============================================
-    // Utility functions
-    // ============================================
-
-    shuffle(array) {
-        let currentIndex = array.length,  randomIndex;
+        this.setupEventListeners();
+        this.updateDisplay();
+        this.renderPlaylist();
+        this.initTyped();
         
-        while (currentIndex != 0) {                    
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
+        // Init Audio Volume
+        this.bgMusic.volume = 0.5;
+        this.soundRain.volume = 0.5;
+        this.soundCafe.volume = 0.5;
         
-            // Swap random index element with the current index element.
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-        }
+        // Initial Splash Screen
+        this.initSplashScreen();
+
+        // Load initial track state logic
+        this.initTrackState();
+        this.loadTrack(this.currentTrackIndex, false); // False = don't auto play
         
-        return array;
+        // Remove auto-request on init to avoid blocking/spamming. 
+        // We will move this to a user gesture action (Unlock).
     }
 
-    sizeFilter(val) {
-        // Reduce deck size if the space available is less than 0.1
-        if (val - Math.floor(val) < 0.1)
-            return val-1;
-        else
-            return val;
-    }
+    // --- New Features ---
 
-    formatTime(val) {
-        let hour = Math.floor(val / 60 / 60);
-        let minute = Math.floor(val / 60 % 60);
-        let second = val % 60;
-        let time = "";
-        if (hour > 0)
-            time += hour+"h ";
-        if (minute > 0 || hour > 0)
-            time += minute+"m ";
-        if (second >= 0 || minute > 0 || hour > 0)
-            time += second+"s";
-        return time;
-    }
-
-    // ============================================
-    // Game functions
-    // ============================================
-
-    resetGame() {
-        // Update game state
-        this._gameState = 0;
-
-        // Clear board
-        this._cardBoard.innerHTML = "";
-        
-        // Reset Environment
-        this._selectedCards = [];
-        this._guessedCards = [];
-        this._flipHistory = [];
-        this._flipHistoryCount = [];
-        this._cardSet = [];
-        
-        this._reflipCount = 0;
-        this._attempt = 0;
-        this._score = 0;        
-        
-        this._cardBoard.style = null;
-        this.updateLimitDisplay();
-        
-        // Stop timer
-        clearInterval(this._timer_controller);
-    }
-
-    // Timer
-
-    countDown() {
-        if (this._gameTime == 0) {
-            clearInterval(this._timer_controller);
-            this.endGame();
-            return;
-        }
-        this._gameTime--;
-        this._utimer.innerText = this.formatTime(this._gameTime);
-    }
-
-    startTimer() {        
-        this.countDown();
-        this._timer_controller = setInterval(this.__countDown, 1000);
-    }
-
-    // Card Select Listener
-
-    assignSelectListener() {
-        this._cardSet.forEach((scard)=>{
-            scard.addEventListener("click", this.__doSelectCard, true);
-        })
-    }
-
-    removeSelectListener() {
-        this._cardSet.forEach((scard)=>{
-            scard.removeEventListener("click", this.__doSelectCard, true);
-        })
-    }
-
-    assignSelected(card) {
-        if (!card.classList.contains("card-selected")){
-            card.classList.add("card-selected");
-            this._selectedCards.push(card);
-        }
-    }
-
-    removeSelected(card) {
-        this._selectedCards.forEach((fcard) => {
-            fcard.classList.remove("card-selected");
-        })
-    }
-
-    // Game util
-
-    generateRandomCards(choseNum) {
-        let randSet = [];
-        for (let i=1;i<=choseNum/3;i++){
-            randSet.push(i);
-            randSet.push(i);
-            randSet.push(i);
-        }
-
-        this.shuffle(randSet);
-        return randSet;
-    }
-
-    computeCurrentScore() {
-        let timeRatio = this._gameTime / this._timeLimit;
-        let curScore = 1000;        
-        if (timeRatio < 0.5)
-            curScore = 500;
-        else
-            curScore = this._gameTime / this._timeLimit * 1000;
-        curScore = Math.round(curScore / 10) * 10;
-        return curScore;
-    }
-
-    computeReflipped() {
-        this._flipHistoryCount.forEach((hcard, index) => {
-            if (hcard > 0)
-                this._reflipCount++;
-        })
-    }
-
-    // Game action
-
-    doSelectCard(e) {
-        // Filter clicked elements
-        if (!e.target.classList.contains("card-front"))
-            return;
-        
-        let card =  e.target.parentElement.parentElement;
-        let choseNum = parseInt(this._cardNum.innerText);
-        
-        // Disable actions
-        this.removeSelectListener();
-
-        // If the no. of selected is within 3
-        // Do selection
-        if (this._selectedCards.length+1 <= 3)
-            this.assignSelected(card);
-        
-        // If the no. of selected below 3
-        // Skip validation and enable actions
-        if (this._selectedCards.length != 3)
-            return this.assignSelectListener();
-        
-        // Three cards are selected
-        let cv1 = this._selectedCards[0].getAttribute("data-value");
-        let cv2 = this._selectedCards[1].getAttribute("data-value");
-        let cv3 = this._selectedCards[2].getAttribute("data-value");
-
-        // Record attempt
-        this._attempt++;
-
-        // Validation Case 1 - Triple
-        if (cv1 == cv2 && cv2 == cv3){
-            // Record flipped successful triple cards
-            this._guessedCards = this._guessedCards.concat(this._selectedCards);
-            this._selectedCards = [];
-            this.assignSelectListener();
-
-            // Compute the score to be added according to the time
-            let getScore = this.computeCurrentScore();
-            this._score += getScore;
-            this._uscore.innerText = this._score;
-
-            // Record of cards clicked
-            for (let i=0;i<this._selectedCards.length;i++){
-                if (!this._flipHistory.includes(this._selectedCards[i]))
-                    this._flipHistory.push(this._selectedCards[i]);                    
-            }
-
-            // Game finishes
-            if (this._guessedCards.length == choseNum) {
-                clearInterval(this._timer_controller);
-                return this.endGame();
-            }
-        }
-        // Validation Case 2 - Non Triple
-        else {
-            for (let i=0;i<this._selectedCards.length;i++){
-                if (this._flipHistory.includes(this._selectedCards[i])) {
-                    this._score = this._score - 200 > 0 ? this._score - 200 : 0;
-                    this._uscore.innerText = this._score;
-                    break;
-                }
-            }
-
-            // Flip back selected cards
-            setTimeout(async () => {
-                await this.removeSelected();
-                this._selectedCards = [];
-                this.assignSelectListener();
-            }, 800)
-
-            // Record of cards clicked
-            for (let i=0;i<this._selectedCards.length;i++){
-                if (!this._flipHistory.includes(this._selectedCards[i]))
-                    this._flipHistory.push(this._selectedCards[i]);            
-                    let val = this._flipHistoryCount[parseInt(this._selectedCards[i].getAttribute("id").substring(1))];
-                    this._flipHistoryCount[parseInt(this._selectedCards[i].getAttribute("id").substring(1))] = val == null ? 0 : val+1;
-            }
-        }        
-    }    
-
-    // ============================================
-    // Display Toggling UI functions
-    // ============================================
-    
-    showCover() {
-        let startCover = document.querySelector(".start-cover");
-        if (startCover) {
-            clearTimeout(this._cover_controller);
-            startCover.style.left = "0";
-            startCover.style.right = "0";
-            startCover.style.opacity = "1";
-        };
-    }
-
-    hideCover() {
-        let startCover = document.querySelector(".start-cover");
-        if (startCover) {
-            startCover.style.opacity = "0";
-            this._cover_controller = setTimeout(() => {
-                startCover.style.left = "-100%";
-                startCover.style.right = "unset";
-            },800)
-        };
-    }
-
-    showInfoBar() {
-        let scoreBoard = document.querySelector(".info-wrapper");
-        scoreBoard.style.top = "0";
-    }
-
-    hideInfoBar() {
-        let scoreBoard = document.querySelector(".info-wrapper");
-        scoreBoard.style.top = "-100%";
-    }
-
-    showGuide() {
-        let getGuide = document.querySelector(".guide-cover");
-        (getGuide) && (getGuide.style.display = "block");
-    }
-
-    hideGuide() {
-        let getGuide = document.querySelector(".guide-cover");
-        (getGuide) && (getGuide.style.display = "none");
-    }
-
-    showResult() {
-        let resultCover = document.querySelector(".result-cover");
-        if (resultCover) {
-            clearTimeout(this._result_controller);
-            resultCover.style.left = "0";
-            resultCover.style.right = "0";
-            resultCover.style.opacity = "1";
-        };
-    }
-
-    hideResult() {
-        let resultCover = document.querySelector(".result-cover");
-        if (resultCover) {
-            resultCover.style.opacity = "0";
-            this._result_controller = setTimeout(() => {
-                resultCover.style.left = "-100%";
-                resultCover.style.right = "unset";
-            },800)
-        };
-    }
-
-    // ============================================
-    // Computational UI functions
-    // ============================================
-
-    computeScreenSize() {
-        let computedStyle = getComputedStyle(this._screen);
-
-        // Client width and height include padding
-        let screenHeight = this._screen.clientHeight;
-        let screenWidth = this._screen.clientWidth;
-
-        screenHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
-        screenWidth -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
-        return {
-            height: screenHeight,
-            width: screenWidth
-        }
-    }
-
-    computeCardSize() {
-        let boardFactory = document.createElement("div");
-        boardFactory.setAttribute("class","board-factory");
-
-        let cardFactory = document.createElement("div");
-        cardFactory.setAttribute("class","card-factory");
-
-        let card = document.createElement("div");
-        card.setAttribute("class","card");
-        card.setAttribute("id","defaultCard");
-        cardFactory.append(card);
-        
-        boardFactory.append(cardFactory);
-        document.body.append(boardFactory);
-        
-        let Acard = document.querySelector("#defaultCard");
-        let computedStyle = getComputedStyle(Acard);
-
-        // Client width and height include padding
-        let AcardHeight = Acard.clientHeight;
-        let AcardWidth = Acard.clientWidth;
-
-        AcardHeight += parseFloat(computedStyle.marginTop) + parseFloat(computedStyle.marginBottom);
-        AcardWidth += parseFloat(computedStyle.marginLeft) + parseFloat(computedStyle.marginRight);
-
-        document.body.removeChild(boardFactory);
-        return {
-            height: AcardHeight,
-            width: AcardWidth
-        }
-    }
-
-    computeLimit() {
-        let screenSize = this.computeScreenSize();
-        let newCardSize = this.computeCardSize();
-        let maxX = Math.floor(this.sizeFilter(screenSize.width / newCardSize.width));
-        let maxY = Math.floor(this.sizeFilter(screenSize.height / newCardSize.height));
-        return {
-            maxX: maxX,
-            maxY: maxY,
-            cap: Math.floor(maxX * maxY / 3),
-            screenSize: screenSize
-        }
-    }
-
-    computeDisplay(choseNum) {
-        // Preferably square shape
-        let square = Math.sqrt(choseNum);
-        // Compute difference between perfect square and reality
-        let diff = square - Math.floor(square);
-
-        // Compute the fittest area that allow the most no. of cards
-        let maxX, maxY;        
-        if (diff > 0.5) {
-            maxX = maxY = Math.ceil(square);
-        } else if (diff < 0.5 && diff > 0) {
-            maxX = maxY = Math.floor(square);
-            // Add an extra line that not full
-            maxY++;
+    initTyped() {
+        if (window.Typed) {
+            new Typed('#encouragementDisplay', {
+                strings: [
+                    "You are doing great!",
+                    "One step at a time.",
+                    "Stay focused.",
+                    "Make it happen.",
+                    "Breathe in, breathe out."
+                ],
+                typeSpeed: 80, 
+                backSpeed: 50, 
+                backDelay: 5000, 
+                loop: true,
+                showCursor: false
+            });
         } else {
-            // Perfect square
-            maxX = maxY = square;
-        }
-        return {
-            maxX: maxX,
-            maxY: maxY
+            this.encouragementDisplay.textContent = "What are you working on?";
         }
     }
 
-    // ============================================
-    // Scene Rendering UI functions
-    // ============================================
+    // --- Splash / Lock Screen Interaction ---
+    initSplashScreen() {
+        const splash = document.getElementById('splashScreen');
+        if (!splash) return;
 
-    updateLimitDisplay() {
-        // Recalculate limit
-        this._limit = this.computeLimit();
-
-        // Update the limit of cards display on Start cover
-        this._cardLimit.innerText = this._limit.cap * 3;
-
-        // First initialize case
-        if (this._initialLimit == null) {
-            this._initialLimit = this._limit;
-            return;
-        }
-
-        // Patch the number if the number of cards exceed new limit
-        if (this._cardNum.innerText > this._limit.cap * 3)
-            this._cardNum.innerText = this._limit.cap * 3;
-    }
-
-    updateCardNum(e) {
-        let curNum = parseInt(this._cardNum.innerText);
-        let multiple = curNum/3;
-        // Increase button
-        if (e.target.id == "cardInc")
-            curNum = multiple < this._limit.cap ? 3 * (multiple + 1) : curNum;
-        // Decrease button
-        else if (e.target.id == "cardDec")
-            curNum = multiple > 2 ? 3 * (multiple - 1) : curNum;
-        this._cardNum.innerText = curNum;
-    }
-
-    buildGameEnv() {
-        // Prevent multiple click during Scene transition
-        this._startBtn.removeEventListener("click", this.__buildGameEnv);
-
-        this.hideCover();
-        this.showInfoBar();
-
-        // Lock initial size
-        this._initialLimit = this._limit;
-        this._initialBrowserSize = this._browserSize;
-
-        this._gameState = 1;
+        let startY = 0;
+        let isDragging = false;
         
-        // The card number chose by user
-        let choseNum = parseInt(this._cardNum.innerText);
-
-        // Setup game scene
-        this.startGame(choseNum);
-
-        // Generate random cards' order
-        let randSet = this.generateRandomCards(choseNum);
-
-        // Calculate display depends on chose number
-        let optimalSize = this.computeDisplay(choseNum);
-        if (optimalSize.maxX > this._limit.maxX || optimalSize.maxY > this._limit.maxY )
-            optimalSize = this._limit;
-        
-        // Cards Serialization
-        for (let i = 1; i <= choseNum; i++){
-            let card = document.createElement("div");
-            card.setAttribute("class","card");
-            card.setAttribute("id","c"+i);
-            card.setAttribute("data-value", randSet[i-1]);
+        const unlock = () => {
+            splash.style.transition = 'transform 0.5s ease-in, opacity 0.5s';
+            splash.style.transform = 'translateY(-100%)';
+            splash.style.opacity = '0';
             
-            let cardInner = document.createElement("div");
-            cardInner.setAttribute("class","card-inner");
+            setTimeout(() => {
+                splash.classList.add('hidden');
+                splash.style.display = 'none'; 
+            }, 500);
 
-            let cardFront = document.createElement("div");
-            cardFront.setAttribute("class","card-front");
-            let cardBack = document.createElement("div");
-            cardBack.setAttribute("class","card-back");
+            this.bgMusic.play().catch(()=>{});
+            
+            const notifAsked = localStorage.getItem('etimer_notif_asked');
+            if ("Notification" in window && Notification.permission === "default" && !notifAsked) {
+                Notification.requestPermission().then(() => {
+                    localStorage.setItem('etimer_notif_asked', 'true');
+                });
+            }
+        };
 
-            let cardVal = document.createElement("div");
-            cardVal.innerText = randSet[i-1];
-            cardBack.append(cardVal);
+        const reset = () => {
+             splash.style.transition = 'transform 0.3s ease-out, opacity 0.3s';
+             splash.style.transform = 'translateY(0)';
+             splash.style.opacity = '1';
+        };
 
-            cardInner.append(cardFront);
-            cardInner.append(cardBack);
-            card.append(cardInner);
-            this._cardBoard.append(card);
+        const getClientY = (e) => {
+            return (e.touches && e.touches.length > 0) ? e.touches[0].clientY : 
+                   (e.changedTouches && e.changedTouches.length > 0) ? e.changedTouches[0].clientY : e.clientY;
+        };
 
-            if (i % optimalSize.maxX == 0) {
-                let br = document.createElement("br");
-                this._cardBoard.append(br);
+        const onPointerDown = (e) => {
+            if (e.type === 'mousedown' && e.button !== 0) return;
+            isDragging = true;
+            startY = getClientY(e);
+            splash.style.transition = 'none';
+        };
+
+        const onPointerMove = (e) => {
+            if (!isDragging) return;
+            if (e.cancelable && e.type === 'touchmove') e.preventDefault();
+
+            const currentY = getClientY(e);
+            const diff = startY - currentY;
+            
+            if (diff > 0) {
+                splash.style.transform = `translateY(-${diff}px)`;
+                splash.style.opacity = Math.max(0.4, 1 - (diff / window.innerHeight));
+            }
+        };
+
+        const onPointerUp = (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const endY = getClientY(e);
+            const diff = startY - endY;
+            
+            if (diff > 100 || diff > window.innerHeight * 0.2) { // Made easier to unlock
+                unlock();
+            } else {
+                reset();
+            }
+        };
+        
+        const onPointerLeave = () => {
+            if (isDragging) {
+                isDragging = false;
+                reset();
+            }
+        };
+
+        // Touch
+        const opts = {passive: false};
+        splash.addEventListener('touchstart', onPointerDown, opts);
+        splash.addEventListener('touchmove', onPointerMove, opts);
+        splash.addEventListener('touchend', onPointerUp);
+        splash.addEventListener('touchcancel', onPointerLeave);
+
+        // Mouse
+        splash.addEventListener('mousedown', onPointerDown);
+        window.addEventListener('mousemove', onPointerMove);
+        window.addEventListener('mouseup', onPointerUp);
+        document.addEventListener('mouseleave', onPointerLeave); // Catch leaving window
+    }
+
+    renderPlaylist() {
+        this.playlistContainer.innerHTML = '';
+        this.trackList.forEach((track, index) => {
+            const item = document.createElement('div');
+            item.className = `track-item ${index === this.currentTrackIndex ? 'active' : ''}`;
+            item.innerHTML = `
+                <div class="track-icon"><i class="fas ${index === this.currentTrackIndex ? 'fa-volume-up' : 'fa-music'}"></i></div>
+                <div class="track-info">${track.title}</div>
+            `;
+            item.addEventListener('click', () => {
+                this.loadTrack(index, true); // True = auto play on click
+            });
+            this.playlistContainer.appendChild(item);
+        });
+    }
+
+    updatePlaylistUI() {
+        const items = this.playlistContainer.querySelectorAll('.track-item');
+        items.forEach((item, index) => {
+            if (index === this.currentTrackIndex) {
+                item.classList.add('active');
+                item.querySelector('.track-icon i').className = 'fas fa-volume-up';
+            } else {
+                item.classList.remove('active');
+                item.querySelector('.track-icon i').className = 'fas fa-music';
+            }
+        });
+    }
+
+    // --- Data & Logic Setup ---
+
+    initTrackState() {
+        if (this.separateMusic) {
+            this.currentTrackIndex = (this.currentMode === 'pomodoro') ? this.selectedFocusTrack : this.selectedBreakTrack;
+        } else {
+            this.currentTrackIndex = this.selectedFocusTrack;
+        }
+    }
+
+    loadTrack(index, autoPlay = false) {
+        if(index < 0) index = this.trackList.length - 1;
+        if(index >= this.trackList.length) index = 0;
+        
+        this.currentTrackIndex = index;
+        const track = this.trackList[this.currentTrackIndex];
+        
+        this.bgMusic.src = track.url;
+        this.trackNameDisplay.textContent = track.title;
+        this.updatePlaylistUI();
+
+        if (autoPlay || this.isRunning || this.cdDisk.classList.contains('playing')) {
+            this.bgMusic.play().catch(e => console.log("Auto-play prevented:", e));
+            this.cdDisk.classList.add('playing');
+        } else {
+            this.cdDisk.classList.remove('playing');
+        }
+    }
+
+    // --- Event Listeners ---
+
+    setupEventListeners() {
+        this.startPauseBtn.addEventListener('click', () => this.toggleTimer());
+        this.resetBtn.addEventListener('click', () => this.resetTimer());
+
+        // Mode Switching
+        this.modeBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // e.target might be the icon, so use currentTarget or closest
+                const target = e.currentTarget; 
+                this.switchMode(target.dataset.mode);
+            });
+        });
+
+        // Player Controls
+        // CD Click
+        this.cdDisk.parentElement.addEventListener('click', () => this.toggleMusic());
+        // Mini buttons
+        this.prevTrackBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.loadTrack(this.currentTrackIndex - 1, true);
+        });
+        this.nextTrackBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.loadTrack(this.currentTrackIndex + 1, true);
+        });
+
+        // Settings
+        this.settingsBtn.addEventListener('click', () => this.openSettings());
+        this.closeSettingsBtn.addEventListener('click', () => this.closeSettings());
+        this.saveSettingsBtn.addEventListener('click', () => this.saveSettings());
+        this.separateMusicToggle.addEventListener('change', (e) => {
+            this.separateMusic = e.target.checked;
+            this.toggleBreakSelectState();
+        });
+
+        // Tools
+        if(this.themeToggle) this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        if(this.bgToggle) this.bgToggle.addEventListener('click', () => this.toggleBackgroundMode());
+        if(this.pipBtn) this.pipBtn.addEventListener('click', () => this.togglePiP());
+        if(this.fsBtn) this.fsBtn.addEventListener('click', () => this.toggleFullScreen());
+
+        // FAQ & ToS
+        this.faqBtn.addEventListener('click', () => this.openFaq());
+        this.closeFaqBtn.addEventListener('click', () => this.closeFaq());
+        this.tosLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.openTos();
+        });
+        this.closeTosBtn.addEventListener('click', () => this.closeTos());
+
+        // Mixer
+        this.soundToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                const btn = e.target.closest('.sound-toggle');
+                const soundType = btn.dataset.sound;
+                this.toggleAmbience(soundType, btn);
+            });
+        });
+
+        this.volumeSliders.forEach(slider => {
+            slider.addEventListener('input', (e) => {
+                const targetSound = e.target.dataset.target;
+                const vol = e.target.value / 100;
+                if(targetSound === 'rain') this.soundRain.volume = vol;
+                if(targetSound === 'cafe') this.soundCafe.volume = vol;
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target == this.settingsModal) this.closeSettings();
+            if (e.target == this.faqModal) this.closeFaq();
+            if (e.target == this.tosModal) this.closeTos();
+        });
+    }
+
+    // --- Core Logic ---
+
+    switchMode(mode) {
+        if (this.currentMode === mode) return; // Don't reload if same
+
+        this.currentMode = mode;
+        this.pauseTimer();
+        
+        // Set time
+        const timeInMinutes = this.modes[mode].time;
+        this.timeLeft = timeInMinutes * 60;
+        
+        // UI
+        this.modeBtns.forEach(btn => btn.classList.remove('active'));
+        const activeBtn = document.querySelector(`[data-mode="${mode}"]`);
+        if(activeBtn) activeBtn.classList.add('active');
+        
+        document.documentElement.style.setProperty('--primary-color', this.modes[mode].color);
+        
+        this.fixTrackForMode();
+        this.updateDisplay();
+    }
+
+    fixTrackForMode() {
+        let targetIndex = this.selectedFocusTrack;
+        if (this.separateMusic) {
+            targetIndex = (this.currentMode === 'shortBreak' || this.currentMode === 'longBreak') 
+                ? this.selectedBreakTrack 
+                : this.selectedFocusTrack;
+        }
+        
+        // Only auto switch if not already playing that track
+        if (this.currentTrackIndex !== targetIndex) {
+            // Retrieve auto-play preference? For now, we just load it ready to play.
+            // If timer was running, we might want to auto play.
+            this.loadTrack(targetIndex, this.isRunning);
+        }
+    }
+
+    // --- Background & Visuals ---
+
+    toggleBackgroundMode() {
+         // Feature disabled - Single warm theme enforced
+         console.log("Bg toggle disabled");
+    }
+    
+    initVanta() {
+        if (window.VANTA) {
+            if (this.vantaEffect) {
+                this.vantaEffect.destroy();
+                this.vantaEffect = null;
             }
 
-            card.addEventListener("click", this.__doSelectCard, true);
-
-            this._cardSet.push(card);
+            try {
+                this.vantaEffect = window.VANTA.FOG({
+                    el: "#vanta-bg",
+                    mouseControls: true, touchControls: true, gyroControls: false,
+                    minHeight: 200.00, minWidth: 200.00,
+                    highlightColor: 0xffeebb, // Warm sunlight
+                    midtoneColor: 0xffca7b,   // Golden hour
+                    lowlightColor: 0xff8c69,  // Sunset orange
+                    baseColor: 0xffffff,
+                    blurFactor: 0.6, zoom: 0.8,
+                    speed: 1.2
+                });
+            } catch (e) { console.error("Vanta init error", e); }
         }
+        this.updateBackgroundVisibility();
     }
 
-    setupGuide() {
-        let guideCover = document.createElement("div");
-        guideCover.setAttribute("class", "guide-cover");
-        guideCover.style.display = "none";
-        guideCover.addEventListener("click", (e) => {
-            if (e.target.classList.contains("guide-cover"))
-                this.hideGuide();
-        }, true);
-
-        let guideContent = document.createElement("div");
-        guideContent.setAttribute("class", "guide-content");
-
-        let guideTitle = document.createElement("div");
-        guideTitle.setAttribute("class", "guide-title");
-        guideTitle.innerText = "How To Play?";
-
-        let showcase = document.createElement("div");
-        showcase.setAttribute("class", "guide-showcase");
-
-        //
-        let t1 = document.createElement("p");
-        t1.innerText = "Find all triples within the time limit";
-
-        //
-        let t2 = document.createElement("p");
-        t2.innerText = "Try to solve it as quick as you can and obtain your highest score";
-
-        //
-        let t3 = document.createElement("img");
-        t3.setAttribute("src", "asset/image/triples.png");
-
-        showcase.append(t1);
-        showcase.append(t2);
-        showcase.append(t3);
-
-        let tips = document.createElement("div");
-        tips.setAttribute("class", "guide-tips");
-
-        //
-        let t4 = document.createElement("p");
-        t4.innerText += "Remember the cards flipped to prevent mistakes";
-
-        //
-        let t5 = document.createElement("p");
-        t5.innerText += "The sooner you find a triple the higher score you get";
-
-        //
-        let t6 = document.createElement("p");
-        t6.innerText += "A fail triple with reflipped cards will reduce 200 scores";
-
-        tips.append(t4);
-        tips.append(t5);
-        tips.append(t6);                
-
-        showcase.append(tips);
-
-        guideContent.append(guideTitle);
-        guideContent.append(showcase);
-
-        guideCover.append(guideContent);
-        this._container.append(guideCover);
-    }
-
-    setupResult() {
-        let resultCover = document.createElement("div");
-        resultCover.setAttribute("class", "result-cover");
-        resultCover.style.opacity = "0";
-        resultCover.style.left = "-100%";
-        resultCover.style.right = "unset";
-        resultCover.addEventListener("click", () => {            
-            this.resetGame();
-            this.hideResult();
-            setTimeout(() => {
-                this.restart();
-            }, this._hideDelay/2);
-        }, true);
-
-        let resultContent = document.createElement("div");
-        resultContent.setAttribute("class", "result-content");
-
-        let resultTitle = document.createElement("div");
-        resultTitle.setAttribute("class", "result-title");
-        resultTitle.innerText = "Final Result";
-
-        let resultDetail = document.createElement("div");
-        resultDetail.setAttribute("class", "result-detail");
-        
-        //
-        let t1 = document.createElement("p");
-        t1.setAttribute("class","triplefound");        
-
-        //
-        let t2 = document.createElement("p");
-        t2.setAttribute("class","attempts");        
-
-        //
-        let t3 = document.createElement("p");
-        t3.setAttribute("class","totalscore");        
-
-        //
-        let t4 = document.createElement("p");
-        t4.setAttribute("class","timespent");        
-
-        //
-        let t5 = document.createElement("p");
-        t5.setAttribute("class","accuracy");
-        
-        resultDetail.append(t1);
-        resultDetail.append(t2);
-        resultDetail.append(t3);
-        resultDetail.append(t4);
-        resultDetail.append(t5);
-
-        resultContent.append(resultTitle);
-        resultContent.append(resultDetail);
-
-        resultCover.append(resultContent);
-        this._container.append(resultCover);
-    }
-
-    computeResult() {
-        let gt1 = document.querySelector(".result-detail .triplefound");        
-        let gt2 = document.querySelector(".result-detail .attempts");
-        let gt3 = document.querySelector(".result-detail .totalscore");
-        let gt4 = document.querySelector(".result-detail .timespent");
-        let gt5 = document.querySelector(".result-detail .accuracy");
-
-        //
-        let completeRatio = Math.floor(this._guessedCards.length/this._cardSet.length*100*100)/100;
-        gt1.innerHTML = `<span>Triple Found</span> <span>&#62;</span> <span>${this._guessedCards.length/3} / ${this._cardSet.length/3} (${completeRatio}%)</span>`;
-
-        //
-        let addS = (this._attempt > 1) ? 's</span>' : '</span>';
-        gt2.innerHTML = `<span>Triple Flipped</span> <span>&#62;</span> <span>${this._attempt} time${addS}`;
-
-        //
-        gt3.innerHTML = `<span>Total Score</span> <span>&#62;</span> <span>${this._score}</span>`;
-
-        //
-        let timeSpent = this.formatTime(this._timeLimit-this._gameTime);
-        gt4.innerHTML = `<span>Time Spent</span> <span>&#62;</span> <span>${timeSpent}</span>`;
-
-        //
-        this.computeReflipped();
-        let successRatio = 1 -(this._reflipCount / 3) / this._attempt;
-        let accuracy = this._attempt > 0 ? Math.floor(successRatio*100*100)/100 : 0;
-        gt5.innerHTML = `<span>Accuracy</span> <span>&#62;</span> <span>${accuracy}%</span>`;
-    }
-
-    startGame(cardNum) {
-        // Set timer
-        let bestTime = Math.floor(6 * (cardNum / 3 * cardNum / 3) / 1.85)+13;
-        this._timeLimit = bestTime;
-        this._gameTime = bestTime;
-        this._utimer.innerText = this.formatTime(this._gameTime);
-
-        // Set score
-        this._uscore.innerText = this._score;
-
-        this._event_controller = setTimeout(() => {
-            this.startTimer();
-        }, this._startDelay);
-    }
-
-    endGame() {
-        let getResult = document.querySelector(".result-cover");
-        this.hideInfoBar();
-
-        // Initialize Result page if not exist
-        if (!getResult)
-            this.setupResult();
-        
-        this.computeResult();
-
-        setTimeout(() => {
-            this.showResult();
-        }, this._endDelay)        
-    }
-
-    restart() {
-        // Reassign eventlistener for early restart
-        if (this._event_controller != null) {
-            clearTimeout(this._event_controller);
-            this._startBtn.addEventListener("click", this.__buildGameEnv);
+    updateBackgroundVisibility() {
+        if(!this.videoContainer) {
+            // Video element removed in redesign, only use Vanta
+            if(this.vantaContainer) this.vantaContainer.classList.remove('hidden');
+            return;
         }
-
-        this.hideInfoBar();
-        this.resetGame();
-        this.showCover();
-    }
-
-    onResize() {
-        this._browserSize = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
-
-        // Resize on Start cover
-        if (this._gameState == 0)
-        this.updateLimitDisplay();
-
-        // Resize in game
-        if (this._gameState == 1) {
-            this._limit = this.computeLimit();
+        
+        const video = this.videoContainer.querySelector('video');
+        
+        if (this.bgMode === 'vanta') {
+            this.vantaContainer.classList.remove('hidden');
+            this.videoContainer.classList.add('hidden');
+            if(video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        } else {
+            // Switching to video mode
+            this.vantaContainer.classList.add('hidden');
+            if(this.vantaEffect) {
+                this.vantaEffect.destroy();
+                this.vantaEffect = null;
+            }
+            this.videoContainer.classList.remove('hidden');
             
-            // Prevent squishing
-            this._cardBoard.style.position = "absolute";
-            // Lock board size
-            this._cardBoard.style.width = this._initialLimit.screenSize.width;
-
-            // On window scaling down
-            if (this._browserSize.width < this._initialBrowserSize.width)
-                this._cardBoard.style.scale = this._limit.screenSize.width / this._initialLimit.screenSize.width;
-            // On window scaling up
-            else
-                this._cardBoard.style.scale = null;
+            if(video) {
+                // Force load and play
+                video.muted = true;
+                video.load();
+                
+                // Use setTimeout to ensure DOM is ready
+                setTimeout(() => {
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            console.log("Video play error:", error);
+                            // Try again with user interaction
+                            document.addEventListener('click', () => {
+                                video.play().catch(e => console.log("Retry failed:", e));
+                            }, { once: true });
+                        });
+                    }
+                }, 200);
+            }
         }
     }
 
-    assignUIEventListeners() {
+    // --- Timer Engine ---
 
-        // Scope binding
+    toggleTimer() { this.isRunning ? this.pauseTimer() : this.startTimer(); }
 
-        this.__countDown = this.countDown.bind(this);
-        this.__doSelectCard = this.doSelectCard.bind(this);
-        this.__buildGameEnv = this.buildGameEnv.bind(this);
-        this.__showGuide = this.showGuide.bind(this);
-        this.__restart = this.restart.bind(this);
-        this.__onResize = this.onResize.bind(this);
-
-        // Event listeners
-
-        this._startBtn.addEventListener("click", this.__buildGameEnv);
-        this._guideBtn.addEventListener("click", this.__showGuide);
-        this._restartBtn.addEventListener("click", this.__restart);
-        this._terms.addEventListener("click", (e) => {e.preventDefault()})
-
-        // Responsive display
-
-        window.addEventListener("resize", this.__onResize);
+    startTimer() {
+        if (this.isRunning) return;
+        this.isRunning = true;
+        this.startPauseBtn.textContent = 'Pause';
+        this.startPauseBtn.classList.add('paused'); 
         
-        // Smooth Card number selection
+        if (this.cdDisk.classList.contains('playing') || !this.bgMusic.paused) {
+             this.bgMusic.play().catch(() => {});
+             this.cdDisk.classList.add('playing');
+        } else {
+            // Optional: Start music on timer start if user wants?
+            // For now, respect manual play/pause.
+        }
+        
+        this.timerId = setInterval(() => this.tick(), 1000);
+    }
 
-        this.__to   = null;
-        this.__iv   = null;
+    pauseTimer() {
+        this.isRunning = false;
+        this.startPauseBtn.textContent = 'Start';
+        this.startPauseBtn.classList.remove('paused');
+        clearInterval(this.timerId);
+        // We pause music on pause? Debateable. Let's pause it for "Focus" feeling.
+        this.bgMusic.pause();
+        this.cdDisk.classList.remove('playing');
+    }
 
-        this._numChangeBtn.forEach((btn) => {
-            btn.addEventListener("mousedown", (e) => {
-                this.updateCardNum(e);
-                this.__to = setTimeout(() => {
-                    this.__iv = setInterval(() => {
-                        this.updateCardNum(e);
-                    }, 75);
-                }, 500);
-            })
-            btn.addEventListener("mouseup", () => {
-                clearTimeout(this.__to);
-                clearInterval(this.__iv);
+    resetTimer() {
+        this.pauseTimer();
+        this.timeLeft = this.modes[this.currentMode].time * 60;
+        this.updateDisplay();
+    }
+
+    tick() {
+        if (this.timeLeft > 0) {
+            this.timeLeft--;
+            this.updateDisplay();
+        } else {
+            this.completeTimer();
+        }
+    }
+
+    completeTimer() {
+        this.pauseTimer();
+        this.alarmSound.play();
+        if(window.confetti) window.confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+        if (Notification.permission === "granted") new Notification("ETimer Finished!", { body: "Time is up!", icon: "../favicon.ico" });
+    }
+
+    updateDisplay() {
+        const minutes = Math.floor(this.timeLeft / 60);
+        const seconds = this.timeLeft % 60;
+        const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        this.timeDisplay.textContent = timeString;
+        document.title = `${timeString} - ${this.currentMode} | ETimer`;
+    }
+
+    toggleMusic() {
+        if (this.bgMusic.paused) {
+            this.bgMusic.play()
+                .then(() => this.cdDisk.classList.add('playing'))
+                .catch(e => {
+                    console.log("Playback prevented:", e);
+                    // Silent fail - user has already interacted via splash
+                });
+        } else {
+            this.bgMusic.pause();
+            this.cdDisk.classList.remove('playing');
+        }
+        this.updatePlaylistUI();
+    }
+    
+    toggleAmbience(type, btnElement) {
+        const audio = type === 'rain' ? this.soundRain : this.soundCafe;
+        if (audio.paused) { 
+            audio.play()
+                .then(() => btnElement.classList.add('active'))
+                .catch(e => console.log('Ambience play prevented:', e));
+        }
+        else { 
+            audio.pause(); 
+            btnElement.classList.remove('active'); 
+        }
+    }
+
+    // --- Settings & Utils ---
+    
+    openSettings() { 
+        this.populateSettings();
+        this.settingsModal.classList.add('open'); 
+    }
+    closeSettings() { this.settingsModal.classList.remove('open'); }
+
+    // FAQ & ToS Modals
+    openFaq() { this.faqModal.classList.add('open'); }
+    closeFaq() { this.faqModal.classList.remove('open'); }
+    openTos() { this.tosModal.classList.add('open'); }
+    closeTos() { this.tosModal.classList.remove('open'); }
+
+    populateSettings() {
+        this.inputs.pomo.value = this.modes.pomodoro.time;
+        this.inputs.short.value = this.modes.shortBreak.time;
+        this.inputs.long.value = this.modes.longBreak.time;
+        
+        this.focusMusicSelect.innerHTML = '';
+        this.breakMusicSelect.innerHTML = '';
+
+        this.trackList.forEach((track, index) => {
+            const option = new Option(track.title, index);
+            this.focusMusicSelect.add(option.cloneNode(true));
+            this.breakMusicSelect.add(option);
+        });
+
+        this.focusMusicSelect.value = this.selectedFocusTrack;
+        this.breakMusicSelect.value = this.selectedBreakTrack;
+        this.separateMusicToggle.checked = this.separateMusic;
+        this.toggleBreakSelectState();
+    }
+
+    toggleBreakSelectState() {
+        if(this.separateMusic) this.breakMusicWrap.classList.remove('disabled');
+        else this.breakMusicWrap.classList.add('disabled');
+    }
+
+    saveSettings() {
+        const newTimes = {
+            pomodoro: parseInt(this.inputs.pomo.value) || 25,
+            shortBreak: parseInt(this.inputs.short.value) || 5,
+            longBreak: parseInt(this.inputs.long.value) || 15
+        };
+        
+        localStorage.setItem('ptimer_times', JSON.stringify(newTimes));
+        
+        this.modes.pomodoro.time = newTimes.pomodoro;
+        this.modes.shortBreak.time = newTimes.shortBreak;
+        this.modes.longBreak.time = newTimes.longBreak;
+        
+        // Update DOM buttons
+        const pomoBtn = document.querySelector('[data-mode="pomodoro"]');
+        if (pomoBtn) pomoBtn.dataset.time = newTimes.pomodoro;
+        const shortBtn = document.querySelector('[data-mode="shortBreak"]');
+        if (shortBtn) shortBtn.dataset.time = newTimes.shortBreak;
+        const longBtn = document.querySelector('[data-mode="longBreak"]');
+        if (longBtn) longBtn.dataset.time = newTimes.longBreak;
+
+        this.separateMusic = this.separateMusicToggle.checked;
+        this.selectedFocusTrack = parseInt(this.focusMusicSelect.value);
+        this.selectedBreakTrack = parseInt(this.breakMusicSelect.value);
+
+        localStorage.setItem('ptimer_separate_music', this.separateMusic);
+        localStorage.setItem('ptimer_focus_track', this.selectedFocusTrack);
+        localStorage.setItem('ptimer_break_track', this.selectedBreakTrack);
+
+        if (!this.isRunning) this.fixTrackForMode();
+        this.resetTimer(); 
+        this.closeSettings();
+    }
+
+    toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+        localStorage.setItem('ptimer_theme', this.theme);
+        this.applyTheme();
+        if (this.bgMode === 'vanta') this.initVanta();
+    }
+
+    applyTheme() {
+        document.documentElement.setAttribute('data-theme', this.theme);
+        if(this.themeToggle) {
+            const icon = this.themeToggle.querySelector('i');
+            if(icon) icon.className = this.theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+    }
+
+    toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.log(`Error attempting to enable fullscreen: ${err.message}`);
             });
-            btn.addEventListener("mouseleave", () => {
-                clearTimeout(this.__to);
-                clearInterval(this.__iv);
-            });
-        })
+            this.fsBtn.innerHTML = '<i class="fas fa-compress"></i>';
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+                this.fsBtn.innerHTML = '<i class="fas fa-expand"></i>';
+            }
+        }
+    }
+    
+    async togglePiP() {
+        // Picture in Picture implementation with fallback
+        if ('documentPictureInPicture' in window) {
+            try {
+                const pipWindow = await window.documentPictureInPicture.requestWindow({ 
+                    width: 400, 
+                    height: 250 
+                });
+                
+                // Style the PiP window
+                const style = pipWindow.document.createElement('style');
+                style.textContent = `
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        font-family: 'Nunito', sans-serif;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        color: white;
+                    }
+                    .pip-timer {
+                        font-size: 4rem;
+                        font-weight: 800;
+                        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                        letter-spacing: -2px;
+                    }
+                    .pip-mode {
+                        font-size: 1rem;
+                        opacity: 0.8;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        margin-top: 0.5rem;
+                    }
+                `;
+                pipWindow.document.head.appendChild(style);
+                
+                const container = pipWindow.document.createElement('div');
+                container.innerHTML = `
+                    <div class="pip-timer">${this.timeDisplay.textContent}</div>
+                    <div class="pip-mode">${this.currentMode}</div>
+                `;
+                pipWindow.document.body.appendChild(container);
+                
+                // Sync loop
+                const interval = setInterval(() => {
+                    if (pipWindow.closed) {
+                        clearInterval(interval);
+                    } else {
+                        const timerEl = pipWindow.document.querySelector('.pip-timer');
+                        const modeEl = pipWindow.document.querySelector('.pip-mode');
+                        if (timerEl) timerEl.textContent = this.timeDisplay.textContent;
+                        if (modeEl) modeEl.textContent = this.currentMode;
+                    }
+                }, 100);
+                
+                pipWindow.addEventListener('pagehide', () => clearInterval(interval));
+            } catch (error) {
+                console.error('PiP failed:', error);
+                alert("Picture-in-Picture failed. Please try again or use a different browser.");
+            }
+        } else {
+            // Fallback: open in new window
+            const width = 400;
+            const height = 250;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            
+            const pipWindow = window.open(
+                '', 
+                'ETimer PiP', 
+                `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=no,status=no,menubar=no,toolbar=no`
+            );
+            
+            if (pipWindow) {
+                pipWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>ETimer - ${this.currentMode}</title>
+                        <style>
+                            body {
+                                margin: 0;
+                                padding: 0;
+                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                font-family: 'Nunito', sans-serif;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                color: white;
+                            }
+                            .pip-timer {
+                                font-size: 3.5rem;
+                                font-weight: 800;
+                                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                                letter-spacing: -2px;
+                            }
+                            .pip-mode {
+                                font-size: 0.9rem;
+                                opacity: 0.8;
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+                                margin-top: 0.5rem;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="pip-timer" id="pipTimer">${this.timeDisplay.textContent}</div>
+                        <div class="pip-mode" id="pipMode">${this.currentMode}</div>
+                    </body>
+                    </html>
+                `);
+                pipWindow.document.close();
+                
+                // Sync loop
+                const interval = setInterval(() => {
+                    if (pipWindow.closed) {
+                        clearInterval(interval);
+                    } else {
+                        const timerEl = pipWindow.document.getElementById('pipTimer');
+                        const modeEl = pipWindow.document.getElementById('pipMode');
+                        if (timerEl) timerEl.textContent = this.timeDisplay.textContent;
+                        if (modeEl) modeEl.textContent = this.currentMode;
+                    }
+                }, 100);
+            } else {
+                alert("Please allow popups to use Picture-in-Picture mode.");
+            }
+        }
     }
 }

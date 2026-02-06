@@ -1,13 +1,271 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pomodoro Timer - 番茄工作法計時器</title>
-        <link rel="stylesheet" href="style/layout.css">
-        <link rel="stylesheet" href="style/index.css">
-        <script src="script/index.js"></script>
-    </head>
-    <body>
-        <div class="main"></div>
-    </body>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETimer | Ultimate Focus</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/mobile_modal.css">
+
+    <!-- Libraries -->
+    <!-- Three.js & Vanta.js for cool backgrounds -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.fog.min.js"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Typed.js for typing animation -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+
+    <!-- Splash Screen / Lock Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-bg"></div>
+        <div class="splash-content">
+            <h1 class="splash-title">ETimer</h1>
+            <p class="splash-subtitle">Design your time.</p>
+            <div class="splash-hint">
+                <div class="arrow-container">
+                    <i class="fas fa-chevron-up bounce-arrow"></i>
+                </div>
+                <span>Slide up to focus</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Layer 1: Vanta JS (Generated) -->
+    <div id="vanta-bg" class="background-layer"></div>
+
+    <!-- Top Navigation / Tools -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <span class="brand">ETimer</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn" id="fsBtn" title="Toggle Full Screen">
+                <i class="fas fa-expand"></i>
+            </button>
+            <button class="nav-btn" id="pipBtn" title="Picture-in-Picture Mode / Pop-out">
+                <i class="fas fa-external-link-alt"></i>
+            </button>
+            <button class="nav-btn" id="faqBtn" title="FAQ & Help">
+                <i class="fas fa-question-circle"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        
+        <!-- Sidebar: Playlist & Stats -->
+        <aside class="glass-panel-side">
+            <div class="panel-header">
+                <h3><i class="fas fa-list-ul"></i> Playlist</h3>
+            </div>
+            <div class="playlist-container" id="playlistContainer">
+                <!-- Javascript will populate this -->
+            </div>
+
+            <!-- Mixer moved to Sidebar -->
+            <div class="sound-mixer">
+                <div class="mixer-header">
+                    <i class="fas fa-sliders-h"></i> <span style="margin-right:auto">Atmosphere</span>
+                </div>
+                <div class="mixer-controls">
+                    <div class="sound-control">
+                        <button class="sound-toggle" data-sound="rain" title="Rain Sound"><i class="fas fa-cloud-rain"></i></button>
+                        <input type="range" min="0" max="100" value="50" class="volume-slider" data-target="rain">
+                    </div>
+                    <div class="sound-control">
+                        <button class="sound-toggle" data-sound="cafe" title="Cafe Noise"><i class="fas fa-mug-hot"></i></button>
+                        <input type="range" min="0" max="100" value="50" class="volume-slider" data-target="cafe">
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="glass-panel">
+            
+            <!-- Timer Modes -->
+            <div class="mode-btns">
+                <button class="mode-btn active" data-mode="pomodoro">Focus</button>
+                <button class="mode-btn" data-mode="shortBreak">Short Break</button>
+                <button class="mode-btn" data-mode="longBreak">Long Break</button>
+            </div>
+
+            <!-- Central Visuals -->
+            <div class="visual-center">
+                <div class="timer-display" id="timeDisplay">25:00</div>
+                
+                <!-- Encouragement Text (Replaces typing task) -->
+                <div id="encouragementDisplay" class="encouragement-text"></div>
+
+                <!-- Spinning CD (Music Player) -->
+                <div class="cd-section">
+                    <div class="cd-current-track" id="trackNameDisplay">Tap to focus</div>
+                    <div class="cd-player-container" title="Click to Play/Pause">
+                        <div class="cd-disk" id="cdDisk">
+                            <div class="cd-label">
+                                <i class="fas fa-music"></i>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="music-controls-mini">
+                        <button class="mini-btn" id="prevTrackBtn"><i class="fas fa-step-backward"></i></button>
+                        <button class="mini-btn" id="nextTrackBtn"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Task Input (Hidden per request) -->
+            <div class="task-container" style="display:none">
+                <input type="text" id="taskInput" placeholder="What's your main focus?" autocomplete="off">
+            </div>
+
+            <!-- Main Controls -->
+            <div class="controls">
+                <button class="btn-main" id="startPauseBtn">Start Focus</button>
+                <button class="btn-secondary" id="resetBtn" title="Reset">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="btn-secondary settings-trigger" id="settingsBtn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Audio Resources -->
+    <!-- 1. Music (Lofi) -->
+    <audio id="bgMusic" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112778.mp3" type="audio/mp3">
+    </audio>
+    
+    <!-- 2. Ambience: Rain -->
+    <audio id="soundRain" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-light-rain-loop-2393.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- 3. Ambience: Cafe/Fire/Forest proxy -->
+    <audio id="soundCafe" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-forest-birds-ambience-1210.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="close-btn" id="closeSettingsBtn">&times;</button>
+            </div>
+            
+            <div class="modal-body-scroll">
+                <!-- Compact Grid for Timer Inputs -->
+                <div class="setting-section">
+                    <h3>Timer (Minutes)</h3>
+                    <div class="inputs-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                        <div class="input-wrap">
+                            <label>Focus</label>
+                            <input type="number" id="settingPomo" min="1" max="60" value="25">
+                        </div>
+                        <div class="input-wrap">
+                            <label>Short Break</label>
+                            <input type="number" id="settingShort" min="1" max="30" value="5">
+                        </div>
+                        <div class="input-wrap">
+                            <label>Long Break</label>
+                            <input type="number" id="settingLong" min="1" max="60" value="15">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-section">
+                    <h3>Audio</h3>
+                    <div class="checkbox-wrap" style="margin-bottom: 0.8rem; font-size: 0.9rem;">
+                        <input type="checkbox" id="separateMusicToggle">
+                        <label for="separateMusicToggle">Split Focus/Break Music?</label>
+                    </div>
+                    
+                    <div class="music-select-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div class="select-wrap">
+                            <label>Focus Track</label>
+                            <select id="focusMusicSelect" style="width:100%"></select>
+                        </div>
+                        <div class="select-wrap disabled" id="breakMusicSelectWrap">
+                            <label>Break Track</label>
+                            <select id="breakMusicSelect" style="width:100%"></select>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-main full-width" id="saveSettingsBtn" style="padding: 0.8rem; margin-top: 0.5rem;">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Alarm -->
+    <audio id="alarmSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- FAQ Modal -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>FAQ & Help</h2>
+                <button class="close-btn" id="closeFaqBtn">&times;</button>
+            </div>
+            <div class="faq-content modal-body-scroll">
+                <div class="faq-item">
+                    <h3><i class="fas fa-play-circle"></i> Usage</h3>
+                    <p>Select mode, hit Start. Works via Pomodoro steps.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-cog"></i> Customization</h3>
+                    <p>Use settings (gear icon) for time & music.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-image"></i> Backgrounds</h3>
+                    <p>Toggle 📹 icon for Fog vs Rain video.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ToS Modal -->
+    <div id="tosModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Terms of Service</h2>
+                <button class="close-btn" id="closeTosBtn">&times;</button>
+            </div>
+            <div class="tos-content modal-body-scroll">
+                <p>ETimer is a free productivity tool provided as-is. By using this application, you agree to:</p>
+                <ul>
+                    <li>Use the timer for personal productivity and time management</li>
+                    <li>Understand that audio/video content is provided by third parties</li>
+                    <li>Accept that preferences are stored locally in your browser</li>
+                    <li>Use the application responsibly and at your own discretion</li>
+                </ul>
+                <p><strong>Privacy:</strong> No data is collected or transmitted. All settings stay on your device.</p>
+                <p><strong>License:</strong> This project is open for personal use. Media assets belong to their respective owners.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <span>Made with ❤️ by <strong>Alan</strong></span>
+        <span class="separator">•</span>
+        <a href="#" id="tosLink">Terms of Service</a>
+    </footer>
+
+    <script src="script/index.js"></script>
+</body>
 </html>
