@@ -62,28 +62,58 @@
 
     <div class="app-container">
         
-        <!-- Sidebar: Playlist & Stats -->
+        <!-- Sidebar: Playlist, Stats & Atmosphere -->
         <aside class="glass-panel-side">
-            <div class="panel-header">
-                <h3><i class="fas fa-list-ul"></i> Playlist</h3>
-            </div>
-            <div class="playlist-container" id="playlistContainer">
-                <!-- Javascript will populate this -->
+            <!-- PLAYLIST SECTION -->
+            <div class="sidebar-section">
+                <div class="panel-header">
+                    <h3><i class="fas fa-music"></i> Tracks</h3>
+                </div>
+                <div class="playlist-container" id="playlistContainer">
+                    <!-- Javascript will populate this -->
+                </div>
             </div>
 
-            <!-- Mixer moved to Sidebar -->
-            <div class="sound-mixer">
-                <div class="mixer-header">
-                    <i class="fas fa-sliders-h"></i> <span style="margin-right:auto">Atmosphere</span>
+            <!-- ATMOSPHERE MIXER -->
+            <div class="sidebar-section">
+                <div class="mixer-header-standalone">
+                    <i class="fas fa-wind"></i> <span>Atmosphere</span>
                 </div>
-                <div class="mixer-controls">
-                    <div class="sound-control">
-                        <button class="sound-toggle" data-sound="rain" title="Rain Sound"><i class="fas fa-cloud-rain"></i></button>
-                        <input type="range" min="0" max="100" value="50" class="volume-slider" data-target="rain">
+                <div class="sound-mixer">
+                    <div class="mixer-controls">
+                        <div class="sound-control">
+                            <button class="sound-toggle" data-sound="rain" title="Rain Sound"><i class="fas fa-cloud-rain"></i></button>
+                            <div class="sound-label">Rain</div>
+                            <input type="range" min="0" max="100" value="50" class="volume-slider" data-target="rain">
+                        </div>
+                        <div class="sound-control">
+                            <button class="sound-toggle" data-sound="cafe" title="Ambient Sound"><i class="fas fa-leaf"></i></button>
+                            <div class="sound-label">Ambient</div>
+                            <input type="range" min="0" max="100" value="50" class="volume-slider" data-target="cafe">
+                        </div>
                     </div>
-                    <div class="sound-control">
-                        <button class="sound-toggle" data-sound="cafe" title="Cafe Noise"><i class="fas fa-mug-hot"></i></button>
-                        <input type="range" min="0" max="100" value="50" class="volume-slider" data-target="cafe">
+                </div>
+            </div>
+
+            <!-- STATS SECTION -->
+            <div class="sidebar-section">
+                <div class="stats-header">
+                    <i class="fas fa-chart-line"></i> <span>Today</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="statSessions">0</div>
+                        <div class="stat-label">Sessions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statMinutes">0</div>
+                        <div class="stat-label">Minutes</div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-label">Daily Goal: <span id="dailyGoal">120</span>min</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
@@ -91,18 +121,45 @@
 
         <main class="glass-panel">
             
-            <!-- Timer Modes -->
-            <div class="mode-btns">
-                <button class="mode-btn active" data-mode="pomodoro">Focus</button>
-                <button class="mode-btn" data-mode="shortBreak">Short Break</button>
-                <button class="mode-btn" data-mode="longBreak">Long Break</button>
+            <!-- Timer Modes with Info -->
+            <div class="mode-selector-container">
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="pomodoro">
+                        <i class="fas fa-fire"></i> Focus
+                    </button>
+                    <button class="mode-btn" data-mode="shortBreak">
+                        <i class="fas fa-coffee"></i> Short Break
+                    </button>
+                    <button class="mode-btn" data-mode="longBreak">
+                        <i class="fas fa-moon"></i> Long Break
+                    </button>
+                </div>
+                <div class="mode-info" id="modeInfo">
+                    <small>Focus Session • 25 min</small>
+                </div>
             </div>
 
             <!-- Central Visuals -->
             <div class="visual-center">
+                <!-- Large Timer Display -->
                 <div class="timer-display" id="timeDisplay">25:00</div>
                 
-                <!-- Encouragement Text (Replaces typing task) -->
+                <!-- Session Progress Ring (Subtle) -->
+                <div class="progress-ring-container">
+                    <svg class="progress-ring" width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff5252;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="60" cy="60" r="54" class="progress-ring-circle-bg"/>
+                        <circle cx="60" cy="60" r="54" class="progress-ring-circle" id="progressRing"/>
+                    </svg>
+                    <div class="progress-ring-text" id="ringPercent">0%</div>
+                </div>
+
+                <!-- Encouragement Text -->
                 <div id="encouragementDisplay" class="encouragement-text"></div>
 
                 <!-- Spinning CD (Music Player) -->
@@ -115,25 +172,26 @@
                             </div>
                         </div>
                     </div>
-                     <div class="music-controls-mini">
-                        <button class="mini-btn" id="prevTrackBtn"><i class="fas fa-step-backward"></i></button>
-                        <button class="mini-btn" id="nextTrackBtn"><i class="fas fa-step-forward"></i></button>
+                    <div class="music-controls-mini">
+                        <button class="mini-btn" id="prevTrackBtn" title="Previous"><i class="fas fa-step-backward"></i></button>
+                        <button class="mini-btn" id="nextTrackBtn" title="Next"><i class="fas fa-step-forward"></i></button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Current Task Input (Hidden per request) -->
-            <div class="task-container" style="display:none">
-                <input type="text" id="taskInput" placeholder="What's your main focus?" autocomplete="off">
+                <!-- Session Status Badge -->
+                <div class="session-status" id="sessionStatus">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Ready to focus</span>
+                </div>
             </div>
 
             <!-- Main Controls -->
             <div class="controls">
                 <button class="btn-main" id="startPauseBtn">Start Focus</button>
-                <button class="btn-secondary" id="resetBtn" title="Reset">
+                <button class="btn-secondary" id="resetBtn" title="Reset Timer">
                     <i class="fas fa-redo"></i>
                 </button>
-                <button class="btn-secondary settings-trigger" id="settingsBtn" title="Settings">
+                <button class="btn-secondary" id="settingsBtn" title="Settings">
                     <i class="fas fa-cog"></i>
                 </button>
             </div>
@@ -159,52 +217,148 @@
 
     <!-- Settings Modal -->
     <div id="settingsModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content modal-large">
             <div class="modal-header">
-                <h2>Settings</h2>
+                <h2>Settings & Preferences</h2>
                 <button class="close-btn" id="closeSettingsBtn">&times;</button>
             </div>
             
             <div class="modal-body-scroll">
-                <!-- Compact Grid for Timer Inputs -->
-                <div class="setting-section">
-                    <h3>Timer (Minutes)</h3>
-                    <div class="inputs-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
-                        <div class="input-wrap">
-                            <label>Focus</label>
-                            <input type="number" id="settingPomo" min="1" max="60" value="25">
+                <!-- TIMER TAB -->
+                <div class="settings-tab active" id="timerTab">
+                    <h3 class="settings-tab-title"><i class="fas fa-hourglass-start"></i> Timer Durations</h3>
+                    <div class="setting-section">
+                        <div class="inputs-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                            <div class="input-wrap">
+                                <label>Focus Session</label>
+                                <input type="number" id="settingPomo" min="1" max="60" value="25">
+                                <small>minutes</small>
+                            </div>
+                            <div class="input-wrap">
+                                <label>Short Break</label>
+                                <input type="number" id="settingShort" min="1" max="30" value="5">
+                                <small>minutes</small>
+                            </div>
+                            <div class="input-wrap">
+                                <label>Long Break</label>
+                                <input type="number" id="settingLong" min="1" max="60" value="15">
+                                <small>minutes</small>
+                            </div>
                         </div>
-                        <div class="input-wrap">
-                            <label>Short Break</label>
-                            <input type="number" id="settingShort" min="1" max="30" value="5">
+                    </div>
+
+                    <div class="setting-section">
+                        <h4>Daily Goal</h4>
+                        <div class="input-wrap" style="max-width: 200px;">
+                            <label>Target Minutes</label>
+                            <input type="number" id="dailyGoalInput" min="30" max="480" value="120">
                         </div>
-                        <div class="input-wrap">
-                            <label>Long Break</label>
-                            <input type="number" id="settingLong" min="1" max="60" value="15">
+                        <small style="opacity: 0.6;">Your daily focus target for tracking progress</small>
+                    </div>
+
+                    <div class="setting-section">
+                        <h4>Sessions Per Long Break</h4>
+                        <div class="input-wrap" style="max-width: 200px;">
+                            <label>Pomodoros</label>
+                            <input type="number" id="sessionsPerLongBreak" min="2" max="10" value="4">
                         </div>
+                        <small style="opacity: 0.6;">After this many focus sessions, take a long break</small>
                     </div>
                 </div>
 
-                <div class="setting-section">
-                    <h3>Audio</h3>
-                    <div class="checkbox-wrap" style="margin-bottom: 0.8rem; font-size: 0.9rem;">
-                        <input type="checkbox" id="separateMusicToggle">
-                        <label for="separateMusicToggle">Split Focus/Break Music?</label>
+                <!-- AUDIO TAB -->
+                <div class="setting-section" style="margin-top: 2rem;">
+                    <h3 class="settings-tab-title"><i class="fas fa-volume-up"></i> Audio & Music</h3>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="autoPlayMusic" checked>
+                        <label for="autoPlayMusic">Auto-play Music on Start</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="soundEffects" checked>
+                        <label for="soundEffects">Sound Effects (Alarm & Notifications)</label>
                     </div>
                     
-                    <div class="music-select-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <div class="select-wrap">
-                            <label>Focus Track</label>
-                            <select id="focusMusicSelect" style="width:100%"></select>
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Volume Control</h4>
+                    <div class="volume-control-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="volume-item">
+                            <label>Music Volume</label>
+                            <input type="range" min="0" max="100" value="70" id="musicVolume" class="volume-slider-main">
+                            <span class="volume-value" id="musicVolumeValue">70%</span>
                         </div>
-                        <div class="select-wrap disabled" id="breakMusicSelectWrap">
-                            <label>Break Track</label>
-                            <select id="breakMusicSelect" style="width:100%"></select>
+                        <div class="volume-item">
+                            <label>Ambient Volume</label>
+                            <input type="range" min="0" max="100" value="50" id="ambientVolume" class="volume-slider-main">
+                            <span class="volume-value" id="ambientVolumeValue">50%</span>
                         </div>
                     </div>
+
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Track Selection</h4>
+                    <div class="music-select-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="select-wrap">
+                            <label>Focus Track</label>
+                            <select id="focusMusicSelect"></select>
+                        </div>
+                        <div class="select-wrap">
+                            <label>Break Track</label>
+                            <select id="breakMusicSelect"></select>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-wrap" style="margin-top: 1rem;">
+                        <input type="checkbox" id="separateMusicToggle">
+                        <label for="separateMusicToggle">Use Different Music for Breaks</label>
+                    </div>
                 </div>
-                
-                <button class="btn-main full-width" id="saveSettingsBtn" style="padding: 0.8rem; margin-top: 0.5rem;">Save</button>
+
+                <!-- APPEARANCE TAB -->
+                <div class="setting-section" style="margin-top: 2rem;">
+                    <h3 class="settings-tab-title"><i class="fas fa-palette"></i> Appearance</h3>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="darkModeToggle">
+                        <label for="darkModeToggle">Dark Mode</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="animationsToggle" checked>
+                        <label for="animationsToggle">Enable Animations</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="compactModeToggle">
+                        <label for="compactModeToggle">Compact Layout</label>
+                    </div>
+                </div>
+
+                <!-- NOTIFICATIONS TAB -->
+                <div class="setting-section" style="margin-top: 2rem;">
+                    <h3 class="settings-tab-title"><i class="fas fa-bell"></i> Notifications</h3>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="browserNotifications" checked>
+                        <label for="browserNotifications">Browser Notifications</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="focusAlert">
+                        <label for="focusAlert">Alert When Focus Ends</label>
+                    </div>
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="breakAlert" checked>
+                        <label for="breakAlert">Alert When Break Ends</label>
+                    </div>
+                </div>
+
+                <!-- DATA & STORAGE -->
+                <div class="setting-section" style="margin-top: 2rem;">
+                    <h3 class="settings-tab-title"><i class="fas fa-database"></i> Data</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.8;">All data is stored locally on your device. No cloud sync.</p>
+                    <div class="data-buttons" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="btn-secondary" id="exportDataBtn" style="flex: 1;">
+                            <i class="fas fa-download"></i> Export Data
+                        </button>
+                        <button class="btn-secondary" id="resetDataBtn" style="flex: 1;">
+                            <i class="fas fa-trash"></i> Clear Data
+                        </button>
+                    </div>
+                </div>
+
+                <button class="btn-main full-width" id="saveSettingsBtn" style="margin-top: 2rem;">Save All Changes</button>
             </div>
         </div>
     </div>

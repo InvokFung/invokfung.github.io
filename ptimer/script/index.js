@@ -27,6 +27,14 @@ class PomodoroApp {
         this.taskInput = document.getElementById('taskInput');
         this.encouragementDisplay = document.getElementById('encouragementDisplay');
         this.playlistContainer = document.getElementById('playlistContainer');
+        this.modeInfo = document.getElementById('modeInfo');
+        this.sessionStatus = document.getElementById('sessionStatus');
+        this.statSessions = document.getElementById('statSessions');
+        this.statMinutes = document.getElementById('statMinutes');
+        this.progressFill = document.getElementById('progressFill');
+        this.progressRing = document.getElementById('progressRing');
+        this.ringPercent = document.getElementById('ringPercent');
+        this.dailyGoalInput = document.getElementById('dailyGoalInput');
         
         // Settings & Modal
         this.settingsBtn = document.getElementById('settingsBtn');
@@ -41,7 +49,17 @@ class PomodoroApp {
         this.separateMusicToggle = document.getElementById('separateMusicToggle');
         this.focusMusicSelect = document.getElementById('focusMusicSelect');
         this.breakMusicSelect = document.getElementById('breakMusicSelect');
-        this.breakMusicWrap = document.getElementById('breakMusicSelectWrap');
+        this.breakMusicWrap = document.getElementById('breakMusicWrap');
+        this.autoPlayMusic = document.getElementById('autoPlayMusic');
+        this.soundEffects = document.getElementById('soundEffects');
+        this.musicVolume = document.getElementById('musicVolume');
+        this.ambientVolume = document.getElementById('ambientVolume');
+        this.darkModeToggle = document.getElementById('darkModeToggle');
+        this.animationsToggle = document.getElementById('animationsToggle');
+        this.compactModeToggle = document.getElementById('compactModeToggle');
+        this.browserNotifications = document.getElementById('browserNotifications');
+        this.exportDataBtn = document.getElementById('exportDataBtn');
+        this.resetDataBtn = document.getElementById('resetDataBtn');
 
         // FAQ & ToS
         this.faqBtn = document.getElementById('faqBtn');
@@ -98,6 +116,23 @@ class PomodoroApp {
         // Preferences
         this.bgMode = localStorage.getItem('ptimer_bg') || 'vanta';
         this.theme = localStorage.getItem('ptimer_theme') || 'light';
+        
+        // Session & Stats Tracking
+        this.sessionsCompleted = parseInt(localStorage.getItem('ptimer_sessions_today')) || 0;
+        this.minutesCompleted = parseInt(localStorage.getItem('ptimer_minutes_today')) || 0;
+        this.dailyGoal = parseInt(localStorage.getItem('ptimer_daily_goal')) || 120;
+        this.sessionsPerLongBreak = parseInt(localStorage.getItem('ptimer_sessions_per_long')) || 4;
+        this.totalSessionsToday = 0;
+        this.sessionStartTime = null;
+        
+        // Preferences - New
+        this.autoPlayMusicPref = localStorage.getItem('ptimer_autoplay_music') !== 'false';
+        this.soundEffectsPref = localStorage.getItem('ptimer_sound_effects') !== 'false';
+        this.musicVolumePref = parseInt(localStorage.getItem('ptimer_music_volume')) || 70;
+        this.ambientVolumePref = parseInt(localStorage.getItem('ptimer_ambient_volume')) || 50;
+        this.animationsEnabled = localStorage.getItem('ptimer_animations') !== 'false';
+        this.compactMode = localStorage.getItem('ptimer_compact_mode') === 'true';
+        this.browserNotificationsEnabled = localStorage.getItem('ptimer_browser_notifications') !== 'false';
     }
 
     init() {
@@ -108,6 +143,9 @@ class PomodoroApp {
         
         this.setupEventListeners();
         this.updateDisplay();
+        this.updateStats();
+        this.updateModeInfo();
+        this.updateSessionStatus();
         this.renderPlaylist();
         this.initTyped();
         
@@ -379,6 +417,73 @@ class PomodoroApp {
         });
     }
 
+    // --- Stats & Progress ---
+    
+    updateStats() {
+        if (this.statSessions) this.statSessions.textContent = this.sessionsCompleted;
+        if (this.statMinutes) this.statMinutes.textContent = this.minutesCompleted;
+        
+        // Update progress bar
+        const percent = Math.min((this.minutesCompleted / this.dailyGoal) * 100, 100);
+        if (this.progressFill) this.progressFill.style.width = percent + '%';
+    }
+
+    updateSessionProgress() {
+        if (!this.isRunning || this.currentMode !== 'pomodoro') {
+            if (this.progressRing) this.progressRing.style.strokeDashoffset = 180;
+            if (this.ringPercent) this.ringPercent.textContent = '0%';
+            return;
+        }
+
+        // Calculate progress as percentage
+        const totalTime = this.modes.pomodoro.time * 60;
+        const elapsed = totalTime - this.timeLeft;
+        const percent = (elapsed / totalTime) * 100;
+
+        if (this.ringPercent) this.ringPercent.textContent = Math.round(percent) + '%';
+
+        // Update SVG circle (circumference = 2 * PI * r = 2 * PI * 54 ≈ 339)
+        const circumference = 339;
+        const offset = circumference - (percent / 100) * circumference;
+        if (this.progressRing) this.progressRing.style.strokeDashoffset = offset;
+    }
+
+    recordSession() {
+        this.sessionsCompleted++;
+        this.minutesCompleted += this.modes.pomodoro.time;
+        this.totalSessionsToday++;
+        
+        localStorage.setItem('ptimer_sessions_today', this.sessionsCompleted);
+        localStorage.setItem('ptimer_minutes_today', this.minutesCompleted);
+        
+        this.updateStats();
+    }
+
+    updateModeInfo() {
+        const modeNames = {
+            pomodoro: 'Focus Session',
+            shortBreak: 'Short Break',
+            longBreak: 'Long Break'
+        };
+        
+        const modeName = modeNames[this.currentMode];
+        const modeTime = this.modes[this.currentMode].time;
+        
+        if (this.modeInfo) {
+            this.modeInfo.textContent = `${modeName} • ${modeTime} min`;
+        }
+    }
+
+    updateSessionStatus() {
+        if (!this.sessionStatus) return;
+        
+        if (this.isRunning) {
+            this.sessionStatus.innerHTML = '<span class="status-dot active"></span><span class="status-text">Session Running</span>';
+        } else {
+            this.sessionStatus.innerHTML = '<span class="status-dot"></span><span class="status-text">Ready to focus</span>';
+        }
+    }
+
     // --- Core Logic ---
 
     switchMode(mode) {
@@ -398,8 +503,10 @@ class PomodoroApp {
         
         document.documentElement.style.setProperty('--primary-color', this.modes[mode].color);
         
+        this.updateModeInfo();
         this.fixTrackForMode();
         this.updateDisplay();
+        this.updateSessionStatus();
     }
 
     fixTrackForMode() {
@@ -515,6 +622,7 @@ class PomodoroApp {
         }
         
         this.timerId = setInterval(() => this.tick(), 1000);
+        this.updateSessionStatus();
     }
 
     pauseTimer() {
@@ -525,6 +633,7 @@ class PomodoroApp {
         // We pause music on pause? Debateable. Let's pause it for "Focus" feeling.
         this.bgMusic.pause();
         this.cdDisk.classList.remove('playing');
+        this.updateSessionStatus();
     }
 
     resetTimer() {
@@ -544,9 +653,17 @@ class PomodoroApp {
 
     completeTimer() {
         this.pauseTimer();
+        
+        // Record session if it was a focus session
+        if (this.currentMode === 'pomodoro') {
+            this.recordSession();
+        }
+        
         this.alarmSound.play();
         if(window.confetti) window.confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
         if (Notification.permission === "granted") new Notification("ETimer Finished!", { body: "Time is up!", icon: "../favicon.ico" });
+        
+        this.updateSessionStatus();
     }
 
     updateDisplay() {
@@ -555,6 +672,9 @@ class PomodoroApp {
         const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         this.timeDisplay.textContent = timeString;
         document.title = `${timeString} - ${this.currentMode} | ETimer`;
+        
+        // Update progress ring
+        this.updateSessionProgress();
     }
 
     toggleMusic() {
