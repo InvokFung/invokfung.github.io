@@ -133,6 +133,9 @@ class PlayerManager {
           }
         },
         onStateChange: (e) => {
+          // Only update state if we're in YouTube mode
+          if (this.usingMP3) return;
+
           if (e.data === YT.PlayerState.PLAYING) {
             this.isPlaying = true;
             this.updatePlayIcon();
@@ -195,9 +198,14 @@ class PlayerManager {
   }
 
   mp3Play() {
+    const track = this.mp3Tracks[this.mp3Index];
+    if (!this.mp3Audio.src || !this.mp3Audio.src.includes(encodeURIComponent(track.url.split('/').pop().split('%20')[0]))) {
+      this.mp3Audio.src = track.url;
+    }
+    this.mp3Audio.volume = (parseInt(this.volumeSlider.value) || 70) / 100;
     this.mp3Audio.play().catch(() => {});
     this.isPlaying = true;
-    this.trackTitle.textContent = this.mp3Tracks[this.mp3Index].title;
+    this.trackTitle.textContent = track.title;
     this.updatePlayIcon();
   }
 

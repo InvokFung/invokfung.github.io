@@ -122,30 +122,15 @@ class UIManager {
     window.addEventListener('mouseup', onUp);
   }
 
-  // --- Auto-hide Navigation ---
+  // --- Navigation (always visible) ---
 
   startIdleWatch() {
-    this.resetIdle();
-
-    const onActivity = () => this.resetIdle();
-    document.addEventListener('mousemove', onActivity);
-    document.addEventListener('touchstart', onActivity, { passive: true });
-    document.addEventListener('keydown', onActivity);
+    // Nav always visible — no auto-hide
+    this.topNav.classList.remove('hidden');
   }
 
   resetIdle() {
-    // Show nav
-    this.topNav.classList.remove('hidden');
-
-    // Reset timer
-    clearTimeout(this.idleTimeout);
-
-    // Don't hide if panel/modal open
-    if (this.activePanel) return;
-
-    this.idleTimeout = setTimeout(() => {
-      this.topNav.classList.add('hidden');
-    }, this.idleDelay);
+    // No-op — nav always visible
   }
 
   // --- Panel Management ---

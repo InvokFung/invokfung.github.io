@@ -116,33 +116,55 @@ class VideoManager {
 
     this.currentSceneId = sceneId;
 
+    // Always keep fallback visible behind videos as safety net
+    this.fallback.style.display = 'block';
+
+    // Clear previous handlers
+    this.inactiveVideo.oncanplay = null;
+    this.inactiveVideo.onerror = null;
+
     // Load into inactive video
     this.inactiveVideo.src = scene.url;
     this.inactiveVideo.load();
 
+    // Timeout fallback — if video doesn't load in 8s, stay on gradient
+    const loadTimeout = setTimeout(() => {
+      this.inactiveVideo.oncanplay = null;
+      // Keep current active video if it's playing, otherwise show fallback
+    }, 8000);
+
     this.inactiveVideo.oncanplay = () => {
+      clearTimeout(loadTimeout);
+      this.inactiveVideo.oncanplay = null;
+
       this.inactiveVideo.play().catch(() => {});
 
-      // Crossfade
+      // Crossfade — show new, hide old
       this.inactiveVideo.classList.remove('hidden');
-      this.activeVideo.classList.add('hidden');
+
+      // Only hide old if it has a source (not first load)
+      if (this.activeVideo.src) {
+        this.activeVideo.classList.add('hidden');
+      }
 
       // Swap references
       const temp = this.activeVideo;
       this.activeVideo = this.inactiveVideo;
       this.inactiveVideo = temp;
 
-      // Clean up old after transition
+      // Clean up old after transition completes
       setTimeout(() => {
-        this.inactiveVideo.pause();
-        this.inactiveVideo.removeAttribute('src');
-        this.inactiveVideo.load();
-      }, 600);
+        if (this.inactiveVideo !== this.activeVideo) {
+          this.inactiveVideo.pause();
+          this.inactiveVideo.removeAttribute('src');
+          this.inactiveVideo.load();
+        }
+      }, 800);
     };
 
-    // Fallback if video takes too long
     this.inactiveVideo.onerror = () => {
-      this.fallback.style.display = 'block';
+      clearTimeout(loadTimeout);
+      // Keep fallback gradient visible, don't hide anything
     };
   }
 
