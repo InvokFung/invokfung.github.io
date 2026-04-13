@@ -1,0 +1,207 @@
+/* ==============================================
+   ChillTimer — Timer Display & Controls
+   ============================================== */
+
+/* --- Timer Center Layout --- */
+.timer-center {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: var(--space-16) var(--space-4) 140px;
+  gap: var(--space-6);
+  user-select: none;
+}
+
+/* --- Progress Ring --- */
+.progress-ring-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  pointer-events: none;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 4;
+}
+
+.progress-ring-fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 678.58;
+  stroke-dashoffset: 678.58;
+  transition: stroke-dashoffset 1s linear, stroke var(--duration-base) var(--ease-out);
+  filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+/* --- Timer Digits --- */
+.timer-display {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px var(--accent-glow);
+  line-height: 1;
+  text-align: center;
+  transition: text-shadow var(--duration-base) var(--ease-out);
+}
+
+.timer-display.running {
+  animation: timer-pulse 2s ease-in-out infinite;
+}
+
+@keyframes timer-pulse {
+  0%, 100% {
+    text-shadow: 0 0 20px var(--accent-glow);
+  }
+  50% {
+    text-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--accent-glow);
+  }
+}
+
+/* --- Session Dots --- */
+.session-dots {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: transparent;
+  transition: background var(--duration-fast) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out);
+}
+
+.dot.filled {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* --- Mode Selector --- */
+.mode-selector {
+  display: flex;
+  gap: var(--space-1);
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1);
+}
+
+.mode-btn {
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--duration-base) var(--ease-out);
+  min-height: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mode-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
+}
+
+.mode-btn.active {
+  color: var(--bg-primary);
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+/* --- Timer Controls --- */
+.timer-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Primary Button */
+.btn-primary {
+  padding: var(--space-4) var(--space-10);
+  min-height: 52px;
+  height: 52px;
+  min-width: 180px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 24px var(--accent-glow);
+  transition: all var(--duration-fast) var(--ease-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 32px var(--accent-glow);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* Icon Button */
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  transition: all var(--duration-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.btn-icon:hover {
+  color: var(--text-primary);
+  border-color: var(--glass-border-hover);
+  background: var(--bg-surface-hover);
+}
+
+.btn-icon:active {
+  transform: scale(0.93);
+}
+
+/* --- Completion glow flash --- */
+@keyframes glow-flash {
+  0% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50% { box-shadow: 0 0 60px 20px var(--accent-glow); }
+  100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+}
+
+.timer-center.complete-flash {
+  animation: glow-flash 1s ease-out;
+}
