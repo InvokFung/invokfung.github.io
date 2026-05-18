@@ -773,7 +773,7 @@
     switchComments()
     document.getElementById('toggle-menu').addEventListener('click', () => { sidebarFn.open() })
   }
-  // PATCHED for Next.js port: gate auto-init so RouteEffects can invoke post-hydration
+  // PATCHED for Next.js port: expose unRefreshFn + gate auto-init so RouteEffects can invoke them post-hydration.
   window.unRefreshFn = unRefreshFn;
   if (window.__BUTTERFLY_AUTOINIT !== false) { refreshFn(); unRefreshFn(); }
 })();
