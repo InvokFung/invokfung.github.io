@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F[year]\u002F[month]\u002F[day]\u002F[slug]","\u002Farchives\u002F[year]","\u002Farchives\u002F[year]\u002F[month]","\u002Fcategories\u002F[category]","\u002Fpage\u002F[n]","\u002Ftags\u002F[tag]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

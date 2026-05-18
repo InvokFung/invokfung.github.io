@@ -1,0 +1,828 @@
+2:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-48b5fc4a781599d7.js"],"default"]
+7:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-48b5fc4a781599d7.js"],"default"]
+8:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-48b5fc4a781599d7.js"],"default"]
+b:I[4707,[],""]
+c:I[6423,[],""]
+3:T3d40,Prompting is the practice of writing inputs that steer a Large Language Model (LLM) toward useful outputs. It is part interface design, part rhetoric, and part empirical science. This note covers the foundations and the techniques that have been validated by published research, with worked examples you can copy.
+
+Learning Outcome
+
+- Explain what a prompt is and why model behaviour is sensitive to its phrasing.- Decompose a prompt into its functional parts (instruction, context, examples, format spec).- Apply core techniques: zero-shot, few-shot, chain-of-thought, role conditioning, decomposition, and self-consistency.- Recognise common anti-patterns and explain why they fail.- Design an evaluation harness with a golden set + rubric + A/B framework.- Read a research paper on prompting and judge whether its claims will transfer to your task.
+
+Chapter 1 - Foundations
+
+Terminology
+
+- Prompt — the full token sequence the model conditions on before generating the next token.- Completion — the model's generated response.- Token — sub-word unit (4 characters of English on average). All limits (context window, throughput, billing) are measured in tokens.- Context window — maximum prompt+completion length the model can attend to.- In-context learning (ICL) — model adapts its behaviour from examples in the prompt without weight updates. Reported in Language Models are Few-Shot Learners, Brown et al. (2020).- Temperature — sampling parameter; $0$ is greedy, higher values increase diversity.- Top-p / Top-k — nucleus / top-k sampling, alternatives to temperature.- System / developer message — privileged prompt segment used to set persistent behaviour. Mechanism formalised by The Instruction Hierarchy, Wallace et al. (2024).
+
+Why prompts matter
+
+An LLM is a next-token predictor over a learned distribution $P(tn \mid t1, \dots, t{n-1})$. The prompt is the conditional sequence $t1, \dots, t{n-1}$. Two prompts that read as semantically equivalent to a human can produce very different distributions because the model is sensitive to token-level cues it has learned to associate with answer quality (formality, code-block fences, "Let's think step by step", etc.).
+
+This sensitivity has been measured empirically. Lu et al. (2022) showed that simply reordering few-shot examples can swing accuracy on classification benchmarks by tens of percentage points. Sclar et al. (2024) showed that benign formatting changes (newline vs. colon as separator) shift task accuracy by a comparable margin.
+
+The practical consequence: prompts are programs. They deserve version control, testing, and review.
+
+How the model "reads" a prompt
+
+A typical chat-tuned model receives a structured sequence — for instance OpenAI's ChatML or Anthropic's / turn markers — where each turn is tagged with a role. The model has been fine-tuned (instruction-tuned + RLHF or DPO) to:
+
+1. Treat the system / developer message as a high-priority constraint.2. Treat user messages as questions or requests.3. Treat its own prior responses as commitments to maintain consistency with.
+
+The training procedure was first detailed in InstructGPT, Ouyang et al. (2022) and the Anthropic RLHF paper, Bai et al. (2022). The hierarchy of trust between roles was later sharpened in The Instruction Hierarchy, Wallace et al. (2024).
+
+Chapter 2 - Anatomy of a Prompt
+
+A well-formed prompt contains, in some combination, six functional parts. Naming them helps you debug what is missing.
+
+| Part | Purpose | Example ||------|---------|---------|| Role / persona | Set a frame the model uses to choose vocabulary, depth, formality | "You are a senior database administrator." || Instruction | The actual verb of the request | "Explain why this query is slow." || Context | Domain facts, retrieved documents, prior turns | The SQL query +  output || Examples (shots) | Demonstrations of input → output | A prior worked optimisation || Format spec | Constraint on output shape | "Return JSON matching schema X" || Stop / guardrails | Negative constraints, refusal triggers | "If the query is fine, say  only." |
+
+A minimal template
+
+The order matters less than the presence of each part. The OpenAI prompt-engineering guide (OpenAI 2024) and Anthropic's prompt library both converge on the same six-part skeleton.
+
+A worked rewrite
+
+Before (typical first draft, 15% accuracy on internal eval):
+
+After (78% accuracy on the same eval):
+
+What changed: a role, an explicit delimiter for the article, a numbered constraint set, a falsifiable failure marker (), and a machine-parseable output shape.
+
+Chapter 3 - Core Techniques
+
+Zero-shot
+
+Ask the question directly with no examples. Works when the task is well-represented in the training distribution (translation, summarisation, common QA).
+
+Few-shot (in-context learning)
+
+Provide $k$ input/output pairs, then the new input. Brown et al. (2020) showed few-shot prompting closes a large fraction of the gap to fine-tuning on many tasks without any gradient updates.
+
+Tips:- Order examples easy → hard (Lu et al., 2022).- Make examples cover the failure modes you observe in zero-shot, not the easy cases.- Keep formatting identical across shots; a stray newline can degrade accuracy (Sclar et al., 2024).
+
+Chain-of-Thought (CoT) prompting
+
+Ask the model to show its work before committing to an answer. Reported in Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, Wei et al. (2022). Improves arithmetic, symbolic, and commonsense reasoning on large models.
+
+Two variants worth knowing:- Zero-shot CoT: append "Let's think step by step." Kojima et al. (2022). Cheap and surprisingly effective.- Self-consistency: sample $n$ chains at temperature $>0$, take the majority vote on the final answer. Wang et al. (2022). Improves arithmetic accuracy further at $n \times$ cost.
+
+Role / persona conditioning
+
+Setting an expert persona biases vocabulary, depth, and inferred audience. The effect is real but smaller than CoT or few-shot; treat it as fine-tuning of style, not capability.
+
+Decomposition
+
+Break a hard problem into ordered sub-problems and prompt each separately, chaining outputs. Equivalent to Khot et al. (2023) "Decomposed Prompting" or least-to-most prompting by Zhou et al. (2023).
+
+The chain is easier to debug than a single monolithic prompt; you can swap or rerun any step.
+
+ReAct (Reasoning + Acting)
+
+Interleave reasoning steps with tool calls. Yao et al. (2023). The model alternates between  (a reasoning step),  (a tool call), and  (tool result), until ready to emit an .
+
+ReAct is the foundation pattern under most "agent" frameworks (LangChain, LlamaIndex, modern function-calling SDKs).
+
+Chapter 4 - Structural Patterns
+
+Delimiters
+
+Use unambiguous markers around user-supplied or retrieved content. Three formats all work, in roughly equal measure:
+
+...
+
+XML tags have the advantage of being self-documenting and survive whitespace normalisation. Anthropic explicitly recommends XML in their prompt-engineering documentation.
+
+Markdown structure
+
+Models trained on heavy Markdown corpora respond well to headings (), lists, and tables. Use the same conventions in your prompt that you want to see in the output.
+
+Numbered constraints
+
+Numbered constraints are easier for the model to enumerate against than a paragraph of "and also, make sure to..."
+
+Format specifications
+
+Three escalating strengths:
+
+| Strength | Mechanism | Reliability ||----------|-----------|-------------|| Soft     | Natural-language description ("return JSON") | 60-80% || Schema   | Provide explicit schema (TypeScript / JSON Schema / Pydantic) | 90% || Hard     | Use the provider's structured-output / JSON-mode API | 100% (provider-enforced) |
+
+If you need a guaranteed shape, use the provider's structured output. Soft format is convenient but will fail on tail cases.
+
+Chapter 5 - Reasoning Boosters
+
+Self-consistency
+
+Already mentioned. Formally: sample $n$ chains $c1, \dots, cn$ at $T > 0$, extract the final answer $ai$ from each, return $\arg\maxa \sumi \mathbb{1}[ai = a]$. The probability that the majority answer is correct converges to the per-sample accuracy raised to a Condorcet-style power as $n$ grows, when individual samples are conditionally independent given the question.
+
+Tree of Thoughts (ToT)
+
+Yao et al. (2023). Generalises CoT from a chain to a search tree. The model proposes multiple next-thoughts at each step, a value model scores each, and a search algorithm (BFS/DFS) explores. Helps on combinatorial problems (Game of 24, crosswords) where a single chain commits too early.
+
+Reflexion
+
+Shinn et al. (2023). After a wrong attempt, the model writes a critique of its own trace; that critique is appended to context for the next attempt. The agent improves across attempts within a single session.
+
+Step-Back prompting
+
+Zheng et al. (2024). Before answering a specific question, ask the model to first derive the general principle that governs the question. The principle then conditions the specific answer. Improves abstract / multi-step reasoning.
+
+Chapter 6 - Common Anti-patterns
+
+Vague verbs
+
+, , ,  are unmeasurable. The model has to guess a direction. Replace with a measurable verb: , , .
+
+Conflicting constraints
+
+The model resolves contradictions arbitrarily. Pick one side of each axis and state it.
+
+Leading questions
+
+The framing forces the model to defend a premise instead of evaluating it. Prefer:
+
+Long irrelevant context
+
+Liu et al. (2023) Lost in the Middle showed models degrade on retrieval tasks when relevant information sits in the middle of a long context. Prune aggressively. If you must include long retrieved documents, put the most relevant snippets at the start or the end.
+
+Negation-only instructions
+
+is weaker than  Models follow positive constraints more reliably than negative ones.
+
+"Polite filler"
+
+adds tokens without affecting behaviour. Strip it.
+
+Chapter 7 - Evaluation
+
+A prompt is a piece of software, so evaluate it like software.
+
+Golden set
+
+A small, curated set of representative inputs with hand-graded expected outputs. 30–100 items is enough to detect a 5pp accuracy shift.
+
+Rubric
+
+Decompose "is the output good?" into yes/no axes. For a summarisation task you might score:
+
+- Factual (no hallucinated entities)- Complete (all named main points present)- Concise (within length limit)- Format (parses as JSON)- Refusal (correctly refused when no claim present)
+
+Each axis scored 0/1 by a human grader or a separate "judge" model.
+
+LLM-as-judge
+
+Zheng et al. (2023). A stronger model grades a weaker model's output against a rubric. Cheap, scales, but biased toward outputs that look like the judge's style. Use a different family of model as the judge where possible, and spot-check 10% with a human.
+
+A/B framework
+
+Track $\Delta$ per axis, not just overall. A change that improves factuality but hurts conciseness is still a regression on the conciseness axis.
+
+Statistical sanity
+
+With $n=100$ binary outcomes, the 95% confidence interval on accuracy is roughly $\pm 10$pp around the observed rate. Differences smaller than that are noise. Increase $n$ or repeat the run to tighten.
+
+Chapter 8 - Tool Use and Structured Output
+
+Modern model providers expose two APIs that should replace most prompt-engineering hacks:
+
+Function calling / tool use
+
+You declare a JSON schema for one or more tools; the model picks one and emits arguments matching the schema. The runtime executes the tool and returns the result, which you append to the conversation and prompt again.
+
+The model is fine-tuned to know when to call a tool versus answer directly. This is more reliable than ReAct in raw text because the model emits parsed JSON via the API.
+
+Structured output (JSON / Pydantic mode)
+
+You supply the full output schema; the provider's decoder constrains generation so the response is guaranteed valid against the schema. Eliminates "the model added a friendly preamble that broke my parser" failures.
+
+When NOT to use tools
+
+If the task is pure transformation of text the model already has the knowledge for (summarise, translate, classify), tools add latency and cost. Use tools when you need fresh data, deterministic computation, or side effects.
+
+Chapter 9 - Putting It Together
+
+A production prompt for "extract action items from a meeting transcript" — combining roles, delimiters, few-shot, format, and a guardrail:
+
+This prompt is testable (you have a golden set), debuggable (each rule is a single axis you can score), and safe (the negative examples teach refusal on vague language).
+
+Useful Shortcut
+
+Cheat-sheet
+
+| Goal | First thing to try ||------|--------------------|| Wrong answer on math | Append "Let's think step by step." || Output not parseable | Switch to provider's structured-output API || Hallucinated facts | Add retrieved context with XML delimiters || Inconsistent answers across runs | Self-consistency, $n=5$, majority vote || Too verbose | Add "Output ≤ N words. No preamble." || Refuses too much | Add an explicit allow-list of permitted topics || Drifts off topic mid-conversation | Re-state the system message every $k$ turns || Slow / expensive | Decompose; use a smaller model for the easy steps |
+
+Quick sanity checks before shipping
+
+1. Does the prompt have all six anatomy parts (role, instruction, context, examples, format, stop)?2. Is there a golden set of ≥ 30 items with rubric scores?3. Have you tested the failure modes, not just the happy path?4. Are you using structured output for any machine-parsed response?5. Have you token-counted the prompt under realistic context lengths?6. Have you versioned the prompt in git with a short rationale per change?
+
+References
+
+- Brown, T. et al. (2020). Language Models are Few-Shot Learners. NeurIPS. arXiv:2005.14165.- Ouyang, L. et al. (2022). Training Language Models to Follow Instructions with Human Feedback (InstructGPT). NeurIPS. arXiv:2203.02155.- Bai, Y. et al. (2022). Training a Helpful and Harmless Assistant with RLHF. arXiv:2204.05862.- Wei, J. et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. NeurIPS. arXiv:2201.11903.- Kojima, T. et al. (2022). Large Language Models are Zero-Shot Reasoners. NeurIPS. arXiv:2205.11916.- Wang, X. et al. (2022). Self-Consistency Improves Chain of Thought Reasoning. ICLR. arXiv:2203.11171.- Lu, Y. et al. (2022). Fantastically Ordered Prompts and Where to Find Them. ACL. arXiv:2104.08786.- Khot, T. et al. (2023). Decomposed Prompting. ICLR. arXiv:2210.02406.- Zhou, D. et al. (2023). Least-to-Most Prompting Enables Complex Reasoning in LLMs. ICLR. arXiv:2205.10625.- Yao, S. et al. (2023). ReAct: Synergising Reasoning and Acting. ICLR. arXiv:2210.03629.- Yao, S. et al. (2023). Tree of Thoughts: Deliberate Problem Solving with LLMs. NeurIPS. arXiv:2305.10601.- Shinn, N. et al. (2023). Reflexion: Language Agents with Verbal Reinforcement Learning. NeurIPS. arXiv:2303.11366.- Liu, N. et al. (2023). Lost in the Middle: How Language Models Use Long Contexts. TACL. arXiv:2307.03172.- Zheng, L. et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS. arXiv:2306.05685.- Zheng, H. et al. (2024). Take a Step Back: Evoking Reasoning via Abstraction in LLMs. ICLR. arXiv:2310.06117.- Sclar, M. et al. (2024). Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design. ICLR. arXiv:2310.11324.- Wallace, E. et al. (2024). The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions. arXiv:2404.13208.- OpenAI (2024). Prompt engineering guide. https://platform.openai.com/docs/guides/prompt-engineering.- Anthropic (2024). Prompt engineering documentation. https://docs.anthropic.com/.
+4:Tc66,Java 是一種十分基礎並常用的編程語言。 它的歷史非常悠久，在許多新語言的研究和開發中擔任著重要的角色, 但亦因此 Java 比其他常用語言更為繁瑣和嚴謹。 不過由於 Java 穩定的表現, 豐富的文檔和輕鬆搬移項目的靈活特性，至今仍然有不少從事資訊科技的公司採用。
+
+學習目標
+
+- 掌握Java Prograqmming的基礎- 能夠創建屬於自己的Project- 學習一些Java的進階指令
+
+章節1 - 如何開始寫Java
+
+市面上有不少支援 Java Development 的軟件\假如你是完全沒接觸過 Java 的同學, 建議先下載 Java Development Kit (JDK) 和相應的開發軟件\如 Eclipse, Visual Studio, Netbeans ...\本文將會專注於使用 Apache Netbeans, Java with Ants 的開發上
+
+首先介紹 Java 的基礎文本範例\假設你在 Package example 中創建了一個 HelloWorld.java
+
+main 是主要執行的部分, 想要創建或呼召任何定義功能都必須寫在 main 裡\執行後將會 Output
+
+注意事項-Java 十分重視句式結尾,千萬不要忘記在最後加上分號 ; (儘管不少IDE會自動提醒你)
+
+<br/>
+
+如何在不使用開發軟件的前提下,單獨運行 Java 檔案
+
+1. 首先你的裝置上必須安裝了 JDK2. 手上持有 Java 檔案,例: [檔案名稱].java3. 打開命令提示元 CMD 並輸入 cd [檔案位置] 將目標位置設定在檔案文件夾4. 輸入 javac [檔案名稱].java 以創建執行 Java 用的檔案 [檔案名稱].class5. 最後在命令提示元中輸入 java [檔案名稱].java 即可
+
+<br/>
+
+如何單獨運行 Java 檔案並附帶參數 Parameter
+
+1. 首先依照上述的指示做一遍2. 在最後一步的指令後方添加任意Parameters\java [檔案名稱].java \<parameter1> \<parameter2> \<...>\所有Parameters將會儲進一個Array並傳遞至main裡面的String[] args\你便可以在main裡根據Array的內容進行其餘的指令, 如
+
+章節二 - Objects Oriented Programming (OOP)
+
+Java 開發的核心基本圍繞在 Object, 而 Object 的原型就是 Class
+
+甚麼是 Class
+
+簡單來說 Class 是一個包含虛化定義的 Template, 在實體化後就變成 Object\舉個例子
+
+Class type 種類
+
+不同的種類會導致不同的存取權限\分類不限於 Class ,更能用在 Variable 和 Method 上
+
+- Public (最大權限)\Project內任何檔案都能存取- Protected\同一 Class, Package, 其他 Package 的 Subclass 能存取- Default\僅限同一 Class, Package 能存取- Private (最小權限)\僅限同一 Class 能存取
+
+例子
+
+<br/>
+
+甚麼是 Method
+
+Method主要用於定義功能,執行範圍內的指令且能選擇是否返回數值\在絕大部分語言中稱作 Function, 而在 Java 裡叫 Method
+
+常見例子
+
+<br />
+
+每個 Class裡都有的 Constructor
+
+Constructor是會在 Object 創建時觸發的 Method, 主要用於初始化不同 Object\每個 Class 中均隱藏著一個 Default Constructor\而開發者可以新增額外/覆蓋預設的 Constructor
+
+例子
+
+執行後的 Output
+
+<br/>
+
+筆記正在草擬...\也許到這裡你對實際的開發還沒明白透徹, 無須擔心, 稍後將會作更多解釋
+
+實用鏈接
+
+To be added..
+5:T58b,Java是一個十分常見的程式語言, 其 經常應用在各大公司的產品
+
+Learning Outcome
+
+Understand the basic terminologies of Java.
+
+Learn how to develop basic Java projects.
+
+this 指令static
+
+Chapter 3 - Inheritance & Polymorphism
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 4 - Abstract Class, OOD Principles
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 5 - Generic Class
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 6 - Exception handling
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 7 - Assertion
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 8 - File I/O
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 9 - Multithreading
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 1 - Introduction
+
+To be added..
+
+Terminology
+
+Generic class
+
+Chapter 2 - Objects and Classes
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 3 - Inheritance & Polymorphism
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 4 - Abstract Class, OOD Principles
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 5 - Generic Class
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 6 - Exception handling
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 7 - Assertion
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 8 - File I/O
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 9 - Multithreading
+
+To be added..
+
+Terminology
+
+To be added..
+
+Useful Shortcut
+
+To be added..
+6:T318f,Data Structure & Algorithm is the fundamental knowledge of programming. Learning how to store, organize, sort, search data allow us to code more efficiently and concisely.
+
+Learning outcome
+
+Apply structural programming approach to solve more complex computation problems.Demonstrate applications of standard data structures such as linked list, stack, queue and tree.Solve computation problems using recursion where appropriate.Understand different sorting and searching algorithms.
+
+Chapter 1 - Basic Concepts of C++
+
+Terminology
+
+Abstract Data Type (ADT)
+
+Common Standard Library Header
+
+- \Support Standard I/O functions: , , , , , etc..- \Support Standard utility functions: , , , etc..- \Support String functions: , , , etc..- \Perform both input and output operations with the stream objects :  and
+
+Comments
+
+Primitive Data types
+
+| Data type           | Size (byte) | Representation | Range of values ||-------------------- |---|------------------------------------|--------------------|| bool                | 1 | Boolean                            | $\textnormal{false / true}$ || char                | 1 | Signed number (2's complement)     | $\textnormal{-128 to 127}$ || unsigned char       | 1 | Unsigned number                    | $\textnormal{0 to 255}$ || int                 | 4 | Signed number (2's complement)     | $-2^{31} \space \textnormal{to} \space 2^{31}-1$ || unsigned int        | 4 | Unsigned number                    | $\textnormal{0 to } 2^{32}-1$ || short               | 2 | Signed number (2's complement)     | $-2^{15} \space \textnormal{to} \space 2^{15}-1$ || unsigned short      | 2 | Unsigned number                    | $\textnormal{0 to } 2^{16}-1$ || long                | 4 | Signed number (2's complement)     | $-2^{31} \space \textnormal{to} \space 2^{31}-1$ || unsigned long       | 4 | Unsigned number                    | $\textnormal{0 to } 2^{32}-1 $ || long long           | 8 | Signed number (2's complement)     | $-2^{63} \space \textnormal{to} \space 2^{63}-1$ || unsigned long long  | 8 | Unsigned number                    | $\textnormal{0 to } 2^{64}-1 $ || float               | 4 | IEEE 32-bit floating point number  | $\pm 1.410^{-45} \textnormal{ to } \pm3.410^{38}$ || double              | 8 | IEEE 64-bit floating point number  | $\pm 510^{-324} \textnormal{ to } \pm1.79810^{308}$ || pointer             | 4 | Memory address                     | $\textnormal{0 to } 2^{32}-1$ |
+
+C++ File Structure
+
+Header file (.h)          Program file (.cpp)Functions Declaration     Functions Implementation
+
+Chapter 2 - Computation Complexity (Big-O)
+
+There are two types of complexity- Time Complexity (Time spent)- Space Complexity (Memory space spent)
+
+They both use three asymptotic notation to descript the complexity- $\textnormal{Big-O (O)}$- $\textnormal{Big-Omega }(\Omega)$- $\textnormal{Big-Theta }(\Theta)$
+
+Big-O
+
+Upper bound of the complexity$$ f(n) = \textnormal{O}(g(n)) $$
+
+Big-Omega
+
+Lower bound of the complexity$$ f(n) = \Omega(g(n)) $$
+
+Big-Theta
+
+Exact bound of the complexity$$ f(n) = \Theta(g(n)) $$
+
+Common Complexity Classes
+
+- Constant time - $O(1)$- Logarithmic time - $O(\log2 n)$- Linear time - $O(n)$- Log-linear time - $O(n\log2 n)$- Quadratic time - $O(n^2)$- Cubic time - $O(n^3)$- Polynomial time - $O(n^k)$- Exponential time - $O(2^n)$- Factorial time - $O(n!)$
+
+Slope of Complexity Classes
+
+TIme Complexity
+
+Simple operations such as- declaration, assignment- cin, cout- function call- return
+
+take constant amount of timeThe overall time complexity = O(Constant),\and constant time costs almost zero influence no matter the size.\Therefore the overall time complexity is$$ O(1) $$
+
+Only looping will cost longer time complexity\Single nested loop usually takes  as the operations  inside the loop will run  times.$$ C  n $$
+
+The overall time complexity is$$ O(n) $$While for more than one nested loop usually takes  as the operations  inside the loop will run  times.$$ C  n^2 $$
+
+The overall time complexity is$$ O(n^2) $$
+
+Best case
+
+To be added..
+
+Average case
+
+To be added..
+
+Worst case
+
+To be added..
+
+Space Complexity
+
+To be added..O()
+
+Chapter 3 - Linked Lists
+
+A linked list is an object that only contains head node of the list.Each node is created with parameter [next] linked to next node or necessaryly [prev] linked to previous node.
+
+Terminology
+
+- Predecessor- Successor
+
+Josephus Problem
+
+People are standing in a circle waiting to be executed.Counting begins at a specified point in the circle andproceeds around the circle in a specified direction. Aftera specified number of people are skipped, the nextperson is executed. The procedure is repeated with theremaining people, starting with the next person, going inthe same direction and skipping the same number ofpeople, until only one person remains, and is freed
+
+The problem — given the number of people (n), startingpoint, direction, and number to be skipped (k) — is tochoose the position in the initial circle to avoid execution.(guessing who is the survivor)
+
+Linear List
+
+Unordered / Random List
+
+Ordered List
+
+General List
+
+Restricted List
+
+Common Operations
+
+Find length of linked list
+
+Search element x from the beginning of list
+
+Insert new element x at the front of list
+
+Remove the first element x found in the list
+
+Insert new element x in an ordered list
+
+Common Issues
+
+Null-pointer exceptionMemory leak
+
+Variants of Lists
+
+Singly Linked List with Header Node- Sentinel node
+
+Circularly Linked List- Last node points back to first node
+
+Doubly Linked List- Each node has next and back pointers
+
+Circular Doubly Linked List- Boundary-tag method
+
+Orthogonal List- ...
+
+Chapter 4 - Stacks and Queues
+
+To be added..
+
+Terminology
+
+To be added..
+
+Stack
+
+Last In First Out (LIFO)
+
+Queues (FIFO)
+
+First In First Out (FIFO)
+
+Chapter 5 - Recursion
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 6 - Binary Trees
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 7 - Sorting and Searching Algorithms
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 8 - Hashing
+
+Terminology
+
+- Indexing- Perfect Hashing- Minimal Perfect Hashing- Hash Collision- Open Addressing- Closed Addressing- Design of Hash function
+
+Introduction of Hashing
+
+Hashing is generally [ Indexing ].
+
+If you have learnt what [ index ] is, you may understand it as positioning or classifying objects with duplicated meaning for a smaller size of data and better searching.
+
+Steps for Indexing1. Define an array with a specific purpose.2. Define meaning for each index in the array.3. Classify the input and determine the size of the array.4. Map the input to the array.
+
+Example of Indexing (Minimal Perfect Hashing)Given A string [foo] = "abacbdef".\Precondition: there will only be alphabets inside the string.\If you want to find how many 'a' occured inside the string, you may use Indexing.1. Define an array for storing the occurrence of letters.2. Each index represents an alphebet.3. There are a total of 26 alphabets as potential input, so the size of array will be 26.4. Similar to the ASCII table, we can take index [0] representing the occurrence of 'a', index [1] representing the occurrence of 'b', and so on...5. Loop over the string and map the character to corresponding index.
+
+However, there are still some differences between Hashing and Indexing.\In Hashing, we convert ASCII char to key directly with  so that 'a' = 0, 'b' = 1, and so on...\which allows us to map the data easier and faster.
+
+Hash function
+
+A function f(k) is known as defined with specific formula,\it can be either One-to-one, or Many-to-one,\Under this property,\it can convert a large variable-sized amount of data into a small datum by transforming data into keys.
+
+A Hash table arr[ ] is an array that will be created to hold the keys after conversion.
+
+A Hash value is usually an integer that may serve as an index to an array.
+
+Example of Hash function
+
+Hashing Student ID k using Modulo, where h is the function, h(k) is the hash value of k, n is an arbitrary key.$$ h(k) = k \bmod n $$The size of the array will be reduced significantly due to the limited range of the modulus [0 to n-1].
+
+Take k = 5000, n = 5, the function will be$$ h(k) = k \bmod 5 $$In Hash table, the value k will be updated to the index of hash value, arr[h(k)] = k$$ h(5000) = 5000 \bmod 5 = 0 $$arr[0] = 5000, arr[1] = 5081, arr[2] = 5072, arr[3] = 5023, arr[4] = 5014
+
+You may now be thinking of what if the index collides, it should happen frequently as the function is many-to-one.
+
+Yes, and therefore, I am going to introduce the solution against collision.
+
+Hash Collision
+
+Collision occurs when two distinct data own the same hash value.\Collisions are usually unavoidable when a large set of data is mapped into small datum.\It will increase the average cost of lookup operations.
+
+Solutions to Hash Collision- Open Addressing- Closed Addressing
+
+Load factor represents the length of data in each index,\larger load factor brings lower performance
+
+Open Addressing
+
+Place the key in other free slot when collisions occured.
+
+An index only maps to 1 key.\Theoretical max load factor = 1
+
+Advantages- No size overhead apart from the hash table array- Better memory locality and cache performance. Memory allocation is laid out linearly- Performs better when the number of keys is known in advance and the churn is low.
+
+Example of Open Addressing:- Linear Probing- Quadratic Probing- Double Hashing- Hopscotch hashing- Robin Hood hashing- Cuckoo hashing- 2-Choice hashing
+
+Linear Probing
+
+To be added..
+
+Quadratic Probing
+
+To be added..
+
+Double Hashing
+
+To be added..
+
+Closed Addressing
+
+Place the key in the same slot even when collisions occured.
+
+An index can map to multiple keys.\Theoretical max load factor = depends
+
+To achieve placing multiple keys in same slot- Separate chaining using linked lists- Separate chaining using dynamic arrays- Using self-balancing binary search trees
+
+Advantages- Easier removal- Assign quicker with high load factor- No issues with Clustering
+
+Example of Closed Addressing:- Chaining Buckets
+
+Chaining Buckets
+
+To be added..
+
+After dealing with collision, there will be two general types of Hashing.
+
+Minimal Perfect Hashing (Best)A hash function that maps each valid input to a different hash value.\Every index is taken in the hash table.
+
+Perfect HashingA hash funciton that maps n input keys to n consecutive hash values.\But not every index is taken in the hash table.
+
+Designing Hash Functions
+
+Ideal properties- Low Cost- Easier and faster to compute the result- Variable Range- Able to transform [words], [symbols] into [numbers]- Uniformity- Distribute the keys evenly- Minimize the chance of collisions
+
+Common types of Hash Functions
+
+1. Division
+
+2. Mid-Square
+
+3. Folding
+
+4. Radix Transformation
+
+Division
+
+hashValue = key % tableSize\Try to use prime number as the hash table size to reduce collisions
+
+For non integer keys, transform them into integer with ASCII code
+
+Mid-Square
+
+1. Transform keys into integer2. Sqaure the number3. Pick some digits from the middle to hash
+
+Take tableSize = 5
+
+|$\textnormal{key}$|$\textnormal{key}^2$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||99   |9801    |80 | 80 % 5 = 0  ||145  |21025   |102| 102 % 5 = 2 ||342  |116964  |69 | 69 % 5 = 4  |
+
+Folding
+
+1. Split key into 3 parts [ Left, Middle, Right ] as you wish,\left and right should have the same size2. Fold keys and sum the keys
+
+Shift-folding
+
+Sum the splitted keys directly
+
+Take tableSize = 5
+
+|$\textnormal{key}$|$\textnormal{split}$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||5829   |58-29     |58 + 29 = 87        | 87 % 5 = 2  ||452642 |45-26-42  |45 + 26 + 42 = 113  | 113 % 5 = 3 ||1234567|123-4-567 |123 + 4 + 567 = 694 | 694 % 5 = 4  |
+
+Boundary-folding
+
+Invert the left and right part of each splitted part except middle oneThen sum the keys
+
+Take tableSize = 5|$\textnormal{key}$|$\textnormal{split}$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||5829   |58-29     |85 + 92 = 177       | 177 % 5 = 2  ||452642 |45-26-42  |54 + 62 + 24 = 140  | 140 % 5 = 0 ||1234567|12-345-67 |21 + 345 + 76 = 442 | 442 % 5 = 2  |
+
+Radix Transformation
+
+Define same key with new radix then convert back to original radix
+
+Given $ k = 358345{10} $\Define $ k2 = 358345{9} $\$ h(k) = k2 \space mod \space tableSize $\$ k2 = 358345{9} = 216068{10} $\$ h(k) = 216068{10} \space mod \space tableSize $
+
+Useful shortcut
+
+Convenient Mathematics formulas for programming
+
+Gauss Summation
+
+$$ \frac{n(n+1)}{2} $$
+
+Calculate the sum of integers from 1 to n inclusively
+
+$$ \frac{(a+b)(b-a+1)}{2} $$
+
+Calculate the sum of natural numbers from a to b inclusively
+
+To be added..
+9:T52d,const GLOBAL_CONFIG = {
+  root: "/",
+  algolia: undefined,
+  localSearch: {
+    path: "/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T73e,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/img/friend_404.gif':'/img/404.jpg'; } }, true);
+})(window);0:["b8OHLju7_M5S3allRv53F",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":true,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-18 03:53:04\"};"}}],["$","$L2",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/icon.png\" onerror=\"onerror=null;src='/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":11}]]}],["$","a",null,{"href":"/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":25}]]}],["$","a",null,{"href":"/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":5}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"full_page","id":"page-header","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"site-info","children":[["$","h1",null,{"id":"site-title","children":"Vokint's StudyLog"}],["$","div",null,{"id":"site-subtitle","children":["$","span",null,{"id":"subtitle"}]}],["$","div",null,{"id":"site_social_icons","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"id":"scroll-down","children":["$","i",null,{"className":"fas fa-angle-down scroll-down-effects"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"className":"recent-posts","id":"recent-posts","children":[[["$","div","ai_prompting_foundations",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/2026/05/15/ai_prompting_foundations/\" title=\"AI Prompting (Foundations &amp; Practice)\"><img class=\"post_bg\" src=\"/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"AI Prompting (Foundations &amp; Practice)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","children":"AI Prompting (Foundations & Practice)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-15T04:00:00.000Z","title":"Created 2026-05-15 12:00:00","children":"2026-05-15"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","AI",{"className":"article-meta__categories","href":"/categories/AI/","children":"AI"}]]]]}]]}],["$","div",null,{"className":"content","children":"$3"}]]}]]}],["$","div","statistic_n_probability_model",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/statistic_n_probability_model/\" title=\"Statistic &amp; Probability Models (In Progress)\"><img class=\"post_bg\" src=\"/assets/statistic_n_probability_model.png\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Statistic &amp; Probability Models (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","children":"Statistic & Probability Models (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:46:31.000Z","title":"Created 2022-05-26 03:46:31","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Mathematics",{"className":"article-meta__categories","href":"/categories/Mathematics/","children":"Mathematics"}]]]]}]]}],["$","div",null,{"className":"content","children":"Foundation Statistic and Probability Models.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","web_development_advanced",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/web_development_advanced/\" title=\"Web Development (Advanced) (In Progress)\"><img class=\"post_bg\" src=\"/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Web Development (Advanced) (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","children":"Web Development (Advanced) (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:04:53.000Z","title":"Created 2022-05-26 03:04:53","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Website development can be interesting when you discover more and more features and even deploy as mobile applications.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","java_development_p1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/java_development_p1/\" title=\"Java Development [Basic] Part 1 (In Progress)\"><img class=\"post_bg\" src=\"/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Java Development [Basic] Part 1 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","children":"Java Development [Basic] Part 1 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Java is an ordinary programming language, it is also the fundamental of other languages.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 - Introduction\n\nTo be added..\n\nTerminology\n\nGeneric class\n\nChapter 2 - Objects and Classes\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 3 - Inheritance & Polymorphism\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 4 - Abstract Class, OOD Principles\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 5 - Generic Class\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 6 - Exception handling\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 7 - Assertion\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 8 - File I/O\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 9 - Multithreading\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","java_development_p2",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/java_development_p2/\" title=\"Java Development [Basic] Part 2 (In Progress)\"><img class=\"post_bg\" src=\"/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Java Development [Basic] Part 2 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","children":"Java Development [Basic] Part 2 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Java is an ordinary programming language, it is also the fundamental of other languages.\n\nLearning Outcome\n\nTo be added..\n\nChapter 10 - Graphical User Interface\n\nTo be added..\n\nTerminology\n\nGeneric class\n\nChapter 11 - Events\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 12 - Functional Programming\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 13 - Collections\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 14 - Stream API\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","vk_javaProg_part1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/vk_javaProg_part1/\" title=\"Java語言 重溫筆記 - 上 (In Progress)\"><img class=\"post_bg\" src=\"/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Java語言 重溫筆記 - 上 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/vk_javaProg_part1/","title":"Java語言 重溫筆記 - 上 (In Progress)","children":"Java語言 重溫筆記 - 上 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$4"}]]}]]}],["$","div","vk_javaProg_Q&A",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/vk_javaProg_Q%26A/\" title=\"Java語言 重溫筆記 - Q&amp;A (In Progress)\"><img class=\"post_bg\" src=\"/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Java語言 重溫筆記 - Q&amp;A (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/vk_javaProg_Q%26A/","title":"Java語言 重溫筆記 - Q&A (In Progress)","children":"Java語言 重溫筆記 - Q&A (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$5"}]]}]]}],["$","div","web_development_basic",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/26/web_development_basic/\" title=\"Web Development (Basic) (In Progress)\"><img class=\"post_bg\" src=\"/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Web Development (Basic) (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/26/web_development_basic/","title":"Web Development (Basic) (In Progress)","children":"Web Development (Basic) (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:34:46.000Z","title":"Created 2022-05-26 02:34:46","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Website development can be interesting when you discover more and more features and even deploy as mobile applications.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","logic_circuit_design",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/25/logic_circuit_design/\" title=\"Logic Circuit Design (In Progress)\"><img class=\"post_bg\" src=\"/assets/circuit_design.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Logic Circuit Design (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/25/logic_circuit_design/","title":"Logic Circuit Design (In Progress)","children":"Logic Circuit Design (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:31:59.000Z","title":"Created 2022-05-25 01:31:59","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Circuit Design",{"className":"article-meta__categories","href":"/categories/Circuit-Design/","children":"Circuit Design"}]]]]}]]}],["$","div",null,{"className":"content","children":"Circuit Design is important for Engineering\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","data_structure_n_algorithm",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/2022/05/25/data_structure_n_algorithm/\" title=\"Data Structure &amp; Algorithm (C++)\"><img class=\"post_bg\" src=\"/assets/data_structure_n_alrogithm.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Data Structure &amp; Algorithm (C++)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/2022/05/25/data_structure_n_algorithm/","title":"Data Structure & Algorithm (C++)","children":"Data Structure & Algorithm (C++)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:28:17.000Z","title":"Created 2022-05-25 01:28:17","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$6"}]]}]]}]],["$","nav",null,{"id":"pagination","children":["$","div",null,{"className":"pagination","children":[["$","span","1",{"className":"page-number current","children":1}]," ",["$","a","2",{"className":"page-number","href":"/page/2/","children":2}],["$","a","next",{"className":"extend next","rel":"next","href":"/page/2/","children":["$","i",null,{"className":"fas fa-chevron-right"}]}]]}]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/icon.png\" onerror=\"this.onerror=null;this.src='/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":11}]]}],["$","a",null,{"href":"/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":25}]]}],["$","a",null,{"href":"/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":5}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[false,["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","ai_prompting_foundations",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"AI Prompting (Foundations &amp; Practice)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","children":"AI Prompting (Foundations & Practice)"}],["$","time",null,{"dateTime":"2026-05-15T04:00:00.000Z","title":"Created 2026-05-15 12:00:00","children":"2026-05-15"}]]}]]}],["$","div","statistic_n_probability_model",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/statistic_n_probability_model.png\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Statistic &amp; Probability Models (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","children":"Statistic & Probability Models (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T19:46:31.000Z","title":"Created 2022-05-26 03:46:31","children":"2022-05-26"}]]}]]}],["$","div","web_development_advanced",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Web Development (Advanced) (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","children":"Web Development (Advanced) (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T19:04:53.000Z","title":"Created 2022-05-26 03:04:53","children":"2022-05-26"}]]}]]}],["$","div","java_development_p1",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Java Development [Basic] Part 1 (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","children":"Java Development [Basic] Part 1 (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}]]}],["$","div","java_development_p2",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/img/404.jpg'\" alt=\"Java Development [Basic] Part 2 (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","children":"Java Development [Basic] Part 2 (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}]]}]]}]]}],[["$","div",null,{"className":"card-widget card-categories","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-folder-open"}],["$","span",null,{"children":"Categories"}]]}],["$","ul",null,{"className":"card-category-list","id":"aside-cat-list","children":[["$","li","AI",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/categories/AI/","children":[["$","span",null,{"className":"card-category-list-name","children":"AI"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Circuit-Design",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/categories/Circuit-Design/","children":[["$","span",null,{"className":"card-category-list-name","children":"Circuit Design"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Mathematics",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/categories/Mathematics/","children":[["$","span",null,{"className":"card-category-list-name","children":"Mathematics"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Networking",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/categories/Networking/","children":[["$","span",null,{"className":"card-category-list-name","children":"Networking"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Programming",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/categories/Programming/","children":[["$","span",null,{"className":"card-category-list-name","children":"Programming"}],["$","span",null,{"className":"card-category-list-count","children":7}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-tags","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-tags"}],["$","span",null,{"children":"Tags"}]]}],["$","div",null,{"className":"card-tag-cloud","children":[["$","a","AI",{"href":"/tags/AI/","style":{"fontSize":"1.10em","color":"#999"},"children":"AI"}]," ",["$","a","Bootstrap",{"href":"/tags/Bootstrap/","style":{"fontSize":"1.10em","color":"#999"},"children":"Bootstrap"}]," ",["$","a","C",{"href":"/tags/C/","style":{"fontSize":"1.10em","color":"#999"},"children":"C++"}]," ",["$","a","Computer-Science",{"href":"/tags/Computer-Science/","style":{"fontSize":"1.50em","color":"#999fab"},"children":"Computer Science"}]," ",["$","a","CSS",{"href":"/tags/CSS/","style":{"fontSize":"1.10em","color":"#999"},"children":"CSS"}]," ",["$","a","Data-Structure",{"href":"/tags/Data-Structure/","style":{"fontSize":"1.10em","color":"#999"},"children":"Data Structure"}]," ",["$","a","Engineering",{"href":"/tags/Engineering/","style":{"fontSize":"1.41em","color":"#99a2b0"},"children":"Engineering"}]," ",["$","a","Font-Awesome",{"href":"/tags/Font-Awesome/","style":{"fontSize":"1.10em","color":"#999"},"children":"Font Awesome"}]," ",["$","a","HTML",{"href":"/tags/HTML/","style":{"fontSize":"1.10em","color":"#999"},"children":"HTML"}]," ",["$","a","Ip-address",{"href":"/tags/Ip-address/","style":{"fontSize":"1.10em","color":"#999"},"children":"Ip address"}]," ",["$","a","Java",{"href":"/tags/Java/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"Java"}]," ",["$","a","jQuery",{"href":"/tags/jQuery/","style":{"fontSize":"1.10em","color":"#999"},"children":"jQuery"}]," ",["$","a","Large-Language-Models",{"href":"/tags/Large-Language-Models/","style":{"fontSize":"1.10em","color":"#999"},"children":"Large Language Models"}]," ",["$","a","Logic-Gates",{"href":"/tags/Logic-Gates/","style":{"fontSize":"1.10em","color":"#999"},"children":"Logic Gates"}]," ",["$","a","Machine-Learning",{"href":"/tags/Machine-Learning/","style":{"fontSize":"1.10em","color":"#999"},"children":"Machine Learning"}]," ",["$","a","Mathematics",{"href":"/tags/Mathematics/","style":{"fontSize":"1.10em","color":"#999"},"children":"Mathematics"}]," ",["$","a","Node-js",{"href":"/tags/Node-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Node.js"}]," ",["$","a","Probability",{"href":"/tags/Probability/","style":{"fontSize":"1.10em","color":"#999"},"children":"Probability"}]," ",["$","a","Prompt-Engineering",{"href":"/tags/Prompt-Engineering/","style":{"fontSize":"1.10em","color":"#999"},"children":"Prompt Engineering"}]," ",["$","a","React-js",{"href":"/tags/React-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"React.js"}]," ",["$","a","Statistic",{"href":"/tags/Statistic/","style":{"fontSize":"1.10em","color":"#999"},"children":"Statistic"}]," ",["$","a","Subnetting",{"href":"/tags/Subnetting/","style":{"fontSize":"1.10em","color":"#999"},"children":"Subnetting"}]," ",["$","a","Three-js",{"href":"/tags/Three-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Three.js"}]," ",["$","a","Vue-js",{"href":"/tags/Vue-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Vue.js"}]," ",["$","a","Website-design",{"href":"/tags/Website-design/","style":{"fontSize":"1.14em","color":"#99a8bd"},"children":"Website design"}]]}]]}],["$","div",null,{"className":"card-widget card-archives","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-archive"}],["$","span",null,{"children":"Archives"}]]}],["$","ul",null,{"className":"card-archive-list","children":[["$","li","202605",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/archives/2026/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2026"}],["$","span",null,{"className":"card-archive-list-count","children":1}]]}]}],["$","li","202205",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/archives/2022/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2022"}],["$","span",null,{"className":"card-archive-list-count","children":10}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-webinfo","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-chart-line"}],["$","span",null,{"children":"Info"}]]}],["$","div",null,{"className":"webinfo","children":[["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Article :"}],["$","div",null,{"className":"item-count","children":11}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Run time :"}],["$","div",null,{"className":"item-count","id":"runtimeshow","data-publishDate":"2022-01-01T00:00:00.000Z"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"UV :"}],["$","div",null,{"className":"item-count","id":"busuanzi_value_site_uv"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"PV :"}],["$","div",null,{"className":"item-count","id":"busuanzi_value_site_pv"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Last Push :"}],["$","div",null,{"className":"item-count","id":"last-push-date","data-lastPushDate":"2026-05-18T03:53:04.327Z"}]]}]]}]]}]]]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://vokint.github.io/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],[["$","div",null,{"id":"local-search","children":["$","div",null,{"className":"search-dialog","children":[["$","nav",null,{"className":"search-nav","children":[["$","span",null,{"className":"search-dialog-title","children":"Search"}],["$","span",null,{"id":"loading-status"}],["$","button",null,{"className":"search-close-button","children":["$","i",null,{"className":"fas fa-times"}]}]]}],["$","div",null,{"id":"loading-database","className":"is-center","children":[["$","i",null,{"className":"fas fa-spinner fa-pulse"}],["$","span",null,{"children":"  Loading the Database"}]]}],["$","div",null,{"className":"search-wrap","children":[["$","div",null,{"id":"local-search-input","children":["$","div",null,{"className":"local-search-box","children":["$","input",null,{"className":"local-search-box--input","placeholder":"Search for Posts","type":"text"}]}]}],["$","hr",null,{}],["$","div",null,{"id":"local-search-results"}]]}]]}]}],["$","div",null,{"id":"search-mask"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    var b = document.getElementById('loading-box');\n    if (b) b.classList.add(\"loaded\");\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    var b = document.getElementById('loading-box');\n    if (b) b.classList.remove(\"loaded\");\n  }\n};\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$L7",null,{"isHome":true,"isPost":false}],["$","$L8",null,{}]],null],null],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://vokint.github.io/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://vokint.github.io/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//busuanzi.ibruce.info"}],["$","link",null,{"rel":"stylesheet","href":"/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-18 03:53:04\"};"}}],["$","$L2",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/assets/icon.png\" onerror=\"onerror=null;src='/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":11}]]}],["$","a",null,{"href":"/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":25}]]}],["$","a",null,{"href":"/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":5}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://vokint.github.io/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],[["$","div",null,{"id":"local-search","children":["$","div",null,{"className":"search-dialog","children":[["$","nav",null,{"className":"search-nav","children":[["$","span",null,{"className":"search-dialog-title","children":"Search"}],["$","span",null,{"id":"loading-status"}],["$","button",null,{"className":"search-close-button","children":["$","i",null,{"className":"fas fa-times"}]}]]}],["$","div",null,{"id":"loading-database","className":"is-center","children":[["$","i",null,{"className":"fas fa-spinner fa-pulse"}],["$","span",null,{"children":"  Loading the Database"}]]}],["$","div",null,{"className":"search-wrap","children":[["$","div",null,{"id":"local-search-input","children":["$","div",null,{"className":"local-search-box","children":["$","input",null,{"className":"local-search-box--input","placeholder":"Search for Posts","type":"text"}]}]}],["$","hr",null,{}],["$","div",null,{"id":"local-search-results"}]]}]]}]}],["$","div",null,{"id":"search-mask"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    var b = document.getElementById('loading-box');\n    if (b) b.classList.add(\"loaded\");\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    var b = document.getElementById('loading-box');\n    if (b) b.classList.remove(\"loaded\");\n  }\n};\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$L7",null,{"isHome":false,"isPost":false}],["$","$L8",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$Ld",null]]]]
+d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Vokint's StudyLog"}]]
+1:null
