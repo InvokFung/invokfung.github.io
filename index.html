@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>InvokFung · Projects</title>
+<meta name="description" content="Personal project hub — blog, tools, games." />
+<link rel="icon" href="/blog/assets/icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #fafbfc;
+    --bg-soft: #f4f5f8;
+    --fg: #111418;
+    --fg-soft: #4a525c;
+    --fg-mute: #8b94a1;
+    --border: rgba(16,22,36,0.07);
+    --border-strong: rgba(16,22,36,0.12);
+    --accent: #0f172a;
+    --accent-glow: #6366f1;
+    --grad-a: #6366f1;
+    --grad-b: #06b6d4;
+    --grad-c: #f59e0b;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,.04), 0 1px 1px rgba(15,23,42,.03);
+    --shadow-md: 0 8px 24px -8px rgba(15,23,42,.12), 0 2px 6px rgba(15,23,42,.04);
+    --shadow-lg: 0 24px 60px -20px rgba(15,23,42,.22), 0 8px 20px -8px rgba(15,23,42,.1);
+    --r: 14px;
+  }
+  html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  body {
+    min-height: 100vh;
+    background-image:
+      radial-gradient(900px 500px at 10% -10%, rgba(99,102,241,0.07), transparent 60%),
+      radial-gradient(700px 400px at 110% 10%, rgba(6,182,212,0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Animated noise overlay (subtle) */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.09 0 0 0 0 0.14 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+
+  header.hero { padding: 96px 0 56px; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border: 1px solid var(--border-strong); border-radius: 999px;
+    background: rgba(255,255,255,0.7); backdrop-filter: blur(8px);
+    font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-soft);
+    font-weight: 500;
+    opacity: 0; transform: translateY(8px);
+    animation: rise 0.6s 0.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-eyebrow .pulse {
+    width: 6px; height: 6px; border-radius: 50%; background: #22c55e;
+    box-shadow: 0 0 0 0 rgba(34,197,94,0.6);
+    animation: pulse 2s infinite;
+  }
+  h1.hero-title {
+    margin: 18px 0 14px;
+    font-size: clamp(40px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800;
+    opacity: 0; transform: translateY(12px);
+    animation: rise 0.7s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  h1.hero-title .grad {
+    background: linear-gradient(120deg, var(--grad-a), var(--grad-b) 50%, var(--grad-c));
+    background-size: 200% 200%;
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    animation: gradShift 8s ease-in-out infinite;
+  }
+  .hero-sub {
+    max-width: 620px; font-size: 18px; line-height: 1.6; color: var(--fg-soft);
+    opacity: 0; transform: translateY(12px);
+    animation: rise 0.7s 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .grid {
+    display: grid; gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin: 24px 0 40px;
+  }
+
+  a.card {
+    position: relative; display: flex; flex-direction: column; gap: 14px;
+    padding: 26px; border-radius: var(--r);
+    background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s, border-color 0.4s;
+    overflow: hidden;
+    opacity: 0; transform: translateY(20px);
+    animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  a.card:nth-child(1) { animation-delay: 0.35s; }
+  a.card:nth-child(2) { animation-delay: 0.45s; }
+  a.card:nth-child(3) { animation-delay: 0.55s; }
+  a.card:nth-child(4) { animation-delay: 0.65s; }
+  a.card::before {
+    content: ''; position: absolute; inset: -1px; border-radius: inherit;
+    padding: 1px; background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    opacity: 0; transition: opacity 0.4s; pointer-events: none;
+  }
+  a.card::after {
+    content: ''; position: absolute; right: -40px; top: -40px;
+    width: 140px; height: 140px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(99,102,241,0.16), transparent 70%);
+    opacity: 0; transition: opacity 0.4s; pointer-events: none;
+  }
+  a.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+  a.card:hover::before, a.card:hover::after { opacity: 1; }
+
+  .card-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #eef2ff, #ecfeff);
+    border: 1px solid var(--border);
+    font-size: 22px;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  a.card:hover .card-icon { transform: rotate(-4deg) scale(1.06); }
+
+  .card-title { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+  .card-desc { font-size: 14px; color: var(--fg-soft); line-height: 1.55; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tag {
+    font: 500 11px/1 'JetBrains Mono', monospace;
+    padding: 4px 8px; border-radius: 6px; background: var(--bg-soft); color: var(--fg-soft);
+    letter-spacing: 0.02em;
+  }
+  .card-arrow {
+    position: absolute; right: 22px; bottom: 22px;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--fg); color: #fff; font-size: 14px;
+    opacity: 0; transform: translate(-6px, 6px);
+    transition: opacity 0.3s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  a.card:hover .card-arrow { opacity: 1; transform: translate(0, 0); }
+
+  footer.site-foot {
+    margin-top: 64px; padding: 32px 0 56px;
+    border-top: 1px solid var(--border);
+    color: var(--fg-mute); font-size: 13px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center;
+    opacity: 0;
+    animation: rise 0.6s 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  footer.site-foot a { color: var(--fg-soft); transition: color .2s; }
+  footer.site-foot a:hover { color: var(--accent-glow); }
+  .ascii { font: 500 11px/1.3 'JetBrains Mono', monospace; color: var(--fg-mute); white-space: pre; opacity: 0.55; }
+
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+    70%  { box-shadow: 0 0 0 10px rgba(34,197,94,0); }
+    100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+  }
+  @keyframes gradShift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition: none !important; }
+    .hero-eyebrow, h1.hero-title, .hero-sub, a.card, footer.site-foot { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    header.hero { padding: 64px 0 40px; }
+    .container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <span class="hero-eyebrow"><span class="pulse"></span>Online — last build <span id="last-build" style="font-family:'JetBrains Mono',monospace;font-size:11px;margin-left:2px;"></span></span>
+      <h1 class="hero-title">Hi, I'm <span class="grad">Vokint</span>.</h1>
+      <p class="hero-sub">Engineer building learning logs, small tools and games. Below are the corners of this site — each one stands alone, click anything to jump in.</p>
+    </header>
+
+    <main>
+      <section class="grid" aria-label="Projects">
+        <a class="card" href="/blog/" aria-label="Visit the blog">
+          <div class="card-icon">📚</div>
+          <div class="card-title">StudyLog Blog</div>
+          <div class="card-desc">Engineering notes, post-grad study reviews, math &amp; programming write-ups. Updated periodically.</div>
+          <div class="card-tags"><span class="tag">next.js</span><span class="tag">markdown</span><span class="tag">katex</span></div>
+          <div class="card-arrow">→</div>
+        </a>
+
+        <a class="card" href="/ptimer/" aria-label="Open Pomodoro Timer">
+          <div class="card-icon">⏱️</div>
+          <div class="card-title">Pomodoro Timer</div>
+          <div class="card-desc">Focus / break cycle timer for deep work sessions. Browser-only, no signup, persists across reloads.</div>
+          <div class="card-tags"><span class="tag">html</span><span class="tag">css</span><span class="tag">js</span></div>
+          <div class="card-arrow">→</div>
+        </a>
+
+        <a class="card" href="/triplefind/" aria-label="Play TripleFind">
+          <div class="card-icon">🎴</div>
+          <div class="card-title">TripleFind</div>
+          <div class="card-desc">Memory-style card matching game — find all triples before the timer hits zero. Higher streak = higher score.</div>
+          <div class="card-tags"><span class="tag">game</span><span class="tag">canvas</span></div>
+          <div class="card-arrow">→</div>
+        </a>
+
+        <a class="card" href="https://github.com/InvokFung" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <div class="card-icon">🐙</div>
+          <div class="card-title">GitHub</div>
+          <div class="card-desc">All source code, side experiments, and contribution history live on my GitHub account.</div>
+          <div class="card-tags"><span class="tag">repos</span><span class="tag">open source</span></div>
+          <div class="card-arrow">→</div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div>© <span id="year"></span> InvokFung · built static, served from GitHub Pages</div>
+      <pre class="ascii">~/ $</pre>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // last-build timestamp — replace via deploy script if you want, otherwise show current visit time.
+    document.getElementById('last-build').textContent = new Date().toISOString().slice(0, 10);
+  </script>
+</body>
+</html>
