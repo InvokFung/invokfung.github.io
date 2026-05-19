@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" role="img" aria-label="Treble staff lines and spaces note names">
+  <rect width="600" height="280" fill="#ffffff"/>
+  <!-- staff -->
+  <g stroke="#222" stroke-width="2">
+    <line x1="80" y1="60"  x2="540" y2="60"/>
+    <line x1="80" y1="100" x2="540" y2="100"/>
+    <line x1="80" y1="140" x2="540" y2="140"/>
+    <line x1="80" y1="180" x2="540" y2="180"/>
+    <line x1="80" y1="220" x2="540" y2="220"/>
+  </g>
+  <!-- line names -->
+  <g font-family="Georgia, serif" font-size="22" fill="#1d6a8a" font-weight="700">
+    <text x="40" y="68">F</text>
+    <text x="40" y="108">D</text>
+    <text x="40" y="148">B</text>
+    <text x="40" y="188">G</text>
+    <text x="40" y="228">E</text>
+  </g>
+  <!-- space names -->
+  <g font-family="Georgia, serif" font-size="22" fill="#c54a2e" font-weight="700">
+    <text x="555" y="88">E</text>
+    <text x="555" y="128">C</text>
+    <text x="555" y="168">A</text>
+    <text x="555" y="208">F</text>
+  </g>
+  <!-- caption -->
+  <text x="80"  y="30"  font-family="Georgia, serif" font-size="18" fill="#1d6a8a">Lines (bottom → top): E G B D F  — "Every Good Boy Does Fine"</text>
+  <text x="80"  y="260" font-family="Georgia, serif" font-size="18" fill="#c54a2e">Spaces: F A C E  — already spells FACE</text>
+</svg>

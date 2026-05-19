@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Piano keys with finger numbers + harmonic minor scale">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a1f4a"/>
+      <stop offset="100%" stop-color="#1e1240"/>
+    </linearGradient>
+    <linearGradient id="key3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f8f5"/>
+      <stop offset="100%" stop-color="#d0d0c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+
+  <circle cx="200" cy="120" r="200" fill="#ffffff" opacity="0.04"/>
+  <circle cx="1000" cy="540" r="240" fill="#ffffff" opacity="0.05"/>
+
+  <!-- one octave of keys, larger -->
+  <g transform="translate(310 280)">
+    <!-- 7 whites -->
+    <g stroke="#777" stroke-width="2">
+      <rect x="0"   y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+      <rect x="80"  y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+      <rect x="160" y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+      <rect x="240" y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+      <rect x="320" y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+      <rect x="400" y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+      <rect x="480" y="0" width="80" height="280" fill="url(#key3)" rx="3"/>
+    </g>
+    <!-- 5 blacks: C# D# F# G# A# -->
+    <g fill="#0f0f15">
+      <rect x="56"  y="0" width="48" height="170" rx="3"/>
+      <rect x="136" y="0" width="48" height="170" rx="3"/>
+      <rect x="296" y="0" width="48" height="170" rx="3"/>
+      <rect x="376" y="0" width="48" height="170" rx="3"/>
+      <rect x="456" y="0" width="48" height="170" rx="3"/>
+    </g>
+    <!-- finger numbers in colored circles on the white keys (RH C major: 1 2 3 1 2 3 4 5) -->
+    <g font-family="Georgia, serif" font-size="28" font-weight="700" text-anchor="middle">
+      <circle cx="40"  cy="320" r="22" fill="#ff8a65"/><text x="40"  y="328" fill="#1e1240">1</text>
+      <circle cx="120" cy="320" r="22" fill="#ffd966"/><text x="120" y="328" fill="#1e1240">2</text>
+      <circle cx="200" cy="320" r="22" fill="#9be3c8"/><text x="200" y="328" fill="#1e1240">3</text>
+      <circle cx="280" cy="320" r="22" fill="#ff8a65"/><text x="280" y="328" fill="#1e1240">1</text>
+      <circle cx="360" cy="320" r="22" fill="#ffd966"/><text x="360" y="328" fill="#1e1240">2</text>
+      <circle cx="440" cy="320" r="22" fill="#9be3c8"/><text x="440" y="328" fill="#1e1240">3</text>
+      <circle cx="520" cy="320" r="22" fill="#7adfd0"/><text x="520" y="328" fill="#1e1240">4</text>
+    </g>
+  </g>
+
+  <!-- title -->
+  <text x="100" y="120" fill="#ffffff" font-family="Georgia, serif" font-size="64" font-weight="600">Piano · 03</text>
+  <text x="100" y="168" fill="#e0c8f5" font-family="Georgia, serif" font-size="32" font-style="italic">Grade 3 — Scales &amp; Triads</text>
+  <text x="100" y="210" fill="#9be3c8" font-family="Georgia, serif" font-size="22" font-style="italic">RH fingering — C major</text>
+</svg>

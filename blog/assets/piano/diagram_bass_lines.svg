@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" role="img" aria-label="Bass staff lines and spaces note names">
+  <rect width="600" height="280" fill="#ffffff"/>
+  <g stroke="#222" stroke-width="2">
+    <line x1="80" y1="60"  x2="540" y2="60"/>
+    <line x1="80" y1="100" x2="540" y2="100"/>
+    <line x1="80" y1="140" x2="540" y2="140"/>
+    <line x1="80" y1="180" x2="540" y2="180"/>
+    <line x1="80" y1="220" x2="540" y2="220"/>
+  </g>
+  <g font-family="Georgia, serif" font-size="22" fill="#1d6a8a" font-weight="700">
+    <text x="40" y="68">A</text>
+    <text x="40" y="108">F</text>
+    <text x="40" y="148">D</text>
+    <text x="40" y="188">B</text>
+    <text x="40" y="228">G</text>
+  </g>
+  <g font-family="Georgia, serif" font-size="22" fill="#c54a2e" font-weight="700">
+    <text x="555" y="88">G</text>
+    <text x="555" y="128">E</text>
+    <text x="555" y="168">C</text>
+    <text x="555" y="208">A</text>
+  </g>
+  <text x="80"  y="30"  font-family="Georgia, serif" font-size="18" fill="#1d6a8a">Lines (bottom → top): G B D F A — "Good Boys Do Fine Always"</text>
+  <text x="80"  y="260" font-family="Georgia, serif" font-size="18" fill="#c54a2e">Spaces: A C E G — "All Cows Eat Grass"</text>
+</svg>

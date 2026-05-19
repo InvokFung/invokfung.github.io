@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Time signature 6/8 with beamed semiquavers">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f3a2e"/>
+      <stop offset="100%" stop-color="#3a6a4e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+
+  <circle cx="160" cy="160" r="180" fill="#ffffff" opacity="0.04"/>
+  <circle cx="1040" cy="500" r="200" fill="#ffffff" opacity="0.05"/>
+
+  <!-- staff -->
+  <g stroke="#ffffff" stroke-width="2" opacity="0.85">
+    <line x1="240" y1="280" x2="1100" y2="280"/>
+    <line x1="240" y1="320" x2="1100" y2="320"/>
+    <line x1="240" y1="360" x2="1100" y2="360"/>
+    <line x1="240" y1="400" x2="1100" y2="400"/>
+    <line x1="240" y1="440" x2="1100" y2="440"/>
+  </g>
+
+  <!-- time signature 6/8 -->
+  <text x="270" y="345" fill="#ffd966" font-family="Georgia, serif" font-size="80" font-weight="700">6</text>
+  <text x="270" y="425" fill="#ffd966" font-family="Georgia, serif" font-size="80" font-weight="700">8</text>
+
+  <!-- beamed semiquaver group (4 stems with double beam) -->
+  <g stroke="#ffffff" stroke-width="3" fill="#ffffff">
+    <!-- group 1 -->
+    <ellipse cx="430" cy="400" rx="14" ry="10" transform="rotate(-20 430 400)"/>
+    <line x1="442" y1="400" x2="442" y2="280"/>
+    <ellipse cx="490" cy="400" rx="14" ry="10" transform="rotate(-20 490 400)"/>
+    <line x1="502" y1="400" x2="502" y2="280"/>
+    <ellipse cx="550" cy="400" rx="14" ry="10" transform="rotate(-20 550 400)"/>
+    <line x1="562" y1="400" x2="562" y2="280"/>
+    <ellipse cx="610" cy="400" rx="14" ry="10" transform="rotate(-20 610 400)"/>
+    <line x1="622" y1="400" x2="622" y2="280"/>
+    <rect x="442" y="278" width="180" height="9"/>
+    <rect x="442" y="294" width="180" height="9"/>
+  </g>
+
+  <!-- second beamed group (slightly higher) -->
+  <g stroke="#ffffff" stroke-width="3" fill="#ffffff">
+    <ellipse cx="720" cy="380" rx="14" ry="10" transform="rotate(-20 720 380)"/>
+    <line x1="732" y1="380" x2="732" y2="260"/>
+    <ellipse cx="780" cy="380" rx="14" ry="10" transform="rotate(-20 780 380)"/>
+    <line x1="792" y1="380" x2="792" y2="260"/>
+    <ellipse cx="840" cy="380" rx="14" ry="10" transform="rotate(-20 840 380)"/>
+    <line x1="852" y1="380" x2="852" y2="260"/>
+    <ellipse cx="900" cy="380" rx="14" ry="10" transform="rotate(-20 900 380)"/>
+    <line x1="912" y1="380" x2="912" y2="260"/>
+    <rect x="732" y="258" width="180" height="9"/>
+    <rect x="732" y="274" width="180" height="9"/>
+  </g>
+
+  <!-- accent on beat 1 -->
+  <path d="M 420 460 L 460 470 L 420 480 Z" fill="#ff8a65"/>
+  <text x="420" y="510" fill="#ff8a65" font-family="Georgia, serif" font-size="20" font-style="italic">beat 1</text>
+  <path d="M 700 460 L 740 470 L 700 480 Z" fill="#ff8a65"/>
+  <text x="700" y="510" fill="#ff8a65" font-family="Georgia, serif" font-size="20" font-style="italic">beat 4</text>
+
+  <!-- title -->
+  <text x="100" y="120" fill="#ffffff" font-family="Georgia, serif" font-size="64" font-weight="600">Piano · 02</text>
+  <text x="100" y="168" fill="#c8efd8" font-family="Georgia, serif" font-size="32" font-style="italic">Grade 2 — Compound Time</text>
+</svg>
