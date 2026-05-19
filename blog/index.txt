@@ -1,11 +1,890 @@
-2:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-850cf746b977a6c8.js"],"default"]
-7:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-850cf746b977a6c8.js"],"default"]
-8:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-850cf746b977a6c8.js"],"default"]
-9:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-850cf746b977a6c8.js"],""]
-a:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-850cf746b977a6c8.js"],"default"]
-d:I[4707,[],""]
-e:I[6423,[],""]
-3:T3d0e,Prompting is the practice of writing inputs that steer a Large Language Model (LLM) toward useful outputs. It is part interface design, part rhetoric, and part empirical science. This note covers the foundations and the techniques that have been validated by published research, with worked examples you can copy.
+2:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-4890e53b7c386bcb.js"],"default"]
+9:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-4890e53b7c386bcb.js"],"default"]
+a:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-4890e53b7c386bcb.js"],"default"]
+b:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-4890e53b7c386bcb.js"],""]
+c:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","931","static/chunks/app/page-4890e53b7c386bcb.js"],"default"]
+f:I[4707,[],""]
+10:I[6423,[],""]
+3:T45f6,Grade 4 is the bridge between "can read music" and "understands music". The syllabus expands keys to ±4 sharps/flats, finalises melodic minor, introduces all interval qualities including augmented and diminished, formalises cadences, and asks you to write primary triads in any key from the syllabus. Repertoire jumps too — full Bach inventions, longer sonatina movements, intermediate Romantic miniatures.
+
+> Series map: 00 → 01 → 02 → 03 → 04 Grade 4 (this post). Grades 5–8 to follow.
+
+Learning Outcome
+
+- All simple and compound time signatures up to 12/8, with duplets and triplets in compound time.- All major and minor keys up to ±4 sharps/flats.- Full melodic minor (ascending raised 6 + 7, descending revert).- Identify and write all interval qualities including augmented and diminished (not only the tritone).- Identify and write primary triads (I, IV, V/i, iv, V) in root position in any key from the syllabus.- Write a perfect, plagal, imperfect, or interrupted cadence in any of those keys.- Transpose a short passage up or down an octave, possibly with a clef change.- Recognise broader Italian, French, and German musical terms.- Play 3–5 Grade 4 pieces hands together at fair tempo.
+
+Chapter 1 — Keys Up to ±4 Sharps/Flats
+
+Adding E major (4 sharps) and A♭ major (4 flats) to the Grade 3 list.
+
+| Key | Sharps/Flats | Relative minor ||-----|--------------|----------------|| C | — | A m || G | F♯ | E m || D | F♯ C♯ | B m || A | F♯ C♯ G♯ | F♯ m || E | F♯ C♯ G♯ D♯ | C♯ m || F | B♭ | D m || B♭ | B♭ E♭ | G m || E♭ | B♭ E♭ A♭ | C m || A♭ | B♭ E♭ A♭ D♭ | F m |
+
+That's 9 major keys + 9 minor keys = 18 to know fluently by Grade 4.
+
+> Trick: the circle of fifths is your best friend. Memorise the order clockwise from C: G D A E (each adds a sharp), counter-clockwise: F B♭ E♭ A♭ (each adds a flat). The relative minor lives 3 semitones below — so the same circle holds the minors too, offset by a third.
+
+A small mental tool: "key family"
+
+Group the Grade 4 keys into three families by sharps/flats. When you can derive any scale within a family fluently, the family acts as a single unit:
+
+- Sharp family: G, D, A, E.- Flat family: F, B♭, E♭, A♭.- Neutral: C.
+
+Each family has the same major-key triad pattern (M m m M M m d°). Practise one family per week; rotate; by month four you own all 9 keys.
+
+Chapter 2 — Melodic Minor Finalised
+
+Reminder from Grade 3: three minor flavours sharing the same key signature.
+
+Melodic minor is the one Grade 4 wants from you in writing and playing.
+
+Ascending raises the 6 and 7. Descending reverts to natural (lowers the 6 and 7 back). It's the only scale in Western theory that's deliberately asymmetric between up and down.
+
+> Where I got stuck: I kept playing the ascending shape on the way down too. Fix: in slow practice, name the sharps aloud as you ascend ("F-sharp, G-sharp"), and name the naturals aloud as you descend ("G-natural, F-natural"). The voice catches the descent change before the fingers do.
+
+Writing a melodic minor in any key
+
+1. Write the natural minor (the key signature's normal scale).2. Mark the 6th and 7th degrees.3. Ascending: raise both with an accidental (♯ or ♮ depending on whether the natural is flat).4. Descending: revert — write naturals/flats explicitly to cancel the ascending raises.
+
+Example — C melodic minor (3 flats: B♭, E♭, A♭):
+
+Chapter 3 — All Interval Qualities
+
+Grade 4 expands beyond the tritone to every augmented and diminished interval.
+
+The full table (above C, ascending)
+
+| Interval | Quality + Number | Semitones ||----------|-------------------|-----------|| C–C | Perfect unison (P1) | 0 || C–D♭ | Minor 2nd (m2) | 1 || C–D | Major 2nd (M2) | 2 || C–D♯ | Augmented 2nd (A2) | 3 || C–E♭ | Minor 3rd (m3) | 3 || C–E | Major 3rd (M3) | 4 || C–F♭ | Diminished 4th (d4) | 4 || C–F | Perfect 4th (P4) | 5 || C–F♯ | Augmented 4th (A4) | 6 || C–G♭ | Diminished 5th (d5) | 6 || C–G | Perfect 5th (P5) | 7 || C–G♯ | Augmented 5th (A5) | 8 || C–A♭ | Minor 6th (m6) | 8 || C–A | Major 6th (M6) | 9 || C–A♯ | Augmented 6th (A6) | 10 || C–B♭ | Minor 7th (m7) | 10 || C–B | Major 7th (M7) | 11 || C–C (oct) | Perfect 8th (P8) | 12 |
+
+Augmented vs Diminished — the rule
+
+- Augmented = one semitone larger than the major or perfect.- Diminished = one semitone smaller than the minor or perfect.
+
+| Direction | From major | From minor | From perfect ||-----------|------------|------------|--------------|| Larger | Augmented | Major | Augmented || Smaller | Minor | Diminished | Diminished |
+
+> Trick: the qualities form a ladder:>>>> One step "up" the ladder = one semitone bigger. One step "down" = one semitone smaller. The 2-3-6-7 group has 4 rungs (because they have a major-minor distinction); the 1-4-5-8 group has 3 rungs (only perfect at the centre).
+
+Counting strategy
+
+1. Count staff positions including both endpoints → number (e.g. 4th, 5th).2. Count semitones on the keyboard → cross-reference the table → quality.
+
+> Where I got stuck: I kept calling C–D♯ a minor 3rd. They sound identical (both 3 semitones), and on the piano they're the same key. But the staff number is different (C–D = 2nd, C–E♭ = 3rd). Always read the letter names first, count positions, then count semitones. Two questions, two answers, two checks.
+
+Chapter 4 — Primary Triads, Reinforced
+
+Now in all 9 major + 9 minor keys, written out:
+
+Major-key triads pattern (always the same)
+
+| Degree | I | ii | iii | IV | V | vi | vii° ||--------|---|----|-----|----|----|----|------|| Quality | M | m | m | M | M | m | dim |
+
+Minor-key triads (harmonic minor)
+
+| Degree | i | ii° | III+ | iv | V | VI | vii° ||--------|---|-----|------|----|----|----|------|| Quality | m | dim | Aug | m | M | M | dim |
+
+(III+ = augmented; only applies in harmonic minor because the raised 7 alters that triad.)
+
+> Trick: memorise the major pattern first (M m m M M m d°). Then commit just this fact about minor: the V in harmonic minor is major (because of the raised 7th). For Grade 4 written work, primary triads (i, iv, V) are what you'll be asked. i and iv are minor (because they include the natural 3rd and 5th). V is major.
+
+Worked example: write i, iv, V in F♯ minor
+
+F♯ minor's relative major is A (3 sharps: F♯ C♯ G♯). Harmonic minor raises the 7th of natural F♯ minor → raises E to E♯.
+
+Notice E♯ (not F natural). The spelling matters — F♯ minor uses the letters F-G-A-B-C-D-E in order, so the raised 7 is E♯ (not F natural), even though they're the same key on the piano.
+
+Chapter 5 — Cadences
+
+A cadence (終止式) is a two-chord progression that ends a musical phrase. The four Grade-4 cadences:
+
+| Cadence | Roman | Sound | Where ||---------|-------|-------|-------|| Perfect (Authentic) | V → I | Full closure | End of major sections || Plagal | IV → I | "Amen" / gentler close | End of hymns, gospel || Imperfect (Half) | ? → V | Pause; more to come | Mid-phrase question || Interrupted (Deceptive) | V → vi | Surprise — expected V→I doesn't arrive | Romantic music loves this |
+
+Writing a cadence
+
+For Grade 4, you'll typically be asked to write two block-chord triads in root position in a given key. Voicings are open here — the syllabus doesn't yet require correct four-part voice leading.
+
+Example — plagal cadence in G major:
+
+> Trick: perfect cadences are the period at the end of a sentence. Plagal cadences are the "and we're done" exhale. Imperfect is the question mark mid-phrase. Interrupted is the comma-where-you-expected-a-period — the listener feels the rug pulled. Naming the emotional function makes them memorable.
+
+Detection by ear
+
+- Perfect ends on the tonic with a strong "thud" of finality.- Plagal ends on tonic but softer, "Amen"-shaped.- Imperfect doesn't end on tonic — it leaves you hanging on V.- Interrupted sets you up for tonic, then jolts to vi.
+
+> Where I got stuck: I confused plagal and perfect by ear because both end on the tonic. The fix: listen to the chord before the tonic. If it's a bright, leading chord with a sharpened 7th → V → perfect. If it's a softer subdominant (IV) → plagal. The lead-in chord is the give-away.
+
+Chapter 6 — Transposition at the Octave (with clef change)
+
+Grade 4 asks: rewrite a short passage one octave higher or lower, possibly changing clef.
+
+Procedure
+
+1. Identify the target clef (if changing). Treble ↔ bass change requires repositioning every note.2. Shift every note by 7 staff positions (one octave) in the chosen direction.3. Key signature unchanged — transposing at the octave doesn't change key.4. Preserve all accidentals, dynamics, articulation, fingering.
+
+Common confusion: clef change ≠ key change
+
+Moving a treble passage into the bass clef changes how the same notes look, not what they sound like. Middle C is one ledger below the treble staff; the same note is one ledger above the bass staff. The actual pitch is identical; the notation rearranges.
+
+> Where I got stuck: I miscounted octaves on bass clef constantly. The fix that stuck: sketch the grand staff at the top of every transposition exercise during practice, with Middle C clearly marked on both sides. After two weeks the eye snaps to the right ledger without thinking.
+
+Worked mini-example
+
+Original (treble, C major):
+
+Transposed one octave down, in bass clef:
+
+Same letters, same key signature, just one octave lower in pitch and on the other clef.
+
+Chapter 7 — Italian / French / German Terms (Grade 4 expansion)
+
+ABRSM Grade 4 explicitly adds French and German terms. Italian remains the spine; the others are repertoire-language vocabulary.
+
+French (Grade 4 set)
+
+| Term | Meaning ||------|---------|| Lent | Slow || Modéré | Moderate || Vif | Lively || Doux | Sweet, soft || Cédez | Yield, slow down || Pressez | Hurry, push forward || Mais | But || Sans | Without || Très | Very |
+
+German (Grade 4 set)
+
+| Term | Meaning ||------|---------|| Langsam | Slow || Mäßig | Moderate || Schnell | Fast || Lebhaft | Lively || Süß | Sweet || Bewegt | Moving, agitated || Mit Ausdruck | With expression || Sehr | Very || Aber | But |
+
+> Trick: cluster by meaning across all three languages:>> - Slow: Adagio / Lent / Langsam> - Fast: Allegro / Vif / Schnell> - Sweet: Dolce / Doux / Süß> - Very: Molto / Très / Sehr> - But: Ma / Mais / Aber>> Cross-language quizzes become trivial because you anchor on the concept, not the foreign word.
+
+Chapter 8 — Suggested Practice Pieces
+
+Grade 4 mainstream
+
+| Piece | Composer | Why ||-------|----------|-----|| Two-Part Invention No. 4 in D minor, BWV 775 | Bach | The most popular Grade 4 Bach. Two-voice writing in minor; learn it well, you'll keep it forever || Two-Part Invention No. 8 in F, BWV 779 | Bach | More cheerful sister to No. 4. Fast triplets, joyful || Sonatina in G, Op. 36 No. 2 (I) | Clementi | Wider hand position, Alberti bass, longer phrases than Grade 3 sonatinas || Burgmüller, Op. 100 No. 18 ('Inquiétude') | Burgmüller | Restless RH, agile LH — a piece that sounds harder than it is || Album for the Young, Op. 68 No. 16 ('First Loss') | Schumann | Lyrical, expressive — a real test of voicing and rubato || Children's Album, Op. 39 No. 8 ('Mazurka') | Tchaikovsky | Polish dance feel; cross-rhythms; great for compound-time practice || Heller, Op. 47 No. 1 ('Avalanche') | Heller | A "study with personality"; relentless triplets but musical |
+
+Stretching toward Grade 5
+
+| Piece | Composer | Why ||-------|----------|-----|| Two-Part Invention No. 1 in C, BWV 772 | Bach | Yes the most-played. Master it — Grade 5 examiners will assume you have || Sonata in F, K. 280 (II) | Mozart | Slow movement; expressive, beautiful, manageable hands || Mazurka, Op. 17 No. 4 | Chopin | Romantic mazurka feel; demanding voicing but within reach || Doctor Gradus ad Parnassum | Debussy | The aspirational target — start sight-reading it once a month, learn it for real at Grade 6 |
+
+How to build a Grade 4 programme
+
+Pick:- 1 Baroque (Bach invention)- 1 Classical (sonatina or Mozart minuet)- 1 Romantic (Schumann, Burgmüller, or Tchaikovsky)- 1 20th-century or wild card (Bartók, Heller, contemporary)
+
+This mix is exactly what the exam syllabus expects, and it's a real musical diet — period variety is what makes a pianist, not just a key-pusher.
+
+Chapter 9 — Voicing (the new technique)
+
+By Grade 4 you're playing pieces where one voice (usually the soprano line, top of the RH) carries the melody while the other voices accompany. You need to make the melody louder than the inner voices, with the same hand.
+
+Mechanics
+
+- The melody-bearing finger uses slightly more weight and arm support.- The accompanying fingers play softer — about 1 dynamic level below.- Wrist relaxes between melodic strikes; the inner voices ride along.
+
+Practice drill
+
+1. Play the chord with full RH voicing at one steady volume.2. Replay, this time bringing out the top note (finger 5, usually) — exaggerate.3. Replay, this time bringing out an inner voice (finger 2 or 3).4. Replay, this time bringing out the bottom note (finger 1).5. Now play the actual piece with the top voice highlighted naturally.
+
+The first four steps are "isolated voicing"; the fifth is "musical voicing".
+
+> Where I got stuck: my finger 5 was too weak to project. The fix: finger 5 isolation exercises — Hanon-style 5-finger patterns where I deliberately over-strike with the pinky. Two weeks of this gave finger 5 the strength I needed. Don't skip this — finger 5 carries 80% of upper-register melodies in classical repertoire.
+
+Chapter 10 — Aural at Grade 4
+
+Grade 4 aural adds:
+
+- Identify which note of a 4-note phrase has been changed in a played comparison.- Identify cadence type: perfect, imperfect, or plagal (interrupted is Grade 5).- Identify a stronger set of features: dynamics, articulation, rhythm change, key change (to relative minor only).
+
+> Trick: for cadence ID, the question is "did it end on the tonic, and how did it get there?">> - Tonic, with a leading-7 chord before → perfect (V → I)> - Tonic, with a softer subdominant before → plagal (IV → I)> - Not tonic, hanging on the dominant → imperfect (something → V)>> Two binary tests in sequence: (a) tonic or not, (b) which chord before. Three answers cover all three cadences.
+
+Chapter 11 — Common Grade 4 Pitfalls
+
+| Pitfall | Fix ||---------|-----|| Calling A2 a m3 | Always read staff position first, then count semitones || Forgetting V is major in minor | Write the raised 7 with a coloured pencil. After 4 weeks, internalised || Spelling triads wrong (e.g. F natural instead of E♯) | Stay in letter-name order — F♯ minor uses F-G-A-B-C-D-E; raised 7 is E♯, not F || Practising all pieces at the same tempo | Pick the slowest one. Practise everything at that tempo for one full session || Skipping aural | 5 min daily of clap-back and sing-back. Doubles your speed at recognising rhythm and pitch || Reading only the notes, not the markings | Highlight every Italian, French, German term before you play. Translate each |
+
+Useful Shortcut
+
+Cheat-sheet
+
+| What | How ||------|-----|| Sharp keys | C → G → D → A → E (each +1 sharp) || Flat keys | C → F → B♭ → E♭ → A♭ (each +1 flat) || Relative minor | 3 semitones below major tonic || Melodic minor up | Raise 6 + 7 || Melodic minor down | Revert to natural || Interval quality | Position number + semitone count, cross-check table || V in minor | Major (raised leading tone) || Cadences | V→I perfect, IV→I plagal, ?→V imperfect, V→vi interrupted || Major-key triad pattern | M m m M M m d° |
+
+Daily routine (45 min)
+
+| Block | Time | Content ||-------|------|---------|| Five-finger warm-up | 3 min | In today's key, all four touch types (legato, staccato, portato, accent-top) || Scales | 12 min | Today's major + three minor flavours, hands separate then together, 2 octaves || Arpeggios | 5 min | I, IV, V root-position chords broken into arpeggios || Sight-read | 5 min | One new short piece per day || Repertoire | 15 min | One piece, difficult-bar loops || Aural | 3 min | Cadence ID from recorded fragments || Theory | 2 min | One past-paper question, written |
+
+Suggested listening
+
+| Piece | Composer | Why ||-------|----------|-----|| Two-Part Inventions (full set, BWV 772–786) | Bach | Listen to all 15 if you haven't already. Each is a Grade 4-5 piece in miniature || Goldberg Variations, BWV 988 | Bach | Aspirational. Listen and dream || Songs Without Words, Op. 19 | Mendelssohn | Lyrical Romantic style. Voicing and singing line mastery || Children's Album, Op. 39 (full) | Tchaikovsky | Many pieces sit at Grade 4-5; immerse in the entire album || Nocturnes, Op. 9 No. 2 | Chopin | THE Nocturne. Aim for Grade 6-7 but get the sound in your head now || Préludes, Book 1, La fille aux cheveux de lin | Debussy | Modern impressionism; a future "favourite piece" candidate || Sonata in A, K. 331 (I) — Andante grazioso | Mozart | The famous variation theme; Grade 4-5 difficulty in the theme alone |
+
+References
+
+- ABRSM (current). Music Theory in Practice — Grade 4.- ABRSM (current). Piano Exam Pieces — Grade 4.- Eric Taylor, The AB Guide to Music Theory — Parts I & II.- IMSLP — Bach Two-Part Inventions, Clementi Op. 36, Schumann Op. 68, Tchaikovsky Op. 39, Burgmüller Op. 100 + Op. 109, Heller Op. 45 + Op. 47.- Walter Piston, Harmony (5th ed.) — for deeper triad / cadence understanding beyond syllabus.- Heinrich Schenker, Five Graphic Music Analyses — for advanced curious readers.- Czerny, Op. 599 + Op. 849 — daily technical etudes.
+
+> Note: this post is in progress. Planned additions: audio reference for each piece, a worked Roman-numeral analysis of a Mozart sonatina movement, sample exam-paper question with full written workings.
+4:T3ddf,Grade 3 is where the syllabus starts feeling like real music theory: triplets, minor scales in three flavours, three more keys, primary triads (I, IV, V), and your first written chord symbols. The repertoire jumps too — Bach two-part inventions, Burgmüller's middle studies, Schumann children's pieces, simple Tchaikovsky.
+
+> Series map: 00 → 01 → 02 → 03 Grade 3 (this post) → 04 Grade 4.
+
+Learning Outcome
+
+- Use simple time (2/4, 3/4, 4/4) and compound time (6/8, 9/8, 12/8).- Read triplets in simple time.- Build natural and harmonic minor scales for relative minors of all keys covered.- Use major keys C, G, D, A, F, B♭, E♭ and their relative minors (A m, E m, B m, F♯ m, D m, G m, C m).- Identify intervals by quality including augmented and diminished (only A4 / d5 — the tritone — at Grade 3).- Identify and write primary triads (I, IV, V) in root position in all the above keys.- Recognise standard Italian terms for tempo, dynamics, and articulation.
+
+Chapter 1 — Three More Keys: A, E♭, and Their Minors
+
+| Major | Sharps/Flats | Relative minor ||-------|--------------|----------------|| C | none | A m || G | F♯ | E m || D | F♯ C♯ | B m || A | F♯ C♯ G♯ | F♯ m || F | B♭ | D m || B♭ | B♭ E♭ | G m || E♭ | B♭ E♭ A♭ | C m |
+
+A major (3 sharps) and E♭ major (3 flats) extend the symmetric pair around C.
+
+> Trick: visualise the circle of fifths as a clock. C is at 12. Each step clockwise adds a sharp (G, D, A, E, B…). Each step counter-clockwise adds a flat (F, B♭, E♭, A♭, D♭…). Grade 3 covers ±3 steps from C: clockwise to A, counter-clockwise to E♭.
+
+Reading a fast key signature
+
+When you see three sharps in the order F♯ C♯ G♯, the last is G♯ → up one semitone → A major (or its relative F♯ minor).
+
+When you see three flats in the order B♭ E♭ A♭, the second-to-last is E♭ → E♭ major (or its relative C minor).
+
+Chapter 2 — Minor Scales: Three Flavours
+
+A minor key has one key signature (the natural minor) but musicians use three common scale shapes built from that signature.
+
+Natural minor (自然小調)
+
+Use the relative-minor key signature, start from the minor tonic. Pattern in semitones:
+
+$$\textnormal{W H W W H W W} \quad = \quad 2,1,2,2,1,2,2$$
+
+Harmonic minor (和聲小調)
+
+Raise the 7th degree of the natural minor. The interval between 6 and 7 becomes an augmented 2nd (3 semitones) — gives the unmistakable "exotic" sound.
+
+Melodic minor (旋律小調)
+
+Ascending: raise the 6th and 7th. Descending: revert to natural minor.
+
+> Where I got stuck: I kept mixing harmonic and melodic.> - Harmonic minor exists to fix harmony — it gives the V chord its major-3rd leading tone (G♯ in A minor) so the V → i cadence sounds strong. Raise the 7 only.> - Melodic minor exists to smooth melody — the harmonic minor's augmented 2nd (F → G♯) is awkward to sing, so going up you also raise the 6 (F → F♯) to "smooth" the gap. Coming down you don't need the lift, so revert.>> Framing them by purpose (harmony-fixing vs melody-smoothing) made them stop blurring.
+
+All three on one diagram
+
+Chapter 3 — Triplets
+
+A triplet is three notes played in the time of two of the same value. Notated with a "3" above or below a group:
+
+In 4/4, a beat that would normally hold two quavers (♪♪) is squeezed to fit three (♪♪♪). The three notes are equal, faster than quavers, slower than triplet semiquavers.
+
+Counting triplets
+
+Subdivide each affected beat into three syllables: "tri-pa-let" or "1-trip-let, 2-trip-let". Pick one and stick with it.
+
+> Trick: when first practising triplets, tap the beat with your foot while saying "1-trip-let, 2-trip-let, 3-trip-let, 4-trip-let" out loud. Foot is the beat (4 taps per bar), voice is the subdivision (12 syllables per bar). Once you can do this without the piano, the piano part is mechanical.
+
+Duplet — the inverse
+
+In compound time (where each beat naturally divides into 3), a duplet is two notes played in the time of three. Marked "2". Less common at Grade 3 but worth knowing.
+
+Chapter 4 — 9/8 and 12/8 (More Compound Time)
+
+| Metre | Beats per bar | Beat unit | Feel ||-------|---------------|-----------|------|| 6/8 | 2 | dotted crotchet | Gallop || 9/8 | 3 | dotted crotchet | Slow waltz, lilting || 12/8 | 4 | dotted crotchet | Blues shuffle, slow ballad |
+
+In 9/8, count three macro-beats per bar, each dotted-crotchet long, each subdividing into 3 quavers. "1-and-a, 2-and-a, 3-and-a."
+
+In 12/8, count four macro-beats: "1-and-a, 2-and-a, 3-and-a, 4-and-a."
+
+> Analogy: if 6/8 is a gallop, 9/8 is a canter in three (less symmetric), and 12/8 is a rolling blues shuffle — most "12-bar blues" songs are written in 12/8 even when the notation says 4/4 swung.
+
+Chapter 5 — Augmented and Diminished Intervals (just the tritone)
+
+Grade 3 expands the interval qualities to include augmented and diminished — but only for the augmented 4th (A4) and diminished 5th (d5), which are the same six-semitone gap (the tritone, 三全音).
+
+These two are enharmonic: same sound, different spelling. Whether you call it A4 or d5 depends on note names — count the staff positions:
+
+- C → F♯: positions = 4 (C–D–E–F) → 4th → "augmented" (one semitone larger than P4).- C → G♭: positions = 5 (C–D–E–F–G) → 5th → "diminished" (one semitone smaller than P5).
+
+> Trick: a tritone divides the octave exactly in half ($12 / 2 = 6$ semitones). It's the most dissonant interval in tonal music — historically called diabolus in musica ("the devil in music") because medieval theorists found it so unstable they avoided writing it. Today it's the engine of jazz and blues. Knowing the history hooks the memory.
+
+Chapter 6 — Primary Triads (I, IV, V)
+
+A triad (三和弦) = three notes stacked in thirds. Root, third, fifth.
+
+The primary triads of any key are built on degrees 1, 4, 5 — the tonic, subdominant, dominant. They handle the bulk of harmonic motion in tonal music.
+
+In a major key
+
+> Trick: in a major key, the primary triads (I, IV, V) are all major chords. Roman numerals are uppercase to show this. The supportive triads (ii, iii, vi) are minor — lowercase. The vii° is diminished — lowercase + degree mark.
+
+In a minor key (harmonic)
+
+Because harmonic minor raises the 7th, the V chord becomes major (it has the raised leading tone) — even though the key is minor.
+
+> Where I got stuck: V in minor is major. This seems like a contradiction — until you realise it's deliberate: the major V supplies the leading tone that pulls back to the tonic. Without that, the V → i cadence would sound weak. Once you internalise this purpose, the rule is obvious.
+
+Writing triads — Grade 3 expectations
+
+Root position only. Bass note = root. Stack a 3rd and 5th above. No inversions yet (Grade 4-5 territory).
+
+In 4-part writing (Grade 5+) you also need to know how to double notes, but Grade 3 only asks for the three-note triad spelled out.
+
+Chapter 7 — Roman Numeral Analysis (gentle introduction)
+
+Grade 3 starts using Roman numerals to label chords. They tell you the function without specifying the key — a Roman-numeral analysis transposes for free.
+
+| Numeral | Function | Quality in major | Quality in minor (natural) ||---------|----------|-------------------|-----------------------------|| I | Tonic | Major | minor || ii | Supertonic | minor | diminished || iii | Mediant | minor | Major || IV | Subdominant | Major | minor || V | Dominant | Major | minor (or Major if harmonic) || vi | Submediant | minor | Major || vii° | Leading tone | diminished | Major (subtonic, ♭VII) |
+
+> Trick: in major, the qualities pattern is M m m M M m d° ("Major, minor, minor, Major, Major, minor, diminished"). Memorise this once; apply to any major scale. The pattern never changes — only the starting key.
+
+Chapter 8 — Italian Terms (Grade 3 set)
+
+Same as Grade 2, plus:
+
+Tempo
+
+| Term | Meaning ||------|---------|| Grave | Very slow, solemn || Lento | Slow || Allegretto | Slightly slower than allegro || Andantino | Slightly faster than andante (or sometimes slightly slower — context!) || Più mosso | More motion (faster) || Meno mosso | Less motion (slower) || L'istesso tempo | The same speed (when metre changes) |
+
+Dynamics + expression
+
+| Term | Meaning ||------|---------|| Crescendo / diminuendo | Already known; reinforced || Sotto voce | In a whispered voice || Con brio | With brilliance, fire || Con moto | With motion || Grazioso | Gracefully || Maestoso | Majestically || Tranquillo | Calmly |
+
+> Trick: group terms by mood rather than alphabet. "Calm cluster": tranquillo, dolce, sotto voce, cantabile. "Fast/bright cluster": vivace, brillante, con brio, con moto, agitato. When you can't remember the literal translation, your gut feel for the cluster usually gets you the right answer in an exam.
+
+Chapter 9 — Suggested Practice Pieces
+
+Grade 3 mainstream
+
+| Piece | Composer | Why ||-------|----------|-----|| Minuet in G (BWV Anh. 116) | Bach (attr. C. Petzold) | A more chromatic cousin of the famous Anh. 114. Real two-voice writing || Sonatina in C, Op. 36 No. 1 (II, III) | Clementi | Movements II (Andante) and III (Vivace) — slower and faster sides of sonatina form || Burgmüller, Op. 100 No. 14 ('La Styrienne') | Burgmüller | Compound 3/8 feel, lyrical RH over walking LH || Album for the Young, Op. 68 No. 8 ('Wild Rider') | Schumann | The student favourite — feels showy without being beyond reach. Hands together at a fair clip || Children's Album, Op. 39 No. 1 ('Morning Prayer') | Tchaikovsky | Slow, hymn-like; teaches voice-leading and chord control || Sicilienne, Op. 78 (arr.) | Fauré | Lyrical, 6/8 compound, romantic harmony |
+
+Stretching toward Grade 4
+
+| Piece | Composer | Why ||-------|----------|-----|| Two-Part Invention No. 1 in C, BWV 772 | Bach | Independence of hands — the canonical first step into Bach || Heller, Op. 45 No. 1 | Heller | Studies designed for exactly this transition || Sonatina in F, Op. 168 No. 1 (I) | Diabelli | Larger-scale form, more notes than Op. 36 |
+
+Choosing repertoire intelligently
+
+By Grade 3 you should be playing three pieces simultaneously at different stages:
+
+1. Mastery piece — old favourite, polished, played at performance tempo. Maintains confidence.2. Working piece — current focus, hands-together at slow tempo, gets the most minutes.3. Sight-read piece — new, untouched, played once per week as a "see how far I get".
+
+The mix prevents staleness on any one and reinforces transferable skills.
+
+> Trick: keep a small notebook of "pieces I never want to forget" — the mastery list. Every two weeks, revisit one of them for ten minutes. Without this, the pieces you spent six weeks learning will quietly evaporate from memory.
+
+Chapter 10 — Practice Patterns: Voice Independence
+
+Grade 3 introduces real two-voice writing (Bach inventions). The hands aren't just playing chords against melody — both hands have independent musical lines.
+
+How to practise two voices
+
+1. Sing one line while playing the other. Sing the RH; play only the LH. Then swap. This forces your brain to "hear" each part separately.2. Practise the LH at twice the volume, RH softly. Then reverse. Trains dynamic independence.3. Slow loops on the join points. Two-voice writing has constant "overlapping" moments where one hand crosses or sustains while the other moves. Mark those bars and isolate them.
+
+> Where I got stuck: in Bach's first invention I could play either hand alone — but together my brain treated it as one stream and the LH always reverted to chord accompaniment. Fix: I spent a week singing the LH while playing the RH. The shift in mental model is exactly what's required — both lines are melodies, not "melody + accompaniment". Once the brain reframes it, the fingers follow.
+
+Chapter 11 — Aural at Grade 3
+
+ABRSM Grade 3 aural adds:
+
+- Identify whether a piece is in major or minor key.- Identify whether a cadence is perfect (V → I) or imperfect (?? → V).- Sing back a slightly longer phrase (5–6 notes).- Identify two features of a played excerpt: dynamics, articulation, tempo change, tonality.
+
+Practising major-vs-minor by ear
+
+- Listen to one octave of a major scale (just C D E F G A B C). Hum it.- Now one octave of A minor (A B C D E F G A). Hum it.- The third note is the give-away. Major sounds "open / bright". Minor sounds "narrow / sad".
+
+> Trick: the first three notes — do-re-mi vs la-ti-do — are the cleanest test. If the third note is a major third above the first, the key is major. If it's a minor third (one semitone less), the key is minor. Sing the test phrase silently in your head while listening; it'll often beat conscious analysis.
+
+Chapter 12 — Common Grade 3 Pitfalls
+
+| Pitfall | Fix ||---------|-----|| Memorising scales without the pattern | Always re-derive from W-H pattern. Memory + derivation = robust || Stumbling on triplets | Foot taps the macro-beat. Voice taps the subdivision || Forgetting V is major even in minor | Mark the raised leading tone with a coloured pencil for a month || Treating Bach two-voice as melody + accompaniment | Sing one voice while playing the other || Ignoring expression markings | Highlight all Italian terms before you play. Translate each. Then play || Practising scales mechanically | Vary touch: legato, staccato, accented top note, alternating dynamics. Boring scales become useful scales |
+
+Useful Shortcut
+
+Cheat-sheet
+
+| What | How ||------|-----|| All Grade 3 keys | C G D A F B♭ E♭ + their relative minors || Natural minor | Same key signature as relative major || Harmonic minor | Natural + raised 7 || Melodic minor | Natural + raised 6 and 7 ascending, natural descending || Triplet | 3 notes in time of 2 || Tritone | 6 semitones; A4 going up, d5 going down (enharmonic) || Primary triads | I, IV, V (Major in major; i, iv, V in harmonic minor) || Major-key triad qualities | M m m M M m d° |
+
+Daily routine (40 min)
+
+| Block | Time | Content ||-------|------|---------|| Warm-up | 3 min | 5-finger pattern in today's key || Scales | 10 min | Today's major + relative natural / harmonic minor, hands separate then together || Triad drill | 3 min | I, IV, V in today's key, root position, both hands || Sight-read | 5 min | A new short piece, including 9/8 or 12/8 sometimes || Repertoire | 15 min | Difficult-bar loops on current piece || Aural | 2 min | Major-or-minor test from random recordings || Theory | 2 min | One past-paper question |
+
+Suggested listening
+
+| Piece | Composer | Why ||-------|----------|-----|| Two-Part Inventions (full set, BWV 772–786) | Bach | Listen to all 15. They are the idea of two-voice writing || Album for the Young, Op. 68 (all 43 pieces) | Schumann | Many sit at Grade 2-4; you'll meet them as you advance || Sonatas, Op. 36 (all 6) | Clementi | The "kids' Mozart"; classical-period form in miniature || Children's Corner | Debussy | Aspirational. Modal, modern, exquisite. Doctor Gradus is a Grade 5-6 piece worth knowing now || Études, Op. 10 No. 3 ('Tristesse') | Chopin | Romantic legato; impossible at Grade 3 but plant the seed || Suite bergamasque — Clair de Lune | Debussy | The eternal motivator. One day this is yours |
+
+References
+
+- ABRSM (current). Music Theory in Practice — Grade 3.- ABRSM (current). Piano Exam Pieces — Grade 3.- Eric Taylor, The AB Guide to Music Theory — Parts I & II.- IMSLP — Bach Two-Part Inventions, Schumann Op. 68, Clementi Op. 36, Tchaikovsky Op. 39, Burgmüller Op. 100.- Heller, 25 Études Mélodiques, Op. 45.- Walter Piston, Harmony — for when you want the theory deeper than the syllabus.
+
+> Note: this post is in progress. Planned additions: audio reference per piece, a worked Roman-numeral analysis of a short Bach minuet, and visual flashcards for the new keys.
+5:T38ea,Grade 2 introduces three big ideas: compound time (the gallop), semiquavers (faster rhythms), and more keys (up to two sharps and two flats). The pieces start to feel like music instead of exercises — short Bach, Schumann, Bartók, all sit comfortably here.
+
+> Series map: 00 → 01 → 02 Grade 2 (this post) → 03 Grade 3 → 04 Grade 4.
+
+Learning Outcome
+
+- Use 2/4, 3/4, 4/4 simple time and 6/8 compound time comfortably.- Read semiquavers and matching rests.- Build major scales for C, G, D, F, B♭ and play them hands separate, two octaves.- Identify intervals by quality (major / minor / perfect) up to an octave.- Recognise the relative minor of those major keys.- Play 3–5 short pieces hands together at Grade 2 standard.- Understand basic articulation: legato, staccato, slurs, accents.
+
+Chapter 1 — Two more keys
+
+Grade 2 adds D major (2 sharps: F♯, C♯) and B♭ major (2 flats: B♭, E♭).
+
+| Key | Sharps/Flats | Notes ascending ||-----|--------------|-----------------|| C major | none | C D E F G A B C || G major | F♯ | G A B C D E F♯ G || F major | B♭ | F G A B♭ C D E F || D major | F♯ C♯ | D E F♯ G A B C♯ D || B♭ major | B♭ E♭ | B♭ C D E♭ F G A B♭ |
+
+> Trick: the order of sharps you encounter is fixed: F♯ → C♯ → G♯ → D♯ → A♯ → E♯ → B♯. Order of flats reversed: B♭ → E♭ → A♭ → D♭ → G♭ → C♭ → F♭. Same letters, opposite ends. Mnemonics: sharps = "Father Charles Goes Down And Ends Battle"; flats = the same backwards, "Battle Ends And Down Goes Charles' Father".
+
+Finding the key from the signature
+
+- Sharps: the last sharp is the leading tone — go up one semitone to find the tonic.- One sharp (F♯) → up to G → G major.- Two sharps (F♯, C♯) → last is C♯ → up to D → D major.- Flats: the second-to-last flat is the tonic.- Two flats (B♭, E♭) → second-to-last is B♭ → B♭ major.- (Special case: one flat alone = F major.)
+
+> Where I got stuck: the flat-rule asks for the second-to-last, not the last. I missed this constantly. I wrote it on the cover of my notebook. After two weeks it became automatic.
+
+Chapter 2 — Semiquavers (Sixteenth Notes)
+
+A semiquaver / 十六分音符 = half a quaver = quarter of a crotchet. In 4/4, four semiquavers fit in one crotchet's time.
+
+Beaming groups
+
+Semiquavers are usually beamed in groups of 4 (one full crotchet beat). Mixed quaver + semiquaver groupings appear too:
+
+Counting semiquavers out loud
+
+Standard system: "1 e and a, 2 e and a, 3 e and a, 4 e and a" — four syllables per crotchet beat. Each crotchet contains 4 sixteenths; each syllable maps to one sixteenth-note position.
+
+> Trick: try saying "ta-ka-di-mi" instead — many drummers use it, it's faster on the tongue than "1 e and a". As long as you commit to one consistent vocabulary, the brain locks onto the subdivision.
+
+Dotted quaver + semiquaver pattern
+
+The most common Grade 2 rhythm:
+
+In count words: "1 . . a, 2 . . a" — the dotted quaver takes 3 sixteenths, the semiquaver takes the last 1.
+
+Chapter 3 — Compound Time (6/8)
+
+In 6/8 there are two beats per bar, and each beat is a dotted crotchet (= 3 quavers). Don't be fooled by the "6" — you do not count "1-2-3-4-5-6" evenly; you feel two macro-beats, each subdivided into three.
+
+| | 6/8 | 3/4 ||---|-----|-----|| Beats per bar | 2 | 3 || Beat unit | dotted crotchet (3 quavers) | crotchet (2 quavers) || Each beat divides into | 3 | 2 || Feel | Gallop / lilt | Waltz |
+
+The strong beats are the 1 and the 4. The other digits are subdivisions.
+
+> Analogy: simple time is walking — left-right-left-right, two equal steps per beat. Compound time is galloping — DA-da-da, DA-da-da. The "DA" is the macro-beat (dotted crotchet); the "da-da" are the eighth-note subdivisions.
+
+Other compound metres
+
+Grade 2 only requires 6/8, but for context:
+
+| Metre | Beats per bar | Each beat ||-------|---------------|-----------|| 6/8 | 2 | dotted crotchet || 9/8 | 3 | dotted crotchet || 12/8 | 4 | dotted crotchet |
+
+You'll meet 9/8 and 12/8 at Grade 4.
+
+Chapter 4 — Intervals by Quality
+
+Grade 2 upgrades intervals from number-only to quality + number.
+
+The quality lexicon
+
+| Quality | Applies to numbers | Example (above C) ||---------|--------------------|--------------------|| Perfect | 1st, 4th, 5th, 8th | C–C unison, C–F, C–G, C–C octave || Major | 2nd, 3rd, 6th, 7th | C–D, C–E, C–A, C–B || Minor | 2nd, 3rd, 6th, 7th | C–D♭, C–E♭, C–A♭, C–B♭ (one semitone smaller than major) |
+
+> Trick: the perfect intervals (P1, P4, P5, P8) are called "perfect" because both they and their inversions (P5 ↔ P4, P8 ↔ P1) are perfect — symmetric. The major / minor pairs (2nd, 3rd, 6th, 7th) flip into each other when inverted: major 3rd ↔ minor 6th, major 2nd ↔ minor 7th, etc. The 9 - x rule: a major-3rd inverted is a minor-(9-3) = minor-6th.
+
+Counting semitones to find quality
+
+| Interval | Semitones ||----------|-----------|| Perfect unison | 0 || Minor 2nd | 1 || Major 2nd | 2 || Minor 3rd | 3 || Major 3rd | 4 || Perfect 4th | 5 || Tritone (Aug 4 / Dim 5) | 6 || Perfect 5th | 7 || Minor 6th | 8 || Major 6th | 9 || Minor 7th | 10 || Major 7th | 11 || Perfect octave | 12 |
+
+Method:1. Count the staff positions (line + space jumps) including both ends → gives you the number (2nd, 3rd, …).2. Count the semitones on the keyboard → cross-check against the table → gives you the quality.
+
+Working in a key signature
+
+Within a major scale, the intervals from the tonic to each scale degree are always:
+
+| From tonic to | Interval ||---------------|----------|| 2nd | Major 2nd || 3rd | Major 3rd || 4th | Perfect 4th || 5th | Perfect 5th || 6th | Major 6th || 7th | Major 7th || 8th | Perfect octave |
+
+> Trick: in a major key, all intervals built upward from the tonic are major or perfect. There are no naturally-occurring minor intervals from the tonic of a major key — they only appear when you alter notes with accidentals or use a different starting note.
+
+Chapter 5 — Relative Minor
+
+Every major key has a relative minor that shares its key signature. The relative minor's tonic sits a minor 3rd below the major tonic (or equivalently, the 6th degree of the major scale).
+
+| Major | Relative minor | Shared sharps/flats ||-------|----------------|----------------------|| C major | A minor | none || G major | E minor | F♯ || F major | D minor | B♭ || D major | B minor | F♯ C♯ || B♭ major | G minor | B♭ E♭ |
+
+The natural minor scale uses only those shared sharps/flats. (Harmonic and melodic minors add accidentals — Grade 3 material.)
+
+> Where I got stuck: I kept confusing relative minor with parallel minor.> - Relative: same key signature, different tonic (C major ↔ A minor).> - Parallel: same tonic, different key signature (C major ↔ C minor).>> The fix that stuck: "Relative" = the related key with the same parents (signature). "Parallel" = the parallel universe with the same name (tonic). Two distinct concepts; pin them down separately.
+
+Chapter 6 — Articulation
+
+Grade 2 starts to care about how you play, not just what.
+
+| Marking | Meaning ||---------|---------|| Legato | Connected, smooth (often shown with a slur) || Staccato (dot above/below note) | Short, detached — roughly half the written value || Tenuto (line above/below) | Held to full value, slight emphasis || Accent (>) | Played louder than surrounding notes || Slur (curved line over multiple notes) | Phrase boundary; play legato within || Fermata (eye-shaped pause) | Hold longer than written |
+
+> Trick: the staccato dot means "half the value, the rest is silence". So a staccato crotchet = a quaver of sound + a quaver of silence. Don't clip the note artificially short; just lift the finger earlier and let the air do the rest.
+
+Touch types — the three you'll use most
+
+- Legato — finger weight transfers from key to key without lifting. The previous finger releases as the next presses, like walking.- Staccato — the finger bounces off the key. Wrist relaxed; energy from the fingertip, not the arm.- Portato — between legato and staccato, marked with dots under a slur. Each note slightly separated but still "singing" through.
+
+Chapter 7 — Suggested Practice Pieces
+
+Grade 2 (mainstream)
+
+| Piece | Composer | Why ||-------|----------|-----|| Minuet in G minor (BWV Anh. 115) | Bach (attr. Petzold) | Companion to the famous G major minuet. Slightly more melancholy, same difficulty || Burgmüller, Op. 100 No. 2 ('Arabesque') | Burgmüller | The first piece beginners feel proud of. Quick, satisfying, sounds harder than it is || Mikrokosmos, Vol. 2 No. 47 ('Big Fair') | Bartók | Compound feel, jaunty. Real musical character || Album for the Young, Op. 68 No. 1 ('Melodie') | Schumann | Pure singing melody, simple two-voice texture. Romantic style introduction || Sonatina in C, Op. 36 No. 1 | Clementi | Movement I. The classic "first real sonatina". Hands together, real form |
+
+Stretching toward Grade 3
+
+| Piece | Composer | Why ||-------|----------|-----|| Allegro in B♭, K. 3 | Mozart | Mozart aged 5. Hands separate, very early style || Minuet in F major (BWV Anh. 113) | Bach | Two voices, longer phrases than its companions || Burgmüller, Op. 100 No. 5 ('Innocence') | Burgmüller | Smooth RH semiquavers over walking LH — classic compound technique |
+
+How to choose
+
+Pick one piece that excites you (whatever the level) and one that's slightly easier than your current ability. The exciting piece pulls you forward; the easy piece is where you actually drill technique without frustration. Rotate every 4–6 weeks.
+
+> Trick: finish every learning session by playing the easiest piece you know at performance tempo, all the way through. It costs 90 seconds and reinforces what "finished" feels like. The pieces you struggle with don't get this treatment — only the ones you've already mastered.
+
+Chapter 8 — Practice Templates
+
+"Difficult bar" loop (10 minutes)
+
+Pick the worst 4-bar passage in your current piece. Set metronome to half your target tempo. Play those 4 bars 10 times in a row without stopping. If you fail, slow the metronome by 10 BPM and start the count again. After 10 clean reps, raise BPM by 5. Repeat until you hit target.
+
+This is the single highest-leverage practice technique. Twenty minutes of this beats two hours of "playing the whole piece from the top".
+
+"Pulse robot" warm-up (5 minutes)
+
+Set the metronome to quarter = 60. Play any scale you know, one note per click, both hands separate. Then both hands together. Then two notes per click. Then four. The point isn't the scale — it's getting your hands locked to an external clock.
+
+"Mock exam" run (20 minutes, once a week)
+
+Treat one full practice session per week as the exam itself. Set up your music, your phone-recorder, your metronome. Play your three current pieces back-to-back with no restarts. Then listen to the recording. Mistakes you didn't notice in the moment will jump out on playback. That's your homework for the next six days.
+
+Chapter 9 — Aural Skills at Grade 2
+
+ABRSM Grade 2 aural adds:
+
+- Identify whether a phrase is in 2/4, 3/4, or now 6/8.- Sing back a slightly longer phrase (4 notes).- Clap back a 4-bar rhythm.- Identify a feature: "loud", "soft", "smooth", "detached", "ending on a different note than it started" — broader description.
+
+> Trick: to tell 6/8 from 3/4, listen for the gallop. 3/4 walks evenly in threes — ONE-two-three, ONE-two-three. 6/8 lopes — DA-da-da DA-da-da. Tap your foot. If the foot lands twice per bar, it's 6/8. If three times, it's 3/4. The foot doesn't lie.
+
+Chapter 10 — Common Pitfalls at Grade 2
+
+| Pitfall | Fix ||---------|-----|| Counting compound time as simple (1-2-3-4-5-6 evenly) | Subdivide aloud as "1-and-a 2-and-a". Foot taps the two macro-beats || Forgetting which sharps/flats apply | Re-write the key signature on a sticky note at the top of every page during practice || Rushing fast notes | Tempo is a choice, not a test. Slow until clean. Speed comes free || Ignoring articulation marks | Highlight staccato dots and slur arcs with coloured pencil. The eye blocks them out otherwise || All practice in one big chunk | Two 20-min sessions > one 40-min. Memory consolidates between sessions || Stopping at the first mistake | Don't stop. Mark the bar, finish the piece, then loop the marked bar at the end |
+
+Useful Shortcut
+
+Cheat-sheet
+
+| What | How ||------|-----|| Sharps order | F♯ C♯ G♯ D♯ A♯ E♯ B♯ || Flats order | B♭ E♭ A♭ D♭ G♭ C♭ F♭ || Key from sharps | Last sharp + 1 semitone = tonic || Key from flats | Second-to-last flat = tonic (1 flat = F) || Relative minor | 3 semitones below major tonic || Compound feel | Macro-beats divide into 3 || Major-key intervals from tonic | All major or perfect || Inversion rule | (9 - number); major ↔ minor; perfect ↔ perfect || Staccato | Half the written value, rest is silence |
+
+Daily routine (35 min)
+
+| Block | Time | Content ||-------|------|---------|| Five-finger warm-up | 3 min | C, G, F, D, B♭ positions || Scales | 7 min | Today's key + relative minor, hands separate, 2 octaves || Sight-read | 5 min | New short piece each day, including 6/8 || Repertoire | 15 min | Difficult-bar loops on current pieces || Aural | 3 min | Clap back a rhythm from the metronome || Theory | 2 min | One past-paper question |
+
+Suggested listening
+
+| Piece | Composer | Why ||-------|----------|-----|| Anna Magdalena Notebook (full set) | Bach | Several pieces sit at Grade 2; you'll meet them in the next 6 months || Album for the Young, Op. 68 (first 10) | Schumann | Romantic equivalent of the Anna Magdalena set || Pavane pour une infante défunte | Ravel | Slow, beautiful, aspirational. Listen for what compound time can feel like || Songs Without Words, Op. 19 No. 1 | Mendelssohn | RH melody + LH accompaniment in the canonical lyrical style || Sonata in C, K. 545 (Mvt. II) | Mozart | Pure singing line; what your scale-runs are eventually for |
+
+References
+
+- ABRSM (current). Music Theory in Practice — Grade 2.- ABRSM (current). Piano Exam Pieces — Grade 2.- Eric Taylor, The AB Guide to Music Theory — Part I.- IMSLP — Bach Anna Magdalena Notebook, Schumann Album for the Young, Burgmüller Op. 100, Bartók Mikrokosmos.- Charles-Louis Hanon, The Virtuoso Pianist in 60 Exercises, Part 1.
+
+> Note: this post is in progress. Planned additions: audio reference for each suggested piece, downloadable practice tracker PDF, common-question Q&A from real Grade 2 exams.
+6:T32d9,ABRSM Grade 1 covers the foundations every musician needs: clefs, note values, simple time signatures, the first few keys, basic intervals, and the very first scales. This post pairs the syllabus with practice pieces graded at the same level, plus the memory tricks I wish someone had handed me on day one.
+
+> Series map: 00 Beginner Basics → 01 Grade 1 (this post) → 02 Grade 2 → 03 Grade 3 → 04 Grade 4. Grades 5–8 to follow.
+
+Learning Outcome
+
+- Read fluently in treble and bass clef on the five staff lines, four spaces, and one ledger line above or below.- Identify all note values from semibreve to quaver, and matching rests.- Use 2/4, 3/4, and 4/4 time signatures correctly.- Name notes in C, G, F majors and their key signatures.- Build major scales for C, G, F (one octave, hands separate).- Identify intervals between any two notes of the C major scale (number only).- Recognise the tonic, dominant, subdominant of those three keys.- Play 3 to 5 short pieces hands together at Grade 1 standard.
+
+Chapter 1 — Pitch Notation Recap
+
+Terminology
+
+- Pitch (音高) — how high or low a note sounds, measured in frequency.- Accidental — sharp ♯ / flat ♭ / natural ♮ applied to a single note.- Sharp (♯) — raise the pitch by one semitone.- Flat (♭) — lower the pitch by one semitone.- Natural (♮) — cancel a previous sharp or flat.
+
+An accidental affects every occurrence of that note in the same octave for the rest of the bar — then the barline resets it. A key signature is the only "global" accidental.
+
+Ledger lines (加線)
+
+Grade 1 requires one ledger above and one below in each clef.
+
+- Treble: one line above the staff = A5, one line below the staff = Middle C (C4).- Bass: one line above the staff = Middle C (C4) as well (the same note), one line below the staff = E2.
+
+> Trick: Middle C is the connector. It sits one ledger below the treble staff AND one ledger above the bass staff. Same key on the piano, two ways to write it. Drill this until it's automatic — Grade 2 and beyond use it constantly.
+
+Chapter 2 — Note Values (音符的時值)
+
+English / 中文 / symbol table
+
+| EN | 中文 | UK name | Beats in 4/4 ||----|------|---------|--------------|| Whole note | 全音符 | Semibreve | 4 || Half note | 二分音符 | Minim | 2 || Quarter note | 四分音符 | Crotchet | 1 || Eighth note | 八分音符 | Quaver | ½ |
+
+ABRSM uses the UK terms (semibreve, minim, crotchet, quaver). American sheet music uses whole/half/quarter/eighth. Same notes, different names. Get used to both.
+
+Rests
+
+Every note value has a matching rest. The same beat counts apply — a crotchet rest is 1 beat of silence in 4/4.
+
+> Trick: I confused the whole-note rest (hangs down from a line) and the half-note rest (sits on top of a line). Memory aid: "the whole rest is a hole — it falls down. The half is half full — it sits up." Silly, never forgot it again.
+
+Dots and ties
+
+- A dot after a note adds half its value. Dotted minim = 2 + 1 = 3 beats.- A tie joins two notes of the same pitch — sum their durations.- A slur joins two notes of different pitches — phrasing, not duration.
+
+Chapter 3 — Time Signatures (拍號)
+
+Grade 1 covers 2/4, 3/4, 4/4 only.
+
+The top number = beats per bar. The bottom number = which note value gets one beat (4 = crotchet).
+
+| Time signature | Beats per bar | Feel ||----------------|---------------|------|| 2/4 | 2 | March (left-right-left-right) || 3/4 | 3 | Waltz (ONE-two-three) || 4/4 | 4 | Pop, hymn, default (ONE-two-three-four) |
+
+The first beat of every bar is the strongest. Place natural emphasis there; the bar lines exist precisely to tell you where to push slightly.
+
+Bar (小節) maths
+
+The notes in any bar must add up to the time signature's beat count. If 4/4 has only crotchets and quavers, common bars include:
+
+> Trick: when sight-reading, count out loud on every beat — including rests. The voice keeps the pulse even when your hands stumble. Silent counting is for performance, not learning.
+
+Chapter 4 — Keys and Key Signatures
+
+Grade 1 syllabus: C major, G major, F major.
+
+| Key | Sharps/Flats | Memory anchor ||-----|--------------|---------------|| C major | none | Easy default || G major | 1 sharp: F♯ | "Goes up" → sharp || F major | 1 flat: B♭ | "Falls down" → flat |
+
+Scale construction reminder
+
+Major scale pattern in semitones: W W H W W W H (whole, whole, half, whole, whole, whole, half).
+
+Apply from any tonic and you get a major scale. From C: all whites. From G: hits F♯ as the 7th. From F: hits B♭ as the 4th.
+
+> Trick: the major-scale pattern doesn't change — only the starting note does. If you can derive C major from scratch, you can derive every major scale by counting W W H W W W H with your finger on the keyboard. Don't memorise 12 scales; memorise one pattern and 12 starting points.
+
+Tonic, Dominant, Subdominant
+
+For any major scale:
+
+- Tonic (I) — the 1st degree. Home note. C in C major.- Subdominant (IV) — the 4th degree. F in C major.- Dominant (V) — the 5th degree. G in C major.
+
+These three notes form the primary triads of the key, the most important chords in any major piece. Half of pop and folk music is built from just I, IV, V.
+
+> Where I got stuck: I assumed "dominant" meant "loudest" or "main". It actually means the 5th, always. The label is positional, not musical. Once I stopped overthinking it, every scale fell into place.
+
+Chapter 5 — Intervals (Number Only)
+
+At Grade 1 you only need to identify the number of an interval (2nd, 3rd, etc.), not its quality (major / minor / perfect). Quality starts at Grade 2.
+
+Counting
+
+Count the lower note as 1, then count up the staff lines and spaces to the upper note. The count includes both notes.
+
+| Interval | Staff positions ||----------|-----------------|| Unison | Same line/space || 2nd | Adjacent line + space || 3rd | Line to next line, or space to next space || 4th | Line to space-after-the-next-line || 5th | Line to second line above || 6th | Space to third space above || 7th | Line to fourth line above (one short of an octave) || Octave (8th) | Same letter, one position up |
+
+> Trick: 3rds and 5ths "jump white" — they go line-to-line or space-to-space, looking visually stacked. 2nds and 4ths "step black" — they touch a line and the adjacent space. Once your eye reads these shapes, you stop counting notes one-by-one.
+
+Chapter 6 — Hands-Together Coordination
+
+You played hands together in Post 00 already with "Twinkle". Grade 1 expands this. The technique:
+
+1. Each hand alone, played until boring. Genuinely boring — no mistakes, no thinking.2. Hands together at half speed. Eyes on the page, not the hands.3. Pulse first, accuracy second. If one hand stumbles, don't stop the pulse. Drop the wrong-hand note rather than break the beat.4. Slow with metronome. Crotchet = 60. Once smooth, raise by 5 BPM increments.
+
+> Where I got stuck: my left hand was 6 weeks behind my right. The fix: I practised only the left hand for one full week. No right hand at all. Result: by the next week my left could play its own line cleanly, and hands-together suddenly worked.
+
+Chapter 7 — Suggested Practice Pieces (Grade 1 level)
+
+These are real Grade 1 / Initial Grade pieces with public domain or freely-available scores. Hunt them on IMSLP or buy the ABRSM exam book — the album also contains your audio reference.
+
+Easier end (still inside Initial Grade)
+
+| Piece | Composer | Why it's good for you ||-------|----------|------------------------|| Minuet in G (BWV Anh. 114) | Bach (attr. C. Petzold) | Two-bar phrases, classic Baroque feel, hands-together at a comfortable tempo. Real music, not a "method book exercise" || Allegro in C | Diabelli, Op. 125 No. 1 | Pure C major, balanced hands, teaches the I-IV-V harmony pattern aurally || No. 9 'In Yugoslav Mode' | Bartók, Mikrokosmos Vol. 1 | Modern teaching piece; clean RH melody, sparse LH. Bartók wrote these for his son || Burgmüller, Op. 100 No. 1 ('La Candeur') | Burgmüller | Lyrical RH melody over a steady LH; brilliant first piece with real expression |
+
+Slightly stretching
+
+| Piece | Composer | Why ||-------|----------|-----|| Minuet in F (K. 2) | Mozart (age 6) | Yes, six. Easy enough for Grade 1, written by a child — fun fact while you struggle || Russian Folk Song Op. 107 No. 3 | Beethoven | Two voices, both inside one octave. Tiny, perfect study of independent hands || No. 6 'Gypsy Dance' | Bartók, For Children Vol. 1 | Drone bass, melody floats above. Teaches "ostinato" by feel |
+
+How to study a piece
+
+1. Hands separate, slow, no metronome — until you can do four bars without error.2. Hands separate, with metronome — at the slowest tempo where you're still error-free.3. Hands together, slow — half the eventual target.4. Hands together, target tempo — and only here do you allow yourself to think about expression.5. Memorise the hardest bar — play it from any cold start.
+
+> Trick: number the bars and track them on a notepad. Mark each bar with ✓ when you can play it hands-together at tempo. The unchecked bars are your next 10-minute focus, not the whole piece. You'd be amazed how few bars are actually broken — usually 3-4 out of 32.
+
+Chapter 8 — Aural / Listening Skills
+
+Grade 1 ABRSM practical includes an aural test. The skills:
+
+- Clap back a rhythm — listen to a 2- or 3-bar rhythm in 2/4, 3/4, or 4/4; clap it back.- Sing back a short phrase — three or four notes, played twice.- Identify time signature — listen to a tune; say whether it's in 2/4, 3/4, or 4/4.
+
+Practising aural without a teacher
+
+- Phone metronome + clap for rhythms. Tap a 4-bar pattern on the table, then clap it back without looking.- Sing scale degrees — call out "1, 2, 3" up the major scale while playing it. Builds the do-re-mi reflex.- Listen to any piece and tap your foot. If your tapping settles into pairs, it's 2/4 or 4/4. If into threes, it's 3/4. Public music is your unlimited test bank.
+
+> Trick: whistling is sneaky-good for aural training. If you can whistle the tune you've been practising, you've internalised the pitch shape. If you can only "sort of" whistle it, you haven't. The whistle is a free pitch test.
+
+Chapter 9 — Common Grade 1 Pitfalls
+
+| Pitfall | Fix ||---------|-----|| Counting in your head, not out loud | Out loud — especially on rests. The voice doesn't lie || Forgetting accidentals carry through the bar | Re-write any tricky bar on paper, accidentals included || Reading every note individually | Train shapes (steps vs leaps, scale-fragments) — see Chapter 5 || Skipping the LH because RH is "the melody" | LH is half the music. Practise LH alone twice as much for a month || Slowing down only the hard bars | Slow down the whole piece. Speed differences mid-piece hide as nervousness in exam || Practising past tiredness | 25 min focused > 60 min tired. Stop when accuracy drops |
+
+Useful Shortcut
+
+Cheat-sheet
+
+| What | How ||------|-----|| Find any key in G major | Same as C, except F → F♯ || Find any key in F major | Same as C, except B → B♭ || Major scale pattern | W W H W W W H || Identify interval number | Count up staff positions, include both endpoints || Dotted note value | note + half its value || Bar must equal | Top number of time signature || Tonic / subdominant / dominant | 1st / 4th / 5th degrees || Whole rest hangs | Half rest sits |
+
+Daily routine (30 min)
+
+| Block | Time | Content ||-------|------|---------|| Five-finger warm-up | 3 min | C, G, F positions, both hands || Scale | 5 min | C, G, F major hands separate, one octave || Sight-reading | 5 min | New short piece each day || Repertoire | 12 min | Current piece, focus on the worst 4 bars || Theory | 5 min | One past-paper question, written out by hand |
+
+Suggested listening (context, not homework)
+
+| Piece | Composer | Why ||-------|----------|-----|| Anna Magdalena Notebook (full) | Bach | Bach wrote this for his second wife — beginner-friendly but real music. Many Grade 1-3 pieces sit inside it || Album for the Young, Op. 68 | Schumann | Romantic counterpart to Bach's notebook. Hear what's coming in Grade 2-3 || Minute Waltz, Op. 64 No. 1 | Chopin | Aspirational; impossible at Grade 1 but plant the seed || Goldberg Variations, BWV 988 | Bach | The Mount Everest of solo keyboard. Listen for context, not to play (yet) || Children's Album, Op. 39 | Tchaikovsky | Russian counterpart to Schumann's; many pieces sit at Grade 3-4 |
+
+References
+
+- ABRSM (current). Music Theory in Practice — Grade 1.- ABRSM (current). Piano Exam Pieces — Initial / Grade 1 (the official syllabus collection).- Eric Taylor, The AB Guide to Music Theory — Part I.- IMSLP — public-domain scores for every classical work mentioned.- Bartók, Mikrokosmos Vols. 1–2 (Boosey & Hawkes).- Burgmüller, 25 Easy and Progressive Studies, Op. 100.
+
+> Note: this post is in progress. I'll add embedded audio reference snippets per piece once I find legally-clean recordings, plus a printable practice-tracker checklist.
+7:T3212,The first post in a self-study piano series. Goal: by the end of this one you can sit at any keyboard, find any note in under five seconds, and play three short pieces from memory. Skip the marketing fluff and go straight to the muscle memory.
+
+> Series map: 00 Beginner (this post) → 01 Grade 1 → 02 Grade 2 → 03 Grade 3 → 04 Grade 4. Grades 5–8 will follow.
+
+Learning Outcome
+
+- Sit comfortably at the keyboard with healthy posture.- Name every white key on sight — both directions, both clefs.- Find Middle C on any size piano without thinking.- Play three short pieces with both hands.- Recognise the difference between a piano, an upright, a digital, and a synth — and pick the right one for practice.
+
+Chapter 1 — Why piano is a good first instrument
+
+The keyboard is the clearest visual map of Western music. Every other instrument hides pitch behind a fingering chart; the piano lays the entire pitch space out in front of you, left-to-right, low-to-high. If you understand "how a scale looks" on the piano, you understand it on a guitar, a violin, or in a software synth — you just don't see it as plainly.
+
+A second practical reason: the piano is monophonically simple but polyphonically rich. Beginners can produce a clean tone from day one (press → sound), while advanced players spend a lifetime on the same instrument. Few instruments span that range.
+
+> Where I started: I wasted my first two weeks googling "best digital piano under $500" instead of practising. The truth is any 88-key weighted keyboard from a major brand (Yamaha, Roland, Casio, Kawai) is fine for the first year. The piano you have and play every day beats the piano you research and never own.
+
+Chapter 2 — Picking an instrument
+
+Acoustic (real) piano
+
+- Upright (直立式) — most homes. Footprint 150 cm wide, depth 60 cm. Tone is good but action is lighter than a grand.- Grand (平台式) — long horizontal action, more responsive. Babies (150 cm) to concert (275 cm). Expensive, needs tuning twice a year.
+
+Digital piano
+
+- Weighted action (重錘鍵盤) is non-negotiable for serious practice. "Semi-weighted" and "synth action" feel different and will delay your finger development.- 88 full keys preferred over 76 or 61 — exam pieces will eventually need the full range.- Built-in speakers are a "nice to have"; quality varies. Headphones bypass the problem and are quieter for housemates.
+
+What you actually need (the honest list)
+
+| Item | Necessity | Why ||------|-----------|-----|| 88-key fully-weighted digital, or any acoustic upright | Essential | Your hands form habits around action weight || Bench at correct height | Essential | Wrong height = wrist strain in 4 weeks || Metronome (app fine) | Essential | The most-skipped tool that fixes the most-common problem || Music stand with light | Highly recommended | You'll be reading every session || Headphones (digital) | Recommended | Practise at any hour without conflict || Pedal (sustain) | Eventually | Not for week 1; needed by week 8 |
+
+> Trick: the right bench height = your forearms parallel to the floor when fingers rest on the keys, wrists neither dropping nor arching. Sit too high → you push the keys down with extra force and tense the wrist. Sit too low → you reach up and the fingers fight gravity. Adjust this on day one. Re-check it monthly.
+
+Chapter 3 — The keyboard map
+
+Black-key landmarks
+
+The black keys come in groups of 2 and 3. The 2-group anchors C-D-E; the 3-group anchors F-G-A-B.
+
+- The white key immediately left of a 2-group is always C.- The white key immediately left of a 3-group is always F.
+
+These two anchors are the only ones you ever need to memorise. The other letters (D, E, G, A, B) are derived by counting in alphabetical order from C or F.
+
+> Trick: the 2-group is C-D-E; 3-group is F-G-A-B. Stack the consonants in your head: Car Drives East, Fish Goes Around Back. Cheesy works.
+
+Middle C
+
+The C closest to the centre of the keyboard. On an 88-key piano this is the fourth C from the bottom — C4 in scientific pitch notation. On a 61-key it's the third C. Either way, find the centre, find the 2-group nearest it, drop your right thumb on the white key to the left of that pair.
+
+Octaves
+
+Same letter, doubled frequency: $f{n+12} = 2 \cdot fn$. The keyboard pattern repeats every 12 keys (7 white + 5 black). Once you memorise the 7-white-key span (C D E F G A B), the entire 88-key keyboard is mapped.
+
+Chapter 4 — Posture and hand mechanics
+
+Sitting
+
+- Bench centred on Middle C.- Sit on the front third of the bench, not slumped back.- Feet flat on the floor. (Smaller players: get a footstool; dangling feet cause back tension.)- Elbows roughly at keyboard height.- Shoulders down and relaxed. No shrugging up to the ears.
+
+Hands
+
+- Curved fingers, as if holding a tennis ball.- Strike with the fingertip, not the pad.- Wrist is level with the back of the hand — flat, not collapsed, not arched.- Thumb plays with its side, slightly tucked under.
+
+Finger numbering
+
+| Hand | 1 | 2 | 3 | 4 | 5 ||------|---|---|---|---|---|| Right | Thumb | Index | Middle | Ring | Little || Left | Thumb | Index | Middle | Ring | Little |
+
+Both hands use the same scheme — the thumb is always 1 for its own hand. Sheet music writes RH finger numbers above the staff, LH below.
+
+> Where I got stuck: I kept dropping my wrist when playing softly. Fix: I propped a coin on the back of my hand during slow practice. If it stayed put for eight bars, my wrist was level. Sounds gimmicky, fixes it in three days.
+
+Chapter 5 — Reading the staff (just enough for now)
+
+Only what you need for the three first songs is covered here. Full staff theory is in Post 01.
+
+Treble (right hand)
+
+Lines bottom to top: E G B D F — "Every Good Boy Does Fine".Spaces bottom to top: F A C E — already spells FACE.
+
+Bass (left hand)
+
+Lines: G B D F A — "Good Boys Do Fine Always".Spaces: A C E G — "All Cows Eat Grass".
+
+Middle C bridges both
+
+Middle C sits on the first ledger line below the treble staff and the first ledger line above the bass staff. The same note, written two ways. The grand staff joins the two clefs with a brace — right hand on top, left hand on bottom.
+
+> Analogy: the grand staff is two ladders bolted together at Middle C. Right hand climbs the top ladder (higher pitches), left hand climbs the bottom ladder (lower pitches). Middle C is the rung they share.
+
+Chapter 6 — Three first pieces
+
+These are the canonical first songs. I picked them because (1) the right-hand melody fits inside one hand position, (2) the left hand uses only two or three notes, and (3) you've heard them since you were five — your ear corrects you before your brain does.
+
+Piece 1 — "Ode to Joy" (Beethoven, Symphony No. 9)
+
+Hand position: RH thumb on Middle C.
+
+Repeat. Then play:
+
+Why this piece: the melody never leaves the five-finger span of one hand. You don't move your wrist. The whole song is your introduction to "fingers stay put, brain reads."
+
+> Trick: count "1 2 3 4" steadily through it — every note is one beat except the last D of each line, which is two beats. If you can clap it without playing, you can play it.
+
+Piece 2 — "Mary Had a Little Lamb"
+
+Hand position: RH thumb on Middle C.
+
+Why this piece: introduces a longer arc with repetition. You'll notice the same three-note shape repeats — once you spot the pattern your eye stops reading note-by-note.
+
+Piece 3 — "Twinkle Twinkle Little Star" — both hands
+
+RH: thumb on Middle C.
+
+LH: start with the 5th finger on the C an octave below Middle C (so 5 = C3, 3 = E3, 1 = G3).
+
+For your first attempt, just play the C3 long-held for each bar — one note per bar. Hold it under the right hand.
+
+Once that's solid, add G3 alternating where the harmony changes (bar 3, bar 6).
+
+> Where I got stuck: hands together on day three felt impossible. Fix: don't try hands together until each hand is boring on its own. "Boring" is the right level — if you have to think, you're not ready. Each hand should run on autopilot, and only then do you stack them.
+
+Chapter 7 — How to practise (the meta-skill)
+
+If you take one thing from this post, take this: slow practice with full attention beats fast practice with split attention by an order of magnitude. The brain encodes accuracy, not speed. Speed comes free once accuracy is locked in.
+
+Daily routine, 25–30 minutes
+
+| Block | Time | What ||-------|------|------|| Warm-up | 3 min | 5-finger pattern, C major position, RH then LH then both || Note-naming | 2 min | Pick a random key, name it out loud || Today's piece | 15 min | One section at a time, slow, no mistakes || Sight-read | 5 min | Brand-new short piece, no repeats — see how far you get || Cool-down | 2 min | Replay your most-mastered piece for fun |
+
+Slow practice rules
+
+1. Start at a tempo where you make zero mistakes. Mistakes at speed become mistakes at all speeds.2. Loop the section that's hard, not the whole piece. Four bars. Ten times. Then move on.3. Hands separate before hands together. Always.4. Watch your hand for one minute, then watch the page for one minute. Alternate. Eyes-on-page-only forces you to internalise the keyboard map.5. End on a success. The last attempt before you stop is the one your brain rehearses overnight.
+
+> Trick I steal from sports coaches: finish every practice session by playing the easiest passage of the day one more time, slowly and perfectly. Going to bed on a clean run reinforces the right pattern in sleep. Going to bed frustrated reinforces the wrong one.
+
+Chapter 8 — Common beginner mistakes
+
+| Mistake | Fix ||---------|-----|| Eyes glued to the hand | Cover the keys with a small towel for one passage; force the eye onto the page || Tense shoulders | Pause every 5 min; roll shoulders back; reset posture || Speeding through easy bars, stuttering on hard ones | Practise the hard bars at the easy bars' tempo, not the other way round || Skipping the metronome | The metronome reveals your fudges. Use it on slow practice. Speed practice later || Always practising from bar 1 | Bar 1 gets 100× practice, bar 32 gets 1×. Start from random bars || Quitting before recording | Record yourself once a week, even on phone audio. The recording is honest in ways your ears in the moment are not |
+
+Useful Shortcut
+
+Cheat-sheet
+
+| What | How ||------|-----|| Find Middle C | White key left of the 2-black-key group nearest the keyboard centre || Treble lines | E G B D F (Every Good Boy Does Fine) || Treble spaces | F A C E || Bass lines | G B D F A (Good Boys Do Fine Always) || Bass spaces | A C E G (All Cows Eat Grass) || Finger numbering | 1 = thumb (both hands) → 5 = pinky || Bench height | Forearms parallel to floor when fingers rest on keys || Practice motto | Slow + accurate > fast + sloppy || End each session | One perfect run of an easy passage |
+
+When to move on
+
+You're ready for Post 01 — Grade 1 Theory when you can:- Play all three first songs hands together from memory.- Name any white key in under 2 seconds.- Identify any line or space note in either clef.- Sit at the piano without checking your posture.
+
+If you're not there yet, stay here another week or two. The grades build on the basics; rushing past the basics breaks every grade above.
+
+Suggested next listening
+
+These pieces aren't homework — they're context. Listen to them on your commute or in the background while cooking. Knowing what good piano sounds like trains your ear faster than any exercise.
+
+| Piece | Composer | Why ||-------|----------|-----|| Minuet in G (BWV Anh. 114) | Bach (attr.) | Where every classical piano student is heading; clean, simple, beautiful || Gymnopédie No. 1 | Satie | Modern feel, dead-easy harmony, will hook you on the instrument || Clair de Lune | Debussy | Aspirational — when you can read this in three years, you've arrived || Children's Corner — I. Doctor Gradus ad Parnassum | Debussy | A study with melody. Teaches what practice can become || Mikrokosmos, Vol. 1 | Bartók | Modern teaching pieces — many at Grade 1 level. Listen and you've already half-learned them |
+
+References
+
+- ABRSM (current edition). Piano Practical Syllabus. (Skim the Initial Grade list now.)- Adam Sietz, Piano Lessons for Adults. (Adult-focused, no kids-book art.)- James Bastien, Bastien Piano Basics — Primer Level. (The classic English-language beginner method.)- Alfred's Adult All-In-One Course — Level 1. (Alternative method book — pick one and stick to it.)- Chuan C. Chang, Fundamentals of Piano Practice. (Free online — practice technique deep dive.)- Heinrich Neuhaus, The Art of Piano Playing. (Eventual reading; advanced philosophy.)
+
+> Note: this post is in progress. Planned: audio reference tracks per song once I find a clean-license source, and a video of correct vs incorrect posture.
+8:T3d0e,Prompting is the practice of writing inputs that steer a Large Language Model (LLM) toward useful outputs. It is part interface design, part rhetoric, and part empirical science. This note covers the foundations and the techniques that have been validated by published research, with worked examples you can copy.
 
 Learning Outcome
 
@@ -224,542 +1103,7 @@ Quick sanity checks before shipping
 References
 
 - Brown, T. et al. (2020). Language Models are Few-Shot Learners. NeurIPS. arXiv:2005.14165.- Ouyang, L. et al. (2022). Training Language Models to Follow Instructions with Human Feedback (InstructGPT). NeurIPS. arXiv:2203.02155.- Bai, Y. et al. (2022). Training a Helpful and Harmless Assistant with RLHF. arXiv:2204.05862.- Wei, J. et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. NeurIPS. arXiv:2201.11903.- Kojima, T. et al. (2022). Large Language Models are Zero-Shot Reasoners. NeurIPS. arXiv:2205.11916.- Wang, X. et al. (2022). Self-Consistency Improves Chain of Thought Reasoning. ICLR. arXiv:2203.11171.- Lu, Y. et al. (2022). Fantastically Ordered Prompts and Where to Find Them. ACL. arXiv:2104.08786.- Khot, T. et al. (2023). Decomposed Prompting. ICLR. arXiv:2210.02406.- Zhou, D. et al. (2023). Least-to-Most Prompting Enables Complex Reasoning in LLMs. ICLR. arXiv:2205.10625.- Yao, S. et al. (2023). ReAct: Synergising Reasoning and Acting. ICLR. arXiv:2210.03629.- Yao, S. et al. (2023). Tree of Thoughts: Deliberate Problem Solving with LLMs. NeurIPS. arXiv:2305.10601.- Shinn, N. et al. (2023). Reflexion: Language Agents with Verbal Reinforcement Learning. NeurIPS. arXiv:2303.11366.- Liu, N. et al. (2023). Lost in the Middle: How Language Models Use Long Contexts. TACL. arXiv:2307.03172.- Zheng, L. et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS. arXiv:2306.05685.- Zheng, H. et al. (2024). Take a Step Back: Evoking Reasoning via Abstraction in LLMs. ICLR. arXiv:2310.06117.- Sclar, M. et al. (2024). Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design. ICLR. arXiv:2310.11324.- Wallace, E. et al. (2024). The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions. arXiv:2404.13208.- OpenAI (2024). Prompt engineering guide. https://platform.openai.com/docs/guides/prompt-engineering.- Anthropic (2024). Prompt engineering documentation. https://docs.anthropic.com/.
-4:Tc66,Java 是一種十分基礎並常用的編程語言。 它的歷史非常悠久，在許多新語言的研究和開發中擔任著重要的角色, 但亦因此 Java 比其他常用語言更為繁瑣和嚴謹。 不過由於 Java 穩定的表現, 豐富的文檔和輕鬆搬移項目的靈活特性，至今仍然有不少從事資訊科技的公司採用。
-
-學習目標
-
-- 掌握Java Prograqmming的基礎- 能夠創建屬於自己的Project- 學習一些Java的進階指令
-
-章節1 - 如何開始寫Java
-
-市面上有不少支援 Java Development 的軟件\假如你是完全沒接觸過 Java 的同學, 建議先下載 Java Development Kit (JDK) 和相應的開發軟件\如 Eclipse, Visual Studio, Netbeans ...\本文將會專注於使用 Apache Netbeans, Java with Ants 的開發上
-
-首先介紹 Java 的基礎文本範例\假設你在 Package example 中創建了一個 HelloWorld.java
-
-main 是主要執行的部分, 想要創建或呼召任何定義功能都必須寫在 main 裡\執行後將會 Output
-
-注意事項-Java 十分重視句式結尾,千萬不要忘記在最後加上分號 ; (儘管不少IDE會自動提醒你)
-
-<br/>
-
-如何在不使用開發軟件的前提下,單獨運行 Java 檔案
-
-1. 首先你的裝置上必須安裝了 JDK2. 手上持有 Java 檔案,例: [檔案名稱].java3. 打開命令提示元 CMD 並輸入 cd [檔案位置] 將目標位置設定在檔案文件夾4. 輸入 javac [檔案名稱].java 以創建執行 Java 用的檔案 [檔案名稱].class5. 最後在命令提示元中輸入 java [檔案名稱].java 即可
-
-<br/>
-
-如何單獨運行 Java 檔案並附帶參數 Parameter
-
-1. 首先依照上述的指示做一遍2. 在最後一步的指令後方添加任意Parameters\java [檔案名稱].java \<parameter1> \<parameter2> \<...>\所有Parameters將會儲進一個Array並傳遞至main裡面的String[] args\你便可以在main裡根據Array的內容進行其餘的指令, 如
-
-章節二 - Objects Oriented Programming (OOP)
-
-Java 開發的核心基本圍繞在 Object, 而 Object 的原型就是 Class
-
-甚麼是 Class
-
-簡單來說 Class 是一個包含虛化定義的 Template, 在實體化後就變成 Object\舉個例子
-
-Class type 種類
-
-不同的種類會導致不同的存取權限\分類不限於 Class ,更能用在 Variable 和 Method 上
-
-- Public (最大權限)\Project內任何檔案都能存取- Protected\同一 Class, Package, 其他 Package 的 Subclass 能存取- Default\僅限同一 Class, Package 能存取- Private (最小權限)\僅限同一 Class 能存取
-
-例子
-
-<br/>
-
-甚麼是 Method
-
-Method主要用於定義功能,執行範圍內的指令且能選擇是否返回數值\在絕大部分語言中稱作 Function, 而在 Java 裡叫 Method
-
-常見例子
-
-<br />
-
-每個 Class裡都有的 Constructor
-
-Constructor是會在 Object 創建時觸發的 Method, 主要用於初始化不同 Object\每個 Class 中均隱藏著一個 Default Constructor\而開發者可以新增額外/覆蓋預設的 Constructor
-
-例子
-
-執行後的 Output
-
-<br/>
-
-筆記正在草擬...\也許到這裡你對實際的開發還沒明白透徹, 無須擔心, 稍後將會作更多解釋
-
-實用鏈接
-
-To be added..
-5:T58b,Java是一個十分常見的程式語言, 其 經常應用在各大公司的產品
-
-Learning Outcome
-
-Understand the basic terminologies of Java.
-
-Learn how to develop basic Java projects.
-
-this 指令static
-
-Chapter 3 - Inheritance & Polymorphism
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 4 - Abstract Class, OOD Principles
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 5 - Generic Class
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 6 - Exception handling
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 7 - Assertion
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 8 - File I/O
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 9 - Multithreading
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 1 - Introduction
-
-To be added..
-
-Terminology
-
-Generic class
-
-Chapter 2 - Objects and Classes
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 3 - Inheritance & Polymorphism
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 4 - Abstract Class, OOD Principles
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 5 - Generic Class
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 6 - Exception handling
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 7 - Assertion
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 8 - File I/O
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 9 - Multithreading
-
-To be added..
-
-Terminology
-
-To be added..
-
-Useful Shortcut
-
-To be added..
-6:T318f,Data Structure & Algorithm is the fundamental knowledge of programming. Learning how to store, organize, sort, search data allow us to code more efficiently and concisely.
-
-Learning outcome
-
-Apply structural programming approach to solve more complex computation problems.Demonstrate applications of standard data structures such as linked list, stack, queue and tree.Solve computation problems using recursion where appropriate.Understand different sorting and searching algorithms.
-
-Chapter 1 - Basic Concepts of C++
-
-Terminology
-
-Abstract Data Type (ADT)
-
-Common Standard Library Header
-
-- \Support Standard I/O functions: , , , , , etc..- \Support Standard utility functions: , , , etc..- \Support String functions: , , , etc..- \Perform both input and output operations with the stream objects :  and
-
-Comments
-
-Primitive Data types
-
-| Data type           | Size (byte) | Representation | Range of values ||-------------------- |---|------------------------------------|--------------------|| bool                | 1 | Boolean                            | $\textnormal{false / true}$ || char                | 1 | Signed number (2's complement)     | $\textnormal{-128 to 127}$ || unsigned char       | 1 | Unsigned number                    | $\textnormal{0 to 255}$ || int                 | 4 | Signed number (2's complement)     | $-2^{31} \space \textnormal{to} \space 2^{31}-1$ || unsigned int        | 4 | Unsigned number                    | $\textnormal{0 to } 2^{32}-1$ || short               | 2 | Signed number (2's complement)     | $-2^{15} \space \textnormal{to} \space 2^{15}-1$ || unsigned short      | 2 | Unsigned number                    | $\textnormal{0 to } 2^{16}-1$ || long                | 4 | Signed number (2's complement)     | $-2^{31} \space \textnormal{to} \space 2^{31}-1$ || unsigned long       | 4 | Unsigned number                    | $\textnormal{0 to } 2^{32}-1 $ || long long           | 8 | Signed number (2's complement)     | $-2^{63} \space \textnormal{to} \space 2^{63}-1$ || unsigned long long  | 8 | Unsigned number                    | $\textnormal{0 to } 2^{64}-1 $ || float               | 4 | IEEE 32-bit floating point number  | $\pm 1.410^{-45} \textnormal{ to } \pm3.410^{38}$ || double              | 8 | IEEE 64-bit floating point number  | $\pm 510^{-324} \textnormal{ to } \pm1.79810^{308}$ || pointer             | 4 | Memory address                     | $\textnormal{0 to } 2^{32}-1$ |
-
-C++ File Structure
-
-Header file (.h)          Program file (.cpp)Functions Declaration     Functions Implementation
-
-Chapter 2 - Computation Complexity (Big-O)
-
-There are two types of complexity- Time Complexity (Time spent)- Space Complexity (Memory space spent)
-
-They both use three asymptotic notation to descript the complexity- $\textnormal{Big-O (O)}$- $\textnormal{Big-Omega }(\Omega)$- $\textnormal{Big-Theta }(\Theta)$
-
-Big-O
-
-Upper bound of the complexity$$ f(n) = \textnormal{O}(g(n)) $$
-
-Big-Omega
-
-Lower bound of the complexity$$ f(n) = \Omega(g(n)) $$
-
-Big-Theta
-
-Exact bound of the complexity$$ f(n) = \Theta(g(n)) $$
-
-Common Complexity Classes
-
-- Constant time - $O(1)$- Logarithmic time - $O(\log2 n)$- Linear time - $O(n)$- Log-linear time - $O(n\log2 n)$- Quadratic time - $O(n^2)$- Cubic time - $O(n^3)$- Polynomial time - $O(n^k)$- Exponential time - $O(2^n)$- Factorial time - $O(n!)$
-
-Slope of Complexity Classes
-
-TIme Complexity
-
-Simple operations such as- declaration, assignment- cin, cout- function call- return
-
-take constant amount of timeThe overall time complexity = O(Constant),\and constant time costs almost zero influence no matter the size.\Therefore the overall time complexity is$$ O(1) $$
-
-Only looping will cost longer time complexity\Single nested loop usually takes  as the operations  inside the loop will run  times.$$ C  n $$
-
-The overall time complexity is$$ O(n) $$While for more than one nested loop usually takes  as the operations  inside the loop will run  times.$$ C  n^2 $$
-
-The overall time complexity is$$ O(n^2) $$
-
-Best case
-
-To be added..
-
-Average case
-
-To be added..
-
-Worst case
-
-To be added..
-
-Space Complexity
-
-To be added..O()
-
-Chapter 3 - Linked Lists
-
-A linked list is an object that only contains head node of the list.Each node is created with parameter [next] linked to next node or necessaryly [prev] linked to previous node.
-
-Terminology
-
-- Predecessor- Successor
-
-Josephus Problem
-
-People are standing in a circle waiting to be executed.Counting begins at a specified point in the circle andproceeds around the circle in a specified direction. Aftera specified number of people are skipped, the nextperson is executed. The procedure is repeated with theremaining people, starting with the next person, going inthe same direction and skipping the same number ofpeople, until only one person remains, and is freed
-
-The problem — given the number of people (n), startingpoint, direction, and number to be skipped (k) — is tochoose the position in the initial circle to avoid execution.(guessing who is the survivor)
-
-Linear List
-
-Unordered / Random List
-
-Ordered List
-
-General List
-
-Restricted List
-
-Common Operations
-
-Find length of linked list
-
-Search element x from the beginning of list
-
-Insert new element x at the front of list
-
-Remove the first element x found in the list
-
-Insert new element x in an ordered list
-
-Common Issues
-
-Null-pointer exceptionMemory leak
-
-Variants of Lists
-
-Singly Linked List with Header Node- Sentinel node
-
-Circularly Linked List- Last node points back to first node
-
-Doubly Linked List- Each node has next and back pointers
-
-Circular Doubly Linked List- Boundary-tag method
-
-Orthogonal List- ...
-
-Chapter 4 - Stacks and Queues
-
-To be added..
-
-Terminology
-
-To be added..
-
-Stack
-
-Last In First Out (LIFO)
-
-Queues (FIFO)
-
-First In First Out (FIFO)
-
-Chapter 5 - Recursion
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 6 - Binary Trees
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 7 - Sorting and Searching Algorithms
-
-To be added..
-
-Terminology
-
-To be added..
-
-Chapter 8 - Hashing
-
-Terminology
-
-- Indexing- Perfect Hashing- Minimal Perfect Hashing- Hash Collision- Open Addressing- Closed Addressing- Design of Hash function
-
-Introduction of Hashing
-
-Hashing is generally [ Indexing ].
-
-If you have learnt what [ index ] is, you may understand it as positioning or classifying objects with duplicated meaning for a smaller size of data and better searching.
-
-Steps for Indexing1. Define an array with a specific purpose.2. Define meaning for each index in the array.3. Classify the input and determine the size of the array.4. Map the input to the array.
-
-Example of Indexing (Minimal Perfect Hashing)Given A string [foo] = "abacbdef".\Precondition: there will only be alphabets inside the string.\If you want to find how many 'a' occured inside the string, you may use Indexing.1. Define an array for storing the occurrence of letters.2. Each index represents an alphebet.3. There are a total of 26 alphabets as potential input, so the size of array will be 26.4. Similar to the ASCII table, we can take index [0] representing the occurrence of 'a', index [1] representing the occurrence of 'b', and so on...5. Loop over the string and map the character to corresponding index.
-
-However, there are still some differences between Hashing and Indexing.\In Hashing, we convert ASCII char to key directly with  so that 'a' = 0, 'b' = 1, and so on...\which allows us to map the data easier and faster.
-
-Hash function
-
-A function f(k) is known as defined with specific formula,\it can be either One-to-one, or Many-to-one,\Under this property,\it can convert a large variable-sized amount of data into a small datum by transforming data into keys.
-
-A Hash table arr[ ] is an array that will be created to hold the keys after conversion.
-
-A Hash value is usually an integer that may serve as an index to an array.
-
-Example of Hash function
-
-Hashing Student ID k using Modulo, where h is the function, h(k) is the hash value of k, n is an arbitrary key.$$ h(k) = k \bmod n $$The size of the array will be reduced significantly due to the limited range of the modulus [0 to n-1].
-
-Take k = 5000, n = 5, the function will be$$ h(k) = k \bmod 5 $$In Hash table, the value k will be updated to the index of hash value, arr[h(k)] = k$$ h(5000) = 5000 \bmod 5 = 0 $$arr[0] = 5000, arr[1] = 5081, arr[2] = 5072, arr[3] = 5023, arr[4] = 5014
-
-You may now be thinking of what if the index collides, it should happen frequently as the function is many-to-one.
-
-Yes, and therefore, I am going to introduce the solution against collision.
-
-Hash Collision
-
-Collision occurs when two distinct data own the same hash value.\Collisions are usually unavoidable when a large set of data is mapped into small datum.\It will increase the average cost of lookup operations.
-
-Solutions to Hash Collision- Open Addressing- Closed Addressing
-
-Load factor represents the length of data in each index,\larger load factor brings lower performance
-
-Open Addressing
-
-Place the key in other free slot when collisions occured.
-
-An index only maps to 1 key.\Theoretical max load factor = 1
-
-Advantages- No size overhead apart from the hash table array- Better memory locality and cache performance. Memory allocation is laid out linearly- Performs better when the number of keys is known in advance and the churn is low.
-
-Example of Open Addressing:- Linear Probing- Quadratic Probing- Double Hashing- Hopscotch hashing- Robin Hood hashing- Cuckoo hashing- 2-Choice hashing
-
-Linear Probing
-
-To be added..
-
-Quadratic Probing
-
-To be added..
-
-Double Hashing
-
-To be added..
-
-Closed Addressing
-
-Place the key in the same slot even when collisions occured.
-
-An index can map to multiple keys.\Theoretical max load factor = depends
-
-To achieve placing multiple keys in same slot- Separate chaining using linked lists- Separate chaining using dynamic arrays- Using self-balancing binary search trees
-
-Advantages- Easier removal- Assign quicker with high load factor- No issues with Clustering
-
-Example of Closed Addressing:- Chaining Buckets
-
-Chaining Buckets
-
-To be added..
-
-After dealing with collision, there will be two general types of Hashing.
-
-Minimal Perfect Hashing (Best)A hash function that maps each valid input to a different hash value.\Every index is taken in the hash table.
-
-Perfect HashingA hash funciton that maps n input keys to n consecutive hash values.\But not every index is taken in the hash table.
-
-Designing Hash Functions
-
-Ideal properties- Low Cost- Easier and faster to compute the result- Variable Range- Able to transform [words], [symbols] into [numbers]- Uniformity- Distribute the keys evenly- Minimize the chance of collisions
-
-Common types of Hash Functions
-
-1. Division
-
-2. Mid-Square
-
-3. Folding
-
-4. Radix Transformation
-
-Division
-
-hashValue = key % tableSize\Try to use prime number as the hash table size to reduce collisions
-
-For non integer keys, transform them into integer with ASCII code
-
-Mid-Square
-
-1. Transform keys into integer2. Sqaure the number3. Pick some digits from the middle to hash
-
-Take tableSize = 5
-
-|$\textnormal{key}$|$\textnormal{key}^2$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||99   |9801    |80 | 80 % 5 = 0  ||145  |21025   |102| 102 % 5 = 2 ||342  |116964  |69 | 69 % 5 = 4  |
-
-Folding
-
-1. Split key into 3 parts [ Left, Middle, Right ] as you wish,\left and right should have the same size2. Fold keys and sum the keys
-
-Shift-folding
-
-Sum the splitted keys directly
-
-Take tableSize = 5
-
-|$\textnormal{key}$|$\textnormal{split}$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||5829   |58-29     |58 + 29 = 87        | 87 % 5 = 2  ||452642 |45-26-42  |45 + 26 + 42 = 113  | 113 % 5 = 3 ||1234567|123-4-567 |123 + 4 + 567 = 694 | 694 % 5 = 4  |
-
-Boundary-folding
-
-Invert the left and right part of each splitted part except middle oneThen sum the keys
-
-Take tableSize = 5|$\textnormal{key}$|$\textnormal{split}$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||5829   |58-29     |85 + 92 = 177       | 177 % 5 = 2  ||452642 |45-26-42  |54 + 62 + 24 = 140  | 140 % 5 = 0 ||1234567|12-345-67 |21 + 345 + 76 = 442 | 442 % 5 = 2  |
-
-Radix Transformation
-
-Define same key with new radix then convert back to original radix
-
-Given $ k = 358345{10} $\Define $ k2 = 358345{9} $\$ h(k) = k2 \space mod \space tableSize $\$ k2 = 358345{9} = 216068{10} $\$ h(k) = 216068{10} \space mod \space tableSize $
-
-Useful shortcut
-
-Convenient Mathematics formulas for programming
-
-Gauss Summation
-
-$$ \frac{n(n+1)}{2} $$
-
-Calculate the sum of integers from 1 to n inclusively
-
-$$ \frac{(a+b)(b-a+1)}{2} $$
-
-Calculate the sum of natural numbers from a to b inclusively
-
-To be added..
-b:T537,const GLOBAL_CONFIG = {
+d:T537,const GLOBAL_CONFIG = {
   root: "/blog/",
   algolia: undefined,
   localSearch: {
@@ -814,7 +1158,7 @@ b:T537,const GLOBAL_CONFIG = {
   isPhotoFigcaption: false,
   islazyload: false,
   isAnchor: false
-}; window.__BUTTERFLY_AUTOINIT = false;c:T748,(function(win){
+}; window.__BUTTERFLY_AUTOINIT = false;e:T748,(function(win){
   win.saveToLocal = {
     set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
     get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
@@ -829,6 +1173,6 @@ b:T537,const GLOBAL_CONFIG = {
   if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
   if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
   document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
-})(window);0:["d4IR-Ah49KcejbX8CwV2b",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":true,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-18 09:47:55\"};"}}],["$","$L2",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":11}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":25}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":5}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"full_page","id":"page-header","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"site-info","children":[["$","h1",null,{"id":"site-title","children":"Vokint's StudyLog"}],["$","div",null,{"id":"site-subtitle","children":["$","span",null,{"id":"subtitle"}]}],["$","div",null,{"id":"site_social_icons","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"id":"scroll-down","children":["$","i",null,{"className":"fas fa-angle-down scroll-down-effects"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"className":"recent-posts","id":"recent-posts","children":[[["$","div","ai_prompting_foundations",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/15/ai_prompting_foundations/\" title=\"AI Prompting (Foundations &amp; Practice)\"><img class=\"post_bg\" src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"AI Prompting (Foundations &amp; Practice)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","children":"AI Prompting (Foundations & Practice)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-15T04:00:00.000Z","title":"Created 2026-05-15 12:00:00","children":"2026-05-15"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","AI",{"className":"article-meta__categories","href":"/blog/categories/AI/","children":"AI"}]]]]}]]}],["$","div",null,{"className":"content","children":"$3"}]]}]]}],["$","div","statistic_n_probability_model",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/statistic_n_probability_model/\" title=\"Statistic &amp; Probability Models (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/statistic_n_probability_model.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Statistic &amp; Probability Models (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","children":"Statistic & Probability Models (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:46:31.000Z","title":"Created 2022-05-26 03:46:31","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Mathematics",{"className":"article-meta__categories","href":"/blog/categories/Mathematics/","children":"Mathematics"}]]]]}]]}],["$","div",null,{"className":"content","children":"Foundation Statistic and Probability Models.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","web_development_advanced",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/web_development_advanced/\" title=\"Web Development (Advanced) (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Web Development (Advanced) (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","children":"Web Development (Advanced) (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:04:53.000Z","title":"Created 2022-05-26 03:04:53","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Website development can be interesting when you discover more and more features and even deploy as mobile applications.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","java_development_p1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/java_development_p1/\" title=\"Java Development [Basic] Part 1 (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 1 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","children":"Java Development [Basic] Part 1 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Java is an ordinary programming language, it is also the fundamental of other languages.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 - Introduction\n\nTo be added..\n\nTerminology\n\nGeneric class\n\nChapter 2 - Objects and Classes\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 3 - Inheritance & Polymorphism\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 4 - Abstract Class, OOD Principles\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 5 - Generic Class\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 6 - Exception handling\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 7 - Assertion\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 8 - File I/O\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 9 - Multithreading\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","java_development_p2",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/java_development_p2/\" title=\"Java Development [Basic] Part 2 (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 2 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","children":"Java Development [Basic] Part 2 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Java is an ordinary programming language, it is also the fundamental of other languages.\n\nLearning Outcome\n\nTo be added..\n\nChapter 10 - Graphical User Interface\n\nTo be added..\n\nTerminology\n\nGeneric class\n\nChapter 11 - Events\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 12 - Functional Programming\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 13 - Collections\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 14 - Stream API\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","vk_javaProg_part1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/vk_javaProg_part1/\" title=\"Java語言 重溫筆記 - 上 (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java語言 重溫筆記 - 上 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/vk_javaProg_part1/","title":"Java語言 重溫筆記 - 上 (In Progress)","children":"Java語言 重溫筆記 - 上 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$4"}]]}]]}],["$","div","vk_javaProg_Q&A",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/vk_javaProg_Q%26A/\" title=\"Java語言 重溫筆記 - Q&amp;A (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java語言 重溫筆記 - Q&amp;A (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/vk_javaProg_Q%26A/","title":"Java語言 重溫筆記 - Q&A (In Progress)","children":"Java語言 重溫筆記 - Q&A (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$5"}]]}]]}],["$","div","web_development_basic",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/web_development_basic/\" title=\"Web Development (Basic) (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Web Development (Basic) (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/web_development_basic/","title":"Web Development (Basic) (In Progress)","children":"Web Development (Basic) (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:34:46.000Z","title":"Created 2022-05-26 02:34:46","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Website development can be interesting when you discover more and more features and even deploy as mobile applications.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","logic_circuit_design",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/25/logic_circuit_design/\" title=\"Logic Circuit Design (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/circuit_design.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Logic Circuit Design (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/25/logic_circuit_design/","title":"Logic Circuit Design (In Progress)","children":"Logic Circuit Design (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:31:59.000Z","title":"Created 2022-05-25 01:31:59","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Circuit Design",{"className":"article-meta__categories","href":"/blog/categories/Circuit-Design/","children":"Circuit Design"}]]]]}]]}],["$","div",null,{"className":"content","children":"Circuit Design is important for Engineering\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","data_structure_n_algorithm",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/25/data_structure_n_algorithm/\" title=\"Data Structure &amp; Algorithm (C++)\"><img class=\"post_bg\" src=\"/blog/assets/data_structure_n_alrogithm.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Data Structure &amp; Algorithm (C++)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/25/data_structure_n_algorithm/","title":"Data Structure & Algorithm (C++)","children":"Data Structure & Algorithm (C++)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:28:17.000Z","title":"Created 2022-05-25 01:28:17","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$6"}]]}]]}]],["$","nav",null,{"id":"pagination","children":["$","div",null,{"className":"pagination","children":[["$","span","1",{"className":"page-number current","children":1}]," ",["$","a","2",{"className":"page-number","href":"/blog/page/2/","children":2}],["$","a","next",{"className":"extend next","rel":"next","href":"/blog/page/2/","children":["$","i",null,{"className":"fas fa-chevron-right"}]}]]}]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":11}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":25}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":5}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[false,["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","ai_prompting_foundations",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"AI Prompting (Foundations &amp; Practice)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","children":"AI Prompting (Foundations & Practice)"}],["$","time",null,{"dateTime":"2026-05-15T04:00:00.000Z","title":"Created 2026-05-15 12:00:00","children":"2026-05-15"}]]}]]}],["$","div","statistic_n_probability_model",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/statistic_n_probability_model.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Statistic &amp; Probability Models (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","children":"Statistic & Probability Models (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T19:46:31.000Z","title":"Created 2022-05-26 03:46:31","children":"2022-05-26"}]]}]]}],["$","div","web_development_advanced",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Web Development (Advanced) (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","children":"Web Development (Advanced) (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T19:04:53.000Z","title":"Created 2022-05-26 03:04:53","children":"2022-05-26"}]]}]]}],["$","div","java_development_p1",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 1 (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","children":"Java Development [Basic] Part 1 (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}]]}],["$","div","java_development_p2",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 2 (In Progress)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","children":"Java Development [Basic] Part 2 (In Progress)"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}]]}]]}]]}],[["$","div",null,{"className":"card-widget card-categories","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-folder-open"}],["$","span",null,{"children":"Categories"}]]}],["$","ul",null,{"className":"card-category-list","id":"aside-cat-list","children":[["$","li","AI",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/AI/","children":[["$","span",null,{"className":"card-category-list-name","children":"AI"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Circuit-Design",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Circuit-Design/","children":[["$","span",null,{"className":"card-category-list-name","children":"Circuit Design"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Mathematics",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Mathematics/","children":[["$","span",null,{"className":"card-category-list-name","children":"Mathematics"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Networking",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Networking/","children":[["$","span",null,{"className":"card-category-list-name","children":"Networking"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Programming",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Programming/","children":[["$","span",null,{"className":"card-category-list-name","children":"Programming"}],["$","span",null,{"className":"card-category-list-count","children":7}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-tags","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-tags"}],["$","span",null,{"children":"Tags"}]]}],["$","div",null,{"className":"card-tag-cloud","children":[["$","a","AI",{"href":"/blog/tags/AI/","style":{"fontSize":"1.10em","color":"#999"},"children":"AI"}]," ",["$","a","Bootstrap",{"href":"/blog/tags/Bootstrap/","style":{"fontSize":"1.10em","color":"#999"},"children":"Bootstrap"}]," ",["$","a","C",{"href":"/blog/tags/C/","style":{"fontSize":"1.10em","color":"#999"},"children":"C++"}]," ",["$","a","Computer-Science",{"href":"/blog/tags/Computer-Science/","style":{"fontSize":"1.50em","color":"#999fab"},"children":"Computer Science"}]," ",["$","a","CSS",{"href":"/blog/tags/CSS/","style":{"fontSize":"1.10em","color":"#999"},"children":"CSS"}]," ",["$","a","Data-Structure",{"href":"/blog/tags/Data-Structure/","style":{"fontSize":"1.10em","color":"#999"},"children":"Data Structure"}]," ",["$","a","Engineering",{"href":"/blog/tags/Engineering/","style":{"fontSize":"1.41em","color":"#99a2b0"},"children":"Engineering"}]," ",["$","a","Font-Awesome",{"href":"/blog/tags/Font-Awesome/","style":{"fontSize":"1.10em","color":"#999"},"children":"Font Awesome"}]," ",["$","a","HTML",{"href":"/blog/tags/HTML/","style":{"fontSize":"1.10em","color":"#999"},"children":"HTML"}]," ",["$","a","Ip-address",{"href":"/blog/tags/Ip-address/","style":{"fontSize":"1.10em","color":"#999"},"children":"Ip address"}]," ",["$","a","Java",{"href":"/blog/tags/Java/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"Java"}]," ",["$","a","jQuery",{"href":"/blog/tags/jQuery/","style":{"fontSize":"1.10em","color":"#999"},"children":"jQuery"}]," ",["$","a","Large-Language-Models",{"href":"/blog/tags/Large-Language-Models/","style":{"fontSize":"1.10em","color":"#999"},"children":"Large Language Models"}]," ",["$","a","Logic-Gates",{"href":"/blog/tags/Logic-Gates/","style":{"fontSize":"1.10em","color":"#999"},"children":"Logic Gates"}]," ",["$","a","Machine-Learning",{"href":"/blog/tags/Machine-Learning/","style":{"fontSize":"1.10em","color":"#999"},"children":"Machine Learning"}]," ",["$","a","Mathematics",{"href":"/blog/tags/Mathematics/","style":{"fontSize":"1.10em","color":"#999"},"children":"Mathematics"}]," ",["$","a","Node-js",{"href":"/blog/tags/Node-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Node.js"}]," ",["$","a","Probability",{"href":"/blog/tags/Probability/","style":{"fontSize":"1.10em","color":"#999"},"children":"Probability"}]," ",["$","a","Prompt-Engineering",{"href":"/blog/tags/Prompt-Engineering/","style":{"fontSize":"1.10em","color":"#999"},"children":"Prompt Engineering"}]," ",["$","a","React-js",{"href":"/blog/tags/React-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"React.js"}]," ",["$","a","Statistic",{"href":"/blog/tags/Statistic/","style":{"fontSize":"1.10em","color":"#999"},"children":"Statistic"}]," ",["$","a","Subnetting",{"href":"/blog/tags/Subnetting/","style":{"fontSize":"1.10em","color":"#999"},"children":"Subnetting"}]," ",["$","a","Three-js",{"href":"/blog/tags/Three-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Three.js"}]," ",["$","a","Vue-js",{"href":"/blog/tags/Vue-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Vue.js"}]," ",["$","a","Website-design",{"href":"/blog/tags/Website-design/","style":{"fontSize":"1.14em","color":"#99a8bd"},"children":"Website design"}]]}]]}],["$","div",null,{"className":"card-widget card-archives","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-archive"}],["$","span",null,{"children":"Archives"}]]}],["$","ul",null,{"className":"card-archive-list","children":[["$","li","202605",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/blog/archives/2026/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2026"}],["$","span",null,{"className":"card-archive-list-count","children":1}]]}]}],["$","li","202205",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/blog/archives/2022/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2022"}],["$","span",null,{"className":"card-archive-list-count","children":10}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-webinfo","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-chart-line"}],["$","span",null,{"children":"Info"}]]}],["$","div",null,{"className":"webinfo","children":[["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Article :"}],["$","div",null,{"className":"item-count","children":11}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Run time :"}],["$","div",null,{"className":"item-count","id":"runtimeshow","data-publishDate":"2022-01-01T00:00:00.000Z"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Visits :"}],["$","div",null,{"className":"item-count","id":"busuanzi_value_site_pv"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Last Push :"}],["$","div",null,{"className":"item-count","id":"last-push-date","data-lastPushDate":"2026-05-18T09:47:55.497Z"}]]}]]}]]}]]]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$L7",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$L8",null,{"isHome":true,"isPost":false}],["$","$L9",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$La",null,{}]],null],null],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$b"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$c"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$Ld",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Le",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-18 09:47:55\"};"}}],["$","$L2",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":11}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":25}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":5}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$L7",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$L8",null,{"isHome":false,"isPost":false}],["$","$L9",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$La",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$Lf",null]]]]
-f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Vokint's StudyLog"}]]
+})(window);0:["TY7B07XYONhS6gj-EhZ8y",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":true,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-19 08:05:26\"};"}}],["$","$L2",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"full_page","id":"page-header","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"site-info","children":[["$","h1",null,{"id":"site-title","children":"Vokint's StudyLog"}],["$","div",null,{"id":"site-subtitle","children":["$","span",null,{"id":"subtitle"}]}],["$","div",null,{"id":"site_social_icons","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"id":"scroll-down","children":["$","i",null,{"className":"fas fa-angle-down scroll-down-effects"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"className":"recent-posts","id":"recent-posts","children":[[["$","div","piano_04_grade4_theory",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/19/piano_04_grade4_theory/\" title=\"Piano Notes — 04 · Grade 4 Theory &amp; Repertoire\"><img class=\"post_bg\" src=\"/blog/assets/background/overcloud-sunshine.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 04 · Grade 4 Theory &amp; Repertoire\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","children":"Piano Notes — 04 · Grade 4 Theory & Repertoire"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-19T06:00:00.000Z","title":"Created 2026-05-19 14:00:00","children":"2026-05-19"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Music",{"className":"article-meta__categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"content","children":"$3"}]]}]]}],["$","div","piano_03_grade3_theory",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/18/piano_03_grade3_theory/\" title=\"Piano Notes — 03 · Grade 3 Theory &amp; Repertoire\"><img class=\"post_bg\" src=\"/blog/assets/background/blue-cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 03 · Grade 3 Theory &amp; Repertoire\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","children":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-18T06:00:00.000Z","title":"Created 2026-05-18 14:00:00","children":"2026-05-18"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Music",{"className":"article-meta__categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"content","children":"$4"}]]}]]}],["$","div","piano_02_grade2_theory",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/17/piano_02_grade2_theory/\" title=\"Piano Notes — 02 · Grade 2 Theory &amp; Repertoire\"><img class=\"post_bg\" src=\"/blog/assets/background/flat-pier.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 02 · Grade 2 Theory &amp; Repertoire\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","children":"Piano Notes — 02 · Grade 2 Theory & Repertoire"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-17T06:00:00.000Z","title":"Created 2026-05-17 14:00:00","children":"2026-05-17"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Music",{"className":"article-meta__categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"content","children":"$5"}]]}]]}],["$","div","piano_01_grade1_theory",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/16/piano_01_grade1_theory/\" title=\"Piano Notes — 01 · Grade 1 Theory &amp; Repertoire\"><img class=\"post_bg\" src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 01 · Grade 1 Theory &amp; Repertoire\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","children":"Piano Notes — 01 · Grade 1 Theory & Repertoire"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-16T06:00:00.000Z","title":"Created 2026-05-16 14:00:00","children":"2026-05-16"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Music",{"className":"article-meta__categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"content","children":"$6"}]]}]]}],["$","div","piano_00_beginner_basics",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/15/piano_00_beginner_basics/\" title=\"Piano Notes — 00 · Beginner Basics &amp; Your First Songs\"><img class=\"post_bg\" src=\"/blog/assets/background/sunset-cloud.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 00 · Beginner Basics &amp; Your First Songs\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","children":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-15T06:00:00.000Z","title":"Created 2026-05-15 14:00:00","children":"2026-05-15"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Music",{"className":"article-meta__categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"content","children":"$7"}]]}]]}],["$","div","ai_prompting_foundations",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2026/05/15/ai_prompting_foundations/\" title=\"AI Prompting (Foundations &amp; Practice)\"><img class=\"post_bg\" src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"AI Prompting (Foundations &amp; Practice)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2026/05/15/ai_prompting_foundations/","title":"AI Prompting (Foundations & Practice)","children":"AI Prompting (Foundations & Practice)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2026-05-15T04:00:00.000Z","title":"Created 2026-05-15 12:00:00","children":"2026-05-15"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","AI",{"className":"article-meta__categories","href":"/blog/categories/AI/","children":"AI"}]]]]}]]}],["$","div",null,{"className":"content","children":"$8"}]]}]]}],["$","div","statistic_n_probability_model",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/statistic_n_probability_model/\" title=\"Statistic &amp; Probability Models (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/statistic_n_probability_model.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Statistic &amp; Probability Models (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","children":"Statistic & Probability Models (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:46:31.000Z","title":"Created 2022-05-26 03:46:31","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Mathematics",{"className":"article-meta__categories","href":"/blog/categories/Mathematics/","children":"Mathematics"}]]]]}]]}],["$","div",null,{"className":"content","children":"Foundation Statistic and Probability Models.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","web_development_advanced",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/web_development_advanced/\" title=\"Web Development (Advanced) (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Web Development (Advanced) (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) (In Progress)","children":"Web Development (Advanced) (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:04:53.000Z","title":"Created 2022-05-26 03:04:53","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Website development can be interesting when you discover more and more features and even deploy as mobile applications.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","java_development_p1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/java_development_p1/\" title=\"Java Development [Basic] Part 1 (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 1 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 (In Progress)","children":"Java Development [Basic] Part 1 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Java is an ordinary programming language, it is also the fundamental of other languages.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 - Introduction\n\nTo be added..\n\nTerminology\n\nGeneric class\n\nChapter 2 - Objects and Classes\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 3 - Inheritance & Polymorphism\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 4 - Abstract Class, OOD Principles\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 5 - Generic Class\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 6 - Exception handling\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 7 - Assertion\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 8 - File I/O\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 9 - Multithreading\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","java_development_p2",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/java_development_p2/\" title=\"Java Development [Basic] Part 2 (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 2 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 (In Progress)","children":"Java Development [Basic] Part 2 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"Java is an ordinary programming language, it is also the fundamental of other languages.\n\nLearning Outcome\n\nTo be added..\n\nChapter 10 - Graphical User Interface\n\nTo be added..\n\nTerminology\n\nGeneric class\n\nChapter 11 - Events\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 12 - Functional Programming\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 13 - Collections\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nChapter 14 - Stream API\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}]],["$","nav",null,{"id":"pagination","children":["$","div",null,{"className":"pagination","children":[["$","span","1",{"className":"page-number current","children":1}]," ",["$","a","2",{"className":"page-number","href":"/blog/page/2/","children":2}],["$","a","next",{"className":"extend next","rel":"next","href":"/blog/page/2/","children":["$","i",null,{"className":"fas fa-chevron-right"}]}]]}]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[false,["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","piano_04_grade4_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/overcloud-sunshine.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 04 · Grade 4 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","children":"Piano Notes — 04 · Grade 4 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-19T06:00:00.000Z","title":"Created 2026-05-19 14:00:00","children":"2026-05-19"}]]}]]}],["$","div","piano_03_grade3_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/blue-cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 03 · Grade 3 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","children":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-18T06:00:00.000Z","title":"Created 2026-05-18 14:00:00","children":"2026-05-18"}]]}]]}],["$","div","piano_02_grade2_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/flat-pier.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 02 · Grade 2 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","children":"Piano Notes — 02 · Grade 2 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-17T06:00:00.000Z","title":"Created 2026-05-17 14:00:00","children":"2026-05-17"}]]}]]}],["$","div","piano_01_grade1_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 01 · Grade 1 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","children":"Piano Notes — 01 · Grade 1 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-16T06:00:00.000Z","title":"Created 2026-05-16 14:00:00","children":"2026-05-16"}]]}]]}],["$","div","piano_00_beginner_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/sunset-cloud.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 00 · Beginner Basics &amp; Your First Songs\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","children":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","time",null,{"dateTime":"2026-05-15T06:00:00.000Z","title":"Created 2026-05-15 14:00:00","children":"2026-05-15"}]]}]]}]]}]]}],[["$","div",null,{"className":"card-widget card-categories","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-folder-open"}],["$","span",null,{"children":"Categories"}]]}],["$","ul",null,{"className":"card-category-list","id":"aside-cat-list","children":[["$","li","AI",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/AI/","children":[["$","span",null,{"className":"card-category-list-name","children":"AI"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Circuit-Design",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Circuit-Design/","children":[["$","span",null,{"className":"card-category-list-name","children":"Circuit Design"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Mathematics",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Mathematics/","children":[["$","span",null,{"className":"card-category-list-name","children":"Mathematics"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Music",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Music/","children":[["$","span",null,{"className":"card-category-list-name","children":"Music"}],["$","span",null,{"className":"card-category-list-count","children":5}]]}]}],["$","li","Networking",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Networking/","children":[["$","span",null,{"className":"card-category-list-name","children":"Networking"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Programming",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Programming/","children":[["$","span",null,{"className":"card-category-list-name","children":"Programming"}],["$","span",null,{"className":"card-category-list-count","children":7}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-tags","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-tags"}],["$","span",null,{"children":"Tags"}]]}],["$","div",null,{"className":"card-tag-cloud","children":[["$","a","樂理",{"href":"/blog/tags/樂理/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"樂理"}]," ",["$","a","ABRSM",{"href":"/blog/tags/ABRSM/","style":{"fontSize":"1.28em","color":"#99a5b7"},"children":"ABRSM"}]," ",["$","a","AI",{"href":"/blog/tags/AI/","style":{"fontSize":"1.10em","color":"#999"},"children":"AI"}]," ",["$","a","Beginner",{"href":"/blog/tags/Beginner/","style":{"fontSize":"1.10em","color":"#999"},"children":"Beginner"}]," ",["$","a","Bootstrap",{"href":"/blog/tags/Bootstrap/","style":{"fontSize":"1.10em","color":"#999"},"children":"Bootstrap"}]," ",["$","a","C",{"href":"/blog/tags/C/","style":{"fontSize":"1.10em","color":"#999"},"children":"C++"}]," ",["$","a","Computer-Science",{"href":"/blog/tags/Computer-Science/","style":{"fontSize":"1.50em","color":"#999fab"},"children":"Computer Science"}]," ",["$","a","CSS",{"href":"/blog/tags/CSS/","style":{"fontSize":"1.10em","color":"#999"},"children":"CSS"}]," ",["$","a","Data-Structure",{"href":"/blog/tags/Data-Structure/","style":{"fontSize":"1.10em","color":"#999"},"children":"Data Structure"}]," ",["$","a","Engineering",{"href":"/blog/tags/Engineering/","style":{"fontSize":"1.41em","color":"#99a2b0"},"children":"Engineering"}]," ",["$","a","Font-Awesome",{"href":"/blog/tags/Font-Awesome/","style":{"fontSize":"1.10em","color":"#999"},"children":"Font Awesome"}]," ",["$","a","Grade-1",{"href":"/blog/tags/Grade-1/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 1"}]," ",["$","a","Grade-2",{"href":"/blog/tags/Grade-2/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 2"}]," ",["$","a","Grade-3",{"href":"/blog/tags/Grade-3/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 3"}]," ",["$","a","Grade-4",{"href":"/blog/tags/Grade-4/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 4"}]," ",["$","a","HTML",{"href":"/blog/tags/HTML/","style":{"fontSize":"1.10em","color":"#999"},"children":"HTML"}]," ",["$","a","Ip-address",{"href":"/blog/tags/Ip-address/","style":{"fontSize":"1.10em","color":"#999"},"children":"Ip address"}]," ",["$","a","Java",{"href":"/blog/tags/Java/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"Java"}]," ",["$","a","jQuery",{"href":"/blog/tags/jQuery/","style":{"fontSize":"1.10em","color":"#999"},"children":"jQuery"}]," ",["$","a","Large-Language-Models",{"href":"/blog/tags/Large-Language-Models/","style":{"fontSize":"1.10em","color":"#999"},"children":"Large Language Models"}]," ",["$","a","Logic-Gates",{"href":"/blog/tags/Logic-Gates/","style":{"fontSize":"1.10em","color":"#999"},"children":"Logic Gates"}]," ",["$","a","Machine-Learning",{"href":"/blog/tags/Machine-Learning/","style":{"fontSize":"1.10em","color":"#999"},"children":"Machine Learning"}]," ",["$","a","Mathematics",{"href":"/blog/tags/Mathematics/","style":{"fontSize":"1.10em","color":"#999"},"children":"Mathematics"}]," ",["$","a","Music",{"href":"/blog/tags/Music/","style":{"fontSize":"1.28em","color":"#99a5b7"},"children":"Music"}]," ",["$","a","Music-Theory",{"href":"/blog/tags/Music-Theory/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"Music Theory"}]," ",["$","a","Node-js",{"href":"/blog/tags/Node-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Node.js"}]," ",["$","a","Piano",{"href":"/blog/tags/Piano/","style":{"fontSize":"1.28em","color":"#99a5b7"},"children":"Piano"}]," ",["$","a","Probability",{"href":"/blog/tags/Probability/","style":{"fontSize":"1.10em","color":"#999"},"children":"Probability"}]," ",["$","a","Prompt-Engineering",{"href":"/blog/tags/Prompt-Engineering/","style":{"fontSize":"1.10em","color":"#999"},"children":"Prompt Engineering"}]," ",["$","a","React-js",{"href":"/blog/tags/React-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"React.js"}]," ",["$","a","Statistic",{"href":"/blog/tags/Statistic/","style":{"fontSize":"1.10em","color":"#999"},"children":"Statistic"}]," ",["$","a","Subnetting",{"href":"/blog/tags/Subnetting/","style":{"fontSize":"1.10em","color":"#999"},"children":"Subnetting"}]," ",["$","a","Three-js",{"href":"/blog/tags/Three-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Three.js"}]," ",["$","a","Vue-js",{"href":"/blog/tags/Vue-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Vue.js"}]," ",["$","a","Website-design",{"href":"/blog/tags/Website-design/","style":{"fontSize":"1.14em","color":"#99a8bd"},"children":"Website design"}]]}]]}],["$","div",null,{"className":"card-widget card-archives","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-archive"}],["$","span",null,{"children":"Archives"}]]}],["$","ul",null,{"className":"card-archive-list","children":[["$","li","202605",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/blog/archives/2026/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2026"}],["$","span",null,{"className":"card-archive-list-count","children":6}]]}]}],["$","li","202205",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/blog/archives/2022/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2022"}],["$","span",null,{"className":"card-archive-list-count","children":10}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-webinfo","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-chart-line"}],["$","span",null,{"children":"Info"}]]}],["$","div",null,{"className":"webinfo","children":[["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Article :"}],["$","div",null,{"className":"item-count","children":16}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Run time :"}],["$","div",null,{"className":"item-count","id":"runtimeshow","data-publishDate":"2022-01-01T00:00:00.000Z"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Visits :"}],["$","div",null,{"className":"item-count","id":"busuanzi_value_site_pv"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Last Push :"}],["$","div",null,{"className":"item-count","id":"last-push-date","data-lastPushDate":"2026-05-19T08:05:26.198Z"}]]}]]}]]}]]]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$L9",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$La",null,{"isHome":true,"isPost":false}],["$","$Lb",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lc",null,{}]],null],null],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$d"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$e"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$Lf",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-19 08:05:26\"};"}}],["$","$L2",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$L9",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$La",null,{"isHome":false,"isPost":false}],["$","$Lb",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lc",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L11",null]]]]
+11:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Vokint's StudyLog"}]]
 1:null

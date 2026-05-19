@@ -1,0 +1,700 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+4:["year","2026","d"]
+5:["month","05","d"]
+6:["day","18","d"]
+7:["slug","piano_03_grade3_theory","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["TY7B07XYONhS6gj-EhZ8y",[[["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","18","d"],{"children":[["slug","piano_03_grade3_theory","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"05\",\"day\":\"18\",\"slug\":\"piano_03_grade3_theory\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","18","d"],{"children":[["slug","piano_03_grade3_theory","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-19 08:05:26\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Tadb7,<p>Grade 3 is where the syllabus starts feeling like <em>real music theory</em>: triplets, minor scales in three flavours, three more keys, primary triads (I, IV, V), and your first written chord symbols. The repertoire jumps too — Bach two-part inventions, Burgmüller's middle studies, Schumann children's pieces, simple Tchaikovsky.</p>
+<blockquote>
+<p>Series map: 00 → 01 → 02 → <strong>03 Grade 3</strong> (this post) → 04 Grade 4.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Use simple time (2/4, 3/4, 4/4) and compound time (6/8, <strong>9/8, 12/8</strong>).</li>
+<li>Read <strong>triplets</strong> in simple time.</li>
+<li>Build <strong>natural and harmonic minor</strong> scales for relative minors of all keys covered.</li>
+<li>Use major keys <strong>C, G, D, A, F, B♭, E♭</strong> and their relative minors (A m, E m, B m, F♯ m, D m, G m, C m).</li>
+<li>Identify intervals by quality including <strong>augmented and diminished</strong> (only A4 / d5 — the tritone — at Grade 3).</li>
+<li>Identify and write <strong>primary triads (I, IV, V)</strong> in root position in all the above keys.</li>
+<li>Recognise standard Italian terms for tempo, dynamics, and articulation.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Three-More-Keys-A-E♭-and-Their-Minors"><a href="#Chapter-1-—-Three-More-Keys-A-E♭-and-Their-Minors" class="headerlink" title="Chapter 1 — Three More Keys: A, E♭, and Their Minors"></a>Chapter 1 — Three More Keys: A, E♭, and Their Minors</h1>
+<table>
+<thead>
+<tr>
+<th>Major</th>
+<th>Sharps/Flats</th>
+<th>Relative minor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>none</td>
+<td>A m</td>
+</tr>
+<tr>
+<td>G</td>
+<td>F♯</td>
+<td>E m</td>
+</tr>
+<tr>
+<td>D</td>
+<td>F♯ C♯</td>
+<td>B m</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>F♯ C♯ G♯</td>
+<td>F♯ m</td>
+</tr>
+<tr>
+<td>F</td>
+<td>B♭</td>
+<td>D m</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>B♭ E♭</td>
+<td>G m</td>
+</tr>
+<tr>
+<td><strong>E♭</strong></td>
+<td>B♭ E♭ A♭</td>
+<td>C m</td>
+</tr>
+</tbody>
+</table>
+<p>A major (3 sharps) and E♭ major (3 flats) extend the symmetric pair around C.</p>
+<blockquote>
+<p><em>Trick:</em> visualise the <strong>circle of fifths</strong> as a clock. <strong>C is at 12</strong>. Each step clockwise adds a sharp (G, D, A, E, B…). Each step counter-clockwise adds a flat (F, B♭, E♭, A♭, D♭…). Grade 3 covers ±3 steps from C: clockwise to A, counter-clockwise to E♭.</p>
+</blockquote>
+<h2 id="Reading-a-fast-key-signature"><a href="#Reading-a-fast-key-signature" class="headerlink" title="Reading a fast key signature"></a>Reading a fast key signature</h2>
+<p>When you see <em><strong>three</strong> sharps</em> in the order <strong>F♯ C♯ G♯</strong>, the last is G♯ → up one semitone → <strong>A major</strong> (or its relative <strong>F♯ minor</strong>).</p>
+<p>When you see <em><strong>three</strong> flats</em> in the order <strong>B♭ E♭ A♭</strong>, the second-to-last is E♭ → <strong>E♭ major</strong> (or its relative <strong>C minor</strong>).</p>
+<hr>
+<h1 id="Chapter-2-—-Minor-Scales-Three-Flavours"><a href="#Chapter-2-—-Minor-Scales-Three-Flavours" class="headerlink" title="Chapter 2 — Minor Scales: Three Flavours"></a>Chapter 2 — Minor Scales: Three Flavours</h1>
+<p>A minor key has <em>one</em> key signature (the natural minor) but musicians use <em>three</em> common scale shapes built from that signature.</p>
+<h2 id="Natural-minor-自然小調"><a href="#Natural-minor-自然小調" class="headerlink" title="Natural minor (自然小調)"></a>Natural minor (自然小調)</h2>
+<p>Use the relative-minor key signature, start from the minor tonic. Pattern in semitones:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>W H W W H W W</mtext><mspace width="1em"/><mo>=</mo><mspace width="1em"/><mn>2</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\textnormal{W H W W H W W} \quad = \quad 2,1,2,2,1,2,2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord textrm">W H W W H W W</span></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span></span></span></span></span></p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-variable">A</span> <span class="hljs-variable">natural</span> <span class="hljs-variable">minor</span><span class="hljs-operator">:</span>   <span class="hljs-variable">A</span> <span class="hljs-variable">B</span> <span class="hljs-built_in">C</span> <span class="hljs-built_in">D</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">F</span> <span class="hljs-variable">G</span> <span class="hljs-variable">A</span></span><br><span class="line"><span class="hljs-built_in">E</span> <span class="hljs-variable">natural</span> <span class="hljs-variable">minor</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">E</span> <span class="hljs-variable">F</span>♯ <span class="hljs-variable">G</span> <span class="hljs-variable">A</span> <span class="hljs-variable">B</span> <span class="hljs-built_in">C</span> <span class="hljs-built_in">D</span> <span class="hljs-built_in">E</span></span><br><span class="line"><span class="hljs-built_in">D</span> <span class="hljs-variable">natural</span> <span class="hljs-variable">minor</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">D</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">F</span> <span class="hljs-variable">G</span> <span class="hljs-variable">A</span> <span class="hljs-variable">B</span>♭ <span class="hljs-built_in">C</span> <span class="hljs-built_in">D</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Harmonic-minor-和聲小調"><a href="#Harmonic-minor-和聲小調" class="headerlink" title="Harmonic minor (和聲小調)"></a>Harmonic minor (和聲小調)</h2>
+<p><strong>Raise the 7th degree</strong> of the natural minor. The interval between 6 and 7 becomes an <strong>augmented 2nd</strong> (3 semitones) — gives the unmistakable &quot;exotic&quot; sound.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-variable">A</span> <span class="hljs-variable">harmonic</span> <span class="hljs-variable">minor</span><span class="hljs-operator">:</span>   <span class="hljs-variable">A</span> <span class="hljs-variable">B</span> <span class="hljs-built_in">C</span> <span class="hljs-built_in">D</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">F</span> <span class="hljs-variable">G</span>♯ <span class="hljs-variable">A</span>    <span class="hljs-punctuation">(</span><span class="hljs-variable">G</span> → <span class="hljs-variable">G</span>♯<span class="hljs-punctuation">)</span></span><br><span class="line"><span class="hljs-built_in">E</span> <span class="hljs-variable">harmonic</span> <span class="hljs-variable">minor</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">E</span> <span class="hljs-variable">F</span>♯ <span class="hljs-variable">G</span> <span class="hljs-variable">A</span> <span class="hljs-variable">B</span> <span class="hljs-built_in">C</span> <span class="hljs-built_in">D</span>♯ <span class="hljs-built_in">E</span>    <span class="hljs-punctuation">(</span><span class="hljs-built_in">D</span> → <span class="hljs-built_in">D</span>♯<span class="hljs-punctuation">)</span></span><br><span class="line"><span class="hljs-built_in">D</span> <span class="hljs-variable">harmonic</span> <span class="hljs-variable">minor</span><span class="hljs-operator">:</span>   <span class="hljs-built_in">D</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">F</span> <span class="hljs-variable">G</span> <span class="hljs-variable">A</span> <span class="hljs-variable">B</span>♭ <span class="hljs-built_in">C</span>♯ <span class="hljs-built_in">D</span>    <span class="hljs-punctuation">(</span><span class="hljs-built_in">C</span> → <span class="hljs-built_in">C</span>♯<span class="hljs-punctuation">)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Melodic-minor-旋律小調"><a href="#Melodic-minor-旋律小調" class="headerlink" title="Melodic minor (旋律小調)"></a>Melodic minor (旋律小調)</h2>
+<p><strong>Ascending:</strong> raise the 6th <em>and</em> 7th. <strong>Descending:</strong> revert to natural minor.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">melodic</span> <span class="hljs-selector-tag">minor</span> (up):    <span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">B</span> <span class="hljs-selector-tag">C</span> <span class="hljs-selector-tag">D</span> <span class="hljs-selector-tag">E</span> <span class="hljs-selector-tag">F</span>♯ <span class="hljs-selector-tag">G</span>♯ <span class="hljs-selector-tag">A</span></span><br><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">melodic</span> <span class="hljs-selector-tag">minor</span> (down):  <span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">G</span> <span class="hljs-selector-tag">F</span> <span class="hljs-selector-tag">E</span> <span class="hljs-selector-tag">D</span> <span class="hljs-selector-tag">C</span> <span class="hljs-selector-tag">B</span> <span class="hljs-selector-tag">A</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><em>Where I got stuck:</em> I kept mixing harmonic and melodic.</p>
+<ul>
+<li><strong>Harmonic minor</strong> exists to fix <em>harmony</em> — it gives the V chord its major-3rd leading tone (G♯ in A minor) so the V → i cadence sounds strong. Raise the 7 only.</li>
+<li><strong>Melodic minor</strong> exists to smooth <em>melody</em> — the harmonic minor's augmented 2nd (F → G♯) is awkward to sing, so going up you also raise the 6 (F → F♯) to &quot;smooth&quot; the gap. Coming down you don't need the lift, so revert.</li>
+</ul>
+<p>Framing them by <em>purpose</em> (harmony-fixing vs melody-smoothing) made them stop blurring.</p>
+</blockquote>
+<h2 id="All-three-on-one-diagram"><a href="#All-three-on-one-diagram" class="headerlink" title="All three on one diagram"></a>All three on one diagram</h2>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">natural</span> :   <span class="hljs-selector-tag">A</span>    <span class="hljs-selector-tag">B</span>    <span class="hljs-selector-tag">C</span>    <span class="hljs-selector-tag">D</span>    <span class="hljs-selector-tag">E</span>    <span class="hljs-selector-tag">F</span>    <span class="hljs-selector-tag">G</span>    <span class="hljs-selector-tag">A</span></span><br><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">harmonic</span>:   <span class="hljs-selector-tag">A</span>    <span class="hljs-selector-tag">B</span>    <span class="hljs-selector-tag">C</span>    <span class="hljs-selector-tag">D</span>    <span class="hljs-selector-tag">E</span>    <span class="hljs-selector-tag">F</span>   <span class="hljs-selector-tag">G</span>♯    <span class="hljs-selector-tag">A</span>    (only <span class="hljs-number">7</span>th raised)</span><br><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">melodic</span> ↑:  <span class="hljs-selector-tag">A</span>    <span class="hljs-selector-tag">B</span>    <span class="hljs-selector-tag">C</span>    <span class="hljs-selector-tag">D</span>    <span class="hljs-selector-tag">E</span>   <span class="hljs-selector-tag">F</span>♯  <span class="hljs-selector-tag">G</span>♯    <span class="hljs-selector-tag">A</span>    (<span class="hljs-number">6</span>th <span class="hljs-keyword">and</span> <span class="hljs-number">7</span>th raised)</span><br><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">melodic</span> ↓:  <span class="hljs-selector-tag">A</span>    <span class="hljs-selector-tag">G</span>    <span class="hljs-selector-tag">F</span>    <span class="hljs-selector-tag">E</span>    <span class="hljs-selector-tag">D</span>    <span class="hljs-selector-tag">C</span>    <span class="hljs-selector-tag">B</span>    <span class="hljs-selector-tag">A</span>    (= natural)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-3-—-Triplets"><a href="#Chapter-3-—-Triplets" class="headerlink" title="Chapter 3 — Triplets"></a>Chapter 3 — Triplets</h1>
+<p>A <strong>triplet</strong> is <strong>three notes played in the time of two</strong> of the same value. Notated with a &quot;3&quot; above or below a group:</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line">♪ ♪ ♪   ←<span class="hljs-number"> 3 </span>quavers in the time of<span class="hljs-number"> 2 </span>quavers =<span class="hljs-number"> 1 </span>crotchet beat</span><br><span class="line">3</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>In 4/4, a beat that would normally hold two quavers (♪♪) is squeezed to fit three (♪♪♪). The three notes are <em>equal</em>, faster than quavers, slower than triplet semiquavers.</p>
+<h2 id="Counting-triplets"><a href="#Counting-triplets" class="headerlink" title="Counting triplets"></a>Counting triplets</h2>
+<p>Subdivide each affected beat into three syllables: &quot;<strong>tri-pa-let</strong>&quot; or &quot;<strong>1-trip-let, 2-trip-let</strong>&quot;. Pick one and stick with it.</p>
+<blockquote>
+<p><em>Trick:</em> when first practising triplets, <strong>tap the beat with your foot</strong> while saying &quot;1-trip-let, 2-trip-let, 3-trip-let, 4-trip-let&quot; out loud. Foot is the beat (4 taps per bar), voice is the subdivision (12 syllables per bar). Once you can do this without the piano, the piano part is mechanical.</p>
+</blockquote>
+<h2 id="Duplet-—-the-inverse"><a href="#Duplet-—-the-inverse" class="headerlink" title="Duplet — the inverse"></a>Duplet — the inverse</h2>
+<p>In compound time (where each beat naturally divides into 3), a <strong>duplet</strong> is two notes played in the time of three. Marked &quot;2&quot;. Less common at Grade 3 but worth knowing.</p>
+<hr>
+<h1 id="Chapter-4-—-98-and-128-More-Compound-Time"><a href="#Chapter-4-—-98-and-128-More-Compound-Time" class="headerlink" title="Chapter 4 — 9/8 and 12/8 (More Compound Time)"></a>Chapter 4 — 9/8 and 12/8 (More Compound Time)</h1>
+<table>
+<thead>
+<tr>
+<th>Metre</th>
+<th>Beats per bar</th>
+<th>Beat unit</th>
+<th>Feel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6/8</td>
+<td>2</td>
+<td>dotted crotchet</td>
+<td>Gallop</td>
+</tr>
+<tr>
+<td><strong>9/8</strong></td>
+<td>3</td>
+<td>dotted crotchet</td>
+<td>Slow waltz, lilting</td>
+</tr>
+<tr>
+<td><strong>12/8</strong></td>
+<td>4</td>
+<td>dotted crotchet</td>
+<td>Blues shuffle, slow ballad</td>
+</tr>
+</tbody>
+</table>
+<p>In <strong>9/8</strong>, count three macro-beats per bar, each dotted-crotchet long, each subdividing into 3 quavers. &quot;<strong>1-and-a, 2-and-a, 3-and-a.</strong>&quot;</p>
+<p>In <strong>12/8</strong>, count four macro-beats: &quot;<strong>1-and-a, 2-and-a, 3-and-a, 4-and-a.</strong>&quot;</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line">9/8:   <span class="hljs-number"> 1 </span>2<span class="hljs-number"> 3 </span>|<span class="hljs-number"> 4 </span>5<span class="hljs-number"> 6 </span>|<span class="hljs-number"> 7 </span>8<span class="hljs-number"> 9 </span>|</span><br><span class="line">        ▲       ▲       ▲</span><br><span class="line">        macro   macro   macro</span><br><span class="line"> </span><br><span class="line">12/8:  <span class="hljs-number"> 1 </span>2<span class="hljs-number"> 3 </span>|<span class="hljs-number"> 4 </span>5<span class="hljs-number"> 6 </span>|<span class="hljs-number"> 7 </span>8<span class="hljs-number"> 9 </span>|<span class="hljs-number"> 10 </span>11<span class="hljs-number"> 12 </span>|</span><br><span class="line">        ▲       ▲       ▲       ▲</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><em>Analogy:</em> if 6/8 is a <strong>gallop</strong>, 9/8 is a <strong>canter in three</strong> (less symmetric), and 12/8 is a <strong>rolling blues shuffle</strong> — most &quot;12-bar blues&quot; songs are written in 12/8 even when the notation says 4/4 swung.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Augmented-and-Diminished-Intervals-just-the-tritone"><a href="#Chapter-5-—-Augmented-and-Diminished-Intervals-just-the-tritone" class="headerlink" title="Chapter 5 — Augmented and Diminished Intervals (just the tritone)"></a>Chapter 5 — Augmented and Diminished Intervals (just the tritone)</h1>
+<p>Grade 3 expands the interval qualities to include <strong>augmented</strong> and <strong>diminished</strong> — but only for the <strong>augmented 4th</strong> (A4) and <strong>diminished 5th</strong> (d5), which are the same six-semitone gap (the <strong>tritone, 三全音</strong>).</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-attribute">C</span> to F♯:    semitones = <span class="hljs-number">6</span> = augmented <span class="hljs-number">4</span>th</span><br><span class="line"><span class="hljs-attribute">C</span> to G♭:    semitones = <span class="hljs-number">6</span> = diminished <span class="hljs-number">5</span>th</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>These two are <strong>enharmonic</strong>: same sound, different spelling. Whether you call it A4 or d5 depends on note names — count the staff positions:</p>
+<ul>
+<li>C → F♯: positions = 4 (C–D–E–F) → 4th → &quot;augmented&quot; (one semitone larger than P4).</li>
+<li>C → G♭: positions = 5 (C–D–E–F–G) → 5th → &quot;diminished&quot; (one semitone smaller than P5).</li>
+</ul>
+<blockquote>
+<p><em>Trick:</em> a tritone divides the octave <strong>exactly in half</strong> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mi mathvariant="normal">/</mi><mn>2</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">12 / 2 = 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">12/2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">6</span></span></span></span> semitones). It's the most dissonant interval in tonal music — historically called <em>diabolus in musica</em> (&quot;the devil in music&quot;) because medieval theorists found it so unstable they avoided writing it. Today it's the engine of jazz and blues. <em>Knowing the history hooks the memory.</em></p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-Primary-Triads-I-IV-V"><a href="#Chapter-6-—-Primary-Triads-I-IV-V" class="headerlink" title="Chapter 6 — Primary Triads (I, IV, V)"></a>Chapter 6 — Primary Triads (I, IV, V)</h1>
+<p>A <strong>triad (三和弦)</strong> = three notes stacked in thirds. Root, third, fifth.</p>
+<p>The <strong>primary triads</strong> of any key are built on degrees <strong>1, 4, 5</strong> — the tonic, subdominant, dominant. They handle the bulk of harmonic motion in tonal music.</p>
+<h2 id="In-a-major-key"><a href="#In-a-major-key" class="headerlink" title="In a major key"></a>In a major key</h2>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-built_in">C</span> <span class="hljs-variable">major</span><span class="hljs-operator">:</span></span><br><span class="line">  <span class="hljs-built_in">I</span>  <span class="hljs-punctuation">(</span><span class="hljs-variable">tonic</span><span class="hljs-punctuation">)</span>         <span class="hljs-built_in">C</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">G</span>       <span class="hljs-variable">major</span></span><br><span class="line">  <span class="hljs-variable">IV</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">subdominant</span><span class="hljs-punctuation">)</span>   <span class="hljs-variable">F</span> <span class="hljs-variable">A</span> <span class="hljs-built_in">C</span>       <span class="hljs-variable">major</span></span><br><span class="line">  <span class="hljs-variable">V</span>  <span class="hljs-punctuation">(</span><span class="hljs-variable">dominant</span><span class="hljs-punctuation">)</span>      <span class="hljs-variable">G</span> <span class="hljs-variable">B</span> <span class="hljs-built_in">D</span>       <span class="hljs-variable">major</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-variable">G</span> <span class="hljs-variable">major</span><span class="hljs-operator">:</span></span><br><span class="line">  <span class="hljs-built_in">I</span>  <span class="hljs-variable">G</span> <span class="hljs-variable">B</span> <span class="hljs-built_in">D</span></span><br><span class="line">  <span class="hljs-variable">IV</span> <span class="hljs-built_in">C</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">G</span></span><br><span class="line">  <span class="hljs-variable">V</span>  <span class="hljs-built_in">D</span> <span class="hljs-variable">F</span>♯ <span class="hljs-variable">A</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-variable">F</span> <span class="hljs-variable">major</span><span class="hljs-operator">:</span></span><br><span class="line">  <span class="hljs-built_in">I</span>  <span class="hljs-variable">F</span> <span class="hljs-variable">A</span> <span class="hljs-built_in">C</span></span><br><span class="line">  <span class="hljs-variable">IV</span> <span class="hljs-variable">B</span>♭ <span class="hljs-built_in">D</span> <span class="hljs-variable">F</span></span><br><span class="line">  <span class="hljs-variable">V</span>  <span class="hljs-built_in">C</span> <span class="hljs-built_in">E</span> <span class="hljs-variable">G</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><em>Trick:</em> in a major key, the primary triads (I, IV, V) are <strong>all major chords</strong>. Roman numerals are uppercase to show this. The supportive triads (ii, iii, vi) are minor — lowercase. The vii° is diminished — lowercase + degree mark.</p>
+</blockquote>
+<h2 id="In-a-minor-key-harmonic"><a href="#In-a-minor-key-harmonic" class="headerlink" title="In a minor key (harmonic)"></a>In a minor key (harmonic)</h2>
+<p>Because harmonic minor raises the 7th, the V chord becomes major (it has the raised leading tone) — even though the key is minor.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">minor</span> (harmonic):</span><br><span class="line">  <span class="hljs-selector-tag">i</span>  (tonic)         <span class="hljs-selector-tag">A</span> <span class="hljs-selector-tag">C</span> <span class="hljs-selector-tag">E</span>       <span class="hljs-selector-tag">minor</span></span><br><span class="line">  <span class="hljs-selector-tag">iv</span> (subdominant)   <span class="hljs-selector-tag">D</span> <span class="hljs-selector-tag">F</span> <span class="hljs-selector-tag">A</span>       <span class="hljs-selector-tag">minor</span></span><br><span class="line">  <span class="hljs-selector-tag">V</span>  (dominant)      <span class="hljs-selector-tag">E</span> <span class="hljs-selector-tag">G</span>♯ <span class="hljs-selector-tag">B</span>      <span class="hljs-selector-tag">major</span>   ← <span class="hljs-selector-tag">G</span>♯ <span class="hljs-selector-tag">comes</span> <span class="hljs-selector-tag">from</span> <span class="hljs-selector-tag">the</span> <span class="hljs-selector-tag">harmonic</span> <span class="hljs-selector-tag">minor</span> <span class="hljs-selector-tag">raised</span> <span class="hljs-number">7</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><em>Where I got stuck:</em> V in minor is <strong>major</strong>. This seems like a contradiction — until you realise it's <em>deliberate</em>: the major V supplies the leading tone that pulls back to the tonic. Without that, the V → i cadence would sound weak. Once you internalise this purpose, the rule is obvious.</p>
+</blockquote>
+<h2 id="Writing-triads-—-Grade-3-expectations"><a href="#Writing-triads-—-Grade-3-expectations" class="headerlink" title="Writing triads — Grade 3 expectations"></a>Writing triads — Grade 3 expectations</h2>
+<p>Root position only. Bass note = root. Stack a 3rd and 5th above. No inversions yet (Grade 4-5 territory).</p>
+<p>In 4-part writing (Grade 5+) you also need to know how to double notes, but Grade 3 only asks for the three-note triad spelled out.</p>
+<hr>
+<h1 id="Chapter-7-—-Roman-Numeral-Analysis-gentle-introduction"><a href="#Chapter-7-—-Roman-Numeral-Analysis-gentle-introduction" class="headerlink" title="Chapter 7 — Roman Numeral Analysis (gentle introduction)"></a>Chapter 7 — Roman Numeral Analysis (gentle introduction)</h1>
+<p>Grade 3 starts using Roman numerals to label chords. They tell you the <em>function</em> without specifying the key — a Roman-numeral analysis transposes for free.</p>
+<table>
+<thead>
+<tr>
+<th>Numeral</th>
+<th>Function</th>
+<th>Quality in major</th>
+<th>Quality in minor (natural)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>Tonic</td>
+<td>Major</td>
+<td>minor</td>
+</tr>
+<tr>
+<td>ii</td>
+<td>Supertonic</td>
+<td>minor</td>
+<td>diminished</td>
+</tr>
+<tr>
+<td>iii</td>
+<td>Mediant</td>
+<td>minor</td>
+<td>Major</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>Subdominant</td>
+<td>Major</td>
+<td>minor</td>
+</tr>
+<tr>
+<td>V</td>
+<td>Dominant</td>
+<td>Major</td>
+<td>minor (or Major if harmonic)</td>
+</tr>
+<tr>
+<td>vi</td>
+<td>Submediant</td>
+<td>minor</td>
+<td>Major</td>
+</tr>
+<tr>
+<td>vii°</td>
+<td>Leading tone</td>
+<td>diminished</td>
+<td>Major (subtonic, ♭VII)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>Trick:</em> in major, the qualities pattern is <strong>M m m M M m d°</strong> (&quot;Major, minor, minor, Major, Major, minor, diminished&quot;). Memorise this once; apply to any major scale. The pattern <em>never changes</em> — only the starting key.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-8-—-Italian-Terms-Grade-3-set"><a href="#Chapter-8-—-Italian-Terms-Grade-3-set" class="headerlink" title="Chapter 8 — Italian Terms (Grade 3 set)"></a>Chapter 8 — Italian Terms (Grade 3 set)</h1>
+<p>Same as Grade 2, plus:</p>
+<h2 id="Tempo"><a href="#Tempo" class="headerlink" title="Tempo"></a>Tempo</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grave</strong></td>
+<td>Very slow, solemn</td>
+</tr>
+<tr>
+<td><strong>Lento</strong></td>
+<td>Slow</td>
+</tr>
+<tr>
+<td><strong>Allegretto</strong></td>
+<td>Slightly slower than allegro</td>
+</tr>
+<tr>
+<td><strong>Andantino</strong></td>
+<td>Slightly faster than andante (or sometimes slightly slower — context!)</td>
+</tr>
+<tr>
+<td><strong>Più mosso</strong></td>
+<td>More motion (faster)</td>
+</tr>
+<tr>
+<td><strong>Meno mosso</strong></td>
+<td>Less motion (slower)</td>
+</tr>
+<tr>
+<td><strong>L'istesso tempo</strong></td>
+<td>The same speed (when metre changes)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Dynamics-expression"><a href="#Dynamics-expression" class="headerlink" title="Dynamics + expression"></a>Dynamics + expression</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crescendo / diminuendo</strong></td>
+<td>Already known; reinforced</td>
+</tr>
+<tr>
+<td><strong>Sotto voce</strong></td>
+<td>In a whispered voice</td>
+</tr>
+<tr>
+<td><strong>Con brio</strong></td>
+<td>With brilliance, fire</td>
+</tr>
+<tr>
+<td><strong>Con moto</strong></td>
+<td>With motion</td>
+</tr>
+<tr>
+<td><strong>Grazioso</strong></td>
+<td>Gracefully</td>
+</tr>
+<tr>
+<td><strong>Maestoso</strong></td>
+<td>Majestically</td>
+</tr>
+<tr>
+<td><strong>Tranquillo</strong></td>
+<td>Calmly</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>Trick:</em> group terms by <strong>mood</strong> rather than alphabet. &quot;Calm cluster&quot;: tranquillo, dolce, sotto voce, cantabile. &quot;Fast/bright cluster&quot;: vivace, brillante, con brio, con moto, agitato. When you can't remember the literal translation, your gut feel for the cluster usually gets you the right answer in an exam.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-9-—-Suggested-Practice-Pieces"><a href="#Chapter-9-—-Suggested-Practice-Pieces" class="headerlink" title="Chapter 9 — Suggested Practice Pieces"></a>Chapter 9 — Suggested Practice Pieces</h1>
+<h2 id="Grade-3-mainstream"><a href="#Grade-3-mainstream" class="headerlink" title="Grade 3 mainstream"></a>Grade 3 mainstream</h2>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Composer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Minuet in G</em> (BWV Anh. 116)</td>
+<td>Bach (attr. C. Petzold)</td>
+<td>A more chromatic cousin of the famous Anh. 114. Real two-voice writing</td>
+</tr>
+<tr>
+<td><em>Sonatina in C, Op. 36 No. 1</em> (II, III)</td>
+<td>Clementi</td>
+<td>Movements II (Andante) and III (Vivace) — slower and faster sides of sonatina form</td>
+</tr>
+<tr>
+<td><em>Burgmüller, Op. 100 No. 14 ('La Styrienne')</em></td>
+<td>Burgmüller</td>
+<td>Compound 3/8 feel, lyrical RH over walking LH</td>
+</tr>
+<tr>
+<td><em>Album for the Young, Op. 68 No. 8 ('Wild Rider')</em></td>
+<td>Schumann</td>
+<td>The student favourite — feels showy without being beyond reach. Hands together at a fair clip</td>
+</tr>
+<tr>
+<td><em>Children's Album, Op. 39 No. 1 ('Morning Prayer')</em></td>
+<td>Tchaikovsky</td>
+<td>Slow, hymn-like; teaches voice-leading and chord control</td>
+</tr>
+<tr>
+<td><em>Sicilienne, Op. 78 (arr.)</em></td>
+<td>Fauré</td>
+<td>Lyrical, 6/8 compound, romantic harmony</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Stretching-toward-Grade-4"><a href="#Stretching-toward-Grade-4" class="headerlink" title="Stretching toward Grade 4"></a>Stretching toward Grade 4</h2>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Composer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Two-Part Invention No. 1 in C, BWV 772</em></td>
+<td>Bach</td>
+<td>Independence of hands — the canonical first step into Bach</td>
+</tr>
+<tr>
+<td><em>Heller, Op. 45 No. 1</em></td>
+<td>Heller</td>
+<td>Studies designed for exactly this transition</td>
+</tr>
+<tr>
+<td><em>Sonatina in F, Op. 168 No. 1</em> (I)</td>
+<td>Diabelli</td>
+<td>Larger-scale form, more notes than Op. 36</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Choosing-repertoire-intelligently"><a href="#Choosing-repertoire-intelligently" class="headerlink" title="Choosing repertoire intelligently"></a>Choosing repertoire intelligently</h2>
+<p>By Grade 3 you should be playing <strong>three pieces simultaneously</strong> at different stages:</p>
+<ol>
+<li><strong>Mastery piece</strong> — old favourite, polished, played at performance tempo. Maintains confidence.</li>
+<li><strong>Working piece</strong> — current focus, hands-together at slow tempo, gets the most minutes.</li>
+<li><strong>Sight-read piece</strong> — new, untouched, played once per week as a &quot;see how far I get&quot;.</li>
+</ol>
+<p>The mix prevents staleness on any one and reinforces transferable skills.</p>
+<blockquote>
+<p><em>Trick:</em> keep a small notebook of &quot;<strong>pieces I never want to forget</strong>&quot; — the mastery list. Every two weeks, revisit one of them for ten minutes. Without this, the pieces you spent six weeks learning will quietly evaporate from memory.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-10-—-Practice-Patterns-Voice-Independence"><a href="#Chapter-10-—-Practice-Patterns-Voice-Independence" class="headerlink" title="Chapter 10 — Practice Patterns: Voice Independence"></a>Chapter 10 — Practice Patterns: Voice Independence</h1>
+<p>Grade 3 introduces real two-voice writing (Bach inventions). The hands aren't just playing chords against melody — both hands have <strong>independent musical lines</strong>.</p>
+<h2 id="How-to-practise-two-voices"><a href="#How-to-practise-two-voices" class="headerlink" title="How to practise two voices"></a>How to practise two voices</h2>
+<ol>
+<li><strong>Sing one line while playing the other.</strong> Sing the RH; play only the LH. Then swap. This forces your brain to &quot;hear&quot; each part separately.</li>
+<li><strong>Practise the LH at twice the volume</strong>, RH softly. Then reverse. Trains dynamic independence.</li>
+<li><strong>Slow loops on the join points.</strong> Two-voice writing has constant &quot;overlapping&quot; moments where one hand crosses or sustains while the other moves. Mark those bars and isolate them.</li>
+</ol>
+<blockquote>
+<p><em>Where I got stuck:</em> in Bach's first invention I could play either hand alone — but together my brain treated it as one stream and the LH always reverted to chord accompaniment. Fix: I spent a week singing the LH while playing the RH. The shift in mental model is exactly what's required — <em>both</em> lines are melodies, not &quot;melody + accompaniment&quot;. Once the brain reframes it, the fingers follow.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-11-—-Aural-at-Grade-3"><a href="#Chapter-11-—-Aural-at-Grade-3" class="headerlink" title="Chapter 11 — Aural at Grade 3"></a>Chapter 11 — Aural at Grade 3</h1>
+<p>ABRSM Grade 3 aural adds:</p>
+<ul>
+<li>Identify whether a piece is in <strong>major or minor key</strong>.</li>
+<li>Identify whether a cadence is <strong>perfect</strong> (V → I) or <strong>imperfect</strong> (?? → V).</li>
+<li>Sing back a slightly longer phrase (5–6 notes).</li>
+<li>Identify two <strong>features</strong> of a played excerpt: dynamics, articulation, tempo change, tonality.</li>
+</ul>
+<h2 id="Practising-major-vs-minor-by-ear"><a href="#Practising-major-vs-minor-by-ear" class="headerlink" title="Practising major-vs-minor by ear"></a>Practising major-vs-minor by ear</h2>
+<ul>
+<li>Listen to one octave of a major scale (just C D E F G A B C). Hum it.</li>
+<li>Now one octave of A minor (A B C D E F G A). Hum it.</li>
+<li>The third note is the give-away. Major sounds &quot;open / bright&quot;. Minor sounds &quot;narrow / sad&quot;.</li>
+</ul>
+<blockquote>
+<p><em>Trick:</em> the first three notes — <strong>do-re-mi</strong> vs <strong>la-ti-do</strong> — are the cleanest test. If the third note is a <strong>major third</strong> above the first, the key is major. If it's a <strong>minor third</strong> (one semitone less), the key is minor. Sing the test phrase silently in your head while listening; it'll often beat conscious analysis.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-12-—-Common-Grade-3-Pitfalls"><a href="#Chapter-12-—-Common-Grade-3-Pitfalls" class="headerlink" title="Chapter 12 — Common Grade 3 Pitfalls"></a>Chapter 12 — Common Grade 3 Pitfalls</h1>
+<table>
+<thead>
+<tr>
+<th>Pitfall</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memorising scales without the pattern</td>
+<td>Always re-derive from W-H pattern. Memory + derivation = robust</td>
+</tr>
+<tr>
+<td>Stumbling on triplets</td>
+<td>Foot taps the macro-beat. Voice taps the subdivision</td>
+</tr>
+<tr>
+<td>Forgetting V is major even in minor</td>
+<td>Mark the raised leading tone with a coloured pencil for a month</td>
+</tr>
+<tr>
+<td>Treating Bach two-voice as melody + accompaniment</td>
+<td>Sing one voice while playing the other</td>
+</tr>
+<tr>
+<td>Ignoring expression markings</td>
+<td>Highlight all Italian terms before you play. Translate each. Then play</td>
+</tr>
+<tr>
+<td>Practising scales mechanically</td>
+<td>Vary touch: legato, staccato, accented top note, alternating dynamics. Boring scales become useful scales</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Useful-Shortcut"><a href="#Useful-Shortcut" class="headerlink" title="Useful Shortcut"></a>Useful Shortcut</h1>
+<h2 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All Grade 3 keys</td>
+<td>C G D A F B♭ E♭ + their relative minors</td>
+</tr>
+<tr>
+<td>Natural minor</td>
+<td>Same key signature as relative major</td>
+</tr>
+<tr>
+<td>Harmonic minor</td>
+<td>Natural + raised 7</td>
+</tr>
+<tr>
+<td>Melodic minor</td>
+<td>Natural + raised 6 <em>and</em> 7 ascending, natural descending</td>
+</tr>
+<tr>
+<td>Triplet</td>
+<td>3 notes in time of 2</td>
+</tr>
+<tr>
+<td>Tritone</td>
+<td>6 semitones; A4 going up, d5 going down (enharmonic)</td>
+</tr>
+<tr>
+<td>Primary triads</td>
+<td>I, IV, V (Major in major; i, iv, V in harmonic minor)</td>
+</tr>
+<tr>
+<td>Major-key triad qualities</td>
+<td>M m m M M m d°</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Daily-routine-40-min"><a href="#Daily-routine-40-min" class="headerlink" title="Daily routine (40 min)"></a>Daily routine (40 min)</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Time</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warm-up</td>
+<td>3 min</td>
+<td>5-finger pattern in today's key</td>
+</tr>
+<tr>
+<td>Scales</td>
+<td>10 min</td>
+<td>Today's major + relative natural / harmonic minor, hands separate then together</td>
+</tr>
+<tr>
+<td>Triad drill</td>
+<td>3 min</td>
+<td>I, IV, V in today's key, root position, both hands</td>
+</tr>
+<tr>
+<td>Sight-read</td>
+<td>5 min</td>
+<td>A new short piece, including 9/8 or 12/8 sometimes</td>
+</tr>
+<tr>
+<td>Repertoire</td>
+<td>15 min</td>
+<td>Difficult-bar loops on current piece</td>
+</tr>
+<tr>
+<td>Aural</td>
+<td>2 min</td>
+<td>Major-or-minor test from random recordings</td>
+</tr>
+<tr>
+<td>Theory</td>
+<td>2 min</td>
+<td>One past-paper question</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Suggested-listening"><a href="#Suggested-listening" class="headerlink" title="Suggested listening"></a>Suggested listening</h1>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Composer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Two-Part Inventions</em> (full set, BWV 772–786)</td>
+<td>Bach</td>
+<td>Listen to all 15. They are the <em>idea</em> of two-voice writing</td>
+</tr>
+<tr>
+<td><em>Album for the Young</em>, Op. 68 (all 43 pieces)</td>
+<td>Schumann</td>
+<td>Many sit at Grade 2-4; you'll meet them as you advance</td>
+</tr>
+<tr>
+<td><em>Sonatas, Op. 36</em> (all 6)</td>
+<td>Clementi</td>
+<td>The &quot;kids' Mozart&quot;; classical-period form in miniature</td>
+</tr>
+<tr>
+<td><em>Children's Corner</em></td>
+<td>Debussy</td>
+<td>Aspirational. Modal, modern, exquisite. <em>Doctor Gradus</em> is a Grade 5-6 piece worth knowing now</td>
+</tr>
+<tr>
+<td><em>Études</em>, Op. 10 No. 3 ('Tristesse')</td>
+<td>Chopin</td>
+<td>Romantic legato; impossible at Grade 3 but plant the seed</td>
+</tr>
+<tr>
+<td><em>Suite bergamasque</em> — <em>Clair de Lune</em></td>
+<td>Debussy</td>
+<td>The eternal motivator. One day this is yours</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li>ABRSM (current). <em>Music Theory in Practice — Grade 3</em>.</li>
+<li>ABRSM (current). <em>Piano Exam Pieces — Grade 3</em>.</li>
+<li>Eric Taylor, <em>The AB Guide to Music Theory — Parts I &amp; II</em>.</li>
+<li>IMSLP — Bach <em>Two-Part Inventions</em>, Schumann <em>Op. 68</em>, Clementi <em>Op. 36</em>, Tchaikovsky <em>Op. 39</em>, Burgmüller <em>Op. 100</em>.</li>
+<li>Heller, <em>25 Études Mélodiques</em>, Op. 45.</li>
+<li>Walter Piston, <em>Harmony</em> — for when you want the theory deeper than the syllabus.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: audio reference per piece, a worked Roman-numeral analysis of a short Bach minuet, and visual flashcards for the new keys.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Piano Notes — 03 · Grade 3 Theory & Repertoire\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-05-19 08:05:26\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/background/blue-cloud-sky.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-05-18T06:00:00.000Z","title":"Created 2026-05-18 14:00:00","children":"2026-05-18"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-05-18T06:00:00.000Z","title":"Updated 2026-05-18 14:00:00","children":"2026-05-18"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Music",{"className":"post-meta-categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/05/18/piano_03_grade3_theory/","children":"https://invokfung.github.io/blog/2026/05/18/piano_03_grade3_theory/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Music",{"className":"post-meta__tags","href":"/blog/tags/Music/","children":"Music"}],["$","a","Music Theory",{"className":"post-meta__tags","href":"/blog/tags/Music-Theory/","children":"Music Theory"}],["$","a","Piano",{"className":"post-meta__tags","href":"/blog/tags/Piano/","children":"Piano"}],["$","a","ABRSM",{"className":"post-meta__tags","href":"/blog/tags/ABRSM/","children":"ABRSM"}],["$","a","Grade 3",{"className":"post-meta__tags","href":"/blog/tags/Grade-3/","children":"Grade 3"}],["$","a","樂理",{"className":"post-meta__tags","href":"/blog/tags/樂理/","children":"樂理"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/05/19/piano_04_grade4_theory/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/background/overcloud-sunshine.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Piano Notes — 04 · Grade 4 Theory &amp; Repertoire</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/05/17/piano_02_grade2_theory/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/background/flat-pier.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Piano Notes — 02 · Grade 2 Theory &amp; Repertoire</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","piano_01_grade1_theory",{"children":["$","a",null,{"href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/cloud-sky.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-16</div><div class=\"title\">Piano Notes — 01 · Grade 1 Theory &amp; Repertoire</div></div>"}}]}],["$","div","piano_02_grade2_theory",{"children":["$","a",null,{"href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/flat-pier.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-17</div><div class=\"title\">Piano Notes — 02 · Grade 2 Theory &amp; Repertoire</div></div>"}}]}],["$","div","piano_04_grade4_theory",{"children":["$","a",null,{"href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/overcloud-sunshine.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-19</div><div class=\"title\">Piano Notes — 04 · Grade 4 Theory &amp; Repertoire</div></div>"}}]}],["$","div","piano_00_beginner_basics",{"children":["$","a",null,{"href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/sunset-cloud.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-15</div><div class=\"title\">Piano Notes — 00 · Beginner Basics &amp; Your First Songs</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Three-More-Keys-A-E♭-and-Their-Minors",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Three-More-Keys-A-E♭-and-Their-Minors","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Three More Keys: A, E♭, and Their Minors"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Reading-a-fast-key-signature",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Reading-a-fast-key-signature","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Reading a fast key signature"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Minor-Scales-Three-Flavours",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Minor-Scales-Three-Flavours","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Minor Scales: Three Flavours"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Natural-minor-自然小調",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Natural-minor-自然小調","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Natural minor (自然小調)"}]]}],null]}],["$","li","Harmonic-minor-和聲小調",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Harmonic-minor-和聲小調","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Harmonic minor (和聲小調)"}]]}],null]}],["$","li","Melodic-minor-旋律小調",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Melodic-minor-旋律小調","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"Melodic minor (旋律小調)"}]]}],null]}],["$","li","All-three-on-one-diagram",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#All-three-on-one-diagram","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"All three on one diagram"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Triplets",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Triplets","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Triplets"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Counting-triplets",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Counting-triplets","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Counting triplets"}]]}],null]}],["$","li","Duplet-—-the-inverse",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Duplet-—-the-inverse","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Duplet — the inverse"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-98-and-128-More-Compound-Time",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-98-and-128-More-Compound-Time","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — 9/8 and 12/8 (More Compound Time)"}]]}],null]}],["$","li","Chapter-5-—-Augmented-and-Diminished-Intervals-just-the-tritone",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Augmented-and-Diminished-Intervals-just-the-tritone","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Augmented and Diminished Intervals (just the tritone)"}]]}],null]}],["$","li","Chapter-6-—-Primary-Triads-I-IV-V",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Primary-Triads-I-IV-V","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Primary Triads (I, IV, V)"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","In-a-major-key",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#In-a-major-key","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"In a major key"}]]}],null]}],["$","li","In-a-minor-key-harmonic",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#In-a-minor-key-harmonic","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"In a minor key (harmonic)"}]]}],null]}],["$","li","Writing-triads-—-Grade-3-expectations",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Writing-triads-—-Grade-3-expectations","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"Writing triads — Grade 3 expectations"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Roman-Numeral-Analysis-gentle-introduction",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Roman-Numeral-Analysis-gentle-introduction","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Roman Numeral Analysis (gentle introduction)"}]]}],null]}],["$","li","Chapter-8-—-Italian-Terms-Grade-3-set",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Italian-Terms-Grade-3-set","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Italian Terms (Grade 3 set)"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Tempo",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Tempo","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Tempo"}]]}],null]}],["$","li","Dynamics-expression",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Dynamics-expression","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Dynamics + expression"}]]}],null]}]]}]]}],["$","li","Chapter-9-—-Suggested-Practice-Pieces",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Suggested-Practice-Pieces","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Suggested Practice Pieces"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Grade-3-mainstream",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Grade-3-mainstream","children":[["$","span",null,{"className":"toc-number","children":"10.1."}]," ",["$","span",null,{"className":"toc-text","children":"Grade 3 mainstream"}]]}],null]}],["$","li","Stretching-toward-Grade-4",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Stretching-toward-Grade-4","children":[["$","span",null,{"className":"toc-number","children":"10.2."}]," ",["$","span",null,{"className":"toc-text","children":"Stretching toward Grade 4"}]]}],null]}],["$","li","Choosing-repertoire-intelligently",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Choosing-repertoire-intelligently","children":[["$","span",null,{"className":"toc-number","children":"10.3."}]," ",["$","span",null,{"className":"toc-text","children":"Choosing repertoire intelligently"}]]}],null]}]]}]]}],["$","li","Chapter-10-—-Practice-Patterns-Voice-Independence",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-10-—-Practice-Patterns-Voice-Independence","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 10 — Practice Patterns: Voice Independence"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","How-to-practise-two-voices",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#How-to-practise-two-voices","children":[["$","span",null,{"className":"toc-number","children":"11.1."}]," ",["$","span",null,{"className":"toc-text","children":"How to practise two voices"}]]}],null]}]]}]]}],["$","li","Chapter-11-—-Aural-at-Grade-3",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-11-—-Aural-at-Grade-3","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 11 — Aural at Grade 3"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Practising-major-vs-minor-by-ear",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Practising-major-vs-minor-by-ear","children":[["$","span",null,{"className":"toc-number","children":"12.1."}]," ",["$","span",null,{"className":"toc-text","children":"Practising major-vs-minor by ear"}]]}],null]}]]}]]}],["$","li","Chapter-12-—-Common-Grade-3-Pitfalls",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-12-—-Common-Grade-3-Pitfalls","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 12 — Common Grade 3 Pitfalls"}]]}],null]}],["$","li","Useful-Shortcut",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Useful-Shortcut","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"Useful Shortcut"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Cheat-sheet",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"14.1."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Daily-routine-40-min",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Daily-routine-40-min","children":[["$","span",null,{"className":"toc-number","children":"14.2."}]," ",["$","span",null,{"className":"toc-text","children":"Daily routine (40 min)"}]]}],null]}]]}]]}],["$","li","Suggested-listening",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Suggested-listening","children":[["$","span",null,{"className":"toc-number","children":"15."}]," ",["$","span",null,{"className":"toc-text","children":"Suggested listening"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"16."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","piano_04_grade4_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/overcloud-sunshine.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 04 · Grade 4 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","children":"Piano Notes — 04 · Grade 4 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-19T06:00:00.000Z","title":"Created 2026-05-19 14:00:00","children":"2026-05-19"}]]}]]}],["$","div","piano_03_grade3_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/blue-cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 03 · Grade 3 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","children":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-18T06:00:00.000Z","title":"Created 2026-05-18 14:00:00","children":"2026-05-18"}]]}]]}],["$","div","piano_02_grade2_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/flat-pier.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 02 · Grade 2 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","children":"Piano Notes — 02 · Grade 2 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-17T06:00:00.000Z","title":"Created 2026-05-17 14:00:00","children":"2026-05-17"}]]}]]}],["$","div","piano_01_grade1_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 01 · Grade 1 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","children":"Piano Notes — 01 · Grade 1 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-16T06:00:00.000Z","title":"Created 2026-05-16 14:00:00","children":"2026-05-16"}]]}]]}],["$","div","piano_00_beginner_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/sunset-cloud.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 00 · Beginner Basics &amp; Your First Songs\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","children":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","time",null,{"dateTime":"2026-05-15T06:00:00.000Z","title":"Created 2026-05-15 14:00:00","children":"2026-05-15"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Piano Notes — 03 · Grade 3 Theory & Repertoire | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Grade 3 is where the syllabus starts feeling like *real music theory*: triplets, minor scales in three flavours, three more keys, primary triads (I, I"}],["$","meta","5",{"name":"keywords","content":"Music,Music Theory,Piano,ABRSM,Grade 3,樂理"}],["$","meta","6",{"property":"og:title","content":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","meta","7",{"property":"og:description","content":"Grade 3 is where the syllabus starts feeling like *real music theory*: triplets, minor scales in three flavours, three more keys, primary triads (I, I"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/background/blue-cloud-sky.jpg"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","meta","12",{"name":"twitter:description","content":"Grade 3 is where the syllabus starts feeling like *real music theory*: triplets, minor scales in three flavours, three more keys, primary triads (I, I"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/background/blue-cloud-sky.jpg"}]]
+1:null

@@ -1,0 +1,468 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-f3fe36d1b504a280.js"],"default"]
+4:["year","2026","d"]
+5:["month","05","d"]
+6:["day","15","d"]
+7:["slug","piano_00_beginner_basics","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["TY7B07XYONhS6gj-EhZ8y",[[["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","15","d"],{"children":[["slug","piano_00_beginner_basics","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"05\",\"day\":\"15\",\"slug\":\"piano_00_beginner_basics\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","15","d"],{"children":[["slug","piano_00_beginner_basics","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-19 08:05:24\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T692f,<p>The first post in a self-study piano series. Goal: by the end of this one you can sit at any keyboard, find any note in under five seconds, and play three short pieces from memory. Skip the marketing fluff and go straight to the muscle memory.</p>
+<blockquote>
+<p>Series map: <strong>00</strong> Beginner (this post) → 01 Grade 1 → 02 Grade 2 → 03 Grade 3 → 04 Grade 4. Grades 5–8 will follow.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Sit comfortably at the keyboard with healthy posture.</li>
+<li>Name every white key on sight — both directions, both clefs.</li>
+<li>Find Middle C on any size piano without thinking.</li>
+<li>Play three short pieces with both hands.</li>
+<li>Recognise the difference between a piano, an upright, a digital, and a synth — and pick the right one for practice.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Why-piano-is-a-good-first-instrument"><a href="#Chapter-1-—-Why-piano-is-a-good-first-instrument" class="headerlink" title="Chapter 1 — Why piano is a good first instrument"></a>Chapter 1 — Why piano is a good first instrument</h1>
+<p>The keyboard is the <em>clearest</em> visual map of Western music. Every other instrument hides pitch behind a fingering chart; the piano lays the entire pitch space out in front of you, left-to-right, low-to-high. If you understand &quot;how a scale looks&quot; on the piano, you understand it on a guitar, a violin, or in a software synth — you just don't see it as plainly.</p>
+<p>A second practical reason: the piano is <strong>monophonically simple</strong> but <strong>polyphonically rich</strong>. Beginners can produce a clean tone from day one (press → sound), while advanced players spend a lifetime on the same instrument. Few instruments span that range.</p>
+<blockquote>
+<p><em>Where I started:</em> I wasted my first two weeks googling &quot;best digital piano under $500&quot; instead of practising. The truth is any 88-key weighted keyboard from a major brand (Yamaha, Roland, Casio, Kawai) is fine for the first year. The piano you have and play <em>every day</em> beats the piano you research and never own.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-Picking-an-instrument"><a href="#Chapter-2-—-Picking-an-instrument" class="headerlink" title="Chapter 2 — Picking an instrument"></a>Chapter 2 — Picking an instrument</h1>
+<h2 id="Acoustic-real-piano"><a href="#Acoustic-real-piano" class="headerlink" title="Acoustic (real) piano"></a>Acoustic (real) piano</h2>
+<ul>
+<li><strong>Upright (直立式)</strong> — most homes. Footprint ~150 cm wide, depth ~60 cm. Tone is good but action is lighter than a grand.</li>
+<li><strong>Grand (平台式)</strong> — long horizontal action, more responsive. Babies (~150 cm) to concert (~275 cm). Expensive, needs tuning twice a year.</li>
+</ul>
+<h2 id="Digital-piano"><a href="#Digital-piano" class="headerlink" title="Digital piano"></a>Digital piano</h2>
+<ul>
+<li><strong>Weighted action (重錘鍵盤)</strong> is non-negotiable for serious practice. &quot;Semi-weighted&quot; and &quot;synth action&quot; feel different and will <em>delay</em> your finger development.</li>
+<li>88 full keys preferred over 76 or 61 — exam pieces will eventually need the full range.</li>
+<li>Built-in speakers are a &quot;nice to have&quot;; quality varies. Headphones bypass the problem and are quieter for housemates.</li>
+</ul>
+<h2 id="What-you-actually-need-the-honest-list"><a href="#What-you-actually-need-the-honest-list" class="headerlink" title="What you actually need (the honest list)"></a>What you actually need (the honest list)</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Necessity</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>88-key fully-weighted digital, or any acoustic upright</td>
+<td>Essential</td>
+<td>Your hands form habits around action weight</td>
+</tr>
+<tr>
+<td>Bench at correct height</td>
+<td>Essential</td>
+<td>Wrong height = wrist strain in 4 weeks</td>
+</tr>
+<tr>
+<td>Metronome (app fine)</td>
+<td>Essential</td>
+<td>The most-skipped tool that fixes the most-common problem</td>
+</tr>
+<tr>
+<td>Music stand with light</td>
+<td>Highly recommended</td>
+<td>You'll be reading every session</td>
+</tr>
+<tr>
+<td>Headphones (digital)</td>
+<td>Recommended</td>
+<td>Practise at any hour without conflict</td>
+</tr>
+<tr>
+<td>Pedal (sustain)</td>
+<td>Eventually</td>
+<td>Not for week 1; needed by week 8</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>Trick:</em> the right bench height = your forearms parallel to the floor when fingers rest on the keys, wrists neither dropping nor arching. Sit too high → you push the keys <em>down</em> with extra force and tense the wrist. Sit too low → you reach <em>up</em> and the fingers fight gravity. Adjust this on day one. Re-check it monthly.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-The-keyboard-map"><a href="#Chapter-3-—-The-keyboard-map" class="headerlink" title="Chapter 3 — The keyboard map"></a>Chapter 3 — The keyboard map</h1>
+<h2 id="Black-key-landmarks"><a href="#Black-key-landmarks" class="headerlink" title="Black-key landmarks"></a>Black-key landmarks</h2>
+<p>The black keys come in groups of <strong>2</strong> and <strong>3</strong>. The 2-group anchors <strong>C-D-E</strong>; the 3-group anchors <strong>F-G-A-B</strong>.</p>
+<ul>
+<li>The white key <em>immediately left of a 2-group</em> is always <strong>C</strong>.</li>
+<li>The white key <em>immediately left of a 3-group</em> is always <strong>F</strong>.</li>
+</ul>
+<p>These two anchors are the only ones you ever need to memorise. The other letters (D, E, G, A, B) are derived by counting in alphabetical order from C or F.</p>
+<blockquote>
+<p><em>Trick:</em> the <strong>2-group is C-D-E</strong>; <strong>3-group is F-G-A-B</strong>. Stack the consonants in your head: <strong>C</strong>ar <strong>D</strong>rives <strong>E</strong>ast, <strong>F</strong>ish <strong>G</strong>oes <strong>A</strong>round <strong>B</strong>ack. Cheesy works.</p>
+</blockquote>
+<h2 id="Middle-C"><a href="#Middle-C" class="headerlink" title="Middle C"></a>Middle C</h2>
+<p>The C closest to the centre of the keyboard. On an 88-key piano this is the fourth C from the bottom — <strong>C4</strong> in scientific pitch notation. On a 61-key it's the third C. Either way, find the centre, find the 2-group nearest it, drop your right thumb on the white key to the left of that pair.</p>
+<h2 id="Octaves"><a href="#Octaves" class="headerlink" title="Octaves"></a>Octaves</h2>
+<p>Same letter, doubled frequency: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>n</mi><mo>+</mo><mn>12</mn></mrow></msub><mo>=</mo><mn>2</mn><mo>⋅</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">f_{n+12} = 2 \cdot f_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">12</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. The keyboard pattern repeats every 12 keys (7 white + 5 black). Once you memorise the 7-white-key span (C D E F G A B), the entire 88-key keyboard is mapped.</p>
+<hr>
+<h1 id="Chapter-4-—-Posture-and-hand-mechanics"><a href="#Chapter-4-—-Posture-and-hand-mechanics" class="headerlink" title="Chapter 4 — Posture and hand mechanics"></a>Chapter 4 — Posture and hand mechanics</h1>
+<h2 id="Sitting"><a href="#Sitting" class="headerlink" title="Sitting"></a>Sitting</h2>
+<ul>
+<li>Bench centred on Middle C.</li>
+<li>Sit on the <strong>front third</strong> of the bench, not slumped back.</li>
+<li>Feet flat on the floor. (Smaller players: get a footstool; dangling feet cause back tension.)</li>
+<li>Elbows roughly at keyboard height.</li>
+<li>Shoulders down and relaxed. <strong>No</strong> shrugging up to the ears.</li>
+</ul>
+<h2 id="Hands"><a href="#Hands" class="headerlink" title="Hands"></a>Hands</h2>
+<ul>
+<li>Curved fingers, as if holding a tennis ball.</li>
+<li>Strike with the <strong>fingertip</strong>, not the pad.</li>
+<li>Wrist is level with the back of the hand — flat, not collapsed, not arched.</li>
+<li>Thumb plays with its <strong>side</strong>, slightly tucked under.</li>
+</ul>
+<h2 id="Finger-numbering"><a href="#Finger-numbering" class="headerlink" title="Finger numbering"></a>Finger numbering</h2>
+<table>
+<thead>
+<tr>
+<th>Hand</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right</td>
+<td>Thumb</td>
+<td>Index</td>
+<td>Middle</td>
+<td>Ring</td>
+<td>Little</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>Thumb</td>
+<td>Index</td>
+<td>Middle</td>
+<td>Ring</td>
+<td>Little</td>
+</tr>
+</tbody>
+</table>
+<p>Both hands use the same scheme — the thumb is <strong>always 1</strong> for its own hand. Sheet music writes RH finger numbers above the staff, LH below.</p>
+<blockquote>
+<p><em>Where I got stuck:</em> I kept dropping my wrist when playing softly. Fix: I propped a coin on the back of my hand during slow practice. If it stayed put for eight bars, my wrist was level. Sounds gimmicky, fixes it in three days.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Reading-the-staff-just-enough-for-now"><a href="#Chapter-5-—-Reading-the-staff-just-enough-for-now" class="headerlink" title="Chapter 5 — Reading the staff (just enough for now)"></a>Chapter 5 — Reading the staff (just enough for now)</h1>
+<p>Only what you need for the three first songs is covered here. Full staff theory is in Post 01.</p>
+<h2 id="Treble-right-hand"><a href="#Treble-right-hand" class="headerlink" title="Treble (right hand)"></a>Treble (right hand)</h2>
+<p>Lines bottom to top: <strong>E G B D F</strong> — &quot;Every Good Boy Does Fine&quot;.<br>
+Spaces bottom to top: <strong>F A C E</strong> — already spells FACE.</p>
+<h2 id="Bass-left-hand"><a href="#Bass-left-hand" class="headerlink" title="Bass (left hand)"></a>Bass (left hand)</h2>
+<p>Lines: <strong>G B D F A</strong> — &quot;Good Boys Do Fine Always&quot;.<br>
+Spaces: <strong>A C E G</strong> — &quot;All Cows Eat Grass&quot;.</p>
+<h2 id="Middle-C-bridges-both"><a href="#Middle-C-bridges-both" class="headerlink" title="Middle C bridges both"></a>Middle C bridges both</h2>
+<p>Middle C sits on the <strong>first ledger line below</strong> the treble staff <em>and</em> the <strong>first ledger line above</strong> the bass staff. The same note, written two ways. The grand staff joins the two clefs with a brace — right hand on top, left hand on bottom.</p>
+<blockquote>
+<p><em>Analogy:</em> the grand staff is two ladders bolted together at Middle C. Right hand climbs the top ladder (higher pitches), left hand climbs the bottom ladder (lower pitches). Middle C is the rung they share.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-Three-first-pieces"><a href="#Chapter-6-—-Three-first-pieces" class="headerlink" title="Chapter 6 — Three first pieces"></a>Chapter 6 — Three first pieces</h1>
+<p>These are the canonical first songs. I picked them because (1) the right-hand melody fits inside one hand position, (2) the left hand uses only two or three notes, and (3) you've heard them since you were five — your ear corrects you before your brain does.</p>
+<h2 id="Piece-1-—-Ode-to-Joy-Beethoven-Symphony-No-9"><a href="#Piece-1-—-Ode-to-Joy-Beethoven-Symphony-No-9" class="headerlink" title="Piece 1 — &quot;Ode to Joy&quot; (Beethoven, Symphony No. 9)"></a>Piece 1 — &quot;Ode to Joy&quot; (Beethoven, <em>Symphony No. 9</em>)</h2>
+<p><strong>Hand position:</strong> RH thumb on Middle C.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-attribute">Fingers</span>:    <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>    <span class="hljs-number">5</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>    <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>    <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-attribute">In</span> notes:   E E F G    G F E D    C C D E    E D D</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Repeat. Then play:</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-symbol">3 </span><span class="hljs-number">2</span> <span class="hljs-number">2</span>          (E D D)  ← shorter ending</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>Why this piece:</strong> the melody never leaves the five-finger span of one hand. You don't move your wrist. The whole song is your introduction to &quot;fingers stay put, brain reads.&quot;</p>
+<blockquote>
+<p><em>Trick:</em> count &quot;1 2 3 4&quot; steadily through it — every note is one beat except the last D of each line, which is two beats. If you can clap it without playing, you can play it.</p>
+</blockquote>
+<h2 id="Piece-2-—-Mary-Had-a-Little-Lamb"><a href="#Piece-2-—-Mary-Had-a-Little-Lamb" class="headerlink" title="Piece 2 — &quot;Mary Had a Little Lamb&quot;"></a>Piece 2 — &quot;Mary Had a Little Lamb&quot;</h2>
+<p><strong>Hand position:</strong> RH thumb on Middle C.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-attribute">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>    <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span>    <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span>    <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span></span><br><span class="line"><span class="hljs-attribute">E</span> D C D    E E E    D D D    E G G</span><br><span class="line"> </span><br><span class="line"><span class="hljs-attribute">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>    <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span>    <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>    <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-attribute">E</span> D C D    E E E E    D D E D    C</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>Why this piece:</strong> introduces a longer arc with repetition. You'll notice the <em>same three-note shape</em> repeats — once you spot the pattern your eye stops reading note-by-note.</p>
+<h2 id="Piece-3-—-Twinkle-Twinkle-Little-Star-—-both-hands"><a href="#Piece-3-—-Twinkle-Twinkle-Little-Star-—-both-hands" class="headerlink" title="Piece 3 — &quot;Twinkle Twinkle Little Star&quot; — both hands"></a>Piece 3 — &quot;Twinkle Twinkle Little Star&quot; — both hands</h2>
+<p><strong>RH:</strong> thumb on Middle C.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-attribute">1</span> <span class="hljs-number">1</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">6</span> <span class="hljs-number">5</span>    <span class="hljs-number">4</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-attribute">C</span> C G G A A G    F F E E D D C</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>LH:</strong> start with the 5th finger on the <strong>C an octave below Middle C</strong> (so 5 = C3, 3 = E3, 1 = G3).</p>
+<p>For your <em>first</em> attempt, just play the <strong>C3</strong> long-held for each bar — one note per bar. Hold it under the right hand.</p>
+<p>Once that's solid, add <strong>G3</strong> alternating where the harmony changes (bar 3, bar 6).</p>
+<blockquote>
+<p><em>Where I got stuck:</em> hands together on day three felt impossible. Fix: don't try hands together until each hand is <em>boring</em> on its own. &quot;Boring&quot; is the right level — if you have to think, you're not ready. Each hand should run on autopilot, and only then do you stack them.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-How-to-practise-the-meta-skill"><a href="#Chapter-7-—-How-to-practise-the-meta-skill" class="headerlink" title="Chapter 7 — How to practise (the meta-skill)"></a>Chapter 7 — How to practise (the meta-skill)</h1>
+<p>If you take one thing from this post, take this: <strong>slow practice with full attention</strong> beats fast practice with split attention by an order of magnitude. The brain encodes accuracy, not speed. Speed comes free once accuracy is locked in.</p>
+<h2 id="Daily-routine-25–30-minutes"><a href="#Daily-routine-25–30-minutes" class="headerlink" title="Daily routine, ~25–30 minutes"></a>Daily routine, ~25–30 minutes</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Time</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warm-up</td>
+<td>3 min</td>
+<td>5-finger pattern, C major position, RH then LH then both</td>
+</tr>
+<tr>
+<td>Note-naming</td>
+<td>2 min</td>
+<td>Pick a random key, name it out loud</td>
+</tr>
+<tr>
+<td>Today's piece</td>
+<td>15 min</td>
+<td>One section at a time, slow, no mistakes</td>
+</tr>
+<tr>
+<td>Sight-read</td>
+<td>5 min</td>
+<td>Brand-new short piece, no repeats — see how far you get</td>
+</tr>
+<tr>
+<td>Cool-down</td>
+<td>2 min</td>
+<td>Replay your most-mastered piece for fun</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Slow-practice-rules"><a href="#Slow-practice-rules" class="headerlink" title="Slow practice rules"></a>Slow practice rules</h2>
+<ol>
+<li><strong>Start at a tempo where you make zero mistakes.</strong> Mistakes at speed become mistakes at all speeds.</li>
+<li><strong>Loop the section that's hard, not the whole piece.</strong> Four bars. Ten times. Then move on.</li>
+<li><strong>Hands separate before hands together.</strong> Always.</li>
+<li><strong>Watch your hand for <em>one minute</em>, then watch the page for one minute.</strong> Alternate. Eyes-on-page-only forces you to internalise the keyboard map.</li>
+<li><strong>End on a success.</strong> The last attempt before you stop is the one your brain rehearses overnight.</li>
+</ol>
+<blockquote>
+<p><em>Trick I steal from sports coaches:</em> finish every practice session by playing the easiest passage of the day <em>one more time</em>, slowly and perfectly. Going to bed on a clean run reinforces the right pattern in sleep. Going to bed frustrated reinforces the wrong one.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-8-—-Common-beginner-mistakes"><a href="#Chapter-8-—-Common-beginner-mistakes" class="headerlink" title="Chapter 8 — Common beginner mistakes"></a>Chapter 8 — Common beginner mistakes</h1>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eyes glued to the hand</td>
+<td>Cover the keys with a small towel for one passage; force the eye onto the page</td>
+</tr>
+<tr>
+<td>Tense shoulders</td>
+<td>Pause every 5 min; roll shoulders back; reset posture</td>
+</tr>
+<tr>
+<td>Speeding through easy bars, stuttering on hard ones</td>
+<td>Practise the hard bars at the <em>easy bars'</em> tempo, not the other way round</td>
+</tr>
+<tr>
+<td>Skipping the metronome</td>
+<td>The metronome reveals your fudges. Use it on slow practice. Speed practice later</td>
+</tr>
+<tr>
+<td>Always practising from bar 1</td>
+<td>Bar 1 gets 100× practice, bar 32 gets 1×. Start from random bars</td>
+</tr>
+<tr>
+<td>Quitting before recording</td>
+<td>Record yourself once a week, even on phone audio. The recording is honest in ways your ears in the moment are not</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Useful-Shortcut"><a href="#Useful-Shortcut" class="headerlink" title="Useful Shortcut"></a>Useful Shortcut</h1>
+<h2 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Find Middle C</td>
+<td>White key left of the 2-black-key group nearest the keyboard centre</td>
+</tr>
+<tr>
+<td>Treble lines</td>
+<td>E G B D F (Every Good Boy Does Fine)</td>
+</tr>
+<tr>
+<td>Treble spaces</td>
+<td>F A C E</td>
+</tr>
+<tr>
+<td>Bass lines</td>
+<td>G B D F A (Good Boys Do Fine Always)</td>
+</tr>
+<tr>
+<td>Bass spaces</td>
+<td>A C E G (All Cows Eat Grass)</td>
+</tr>
+<tr>
+<td>Finger numbering</td>
+<td>1 = thumb (both hands) → 5 = pinky</td>
+</tr>
+<tr>
+<td>Bench height</td>
+<td>Forearms parallel to floor when fingers rest on keys</td>
+</tr>
+<tr>
+<td>Practice motto</td>
+<td>Slow + accurate &gt; fast + sloppy</td>
+</tr>
+<tr>
+<td>End each session</td>
+<td>One perfect run of an easy passage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="When-to-move-on"><a href="#When-to-move-on" class="headerlink" title="When to move on"></a>When to move on</h2>
+<p>You're ready for <strong>Post 01 — Grade 1 Theory</strong> when you can:</p>
+<ul>
+<li>Play all three first songs hands together from memory.</li>
+<li>Name any white key in under 2 seconds.</li>
+<li>Identify any line or space note in either clef.</li>
+<li>Sit at the piano without checking your posture.</li>
+</ul>
+<p>If you're not there yet, stay here another week or two. The grades build on the basics; rushing past the basics breaks every grade above.</p>
+<hr>
+<h1 id="Suggested-next-listening"><a href="#Suggested-next-listening" class="headerlink" title="Suggested next listening"></a>Suggested next listening</h1>
+<p>These pieces aren't homework — they're context. Listen to them on your commute or in the background while cooking. Knowing what good piano <em>sounds</em> like trains your ear faster than any exercise.</p>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Composer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Minuet in G</em> (BWV Anh. 114)</td>
+<td>Bach (attr.)</td>
+<td>Where every classical piano student is heading; clean, simple, beautiful</td>
+</tr>
+<tr>
+<td><em>Gymnopédie No. 1</em></td>
+<td>Satie</td>
+<td>Modern feel, dead-easy harmony, will hook you on the instrument</td>
+</tr>
+<tr>
+<td><em>Clair de Lune</em></td>
+<td>Debussy</td>
+<td>Aspirational — when you can read this in three years, you've arrived</td>
+</tr>
+<tr>
+<td><em>Children's Corner</em> — I. <em>Doctor Gradus ad Parnassum</em></td>
+<td>Debussy</td>
+<td>A study with melody. Teaches what practice can become</td>
+</tr>
+<tr>
+<td><em>Mikrokosmos</em>, Vol. 1</td>
+<td>Bartók</td>
+<td>Modern teaching pieces — many at Grade 1 level. Listen and you've already half-learned them</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li>ABRSM (current edition). <em>Piano Practical Syllabus</em>. (Skim the Initial Grade list now.)</li>
+<li>Adam Sietz, <em>Piano Lessons for Adults</em>. (Adult-focused, no kids-book art.)</li>
+<li>James Bastien, <em>Bastien Piano Basics — Primer Level</em>. (The classic English-language beginner method.)</li>
+<li>Alfred's <em>Adult All-In-One Course — Level 1</em>. (Alternative method book — pick one and stick to it.)</li>
+<li>Chuan C. Chang, <em>Fundamentals of Piano Practice</em>. (Free online — practice technique deep dive.)</li>
+<li>Heinrich Neuhaus, <em>The Art of Piano Playing</em>. (Eventual reading; advanced philosophy.)</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned: audio reference tracks per song once I find a clean-license source, and a video of correct vs incorrect posture.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Piano Notes — 00 · Beginner Basics & Your First Songs\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-05-19 08:05:24\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/background/sunset-cloud.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-05-15T06:00:00.000Z","title":"Created 2026-05-15 14:00:00","children":"2026-05-15"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-05-15T06:00:00.000Z","title":"Updated 2026-05-15 14:00:00","children":"2026-05-15"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Music",{"className":"post-meta-categories","href":"/blog/categories/Music/","children":"Music"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Piano Notes — 00 · Beginner Basics & Your First Songs","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/05/15/piano_00_beginner_basics/","children":"https://invokfung.github.io/blog/2026/05/15/piano_00_beginner_basics/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Music",{"className":"post-meta__tags","href":"/blog/tags/Music/","children":"Music"}],["$","a","Piano",{"className":"post-meta__tags","href":"/blog/tags/Piano/","children":"Piano"}],["$","a","Beginner",{"className":"post-meta__tags","href":"/blog/tags/Beginner/","children":"Beginner"}],["$","a","ABRSM",{"className":"post-meta__tags","href":"/blog/tags/ABRSM/","children":"ABRSM"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/05/16/piano_01_grade1_theory/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Piano Notes — 01 · Grade 1 Theory &amp; Repertoire</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/05/15/ai_prompting_foundations/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">AI Prompting (Foundations &amp; Practice)</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","piano_01_grade1_theory",{"children":["$","a",null,{"href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/cloud-sky.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-16</div><div class=\"title\">Piano Notes — 01 · Grade 1 Theory &amp; Repertoire</div></div>"}}]}],["$","div","piano_02_grade2_theory",{"children":["$","a",null,{"href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/flat-pier.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-17</div><div class=\"title\">Piano Notes — 02 · Grade 2 Theory &amp; Repertoire</div></div>"}}]}],["$","div","piano_03_grade3_theory",{"children":["$","a",null,{"href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/blue-cloud-sky.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Piano Notes — 03 · Grade 3 Theory &amp; Repertoire</div></div>"}}]}],["$","div","piano_04_grade4_theory",{"children":["$","a",null,{"href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/background/overcloud-sunshine.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-19</div><div class=\"title\">Piano Notes — 04 · Grade 4 Theory &amp; Repertoire</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":16}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":35}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":6}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Why-piano-is-a-good-first-instrument",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Why-piano-is-a-good-first-instrument","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Why piano is a good first instrument"}]]}],null]}],["$","li","Chapter-2-—-Picking-an-instrument",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Picking-an-instrument","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Picking an instrument"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Acoustic-real-piano",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Acoustic-real-piano","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Acoustic (real) piano"}]]}],null]}],["$","li","Digital-piano",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Digital-piano","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Digital piano"}]]}],null]}],["$","li","What-you-actually-need-the-honest-list",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-you-actually-need-the-honest-list","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"What you actually need (the honest list)"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-The-keyboard-map",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-The-keyboard-map","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — The keyboard map"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Black-key-landmarks",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Black-key-landmarks","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Black-key landmarks"}]]}],null]}],["$","li","Middle-C",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Middle-C","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Middle C"}]]}],null]}],["$","li","Octaves",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Octaves","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"Octaves"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Posture-and-hand-mechanics",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Posture-and-hand-mechanics","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Posture and hand mechanics"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Sitting",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Sitting","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Sitting"}]]}],null]}],["$","li","Hands",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Hands","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Hands"}]]}],null]}],["$","li","Finger-numbering",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Finger-numbering","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"Finger numbering"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Reading-the-staff-just-enough-for-now",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Reading-the-staff-just-enough-for-now","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Reading the staff (just enough for now)"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Treble-right-hand",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Treble-right-hand","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"Treble (right hand)"}]]}],null]}],["$","li","Bass-left-hand",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Bass-left-hand","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"Bass (left hand)"}]]}],null]}],["$","li","Middle-C-bridges-both",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Middle-C-bridges-both","children":[["$","span",null,{"className":"toc-number","children":"6.3."}]," ",["$","span",null,{"className":"toc-text","children":"Middle C bridges both"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Three-first-pieces",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Three-first-pieces","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Three first pieces"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Piece-1-—-Ode-to-Joy-Beethoven-Symphony-No-9",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Piece-1-—-Ode-to-Joy-Beethoven-Symphony-No-9","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Piece 1 — \"Ode to Joy\" (Beethoven, Symphony No. 9)"}]]}],null]}],["$","li","Piece-2-—-Mary-Had-a-Little-Lamb",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Piece-2-—-Mary-Had-a-Little-Lamb","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"Piece 2 — \"Mary Had a Little Lamb\""}]]}],null]}],["$","li","Piece-3-—-Twinkle-Twinkle-Little-Star-—-both-hands",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Piece-3-—-Twinkle-Twinkle-Little-Star-—-both-hands","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"Piece 3 — \"Twinkle Twinkle Little Star\" — both hands"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-How-to-practise-the-meta-skill",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-How-to-practise-the-meta-skill","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — How to practise (the meta-skill)"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Daily-routine-25–30-minutes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Daily-routine-25–30-minutes","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Daily routine, ~25–30 minutes"}]]}],null]}],["$","li","Slow-practice-rules",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Slow-practice-rules","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"Slow practice rules"}]]}],null]}]]}]]}],["$","li","Chapter-8-—-Common-beginner-mistakes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Common-beginner-mistakes","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Common beginner mistakes"}]]}],null]}],["$","li","Useful-Shortcut",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Useful-Shortcut","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Useful Shortcut"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Cheat-sheet",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10.1."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","When-to-move-on",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#When-to-move-on","children":[["$","span",null,{"className":"toc-number","children":"10.2."}]," ",["$","span",null,{"className":"toc-text","children":"When to move on"}]]}],null]}]]}]]}],["$","li","Suggested-next-listening",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Suggested-next-listening","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Suggested next listening"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","piano_04_grade4_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/overcloud-sunshine.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 04 · Grade 4 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/19/piano_04_grade4_theory/","title":"Piano Notes — 04 · Grade 4 Theory & Repertoire","children":"Piano Notes — 04 · Grade 4 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-19T06:00:00.000Z","title":"Created 2026-05-19 14:00:00","children":"2026-05-19"}]]}]]}],["$","div","piano_03_grade3_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/blue-cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 03 · Grade 3 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/18/piano_03_grade3_theory/","title":"Piano Notes — 03 · Grade 3 Theory & Repertoire","children":"Piano Notes — 03 · Grade 3 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-18T06:00:00.000Z","title":"Created 2026-05-18 14:00:00","children":"2026-05-18"}]]}]]}],["$","div","piano_02_grade2_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/flat-pier.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 02 · Grade 2 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/17/piano_02_grade2_theory/","title":"Piano Notes — 02 · Grade 2 Theory & Repertoire","children":"Piano Notes — 02 · Grade 2 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-17T06:00:00.000Z","title":"Created 2026-05-17 14:00:00","children":"2026-05-17"}]]}]]}],["$","div","piano_01_grade1_theory",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/cloud-sky.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 01 · Grade 1 Theory &amp; Repertoire\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/16/piano_01_grade1_theory/","title":"Piano Notes — 01 · Grade 1 Theory & Repertoire","children":"Piano Notes — 01 · Grade 1 Theory & Repertoire"}],["$","time",null,{"dateTime":"2026-05-16T06:00:00.000Z","title":"Created 2026-05-16 14:00:00","children":"2026-05-16"}]]}]]}],["$","div","piano_00_beginner_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/background/sunset-cloud.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Piano Notes — 00 · Beginner Basics &amp; Your First Songs\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/15/piano_00_beginner_basics/","title":"Piano Notes — 00 · Beginner Basics & Your First Songs","children":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","time",null,{"dateTime":"2026-05-15T06:00:00.000Z","title":"Created 2026-05-15 14:00:00","children":"2026-05-15"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Piano Notes — 00 · Beginner Basics & Your First Songs | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"The first post in a self-study piano series. Goal: by the end of this one you can sit at any keyboard, find any note in under five seconds, and play t"}],["$","meta","5",{"name":"keywords","content":"Music,Piano,Beginner,ABRSM"}],["$","meta","6",{"property":"og:title","content":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","meta","7",{"property":"og:description","content":"The first post in a self-study piano series. Goal: by the end of this one you can sit at any keyboard, find any note in under five seconds, and play t"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/background/sunset-cloud.jpg"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Piano Notes — 00 · Beginner Basics & Your First Songs"}],["$","meta","12",{"name":"twitter:description","content":"The first post in a self-study piano series. Goal: by the end of this one you can sit at any keyboard, find any note in under five seconds, and play t"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/background/sunset-cloud.jpg"}]]
+1:null
