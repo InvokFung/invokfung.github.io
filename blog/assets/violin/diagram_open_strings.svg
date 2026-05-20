@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Violin four open strings G D A E">
+  <rect width="600" height="320" fill="#ffffff"/>
+  <g stroke="#222" stroke-width="2">
+    <line x1="80" y1="80" x2="540" y2="80"/>
+    <line x1="80" y1="120" x2="540" y2="120"/>
+    <line x1="80" y1="160" x2="540" y2="160"/>
+    <line x1="80" y1="200" x2="540" y2="200"/>
+    <line x1="80" y1="240" x2="540" y2="240"/>
+  </g>
+  <!-- G2 below staff (2 ledger lines below) -->
+  <line x1="180" y1="280" x2="220" y2="280" stroke="#222" stroke-width="2"/>
+  <line x1="180" y1="260" x2="220" y2="260" stroke="#222" stroke-width="2"/>
+  <ellipse cx="200" cy="280" rx="14" ry="10" fill="#c54a2e"/>
+  <text x="200" y="310" font-family="Georgia, serif" font-size="20" text-anchor="middle" fill="#c54a2e" font-weight="700">G (lowest)</text>
+
+  <!-- D below middle line -->
+  <ellipse cx="290" cy="220" rx="14" ry="10" fill="#1d6a8a"/>
+  <text x="290" y="310" font-family="Georgia, serif" font-size="20" text-anchor="middle" fill="#1d6a8a" font-weight="700">D</text>
+
+  <!-- A second space from top -->
+  <ellipse cx="380" cy="140" rx="14" ry="10" fill="#0f8a4a"/>
+  <text x="380" y="310" font-family="Georgia, serif" font-size="20" text-anchor="middle" fill="#0f8a4a" font-weight="700">A</text>
+
+  <!-- E above staff -->
+  <ellipse cx="470" cy="60" rx="14" ry="10" fill="#a85a14"/>
+  <text x="470" y="310" font-family="Georgia, serif" font-size="20" text-anchor="middle" fill="#a85a14" font-weight="700">E (highest)</text>
+
+  <text x="80" y="40" font-family="Georgia, serif" font-size="20" fill="#222">Open strings (low → high): G  D  A  E — each a perfect 5th apart</text>
+</svg>

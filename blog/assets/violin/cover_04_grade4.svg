@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Violin · 04 - Grade 4 — 2nd & 3rd Position">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2a14"/>
+      <stop offset="100%" stop-color="#6a3e1e"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="950" cy="120" r="180" fill="#ffffff" opacity="0.05"/>
+  <circle cx="180" cy="540" r="220" fill="#ffffff" opacity="0.04"/>
+
+  <!-- violin silhouette (right side) -->
+  <g transform="translate(880 315) rotate(-15)" fill="#ffffff" opacity="0.85">
+    <!-- body -->
+    <path d="M -90 -180 Q -110 -120 -100 -60 Q -160 -40 -150 40 Q -160 130 -90 180 Q -50 200 0 200 Q 50 200 90 180 Q 160 130 150 40 Q 160 -40 100 -60 Q 110 -120 90 -180 Q 50 -210 0 -210 Q -50 -210 -90 -180 Z" fill="#3a2418"/>
+    <!-- F-holes -->
+    <path d="M -50 -20 Q -55 0 -50 20 Q -45 30 -50 40" stroke="#1a0e08" stroke-width="3" fill="none"/>
+    <path d="M  50 -20 Q  55 0  50 20 Q  45 30  50 40" stroke="#1a0e08" stroke-width="3" fill="none"/>
+    <!-- bridge -->
+    <rect x="-40" y="5" width="80" height="10" fill="#1a0e08"/>
+    <!-- strings -->
+    <line x1="-20" y1="-180" x2="-20" y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
+    <line x1="-7"  y1="-180" x2="-7"  y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
+    <line x1="7"   y1="-180" x2="7"   y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
+    <line x1="20"  y1="-180" x2="20"  y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
+    <!-- neck -->
+    <rect x="-25" y="-280" width="50" height="100" fill="#2a1810"/>
+    <!-- scroll -->
+    <path d="M -25 -290 Q -45 -310 -25 -330 Q 0 -340 25 -330 Q 45 -310 25 -290" fill="#2a1810"/>
+  </g>
+
+  <!-- bow -->
+  <g transform="translate(750 100) rotate(35)" stroke="#d8c898" stroke-width="3" fill="none" opacity="0.7">
+    <line x1="0" y1="0" x2="320" y2="0"/>
+    <line x1="0" y1="5" x2="320" y2="5"/>
+    <circle cx="-8" cy="2.5" r="8" fill="#3a2418"/>
+    <circle cx="328" cy="2.5" r="6" fill="#3a2418"/>
+  </g>
+
+  <!-- title -->
+  <g filter="url(#glow)">
+    <text x="100" y="180" fill="#ffffff" font-family="Georgia, serif" font-size="76" font-weight="600">Violin · 04</text>
+    <text x="100" y="240" fill="#e8d8f0" font-family="Georgia, serif" font-size="34" font-style="italic">Grade 4 — 2nd & 3rd Position</text>
+  </g>
+</svg>
