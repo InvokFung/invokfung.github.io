@@ -4,41 +4,163 @@
       <stop offset="0%" stop-color="#0f2a3a"/>
       <stop offset="100%" stop-color="#1f5a6a"/>
     </linearGradient>
+    <radialGradient id="bodyShine" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#c98a4a"/>
+      <stop offset="40%" stop-color="#8a4a1e"/>
+      <stop offset="100%" stop-color="#3a1808"/>
+    </radialGradient>
+    <linearGradient id="neckShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a0e08"/>
+      <stop offset="50%" stop-color="#3a1f12"/>
+      <stop offset="100%" stop-color="#1a0e08"/>
+    </linearGradient>
+    <linearGradient id="bowStick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5a3a1a"/>
+      <stop offset="50%" stop-color="#8a5a2a"/>
+      <stop offset="100%" stop-color="#5a3a1a"/>
+    </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="6" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="violinShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feOffset in="b" dx="4" dy="8" result="o"/>
+      <feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
+
   <rect width="1200" height="630" fill="url(#bg)"/>
   <circle cx="950" cy="120" r="180" fill="#ffffff" opacity="0.05"/>
   <circle cx="180" cy="540" r="220" fill="#ffffff" opacity="0.04"/>
 
-  <!-- violin silhouette (right side) -->
-  <g transform="translate(880 315) rotate(-15)" fill="#ffffff" opacity="0.85">
-    <!-- body -->
-    <path d="M -90 -180 Q -110 -120 -100 -60 Q -160 -40 -150 40 Q -160 130 -90 180 Q -50 200 0 200 Q 50 200 90 180 Q 160 130 150 40 Q 160 -40 100 -60 Q 110 -120 90 -180 Q 50 -210 0 -210 Q -50 -210 -90 -180 Z" fill="#3a2418"/>
-    <!-- F-holes -->
-    <path d="M -50 -20 Q -55 0 -50 20 Q -45 30 -50 40" stroke="#1a0e08" stroke-width="3" fill="none"/>
-    <path d="M  50 -20 Q  55 0  50 20 Q  45 30  50 40" stroke="#1a0e08" stroke-width="3" fill="none"/>
+  <!-- violin (right side, tilted) -->
+  <g transform="translate(920 330) rotate(-22)" filter="url(#violinShadow)">
+
+    <!-- BODY: figure-8 with proper bouts and C-waist.
+         Anatomy: upper bout (top), C-bout (waist), lower bout (bottom).
+         Width ratio ~ 0.85 upper / 1.0 lower; waist ~ 0.55. -->
+    <path d="
+      M 0,-240
+      C -55,-240 -100,-230 -120,-200
+      C -145,-160 -150,-110 -135,-75
+      C -120,-50 -90,-40 -75,-30
+      C -90,-15  -100,5   -100,30
+      C -100,50  -90,65   -75,80
+      C -90,95   -110,120 -125,160
+      C -140,200 -130,250 -90,270
+      C -55,285 -25,288 0,288
+      C 25,288  55,285  90,270
+      C 130,250 140,200 125,160
+      C 110,120 90,95  75,80
+      C 90,65   100,50  100,30
+      C 100,5   90,-15  75,-30
+      C 90,-40  120,-50 135,-75
+      C 150,-110 145,-160 120,-200
+      C 100,-230 55,-240 0,-240
+      Z" fill="url(#bodyShine)" stroke="#2a0e04" stroke-width="2"/>
+
+    <!-- purfling (inlay outline, thin lighter line just inside the edge) -->
+    <path d="
+      M 0,-230
+      C -50,-230 -92,-220 -110,-193
+      C -134,-156 -140,-110 -126,-78
+      C -111,-55 -86,-46 -68,-37
+      M 68,-37
+      C 86,-46 111,-55 126,-78
+      C 140,-110 134,-156 110,-193
+      C 92,-220 50,-230 0,-230
+      M -118,165
+      C -130,200 -120,240 -86,258
+      C -54,272 -26,275 0,275
+      C 26,275 54,272 86,258
+      C 120,240 130,200 118,165
+      " stroke="#e8c890" stroke-width="1.2" fill="none" opacity="0.55"/>
+
+    <!-- f-holes: stylised italic 'f' shape, left and right of centre -->
+    <g fill="#0a0402" stroke="#0a0402" stroke-width="1">
+      <!-- left f-hole -->
+      <path d="
+        M -40,-30
+        C -48,-15 -52,5 -50,30
+        C -48,55 -42,80 -36,100
+        M -50,-32 a 5,5 0 1 0 -1,1 Z
+        M -34,102 a 5,5 0 1 0 1,1 Z
+        " stroke-width="4" fill="none"/>
+      <line x1="-46" y1="35" x2="-32" y2="35" stroke-width="2"/>
+      <!-- right f-hole (mirror) -->
+      <path d="
+        M 40,-30
+        C 48,-15 52,5 50,30
+        C 48,55 42,80 36,100
+        M 50,-32 a 5,5 0 1 1 1,1 Z
+        M 34,102 a 5,5 0 1 1 -1,1 Z
+        " stroke-width="4" fill="none"/>
+      <line x1="46" y1="35" x2="32" y2="35" stroke-width="2"/>
+    </g>
+
     <!-- bridge -->
-    <rect x="-40" y="5" width="80" height="10" fill="#1a0e08"/>
-    <!-- strings -->
-    <line x1="-20" y1="-180" x2="-20" y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
-    <line x1="-7"  y1="-180" x2="-7"  y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
-    <line x1="7"   y1="-180" x2="7"   y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
-    <line x1="20"  y1="-180" x2="20"  y2="200" stroke="#e8e8e0" stroke-width="1.5"/>
-    <!-- neck -->
-    <rect x="-25" y="-280" width="50" height="100" fill="#2a1810"/>
-    <!-- scroll -->
-    <path d="M -25 -290 Q -45 -310 -25 -330 Q 0 -340 25 -330 Q 45 -310 25 -290" fill="#2a1810"/>
+    <path d="M -38,55 L -34,40 L -22,38 L -16,46 L 0,40 L 16,46 L 22,38 L 34,40 L 38,55 Z"
+          fill="#d4a060" stroke="#5a2a0a" stroke-width="1.5"/>
+
+    <!-- tailpiece -->
+    <path d="M -22,140 L 22,140 L 18,230 L -18,230 Z" fill="#1a0a04" stroke="#0a0402" stroke-width="1"/>
+    <!-- chinrest hint -->
+    <ellipse cx="-30" cy="220" rx="32" ry="22" fill="#0a0402" opacity="0.85"/>
+
+    <!-- 4 strings (tailpiece → nut) -->
+    <g stroke="#e8e8d8" stroke-width="1.5" opacity="0.95">
+      <line x1="-12" y1="148" x2="-14" y2="-330"/>
+      <line x1="-4"  y1="148" x2="-5"  y2="-330"/>
+      <line x1="4"   y1="148" x2="5"   y2="-330"/>
+      <line x1="12"  y1="148" x2="14"  y2="-330"/>
+    </g>
+
+    <!-- neck + fingerboard -->
+    <rect x="-20" y="-330" width="40" height="290" fill="url(#neckShade)"/>
+    <rect x="-15" y="-330" width="30" height="290" fill="#0a0402"/>
+
+    <!-- nut -->
+    <rect x="-16" y="-336" width="32" height="8" fill="#e8d8c0"/>
+
+    <!-- pegbox -->
+    <path d="M -16,-336 L -22,-380 L -18,-410 L 18,-410 L 22,-380 L 16,-336 Z"
+          fill="#2a1208" stroke="#0a0402" stroke-width="1.5"/>
+    <!-- pegs -->
+    <g fill="#1a0a04">
+      <circle cx="-22" cy="-355" r="4"/>
+      <circle cx="22"  cy="-365" r="4"/>
+      <circle cx="-22" cy="-380" r="4"/>
+      <circle cx="22"  cy="-395" r="4"/>
+    </g>
+
+    <!-- SCROLL: spiral. Built from a small arc sequence. -->
+    <g fill="none" stroke="#4a2a14" stroke-width="3">
+      <path d="
+        M 18,-410
+        C 25,-420 25,-435 12,-440
+        C -5,-446 -20,-432 -20,-418
+        C -20,-402 -8,-394 4,-398
+        C 14,-402 14,-414 6,-416
+        C -2,-418 -8,-410 -4,-406
+        " fill="#3a1f0e"/>
+      <!-- spiral highlight -->
+      <path d="M -4,-406 C -2,-410 4,-410 6,-406" stroke="#8a5a2a" stroke-width="1.5"/>
+    </g>
+
   </g>
 
-  <!-- bow -->
-  <g transform="translate(750 100) rotate(35)" stroke="#d8c898" stroke-width="3" fill="none" opacity="0.7">
-    <line x1="0" y1="0" x2="320" y2="0"/>
-    <line x1="0" y1="5" x2="320" y2="5"/>
-    <circle cx="-8" cy="2.5" r="8" fill="#3a2418"/>
-    <circle cx="328" cy="2.5" r="6" fill="#3a2418"/>
+  <!-- BOW (left of violin, angled across) -->
+  <g transform="translate(720 90) rotate(38)">
+    <!-- stick (slightly curved) -->
+    <path d="M 0,0 Q 175,-6 350,0" stroke="url(#bowStick)" stroke-width="3.5" fill="none"/>
+    <!-- hair (parallel to stick, lighter) -->
+    <path d="M 8,7 Q 175,2 342,7" stroke="#f0e6c8" stroke-width="2" fill="none" opacity="0.85"/>
+    <!-- frog (heel) -->
+    <rect x="-6" y="-4" width="22" height="14" fill="#1a0a04" stroke="#0a0402" stroke-width="1" rx="2"/>
+    <circle cx="2" cy="3" r="2.5" fill="#c8a868"/>
+    <!-- tip -->
+    <path d="M 342,-2 L 358,2 L 348,9 L 340,7 Z" fill="#1a0a04"/>
   </g>
 
   <!-- title -->
