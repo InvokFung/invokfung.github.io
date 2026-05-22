@@ -1,0 +1,435 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+4:["year","2026","d"]
+5:["month","05","d"]
+6:["day","18","d"]
+7:["slug","threejs_08_low_end_performance","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["I_apd2N7eTKzbrGa7hmPo",[[["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","18","d"],{"children":[["slug","threejs_08_low_end_performance","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"05\",\"day\":\"18\",\"slug\":\"threejs_08_low_end_performance\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","18","d"],{"children":[["slug","threejs_08_low_end_performance","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-22 14:08:25\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T764c,<p>A scene that hits 144 fps on a gaming laptop can collapse to 8 fps on a three-year-old Android. The gap isn't usually about raw GPU speed — it's pixel-fill rate, memory bandwidth, shader complexity, and CPU draw-call overhead. This post is the practical checklist for shipping Three.js to phones, low-end laptops, and integrated GPUs: pixel-ratio capping, budgets for triangles + textures + draw calls, on-demand rendering, shader cost awareness, and the diagnostic flow for any &quot;why is this so slow on my phone&quot; investigation.</p>
+<blockquote>
+<p>Series map: 00 Foundations → 01 Geometry &amp; Materials → 02 Cameras &amp; Controls → 03 Lighting &amp; Shadows → 04 Textures &amp; PBR → 05 Asset Pipeline → 06 Animation → 07 Instancing &amp; Batching → <strong>08 Low-End Performance</strong> (this post) → 09 Shaders → 10 Post-Processing → 11 Physics → 12 R3F → 13 AI 3D.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Cap <code>devicePixelRatio</code> correctly (this alone often doubles framerate).</li>
+<li>Apply triangle / texture / draw-call budgets for mobile.</li>
+<li>Use on-demand rendering when the scene isn't always animating.</li>
+<li>Pick cheaper material families and shadow settings on low-end devices.</li>
+<li>Diagnose CPU vs GPU bottlenecks systematically.</li>
+<li>Detect device capability and adapt at runtime.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Pixel-ratio-the-biggest-free-win"><a href="#Chapter-1-—-Pixel-ratio-the-biggest-free-win" class="headerlink" title="Chapter 1 — Pixel ratio (the biggest free win)"></a>Chapter 1 — Pixel ratio (the biggest free win)</h1>
+<p>A modern phone may report <code>window.devicePixelRatio = 3</code> — meaning a 400×800 logical viewport renders at <strong>1200×2400 actual pixels</strong>. That's <strong>9× the pixels</strong> of a desktop running the same canvas at DPR=1.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="js"><span class="line">renderer.<span class="hljs-title function_">setPixelRatio</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">min</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">devicePixelRatio</span>, <span class="hljs-number">2</span>));</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Capping at 2 is the standard. The visual difference between DPR=2 and DPR=3 is essentially invisible; the performance difference is dramatic.</p>
+<p>For aggressive optimisation, cap at 1.5 or 1 on detected low-end devices. Combine with a quality slider in your UI.</p>
+<hr>
+<h1 id="Chapter-2-—-Budgets"><a href="#Chapter-2-—-Budgets" class="headerlink" title="Chapter 2 — Budgets"></a>Chapter 2 — Budgets</h1>
+<p>Rough budgets for <strong>60 fps on a mid-2020s phone (Snapdragon 7-gen, A15)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Mobile budget</th>
+<th>Desktop budget</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw calls per frame</td>
+<td>≤ 100-200</td>
+<td>≤ 1,000</td>
+</tr>
+<tr>
+<td>Triangles per frame</td>
+<td>≤ 250-500 k</td>
+<td>≤ 5 M</td>
+</tr>
+<tr>
+<td>Active textures</td>
+<td>≤ 30</td>
+<td>≤ 100+</td>
+</tr>
+<tr>
+<td>Texture VRAM total</td>
+<td>≤ 100 MB</td>
+<td>≤ 500 MB</td>
+</tr>
+<tr>
+<td>Shader programs</td>
+<td>keep under 30</td>
+<td>keep under 200</td>
+</tr>
+<tr>
+<td>Shadow maps active</td>
+<td>1 × 1024</td>
+<td>1-3 × 2048</td>
+</tr>
+<tr>
+<td>Postprocess passes</td>
+<td>1-2 (bloom only)</td>
+<td>many</td>
+</tr>
+</tbody>
+</table>
+<p>Low-end / older mobile is 2-4× tighter. Higher-end mobile (latest iPhone Pro) approaches desktop. Always test on the lowest device you intend to support, not your dev machine.</p>
+<h2 id="Measuring"><a href="#Measuring" class="headerlink" title="Measuring"></a>Measuring</h2>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(renderer.<span class="hljs-property">info</span>.<span class="hljs-property">render</span>);   <span class="hljs-comment">// calls, triangles, points, lines</span></span><br><span class="line"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(renderer.<span class="hljs-property">info</span>.<span class="hljs-property">memory</span>);   <span class="hljs-comment">// geometries, textures</span></span><br><span class="line"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(renderer.<span class="hljs-property">info</span>.<span class="hljs-property">programs</span>); <span class="hljs-comment">// shader programs</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>In R3F (Post 12), <code>r3f-perf</code> gives the same overlayed in the canvas.</p>
+<hr>
+<h1 id="Chapter-3-—-On-demand-rendering"><a href="#Chapter-3-—-On-demand-rendering" class="headerlink" title="Chapter 3 — On-demand rendering"></a>Chapter 3 — On-demand rendering</h1>
+<p>If the scene doesn't change every frame (static showroom, paused state), don't render every frame.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">let</span> needsRender = <span class="hljs-literal">true</span>;</span><br><span class="line">controls.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;change&#x27;</span>, <span class="hljs-function">() =&gt;</span> { needsRender = <span class="hljs-literal">true</span>; });</span><br><span class="line"> </span><br><span class="line">renderer.<span class="hljs-title function_">setAnimationLoop</span>(<span class="hljs-function">() =&gt;</span> {</span><br><span class="line">  <span class="hljs-keyword">if</span> (needsRender) {</span><br><span class="line">    renderer.<span class="hljs-title function_">render</span>(scene, camera);</span><br><span class="line">    needsRender = <span class="hljs-literal">false</span>;</span><br><span class="line">  }</span><br><span class="line">});</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>In R3F: <code>&lt;Canvas frameloop=&quot;demand&quot; /&gt;</code>. The renderer goes idle when nothing's happening, dropping power consumption to near zero — invaluable on mobile (battery, thermal throttling).</p>
+<p>For mixed scenes (some always-animating elements, some not), trigger render on relevant property changes only.</p>
+<hr>
+<h1 id="Chapter-4-—-Material-cost-ranking"><a href="#Chapter-4-—-Material-cost-ranking" class="headerlink" title="Chapter 4 — Material cost ranking"></a>Chapter 4 — Material cost ranking</h1>
+<p>Cheaper materials → less per-pixel shader work → less heat → more battery.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Relative GPU cost</th>
+<th>When OK to downgrade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MeshBasicMaterial</code></td>
+<td>1×</td>
+<td>UI, hero text, sprites</td>
+</tr>
+<tr>
+<td><code>MeshLambertMaterial</code></td>
+<td>1.5×</td>
+<td>matte non-shiny</td>
+</tr>
+<tr>
+<td><code>MeshPhongMaterial</code></td>
+<td>2×</td>
+<td>shiny but non-PBR</td>
+</tr>
+<tr>
+<td><code>MeshStandardMaterial</code></td>
+<td>4-6×</td>
+<td>default for hero objects</td>
+</tr>
+<tr>
+<td><code>MeshPhysicalMaterial</code></td>
+<td>6-10×</td>
+<td>only hero objects (glass, clearcoat)</td>
+</tr>
+</tbody>
+</table>
+<p>For low-end builds, swap Standard → Lambert for background props. The difference at small sizes / dim lighting is rarely noticeable.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-comment">// quality-based material selection</span></span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">HIGH_QUALITY</span> = !isMobile &amp;&amp; !isLowEnd;</span><br><span class="line"><span class="hljs-keyword">const</span> propMaterial = <span class="hljs-variable constant_">HIGH_QUALITY</span></span><br><span class="line">  ? <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">MeshStandardMaterial</span>({ <span class="hljs-attr">color</span>: <span class="hljs-number">0xaaaaaa</span>, <span class="hljs-attr">roughness</span>: <span class="hljs-number">0.6</span> })</span><br><span class="line">  : <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">MeshLambertMaterial</span>({ <span class="hljs-attr">color</span>: <span class="hljs-number">0xaaaaaa</span> });</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-5-—-Shadow-settings-for-mobile"><a href="#Chapter-5-—-Shadow-settings-for-mobile" class="headerlink" title="Chapter 5 — Shadow settings for mobile"></a>Chapter 5 — Shadow settings for mobile</h1>
+<p>From Post 03, shadows are often the most expensive piece. For mobile:</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="js"><span class="line">renderer.<span class="hljs-property">shadowMap</span>.<span class="hljs-property">enabled</span> = <span class="hljs-literal">true</span>;</span><br><span class="line">renderer.<span class="hljs-property">shadowMap</span>.<span class="hljs-property">type</span> = <span class="hljs-variable constant_">THREE</span>.<span class="hljs-property">PCFShadowMap</span>;     <span class="hljs-comment">// not PCFSoft on mobile</span></span><br><span class="line">sun.<span class="hljs-property">shadow</span>.<span class="hljs-property">mapSize</span>.<span class="hljs-title function_">set</span>(<span class="hljs-number">1024</span>, <span class="hljs-number">1024</span>);               <span class="hljs-comment">// not 2048</span></span><br><span class="line">sun.<span class="hljs-property">shadow</span>.<span class="hljs-property">camera</span>.<span class="hljs-property">far</span> = <span class="hljs-number">30</span>;                       <span class="hljs-comment">// tighter frustum</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Or skip real-time shadows entirely and bake:</p>
+<ul>
+<li>Static scenery → bake AO + lightmap into textures (Post 03/04). Zero per-frame shadow cost.</li>
+<li>One key character → real-time shadow only for it.</li>
+<li>Use Drei's <code>&lt;AccumulativeShadows&gt;</code> or a <code>ShadowMaterial</code> plane for cheap &quot;contact shadows&quot;.</li>
+</ul>
+<hr>
+<h1 id="Chapter-6-—-Texture-budget"><a href="#Chapter-6-—-Texture-budget" class="headerlink" title="Chapter 6 — Texture budget"></a>Chapter 6 — Texture budget</h1>
+<p>GPU memory is precious on mobile. Each 1024² uncompressed texture = 4 MB. 30 textures = 120 MB — half the VRAM on many phones.</p>
+<p>Discipline:</p>
+<ul>
+<li>Resize source textures to power-of-two and to the actual on-screen size needed (1024² for hero, 512² for medium, 256² for background props).</li>
+<li>Use <strong>KTX2 / Basis Universal</strong> (Post 04) — ~10× GPU memory savings.</li>
+<li>Pack channels (ORM in one RGB image — Post 04).</li>
+<li>Avoid <code>wrapS/T = ClampToEdge</code> if you can tile — repeating textures need lower resolution.</li>
+<li>For decorative repeated detail, use a <strong>trim sheet</strong> (small atlas tiled across many shapes).</li>
+</ul>
+<h2 id="Detecting-mobile-low-end"><a href="#Detecting-mobile-low-end" class="headerlink" title="Detecting mobile / low-end"></a>Detecting mobile / low-end</h2>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">const</span> isMobile = <span class="hljs-regexp">/Mobi|Android/i</span>.<span class="hljs-title function_">test</span>(navigator.<span class="hljs-property">userAgent</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> lowEnd = navigator.<span class="hljs-property">hardwareConcurrency</span> &lt; <span class="hljs-number">4</span> || (navigator.<span class="hljs-property">deviceMemory</span> ?? <span class="hljs-number">4</span>) &lt; <span class="hljs-number">4</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Not perfect (web hides specs by design); good enough to make a tier decision at startup.</p>
+<hr>
+<h1 id="Chapter-7-—-Geometry-budget"><a href="#Chapter-7-—-Geometry-budget" class="headerlink" title="Chapter 7 — Geometry budget"></a>Chapter 7 — Geometry budget</h1>
+<p>Triangle count is rarely the bottleneck for modern GPUs; <strong>fill rate</strong> (pixels × shader cost) is. Still, mobile rasterisers slow on huge meshes:</p>
+<ul>
+<li>High-detail hero models: ~10-30k triangles.</li>
+<li>Background props: ≤ 1k each.</li>
+<li>Total scene triangles: ≤ 500k on mid-mobile, ≤ 100k on low.</li>
+</ul>
+<p>Reduce via:</p>
+<ul>
+<li><code>gltf-transform simplify</code> (CLI).</li>
+<li>LOD swaps (Post 07).</li>
+<li>Decimate / retopo in Blender.</li>
+</ul>
+<blockquote>
+<p><strong>Trick:</strong> check if your model is over-tessellated for its on-screen size. A 50k-tri tree displayed at 30 pixels tall is wasted work; a 500-tri impostor billboard would look identical.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-8-—-Postprocess-discipline-on-mobile"><a href="#Chapter-8-—-Postprocess-discipline-on-mobile" class="headerlink" title="Chapter 8 — Postprocess discipline on mobile"></a>Chapter 8 — Postprocess discipline on mobile</h1>
+<p>Each postprocess pass is a full-screen render at the canvas resolution. On a 1200×2400 phone display (DPR=3 capped to 2 → 800×1600), every pass is <strong>1.28 MP</strong> of fragment work. Three passes triple that.</p>
+<p>Mobile rules:</p>
+<ul>
+<li>0-1 postprocess passes maximum.</li>
+<li>Run post passes at <strong>half resolution</strong> where possible (<code>composer.setSize(w/2, h/2)</code>).</li>
+<li>Skip bloom + SSAO + DOF together — pick one if any.</li>
+<li>Tonemapping in the main render pass is free (<code>renderer.toneMapping = THREE.ACESFilmicToneMapping</code>) — keep that.</li>
+</ul>
+<p>Post 10 covers postprocess in detail.</p>
+<hr>
+<h1 id="Chapter-9-—-Render-targets-memory"><a href="#Chapter-9-—-Render-targets-memory" class="headerlink" title="Chapter 9 — Render targets + memory"></a>Chapter 9 — Render targets + memory</h1>
+<p>Each render target (custom framebuffer used for post passes, reflections, planar mirrors, refraction) = a full-resolution colour + depth texture. On mobile, two render targets at full resolution might already eat 30 MB.</p>
+<p>Tips:</p>
+<ul>
+<li>Half-resolution where the artifact won't be noticed.</li>
+<li>Reuse the same render target across passes (ping-pong) instead of allocating new each frame.</li>
+<li>Free render targets you no longer use: <code>rt.dispose()</code>.</li>
+</ul>
+<hr>
+<h1 id="Chapter-10-—-CPU-vs-GPU-bottleneck-—-diagnosis"><a href="#Chapter-10-—-CPU-vs-GPU-bottleneck-—-diagnosis" class="headerlink" title="Chapter 10 — CPU vs GPU bottleneck — diagnosis"></a>Chapter 10 — CPU vs GPU bottleneck — diagnosis</h1>
+<p>Three classes of bottleneck. Different fixes for each.</p>
+<table>
+<thead>
+<tr>
+<th>Bottleneck</th>
+<th>Symptom</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPU</strong> (JS + draw calls)</td>
+<td>high JS time in Performance panel; <code>renderer.info.calls</code> high</td>
+<td>reduce draw calls (Post 07); move per-frame work out of JS; throttle updates</td>
+</tr>
+<tr>
+<td><strong>GPU fragment</strong> (pixel shader / fill rate)</td>
+<td>lowering pixel ratio drastically improves; high GPU ms</td>
+<td>cheaper materials; smaller postprocess; smaller canvas</td>
+</tr>
+<tr>
+<td><strong>GPU vertex</strong> (geometry)</td>
+<td>many high-tri meshes; OK on small canvas, slow on big</td>
+<td>LOD; geometry simplification; instancing</td>
+</tr>
+</tbody>
+</table>
+<p>Quick test: <strong>halve the canvas size</strong> (<code>renderer.setSize(w/2, h/2)</code>). If FPS doubles or more, you're GPU-bound. If little change, you're CPU-bound.</p>
+<p>Quick test 2: <strong>disable shadows + post</strong>. If FPS doubles, those were the cost. Tune them.</p>
+<p>Use <strong>stats-gl</strong> (Post 00) — separate CPU ms and GPU ms readouts make this diagnosis straightforward.</p>
+<hr>
+<h1 id="Chapter-11-—-Adaptive-quality-the-production-pattern"><a href="#Chapter-11-—-Adaptive-quality-the-production-pattern" class="headerlink" title="Chapter 11 — Adaptive quality (the production pattern)"></a>Chapter 11 — Adaptive quality (the production pattern)</h1>
+<p>Detect FPS over a window; downgrade quality automatically when it drops.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">let</span> avgFps = <span class="hljs-number">60</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> quality = <span class="hljs-number">1.0</span>;     <span class="hljs-comment">// 0..1 multiplier</span></span><br><span class="line"> </span><br><span class="line">renderer.<span class="hljs-title function_">setAnimationLoop</span>(<span class="hljs-function">() =&gt;</span> {</span><br><span class="line">  <span class="hljs-keyword">const</span> dt = clock.<span class="hljs-title function_">getDelta</span>();</span><br><span class="line">  avgFps = avgFps * <span class="hljs-number">0.95</span> + (<span class="hljs-number">1</span> / dt) * <span class="hljs-number">0.05</span>;</span><br><span class="line"> </span><br><span class="line">  <span class="hljs-keyword">if</span> (avgFps &lt; <span class="hljs-number">40</span> &amp;&amp; quality &gt; <span class="hljs-number">0.5</span>) {</span><br><span class="line">    quality -= <span class="hljs-number">0.05</span>;</span><br><span class="line">    renderer.<span class="hljs-title function_">setPixelRatio</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">devicePixelRatio</span> * quality);</span><br><span class="line">    composer.<span class="hljs-title function_">setSize</span>(innerWidth * quality, innerHeight * quality);</span><br><span class="line">  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (avgFps &gt; <span class="hljs-number">55</span> &amp;&amp; quality &lt; <span class="hljs-number">1.0</span>) {</span><br><span class="line">    quality += <span class="hljs-number">0.02</span>;</span><br><span class="line">    renderer.<span class="hljs-title function_">setPixelRatio</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">devicePixelRatio</span> * quality);</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  renderer.<span class="hljs-title function_">render</span>(scene, camera);</span><br><span class="line">});</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Same pattern works for: disabling shadows below threshold, swapping to simpler materials, dropping postprocess.</p>
+<blockquote>
+<p><strong>Trick:</strong> Three.js has built-in helpers for adaptive scaling — see <code>examples/jsm/utils/AdaptiveDpr.js</code>. Saves you writing the loop.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-12-—-Bundle-size-load-time"><a href="#Chapter-12-—-Bundle-size-load-time" class="headerlink" title="Chapter 12 — Bundle size + load time"></a>Chapter 12 — Bundle size + load time</h1>
+<p>Slow first paint kills mobile users on cellular. Reduce JS bundle:</p>
+<ul>
+<li><strong>Tree-shake</strong> — Vite + ESM does this automatically; avoid importing <code>three</code> namespaces from anything but <code>three/addons/*</code>.</li>
+<li><strong>Lazy-load</strong> decoders (Post 05) — DRACOLoader + KTX2Loader pulled only when needed.</li>
+<li><strong>Lazy-load</strong> Three.js itself — dynamic <code>import('three')</code> inside the first interaction handler if 3D isn't the main page content.</li>
+<li>Show a <strong>loading indicator</strong> during decode (10-100 MB models can take seconds even after download).</li>
+</ul>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">LoadingManager</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;three&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> manager = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">LoadingManager</span>();</span><br><span class="line">manager.<span class="hljs-property">onProgress</span> = <span class="hljs-function">(<span class="hljs-params">url, loaded, total</span>) =&gt;</span> {</span><br><span class="line">  progressBar.<span class="hljs-property">value</span> = (loaded / total) * <span class="hljs-number">100</span>;</span><br><span class="line">};</span><br><span class="line"><span class="hljs-keyword">const</span> loader = <span class="hljs-keyword">new</span> <span class="hljs-title class_">GLTFLoader</span>(manager);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-13-—-The-mobile-audit-checklist"><a href="#Chapter-13-—-The-mobile-audit-checklist" class="headerlink" title="Chapter 13 — The mobile audit checklist"></a>Chapter 13 — The mobile audit checklist</h1>
+<p>Before shipping any Three.js page to mobile:</p>
+<ul>
+<li>[ ] <code>renderer.setPixelRatio(Math.min(devicePixelRatio, 2))</code>.</li>
+<li>[ ] Draw calls measured + ≤ 100-200.</li>
+<li>[ ] Triangles ≤ 500k.</li>
+<li>[ ] Textures KTX2-compressed; total ≤ 100 MB GPU.</li>
+<li>[ ] Shadows: 1 × 1024 PCF (or baked AO only).</li>
+<li>[ ] Postprocess: 0-1 passes max.</li>
+<li>[ ] On-demand rendering if scene isn't always animating.</li>
+<li>[ ] Tested on the lowest-end target device, not just dev machine.</li>
+<li>[ ] Loading indicator + progress.</li>
+<li>[ ] Lazy-loaded decoders, lazy-loaded Three.js if 3D is secondary.</li>
+<li>[ ] Adaptive quality loop in place.</li>
+<li>[ ] Battery + thermal tested for sessions &gt; 1 minute.</li>
+</ul>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Pixel-ratio-swap"><a href="#Exercise-1-—-Pixel-ratio-swap" class="headerlink" title="Exercise 1 — Pixel ratio swap"></a>Exercise 1 — Pixel ratio swap</h2>
+<p>Build a scene with 1000 cubes. Render with DPR uncapped vs DPR=2 vs DPR=1. Measure FPS on a phone.</p>
+<h2 id="Exercise-2-—-Audit-a-real-model"><a href="#Exercise-2-—-Audit-a-real-model" class="headerlink" title="Exercise 2 — Audit a real model"></a>Exercise 2 — Audit a real model</h2>
+<p>Load any free Sketchfab model. Print <code>renderer.info.render</code> + <code>renderer.info.memory</code>. Note draw calls, textures, triangles. Decide what to optimise.</p>
+<h2 id="Exercise-3-—-On-demand-rendering"><a href="#Exercise-3-—-On-demand-rendering" class="headerlink" title="Exercise 3 — On-demand rendering"></a>Exercise 3 — On-demand rendering</h2>
+<p>Convert your default render loop to on-demand. Trigger render on OrbitControls <code>change</code>. Watch CPU usage drop to 0 in idle state.</p>
+<h2 id="Exercise-4-—-Quality-tiers"><a href="#Exercise-4-—-Quality-tiers" class="headerlink" title="Exercise 4 — Quality tiers"></a>Exercise 4 — Quality tiers</h2>
+<p>Build a quality selector (Low / Medium / High) that switches: pixel ratio, shadow map size, shadow type, material families. Switch live without re-loading.</p>
+<h2 id="Exercise-5-—-Adaptive-loop"><a href="#Exercise-5-—-Adaptive-loop" class="headerlink" title="Exercise 5 — Adaptive loop"></a>Exercise 5 — Adaptive loop</h2>
+<p>Implement Chapter 11's adaptive quality loop. Simulate slow GPU with <code>for (let i = 0; i &lt; 1e6; i++) {}</code> inside the render loop. Observe quality scaling down.</p>
+<h2 id="Exercise-6-—-Bottleneck-diagnosis"><a href="#Exercise-6-—-Bottleneck-diagnosis" class="headerlink" title="Exercise 6 — Bottleneck diagnosis"></a>Exercise 6 — Bottleneck diagnosis</h2>
+<p>A scene seemingly lagging on mobile. Halve canvas size — measure. Disable shadows — measure. Disable post — measure. Identify the dominant cost.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixel ratio cap</td>
+<td><code>renderer.setPixelRatio(Math.min(devicePixelRatio, 2))</code></td>
+</tr>
+<tr>
+<td>Mobile draw-call budget</td>
+<td>&lt; 100-200</td>
+</tr>
+<tr>
+<td>Mobile triangle budget</td>
+<td>&lt; 500k</td>
+</tr>
+<tr>
+<td>Mobile texture VRAM</td>
+<td>&lt; 100 MB</td>
+</tr>
+<tr>
+<td>On-demand render</td>
+<td>only render when needsRender flag set</td>
+</tr>
+<tr>
+<td>Cheap material</td>
+<td>Lambert &gt; Phong &gt; Standard for background props</td>
+</tr>
+<tr>
+<td>Shadow on mobile</td>
+<td>1024 PCF (not 2048 PCFSoft)</td>
+</tr>
+<tr>
+<td>Postprocess on mobile</td>
+<td>0-1 passes</td>
+</tr>
+<tr>
+<td>Diagnose CPU vs GPU</td>
+<td>halve canvas; if FPS doubles → GPU-bound</td>
+</tr>
+<tr>
+<td>Disable shadows test</td>
+<td>confirms shadow cost</td>
+</tr>
+<tr>
+<td>Adaptive quality</td>
+<td>downgrade pixel ratio + shadow size on low FPS</td>
+</tr>
+<tr>
+<td>Mobile detection</td>
+<td>`/Mobi</td>
+</tr>
+<tr>
+<td>Capability detect</td>
+<td><code>navigator.hardwareConcurrency</code>, <code>navigator.deviceMemory</code></td>
+</tr>
+<tr>
+<td>Loading manager</td>
+<td>progress for users; lazy-load decoders</td>
+</tr>
+<tr>
+<td>Free render target</td>
+<td><code>rt.dispose()</code> when unused</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 09 dives into <strong>shaders</strong> — both classical GLSL ShaderMaterial and the new <strong>TSL (Three.js Shading Language) NodeMaterial</strong> that compiles to both WebGL2 and WebGPU. Custom shaders unlock effects the built-in materials can't do.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.utsubo.com/blog/threejs-best-practices-100-tips" target="_blank" rel="noopener external nofollow noreferrer">100 Three.js Tips That Actually Improve Performance (2026)</a></li>
+<li><a href="https://medium.com/@coders.stop/optimizing-performance-in-three-js-rendering-smoothly-on-low-end-devices-e48d2cc516cc" target="_blank" rel="noopener external nofollow noreferrer">Optimising Three.js for Mobile Devices (Coders Stop)</a></li>
+<li><a href="https://threejs-journey.com/lessons/performance-tips" target="_blank" rel="noopener external nofollow noreferrer">Performance tips — Three.js Journey</a></li>
+<li><a href="https://threejs.org/examples/" target="_blank" rel="noopener external nofollow noreferrer">Three.js examples — <code>webgl_*</code> perf demos</a></li>
+<li><a href="https://www.krapton.com/blog/boosting-react-three-fiber-mobile-performance-in-2026-a-deep-dive-d6105c" target="_blank" rel="noopener external nofollow noreferrer">Boosting R3F Mobile Performance 2026 (Krapton)</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: thermal-throttling benchmarks; WebGL vs WebGPU mobile comparison; first-paint optimisation per Lighthouse.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Three.js Course — 08 · Performance on Low-End & Mobile Devices\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-05-22 14:08:25\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Three.js Course — 08 · Performance on Low-End & Mobile Devices"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-05-18T09:00:00.000Z","title":"Created 2026-05-18 17:00:00","children":"2026-05-18"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-05-18T09:00:00.000Z","title":"Updated 2026-05-18 17:00:00","children":"2026-05-18"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Programming",{"className":"post-meta-categories","href":"/blog/categories/Programming/","children":"Programming"}]],[["$","span","sep-3D",{"children":" > "}],["$","a","3D",{"className":"post-meta-categories","href":"/blog/categories/3D/","children":"3D"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Three.js Course — 08 · Performance on Low-End & Mobile Devices","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/05/18/threejs_08_low_end_performance/","children":"https://invokfung.github.io/blog/2026/05/18/threejs_08_low_end_performance/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Computer Science",{"className":"post-meta__tags","href":"/blog/tags/Computer-Science/","children":"Computer Science"}],["$","a","3D",{"className":"post-meta__tags","href":"/blog/tags/3D/","children":"3D"}],["$","a","Three.js",{"className":"post-meta__tags","href":"/blog/tags/Three-js/","children":"Three.js"}],["$","a","Performance",{"className":"post-meta__tags","href":"/blog/tags/Performance/","children":"Performance"}],["$","a","Mobile",{"className":"post-meta__tags","href":"/blog/tags/Mobile/","children":"Mobile"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/05/18/threejs_09_shaders_glsl_tsl/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Three.js Course — 09 · Custom Shaders — GLSL &amp; TSL Node Material</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/05/18/threejs_07_instancing_batching/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Three.js Course — 07 · Instancing &amp; Batching for Large Scenes</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","threejs_07_instancing_batching",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_07_instancing_batching/","title":"Three.js Course — 07 · Instancing & Batching for Large Scenes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 07 · Instancing &amp; Batching for Large Scenes</div></div>"}}]}],["$","div","threejs_00_foundations",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_00_foundations/","title":"Three.js Course — 00 · Foundations, WebGL/WebGPU, First Scene","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 00 · Foundations, WebGL/WebGPU, First Scene</div></div>"}}]}],["$","div","threejs_01_geometry_materials",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_01_geometry_materials/","title":"Three.js Course — 01 · Geometry & Materials","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 01 · Geometry &amp; Materials</div></div>"}}]}],["$","div","threejs_02_cameras_controls",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_02_cameras_controls/","title":"Three.js Course — 02 · Cameras, Controls, and Coordinate Systems","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 02 · Cameras, Controls, and Coordinate Systems</div></div>"}}]}],["$","div","threejs_03_lighting_shadows",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_03_lighting_shadows/","title":"Three.js Course — 03 · Lighting & Shadows (PCF, PCFSoft, VSM, CSM, Contact)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 03 · Lighting &amp; Shadows (PCF, PCFSoft, VSM, CSM, Contact)</div></div>"}}]}],["$","div","threejs_04_textures_pbr",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_04_textures_pbr/","title":"Three.js Course — 04 · Textures & PBR (Color Space, IBL, KTX2)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 04 · Textures &amp; PBR (Color Space, IBL, KTX2)</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Pixel-ratio-the-biggest-free-win",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Pixel-ratio-the-biggest-free-win","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Pixel ratio (the biggest free win)"}]]}],null]}],["$","li","Chapter-2-—-Budgets",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Budgets","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Budgets"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Measuring",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Measuring","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Measuring"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-On-demand-rendering",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-On-demand-rendering","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — On-demand rendering"}]]}],null]}],["$","li","Chapter-4-—-Material-cost-ranking",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Material-cost-ranking","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Material cost ranking"}]]}],null]}],["$","li","Chapter-5-—-Shadow-settings-for-mobile",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Shadow-settings-for-mobile","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Shadow settings for mobile"}]]}],null]}],["$","li","Chapter-6-—-Texture-budget",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Texture-budget","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Texture budget"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Detecting-mobile-low-end",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Detecting-mobile-low-end","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Detecting mobile / low-end"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Geometry-budget",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Geometry-budget","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Geometry budget"}]]}],null]}],["$","li","Chapter-8-—-Postprocess-discipline-on-mobile",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Postprocess-discipline-on-mobile","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Postprocess discipline on mobile"}]]}],null]}],["$","li","Chapter-9-—-Render-targets-memory",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Render-targets-memory","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Render targets + memory"}]]}],null]}],["$","li","Chapter-10-—-CPU-vs-GPU-bottleneck-—-diagnosis",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-10-—-CPU-vs-GPU-bottleneck-—-diagnosis","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 10 — CPU vs GPU bottleneck — diagnosis"}]]}],null]}],["$","li","Chapter-11-—-Adaptive-quality-the-production-pattern",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-11-—-Adaptive-quality-the-production-pattern","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 11 — Adaptive quality (the production pattern)"}]]}],null]}],["$","li","Chapter-12-—-Bundle-size-load-time",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-12-—-Bundle-size-load-time","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 12 — Bundle size + load time"}]]}],null]}],["$","li","Chapter-13-—-The-mobile-audit-checklist",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-13-—-The-mobile-audit-checklist","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 13 — The mobile audit checklist"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"15."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Pixel-ratio-swap",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Pixel-ratio-swap","children":[["$","span",null,{"className":"toc-number","children":"15.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Pixel ratio swap"}]]}],null]}],["$","li","Exercise-2-—-Audit-a-real-model",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Audit-a-real-model","children":[["$","span",null,{"className":"toc-number","children":"15.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Audit a real model"}]]}],null]}],["$","li","Exercise-3-—-On-demand-rendering",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-On-demand-rendering","children":[["$","span",null,{"className":"toc-number","children":"15.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — On-demand rendering"}]]}],null]}],["$","li","Exercise-4-—-Quality-tiers",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Quality-tiers","children":[["$","span",null,{"className":"toc-number","children":"15.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Quality tiers"}]]}],null]}],["$","li","Exercise-5-—-Adaptive-loop",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Adaptive-loop","children":[["$","span",null,{"className":"toc-number","children":"15.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Adaptive loop"}]]}],null]}],["$","li","Exercise-6-—-Bottleneck-diagnosis",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Bottleneck-diagnosis","children":[["$","span",null,{"className":"toc-number","children":"15.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Bottleneck diagnosis"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"16."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"17."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"18."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","py_05_files_exceptions",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_05_files_exceptions/","title":"Python Course — 05 · Files, Paths, and Exception Handling","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_05_files.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 05 · Files, Paths, and Exception Handling\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_05_files_exceptions/","title":"Python Course — 05 · Files, Paths, and Exception Handling","children":"Python Course — 05 · Files, Paths, and Exception Handling"}],["$","time",null,{"dateTime":"2026-05-22T12:00:00.000Z","title":"Created 2026-05-22 20:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_04_oop",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_04_oop/","title":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_04_oop.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_04_oop/","title":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)","children":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)"}],["$","time",null,{"dateTime":"2026-05-22T11:00:00.000Z","title":"Created 2026-05-22 19:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_03_functions_modules",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_03_functions_modules/","title":"Python Course — 03 · Functions, Scope, Modules, and Packages","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_03_functions.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 03 · Functions, Scope, Modules, and Packages\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_03_functions_modules/","title":"Python Course — 03 · Functions, Scope, Modules, and Packages","children":"Python Course — 03 · Functions, Scope, Modules, and Packages"}],["$","time",null,{"dateTime":"2026-05-22T10:00:00.000Z","title":"Created 2026-05-22 18:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_02_data_structures",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_02_data.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","children":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)"}],["$","time",null,{"dateTime":"2026-05-22T09:00:00.000Z","title":"Created 2026-05-22 17:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_01_syntax_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_01_syntax.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 01 · Syntax, Types, and Control Flow\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","children":"Python Course — 01 · Syntax, Types, and Control Flow"}],["$","time",null,{"dateTime":"2026-05-22T08:00:00.000Z","title":"Created 2026-05-22 16:00:00","children":"2026-05-22"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Three.js Course — 08 · Performance on Low-End & Mobile Devices | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"A scene that hits 144 fps on a gaming laptop can collapse to 8 fps on a three-year-old Android. The gap isn't usually about raw GPU speed — it's pixel"}],["$","meta","5",{"name":"keywords","content":"Computer Science,3D,Three.js,Performance,Mobile,Course"}],["$","meta","6",{"property":"og:title","content":"Three.js Course — 08 · Performance on Low-End & Mobile Devices"}],["$","meta","7",{"property":"og:description","content":"A scene that hits 144 fps on a gaming laptop can collapse to 8 fps on a three-year-old Android. The gap isn't usually about raw GPU speed — it's pixel"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Three.js Course — 08 · Performance on Low-End & Mobile Devices"}],["$","meta","11",{"name":"twitter:description","content":"A scene that hits 144 fps on a gaming laptop can collapse to 8 fps on a three-year-old Android. The gap isn't usually about raw GPU speed — it's pixel"}]]
+1:null

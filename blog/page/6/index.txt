@@ -1,0 +1,1309 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+8:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","23","static/chunks/app/page/%5Bn%5D/page-88088e291ee47529.js"],"default"]
+9:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","23","static/chunks/app/page/%5Bn%5D/page-88088e291ee47529.js"],"default"]
+a:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","23","static/chunks/app/page/%5Bn%5D/page-88088e291ee47529.js"],"default"]
+b:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","23","static/chunks/app/page/%5Bn%5D/page-88088e291ee47529.js"],""]
+c:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","23","static/chunks/app/page/%5Bn%5D/page-88088e291ee47529.js"],"default"]
+4:["n","6","d"]
+6:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;7:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["I_apd2N7eTKzbrGa7hmPo",[[["",{"children":["page",{"children":[["n","6","d"],{"children":["__PAGE__?{\"n\":\"6\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["page",{"children":[["n","6","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","page","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","page","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$6"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-22 14:08:28\"};"}}],["$","$L8",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$L9",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$La",null,{"isHome":false,"isPost":false}],["$","$Lb",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lc",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$Ld",null]]]]
+e:T282e,The basic post covered HTML, CSS, vanilla JS, jQuery. Modern web development sits on top of that base: Node.js as a JS runtime everywhere, package managers to wire dependencies, bundlers (Vite, esbuild, webpack) to produce production assets, component frameworks (React, Vue, Svelte) to manage state + UI, CSS frameworks (Tailwind, Bootstrap) to keep styles consistent, icon sets (Font Awesome, Lucide) for visuals, and a deployment story for shipping the result. This post is a survey of the stack and the trade-offs. (3D / WebGL / Three.js has its own dedicated series — see the link at the end.)
+
+Learning Outcome
+
+- Install and use Node.js + npm / pnpm / yarn.- Initialise a project with Vite, understand the dev server + build output.- Read and write a React or Vue component with state, props, events.- Pick between React, Vue, Svelte for a new project.- Use a CSS framework (Tailwind / Bootstrap) effectively.- Add icons with Font Awesome or Lucide.- Call REST / GraphQL APIs from the browser.- Deploy a static site (Vercel / Netlify / Cloudflare Pages / S3+CloudFront).
+
+Chapter 1 — Node.js as a JS runtime
+
+Node.js is V8 (Chrome's JS engine) outside the browser. It powers:
+
+- Build tools (Vite, webpack, esbuild, Rollup).- Local dev servers.- The package manager (npm).- Many backend frameworks (Express, Fastify, NestJS, Next.js API routes).- Build pipelines in CI.
+
+Install via nodejs.org (LTS) or nvm (manage multiple versions). Verify:
+
+Run a script:
+
+REPL:  opens an interactive prompt similar to Python's.
+
+Chapter 2 — Package managers
+
+Three contenders today:
+
+| Tool | Speed | Disk | Notes ||------|-------|------|-------|| npm | OK | duplicates per-project | ships with Node || pnpm | fastest | content-addressed store, hard-linked | modern default for many teams || yarn (Berry) | fast | Plug'n'Play option | corporate use, monorepos |
+
+Pick one per project and stick with it. The lockfile ( /  / ) is committed.
+
+Common commands (npm flavour)
+
+A typical :
+
+Chapter 3 — Build tools (Vite + ESM)
+
+Old days: webpack + Babel + a 200-line config; cold start 30 sec, HMR 2-5 sec. Modern: Vite uses native ES modules in dev (zero bundling) and esbuild / Rollup for production builds. Cold start < 500 ms, HMR < 100 ms.
+
+Templates: , , , , , , , , , , , . TypeScript is the default in modern teams.
+
+Why ESM matters
+
+The browser fetches each -ed module separately. Dev servers serve them un-bundled — only re-process the file you changed. Production builds still bundle (fewer requests, tree-shaking).
+
+Chapter 4 — React vs Vue vs Svelte
+
+The three live framework families. Brief comparison:
+
+| | React | Vue | Svelte ||---|-------|-----|--------|| Released | 2013 | 2014 | 2016 || Maintainer | Meta | core team | core team || Component file |  /  |  (HTML+JS+CSS in one) |  || State | hooks (, ) | reactivity (, ) | language-level () || Templating | JSX (JS-like) | HTML template + directives | HTML + minimal directives || Bundle size baseline | 45 KB gzipped | 30 KB | 5 KB (compiles away) || Job market | dominant | strong, especially APAC | growing || Best for | huge ecosystem, hiring | balance of approachability + power | smallest output, first-time learners |
+
+There is no universally best. React if hiring + ecosystem matters most. Vue for a balanced learning curve. Svelte for performance + simplicity at small-to-medium scale.
+
+Chapter 5 — React essentials
+
+Rules of thumb:
+
+- JSX — HTML-like syntax that compiles to .-  for local state.-  for side effects (data fetching, subscriptions).- Props are read-only inputs from parent.- Always give array children a stable  prop.- Component names are PascalCase.
+
+Fetching data
+
+For real apps, use TanStack Query () or SWR instead of hand-rolling effects.
+
+Routing
+
+React itself does not include routing. Add React Router () for SPA routes, or use Next.js / Remix for a more opinionated framework with file-based routing + server rendering.
+
+Chapter 6 — Vue essentials (composition API)
+
+Single-file components bundle template + logic + styles.  wraps a value; access with  in JS, unwrapped automatically in templates.
+
+Routing: . State: . Full-stack framework: .
+
+Chapter 7 — CSS frameworks
+
+| Approach | Example | When ||----------|---------|------|| Utility classes | Tailwind, UnoCSS | rapid prototyping, design systems, modern teams || Component CSS | Bootstrap, Bulma | quick admin/dashboard, less custom design || CSS-in-JS | styled-components, Emotion | React apps with dynamic styling || CSS Modules | (built into Vite) | scoped styles per component, no framework || Hand-written | nothing | full control, small projects, design-led |
+
+Tailwind (the modern default)
+
+Install:
+
+Configure  in  and include  in your CSS entry.
+
+Bootstrap (still widely used)
+
+Heavier visual opinion, faster to assemble admin dashboards. Pair with the JS plugins (modals, dropdowns, tooltips).
+
+> Trick: mixing Tailwind + Bootstrap in the same project usually fights — both impose layout opinions. Pick one. For new projects, Tailwind almost always wins; for legacy + content-heavy, Bootstrap can still shine.
+
+Chapter 8 — Icons
+
+| Library | Bundle | Use ||---------|--------|-----|| Font Awesome | huge if loaded all; tree-shake-friendly via React/Vue packages | mainstream brand-icons + many UI icons || Lucide (fork of Feather) | small, MIT, modern | most React/Vue teams default in 2026 || Heroicons | from Tailwind team | pairs with Tailwind nicely || Material Symbols | Google | Android / Material Design feel || Tabler Icons | huge free set | open-source designers' favourite |
+
+React usage (Lucide):
+
+Avoid loading the whole Font Awesome CSS bundle in 2026 — too heavy. Use the per-icon import pattern for any library.
+
+Chapter 9 — APIs: REST + GraphQL
+
+REST
+
+GraphQL
+
+Single endpoint, client picks fields:
+
+Tools: Apollo Client (React/Vue), urql, graphql-request.
+
+Data-fetching libraries (the time-saver)
+
+Hand-rolling fetch + loading + error state in every component is repetitive. Use:
+
+- TanStack Query (, )- SWR (React)- Pinia Colada (Vue)
+
+They handle caching, deduplication, retries, background refresh, pagination, and devtools. Standard in modern apps.
+
+Chapter 10 — TypeScript (briefly)
+
+JavaScript with optional static types. Catches whole classes of bugs at compile time + improves IDE autocomplete.
+
+Vite templates ship with TS preconfigured. Use TS for any project bigger than a one-page demo — the productivity payoff comes quickly.
+
+Chapter 11 — Deployment
+
+| Target | Tool | Best for ||--------|------|----------|| Static hosting | Vercel, Netlify, Cloudflare Pages, GitHub Pages | SPAs, marketing sites, docs || S3 + CloudFront | AWS | full control, fits a wider AWS stack || Full-stack edge | Vercel (Next.js), Cloudflare Workers, Deno Deploy | SSR + APIs + edge || Containers | Fly.io, Render, AWS ECS/Fargate | Node.js servers, WebSockets, background jobs || VPS | DigitalOcean, Hetzner, Linode | hand-rolled, cheap |
+
+A typical Vite build → static deploy:
+
+For React/Vue SPAs that need a backend, the easiest stack in 2026 is Next.js on Vercel or Nuxt on Vercel/Cloudflare — they unify frontend + serverless backend + edge functions in one deployment.
+
+Chapter 12 — Performance baseline
+
+Hit these targets in Lighthouse for a polished site:
+
+| Metric | Target ||--------|--------|| LCP (Largest Contentful Paint) | < 2.5 s || INP (Interaction to Next Paint) | < 200 ms || CLS (Cumulative Layout Shift) | < 0.1 || First-load JS (uncompressed) | < 200 KB || Image format | AVIF / WebP, not PNG/JPG raw || Fonts | , subset, self-host |
+
+Tools: Lighthouse (in DevTools), PageSpeed Insights, WebPageTest.
+
+Common wins:1. Lazy-load below-the-fold images ().2. Code-split routes (, dynamic ).3. Compress images (use a build-time tool — , ).4. Preload the hero font.5. Remove unused JS (the bundle analyzer flags it).
+
+Practice Exercises
+
+Exercise 1 — Vite + React/Vue starter
+
+. Build a single-page counter app. Push to GitHub. Deploy to Vercel.
+
+Exercise 2 — TanStack Query
+
+Fetch  with TanStack Query. Render the list with loading + error states. Add a refresh button.
+
+Exercise 3 — Tailwind UI
+
+Build a 3-card pricing layout with Tailwind. Responsive: stacked on mobile, 3 columns on desktop. Use Lucide icons in the feature lists.
+
+Exercise 4 — Full mini-app
+
+A note-taking app: list + create + delete + edit. State via React Context or Pinia. Data fetched via TanStack Query against a mock JSON server (). TypeScript. Tailwind. Deploy to Vercel.
+
+Cheat-sheet
+
+| What | How ||------|-----|| Init project |  || Add dep |  || Add dev dep |  || Run script |  || React state |  || React effect |  || Vue state |  || Vue effect |  || Routing (React) |  / Next.js || Routing (Vue) |  / Nuxt || Data fetching | TanStack Query / SWR || Style toolkit | Tailwind (modern) / Bootstrap (legacy) || Icon | Lucide / Heroicons / Font Awesome || Types | TypeScript everywhere || Deploy static | Vercel / Netlify / Cloudflare Pages || Deploy full-stack | Next.js on Vercel || Audit perf | Lighthouse / PageSpeed Insights |
+
+Where to next
+
+For 3D, WebGL, WebGPU, Three.js, React Three Fiber, shaders, instancing, physics, AI-assisted 3D and the rest — see the dedicated Three.js series (posts  through ). That topic deserved its own multi-post arc rather than a single chapter.
+
+Other areas that warrant their own deep-dive posts in future:
+
+- Next.js / Nuxt — full-stack frameworks built on React / Vue with file-based routing, server components, edge.- State management — Zustand, Jotai, Redux Toolkit (React); Pinia (Vue).- Testing — Vitest + Testing Library, Playwright for E2E.- Animations — Framer Motion (React), GSAP, View Transitions API.- PWA — service workers, offline, install-to-home-screen.- WebSockets / real-time — Socket.IO, native WebSocket, SSE.- Web Components / Lit — framework-agnostic components.- Astro / Qwik — modern islands / resumability frameworks for content sites.
+
+References
+
+- MDN Web Docs- React docs- Vue docs- Svelte docs- Vite docs- Tailwind docs- TanStack Query- web.dev — Google's modern web practices.
+
+> Note: this post is in progress. Planned additions: Next.js full walkthrough, Server Components explained, deep dive on Web Animations API. (WebGPU + Three.js is covered in the separate Three.js series.)
+f:T1fa3,Java is a statically-typed, class-based, compiled-to-bytecode language that runs on the Java Virtual Machine (JVM). It powers Android, large enterprise backends (Spring), big-data tools (Hadoop, Kafka), and most banking infrastructure. Part 1 of this two-part series covers the language core: from "hello world" through OOP, generics, exceptions, file I/O, and the basics of multithreading. Part 2 picks up with GUI, events, functional programming, collections, and the Stream API.
+
+Learning Outcome
+
+- Compile and run Java programs with  +  (and via an IDE).- Use primitives, wrappers, control flow, arrays, and strings idiomatically.- Define classes with constructors, fields, methods, access modifiers, and .- Use inheritance, polymorphism, abstract classes, and interfaces.- Apply solid OOD principles (SOLID, encapsulation, composition over inheritance).- Write and use generic classes + methods.- Handle errors with  and custom exceptions.- Use  for development-time invariants.- Read and write files using the modern  API.- Run code on multiple threads and recognise the standard concurrency utilities.
+
+Chapter 1 — Introduction
+
+Terminology
+
+- JDK — Java Development Kit: compiler + standard library + tools.- JRE — Java Runtime Environment: enough to run compiled code (rarely separated from JDK anymore).- JVM — Java Virtual Machine: executes bytecode.- Bytecode — the  file format produced by .- Class — the template for objects.- Object — an instance of a class.- Package — a namespace; maps to a directory.- Main method — the JVM entry point: .
+
+Install
+
+| OS | Recommended ||----|--------------|| Any | Temurin (Eclipse Adoptium build of OpenJDK) — LTS 21 in 2026 || macOS |  || Windows |  || Linux |  (or distribution equivalent) |
+
+Verify:
+
+Or use an IDE — IntelliJ IDEA Community is the standard pick.
+
+Hello, world
+
+:
+
+Compile + run:
+
+Class name must match filename. One  class per file.
+
+Modern Java (21+) supports a simplified compilation for single-file programs:
+
+Useful for scripts and learning.
+
+Chapter 2 — Objects and Classes
+
+Terminology
+
+- Field — class-level variable (state).- Method — class-level function (behaviour).- Constructor — special method called when  creates an instance.-  — reference to the current instance inside a method.-  — belongs to the class, not an instance.- Access modifiers — , , package-private (default), .- Record (Java 16+) — concise immutable data carrier.
+
+A minimal class
+
+Use:
+
+members
+
+Records (Java 16+)
+
+Records auto-generate constructor, accessors, , , . Use for plain data carriers.
+
+Chapter 3 — Inheritance & Polymorphism
+
+Terminology
+
+-  — declares a subclass.-  — refers to the parent.- Override — replace a parent's method in a subclass.- Polymorphism — call a parent-typed reference, dispatch to the actual subclass.-  — prevents inheritance (on class) or overriding (on method).
+
+Example
+
+Always use  — the compiler verifies you really did override (catches typos).
+
++ pattern matching (modern)
+
+Chapter 4 — Abstract Class, OOD Principles
+
+Terminology
+
+- Abstract class — declared with ; cannot be instantiated; may contain abstract methods.- Interface — pure contract; can have  and  methods (Java 8+) and  helpers (Java 9+).- SOLID — five design principles (Single-responsibility, Open/closed, Liskov substitution, Interface segregation, Dependency inversion).
+
+Abstract class
+
+Interface
+
+A class can  only one class but  many interfaces — the standard answer to "multiple inheritance" in Java.
+
+OOD quick-reference (SOLID)
+
+| Principle | Plain English ||-----------|----------------|| Single responsibility | each class has one reason to change || Open / closed | open for extension, closed for modification || Liskov substitution | subtypes must work wherever the supertype works || Interface segregation | many small interfaces beat one fat one || Dependency inversion | depend on abstractions, not concretes |
+
+Also fundamental: composition over inheritance (prefer containing collaborators to subclassing them).
+
+Chapter 5 — Generic Class
+
+Terminology
+
+- Type parameter — , , etc.- Bounded type — .- Wildcards — , ,  (PECS rule).
+
+Generic class
+
+Generic method
+
+Bounded + wildcards
+
+Chapter 6 — Exception handling
+
+Terminology
+
+-  — root.-  — JVM-level (); usually don't catch.-  — recoverable; subclasses include the checked family (must be declared/handled) and  (unchecked).- Checked exceptions — , , , etc.- Unchecked — , , , etc.
+
+try / catch / finally
+
+try-with-resources (auto-close)
+
+Implementing  lets your own classes participate.
+
+Custom exceptions
+
+> Trick: prefer unchecked exceptions for programming errors (bug-style: bad arg, missing key). Reserve checked exceptions for genuinely recoverable I/O. Modern Java style leans towards fewer checked exceptions.
+
+Chapter 7 — Assertion
+
+checks a development-time invariant. Disabled by default in production unless run with  (enable assertions).
+
+Rules:- Never use  for argument validation in public APIs — use .- Use  for invariants that should never be false if the code is correct.- Assertions are stripped at runtime by default — don't put side effects inside.
+
+Chapter 8 — File I/O
+
+The modern API is  (NIO.2, Java 7+). Avoid the legacy .
+
+Read
+
+Write
+
+Path operations
+
+Streams + buffered
+
+Chapter 9 — Multithreading
+
+Terminology
+
+- Thread — a unit of execution scheduled by the OS.- Runnable — functional interface for a unit of work.- Thread-safe — correct when accessed from multiple threads simultaneously.- Race condition — outcome depends on thread interleaving.-  — mutual-exclusion keyword.-  — guarantees visibility of writes across threads.- Virtual thread (Java 21+) — lightweight, JVM-scheduled; millions can run concurrently.
+
+Threads the modern way
+
+Virtual threads were the headline Java 21 feature. They make blocking I/O efficient at scale without rewriting code as async.
+
+Synchronisation
+
+Or with explicit locks for finer control:
+
+essentials
+
+| Type | Use ||------|-----|| , ,  | lock-free counters / refs ||  | thread-safe map ||  | producer-consumer || , ,  | coordination primitives ||  | async pipelines ||  | thread pool ||  | periodic / delayed tasks |
+
+> Trick: for most server workloads in 2026,  + plain blocking code is the right answer. Reach for  only when you really need composition of async pipelines.
+
+Practice Exercises
+
+Exercise 1 — Class basics
+
+Build a  class with ,  (reject if overdraw), . Override . Add a  method.
+
+Exercise 2 — Inheritance
+
+Define  (abstract ), , , . Put them in an array; print the total area.
+
+Exercise 3 — Generics
+
+Implement  with , , , , . Use an underlying .
+
+Exercise 4 — Exception flow
+
+Read a file path from ; print its content. Catch  and  separately, exit with different exit codes (2 and 3 respectively).
+
+<details><summary>Solution sketch</summary>
+
+</details>
+
+Exercise 5 — Concurrency
+
+Spawn 1000 virtual threads, each downloading . Collect the responses into a  (thread-safe!) and print the count of unique values.
+
+Cheat-sheet
+
+| What | How ||------|-----|| Compile |  || Run |  || Single-file run (modern) |  || Class |  || Record |  || Constructor |  || Override |  on method || Abstract class |  || Interface |  || Generic class |  || Bounded generic |  || Try with resources |  || Read file |  || Write file |  || Walk dir |  || Virtual thread |  || Virtual executor |  || Sync method |  || Atomic int |  || Thread-safe map |  |
+
+What's next
+
+Part 2 covers GUI (JavaFX), events, functional programming, the Collections framework, and the Stream API.
+
+References
+
+- docs.oracle.com/en/java/javase/21/ — official docs (LTS 21 in 2026).- Effective Java by Joshua Bloch — the canonical guide.- Java Concurrency in Practice by Brian Goetz — concurrency bible.- dev.java — Oracle's modern tutorial site.- Modern Java in Action by Urma / Fusco / Mycroft — covers lambdas, streams, modules.
+
+> Note: this post is in progress. Planned additions: build tools (Maven, Gradle), modules (JPMS), sealed classes, pattern matching for , structured concurrency.
+10:T1fdb,Part 1 covered Java's language core through threads. Part 2 picks up with the application-level toolkit: a graphical user interface (JavaFX), event handling, the functional programming features added in Java 8 (lambdas, method references, functional interfaces), the Collections framework (the standard data structures), and the Stream API (declarative bulk operations). Together they cover most of what real Java apps build on top of the basics.
+
+Learning Outcome
+
+- Build a basic JavaFX window with controls and a layout container.- Hook up event handlers (button clicks, key presses, observable property changes).- Write lambdas and method references; use the standard functional interfaces.- Choose between , , , , , , , .- Use the Stream API for , grouping, sorting, and parallel processing.- Combine functional + streams + collections into clean data pipelines.
+
+Chapter 10 — Graphical User Interface (JavaFX)
+
+Terminology
+
+- Stage — a top-level window.- Scene — the content of a stage; holds a scene graph.- Node — anything in the scene graph (controls, shapes, layouts).- Layout (Pane) — a Node that arranges children (, , , , ).- Control — interactive widget (, , , , etc.).
+
+JavaFX is the modern Java GUI (since 2008); Swing is the older one but still around in some enterprise code. Pick JavaFX for new work.
+
+Setup
+
+JavaFX is no longer bundled with the JDK. Add it via:
+
+- Maven / Gradle dependency — .- Or download the SDK from openjfx.io and run with .
+
+Minimal app
+
+Common layouts
+
+| Layout | Behaviour ||--------|-----------||  | children stacked vertically ||  | children in a row ||  | row/col grid (CSS-Grid-like) ||  | top / bottom / left / right / centre regions ||  | stacks children on top of each other ||  | wraps children left-to-right ||  | pin children to edges |
+
+Common controls
+
+, , , , , , , , , , , , , , , .
+
+Styling
+
+Style with CSS — JavaFX uses a CSS variant where selectors look like normal CSS but properties are prefixed with :
+
+Attach with .
+
+FXML (separate UI from logic)
+
+For non-trivial apps, define the UI in FXML (an XML markup), edit visually in Scene Builder, wire to a controller class via .
+
+Chapter 11 — Events
+
+Terminology
+
+- Event — an object describing something that happened (, , ).- Event handler — a function (now usually a lambda) that runs in response.- Observable property — a value that fires notifications when it changes (, ).- Binding — a derived observable computed from others.
+
+Action + mouse + key
+
+Observable properties
+
+Bindings (declarative)
+
+Bindings keep UI state in sync with model state without manual wiring.
+
+Threading rule
+
+All scene-graph changes must happen on the JavaFX Application Thread. From a background thread, use:
+
+For longer work, use a  which runs  on a background thread and exposes / callbacks on the JavaFX thread.
+
+Chapter 12 — Functional Programming (Java 8+)
+
+Terminology
+
+- Lambda expression — short anonymous function: .- Method reference — shorthand for a lambda that just calls one method: .- Functional interface — an interface with exactly one abstract method (SAM).- Effectively final — a local variable that isn't reassigned — required to capture in a lambda.
+
+Lambdas
+
+Method references
+
+| Form | Example | Equivalent lambda ||------|---------|--------------------|| Static |  |  || Instance of a class |  |  || Instance of an object |  |  || Constructor |  |  |
+
+Standard functional interfaces ()
+
+| Interface | Signature | Use ||-----------|-----------|-----||  |  | transform ||  |  | two args → result ||  |  | filter ||  |  | side effect ||  |  | factory ||  |  | same-type transform ||  |  | reduce step |
+
+Specialised primitive versions exist (, , ...) to avoid boxing in hot loops.
+
+Wraps a possibly-absent value — preferable to returning .
+
+Chapter 13 — Collections
+
+Terminology
+
+-  — root interface for groups of elements (List, Set, Queue).-  — key-value lookups (not a ).-  — anything iterable with .
+
+The interface hierarchy
+
+Concrete classes
+
+| Interface | Implementation | When ||-----------|----------------|------||  |  | default; O(1) index, O(n) middle insert ||  |  | many insertions / deletions in middle (rarely the right choice in practice) ||  |  | unordered, O(1) average ops ||  |  | insertion-ordered ||  |  | sorted, O(log n) ||  |  | unordered, O(1) average ||  |  | insertion-ordered ||  |  | sorted by key, O(log n) ||  |  | thread-safe ||  |  | preferred over  and  ||  |  | min-heap by natural / comparator order |
+
+Common operations
+
+Factory + immutable collections (Java 9+)
+
+Use immutable factories for shared constants — safer + slightly faster.
+
+Iteration
+
+> Trick:  uses the iterator and so will throw  if you mutate the collection inside the loop. Use  or iterate over a copy if you need to modify.
+
+Chapter 14 — Stream API
+
+A Stream is a sequence of elements supporting bulk operations. Streams don't store data — they consume from a source (collection, array, generator) and produce a result.
+
+Pattern
+
+Operations:- Intermediate (return a new Stream): , , , , , , , .- Terminal (consume the stream): , , , , , , , , , , , ,  (Java 16+).
+
+Examples
+
+Collectors (the secret weapon)
+
+Reduce
+
+Parallel streams
+
+Easy parallelism. Works well for CPU-bound, side-effect-free work over large data. Don't blindly add  to small lists or IO-bound work — overhead can outweigh the benefit. Measure.
+
+> Trick: the modern terminal  (Java 16+) replaces  for the common case. Less typing; returns an unmodifiable list.
+
+Chapter 15 — Putting it together
+
+A small worked example tying chapters 12-14:
+
+In a few declarative lines: grouping + aggregation + selection. Same logic in classic loops would be 30+ lines and harder to verify.
+
+Practice Exercises
+
+Exercise 1 — JavaFX counter (no FXML)
+
+Build the counter app from Chapter 10. Add a "Reset" button and a  to set the starting value.
+
+Exercise 2 — JavaFX with FXML
+
+Re-do Exercise 1 using FXML + a controller class. Apply a small CSS file styling the button.
+
+Exercise 3 — Functional refactor
+
+Take a loop-heavy method you've written before (any chapter) and rewrite it using streams + collectors. Compare line count + readability.
+
+Exercise 4 — Words frequency
+
+Given a long string, return a  of word → count, sorted descending by count, top 10.
+
+<details><summary>Solution</summary>
+
+</details>
+
+Exercise 5 — Group + summary
+
+Given a  (id, customer, status, total), produce:- count of orders per status,- average total per customer,- the customer with the highest single order.
+
+Exercise 6 — Bound UI to model
+
+JavaFX app: a  (0-100) and a . Bind the label to display the slider value with one decimal place, prefixed "Value: ". No event listeners — use .
+
+Cheat-sheet
+
+| What | How ||------|-----|| JavaFX run | ,  || Layout | , , ,  || Button click |  || Property listener |  || Binding |  or property  || UI from BG thread |  || Lambda |  || Method ref | ,  || Optional |  + , ,  || List |  /  immutable || Map |  /  immutable || Set |  /  immutable || Stream filter+map+collect |  || Group by |  || Sum / count | ,  || Parallel |  (measure!) || Reduce |  || Sort |  |
+
+Where to next
+
+- Build tools — Maven / Gradle (the toolchain for any non-trivial Java project).- Spring Boot — the dominant Java framework for web/services in 2026.- JDBC / JPA / Hibernate — database access.- Modules (JPMS) — Java 9+ module system.- Records + sealed types + pattern matching — modern data-modelling features.- Structured concurrency — Java 21+ preview for safer concurrent code.- Project Loom / virtual threads — covered briefly in Part 1; worth a deeper post.
+
+References
+
+- docs.oracle.com/en/java/javase/21/- openjfx.io — JavaFX home.- Gluon Scene Builder — visual FXML editor.- Effective Java by Joshua Bloch — items on collections, streams, lambdas.- Modern Java in Action by Urma / Fusco / Mycroft — the canonical functional/streams guide.- dev.java tutorials — Oracle's official modern tutorials.
+
+> Note: this post is in progress. Planned additions: full JavaFX TableView walkthrough; Maven + Gradle quick-start; pattern-matching  examples; structured concurrency intro.
+11:Tc66,Java 是一種十分基礎並常用的編程語言。 它的歷史非常悠久，在許多新語言的研究和開發中擔任著重要的角色, 但亦因此 Java 比其他常用語言更為繁瑣和嚴謹。 不過由於 Java 穩定的表現, 豐富的文檔和輕鬆搬移項目的靈活特性，至今仍然有不少從事資訊科技的公司採用。
+
+學習目標
+
+- 掌握Java Prograqmming的基礎- 能夠創建屬於自己的Project- 學習一些Java的進階指令
+
+章節1 - 如何開始寫Java
+
+市面上有不少支援 Java Development 的軟件\假如你是完全沒接觸過 Java 的同學, 建議先下載 Java Development Kit (JDK) 和相應的開發軟件\如 Eclipse, Visual Studio, Netbeans ...\本文將會專注於使用 Apache Netbeans, Java with Ants 的開發上
+
+首先介紹 Java 的基礎文本範例\假設你在 Package example 中創建了一個 HelloWorld.java
+
+main 是主要執行的部分, 想要創建或呼召任何定義功能都必須寫在 main 裡\執行後將會 Output
+
+注意事項-Java 十分重視句式結尾,千萬不要忘記在最後加上分號 ; (儘管不少IDE會自動提醒你)
+
+<br/>
+
+如何在不使用開發軟件的前提下,單獨運行 Java 檔案
+
+1. 首先你的裝置上必須安裝了 JDK2. 手上持有 Java 檔案,例: [檔案名稱].java3. 打開命令提示元 CMD 並輸入 cd [檔案位置] 將目標位置設定在檔案文件夾4. 輸入 javac [檔案名稱].java 以創建執行 Java 用的檔案 [檔案名稱].class5. 最後在命令提示元中輸入 java [檔案名稱].java 即可
+
+<br/>
+
+如何單獨運行 Java 檔案並附帶參數 Parameter
+
+1. 首先依照上述的指示做一遍2. 在最後一步的指令後方添加任意Parameters\java [檔案名稱].java \<parameter1> \<parameter2> \<...>\所有Parameters將會儲進一個Array並傳遞至main裡面的String[] args\你便可以在main裡根據Array的內容進行其餘的指令, 如
+
+章節二 - Objects Oriented Programming (OOP)
+
+Java 開發的核心基本圍繞在 Object, 而 Object 的原型就是 Class
+
+甚麼是 Class
+
+簡單來說 Class 是一個包含虛化定義的 Template, 在實體化後就變成 Object\舉個例子
+
+Class type 種類
+
+不同的種類會導致不同的存取權限\分類不限於 Class ,更能用在 Variable 和 Method 上
+
+- Public (最大權限)\Project內任何檔案都能存取- Protected\同一 Class, Package, 其他 Package 的 Subclass 能存取- Default\僅限同一 Class, Package 能存取- Private (最小權限)\僅限同一 Class 能存取
+
+例子
+
+<br/>
+
+甚麼是 Method
+
+Method主要用於定義功能,執行範圍內的指令且能選擇是否返回數值\在絕大部分語言中稱作 Function, 而在 Java 裡叫 Method
+
+常見例子
+
+<br />
+
+每個 Class裡都有的 Constructor
+
+Constructor是會在 Object 創建時觸發的 Method, 主要用於初始化不同 Object\每個 Class 中均隱藏著一個 Default Constructor\而開發者可以新增額外/覆蓋預設的 Constructor
+
+例子
+
+執行後的 Output
+
+<br/>
+
+筆記正在草擬...\也許到這裡你對實際的開發還沒明白透徹, 無須擔心, 稍後將會作更多解釋
+
+實用鏈接
+
+To be added..
+12:T58b,Java是一個十分常見的程式語言, 其 經常應用在各大公司的產品
+
+Learning Outcome
+
+Understand the basic terminologies of Java.
+
+Learn how to develop basic Java projects.
+
+this 指令static
+
+Chapter 3 - Inheritance & Polymorphism
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 4 - Abstract Class, OOD Principles
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 5 - Generic Class
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 6 - Exception handling
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 7 - Assertion
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 8 - File I/O
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 9 - Multithreading
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 1 - Introduction
+
+To be added..
+
+Terminology
+
+Generic class
+
+Chapter 2 - Objects and Classes
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 3 - Inheritance & Polymorphism
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 4 - Abstract Class, OOD Principles
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 5 - Generic Class
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 6 - Exception handling
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 7 - Assertion
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 8 - File I/O
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 9 - Multithreading
+
+To be added..
+
+Terminology
+
+To be added..
+
+Useful Shortcut
+
+To be added..
+13:T23f6,The foundation of every website on the open web is three languages: HTML for structure, CSS for presentation, and JavaScript for behaviour. Modern frameworks (React, Vue, Svelte) all compile down to those three. This post covers the basics that the advanced post and any future framework work assume — semantic HTML, the modern CSS layout systems (Flexbox + Grid), responsive design, vanilla JS DOM manipulation, jQuery (still found in older codebases), forms, and the accessibility minimum.
+
+Learning Outcome
+
+- Write semantic, valid HTML5.- Lay out pages with Flexbox and CSS Grid.- Make a site responsive with media queries.- Manipulate the DOM with vanilla JavaScript and jQuery.- Build accessible forms and handle their submission.- Set up a minimal local development environment.
+
+Chapter 1 — How the web works (one paragraph)
+
+A browser sends an HTTP(S) request to a server; the server replies with an HTML document; the browser parses it, loads any linked CSS + JS + images, builds the DOM (the in-memory tree of elements) and CSSOM (the matched style tree), and renders pixels. JavaScript can later mutate the DOM and styles, triggering re-renders. Every "fancy" feature ultimately reduces to those moves.
+
+Terminology
+
+- HTML — HyperText Markup Language; the structural language of web pages.- CSS — Cascading Style Sheets; selectors + property declarations that style HTML.- DOM — Document Object Model; the tree of nodes that the browser builds from HTML.- JavaScript (ES) / ECMAScript — the language that runs in the browser and (via Node.js) on servers.- Viewport — the visible area of the browser window.- Selector — a CSS pattern that targets HTML elements.
+
+Chapter 2 — HTML essentials
+
+Minimal HTML5 document
+
+Always:-  — first line.-  (or the right language) — accessibility + SEO.-  — avoid mojibake.-  — required for mobile responsiveness.-  on  — runs after HTML parsed; almost always correct.
+
+Semantic elements
+
+Use the right element for the meaning, not just  everywhere:
+
+| Element | Use ||---------|-----||  | top of a page or section ||  | main navigation links ||  | unique page content (only one per page) ||  | thematic grouping ||  | self-contained piece (blog post, comment) ||  | sidebar, callout ||  | bottom of a page or section ||  +  | image with caption ||  | clickable action ||  | navigation |
+
+Semantics matter for accessibility (screen readers), SEO, and code readability.  is keyboard-accessible by default; a  is not.
+
+Common elements quick-reference
+
+> Trick: the  attribute on  is not optional. Use a meaningful description; or  if purely decorative. Empty  tells screen readers to skip it.
+
+Chapter 3 — CSS basics
+
+Linking
+
+Selectors
+
+The cascade
+
+When multiple rules match, the winner is decided by:
+
+1. Origin + importance —  user styles →  author styles → author styles → user → browser default.2. Specificity — inline (1000) → id (100) → class/attr/pseudo (10) → element (1).3. Source order — later wins on ties.
+
+Avoid  in normal code; it almost always means the cascade was lost. Refactor instead.
+
+Box model
+
+Every element has: content → padding → border → margin.
+
+Set this globally in every project.
+
+Useful units
+
+| Unit | Meaning ||------|---------||  | absolute pixels ||  | multiple of the root font size (1rem = 16px by default) ||  | multiple of the parent's font size ||  | percentage of the parent ||  | percent of viewport width / height ||  | bounded fluid value |
+
+for font sizes;  for tight UI details;  /  for fluid layouts.
+
+Chapter 4 — Flexbox
+
+Flexbox is the right layout choice for one-dimensional arrangements (row or column).
+
+Key parent properties:
+
+| Property | Effect ||----------|--------||  |  /  /  /  ||  | space between children ||  | main-axis: start / end / center / space-between / space-around / space-evenly ||  | cross-axis alignment ||  |  (default) or  |
+
+Key child properties:
+
+| Property | Effect ||----------|--------||  | grow ratio when extra space ||  | shrink ratio when not enough ||  | preferred size before growing/shrinking ||  | shorthand for  — equal share ||  | override  for one child |
+
+Chapter 5 — CSS Grid
+
+Grid is the right choice for two-dimensional layouts (rows AND columns).
+
+That one declaration creates a responsive image grid: as many columns as fit at minimum 220px each, the rest fluid.
+
+Common patterns:
+
+> Trick: Grid for the page skeleton, Flexbox for the components inside it. Grid handles "where do regions sit on the page?". Flexbox handles "how do icons + text align inside this button?".
+
+Chapter 6 — Responsive design
+
+The mobile-first pattern: write base styles for small screens, add complexity at larger breakpoints with .
+
+Standard breakpoints (rough): 480 (large phone), 768 (tablet), 1024 (laptop), 1280+ (desktop).
+
+Use container queries () in modern browsers when component layout should depend on the container's width, not the viewport's.
+
+Chapter 7 — JavaScript essentials
+
+Variables
+
+Types
+
+, , , , , ,  (object subtype),  (object subtype).
+
+DOM manipulation
+
+/ (ES2017+) is the modern way to handle promises — readable, error-handled like sync code.
+
+Useful patterns
+
+Chapter 8 — jQuery (still found in older codebases)
+
+jQuery dominated 2008-2018. Modern browsers shrank its job — but you'll still see it in legacy code, WordPress themes, and many enterprise apps.
+
+Vanilla-JS equivalents:
+
+| jQuery | Modern JS ||--------|-----------||  |  ||  |  ||  |  ||  |  ||  | CSS transitions on  |
+
+> Trick: for new projects, skip jQuery. The vanilla DOM API is good enough since 2017. For legacy projects, keep jQuery — re-platforming costs more than the bytes.
+
+Chapter 9 — Forms
+
+Browser-built validation:- , , , , , , , .- The browser prevents submission and shows native messages.
+
+JavaScript-side handling:
+
+Chapter 10 — Accessibility minimum
+
+| Rule | Why ||------|-----|| Use semantic HTML | screen readers + keyboard get correct affordances for free ||  on every form input | inputs need labels || Sufficient colour contrast (WCAG AA: 4.5:1 for text) | low-vision users ||  styles visible | keyboard users must see where they are ||  on every image | screen readers; SEO || Heading hierarchy (one , then , ...) | document outline ||  on  | pronunciation, translation || Use  sparingly — only when no semantic HTML fits | "no ARIA is better than bad ARIA" || Test with keyboard only (Tab, Shift+Tab, Enter) | the cheapest accessibility test |
+
+Run axe DevTools or Lighthouse for automated checks.
+
+Chapter 11 — Development environment
+
+| Need | Tool ||------|------|| Editor | VS Code + Prettier + ESLint extensions || Local server |  or VS Code Live Server extension || Format | Prettier — opinionated, drop-in || Lint JS | ESLint || Browser | Chrome / Firefox / Safari + DevTools || Source control | Git |
+
+Open DevTools (F12 / Cmd+Opt+I) often:- Elements — inspect + edit live HTML/CSS.- Console — JS REPL, log output.- Network — every request, headers, timings.- Application — cookies, localStorage, service workers.- Lighthouse — performance / accessibility / SEO audit.
+
+Practice Exercises
+
+Exercise 1 — Personal page
+
+Build a one-page personal site: header, hero, about, projects (cards), contact form. Use semantic HTML + a Grid skeleton + Flexbox inside components. Responsive at 480/768/1024.
+
+Exercise 2 — Todo list (vanilla JS)
+
+Static HTML; on form submit, append a new  with the entered text + a delete button. Persist to  across reloads.
+
+<details><summary>Skeleton</summary>
+
+</details>
+
+Exercise 3 — Fetch + render
+
+Call  with ; render each user as a card with name, email, city.
+
+Exercise 4 — Responsive gallery
+
+A grid of 12 images. At < 600px → 1 column. 600-900 → 2 cols. > 900 → 3 cols. Use Grid + .
+
+Exercise 5 — Form validation
+
+A signup form (name, email, age, password). Use HTML5 attributes for native validation. Add a JS-side check that the password is ≥ 8 chars and contains a digit. Show errors below each input without losing focus.
+
+Cheat-sheet
+
+| What | How ||------|-----|| HTML doctype |  || Viewport (mobile) |  || Semantic regions |  || Box sizing default |  || 1D layout | Flexbox || 2D layout | Grid || Mobile-first media |  || Modern variables |  /  (avoid ) || Query DOM |  || Class toggle |  || Event |  || HTTP |  then  || Async | / || jQuery still useful? | only in legacy / WordPress || Accessibility | semantic HTML + label + alt + keyboard test || Audit | Lighthouse in DevTools |
+
+What's next
+
+The advanced post covers Node.js, package managers, modern build tools (Vite), the framework families (React / Vue / Svelte), CSS frameworks (Tailwind / Bootstrap), Three.js for 3D, API integration, and deployment.
+
+References
+
+- MDN Web Docs — the canonical reference for every HTML / CSS / JS feature.- web.dev — Google's modern practices guide.- CSS-Tricks: A Complete Guide to Flexbox- CSS-Tricks: A Complete Guide to Grid- WCAG 2.1 quick reference- Eloquent JavaScript by Marijn Haverbeke — free online; canonical JS book.
+
+> Note: this post is in progress. Planned additions: CSS custom properties + theming, modern logical properties, transitions + animations, intersection observer, intl APIs.
+14:T318f,Data Structure & Algorithm is the fundamental knowledge of programming. Learning how to store, organize, sort, search data allow us to code more efficiently and concisely.
+
+Learning outcome
+
+Apply structural programming approach to solve more complex computation problems.Demonstrate applications of standard data structures such as linked list, stack, queue and tree.Solve computation problems using recursion where appropriate.Understand different sorting and searching algorithms.
+
+Chapter 1 - Basic Concepts of C++
+
+Terminology
+
+Abstract Data Type (ADT)
+
+Common Standard Library Header
+
+- \Support Standard I/O functions: , , , , , etc..- \Support Standard utility functions: , , , etc..- \Support String functions: , , , etc..- \Perform both input and output operations with the stream objects :  and
+
+Comments
+
+Primitive Data types
+
+| Data type           | Size (byte) | Representation | Range of values ||-------------------- |---|------------------------------------|--------------------|| bool                | 1 | Boolean                            | $\textnormal{false / true}$ || char                | 1 | Signed number (2's complement)     | $\textnormal{-128 to 127}$ || unsigned char       | 1 | Unsigned number                    | $\textnormal{0 to 255}$ || int                 | 4 | Signed number (2's complement)     | $-2^{31} \space \textnormal{to} \space 2^{31}-1$ || unsigned int        | 4 | Unsigned number                    | $\textnormal{0 to } 2^{32}-1$ || short               | 2 | Signed number (2's complement)     | $-2^{15} \space \textnormal{to} \space 2^{15}-1$ || unsigned short      | 2 | Unsigned number                    | $\textnormal{0 to } 2^{16}-1$ || long                | 4 | Signed number (2's complement)     | $-2^{31} \space \textnormal{to} \space 2^{31}-1$ || unsigned long       | 4 | Unsigned number                    | $\textnormal{0 to } 2^{32}-1 $ || long long           | 8 | Signed number (2's complement)     | $-2^{63} \space \textnormal{to} \space 2^{63}-1$ || unsigned long long  | 8 | Unsigned number                    | $\textnormal{0 to } 2^{64}-1 $ || float               | 4 | IEEE 32-bit floating point number  | $\pm 1.410^{-45} \textnormal{ to } \pm3.410^{38}$ || double              | 8 | IEEE 64-bit floating point number  | $\pm 510^{-324} \textnormal{ to } \pm1.79810^{308}$ || pointer             | 4 | Memory address                     | $\textnormal{0 to } 2^{32}-1$ |
+
+C++ File Structure
+
+Header file (.h)          Program file (.cpp)Functions Declaration     Functions Implementation
+
+Chapter 2 - Computation Complexity (Big-O)
+
+There are two types of complexity- Time Complexity (Time spent)- Space Complexity (Memory space spent)
+
+They both use three asymptotic notation to descript the complexity- $\textnormal{Big-O (O)}$- $\textnormal{Big-Omega }(\Omega)$- $\textnormal{Big-Theta }(\Theta)$
+
+Big-O
+
+Upper bound of the complexity$$ f(n) = \textnormal{O}(g(n)) $$
+
+Big-Omega
+
+Lower bound of the complexity$$ f(n) = \Omega(g(n)) $$
+
+Big-Theta
+
+Exact bound of the complexity$$ f(n) = \Theta(g(n)) $$
+
+Common Complexity Classes
+
+- Constant time - $O(1)$- Logarithmic time - $O(\log2 n)$- Linear time - $O(n)$- Log-linear time - $O(n\log2 n)$- Quadratic time - $O(n^2)$- Cubic time - $O(n^3)$- Polynomial time - $O(n^k)$- Exponential time - $O(2^n)$- Factorial time - $O(n!)$
+
+Slope of Complexity Classes
+
+TIme Complexity
+
+Simple operations such as- declaration, assignment- cin, cout- function call- return
+
+take constant amount of timeThe overall time complexity = O(Constant),\and constant time costs almost zero influence no matter the size.\Therefore the overall time complexity is$$ O(1) $$
+
+Only looping will cost longer time complexity\Single nested loop usually takes  as the operations  inside the loop will run  times.$$ C  n $$
+
+The overall time complexity is$$ O(n) $$While for more than one nested loop usually takes  as the operations  inside the loop will run  times.$$ C  n^2 $$
+
+The overall time complexity is$$ O(n^2) $$
+
+Best case
+
+To be added..
+
+Average case
+
+To be added..
+
+Worst case
+
+To be added..
+
+Space Complexity
+
+To be added..O()
+
+Chapter 3 - Linked Lists
+
+A linked list is an object that only contains head node of the list.Each node is created with parameter [next] linked to next node or necessaryly [prev] linked to previous node.
+
+Terminology
+
+- Predecessor- Successor
+
+Josephus Problem
+
+People are standing in a circle waiting to be executed.Counting begins at a specified point in the circle andproceeds around the circle in a specified direction. Aftera specified number of people are skipped, the nextperson is executed. The procedure is repeated with theremaining people, starting with the next person, going inthe same direction and skipping the same number ofpeople, until only one person remains, and is freed
+
+The problem — given the number of people (n), startingpoint, direction, and number to be skipped (k) — is tochoose the position in the initial circle to avoid execution.(guessing who is the survivor)
+
+Linear List
+
+Unordered / Random List
+
+Ordered List
+
+General List
+
+Restricted List
+
+Common Operations
+
+Find length of linked list
+
+Search element x from the beginning of list
+
+Insert new element x at the front of list
+
+Remove the first element x found in the list
+
+Insert new element x in an ordered list
+
+Common Issues
+
+Null-pointer exceptionMemory leak
+
+Variants of Lists
+
+Singly Linked List with Header Node- Sentinel node
+
+Circularly Linked List- Last node points back to first node
+
+Doubly Linked List- Each node has next and back pointers
+
+Circular Doubly Linked List- Boundary-tag method
+
+Orthogonal List- ...
+
+Chapter 4 - Stacks and Queues
+
+To be added..
+
+Terminology
+
+To be added..
+
+Stack
+
+Last In First Out (LIFO)
+
+Queues (FIFO)
+
+First In First Out (FIFO)
+
+Chapter 5 - Recursion
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 6 - Binary Trees
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 7 - Sorting and Searching Algorithms
+
+To be added..
+
+Terminology
+
+To be added..
+
+Chapter 8 - Hashing
+
+Terminology
+
+- Indexing- Perfect Hashing- Minimal Perfect Hashing- Hash Collision- Open Addressing- Closed Addressing- Design of Hash function
+
+Introduction of Hashing
+
+Hashing is generally [ Indexing ].
+
+If you have learnt what [ index ] is, you may understand it as positioning or classifying objects with duplicated meaning for a smaller size of data and better searching.
+
+Steps for Indexing1. Define an array with a specific purpose.2. Define meaning for each index in the array.3. Classify the input and determine the size of the array.4. Map the input to the array.
+
+Example of Indexing (Minimal Perfect Hashing)Given A string [foo] = "abacbdef".\Precondition: there will only be alphabets inside the string.\If you want to find how many 'a' occured inside the string, you may use Indexing.1. Define an array for storing the occurrence of letters.2. Each index represents an alphebet.3. There are a total of 26 alphabets as potential input, so the size of array will be 26.4. Similar to the ASCII table, we can take index [0] representing the occurrence of 'a', index [1] representing the occurrence of 'b', and so on...5. Loop over the string and map the character to corresponding index.
+
+However, there are still some differences between Hashing and Indexing.\In Hashing, we convert ASCII char to key directly with  so that 'a' = 0, 'b' = 1, and so on...\which allows us to map the data easier and faster.
+
+Hash function
+
+A function f(k) is known as defined with specific formula,\it can be either One-to-one, or Many-to-one,\Under this property,\it can convert a large variable-sized amount of data into a small datum by transforming data into keys.
+
+A Hash table arr[ ] is an array that will be created to hold the keys after conversion.
+
+A Hash value is usually an integer that may serve as an index to an array.
+
+Example of Hash function
+
+Hashing Student ID k using Modulo, where h is the function, h(k) is the hash value of k, n is an arbitrary key.$$ h(k) = k \bmod n $$The size of the array will be reduced significantly due to the limited range of the modulus [0 to n-1].
+
+Take k = 5000, n = 5, the function will be$$ h(k) = k \bmod 5 $$In Hash table, the value k will be updated to the index of hash value, arr[h(k)] = k$$ h(5000) = 5000 \bmod 5 = 0 $$arr[0] = 5000, arr[1] = 5081, arr[2] = 5072, arr[3] = 5023, arr[4] = 5014
+
+You may now be thinking of what if the index collides, it should happen frequently as the function is many-to-one.
+
+Yes, and therefore, I am going to introduce the solution against collision.
+
+Hash Collision
+
+Collision occurs when two distinct data own the same hash value.\Collisions are usually unavoidable when a large set of data is mapped into small datum.\It will increase the average cost of lookup operations.
+
+Solutions to Hash Collision- Open Addressing- Closed Addressing
+
+Load factor represents the length of data in each index,\larger load factor brings lower performance
+
+Open Addressing
+
+Place the key in other free slot when collisions occured.
+
+An index only maps to 1 key.\Theoretical max load factor = 1
+
+Advantages- No size overhead apart from the hash table array- Better memory locality and cache performance. Memory allocation is laid out linearly- Performs better when the number of keys is known in advance and the churn is low.
+
+Example of Open Addressing:- Linear Probing- Quadratic Probing- Double Hashing- Hopscotch hashing- Robin Hood hashing- Cuckoo hashing- 2-Choice hashing
+
+Linear Probing
+
+To be added..
+
+Quadratic Probing
+
+To be added..
+
+Double Hashing
+
+To be added..
+
+Closed Addressing
+
+Place the key in the same slot even when collisions occured.
+
+An index can map to multiple keys.\Theoretical max load factor = depends
+
+To achieve placing multiple keys in same slot- Separate chaining using linked lists- Separate chaining using dynamic arrays- Using self-balancing binary search trees
+
+Advantages- Easier removal- Assign quicker with high load factor- No issues with Clustering
+
+Example of Closed Addressing:- Chaining Buckets
+
+Chaining Buckets
+
+To be added..
+
+After dealing with collision, there will be two general types of Hashing.
+
+Minimal Perfect Hashing (Best)A hash function that maps each valid input to a different hash value.\Every index is taken in the hash table.
+
+Perfect HashingA hash funciton that maps n input keys to n consecutive hash values.\But not every index is taken in the hash table.
+
+Designing Hash Functions
+
+Ideal properties- Low Cost- Easier and faster to compute the result- Variable Range- Able to transform [words], [symbols] into [numbers]- Uniformity- Distribute the keys evenly- Minimize the chance of collisions
+
+Common types of Hash Functions
+
+1. Division
+
+2. Mid-Square
+
+3. Folding
+
+4. Radix Transformation
+
+Division
+
+hashValue = key % tableSize\Try to use prime number as the hash table size to reduce collisions
+
+For non integer keys, transform them into integer with ASCII code
+
+Mid-Square
+
+1. Transform keys into integer2. Sqaure the number3. Pick some digits from the middle to hash
+
+Take tableSize = 5
+
+|$\textnormal{key}$|$\textnormal{key}^2$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||99   |9801    |80 | 80 % 5 = 0  ||145  |21025   |102| 102 % 5 = 2 ||342  |116964  |69 | 69 % 5 = 4  |
+
+Folding
+
+1. Split key into 3 parts [ Left, Middle, Right ] as you wish,\left and right should have the same size2. Fold keys and sum the keys
+
+Shift-folding
+
+Sum the splitted keys directly
+
+Take tableSize = 5
+
+|$\textnormal{key}$|$\textnormal{split}$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||5829   |58-29     |58 + 29 = 87        | 87 % 5 = 2  ||452642 |45-26-42  |45 + 26 + 42 = 113  | 113 % 5 = 3 ||1234567|123-4-567 |123 + 4 + 567 = 694 | 694 % 5 = 4  |
+
+Boundary-folding
+
+Invert the left and right part of each splitted part except middle oneThen sum the keys
+
+Take tableSize = 5|$\textnormal{key}$|$\textnormal{split}$|$\textnormal{new key}$|$\textnormal{hashValue}$||-|-|-|-||5829   |58-29     |85 + 92 = 177       | 177 % 5 = 2  ||452642 |45-26-42  |54 + 62 + 24 = 140  | 140 % 5 = 0 ||1234567|12-345-67 |21 + 345 + 76 = 442 | 442 % 5 = 2  |
+
+Radix Transformation
+
+Define same key with new radix then convert back to original radix
+
+Given $ k = 358345{10} $\Define $ k2 = 358345{9} $\$ h(k) = k2 \space mod \space tableSize $\$ k2 = 358345{9} = 216068{10} $\$ h(k) = 216068{10} \space mod \space tableSize $
+
+Useful shortcut
+
+Convenient Mathematics formulas for programming
+
+Gauss Summation
+
+$$ \frac{n(n+1)}{2} $$
+
+Calculate the sum of integers from 1 to n inclusively
+
+$$ \frac{(a+b)(b-a+1)}{2} $$
+
+Calculate the sum of natural numbers from a to b inclusively
+
+To be added..
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-22 14:08:28\"};"}}],["$","$L8",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"full_page","id":"page-header","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"site-info","children":[["$","h1",null,{"id":"site-title","children":"Vokint's StudyLog"}],["$","div",null,{"id":"site-subtitle","children":["$","span",null,{"id":"subtitle"}]}],["$","div",null,{"id":"site_social_icons","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"id":"scroll-down","children":["$","i",null,{"className":"fas fa-angle-down scroll-down-effects"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"className":"recent-posts","id":"recent-posts","children":[[["$","div","statistic_n_probability_model",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/statistic_n_probability_model/\" title=\"Statistic &amp; Probability Models (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/statistic_n_probability_model.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Statistic &amp; Probability Models (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/statistic_n_probability_model/","title":"Statistic & Probability Models (In Progress)","children":"Statistic & Probability Models (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:46:31.000Z","title":"Created 2022-05-26 03:46:31","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Mathematics",{"className":"article-meta__categories","href":"/blog/categories/Mathematics/","children":"Mathematics"}]]]]}]]}],["$","div",null,{"className":"content","children":"Foundation Statistic and Probability Models.\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","web_development_advanced",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/web_development_advanced/\" title=\"Web Development (Advanced) — Node.js, React, Vue, Build Tools, UI Frameworks\"><img class=\"post_bg\" src=\"/blog/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Web Development (Advanced) — Node.js, React, Vue, Build Tools, UI Frameworks\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/web_development_advanced/","title":"Web Development (Advanced) — Node.js, React, Vue, Build Tools, UI Frameworks","children":"Web Development (Advanced) — Node.js, React, Vue, Build Tools, UI Frameworks"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T19:04:53.000Z","title":"Created 2022-05-26 03:04:53","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$e"}]]}]]}],["$","div","java_development_p1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/java_development_p1/\" title=\"Java Development [Basic] Part 1 — Language, OOP, Exceptions, I/O, Threads\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 1 — Language, OOP, Exceptions, I/O, Threads\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/java_development_p1/","title":"Java Development [Basic] Part 1 — Language, OOP, Exceptions, I/O, Threads","children":"Java Development [Basic] Part 1 — Language, OOP, Exceptions, I/O, Threads"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$f"}]]}]]}],["$","div","java_development_p2",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/java_development_p2/\" title=\"Java Development [Basic] Part 2 — GUI, Events, Functional, Collections, Streams\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java Development [Basic] Part 2 — GUI, Events, Functional, Collections, Streams\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/java_development_p2/","title":"Java Development [Basic] Part 2 — GUI, Events, Functional, Collections, Streams","children":"Java Development [Basic] Part 2 — GUI, Events, Functional, Collections, Streams"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$10"}]]}]]}],["$","div","vk_javaProg_part1",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/vk_javaProg_part1/\" title=\"Java語言 重溫筆記 - 上 (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java語言 重溫筆記 - 上 (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/vk_javaProg_part1/","title":"Java語言 重溫筆記 - 上 (In Progress)","children":"Java語言 重溫筆記 - 上 (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$11"}]]}]]}],["$","div","vk_javaProg_Q&A",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/vk_javaProg_Q%26A/\" title=\"Java語言 重溫筆記 - Q&amp;A (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/java.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Java語言 重溫筆記 - Q&amp;A (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/vk_javaProg_Q%26A/","title":"Java語言 重溫筆記 - Q&A (In Progress)","children":"Java語言 重溫筆記 - Q&A (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:40:21.000Z","title":"Created 2022-05-26 02:40:21","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$12"}]]}]]}],["$","div","web_development_basic",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/26/web_development_basic/\" title=\"Web Development (Basic) — HTML, CSS, JavaScript, jQuery\"><img class=\"post_bg\" src=\"/blog/assets/web_development.jpeg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Web Development (Basic) — HTML, CSS, JavaScript, jQuery\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/26/web_development_basic/","title":"Web Development (Basic) — HTML, CSS, JavaScript, jQuery","children":"Web Development (Basic) — HTML, CSS, JavaScript, jQuery"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-25T18:34:46.000Z","title":"Created 2022-05-26 02:34:46","children":"2022-05-26"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$13"}]]}]]}],["$","div","logic_circuit_design",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/25/logic_circuit_design/\" title=\"Logic Circuit Design (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/circuit_design.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Logic Circuit Design (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/25/logic_circuit_design/","title":"Logic Circuit Design (In Progress)","children":"Logic Circuit Design (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:31:59.000Z","title":"Created 2022-05-25 01:31:59","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Circuit Design",{"className":"article-meta__categories","href":"/blog/categories/Circuit-Design/","children":"Circuit Design"}]]]]}]]}],["$","div",null,{"className":"content","children":"Circuit Design is important for Engineering\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nGateFlip Flop\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}],["$","div","data_structure_n_algorithm",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover left","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/25/data_structure_n_algorithm/\" title=\"Data Structure &amp; Algorithm (C++)\"><img class=\"post_bg\" src=\"/blog/assets/data_structure_n_alrogithm.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Data Structure &amp; Algorithm (C++)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/25/data_structure_n_algorithm/","title":"Data Structure & Algorithm (C++)","children":"Data Structure & Algorithm (C++)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:28:17.000Z","title":"Created 2022-05-25 01:28:17","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Programming",{"className":"article-meta__categories","href":"/blog/categories/Programming/","children":"Programming"}]]]]}]]}],["$","div",null,{"className":"content","children":"$14"}]]}]]}],["$","div","data_com_n_networking",{"className":"recent-post-item","children":[["$","div",null,{"className":"post_cover right","dangerouslySetInnerHTML":{"__html":"<a href=\"/blog/2022/05/25/data_com_n_networking/\" title=\"Data Communication &amp; Networking (In Progress)\"><img class=\"post_bg\" src=\"/blog/assets/networking.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Data Communication &amp; Networking (In Progress)\"></a>"}}],["$","div",null,{"className":"recent-post-info","children":[["$","a",null,{"className":"article-title","href":"/blog/2022/05/25/data_com_n_networking/","title":"Data Communication & Networking (In Progress)","children":"Data Communication & Networking (In Progress)"}],["$","div",null,{"className":"article-meta-wrap","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt"}],["$","span",null,{"className":"article-meta-label","children":"Created"}],["$","time",null,{"dateTime":"2022-05-24T17:27:45.000Z","title":"Created 2022-05-25 01:27:45","children":"2022-05-25"}]]}],["$","span",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox"}],[[null,["$","a","Networking",{"className":"article-meta__categories","href":"/blog/categories/Networking/","children":"Networking"}]]]]}]]}],["$","div",null,{"className":"content","children":"Networking is important to achieve data communication\n\nLearning Outcome\n\nTo be added..\n\nChapter 1 -\n\nTo be added..\n\nTerminology\n\nIpv4Ipv6\n\nChapter 2 -\n\nTo be added..\n\nTerminology\n\nTo be added..\n\nUseful Shortcut\n\nTo be added..\n"}]]}]]}]],["$","nav",null,{"id":"pagination","children":["$","div",null,{"className":"pagination","children":[["$","a","prev",{"className":"extend prev","rel":"prev","href":"/blog/page/5/","children":["$","i",null,{"className":"fas fa-chevron-left"}]}],["$","a","1",{"className":"page-number","href":"/blog/","children":1}]," ",["$","a","2",{"className":"page-number","href":"/blog/page/2/","children":2}]," ",["$","a","3",{"className":"page-number","href":"/blog/page/3/","children":3}]," ",["$","a","4",{"className":"page-number","href":"/blog/page/4/","children":4}]," ",["$","a","5",{"className":"page-number","href":"/blog/page/5/","children":5}]," ",["$","span","6",{"className":"page-number current","children":6}]]}]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[false,["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","py_05_files_exceptions",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_05_files_exceptions/","title":"Python Course — 05 · Files, Paths, and Exception Handling","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_05_files.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 05 · Files, Paths, and Exception Handling\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_05_files_exceptions/","title":"Python Course — 05 · Files, Paths, and Exception Handling","children":"Python Course — 05 · Files, Paths, and Exception Handling"}],["$","time",null,{"dateTime":"2026-05-22T12:00:00.000Z","title":"Created 2026-05-22 20:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_04_oop",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_04_oop/","title":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_04_oop.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_04_oop/","title":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)","children":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)"}],["$","time",null,{"dateTime":"2026-05-22T11:00:00.000Z","title":"Created 2026-05-22 19:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_03_functions_modules",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_03_functions_modules/","title":"Python Course — 03 · Functions, Scope, Modules, and Packages","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_03_functions.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 03 · Functions, Scope, Modules, and Packages\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_03_functions_modules/","title":"Python Course — 03 · Functions, Scope, Modules, and Packages","children":"Python Course — 03 · Functions, Scope, Modules, and Packages"}],["$","time",null,{"dateTime":"2026-05-22T10:00:00.000Z","title":"Created 2026-05-22 18:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_02_data_structures",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_02_data.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","children":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)"}],["$","time",null,{"dateTime":"2026-05-22T09:00:00.000Z","title":"Created 2026-05-22 17:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_01_syntax_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_01_syntax.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 01 · Syntax, Types, and Control Flow\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","children":"Python Course — 01 · Syntax, Types, and Control Flow"}],["$","time",null,{"dateTime":"2026-05-22T08:00:00.000Z","title":"Created 2026-05-22 16:00:00","children":"2026-05-22"}]]}]]}]]}]]}],[["$","div",null,{"className":"card-widget card-categories","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-folder-open"}],["$","span",null,{"children":"Categories"}]]}],["$","ul",null,{"className":"card-category-list","id":"aside-cat-list","children":[["$","li","3D",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/3D/","children":[["$","span",null,{"className":"card-category-list-name","children":"3D"}],["$","span",null,{"className":"card-category-list-count","children":14}]]}]}],["$","li","AI",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/AI/","children":[["$","span",null,{"className":"card-category-list-name","children":"AI"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","AWS",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/AWS/","children":[["$","span",null,{"className":"card-category-list-name","children":"AWS"}],["$","span",null,{"className":"card-category-list-count","children":9}]]}]}],["$","li","Circuit-Design",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Circuit-Design/","children":[["$","span",null,{"className":"card-category-list-name","children":"Circuit Design"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Cloud",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Cloud/","children":[["$","span",null,{"className":"card-category-list-name","children":"Cloud"}],["$","span",null,{"className":"card-category-list-count","children":9}]]}]}],["$","li","Mathematics",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Mathematics/","children":[["$","span",null,{"className":"card-category-list-name","children":"Mathematics"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Music",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Music/","children":[["$","span",null,{"className":"card-category-list-name","children":"Music"}],["$","span",null,{"className":"card-category-list-count","children":14}]]}]}],["$","li","Networking",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Networking/","children":[["$","span",null,{"className":"card-category-list-name","children":"Networking"}],["$","span",null,{"className":"card-category-list-count","children":1}]]}]}],["$","li","Programming",{"className":"card-category-list-item ","children":["$","a",null,{"className":"card-category-list-link","href":"/blog/categories/Programming/","children":[["$","span",null,{"className":"card-category-list-name","children":"Programming"}],["$","span",null,{"className":"card-category-list-count","children":33}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-tags","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-tags"}],["$","span",null,{"children":"Tags"}]]}],["$","div",null,{"className":"card-tag-cloud","children":[["$","a","3D",{"href":"/blog/tags/3D/","style":{"fontSize":"1.25em","color":"#99a6b8"},"children":"3D"}]," ",["$","a","樂理",{"href":"/blog/tags/樂理/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"樂理"}]," ",["$","a","ABRSM",{"href":"/blog/tags/ABRSM/","style":{"fontSize":"1.25em","color":"#99a6b8"},"children":"ABRSM"}]," ",["$","a","AI",{"href":"/blog/tags/AI/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"AI"}]," ",["$","a","Animation",{"href":"/blog/tags/Animation/","style":{"fontSize":"1.10em","color":"#999"},"children":"Animation"}]," ",["$","a","Asset-Pipeline",{"href":"/blog/tags/Asset-Pipeline/","style":{"fontSize":"1.10em","color":"#999"},"children":"Asset Pipeline"}]," ",["$","a","Auto-Scaling",{"href":"/blog/tags/Auto-Scaling/","style":{"fontSize":"1.10em","color":"#999"},"children":"Auto Scaling"}]," ",["$","a","AWS",{"href":"/blog/tags/AWS/","style":{"fontSize":"1.19em","color":"#99a7bb"},"children":"AWS"}]," ",["$","a","Beginner",{"href":"/blog/tags/Beginner/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Beginner"}]," ",["$","a","Bootstrap",{"href":"/blog/tags/Bootstrap/","style":{"fontSize":"1.10em","color":"#999"},"children":"Bootstrap"}]," ",["$","a","C",{"href":"/blog/tags/C/","style":{"fontSize":"1.17em","color":"#99a8bc"},"children":"C++"}]," ",["$","a","Camera",{"href":"/blog/tags/Camera/","style":{"fontSize":"1.10em","color":"#999"},"children":"Camera"}]," ",["$","a","Cloud",{"href":"/blog/tags/Cloud/","style":{"fontSize":"1.19em","color":"#99a7bb"},"children":"Cloud"}]," ",["$","a","CloudWatch",{"href":"/blog/tags/CloudWatch/","style":{"fontSize":"1.10em","color":"#999"},"children":"CloudWatch"}]," ",["$","a","Collections",{"href":"/blog/tags/Collections/","style":{"fontSize":"1.10em","color":"#999"},"children":"Collections"}]," ",["$","a","Color",{"href":"/blog/tags/Color/","style":{"fontSize":"1.10em","color":"#999"},"children":"Color"}]," ",["$","a","Computer-Science",{"href":"/blog/tags/Computer-Science/","style":{"fontSize":"1.50em","color":"#999fab"},"children":"Computer Science"}]," ",["$","a","Controls",{"href":"/blog/tags/Controls/","style":{"fontSize":"1.10em","color":"#999"},"children":"Controls"}]," ",["$","a","Course",{"href":"/blog/tags/Course/","style":{"fontSize":"1.49em","color":"#99a0ac"},"children":"Course"}]," ",["$","a","CSS",{"href":"/blog/tags/CSS/","style":{"fontSize":"1.10em","color":"#999"},"children":"CSS"}]," ",["$","a","Data-Structure",{"href":"/blog/tags/Data-Structure/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Data Structure"}]," ",["$","a","Database",{"href":"/blog/tags/Database/","style":{"fontSize":"1.10em","color":"#999"},"children":"Database"}]," ",["$","a","Drei",{"href":"/blog/tags/Drei/","style":{"fontSize":"1.10em","color":"#999"},"children":"Drei"}]," ",["$","a","DynamoDB",{"href":"/blog/tags/DynamoDB/","style":{"fontSize":"1.10em","color":"#999"},"children":"DynamoDB"}]," ",["$","a","EBS",{"href":"/blog/tags/EBS/","style":{"fontSize":"1.10em","color":"#999"},"children":"EBS"}]," ",["$","a","EC2",{"href":"/blog/tags/EC2/","style":{"fontSize":"1.10em","color":"#999"},"children":"EC2"}]," ",["$","a","Engineering",{"href":"/blog/tags/Engineering/","style":{"fontSize":"1.18em","color":"#99a7bb"},"children":"Engineering"}]," ",["$","a","Events",{"href":"/blog/tags/Events/","style":{"fontSize":"1.10em","color":"#999"},"children":"Events"}]," ",["$","a","Font-Awesome",{"href":"/blog/tags/Font-Awesome/","style":{"fontSize":"1.10em","color":"#999"},"children":"Font Awesome"}]," ",["$","a","Geometry",{"href":"/blog/tags/Geometry/","style":{"fontSize":"1.10em","color":"#999"},"children":"Geometry"}]," ",["$","a","GLSL",{"href":"/blog/tags/GLSL/","style":{"fontSize":"1.10em","color":"#999"},"children":"GLSL"}]," ",["$","a","glTF",{"href":"/blog/tags/glTF/","style":{"fontSize":"1.10em","color":"#999"},"children":"glTF"}]," ",["$","a","Grade-1",{"href":"/blog/tags/Grade-1/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Grade 1"}]," ",["$","a","Grade-2",{"href":"/blog/tags/Grade-2/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Grade 2"}]," ",["$","a","Grade-3",{"href":"/blog/tags/Grade-3/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Grade 3"}]," ",["$","a","Grade-4",{"href":"/blog/tags/Grade-4/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Grade 4"}]," ",["$","a","Grade-5",{"href":"/blog/tags/Grade-5/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 5"}]," ",["$","a","Grade-6",{"href":"/blog/tags/Grade-6/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 6"}]," ",["$","a","Grade-7",{"href":"/blog/tags/Grade-7/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 7"}]," ",["$","a","Grade-8",{"href":"/blog/tags/Grade-8/","style":{"fontSize":"1.10em","color":"#999"},"children":"Grade 8"}]," ",["$","a","High-Availability",{"href":"/blog/tags/High-Availability/","style":{"fontSize":"1.10em","color":"#999"},"children":"High Availability"}]," ",["$","a","HTML",{"href":"/blog/tags/HTML/","style":{"fontSize":"1.10em","color":"#999"},"children":"HTML"}]," ",["$","a","IaC",{"href":"/blog/tags/IaC/","style":{"fontSize":"1.10em","color":"#999"},"children":"IaC"}]," ",["$","a","Infrastructure",{"href":"/blog/tags/Infrastructure/","style":{"fontSize":"1.10em","color":"#999"},"children":"Infrastructure"}]," ",["$","a","Instancing",{"href":"/blog/tags/Instancing/","style":{"fontSize":"1.10em","color":"#999"},"children":"Instancing"}]," ",["$","a","Interactivity",{"href":"/blog/tags/Interactivity/","style":{"fontSize":"1.10em","color":"#999"},"children":"Interactivity"}]," ",["$","a","Ip-address",{"href":"/blog/tags/Ip-address/","style":{"fontSize":"1.10em","color":"#999"},"children":"Ip address"}]," ",["$","a","Java",{"href":"/blog/tags/Java/","style":{"fontSize":"1.13em","color":"#99a9be"},"children":"Java"}]," ",["$","a","JavaFX",{"href":"/blog/tags/JavaFX/","style":{"fontSize":"1.10em","color":"#999"},"children":"JavaFX"}]," ",["$","a","JavaScript",{"href":"/blog/tags/JavaScript/","style":{"fontSize":"1.10em","color":"#999"},"children":"JavaScript"}]," ",["$","a","jQuery",{"href":"/blog/tags/jQuery/","style":{"fontSize":"1.10em","color":"#999"},"children":"jQuery"}]," ",["$","a","Lambda",{"href":"/blog/tags/Lambda/","style":{"fontSize":"1.10em","color":"#999"},"children":"Lambda"}]," ",["$","a","Large-Language-Models",{"href":"/blog/tags/Large-Language-Models/","style":{"fontSize":"1.10em","color":"#999"},"children":"Large Language Models"}]," ",["$","a","Lighting",{"href":"/blog/tags/Lighting/","style":{"fontSize":"1.10em","color":"#999"},"children":"Lighting"}]," ",["$","a","Load-Balancer",{"href":"/blog/tags/Load-Balancer/","style":{"fontSize":"1.10em","color":"#999"},"children":"Load Balancer"}]," ",["$","a","Logic-Gates",{"href":"/blog/tags/Logic-Gates/","style":{"fontSize":"1.10em","color":"#999"},"children":"Logic Gates"}]," ",["$","a","Machine-Learning",{"href":"/blog/tags/Machine-Learning/","style":{"fontSize":"1.10em","color":"#999"},"children":"Machine Learning"}]," ",["$","a","Materials",{"href":"/blog/tags/Materials/","style":{"fontSize":"1.10em","color":"#999"},"children":"Materials"}]," ",["$","a","Mathematics",{"href":"/blog/tags/Mathematics/","style":{"fontSize":"1.10em","color":"#999"},"children":"Mathematics"}]," ",["$","a","Mobile",{"href":"/blog/tags/Mobile/","style":{"fontSize":"1.10em","color":"#999"},"children":"Mobile"}]," ",["$","a","Modern-C",{"href":"/blog/tags/Modern-C/","style":{"fontSize":"1.10em","color":"#999"},"children":"Modern C++"}]," ",["$","a","Monitoring",{"href":"/blog/tags/Monitoring/","style":{"fontSize":"1.10em","color":"#999"},"children":"Monitoring"}]," ",["$","a","Music",{"href":"/blog/tags/Music/","style":{"fontSize":"1.25em","color":"#99a6b8"},"children":"Music"}]," ",["$","a","Music-Theory",{"href":"/blog/tags/Music-Theory/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"Music Theory"}]," ",["$","a","NavMesh",{"href":"/blog/tags/NavMesh/","style":{"fontSize":"1.10em","color":"#999"},"children":"NavMesh"}]," ",["$","a","Networking",{"href":"/blog/tags/Networking/","style":{"fontSize":"1.10em","color":"#999"},"children":"Networking"}]," ",["$","a","Node-js",{"href":"/blog/tags/Node-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Node.js"}]," ",["$","a","OOP",{"href":"/blog/tags/OOP/","style":{"fontSize":"1.12em","color":"#99a9be"},"children":"OOP"}]," ",["$","a","PBR",{"href":"/blog/tags/PBR/","style":{"fontSize":"1.10em","color":"#999"},"children":"PBR"}]," ",["$","a","Performance",{"href":"/blog/tags/Performance/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Performance"}]," ",["$","a","Physics",{"href":"/blog/tags/Physics/","style":{"fontSize":"1.10em","color":"#999"},"children":"Physics"}]," ",["$","a","Piano",{"href":"/blog/tags/Piano/","style":{"fontSize":"1.15em","color":"#99a8bd"},"children":"Piano"}]," ",["$","a","Post-Processing",{"href":"/blog/tags/Post-Processing/","style":{"fontSize":"1.10em","color":"#999"},"children":"Post-Processing"}]," ",["$","a","Probability",{"href":"/blog/tags/Probability/","style":{"fontSize":"1.10em","color":"#999"},"children":"Probability"}]," ",["$","a","Procedural",{"href":"/blog/tags/Procedural/","style":{"fontSize":"1.10em","color":"#999"},"children":"Procedural"}]," ",["$","a","Programming",{"href":"/blog/tags/Programming/","style":{"fontSize":"1.23em","color":"#99a6b9"},"children":"Programming"}]," ",["$","a","Prompt-Engineering",{"href":"/blog/tags/Prompt-Engineering/","style":{"fontSize":"1.10em","color":"#999"},"children":"Prompt Engineering"}]," ",["$","a","Python",{"href":"/blog/tags/Python/","style":{"fontSize":"1.16em","color":"#99a8bd"},"children":"Python"}]," ",["$","a","Rapier",{"href":"/blog/tags/Rapier/","style":{"fontSize":"1.10em","color":"#999"},"children":"Rapier"}]," ",["$","a","RDS",{"href":"/blog/tags/RDS/","style":{"fontSize":"1.10em","color":"#999"},"children":"RDS"}]," ",["$","a","React-Three-Fiber",{"href":"/blog/tags/React-Three-Fiber/","style":{"fontSize":"1.10em","color":"#999"},"children":"React Three Fiber"}]," ",["$","a","React-js",{"href":"/blog/tags/React-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"React.js"}]," ",["$","a","S3",{"href":"/blog/tags/S3/","style":{"fontSize":"1.10em","color":"#999"},"children":"S3"}]," ",["$","a","Security",{"href":"/blog/tags/Security/","style":{"fontSize":"1.10em","color":"#999"},"children":"Security"}]," ",["$","a","Serverless",{"href":"/blog/tags/Serverless/","style":{"fontSize":"1.10em","color":"#999"},"children":"Serverless"}]," ",["$","a","Shaders",{"href":"/blog/tags/Shaders/","style":{"fontSize":"1.10em","color":"#999"},"children":"Shaders"}]," ",["$","a","Shadows",{"href":"/blog/tags/Shadows/","style":{"fontSize":"1.10em","color":"#999"},"children":"Shadows"}]," ",["$","a","Statistic",{"href":"/blog/tags/Statistic/","style":{"fontSize":"1.10em","color":"#999"},"children":"Statistic"}]," ",["$","a","Step-Functions",{"href":"/blog/tags/Step-Functions/","style":{"fontSize":"1.10em","color":"#999"},"children":"Step Functions"}]," ",["$","a","STL",{"href":"/blog/tags/STL/","style":{"fontSize":"1.10em","color":"#999"},"children":"STL"}]," ",["$","a","Stream-API",{"href":"/blog/tags/Stream-API/","style":{"fontSize":"1.10em","color":"#999"},"children":"Stream API"}]," ",["$","a","Subnetting",{"href":"/blog/tags/Subnetting/","style":{"fontSize":"1.10em","color":"#999"},"children":"Subnetting"}]," ",["$","a","Tailwind",{"href":"/blog/tags/Tailwind/","style":{"fontSize":"1.10em","color":"#999"},"children":"Tailwind"}]," ",["$","a","Terraform",{"href":"/blog/tags/Terraform/","style":{"fontSize":"1.10em","color":"#999"},"children":"Terraform"}]," ",["$","a","Texture",{"href":"/blog/tags/Texture/","style":{"fontSize":"1.10em","color":"#999"},"children":"Texture"}]," ",["$","a","Three-js",{"href":"/blog/tags/Three-js/","style":{"fontSize":"1.25em","color":"#99a6b8"},"children":"Three.js"}]," ",["$","a","TSL",{"href":"/blog/tags/TSL/","style":{"fontSize":"1.10em","color":"#999"},"children":"TSL"}]," ",["$","a","Violin",{"href":"/blog/tags/Violin/","style":{"fontSize":"1.19em","color":"#99a7bb"},"children":"Violin"}]," ",["$","a","Vite",{"href":"/blog/tags/Vite/","style":{"fontSize":"1.10em","color":"#999"},"children":"Vite"}]," ",["$","a","VPC",{"href":"/blog/tags/VPC/","style":{"fontSize":"1.10em","color":"#999"},"children":"VPC"}]," ",["$","a","Vue-js",{"href":"/blog/tags/Vue-js/","style":{"fontSize":"1.10em","color":"#999"},"children":"Vue.js"}]," ",["$","a","WebGL",{"href":"/blog/tags/WebGL/","style":{"fontSize":"1.10em","color":"#999"},"children":"WebGL"}]," ",["$","a","WebGPU",{"href":"/blog/tags/WebGPU/","style":{"fontSize":"1.10em","color":"#999"},"children":"WebGPU"}]," ",["$","a","Website-design",{"href":"/blog/tags/Website-design/","style":{"fontSize":"1.11em","color":"#99a9bf"},"children":"Website design"}]," ",["$","a","Workflows",{"href":"/blog/tags/Workflows/","style":{"fontSize":"1.10em","color":"#999"},"children":"Workflows"}]]}]]}],["$","div",null,{"className":"card-widget card-archives","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-archive"}],["$","span",null,{"children":"Archives"}]]}],["$","ul",null,{"className":"card-archive-list","children":[["$","li","202605",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/blog/archives/2026/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2026"}],["$","span",null,{"className":"card-archive-list-count","children":50}]]}]}],["$","li","202205",{"className":"card-archive-list-item","children":["$","a",null,{"className":"card-archive-list-link","href":"/blog/archives/2022/05/","children":[["$","span",null,{"className":"card-archive-list-date","children":"May 2022"}],["$","span",null,{"className":"card-archive-list-count","children":10}]]}]}]]}]]}],["$","div",null,{"className":"card-widget card-webinfo","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-chart-line"}],["$","span",null,{"children":"Info"}]]}],["$","div",null,{"className":"webinfo","children":[["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Article :"}],["$","div",null,{"className":"item-count","children":60}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Run time :"}],["$","div",null,{"className":"item-count","id":"runtimeshow","data-publishDate":"2022-01-01T00:00:00.000Z"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Visits :"}],["$","div",null,{"className":"item-count","id":"busuanzi_value_site_pv"}]]}],["$","div",null,{"className":"webinfo-item","children":[["$","div",null,{"className":"item-name","children":"Last Push :"}],["$","div",null,{"className":"item-count","id":"last-push-date","data-lastPushDate":"2026-05-22T14:08:28.277Z"}]]}]]}]]}]]]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$L9",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$La",null,{"isHome":false,"isPost":false}],["$","$Lb",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lc",null,{}]]
+d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Page 6 | Vokint's StudyLog"}]]
+1:null

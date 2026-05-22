@@ -1,0 +1,493 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-7b2cf6c9849ce177.js"],"default"]
+4:["year","2026","d"]
+5:["month","05","d"]
+6:["day","18","d"]
+7:["slug","threejs_01_geometry_materials","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["I_apd2N7eTKzbrGa7hmPo",[[["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","18","d"],{"children":[["slug","threejs_01_geometry_materials","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"05\",\"day\":\"18\",\"slug\":\"threejs_01_geometry_materials\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","05","d"],{"children":[["day","18","d"],{"children":[["slug","threejs_01_geometry_materials","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-05-22 14:08:25\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T86de,<p>A mesh in Three.js is <code>geometry + material</code>. Geometry defines the shape — a list of vertex positions, normals, UVs, and how they form triangles. Material defines how each pixel of the shape is shaded — colour, roughness, light response, transparency. This post covers <code>BufferGeometry</code>, the built-in geometries, and the full material family from <code>MeshBasicMaterial</code> (no lighting at all) up to <code>MeshPhysicalMaterial</code> (full PBR with clearcoat, sheen, transmission, iridescence).</p>
+<blockquote>
+<p>Series map: 00 Foundations → <strong>01 Geometry &amp; Materials</strong> (this post) → 02 Cameras &amp; Controls → 03 Lighting &amp; Shadows → 04 Textures &amp; PBR → 05 Asset Pipeline → 06 Animation → 07 Instancing &amp; Batching → 08 Low-End Perf → 09 Shaders → 10 Post-Processing → 11 Physics → 12 R3F → 13 AI 3D.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Build a <code>BufferGeometry</code> from raw arrays of positions, normals, UVs, and indices.</li>
+<li>Use the built-in geometries (Box, Sphere, Plane, Cylinder, Cone, Torus, TorusKnot, Tube, Lathe, Extrude, Text).</li>
+<li>Distinguish the material families: Basic, Lambert, Phong, Standard, Physical, Toon, MatCap, Depth, Normal, Line, Sprite.</li>
+<li>Understand which materials need lights and which don't.</li>
+<li>Use wireframe, flat shading, double-sided rendering, and transparency.</li>
+<li>Apply UV coordinates that make textures look right (Post 04 covers texture loading).</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-BufferGeometry-the-low-level-shape"><a href="#Chapter-1-—-BufferGeometry-the-low-level-shape" class="headerlink" title="Chapter 1 — BufferGeometry: the low-level shape"></a>Chapter 1 — BufferGeometry: the low-level shape</h1>
+<p>Every geometry in Three.js is a <code>BufferGeometry</code>. It's a container for <code>BufferAttribute</code> arrays describing per-vertex data.</p>
+<h2 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>position</code></td>
+<td>Float32, 3 components</td>
+<td>x, y, z of each vertex</td>
+</tr>
+<tr>
+<td><code>normal</code></td>
+<td>Float32, 3 components</td>
+<td>surface normal (for lighting)</td>
+</tr>
+<tr>
+<td><code>uv</code></td>
+<td>Float32, 2 components</td>
+<td>texture coordinates (0-1)</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Float32, 3 components</td>
+<td>per-vertex tint (optional)</td>
+</tr>
+<tr>
+<td><code>tangent</code></td>
+<td>Float32, 4 components</td>
+<td>required for normal maps</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>Uint16 / Uint32</td>
+<td>triangle vertex indices (optional)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Build-a-triangle-by-hand"><a href="#Build-a-triangle-by-hand" class="headerlink" title="Build a triangle by hand"></a>Build a triangle by hand</h2>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> <span class="hljs-variable constant_">THREE</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;three&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> geo = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">BufferGeometry</span>();</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> positions = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Float32Array</span>([</span><br><span class="line">  -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">0</span>,</span><br><span class="line">   <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">0</span>,</span><br><span class="line">   <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>, <span class="hljs-number">0</span>,</span><br><span class="line">]);</span><br><span class="line">geo.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">BufferAttribute</span>(positions, <span class="hljs-number">3</span>));</span><br><span class="line"> </span><br><span class="line">geo.<span class="hljs-title function_">computeVertexNormals</span>();      <span class="hljs-comment">// generates per-vertex normals from triangle facets</span></span><br><span class="line">geo.<span class="hljs-title function_">setIndex</span>([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);         <span class="hljs-comment">// optional — explicit triangle vertices</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> mesh = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">Mesh</span>(geo, <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">MeshStandardMaterial</span>({ <span class="hljs-attr">color</span>: <span class="hljs-number">0x88ddff</span> }));</span><br><span class="line">scene.<span class="hljs-title function_">add</span>(mesh);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Direct array control is what you reach for when generating procedural geometry (terrain, ribbons, particles). For everyday primitives, use the built-ins.</p>
+<hr>
+<h1 id="Chapter-2-—-Built-in-geometries"><a href="#Chapter-2-—-Built-in-geometries" class="headerlink" title="Chapter 2 — Built-in geometries"></a>Chapter 2 — Built-in geometries</h1>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Notes</th>
+<th>Common args</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BoxGeometry</code></td>
+<td>6-face box</td>
+<td><code>(w, h, d, wSeg=1, hSeg=1, dSeg=1)</code></td>
+</tr>
+<tr>
+<td><code>SphereGeometry</code></td>
+<td>UV sphere</td>
+<td><code>(r, wSeg=32, hSeg=16)</code></td>
+</tr>
+<tr>
+<td><code>PlaneGeometry</code></td>
+<td>flat quad</td>
+<td><code>(w, h, wSeg=1, hSeg=1)</code></td>
+</tr>
+<tr>
+<td><code>CircleGeometry</code></td>
+<td>flat disc</td>
+<td><code>(r, segments=32)</code></td>
+</tr>
+<tr>
+<td><code>CylinderGeometry</code></td>
+<td>cylinder</td>
+<td><code>(rTop, rBottom, h, segs)</code></td>
+</tr>
+<tr>
+<td><code>ConeGeometry</code></td>
+<td>cylinder w/ top = 0</td>
+<td><code>(r, h, segs)</code></td>
+</tr>
+<tr>
+<td><code>TorusGeometry</code></td>
+<td>donut</td>
+<td><code>(r, tube, radSeg, tubSeg)</code></td>
+</tr>
+<tr>
+<td><code>TorusKnotGeometry</code></td>
+<td>mathematical knot</td>
+<td><code>(r, tube, tubSeg, radSeg, p, q)</code></td>
+</tr>
+<tr>
+<td><code>IcosahedronGeometry</code>, <code>OctahedronGeometry</code>, <code>TetrahedronGeometry</code>, <code>DodecahedronGeometry</code></td>
+<td>platonic solids</td>
+<td><code>(r, detail=0)</code></td>
+</tr>
+<tr>
+<td><code>TubeGeometry</code></td>
+<td>sweep along a curve</td>
+<td><code>(path, tubSeg, r, radSeg)</code></td>
+</tr>
+<tr>
+<td><code>LatheGeometry</code></td>
+<td>revolution of a 2D profile</td>
+<td><code>(points, segments)</code></td>
+</tr>
+<tr>
+<td><code>ExtrudeGeometry</code></td>
+<td>extrude a 2D shape into 3D</td>
+<td><code>(shape, options)</code></td>
+</tr>
+<tr>
+<td><code>TextGeometry</code></td>
+<td>3D text from a Font</td>
+<td><code>(text, options)</code> — needs <code>FontLoader</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Subdivision-matters"><a href="#Subdivision-matters" class="headerlink" title="Subdivision matters"></a>Subdivision matters</h2>
+<p>A <code>SphereGeometry(1, 8, 6)</code> is faceted; <code>SphereGeometry(1, 64, 32)</code> is smooth. Higher segments cost more vertices, more shading work, more memory. Profile in <code>renderer.info.triangles</code>.</p>
+<blockquote>
+<p><strong>Trick:</strong> when modelling stylised / low-poly art, low segment counts plus <code>flatShading: true</code> on the material gives the faceted look on purpose.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-Material-family"><a href="#Chapter-3-—-Material-family" class="headerlink" title="Chapter 3 — Material family"></a>Chapter 3 — Material family</h1>
+<p>A material decides how each fragment (pixel) is shaded. The list, from cheapest to most expensive:</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Lights needed?</th>
+<th>Cost</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MeshBasicMaterial</code></td>
+<td>no</td>
+<td>very cheap</td>
+<td>UI, sprites, &quot;unlit&quot; look</td>
+</tr>
+<tr>
+<td><code>MeshDepthMaterial</code></td>
+<td>n/a</td>
+<td>cheap</td>
+<td>shadows, depth visualisation</td>
+</tr>
+<tr>
+<td><code>MeshNormalMaterial</code></td>
+<td>no (encodes normals as RGB)</td>
+<td>cheap</td>
+<td>debugging, stylised</td>
+</tr>
+<tr>
+<td><code>MeshMatcapMaterial</code></td>
+<td>no (uses a &quot;material capture&quot; image)</td>
+<td>cheap</td>
+<td>stylised — looks lit but isn't</td>
+</tr>
+<tr>
+<td><code>MeshLambertMaterial</code></td>
+<td>yes (diffuse only)</td>
+<td>cheap</td>
+<td>matte non-shiny surfaces</td>
+</tr>
+<tr>
+<td><code>MeshPhongMaterial</code></td>
+<td>yes (diffuse + specular)</td>
+<td>medium</td>
+<td>shiny non-PBR</td>
+</tr>
+<tr>
+<td><code>MeshToonMaterial</code></td>
+<td>yes</td>
+<td>medium</td>
+<td>cel-shaded / cartoon</td>
+</tr>
+<tr>
+<td><code>MeshStandardMaterial</code></td>
+<td>yes</td>
+<td>medium</td>
+<td><strong>PBR default</strong> — covered fully in Post 04</td>
+</tr>
+<tr>
+<td><code>MeshPhysicalMaterial</code></td>
+<td>yes</td>
+<td>high</td>
+<td>PBR + clearcoat, sheen, transmission, iridescence, anisotropy</td>
+</tr>
+<tr>
+<td><code>LineBasicMaterial</code>, <code>LineDashedMaterial</code></td>
+<td>n/a</td>
+<td>cheap</td>
+<td>lines</td>
+</tr>
+<tr>
+<td><code>PointsMaterial</code></td>
+<td>n/a</td>
+<td>cheap</td>
+<td>particles</td>
+</tr>
+<tr>
+<td><code>SpriteMaterial</code></td>
+<td>n/a</td>
+<td>cheap</td>
+<td>2D billboards always facing camera</td>
+</tr>
+<tr>
+<td><code>ShaderMaterial</code> / <code>RawShaderMaterial</code> / <code>NodeMaterial</code> (TSL)</td>
+<td>depends</td>
+<td>depends</td>
+<td>custom (Post 09)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="When-each-lights-up"><a href="#When-each-lights-up" class="headerlink" title="When each lights up"></a>When each lights up</h2>
+<ul>
+<li><strong>Unlit family</strong> (<code>Basic</code>, <code>Normal</code>, <code>Matcap</code>, <code>Depth</code>, <code>Line</code>, <code>Points</code>, <code>Sprite</code>) ignore lights entirely — they render the same regardless of scene lighting.</li>
+<li><strong>Lit family</strong> (<code>Lambert</code>, <code>Phong</code>, <code>Toon</code>, <code>Standard</code>, <code>Physical</code>) need at least one light in the scene; otherwise they appear black.</li>
+</ul>
+<blockquote>
+<p><strong>Trick:</strong> a beginner's &quot;it's just black&quot; problem is almost always: lit material + no lights. Either add a <code>HemisphereLight</code> / <code>AmbientLight</code>, or switch the material to <code>MeshBasicMaterial</code> while debugging.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-MeshStandardMaterial-the-modern-default"><a href="#Chapter-4-—-MeshStandardMaterial-the-modern-default" class="headerlink" title="Chapter 4 — MeshStandardMaterial (the modern default)"></a>Chapter 4 — MeshStandardMaterial (the modern default)</h1>
+<p>Physically-based rendering means: photons behave physically; a few intuitive parameters (<code>metalness</code>, <code>roughness</code>) replace dozens of arbitrary knobs.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">const</span> mat = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">MeshStandardMaterial</span>({</span><br><span class="line">  <span class="hljs-attr">color</span>: <span class="hljs-number">0xcccccc</span>,</span><br><span class="line">  <span class="hljs-attr">metalness</span>: <span class="hljs-number">0.0</span>,         <span class="hljs-comment">// 0 = dielectric (plastic, wood, skin); 1 = metal</span></span><br><span class="line">  <span class="hljs-attr">roughness</span>: <span class="hljs-number">0.5</span>,         <span class="hljs-comment">// 0 = mirror; 1 = perfectly diffuse</span></span><br><span class="line">  <span class="hljs-attr">emissive</span>: <span class="hljs-number">0x000000</span>,</span><br><span class="line">  <span class="hljs-attr">emissiveIntensity</span>: <span class="hljs-number">1.0</span>,</span><br><span class="line">  <span class="hljs-attr">map</span>:           <span class="hljs-literal">null</span>,    <span class="hljs-comment">// base colour texture</span></span><br><span class="line">  <span class="hljs-attr">normalMap</span>:     <span class="hljs-literal">null</span>,    <span class="hljs-comment">// surface detail</span></span><br><span class="line">  <span class="hljs-attr">roughnessMap</span>:  <span class="hljs-literal">null</span>,</span><br><span class="line">  <span class="hljs-attr">metalnessMap</span>:  <span class="hljs-literal">null</span>,</span><br><span class="line">  <span class="hljs-attr">aoMap</span>:         <span class="hljs-literal">null</span>,    <span class="hljs-comment">// ambient occlusion</span></span><br><span class="line">  <span class="hljs-attr">envMapIntensity</span>: <span class="hljs-number">1.0</span>,</span><br><span class="line">  <span class="hljs-attr">side</span>: <span class="hljs-variable constant_">THREE</span>.<span class="hljs-property">FrontSide</span>,  <span class="hljs-comment">// or BackSide / DoubleSide</span></span><br><span class="line">  <span class="hljs-attr">transparent</span>: <span class="hljs-literal">false</span>,</span><br><span class="line">  <span class="hljs-attr">opacity</span>: <span class="hljs-number">1.0</span>,</span><br><span class="line">  <span class="hljs-attr">alphaTest</span>: <span class="hljs-number">0</span>,           <span class="hljs-comment">// discard fragments with alpha below this</span></span><br><span class="line">});</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Post 04 covers the textures themselves.</p>
+<h2 id="Physical-extensions"><a href="#Physical-extensions" class="headerlink" title="Physical extensions"></a>Physical extensions</h2>
+<p><code>MeshPhysicalMaterial</code> extends Standard with:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clearcoat</code>, <code>clearcoatRoughness</code></td>
+<td>car paint, varnished wood</td>
+</tr>
+<tr>
+<td><code>sheen</code>, <code>sheenColor</code>, <code>sheenRoughness</code></td>
+<td>velvet, fabric softness</td>
+</tr>
+<tr>
+<td><code>transmission</code>, <code>thickness</code>, <code>ior</code></td>
+<td>glass-like refraction</td>
+</tr>
+<tr>
+<td><code>iridescence</code>, <code>iridescenceIOR</code></td>
+<td>thin-film effect (soap bubble, oil slick)</td>
+</tr>
+<tr>
+<td><code>anisotropy</code></td>
+<td>brushed metal directional highlight</td>
+</tr>
+<tr>
+<td><code>attenuationColor</code>, <code>attenuationDistance</code></td>
+<td>tinted glass</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">const</span> glass = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">MeshPhysicalMaterial</span>({</span><br><span class="line">  <span class="hljs-attr">color</span>: <span class="hljs-number">0xffffff</span>,</span><br><span class="line">  <span class="hljs-attr">metalness</span>: <span class="hljs-number">0</span>,</span><br><span class="line">  <span class="hljs-attr">roughness</span>: <span class="hljs-number">0</span>,</span><br><span class="line">  <span class="hljs-attr">transmission</span>: <span class="hljs-number">1.0</span>,</span><br><span class="line">  <span class="hljs-attr">thickness</span>: <span class="hljs-number">0.5</span>,</span><br><span class="line">  <span class="hljs-attr">ior</span>: <span class="hljs-number">1.5</span>,</span><br><span class="line">  <span class="hljs-attr">envMapIntensity</span>: <span class="hljs-number">1.0</span>,</span><br><span class="line">});</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-5-—-Common-material-flags"><a href="#Chapter-5-—-Common-material-flags" class="headerlink" title="Chapter 5 — Common material flags"></a>Chapter 5 — Common material flags</h1>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span></pre></td><td class="code"><pre><code class="js"><span class="line">material.<span class="hljs-property">wireframe</span>   = <span class="hljs-literal">true</span>;    <span class="hljs-comment">// render edges only</span></span><br><span class="line">material.<span class="hljs-property">flatShading</span> = <span class="hljs-literal">true</span>;    <span class="hljs-comment">// per-face normals — faceted look</span></span><br><span class="line">material.<span class="hljs-property">side</span> = <span class="hljs-variable constant_">THREE</span>.<span class="hljs-property">DoubleSide</span>;   <span class="hljs-comment">// render both sides</span></span><br><span class="line">material.<span class="hljs-property">transparent</span> = <span class="hljs-literal">true</span>;</span><br><span class="line">material.<span class="hljs-property">opacity</span> = <span class="hljs-number">0.5</span>;</span><br><span class="line">material.<span class="hljs-property">depthWrite</span> = <span class="hljs-literal">false</span>;    <span class="hljs-comment">// for transparent objects often needed</span></span><br><span class="line">material.<span class="hljs-property">alphaTest</span> = <span class="hljs-number">0.5</span>;       <span class="hljs-comment">// cut-out shapes — use for leaves/hair cards</span></span><br><span class="line">material.<span class="hljs-property">vertexColors</span> = <span class="hljs-literal">true</span>;   <span class="hljs-comment">// use the geometry&#x27;s `color` attribute</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="DoubleSide-cost"><a href="#DoubleSide-cost" class="headerlink" title="DoubleSide cost"></a>DoubleSide cost</h2>
+<p><code>DoubleSide</code> doubles the fragment shader work for that mesh — every triangle is rasterised twice (once per facing). Use only when needed (paper-thin objects, particle quads). For closed shapes, <code>FrontSide</code> (default) is correct and faster.</p>
+<h2 id="Transparency-caveats"><a href="#Transparency-caveats" class="headerlink" title="Transparency caveats"></a>Transparency caveats</h2>
+<p>Transparent objects must be <strong>sorted back-to-front</strong> for correct blending. Three.js does this per-mesh automatically (<code>renderer.sortObjects = true</code> by default). It cannot sort <strong>within</strong> a single mesh — long beard hair, foliage cards, particle clouds will exhibit artefacts. Workarounds:</p>
+<ol>
+<li><strong><code>alphaTest</code></strong> instead of <code>opacity</code> for binary cut-outs (no sorting needed).</li>
+<li><strong>Separate meshes</strong> per leaf cluster (slow).</li>
+<li><strong>Order-independent transparency</strong> (OIT) via custom shader (advanced).</li>
+</ol>
+<hr>
+<h1 id="Chapter-6-—-Wireframe-flat-shading-recipes"><a href="#Chapter-6-—-Wireframe-flat-shading-recipes" class="headerlink" title="Chapter 6 — Wireframe + flat shading recipes"></a>Chapter 6 — Wireframe + flat shading recipes</h1>
+<p>Quick stylised looks without writing a shader:</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-comment">// low-poly facet style</span></span><br><span class="line"><span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">IcosahedronGeometry</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);   <span class="hljs-comment">// detail=1 → 80 tris</span></span><br><span class="line"><span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">MeshStandardMaterial</span>({ <span class="hljs-attr">color</span>: <span class="hljs-number">0x66ccff</span>, <span class="hljs-attr">flatShading</span>: <span class="hljs-literal">true</span> });</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// wireframe outline</span></span><br><span class="line"><span class="hljs-keyword">const</span> wf = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">WireframeGeometry</span>(geo);   <span class="hljs-comment">// distinct from material.wireframe</span></span><br><span class="line">scene.<span class="hljs-title function_">add</span>(<span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">LineSegments</span>(wf, <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">LineBasicMaterial</span>({ <span class="hljs-attr">color</span>: <span class="hljs-number">0xffffff</span> })));</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// edges only (cleaner than wireframe)</span></span><br><span class="line"><span class="hljs-keyword">const</span> edges = <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">EdgesGeometry</span>(geo, <span class="hljs-number">30</span>);  <span class="hljs-comment">// 30° angle threshold</span></span><br><span class="line">scene.<span class="hljs-title function_">add</span>(<span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">LineSegments</span>(edges, <span class="hljs-keyword">new</span> <span class="hljs-variable constant_">THREE</span>.<span class="hljs-title class_">LineBasicMaterial</span>({ <span class="hljs-attr">color</span>: <span class="hljs-number">0xffffff</span> })));</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>EdgesGeometry</code> is the right tool for &quot;outline the silhouette of this object&quot; without dotting every triangle.</p>
+<hr>
+<h1 id="Chapter-7-—-Disposing-geometry-materials"><a href="#Chapter-7-—-Disposing-geometry-materials" class="headerlink" title="Chapter 7 — Disposing geometry + materials"></a>Chapter 7 — Disposing geometry + materials</h1>
+<p>Three.js does not garbage-collect GPU resources automatically. When removing meshes:</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="js"><span class="line">scene.<span class="hljs-title function_">remove</span>(mesh);</span><br><span class="line">mesh.<span class="hljs-property">geometry</span>.<span class="hljs-title function_">dispose</span>();</span><br><span class="line">mesh.<span class="hljs-property">material</span>.<span class="hljs-title function_">dispose</span>();</span><br><span class="line"><span class="hljs-comment">// also dispose any textures the material referenced</span></span><br><span class="line">mesh.<span class="hljs-property">material</span>.<span class="hljs-property">map</span>?.<span class="hljs-title function_">dispose</span>();</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Forgetting this in a long-running app causes GPU memory to climb until the tab crashes. Especially important when loading and unloading scenes / models.</p>
+<p>A helper:</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">function</span> <span class="hljs-title function_">disposeObject</span>(<span class="hljs-params">obj</span>) {</span><br><span class="line">  obj.<span class="hljs-title function_">traverse</span>(<span class="hljs-function">(<span class="hljs-params">c</span>) =&gt;</span> {</span><br><span class="line">    <span class="hljs-keyword">if</span> (c.<span class="hljs-property">geometry</span>) c.<span class="hljs-property">geometry</span>.<span class="hljs-title function_">dispose</span>();</span><br><span class="line">    <span class="hljs-keyword">if</span> (c.<span class="hljs-property">material</span>) {</span><br><span class="line">      <span class="hljs-keyword">const</span> mats = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">isArray</span>(c.<span class="hljs-property">material</span>) ? c.<span class="hljs-property">material</span> : [c.<span class="hljs-property">material</span>];</span><br><span class="line">      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> m <span class="hljs-keyword">of</span> mats) {</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> k <span class="hljs-keyword">in</span> m) <span class="hljs-keyword">if</span> (m[k]?.<span class="hljs-property">isTexture</span>) m[k].<span class="hljs-title function_">dispose</span>();</span><br><span class="line">        m.<span class="hljs-title function_">dispose</span>();</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  });</span><br><span class="line">}</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Built-in-zoo"><a href="#Exercise-1-—-Built-in-zoo" class="headerlink" title="Exercise 1 — Built-in zoo"></a>Exercise 1 — Built-in zoo</h2>
+<p>Render 6 objects in a row: Box, Sphere, Torus, TorusKnot, Cone, Icosahedron. Each with a different <code>MeshStandardMaterial</code> colour. Add ambient + directional light.</p>
+<h2 id="Exercise-2-—-Compare-materials"><a href="#Exercise-2-—-Compare-materials" class="headerlink" title="Exercise 2 — Compare materials"></a>Exercise 2 — Compare materials</h2>
+<p>Same sphere, 5 copies side by side, each with a different material: Basic, Lambert, Phong, Standard, Physical (with <code>transmission: 1</code>). Observe the difference.</p>
+<h2 id="Exercise-3-—-Wireframe-flatShading-combo"><a href="#Exercise-3-—-Wireframe-flatShading-combo" class="headerlink" title="Exercise 3 — Wireframe + flatShading combo"></a>Exercise 3 — Wireframe + flatShading combo</h2>
+<p>A low-poly icosahedron (<code>detail=0</code>) with <code>flatShading: true</code>. Overlay an <code>EdgesGeometry</code> outline. Should look like a polygonal gemstone.</p>
+<h2 id="Exercise-4-—-Procedural-geometry"><a href="#Exercise-4-—-Procedural-geometry" class="headerlink" title="Exercise 4 — Procedural geometry"></a>Exercise 4 — Procedural geometry</h2>
+<p>Build a <code>BufferGeometry</code> of 100 random points (<code>Points</code> material). Animate each point's position by a sine wave per frame. (Foreshadows particle systems and shaders.)</p>
+<h2 id="Exercise-5-—-Disposal-drill"><a href="#Exercise-5-—-Disposal-drill" class="headerlink" title="Exercise 5 — Disposal drill"></a>Exercise 5 — Disposal drill</h2>
+<p>In a loop, every 2 seconds: remove the current mesh from the scene and add a new sphere with random colour. Log <code>renderer.info.memory.geometries</code> to confirm it stays low when you dispose properly.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buffer geometry</td>
+<td><code>new THREE.BufferGeometry()</code> + <code>setAttribute('position', ...)</code></td>
+</tr>
+<tr>
+<td>Index</td>
+<td><code>geometry.setIndex([...])</code></td>
+</tr>
+<tr>
+<td>Recompute normals</td>
+<td><code>geometry.computeVertexNormals()</code></td>
+</tr>
+<tr>
+<td>Recompute tangents</td>
+<td><code>geometry.computeTangents()</code> (needs <code>uv</code>)</td>
+</tr>
+<tr>
+<td>Box / Sphere / Plane / Torus</td>
+<td><code>new THREE.BoxGeometry(...)</code> etc.</td>
+</tr>
+<tr>
+<td>Unlit</td>
+<td><code>MeshBasicMaterial</code>, <code>MeshNormalMaterial</code>, <code>MeshMatcapMaterial</code></td>
+</tr>
+<tr>
+<td>Lit PBR</td>
+<td><code>MeshStandardMaterial</code> (default for new work)</td>
+</tr>
+<tr>
+<td>Glass / car paint</td>
+<td><code>MeshPhysicalMaterial</code> + clearcoat / transmission</td>
+</tr>
+<tr>
+<td>Cel-shaded</td>
+<td><code>MeshToonMaterial</code></td>
+</tr>
+<tr>
+<td>Wireframe</td>
+<td><code>material.wireframe = true</code> (or use <code>EdgesGeometry</code>)</td>
+</tr>
+<tr>
+<td>Flat shading</td>
+<td><code>material.flatShading = true</code></td>
+</tr>
+<tr>
+<td>Double-sided</td>
+<td><code>material.side = THREE.DoubleSide</code></td>
+</tr>
+<tr>
+<td>Cut-out alpha</td>
+<td><code>material.alphaTest = 0.5</code> (no sorting needed)</td>
+</tr>
+<tr>
+<td>Free GPU memory</td>
+<td><code>geometry.dispose()</code> + <code>material.dispose()</code> + <code>texture.dispose()</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 02 covers <strong>cameras, controls, and the coordinate system</strong> — what perspective vs orthographic actually do, the four built-in controls (Orbit, Map, Pointer-Lock, Trackball), and the math of <code>lookAt</code> + world-vs-local space.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://threejs.org/docs/#api/en/core/BufferGeometry" target="_blank" rel="noopener external nofollow noreferrer">Three.js docs — BufferGeometry</a></li>
+<li><a href="https://threejs.org/docs/#api/en/materials/Material" target="_blank" rel="noopener external nofollow noreferrer">Three.js docs — Materials</a></li>
+<li><a href="https://threejs.org/manual/#en/primitives" target="_blank" rel="noopener external nofollow noreferrer">Three.js manual — Primitives</a></li>
+<li><a href="https://threejs.org/manual/#en/materials" target="_blank" rel="noopener external nofollow noreferrer">Three.js manual — Materials</a></li>
+<li><a href="https://discourse.threejs.org/t/correctly-disposing-of-things/16037" target="_blank" rel="noopener external nofollow noreferrer">Disposing objects in Three.js (forum)</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: BufferGeometryUtils.mergeGeometries example; CSG (constructive solid geometry) via three-bvh-csg; signed-distance-field text intro.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Three.js Course — 01 · Geometry & Materials\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-05-22 14:08:25\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Three.js Course — 01 · Geometry & Materials"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-05-18T02:00:00.000Z","title":"Created 2026-05-18 10:00:00","children":"2026-05-18"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-05-18T02:00:00.000Z","title":"Updated 2026-05-18 10:00:00","children":"2026-05-18"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Programming",{"className":"post-meta-categories","href":"/blog/categories/Programming/","children":"Programming"}]],[["$","span","sep-3D",{"children":" > "}],["$","a","3D",{"className":"post-meta-categories","href":"/blog/categories/3D/","children":"3D"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Three.js Course — 01 · Geometry & Materials","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/05/18/threejs_01_geometry_materials/","children":"https://invokfung.github.io/blog/2026/05/18/threejs_01_geometry_materials/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Computer Science",{"className":"post-meta__tags","href":"/blog/tags/Computer-Science/","children":"Computer Science"}],["$","a","3D",{"className":"post-meta__tags","href":"/blog/tags/3D/","children":"3D"}],["$","a","Three.js",{"className":"post-meta__tags","href":"/blog/tags/Three-js/","children":"Three.js"}],["$","a","Geometry",{"className":"post-meta__tags","href":"/blog/tags/Geometry/","children":"Geometry"}],["$","a","Materials",{"className":"post-meta__tags","href":"/blog/tags/Materials/","children":"Materials"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/05/18/threejs_02_cameras_controls/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Three.js Course — 02 · Cameras, Controls, and Coordinate Systems</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/05/18/threejs_00_foundations/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Three.js Course — 00 · Foundations, WebGL/WebGPU, First Scene</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","threejs_00_foundations",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_00_foundations/","title":"Three.js Course — 00 · Foundations, WebGL/WebGPU, First Scene","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 00 · Foundations, WebGL/WebGPU, First Scene</div></div>"}}]}],["$","div","threejs_02_cameras_controls",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_02_cameras_controls/","title":"Three.js Course — 02 · Cameras, Controls, and Coordinate Systems","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 02 · Cameras, Controls, and Coordinate Systems</div></div>"}}]}],["$","div","threejs_03_lighting_shadows",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_03_lighting_shadows/","title":"Three.js Course — 03 · Lighting & Shadows (PCF, PCFSoft, VSM, CSM, Contact)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 03 · Lighting &amp; Shadows (PCF, PCFSoft, VSM, CSM, Contact)</div></div>"}}]}],["$","div","threejs_04_textures_pbr",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_04_textures_pbr/","title":"Three.js Course — 04 · Textures & PBR (Color Space, IBL, KTX2)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 04 · Textures &amp; PBR (Color Space, IBL, KTX2)</div></div>"}}]}],["$","div","threejs_05_asset_pipeline",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_05_asset_pipeline/","title":"Three.js Course — 05 · Asset Pipeline — glTF, Draco, KTX2, Meshopt","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 05 · Asset Pipeline — glTF, Draco, KTX2, Meshopt</div></div>"}}]}],["$","div","threejs_06_animation",{"children":["$","a",null,{"href":"/blog/2026/05/18/threejs_06_animation/","title":"Three.js Course — 06 · Animation — Mixer, Clips, Morph Targets, Skinned Meshes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-18</div><div class=\"title\">Three.js Course — 06 · Animation — Mixer, Clips, Morph Targets, Skinned Meshes</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":60}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":105}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":9}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-BufferGeometry-the-low-level-shape",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-BufferGeometry-the-low-level-shape","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — BufferGeometry: the low-level shape"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Attributes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Attributes","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Attributes"}]]}],null]}],["$","li","Build-a-triangle-by-hand",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Build-a-triangle-by-hand","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"Build a triangle by hand"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Built-in-geometries",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Built-in-geometries","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Built-in geometries"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Subdivision-matters",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Subdivision-matters","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Subdivision matters"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Material-family",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Material-family","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Material family"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","When-each-lights-up",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#When-each-lights-up","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"When each lights up"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-MeshStandardMaterial-the-modern-default",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-MeshStandardMaterial-the-modern-default","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — MeshStandardMaterial (the modern default)"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Physical-extensions",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Physical-extensions","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Physical extensions"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Common-material-flags",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Common-material-flags","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Common material flags"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","DoubleSide-cost",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#DoubleSide-cost","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"DoubleSide cost"}]]}],null]}],["$","li","Transparency-caveats",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Transparency-caveats","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"Transparency caveats"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Wireframe-flat-shading-recipes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Wireframe-flat-shading-recipes","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Wireframe + flat shading recipes"}]]}],null]}],["$","li","Chapter-7-—-Disposing-geometry-materials",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Disposing-geometry-materials","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Disposing geometry + materials"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Built-in-zoo",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Built-in-zoo","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Built-in zoo"}]]}],null]}],["$","li","Exercise-2-—-Compare-materials",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Compare-materials","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Compare materials"}]]}],null]}],["$","li","Exercise-3-—-Wireframe-flatShading-combo",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Wireframe-flatShading-combo","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Wireframe + flatShading combo"}]]}],null]}],["$","li","Exercise-4-—-Procedural-geometry",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Procedural-geometry","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Procedural geometry"}]]}],null]}],["$","li","Exercise-5-—-Disposal-drill",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Disposal-drill","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Disposal drill"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","py_05_files_exceptions",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_05_files_exceptions/","title":"Python Course — 05 · Files, Paths, and Exception Handling","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_05_files.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 05 · Files, Paths, and Exception Handling\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_05_files_exceptions/","title":"Python Course — 05 · Files, Paths, and Exception Handling","children":"Python Course — 05 · Files, Paths, and Exception Handling"}],["$","time",null,{"dateTime":"2026-05-22T12:00:00.000Z","title":"Created 2026-05-22 20:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_04_oop",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_04_oop/","title":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_04_oop.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_04_oop/","title":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)","children":"Python Course — 04 · Object-Oriented Python (classes, inheritance, dataclasses)"}],["$","time",null,{"dateTime":"2026-05-22T11:00:00.000Z","title":"Created 2026-05-22 19:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_03_functions_modules",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_03_functions_modules/","title":"Python Course — 03 · Functions, Scope, Modules, and Packages","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_03_functions.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 03 · Functions, Scope, Modules, and Packages\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_03_functions_modules/","title":"Python Course — 03 · Functions, Scope, Modules, and Packages","children":"Python Course — 03 · Functions, Scope, Modules, and Packages"}],["$","time",null,{"dateTime":"2026-05-22T10:00:00.000Z","title":"Created 2026-05-22 18:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_02_data_structures",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_02_data.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","children":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)"}],["$","time",null,{"dateTime":"2026-05-22T09:00:00.000Z","title":"Created 2026-05-22 17:00:00","children":"2026-05-22"}]]}]]}],["$","div","py_01_syntax_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/05/22/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/python/cover_01_syntax.png\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Python Course — 01 · Syntax, Types, and Control Flow\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/05/22/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","children":"Python Course — 01 · Syntax, Types, and Control Flow"}],["$","time",null,{"dateTime":"2026-05-22T08:00:00.000Z","title":"Created 2026-05-22 16:00:00","children":"2026-05-22"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2021 - 2022 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Three.js Course — 01 · Geometry & Materials | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"A mesh in Three.js is `geometry + material`. Geometry defines the shape — a list of vertex positions, normals, UVs, and how they form triangles. Mater"}],["$","meta","5",{"name":"keywords","content":"Computer Science,3D,Three.js,Geometry,Materials,Course"}],["$","meta","6",{"property":"og:title","content":"Three.js Course — 01 · Geometry & Materials"}],["$","meta","7",{"property":"og:description","content":"A mesh in Three.js is `geometry + material`. Geometry defines the shape — a list of vertex positions, normals, UVs, and how they form triangles. Mater"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Three.js Course — 01 · Geometry & Materials"}],["$","meta","11",{"name":"twitter:description","content":"A mesh in Three.js is `geometry + material`. Geometry defines the shape — a list of vertex positions, normals, UVs, and how they form triangles. Mater"}]]
+1:null
