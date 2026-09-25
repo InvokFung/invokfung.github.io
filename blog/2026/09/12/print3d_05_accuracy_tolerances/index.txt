@@ -1,0 +1,1103 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+4:["year","2026","d"]
+5:["month","09","d"]
+6:["day","12","d"]
+7:["slug","print3d_05_accuracy_tolerances","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["tSi4Bl_e6QraTpHUkvsOl",[[["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","12","d"],{"children":[["slug","print3d_05_accuracy_tolerances","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"09\",\"day\":\"12\",\"slug\":\"print3d_05_accuracy_tolerances\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","12","d"],{"children":[["slug","print3d_05_accuracy_tolerances","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T15118,<p>This is the post the rest of the series is built around. A CAD model contains a number — 20.000 mm — that is exact in the sense that a mathematical object is exact. The part that comes off the plate is not that number. It is a physical object with a size that depends on the filament batch, the flow calibration, the extrusion width, the first-layer squish, the cooling history, the motion system, the geometry itself, and the temperature of the room when you measured it. The gap between those two things is not a defect to be eliminated; it is the normal condition of manufacturing, and the entire discipline of tolerancing exists because of it.</p>
+<p>The goal of this post is not to hand you numbers. It is to give you the vocabulary to describe the problem precisely, an honest accounting of where the error comes from, and a <strong>reproducible procedure that produces numbers for your machine, your material and your profile</strong> — because those are the only numbers that are true.</p>
+<blockquote>
+<p>Series map: 00 How 3D Printing Works → 01 First Print and Calibration → 02 Slicing in Depth → 03 Orientation, Supports and Design for Printing → 04 Materials → <strong>05 Dimensional Accuracy and Tolerances</strong> (this post) → 06 CAD for Printing → 07 Strength, Failure Modes and Functional Parts.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>State the difference between accuracy, precision (repeatability and reproducibility) and resolution, and explain why an advertised &quot;0.05 mm resolution&quot; says essentially nothing about accuracy.</li>
+<li>Measure a printed part defensibly: right instrument, controlled force, controlled temperature, repeated readings, recorded uncertainty.</li>
+<li>Build an error budget for a printed dimension and name which contributions are systematic and which are random.</li>
+<li>Recognise and correct the standard systematic errors: elephant foot, hole undersizing, external-large/internal-small, and X/Y versus Z asymmetry.</li>
+<li>Run a test-artefact procedure that produces a machine-and-material-specific offset table you fill in yourself.</li>
+<li>Design fits using clearance/transition/interference as a concept, with a printed sweep gauge determining the actual value.</li>
+<li>Choose between compensating in CAD and compensating in the slicer, and know which is correct when.</li>
+<li>Design so that tolerance stack-up is absorbed by an adjustable dimension rather than demanded of every dimension.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Saying-what-you-mean"><a href="#Chapter-1-—-Saying-what-you-mean" class="headerlink" title="Chapter 1 — Saying what you mean"></a>Chapter 1 — Saying what you mean</h1>
+<p>Most confusion about printer accuracy is vocabulary confusion. These terms are not synonyms and the rest of the post keeps them strictly distinct.</p>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Nominal size</strong> — the number in the CAD model. A design intent, not a prediction.</li>
+<li><strong>Actual size</strong> — what a specific physical feature measures, on a specific instrument, at a specific time and temperature.</li>
+<li><strong>Deviation (error)</strong> — actual minus nominal, signed. Sign matters: a hole 0.15 mm undersize and a hole 0.15 mm oversize are opposite problems with opposite fixes.</li>
+<li><strong>Accuracy</strong> (formally, <em>trueness</em>) — how close the mean of many measurements is to the true value. Accuracy is about the <strong>centre</strong> of the distribution.</li>
+<li><strong>Precision</strong> — how tightly repeated results cluster, independent of whether they cluster in the right place. Precision is about the <strong>spread</strong>.
+<ul>
+<li><strong>Repeatability</strong> — spread when the same operator measures the same feature with the same instrument under the same conditions, or when the same machine prints the same part repeatedly without changes.</li>
+<li><strong>Reproducibility</strong> — spread when something legitimately changes: a different operator, a different instrument, a different day, a new spool of the same filament, the same model on a different printer.</li>
+</ul>
+</li>
+<li><strong>Resolution</strong> — the smallest increment an instrument can <em>display</em>, or the smallest increment a machine can <em>command</em>. It is a property of the readout or the motion system, and it bounds nothing else.</li>
+<li><strong>Uncertainty</strong> — the interval within which the true value plausibly lies, given the instrument, the method and the operator. Always larger than the resolution.</li>
+<li><strong>Tolerance</strong> — the permitted deviation, decided by the designer from the function of the part. A tolerance is a <em>requirement</em>, not a measurement.</li>
+<li><strong>Systematic error (bias)</strong> — a repeatable, signed offset. Can be measured and compensated.</li>
+<li><strong>Random error</strong> — scatter with no fixed sign. Can be characterised statistically and reduced by averaging, but not compensated away.</li>
+</ul>
+<h2 id="The-four-quadrant-picture-stated-plainly"><a href="#The-four-quadrant-picture-stated-plainly" class="headerlink" title="The four-quadrant picture, stated plainly"></a>The four-quadrant picture, stated plainly</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Precise</th>
+<th>Not precise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accurate</strong></td>
+<td>every part right, every time — the goal</td>
+<td>on average right, individually unpredictable</td>
+</tr>
+<tr>
+<td><strong>Not accurate</strong></td>
+<td>every part wrong by the same amount — <strong>compensable</strong></td>
+<td>every part wrong by a different amount — the hard case</td>
+</tr>
+</tbody>
+</table>
+<p>The bottom-left quadrant is the most important thing in this post. A machine that is <em>precise but not accurate</em> is a good machine: the error is systematic, you measure it once, and you compensate for it. A machine that is <em>imprecise</em> cannot be fixed by compensation, because there is no single number to compensate by. <strong>So the first diagnostic question is never &quot;is it accurate?&quot; — it is &quot;is it repeatable?&quot;</strong></p>
+<h2 id="Why-005-mm-resolution-is-a-meaningless-accuracy-claim"><a href="#Why-005-mm-resolution-is-a-meaningless-accuracy-claim" class="headerlink" title="Why &quot;0.05 mm resolution&quot; is a meaningless accuracy claim"></a>Why &quot;0.05 mm resolution&quot; is a meaningless accuracy claim</h2>
+<p>Marketing copy quotes numbers like &quot;0.0125 mm XY resolution&quot;. That figure is a <strong>motion increment</strong>: the linear distance corresponding to one microstep of a stepper motor, derived from the motor's step angle, the microstepping setting, and the belt pitch or lead screw pitch. It is arithmetic on the kinematics.</p>
+<p>It says nothing about:</p>
+<ul>
+<li>whether the belt is tensioned identically in both directions (backlash),</li>
+<li>whether the frame is square,</li>
+<li>whether the extruder delivers the commanded volume of plastic (flow),</li>
+<li>whether the extrusion width matches what the slicer assumed,</li>
+<li>whether the filament is the diameter the slicer was told,</li>
+<li>how much the part shrinks as it cools,</li>
+<li>whether the motor actually reaches every commanded microstep under load, which at high microstepping ratios it frequently does not.</li>
+</ul>
+<p>A stepper motor's ability to <em>command</em> a 0.0125 mm move does not mean the toolhead <em>goes</em> there, and even if it did, the plastic that ends up on the plate is not the toolhead path. Treat advertised resolution as a specification of the controller, not of the part.</p>
+<blockquote>
+<p><strong>Watch out:</strong> the same confusion appears on the CAD side. A modeller displaying 20.0000 mm is showing you the precision of a floating-point representation, not a claim about anything physical. Digits in a CAD field are free; micrometres on a plate are not.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-The-instrument-is-part-of-the-experiment"><a href="#Chapter-2-—-The-instrument-is-part-of-the-experiment" class="headerlink" title="Chapter 2 — The instrument is part of the experiment"></a>Chapter 2 — The instrument is part of the experiment</h1>
+<p>Before measuring error, establish that the measurement itself is not the largest source of error. On printed polymer parts, it very often is.</p>
+<h2 id="Calipers-versus-micrometers"><a href="#Calipers-versus-micrometers" class="headerlink" title="Calipers versus micrometers"></a>Calipers versus micrometers</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Digital calipers</th>
+<th>Micrometer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Typical display resolution</td>
+<td>0.01 mm</td>
+<td>0.001 mm</td>
+</tr>
+<tr>
+<td>Realistic uncertainty in normal use</td>
+<td>far worse than the display — commonly a few hundredths of a mm</td>
+<td>roughly an order of magnitude better</td>
+</tr>
+<tr>
+<td>Measuring force</td>
+<td>uncontrolled, entirely operator-dependent</td>
+<td>controlled by a ratchet or friction thimble</td>
+</tr>
+<tr>
+<td>Reach</td>
+<td>external, internal, depth, step</td>
+<td>external only (for a standard outside micrometer)</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>low</td>
+<td>moderate</td>
+</tr>
+<tr>
+<td>Right for</td>
+<td>almost everything in this post</td>
+<td>verifying a critical dimension, or calibrating your calipers' bias</td>
+</tr>
+</tbody>
+</table>
+<p>The decisive difference is <strong>measuring force</strong>. Calipers have no force control at all: how hard you squeeze determines the reading. On steel this barely matters. On a printed polymer part — a material with a modulus orders of magnitude below steel, and a surface made of rounded extrusion beads rather than a plane — it matters enormously. Squeezing calipers hard on a PLA cube can easily change the reading by more than the deviation you are trying to measure, and on TPU it is hopeless.</p>
+<p>A micrometer's ratchet applies a repeatable force. That is why a micrometer is more precise, not the extra digit.</p>
+<blockquote>
+<p><strong>Trick:</strong> to find out how much your grip is worth, measure the same feature ten times deliberately gently and ten times deliberately firmly. The difference between the two means is your personal measuring-force error. Everyone should know this number about themselves. It is usually larger than expected.</p>
+</blockquote>
+<h2 id="The-other-things-that-move-the-reading"><a href="#The-other-things-that-move-the-reading" class="headerlink" title="The other things that move the reading"></a>The other things that move the reading</h2>
+<ul>
+<li><strong>Zero.</strong> Close the jaws, check zero, re-zero, before every measurement session and again if you drop the tool. A caliper that drifted 0.03 mm off zero produces a beautifully repeatable, entirely wrong dataset.</li>
+<li><strong>Temperature.</strong> Polymers have a coefficient of thermal expansion roughly an order of magnitude larger than steel. A part measured warm off the plate and the same part measured cold are different sizes, and your steel calipers are not expanding with it. <strong>Let parts equilibrate to room temperature — a couple of hours for anything substantial — and record the room temperature with the data.</strong></li>
+<li><strong>Where on the feature.</strong> Printed surfaces are not planes. A measurement across the middle of a face, across a corner, at the first layer, and at the top of a 40 mm pillar are four different measurements of the same nominal dimension. Decide a location convention and record it.</li>
+<li><strong>Seam and blob.</strong> The layer seam is a local bulge. Measuring across a seam gives a systematically larger reading. Either measure away from the seam and say so, or measure across it deliberately and say that.</li>
+<li><strong>Bead geometry.</strong> The outer surface is a stack of rounded beads, not a flat face. Calipers contact bead crowns; a flat contact averages differently than a knife-edge contact.</li>
+<li><strong>Internal features are harder.</strong> Caliper internal jaws are stubby and imprecise, and on a hole they measure a chord, not necessarily the diameter. <strong>Pin gauges</strong> (or, adequately, drill bit shanks of known size, or ground dowel pins) measure a hole far better: the largest pin that enters is a real, functional, repeatable answer.</li>
+</ul>
+<h2 id="The-measurement-protocol"><a href="#The-measurement-protocol" class="headerlink" title="The measurement protocol"></a>The measurement protocol</h2>
+<p>The whole of the rest of this post depends on measurements taken like this:</p>
+<ol>
+<li>Let the part reach room temperature. Record the temperature.</li>
+<li>Zero the instrument. Verify against a known reference if you have one (a gauge block, a ground dowel pin, a new drill bit shank).</li>
+<li>Deburr nothing and clean nothing that changes the dimension; do remove obvious stringing and the brim.</li>
+<li>Take <strong>at least five readings</strong> of each feature, re-seating the instrument each time. Rotate the part between readings where the feature allows.</li>
+<li>Record every reading, not just the one you like.</li>
+<li>Report the <strong>mean</strong> and the <strong>spread</strong> (range or standard deviation). The mean estimates the bias; the spread estimates your precision.</li>
+<li>If the spread is comparable to the deviation you are chasing, stop — improve the measurement before drawing any conclusion about the printer.</li>
+</ol>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># measure.py — turn repeated readings into the two numbers that matter.</span></span><br><span class="line"><span class="hljs-keyword">import</span> statistics <span class="hljs-keyword">as</span> st</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">summarise</span>(<span class="hljs-params">nominal, readings</span>):</span><br><span class="line">    mean = st.fmean(readings)</span><br><span class="line">    <span class="hljs-keyword">return</span> {</span><br><span class="line">        <span class="hljs-string">&quot;nominal&quot;</span>:   nominal,</span><br><span class="line">        <span class="hljs-string">&quot;n&quot;</span>:         <span class="hljs-built_in">len</span>(readings),</span><br><span class="line">        <span class="hljs-string">&quot;mean&quot;</span>:      <span class="hljs-built_in">round</span>(mean, <span class="hljs-number">4</span>),</span><br><span class="line">        <span class="hljs-string">&quot;deviation&quot;</span>: <span class="hljs-built_in">round</span>(mean - nominal, <span class="hljs-number">4</span>),   <span class="hljs-comment"># systematic component (bias)</span></span><br><span class="line">        <span class="hljs-string">&quot;stdev&quot;</span>:     <span class="hljs-built_in">round</span>(st.stdev(readings), <span class="hljs-number">4</span>) <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(readings) &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-literal">None</span>,</span><br><span class="line">        <span class="hljs-string">&quot;range&quot;</span>:     <span class="hljs-built_in">round</span>(<span class="hljs-built_in">max</span>(readings) - <span class="hljs-built_in">min</span>(readings), <span class="hljs-number">4</span>),</span><br><span class="line">    }</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Replace with YOUR readings. These are placeholders, not results.</span></span><br><span class="line">data = [</span><br><span class="line">    (<span class="hljs-number">20.0</span>, [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]),   <span class="hljs-comment"># external 20 mm feature, five readings</span></span><br><span class="line">    (<span class="hljs-number">10.0</span>, [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]),   <span class="hljs-comment"># internal 10 mm feature, five readings</span></span><br><span class="line">]</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">for</span> nominal, readings <span class="hljs-keyword">in</span> data:</span><br><span class="line">    <span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(readings):</span><br><span class="line">        <span class="hljs-built_in">print</span>(summarise(nominal, readings))</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Decision rule:</span></span><br><span class="line"><span class="hljs-comment">#   range &gt;= |deviation|  -&gt;  the measurement is too noisy to conclude anything.</span></span><br><span class="line"><span class="hljs-comment">#   range &lt;&lt;  |deviation| -&gt;  the deviation is real and worth compensating.</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> measuring once, getting 19.86 on a 20 mm nominal, and concluding &quot;my printer prints 0.14 mm small&quot;. One reading contains no information about its own reliability. It could be bias, it could be grip, it could be a seam, it could be the caliper's zero. Five readings tell you which.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-The-error-budget"><a href="#Chapter-3-—-The-error-budget" class="headerlink" title="Chapter 3 — The error budget"></a>Chapter 3 — The error budget</h1>
+<p>Here is the honest thesis of this post: <strong>the deviation of a printed dimension is a sum of contributions, most of which you can name, several of which you can measure, and a few of which you cannot control at all.</strong> Chasing accuracy without knowing which term dominates is how people spend weeks tuning the wrong thing.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Contribution</th>
+<th>Nature</th>
+<th>Sign / effect</th>
+<th>What to do about it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Filament diameter variation</strong></td>
+<td>random, batch-systematic</td>
+<td>flow varies ⇒ width varies</td>
+<td>measure the filament in several places with a micrometer; set the slicer's diameter to the <em>measured mean</em>, not the printed label</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Flow / extrusion multiplier calibration</strong></td>
+<td>systematic</td>
+<td>too much flow ⇒ external features large, holes small</td>
+<td>calibrate flow (Post 01) <em>before</em> anything in this post</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Extrusion width vs slicer geometry</strong></td>
+<td>systematic</td>
+<td>the toolpath is offset by half the assumed width; if actual ≠ assumed, every wall is offset</td>
+<td>verify extrusion width from a single-wall test; set it explicitly rather than leaving it &quot;auto&quot;</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>First-layer squish / elephant foot</strong></td>
+<td>systematic, local to Z ≈ 0</td>
+<td>first layers bulge outward</td>
+<td>first-layer Z offset (Post 01); elephant-foot compensation in the slicer; chamfer the bottom edge in CAD</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Thermal contraction on cooling</strong></td>
+<td>systematic, material-dependent</td>
+<td>part ends smaller than nominal, and roughly <em>proportional to size</em></td>
+<td>measure the proportional term (Chapter 5); apply as a scale factor, not an offset</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Warping / residual stress</strong></td>
+<td>systematic in tendency, variable in magnitude</td>
+<td>flatness and squareness errors more than size errors</td>
+<td>Post 04, Chapter 3 — thermal environment</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Layer-height quantisation in Z</strong></td>
+<td>systematic, discrete</td>
+<td>Z heights land on multiples of the layer height; a 10.05 mm feature at 0.2 mm layers becomes 10.0 or 10.2</td>
+<td>design Z dimensions as multiples of layer height where they matter</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Motion-system accuracy, belt tension, backlash</strong></td>
+<td>systematic per axis, plus hysteresis</td>
+<td>X and Y can differ from each other; direction-dependent error</td>
+<td>check steps/mm per axis, belt tension, and frame squareness; measure a long dimension in X and in Y separately</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Part geometry</strong></td>
+<td>systematic per feature type</td>
+<td>small holes err more than large ones; tall thin features lean; large flat parts warp</td>
+<td>the reason Chapter 5's artefact sweeps <em>sizes</em> rather than testing one cube</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Nozzle wear</strong></td>
+<td>slow drift</td>
+<td>accuracy degrades over weeks on abrasive filaments</td>
+<td>Post 04, Chapter 5 — track it, and re-calibrate after a nozzle change</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Post-processing (annealing, sanding, vapour smoothing)</strong></td>
+<td>systematic, sometimes large</td>
+<td>annealing shrinks anisotropically</td>
+<td>measure before and after; Post 04, Chapter 6</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>The measurement itself</strong></td>
+<td>random plus operator bias</td>
+<td>often the largest single term for a beginner</td>
+<td>Chapter 2</td>
+</tr>
+</tbody>
+</table>
+<p>Note the structural distinction in row 5 versus row 4: <strong>thermal contraction scales with size, elephant foot does not.</strong> A contraction of 0.3 % is 0.06 mm on a 20 mm feature and 0.6 mm on a 200 mm feature. Elephant foot is roughly a fixed bulge regardless of part size. This is why a single global offset cannot fix both, and it is why Chapter 5's procedure sweeps a <em>range</em> of nominal sizes: only by looking at how error varies with size can you separate the offset term from the scale term.</p>
+<p>The general model worth carrying in your head:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span></pre></td><td class="code"><pre><code class="text"><span class="line">deviation(nominal) ≈ offset + scale × nominal + noise</span><br><span class="line"> </span><br><span class="line">  offset  — size-independent. Extrusion width mismatch, flow error,</span><br><span class="line">            toolpath compensation, elephant foot (near Z = 0).</span><br><span class="line">            Fixed by an OFFSET compensation (XY size compensation).</span><br><span class="line"> </span><br><span class="line">  scale   — proportional to size. Thermal contraction, steps/mm error.</span><br><span class="line">            Fixed by a SCALE factor (or by correcting steps/mm).</span><br><span class="line"> </span><br><span class="line">  noise   — random. Filament variation, measurement, surface texture.</span><br><span class="line">            Not fixable by compensation; sets the floor on achievable tolerance.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Fit that model to your own data and you know which knob to turn. Measure one cube and you cannot separate the terms at all.</p>
+<hr>
+<h1 id="Chapter-4-—-The-systematic-errors-and-their-actual-causes"><a href="#Chapter-4-—-The-systematic-errors-and-their-actual-causes" class="headerlink" title="Chapter 4 — The systematic errors, and their actual causes"></a>Chapter 4 — The systematic errors, and their actual causes</h1>
+<p>These four account for the large majority of real-world fit failures.</p>
+<h2 id="Elephant-foot"><a href="#Elephant-foot" class="headerlink" title="Elephant foot"></a>Elephant foot</h2>
+<p><strong>Symptom:</strong> the bottom one to three layers bulge outward. A part that measures correctly at mid-height is oversize at the base, and it will not sit flat in a recess or slide into a slot.</p>
+<p><strong>Cause:</strong> two things at once. The first layer is deliberately squashed into the plate for adhesion, which displaces material sideways. And the first layers cool against a heated bed that keeps them soft, under the weight and pressure of everything printed above.</p>
+<p><strong>Fixes, in the order to try them:</strong></p>
+<ol>
+<li><strong>Get the first-layer Z offset right</strong> (Post 01). Over-squish is the root cause; everything else is compensation.</li>
+<li><strong>Chamfer the bottom edge in CAD</strong> — a 0.4–0.6 mm chamfer on the bottom perimeter. This is the most robust fix because it survives moving the model to a different printer, a different slicer or a different profile. It costs one CAD feature.</li>
+<li><strong>Slicer elephant-foot compensation</strong> — shrinks the first layer's perimeter by a set amount. Effective, but it is a profile setting that does not travel with the model.</li>
+<li>Reduce bed temperature slightly if the material allows.</li>
+</ol>
+<h2 id="Holes-come-out-undersize"><a href="#Holes-come-out-undersize" class="headerlink" title="Holes come out undersize"></a>Holes come out undersize</h2>
+<p><strong>Symptom:</strong> a 5 mm hole measures under 5 mm, and a 3 mm hole is proportionally worse. This is the single most reported dimensional complaint in FDM, and it has <em>two independent causes that add</em>.</p>
+<p><strong>Cause A — polygonal chord error.</strong> The slicer works on a triangle mesh. A cylindrical hole in CAD becomes an N-sided polygon on export, and the toolpath follows that polygon. Because the mesh vertices sit <em>on</em> the true circle and the polygon edges cut <em>inside</em> it, the printed hole is inscribed in the nominal circle and is therefore smaller. The error grows as the facet count falls and as the hole gets smaller relative to the facet size. This error is created in <strong>CAD export</strong>, not in the printer — see Post 06 on chord/deviation tolerance.</p>
+<p><strong>Cause B — extrusion overlap on a concave path.</strong> When the nozzle traverses a concave (inward-curving) path, the deposited bead's outer material is compressed toward the inside of the curve. The bead does not simply lie along the commanded centreline; it bulges into the hole. Small holes have tighter curvature, so the effect is larger — which is why a 3 mm hole is proportionally worse than a 12 mm one. This is a real physical effect of extruding a finite-width bead along a curve, and it cannot be fixed in CAD export.</p>
+<p><strong>Fixes:</strong></p>
+<ol>
+<li>Export with a <strong>tight chord tolerance</strong> so the facets are fine (Post 06). This removes Cause A entirely and costs nothing but file size.</li>
+<li><strong>Print, measure, and compensate.</strong> Because Cause B depends on hole size, the compensation is a curve, not a constant — hence the sweep in Chapter 5.</li>
+<li>For holes that must fit a fastener or a shaft, <strong>drill or ream to size after printing</strong>. A printed hole reamed with a standard drill or reamer is dramatically more accurate than any compensation scheme, and this is a legitimate professional answer, not a cop-out.</li>
+<li>Slicer <strong>hole compensation</strong> where available (Cura's <em>Hole Horizontal Expansion</em>, OrcaSlicer's <em>X-Y hole compensation</em>). Note that PrusaSlicer's <em>XY size compensation</em> is <strong>not</strong> hole-specific: it grows or shrinks <em>all</em> perimeters, so a positive value that enlarges the outside simultaneously shrinks holes.</li>
+</ol>
+<blockquote>
+<p><strong>Watch out:</strong> never design a hole at exactly the nominal shaft size and expect it to fit. A 3 mm hole for a 3 mm shaft will not accept the shaft on any FDM printer without help. Clearance is designed in, not hoped for — Chapter 6.</p>
+</blockquote>
+<h2 id="External-dimensions-large-internal-features-small"><a href="#External-dimensions-large-internal-features-small" class="headerlink" title="External dimensions large, internal features small"></a>External dimensions large, internal features small</h2>
+<p><strong>Symptom:</strong> the outside of the box is 20.15 on a 20 nominal, and the pocket inside it is 19.85 on a 20 nominal. Both errors are the same sign of material excess.</p>
+<p><strong>Cause:</strong> any excess deposited material grows the part outward from the toolpath in both cases. On an external wall that means larger; on an internal wall it means the cavity is smaller. Over-extrusion, an extrusion width larger than the slicer assumed, or a too-hot first layer all produce this signature.</p>
+<p><strong>This is the diagnostic signature of over-extrusion</strong>, and it is why <em>both</em> an external and an internal feature must be in the test artefact. Measuring only external features and compensating them makes internal features worse.</p>
+<h2 id="XY-and-Z-behave-differently"><a href="#XY-and-Z-behave-differently" class="headerlink" title="X/Y and Z behave differently"></a>X/Y and Z behave differently</h2>
+<p>Z is not the same problem as X and Y and should never be lumped with them.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>X / Y</th>
+<th>Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature size determined by</td>
+<td>extrusion width and toolpath geometry</td>
+<td>layer height and the number of layers</td>
+</tr>
+<tr>
+<td>Quantisation</td>
+<td>effectively continuous</td>
+<td>discrete — heights land on multiples of layer height</td>
+</tr>
+<tr>
+<td>Typical accuracy</td>
+<td>worse — the error budget above</td>
+<td>often better, because Z steps are mechanically direct (lead screws) and there is no bead-width term</td>
+</tr>
+<tr>
+<td>Error mechanism</td>
+<td>flow, width, curvature, compensation</td>
+<td>first-layer offset (a fixed error on <em>every</em> Z dimension), plus quantisation</td>
+</tr>
+<tr>
+<td>Compensation</td>
+<td>XY size compensation / hole compensation</td>
+<td>design to layer-height multiples; correct the first-layer offset</td>
+</tr>
+</tbody>
+</table>
+<p>The important asymmetry: your first-layer Z offset applies a <strong>constant</strong> error to every Z dimension in the part, in the same direction, regardless of height. Squish the first layer 0.05 mm extra and every Z dimension is 0.05 mm short. That is a systematic, easily measured, easily corrected error — and it is a completely different animal from the size-proportional errors in X and Y.</p>
+<blockquote>
+<p><strong>Trick:</strong> measure a tall feature's height and a short feature's height on the same print. If both are short by the <em>same</em> amount, it is first-layer offset. If the tall one is short by <em>proportionally</em> more, it is steps/mm or thermal contraction. The pattern of the error tells you the cause.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-The-calibration-cube-fallacy-and-what-to-do-instead"><a href="#Chapter-5-—-The-calibration-cube-fallacy-and-what-to-do-instead" class="headerlink" title="Chapter 5 — The calibration-cube fallacy, and what to do instead"></a>Chapter 5 — The calibration-cube fallacy, and what to do instead</h1>
+<h2 id="Why-the-20-mm-cube-proves-almost-nothing"><a href="#Why-the-20-mm-cube-proves-almost-nothing" class="headerlink" title="Why the 20 mm cube proves almost nothing"></a>Why the 20 mm cube proves almost nothing</h2>
+<p>The 20 mm calibration cube is the most-printed object in the hobby and one of the least informative. Consider what it can and cannot tell you.</p>
+<p>What it does test: whether a 20 mm external dimension in X and in Y comes out near 20 mm, once.</p>
+<p>What it cannot tell you:</p>
+<ul>
+<li><strong>Anything about internal features.</strong> It has no holes. It therefore cannot detect the over-extrusion signature above, which is the most common real cause of fit failure.</li>
+<li><strong>Anything about size dependence.</strong> One nominal size cannot separate the offset term from the scale term of the error model. A cube that measures 20.10 could be a +0.10 mm offset or a +0.5 % scale error; those need completely different fixes and the cube cannot distinguish them.</li>
+<li><strong>Anything about repeatability.</strong> One cube is n = 1. It contains no information about spread.</li>
+<li><strong>Anything about fits.</strong> The actual engineering question is almost never &quot;is a 20 mm face 20 mm?&quot; It is &quot;does this 3 mm pin go into this 3 mm hole with the right amount of friction?&quot; The cube is silent on that.</li>
+<li><strong>Anything about your other materials or profiles.</strong> The result is specific to the filament, temperature, speed and layer height used.</li>
+</ul>
+<p>A printer can produce a perfect 20 mm cube and still fail to produce a hole a shaft will enter. <strong>A 20 mm cube validates a 20 mm cube.</strong></p>
+<h2 id="The-artefact-that-does-the-job"><a href="#The-artefact-that-does-the-job" class="headerlink" title="The artefact that does the job"></a>The artefact that does the job</h2>
+<p>The replacement is a test artefact that sweeps a <em>range</em> of nominal sizes, in both internal and external features, in all three axes. Here is one in OpenSCAD; it is deliberately parametric so you can adapt the ranges to your work.</p>
+<pre><code class="language-openscad"><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span></pre></td><td class="code"><pre><code class="openscad"><span class="line"><span class="hljs-comment">// accuracy_artefact.scad</span></span><br><span class="line"><span class="hljs-comment">// Print in the material and profile you actually use.</span></span><br><span class="line"><span class="hljs-comment">// Purpose: measure error as a FUNCTION OF NOMINAL SIZE, internal and external.</span></span><br><span class="line"> </span><br><span class="line">ext_sizes  = [<span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">10</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span>];        <span class="hljs-comment">// external square pillars (mm)</span></span><br><span class="line">hole_sizes = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>, <span class="hljs-number">12</span>];   <span class="hljs-comment">// internal hole diameters (mm)</span></span><br><span class="line"> </span><br><span class="line">plate_t   = <span class="hljs-number">5</span>;                          <span class="hljs-comment">// plate thickness -&gt; also a Z reference</span></span><br><span class="line">pillar_h  = <span class="hljs-number">10</span>;                         <span class="hljs-comment">// pillar height   -&gt; another Z reference</span></span><br><span class="line">pitch     = <span class="hljs-number">20</span>;                         <span class="hljs-comment">// grid spacing (mm)</span></span><br><span class="line">margin    = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-keyword">$fn</span>       = <span class="hljs-number">180</span>;                        <span class="hljs-comment">// fine faceting: removes chord error</span></span><br><span class="line">                                        <span class="hljs-comment">// so what remains is the PRINTER&#x27;s error</span></span><br><span class="line"> </span><br><span class="line">plate_w = margin*<span class="hljs-number">2</span> + pitch * <span class="hljs-built_in">max</span>(len(ext_sizes), len(hole_sizes));</span><br><span class="line">plate_d = margin*<span class="hljs-number">2</span> + pitch * <span class="hljs-number">2</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">module</span> <span class="hljs-title">plate</span><span class="hljs-params">()</span> {</span></span><br><span class="line">    <span class="hljs-built_in">difference</span>() {</span><br><span class="line">        <span class="hljs-built_in">cube</span>([plate_w, plate_d, plate_t]);</span><br><span class="line">        <span class="hljs-comment">// row of through-holes: the internal features</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (i = [<span class="hljs-number">0</span> : len(hole_sizes) - <span class="hljs-number">1</span>])</span><br><span class="line">            <span class="hljs-built_in">translate</span>([margin + pitch*i + pitch/<span class="hljs-number">2</span>, margin + pitch/<span class="hljs-number">2</span>, -<span class="hljs-number">1</span>])</span><br><span class="line">                <span class="hljs-built_in">cylinder</span>(h = plate_t + <span class="hljs-number">2</span>, d = hole_sizes[i]);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">module</span> <span class="hljs-title">pillars</span><span class="hljs-params">()</span> {</span></span><br><span class="line">    <span class="hljs-comment">// row of square pillars: the external features</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (i = [<span class="hljs-number">0</span> : len(ext_sizes) - <span class="hljs-number">1</span>])</span><br><span class="line">        <span class="hljs-built_in">translate</span>([margin + pitch*i + pitch/<span class="hljs-number">2</span> - ext_sizes[i]/<span class="hljs-number">2</span>,</span><br><span class="line">                   margin + pitch + pitch/<span class="hljs-number">2</span> - ext_sizes[i]/<span class="hljs-number">2</span>,</span><br><span class="line">                   plate_t])</span><br><span class="line">            <span class="hljs-built_in">cube</span>([ext_sizes[i], ext_sizes[i], pillar_h]);</span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line">plate();</span><br><span class="line">pillars();</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// Z references you also measure:</span></span><br><span class="line"><span class="hljs-comment">//   plate_t            (5 mm)  -&gt; short Z dimension</span></span><br><span class="line"><span class="hljs-comment">//   plate_t + pillar_h (15 mm) -&gt; tall Z dimension</span></span><br><span class="line"><span class="hljs-comment">//   plate_w, plate_d           -&gt; long X and long Y dimensions</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Print it once. Then print it <strong>three times</strong> — repeatability is a separate question from accuracy and the artefact answers both.</p>
+<h2 id="The-table-you-fill-in"><a href="#The-table-you-fill-in" class="headerlink" title="The table you fill in"></a>The table you fill in</h2>
+<p>This is the deliverable. <strong>The cells are empty on purpose.</strong> Numbers printed here would be numbers for someone else's machine, and the whole argument of this post is that those are worthless to you.</p>
+<p><strong>Sheet 1 — external features (X/Y)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nominal (mm)</th>
+<th>r1</th>
+<th>r2</th>
+<th>r3</th>
+<th>r4</th>
+<th>r5</th>
+<th>Mean</th>
+<th>Deviation</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>plate_w (long X)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>plate_d (long Y)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sheet 2 — internal features (holes)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nominal (mm)</th>
+<th>r1</th>
+<th>r2</th>
+<th>r3</th>
+<th>r4</th>
+<th>r5</th>
+<th>Mean</th>
+<th>Deviation</th>
+<th>Range</th>
+<th>Largest pin that enters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sheet 3 — Z</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nominal (mm)</th>
+<th>r1</th>
+<th>r2</th>
+<th>r3</th>
+<th>r4</th>
+<th>r5</th>
+<th>Mean</th>
+<th>Deviation</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 (plate)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15 (plate + pillar)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sheet 4 — reproducibility across three prints</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Print A mean</th>
+<th>Print B mean</th>
+<th>Print C mean</th>
+<th>Spread between prints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>external 10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hole 6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Z 15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Reading-your-own-results"><a href="#Reading-your-own-results" class="headerlink" title="Reading your own results"></a>Reading your own results</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># fit_offset_scale.py — separate the size-independent term from the scale term.</span></span><br><span class="line"><span class="hljs-comment"># Least-squares fit of  deviation = offset + scale * nominal</span></span><br><span class="line"><span class="hljs-comment"># using only the standard library.</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">fit</span>(<span class="hljs-params">points</span>):                    <span class="hljs-comment"># points: [(nominal, deviation), ...]</span></span><br><span class="line">    n = <span class="hljs-built_in">len</span>(points)</span><br><span class="line">    sx  = <span class="hljs-built_in">sum</span>(x <span class="hljs-keyword">for</span> x, _ <span class="hljs-keyword">in</span> points)</span><br><span class="line">    sy  = <span class="hljs-built_in">sum</span>(y <span class="hljs-keyword">for</span> _, y <span class="hljs-keyword">in</span> points)</span><br><span class="line">    sxx = <span class="hljs-built_in">sum</span>(x * x <span class="hljs-keyword">for</span> x, _ <span class="hljs-keyword">in</span> points)</span><br><span class="line">    sxy = <span class="hljs-built_in">sum</span>(x * y <span class="hljs-keyword">for</span> x, y <span class="hljs-keyword">in</span> points)</span><br><span class="line">    denom = n * sxx - sx * sx</span><br><span class="line">    scale  = (n * sxy - sx * sy) / denom</span><br><span class="line">    offset = (sy - scale * sx) / n</span><br><span class="line">    <span class="hljs-keyword">return</span> offset, scale</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Fill in from Sheet 1 (external) and Sheet 2 (internal) SEPARATELY.</span></span><br><span class="line">external = []   <span class="hljs-comment"># e.g. [(4, ...), (6, ...), (10, ...), (16, ...), (25, ...)]</span></span><br><span class="line">internal = []   <span class="hljs-comment"># e.g. [(3, ...), (4, ...), ...]</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">for</span> name, pts <span class="hljs-keyword">in</span> ((<span class="hljs-string">&quot;external&quot;</span>, external), (<span class="hljs-string">&quot;internal&quot;</span>, internal)):</span><br><span class="line">    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(pts) &gt;= <span class="hljs-number">2</span>:</span><br><span class="line">        offset, scale = fit(pts)</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{name}</span>: offset = <span class="hljs-subst">{offset:+<span class="hljs-number">.4</span>f}</span> mm, &quot;</span></span><br><span class="line">              <span class="hljs-string">f&quot;scale = <span class="hljs-subst">{scale*<span class="hljs-number">100</span>:+<span class="hljs-number">.3</span>f}</span> % &quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Interpretation, and this is the payoff of the whole chapter:</p>
+<table>
+<thead>
+<tr>
+<th>What the fit shows</th>
+<th>What it means</th>
+<th>Where to fix it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Large offset, scale ≈ 0, external positive and internal negative</td>
+<td>over-extrusion or extrusion width mismatch</td>
+<td>flow calibration; then slicer <strong>XY size compensation</strong></td>
+</tr>
+<tr>
+<td>Large offset, external and internal <strong>same</strong> sign</td>
+<td>toolpath/compensation offset, not flow</td>
+<td>slicer XY size compensation</td>
+</tr>
+<tr>
+<td>Offset ≈ 0, significant negative scale</td>
+<td>thermal contraction, or steps/mm slightly low</td>
+<td>scale factor, or fix steps/mm — <strong>not</strong> an offset</td>
+</tr>
+<tr>
+<td>Internal deviation grows sharply as holes get smaller</td>
+<td>curvature/overlap effect (Cause B above)</td>
+<td>hole-specific compensation, or ream to size</td>
+</tr>
+<tr>
+<td>Range comparable to deviation</td>
+<td>you are measuring noise</td>
+<td>fix the measurement (Chapter 2) before compensating anything</td>
+</tr>
+<tr>
+<td>Print A/B/C means differ as much as the deviation</td>
+<td>the machine is not repeatable</td>
+<td>compensation cannot help — find the mechanical cause first</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> adjusting steps/mm to fix a dimensional error. Steps/mm is determined by belt pitch, pulley tooth count and microstepping — it is arithmetic, and on a correctly built machine it is already right. If a 25 mm feature is 0.15 mm off, that is almost certainly flow, width or contraction, not steps/mm. Changing steps/mm to compensate for a flow error introduces a <em>scale</em> error to cancel an <em>offset</em> error, which cancels correctly at exactly one size and is wrong everywhere else.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-Designing-fits"><a href="#Chapter-6-—-Designing-fits" class="headerlink" title="Chapter 6 — Designing fits"></a>Chapter 6 — Designing fits</h1>
+<h2 id="The-concept-borrowed-correctly"><a href="#The-concept-borrowed-correctly" class="headerlink" title="The concept, borrowed correctly"></a>The concept, borrowed correctly</h2>
+<p>Mechanical engineering has a mature vocabulary for how two mating features relate. <strong>ISO 286</strong> (&quot;Geometrical product specifications (GPS) — ISO code system for tolerances on linear sizes&quot;) defines it: a hole and a shaft each get a tolerance zone, described by a letter (position of the zone relative to nominal) and a grade number (width of the zone, IT01 through IT18). The classic designations — H7/g6, H7/p6 — come from that system, and fits fall into three classes:</p>
+<ul>
+<li><strong>Clearance fit</strong> — the hole is always larger than the shaft. There is always a gap. Parts assemble by hand and can move or rotate.</li>
+<li><strong>Transition fit</strong> — the tolerance zones overlap. Depending where each part lands within its zone, the assembly may be slightly loose or slightly tight. Used for accurate location with hand assembly.</li>
+<li><strong>Interference (press) fit</strong> — the shaft is always larger than the hole. Assembly requires force, heating or cooling, and the joint transmits torque by friction.</li>
+</ul>
+<p><strong>Now the honest part: ISO 286 fit classes are not directly applicable to FDM printing.</strong> Borrow the three <em>concepts</em>; do not copy the <em>values</em>. The reasons are specific:</p>
+<ol>
+<li>The IT grades assume machining processes with characterised, stable capability. FDM's capability is not that, and it is different for every machine, material and profile.</li>
+<li>The system assumes tolerance zones roughly symmetric about a predictable process centre. FDM's bias is strongly feature-dependent — external and internal features err in <em>opposite</em> directions, and small holes err differently from large ones.</li>
+<li>FDM surfaces are made of rounded beads with layer-scale texture. &quot;Size&quot; on such a surface is less well-defined than on a machined one, which undermines the measurement the system is built on.</li>
+<li>The material is compliant and viscoelastic. A polymer press fit relaxes over time (creep — Post 07); a steel one does not.</li>
+</ol>
+<p>So: use &quot;I want a clearance fit here and an interference fit there&quot; as design language. Then determine the actual clearance experimentally.</p>
+<h2 id="The-fit-test-gauge"><a href="#The-fit-test-gauge" class="headerlink" title="The fit-test gauge"></a>The fit-test gauge</h2>
+<p>The right tool is a printed gauge that sweeps clearance in known steps against a <strong>known reference</strong>. Use a real reference object rather than another printed part, so you are measuring one unknown instead of two: a ground dowel pin, a drill bit shank, an M3 screw, a 608 bearing, a specific connector.</p>
+<pre><code class="language-openscad"><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span></pre></td><td class="code"><pre><code class="openscad"><span class="line"><span class="hljs-comment">// fit_gauge.scad — sweep clearance against a KNOWN reference part.</span></span><br><span class="line"><span class="hljs-comment">// Print, then test each hole against the real object. Record which fits how.</span></span><br><span class="line"> </span><br><span class="line">ref_d      = <span class="hljs-number">3.00</span>;                 <span class="hljs-comment">// measured diameter of the reference (mm)</span></span><br><span class="line">clearances = [<span class="hljs-number">0.00</span>, <span class="hljs-number">0.05</span>, <span class="hljs-number">0.10</span>, <span class="hljs-number">0.15</span>, <span class="hljs-number">0.20</span>, <span class="hljs-number">0.25</span>, <span class="hljs-number">0.30</span>, <span class="hljs-number">0.40</span>, <span class="hljs-number">0.50</span>];</span><br><span class="line"> </span><br><span class="line">thick   = <span class="hljs-number">6</span>;                       <span class="hljs-comment">// engagement depth matters -&gt; keep it realistic</span></span><br><span class="line">pitch   = <span class="hljs-number">12</span>;</span><br><span class="line"><span class="hljs-keyword">$fn</span>     = <span class="hljs-number">180</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">difference</span>() {</span><br><span class="line">    <span class="hljs-built_in">cube</span>([pitch * len(clearances) + <span class="hljs-number">10</span>, <span class="hljs-number">20</span>, thick]);</span><br><span class="line">    <span class="hljs-keyword">for</span> (i = [<span class="hljs-number">0</span> : len(clearances) - <span class="hljs-number">1</span>]) {</span><br><span class="line">        <span class="hljs-built_in">translate</span>([<span class="hljs-number">10</span> + pitch*i, <span class="hljs-number">10</span>, -<span class="hljs-number">1</span>])</span><br><span class="line">            <span class="hljs-built_in">cylinder</span>(h = thick + <span class="hljs-number">2</span>, d = ref_d + clearances[i]);</span><br><span class="line">        <span class="hljs-comment">// engrave the clearance value next to each hole</span></span><br><span class="line">        <span class="hljs-built_in">translate</span>([<span class="hljs-number">6</span> + pitch*i, <span class="hljs-number">2.5</span>, thick - <span class="hljs-number">0.6</span>])</span><br><span class="line">            <span class="hljs-built_in">linear_extrude</span>(<span class="hljs-number">1</span>)</span><br><span class="line">                <span class="hljs-built_in">text</span>(<span class="hljs-built_in">str</span>(clearances[i]), size = <span class="hljs-number">2.6</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Record the result as a judgement, not a number, because the judgement is what you actually want to reproduce:</p>
+<table>
+<thead>
+<tr>
+<th>Clearance</th>
+<th>Result</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.00</td>
+<td></td>
+<td>won't enter / needs force / press</td>
+</tr>
+<tr>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.25</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.30</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.40</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0.50</td>
+<td></td>
+<td>free / sloppy</td>
+</tr>
+</tbody>
+</table>
+<p>From one gauge you get your machine's four working numbers: press fit, tight locating fit, sliding fit, free-running fit. Write them into your CAD parameter file as named variables (Post 06) and stop guessing.</p>
+<p>Three things that change the answer and must be held constant or re-tested:</p>
+<ul>
+<li><strong>Material.</strong> PETG and PLA do not give the same clearances. Neither do two colours (Post 04).</li>
+<li><strong>Engagement depth.</strong> A 2 mm-deep hole and a 20 mm-deep hole with identical diameters behave completely differently. Test at a realistic depth.</li>
+<li><strong>Orientation.</strong> A hole printed with its axis vertical (a circle in the layer plane) and one printed horizontally (an arch, with bridging at the top) are different features with different errors. Test the orientation you will use.</li>
+</ul>
+<blockquote>
+<p><strong>Trick:</strong> design a <em>deliberately adjustable</em> interface where you can — a slot instead of a hole, a screw-clamped collar instead of a press fit, a shim pocket. One adjustable feature absorbs the whole tolerance stack of the assembly and turns a metrology problem into a five-second assembly step.</p>
+</blockquote>
+<h2 id="Compensating-in-CAD-versus-in-the-slicer"><a href="#Compensating-in-CAD-versus-in-the-slicer" class="headerlink" title="Compensating in CAD versus in the slicer"></a>Compensating in CAD versus in the slicer</h2>
+<p>Both are legitimate. They belong in different places, and mixing them without noticing is how people end up double-compensating.</p>
+<table>
+<thead>
+<tr>
+<th>Compensate in <strong>CAD</strong></th>
+<th>Compensate in the <strong>slicer</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The correction is a <strong>design decision</strong>: a functional clearance, a bottom chamfer, a wall thickness set to a multiple of extrusion width</td>
+<td>The correction is a <strong>machine/process characteristic</strong>: your printer's systematic offset for this material and profile</td>
+</tr>
+<tr>
+<td>Travels with the model to any printer, slicer or person</td>
+<td>Lives in the profile; correctly re-applied to every model you print with that profile</td>
+</tr>
+<tr>
+<td>Correct for: fit clearances, chamfers, thread reliefs, features sized to nozzle geometry</td>
+<td>Correct for: global XY size compensation, hole compensation, elephant-foot compensation</td>
+</tr>
+<tr>
+<td>Wrong for: your machine's private bias — you would bake a local defect into a shared file</td>
+<td>Wrong for: functional clearances — the slicer setting applies to <em>every</em> feature, including the ones that were already fine</td>
+</tr>
+</tbody>
+</table>
+<p>The rule: <strong>design intent goes in CAD, machine bias goes in the slicer.</strong> A clearance of 0.2 mm because a shaft must rotate is design intent — it belongs in the model and should be a named parameter. A −0.06 mm XY compensation because <em>your</em> extruder runs slightly hot is machine bias — it belongs in the profile, and it should not follow the model to someone else's printer.</p>
+<blockquote>
+<p><strong>Watch out:</strong> if you compensate in the slicer <em>and</em> then adjust the model because parts still do not fit, you now have two corrections that must be maintained together, and neither is documented. Pick one place per cause, and write down what you did.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-Stack-up-standards-and-the-argument"><a href="#Chapter-7-—-Stack-up-standards-and-the-argument" class="headerlink" title="Chapter 7 — Stack-up, standards, and the argument"></a>Chapter 7 — Stack-up, standards, and the argument</h1>
+<h2 id="Tolerance-stack-up"><a href="#Tolerance-stack-up" class="headerlink" title="Tolerance stack-up"></a>Tolerance stack-up</h2>
+<p>Errors add along an assembly path. Three parts stacked, each within ±0.15 mm, can be ±0.45 mm out at the end in the worst case. Design a mechanism as a chain of five tightly-toleranced printed features and you have designed something that will not assemble.</p>
+<p>Two ways to add up the contributions:</p>
+<ul>
+<li><strong>Worst case (arithmetic sum).</strong> Add all the tolerances. Guarantees assembly, and is conservative — it assumes every part is simultaneously at its extreme, which is unlikely.</li>
+<li><strong>Statistical (root-sum-square).</strong> If the individual errors are independent and roughly centred, the combined spread grows like the square root of the sum of squares — much smaller than the arithmetic sum. Valid <em>only</em> when the errors really are independent and centred, and FDM errors often are neither: a whole batch printed from one spool on one day shares the same bias, which is precisely the correlated case RSS is invalid for.</li>
+</ul>
+<p>For hobby and small-batch printing, the honest position is: <strong>use worst-case reasoning, and design so that the worst case is absorbed rather than resisted.</strong></p>
+<p>Techniques that absorb stack-up, roughly in order of usefulness:</p>
+<ol>
+<li><strong>Make one dimension in the chain adjustable.</strong> A slot, an oversized clearance hole with a washer, a screw-adjusted stop, a shim. One adjustable feature is worth ten tight tolerances.</li>
+<li><strong>Shorten the chain.</strong> Print two mating features as one part rather than three parts that must align. This is FDM's genuine superiority over machining — arbitrary geometry is free, so consolidate.</li>
+<li><strong>Locate on a datum, not on an accumulation.</strong> Reference every feature to one face rather than each to the previous one, so errors do not accumulate down the chain.</li>
+<li><strong>Use compliance deliberately.</strong> A printed snap-fit, a flexure, a slightly springy tab tolerates variation that a rigid interface will not.</li>
+<li><strong>Post-process the one critical feature.</strong> Ream the bearing hole. Tap the thread. Face the mating surface flat with sandpaper on a granite tile. One machined feature on an otherwise printed part is cheap and effective.</li>
+</ol>
+<h2 id="Where-the-standards-fit"><a href="#Where-the-standards-fit" class="headerlink" title="Where the standards fit"></a>Where the standards fit</h2>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>What it is</th>
+<th>Applicability to FDM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISO/ASTM 52900:2021</strong></td>
+<td>Additive manufacturing — general principles, fundamentals and vocabulary</td>
+<td><strong>Directly applicable.</strong> The terminology standard for the field; use its vocabulary in anything you write for others</td>
+</tr>
+<tr>
+<td><strong>ISO 286-1 / -2:2010</strong></td>
+<td>GPS — ISO code system for tolerances on linear sizes; the H7/g6 system</td>
+<td><strong>Concepts applicable, values not.</strong> Borrow clearance/transition/interference as language; determine values experimentally</td>
+</tr>
+<tr>
+<td><strong>ISO 2768-1</strong></td>
+<td>General tolerances for linear and angular dimensions — the &quot;f / m / c / v&quot; classes on a title block</td>
+<td><strong>A useful comparison point, not a specification you can claim.</strong> It was written for machined and formed parts; a printed part is not automatically within any of its classes, and claiming a class on a drawing means you have demonstrated capability</td>
+</tr>
+<tr>
+<td><strong>ISO 22081:2021</strong></td>
+<td>General geometrical specifications; supersedes ISO 2768-2 (geometrical part), and supplies rules rather than values</td>
+<td>Relevant if you produce drawings to a modern GPS framework</td>
+</tr>
+<tr>
+<td><strong>ISO 10303 (STEP) AP242</strong></td>
+<td>Product data interchange</td>
+<td>Post 06 — the format for exchanging solid geometry with units intact</td>
+</tr>
+</tbody>
+</table>
+<p>The reason ISO 2768's &quot;medium&quot; class is worth looking at is calibration of expectations: it gives a sense of what a workshop-grade general tolerance looks like at each size range. Compare your measured spread against it and you learn something honest about where your machine sits. What you must not do is print the class in a title block and imply conformance you have not demonstrated.</p>
+<blockquote>
+<p><strong>Watch out:</strong> none of these standards will make your printer more accurate. Their value is in giving you a precise, shared way to say what you require and what you achieved. That is not nothing — most disagreement about printed part quality is people using the same words to mean different things.</p>
+</blockquote>
+<h2 id="The-closing-argument"><a href="#The-closing-argument" class="headerlink" title="The closing argument"></a>The closing argument</h2>
+<p>Everything above converges on one position, and it is the same position the planned furniture-CAD series will argue about woodworking:</p>
+<p><strong>CAD precision does not survive contact with the physical world.</strong></p>
+<p>The number in the model is exact. The part is not, and the material is not, and the machine is not, and the measurement is not. Every physical process has a distribution of outcomes, and the designer's job is not to eliminate that distribution — that is impossible — but to design something that works across it.</p>
+<p>Three consequences follow, and they are the practical content of the whole post:</p>
+<ol>
+<li><strong>A design that only works if a tolerance is met is a fragile design.</strong> If the assembly requires a 0.1 mm clearance and the process delivers ±0.15 mm, it will fail, and no amount of care changes that. Redesign the interface — make it adjustable, make it compliant, or consolidate the parts — rather than demanding a capability the process does not have.</li>
+<li><strong>Measure your own process, then design inside what it can do.</strong> The offset and scale you fit in Chapter 5, and the clearances you found in Chapter 6, are your process capability. They are the design constraint. Someone else's numbers are not data about your machine.</li>
+<li><strong>Where precision is genuinely required, get it from a process that has it.</strong> Ream the hole. Tap the thread. Press in a heat-set insert. Use a bought bearing, a bought shaft, a bought fastener. FDM's strength is arbitrary geometry produced quickly and cheaply, not precision — and combining it with a precise process at the two or three points that need precision is a better engineering answer than fighting the printer for a capability it does not have.</li>
+</ol>
+<p>The most valuable skill in this entire course is not making an accurate print. It is knowing which dimensions need to be accurate — usually far fewer than beginners assume — and designing so the rest do not have to be.</p>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Quantify-your-measurement"><a href="#Exercise-1-—-Quantify-your-measurement" class="headerlink" title="Exercise 1 — Quantify your measurement"></a>Exercise 1 — Quantify your measurement</h2>
+<p>Before measuring anything else, measure yourself. Take one printed feature. Record ten readings taken gently and ten taken firmly. Compute the mean and standard deviation of each set. Report the difference between the two means, and the larger of the two standard deviations, as your personal measurement uncertainty.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="text"><span class="line">The two numbers you now own:</span><br><span class="line"> </span><br><span class="line">  grip bias   = mean(firm) - mean(gentle)</span><br><span class="line">  noise floor = max(stdev(firm), stdev(gentle))</span><br><span class="line"> </span><br><span class="line">Interpretation:</span><br><span class="line">- Any printer deviation SMALLER than your noise floor is undetectable with</span><br><span class="line">  your current method. You cannot compensate what you cannot resolve.</span><br><span class="line">- Grip bias is systematic. It does not average away with more readings —</span><br><span class="line">  it moves the mean. A ratcheted micrometer removes it; a consistent</span><br><span class="line">  technique reduces it.</span><br><span class="line">- Repeat this on TPU and on PLA. The polymer&#x27;s modulus changes the answer.</span><br><span class="line">  A soft material makes the measurement, not the printer, the limiting factor.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-Print-and-fill-in-the-artefact-table"><a href="#Exercise-2-—-Print-and-fill-in-the-artefact-table" class="headerlink" title="Exercise 2 — Print and fill in the artefact table"></a>Exercise 2 — Print and fill in the artefact table</h2>
+<p>Print the Chapter 5 artefact in your usual material and profile. Fill in Sheets 1, 2 and 3 completely — five readings per feature, no shortcuts. Compute mean, deviation and range for every row.</p>
+<h2 id="Exercise-3-—-Separate-the-offset-from-the-scale"><a href="#Exercise-3-—-Separate-the-offset-from-the-scale" class="headerlink" title="Exercise 3 — Separate the offset from the scale"></a>Exercise 3 — Separate the offset from the scale</h2>
+<p>Run <code>fit_offset_scale.py</code> on your Sheet 1 and Sheet 2 data separately. Report offset and scale for external and for internal features. Then answer, in one sentence each: is the dominant term an offset or a scale? Do internal and external errors have the same sign or opposite signs? What does the answer imply about your flow calibration?</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span></pre></td><td class="code"><pre><code class="text"><span class="line">Reading the four common patterns:</span><br><span class="line"> </span><br><span class="line">1. external offset POSITIVE, internal offset NEGATIVE, similar magnitude</span><br><span class="line">   -&gt; over-extrusion (or extrusion width larger than the slicer assumes).</span><br><span class="line">      Fix flow first. Only then consider XY size compensation.</span><br><span class="line"> </span><br><span class="line">2. external and internal offsets the SAME sign</span><br><span class="line">   -&gt; a pure toolpath offset, not a flow problem.</span><br><span class="line">      XY size compensation is the correct single fix.</span><br><span class="line"> </span><br><span class="line">3. offsets near zero, scale term dominant and negative</span><br><span class="line">   -&gt; thermal contraction (or steps/mm low).</span><br><span class="line">      Apply a SCALE factor. An offset compensation would be wrong at</span><br><span class="line">      every size except one.</span><br><span class="line"> </span><br><span class="line">4. internal deviation grows steeply as hole diameter falls, while</span><br><span class="line">   external features are flat</span><br><span class="line">   -&gt; the curvature/overlap effect. Use hole-specific compensation</span><br><span class="line">      (Cura &quot;Hole Horizontal Expansion&quot; / Orca &quot;X-Y hole compensation&quot;),</span><br><span class="line">      or ream the holes that matter.</span><br><span class="line"> </span><br><span class="line">If your range column is the same size as your deviation column, none of the</span><br><span class="line">above is supported by the data. Go back to Exercise 1.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-4-—-Reproducibility"><a href="#Exercise-4-—-Reproducibility" class="headerlink" title="Exercise 4 — Reproducibility"></a>Exercise 4 — Reproducibility</h2>
+<p>Print the same artefact three times: back to back, then after a filament change to a new spool of the same product, then on a different day from a cold start. Fill in Sheet 4. Report the between-print spread and compare it against the deviations from Exercise 2.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span></pre></td><td class="code"><pre><code class="text"><span class="line">The comparison that matters:</span><br><span class="line"> </span><br><span class="line">  between-print spread  vs  |deviation|</span><br><span class="line"> </span><br><span class="line">  spread &lt;&lt; deviation  -&gt; the machine is repeatable and the error is</span><br><span class="line">                          systematic. COMPENSATION WILL WORK, and the</span><br><span class="line">                          numbers from Exercise 3 are usable.</span><br><span class="line"> </span><br><span class="line">  spread ~= deviation  -&gt; the machine is not repeatable at this scale.</span><br><span class="line">                          Compensation cannot help; it would fix one print</span><br><span class="line">                          and break the next. Look for a mechanical or</span><br><span class="line">                          process cause: belt tension, bed levelling drift,</span><br><span class="line">                          part cooling variation, ambient temperature swings,</span><br><span class="line">                          filament diameter variation, moisture (Post 04).</span><br><span class="line"> </span><br><span class="line">Print the SAME artefact after a nozzle change, too. If the numbers move,</span><br><span class="line">you have just learned that &quot;calibrated&quot; has an expiry date.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-5-—-Build-your-fit-gauge"><a href="#Exercise-5-—-Build-your-fit-gauge" class="headerlink" title="Exercise 5 — Build your fit gauge"></a>Exercise 5 — Build your fit gauge</h2>
+<p>Print the Chapter 6 fit gauge against a known reference you actually use (an M3 screw, a 3 mm dowel, a 608 bearing's outer race). Fill in the judgement table. Write your four working clearances — press, tight, sliding, free — into a parameter file you will reuse.</p>
+<h2 id="Exercise-6-—-Depth-and-orientation-dependence"><a href="#Exercise-6-—-Depth-and-orientation-dependence" class="headerlink" title="Exercise 6 — Depth and orientation dependence"></a>Exercise 6 — Depth and orientation dependence</h2>
+<p>Reprint the fit gauge at two engagement depths (say 3 mm and 15 mm) and in two orientations (hole axis vertical, and hole axis horizontal). Compare the clearance that gives a sliding fit in each of the four cases. Explain the horizontal-hole result in terms of bridging.</p>
+<h2 id="Exercise-7-—-Redesign-a-fragile-interface"><a href="#Exercise-7-—-Redesign-a-fragile-interface" class="headerlink" title="Exercise 7 — Redesign a fragile interface"></a>Exercise 7 — Redesign a fragile interface</h2>
+<p>Find something you have printed that only assembles if the tolerance comes out right. Redesign the interface so it tolerates ±0.3 mm on every feature — using an adjustable dimension, compliance, part consolidation, or a post-processed critical feature. Print both and compare assembly experience.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>closeness of the <strong>mean</strong> to truth — the centre</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>tightness of the <strong>spread</strong> — repeatability and reproducibility</td>
+</tr>
+<tr>
+<td>Advertised &quot;0.05 mm resolution&quot;</td>
+<td>a motion increment; not an accuracy claim</td>
+</tr>
+<tr>
+<td>First diagnostic question</td>
+<td><strong>is it repeatable?</strong> — not &quot;is it accurate?&quot;</td>
+</tr>
+<tr>
+<td>Precise but inaccurate</td>
+<td>good news — systematic, therefore compensable</td>
+</tr>
+<tr>
+<td>Imprecise</td>
+<td>compensation cannot help; find the mechanical cause</td>
+</tr>
+<tr>
+<td>Instrument for a critical dimension</td>
+<td>micrometer (ratchet = repeatable force)</td>
+</tr>
+<tr>
+<td>Instrument for a hole</td>
+<td><strong>pin gauges</strong> or a known-diameter shank, not caliper internal jaws</td>
+</tr>
+<tr>
+<td>Minimum readings per feature</td>
+<td>five, re-seated each time; record all of them</td>
+</tr>
+<tr>
+<td>Error model</td>
+<td><code>deviation ≈ offset + scale × nominal + noise</code></td>
+</tr>
+<tr>
+<td>Scale term</td>
+<td>thermal contraction, steps/mm</td>
+</tr>
+<tr>
+<td>Elephant foot fix that travels</td>
+<td>a 0.4–0.6 mm <strong>chamfer on the bottom edge in CAD</strong></td>
+</tr>
+<tr>
+<td>Holes undersize, cause A</td>
+<td>polygonal chord error from mesh export — fix at export (Post 06)</td>
+</tr>
+<tr>
+<td>Holes undersize, cause B</td>
+<td>bead overlap on a concave path — fix by compensation or reaming</td>
+</tr>
+<tr>
+<td>Over-extrusion signature</td>
+<td>external features <strong>large</strong> and internal features <strong>small</strong></td>
+</tr>
+<tr>
+<td>Z error signature</td>
+<td>constant short/tall on every Z dimension ⇒ first-layer offset</td>
+</tr>
+<tr>
+<td>Calibration cube</td>
+<td>validates a 20 mm cube; sweep a range of sizes instead</td>
+</tr>
+<tr>
+<td>ISO 286</td>
+<td>borrow clearance / transition / interference as <strong>concepts</strong>, not values</td>
+</tr>
+<tr>
+<td>ISO 2768</td>
+<td>a comparison point for expectations, not a class you may claim</td>
+</tr>
+<tr>
+<td>Fit clearance</td>
+<td>determined by a printed sweep gauge, per material and orientation</td>
+</tr>
+<tr>
+<td>Compensate in CAD</td>
+<td>design intent: clearances, chamfers, wall thickness</td>
+</tr>
+<tr>
+<td>Compensate in slicer</td>
+<td>machine bias: XY size compensation, hole compensation, elephant foot</td>
+</tr>
+<tr>
+<td>Stack-up</td>
+<td>assume worst case; absorb it with <strong>one adjustable dimension</strong></td>
+</tr>
+<tr>
+<td>Where precision is required</td>
+<td>ream, tap, press in an insert, or buy the precise part</td>
+</tr>
+<tr>
+<td>The thesis</td>
+<td>a design that only works if the tolerance is met is a fragile design</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 06 covers <strong>CAD for Printing</strong> — the modelling paradigms and what each is for, BREP solids versus triangle meshes and what the conversion destroys, the file formats and the unit metadata that STL famously lacks, the mesh export settings that directly control the chord error of Chapter 4, and how to encode this post's measured clearances as named parameters so a change propagates instead of being retyped in fourteen places.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.iso.org/standard/74514.html" target="_blank" rel="noopener external nofollow noreferrer">ISO/ASTM 52900:2021 — Additive manufacturing: general principles, fundamentals and vocabulary</a></li>
+<li><a href="https://www.iso.org/standard/45975.html" target="_blank" rel="noopener external nofollow noreferrer">ISO 286-1:2010 — GPS: ISO code system for tolerances on linear sizes, Part 1: basis of tolerances, deviations and fits</a></li>
+<li><a href="https://www.iso.org/standard/54915.html" target="_blank" rel="noopener external nofollow noreferrer">ISO 286-2:2010 — Part 2: tables of standard tolerance classes and limit deviations for holes and shafts</a></li>
+<li><a href="https://www.iso.org/standard/7749.html" target="_blank" rel="noopener external nofollow noreferrer">ISO 2768-2:1989 — General tolerances, Part 2 (superseded by ISO 22081:2021)</a></li>
+<li><a href="https://www.iso.org/standard/72514.html" target="_blank" rel="noopener external nofollow noreferrer">ISO 22081:2021 — GPS: general geometrical specifications and general size specifications</a></li>
+<li><a href="https://www.bipm.org/en/committees/jc/jcgm/publications" target="_blank" rel="noopener external nofollow noreferrer">JCGM 200 — International vocabulary of metrology (VIM)</a> — the authoritative definitions of accuracy, trueness, precision, repeatability, reproducibility and uncertainty.</li>
+<li><a href="https://www.bipm.org/en/committees/jc/jcgm/publications" target="_blank" rel="noopener external nofollow noreferrer">JCGM 100 — Guide to the expression of uncertainty in measurement (GUM)</a> — how to combine uncertainty contributions properly.</li>
+<li><a href="https://www.orcaslicer.com/wiki/print_settings/quality/quality_settings_precision" target="_blank" rel="noopener external nofollow noreferrer">OrcaSlicer wiki — precision settings (XY compensation, hole compensation, elephant foot)</a></li>
+<li><a href="https://help.prusa3d.com/" target="_blank" rel="noopener external nofollow noreferrer">PrusaSlicer documentation — XY size compensation and elephant foot compensation</a></li>
+<li><a href="https://support.ultimaker.com/" target="_blank" rel="noopener external nofollow noreferrer">UltiMaker Cura — official support and settings documentation</a> — <em>Horizontal Expansion</em> and <em>Hole Horizontal Expansion</em> live under the Walls settings category.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a downloadable spreadsheet template for the artefact tables, a repeatability study across three different machines running the same file, a worked GD&amp;T-style example for a printed bracket, and photographs of the four hole-error signatures under raking light.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"3D Printing Course — 05 · Dimensional Accuracy and Tolerances\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-09-12T09:29:27.000Z","title":"Created 2026-09-12 17:29:27","children":"2026-09-12"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-09-12T09:29:27.000Z","title":"Updated 2026-09-12 17:29:27","children":"2026-09-12"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Engineering",{"className":"post-meta-categories","href":"/blog/categories/Engineering/","children":"Engineering"}]],[["$","span","sep-3D Printing",{"children":" > "}],["$","a","3D Printing",{"className":"post-meta-categories","href":"/blog/categories/3D-Printing/","children":"3D Printing"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/09/12/print3d_05_accuracy_tolerances/","children":"https://invokfung.github.io/blog/2026/09/12/print3d_05_accuracy_tolerances/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","3D Printing",{"className":"post-meta__tags","href":"/blog/tags/3D-Printing/","children":"3D Printing"}],["$","a","Metrology",{"className":"post-meta__tags","href":"/blog/tags/Metrology/","children":"Metrology"}],["$","a","Tolerances",{"className":"post-meta__tags","href":"/blog/tags/Tolerances/","children":"Tolerances"}],["$","a","CAD",{"className":"post-meta__tags","href":"/blog/tags/CAD/","children":"CAD"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/09/13/dev_18_coding_with_ai_agents/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/09/11/dev_17_how_llms_work/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 17 · How LLMs Work in Practice — Tokens, Context, Sampling and Embeddings</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","print3d_06_cad_for_printing",{"children":["$","a",null,{"href":"/blog/2026/09/17/print3d_06_cad_for_printing/","title":"3D Printing Course — 06 · CAD for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-17</div><div class=\"title\">3D Printing Course — 06 · CAD for Printing</div></div>"}}]}],["$","div","print3d_00_how_it_works",{"children":["$","a",null,{"href":"/blog/2026/08/15/print3d_00_how_it_works/","title":"3D Printing Course — 00 · How 3D Printing Works","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-15</div><div class=\"title\">3D Printing Course — 00 · How 3D Printing Works</div></div>"}}]}],["$","div","print3d_01_first_print_calibration",{"children":["$","a",null,{"href":"/blog/2026/08/21/print3d_01_first_print_calibration/","title":"3D Printing Course — 01 · First Print and Calibration","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-21</div><div class=\"title\">3D Printing Course — 01 · First Print and Calibration</div></div>"}}]}],["$","div","print3d_02_slicing_in_depth",{"children":["$","a",null,{"href":"/blog/2026/08/26/print3d_02_slicing_in_depth/","title":"3D Printing Course — 02 · Slicing in Depth","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-26</div><div class=\"title\">3D Printing Course — 02 · Slicing in Depth</div></div>"}}]}],["$","div","print3d_03_orientation_supports_dfm",{"children":["$","a",null,{"href":"/blog/2026/09/01/print3d_03_orientation_supports_dfm/","title":"3D Printing Course — 03 · Orientation, Supports and Design for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-01</div><div class=\"title\">3D Printing Course — 03 · Orientation, Supports and Design for Printing</div></div>"}}]}],["$","div","print3d_04_materials",{"children":["$","a",null,{"href":"/blog/2026/09/06/print3d_04_materials/","title":"3D Printing Course — 04 · Materials","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-06</div><div class=\"title\">3D Printing Course — 04 · Materials</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Saying-what-you-mean",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Saying-what-you-mean","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Saying what you mean"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","The-four-quadrant-picture-stated-plainly",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-four-quadrant-picture-stated-plainly","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"The four-quadrant picture, stated plainly"}]]}],null]}],["$","li","Why-005-mm-resolution-is-a-meaningless-accuracy-claim",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Why-005-mm-resolution-is-a-meaningless-accuracy-claim","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"Why \"0.05 mm resolution\" is a meaningless accuracy claim"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-The-instrument-is-part-of-the-experiment",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-The-instrument-is-part-of-the-experiment","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — The instrument is part of the experiment"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Calipers-versus-micrometers",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Calipers-versus-micrometers","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Calipers versus micrometers"}]]}],null]}],["$","li","The-other-things-that-move-the-reading",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-other-things-that-move-the-reading","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"The other things that move the reading"}]]}],null]}],["$","li","The-measurement-protocol",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-measurement-protocol","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"The measurement protocol"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-The-error-budget",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-The-error-budget","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — The error budget"}]]}],null]}],["$","li","Chapter-4-—-The-systematic-errors-and-their-actual-causes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-The-systematic-errors-and-their-actual-causes","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — The systematic errors, and their actual causes"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Elephant-foot",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Elephant-foot","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Elephant foot"}]]}],null]}],["$","li","Holes-come-out-undersize",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Holes-come-out-undersize","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Holes come out undersize"}]]}],null]}],["$","li","External-dimensions-large-internal-features-small",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#External-dimensions-large-internal-features-small","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"External dimensions large, internal features small"}]]}],null]}],["$","li","XY-and-Z-behave-differently",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#XY-and-Z-behave-differently","children":[["$","span",null,{"className":"toc-number","children":"5.4."}]," ",["$","span",null,{"className":"toc-text","children":"X/Y and Z behave differently"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-The-calibration-cube-fallacy-and-what-to-do-instead",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-The-calibration-cube-fallacy-and-what-to-do-instead","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — The calibration-cube fallacy, and what to do instead"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Why-the-20-mm-cube-proves-almost-nothing",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Why-the-20-mm-cube-proves-almost-nothing","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"Why the 20 mm cube proves almost nothing"}]]}],null]}],["$","li","The-artefact-that-does-the-job",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-artefact-that-does-the-job","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"The artefact that does the job"}]]}],null]}],["$","li","The-table-you-fill-in",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-table-you-fill-in","children":[["$","span",null,{"className":"toc-number","children":"6.3."}]," ",["$","span",null,{"className":"toc-text","children":"The table you fill in"}]]}],null]}],["$","li","Reading-your-own-results",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Reading-your-own-results","children":[["$","span",null,{"className":"toc-number","children":"6.4."}]," ",["$","span",null,{"className":"toc-text","children":"Reading your own results"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Designing-fits",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Designing-fits","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Designing fits"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-concept-borrowed-correctly",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-concept-borrowed-correctly","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"The concept, borrowed correctly"}]]}],null]}],["$","li","The-fit-test-gauge",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-fit-test-gauge","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"The fit-test gauge"}]]}],null]}],["$","li","Compensating-in-CAD-versus-in-the-slicer",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Compensating-in-CAD-versus-in-the-slicer","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"Compensating in CAD versus in the slicer"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Stack-up-standards-and-the-argument",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Stack-up-standards-and-the-argument","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Stack-up, standards, and the argument"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Tolerance-stack-up",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Tolerance-stack-up","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Tolerance stack-up"}]]}],null]}],["$","li","Where-the-standards-fit",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Where-the-standards-fit","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"Where the standards fit"}]]}],null]}],["$","li","The-closing-argument",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-closing-argument","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"The closing argument"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Quantify-your-measurement",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Quantify-your-measurement","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Quantify your measurement"}]]}],null]}],["$","li","Exercise-2-—-Print-and-fill-in-the-artefact-table",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Print-and-fill-in-the-artefact-table","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Print and fill in the artefact table"}]]}],null]}],["$","li","Exercise-3-—-Separate-the-offset-from-the-scale",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Separate-the-offset-from-the-scale","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Separate the offset from the scale"}]]}],null]}],["$","li","Exercise-4-—-Reproducibility",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Reproducibility","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Reproducibility"}]]}],null]}],["$","li","Exercise-5-—-Build-your-fit-gauge",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Build-your-fit-gauge","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Build your fit gauge"}]]}],null]}],["$","li","Exercise-6-—-Depth-and-orientation-dependence",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Depth-and-orientation-dependence","children":[["$","span",null,{"className":"toc-number","children":"9.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Depth and orientation dependence"}]]}],null]}],["$","li","Exercise-7-—-Redesign-a-fragile-interface",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-7-—-Redesign-a-fragile-interface","children":[["$","span",null,{"className":"toc-number","children":"9.7."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 7 — Redesign a fragile interface"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"This is the post the rest of the series is built around. A CAD model contains a number — 20.000 mm — that is exact in the sense that a mathematical ob"}],["$","meta","5",{"name":"keywords","content":"3D Printing,Metrology,Tolerances,CAD,Course"}],["$","meta","6",{"property":"og:title","content":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances"}],["$","meta","7",{"property":"og:description","content":"This is the post the rest of the series is built around. A CAD model contains a number — 20.000 mm — that is exact in the sense that a mathematical ob"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances"}],["$","meta","11",{"name":"twitter:description","content":"This is the post the rest of the series is built around. A CAD model contains a number — 20.000 mm — that is exact in the sense that a mathematical ob"}]]
+1:null

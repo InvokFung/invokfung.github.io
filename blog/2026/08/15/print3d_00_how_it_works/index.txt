@@ -1,0 +1,660 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","15","d"]
+7:["slug","print3d_00_how_it_works","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["tSi4Bl_e6QraTpHUkvsOl",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","15","d"],{"children":[["slug","print3d_00_how_it_works","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"15\",\"slug\":\"print3d_00_how_it_works\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","15","d"],{"children":[["slug","print3d_00_how_it_works","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Ted1c,<p>Desktop 3D printing looks like a solved problem from the outside: load a file, press print, collect a part. In practice the machine is a small chemical process plant with a motion system bolted to it, and almost every failure a beginner hits is a physics problem wearing a software costume. This course treats 3D printing as an engineering discipline rather than a hobby ritual: what the process actually does to the material, which decisions are load-bearing, and how to measure things on your own machine instead of copying numbers from strangers. Post 00 builds the mental model everything else stands on — the process families, the physics of melt deposition, the anatomy of a printer, and the file pipeline from CAD to G-code.</p>
+<blockquote>
+<p>Series map: <strong>00 How 3D Printing Works</strong> (this post) → 01 First Print and Calibration → 02 Slicing in Depth → 03 Orientation, Supports and Design for Printing → 04 Materials → 05 Dimensional Accuracy and Tolerances → 06 CAD for Printing → 07 Strength, Failure Modes and Functional Parts.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Explain what additive manufacturing genuinely does better than subtractive manufacturing, and where it is the wrong tool.</li>
+<li>Compare FDM/FFF, resin MSLA/SLA and SLS on resolution, cost, material properties, isotropy and post-processing burden.</li>
+<li>Describe the physics of FDM: the filament plunger, the melt zone, extrusion, and interlayer bonding by polymer chain diffusion.</li>
+<li>State why FDM parts are anisotropic and why that fact dominates every later post in this series.</li>
+<li>Identify every major subsystem of a printer — extruder, hotend, nozzle, bed, motion system — and say what each one contributes to speed, quality and reliability.</li>
+<li>Describe the resin process including lift/peel forces, and list the non-negotiable safety requirements for handling uncured resin.</li>
+<li>Trace a part end to end through CAD → mesh → slicer → G-code → printer, and name what can go wrong at each hand-off.</li>
+<li>Evaluate a printer by criteria rather than by model recommendations.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Additive-versus-subtractive"><a href="#Chapter-1-—-Additive-versus-subtractive" class="headerlink" title="Chapter 1 — Additive versus subtractive"></a>Chapter 1 — Additive versus subtractive</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Additive manufacturing (AM)</strong> — building a part by adding material, usually in layers, from a digital model. The formal ISO/ASTM term; &quot;3D printing&quot; is the colloquial synonym.</li>
+<li><strong>Subtractive manufacturing</strong> — starting from a solid blank and removing material: milling, turning, drilling, grinding, laser and waterjet cutting.</li>
+<li><strong>Formative manufacturing</strong> — forcing material into a shape without adding or removing it: injection moulding, casting, forging, sheet bending.</li>
+<li><strong>Layer</strong> — one planar slice of the part, deposited or cured in a single pass. The layer is the fundamental quantum of almost all AM processes.</li>
+<li><strong>Anisotropy</strong> — direction-dependent material properties. A part that is strong along X and weak along Z is anisotropic.</li>
+<li><strong>Build volume</strong> — the maximum envelope the machine can print inside, usually quoted as X × Y × Z in millimetres.</li>
+</ul>
+<h2 id="What-additive-is-genuinely-good-at"><a href="#What-additive-is-genuinely-good-at" class="headerlink" title="What additive is genuinely good at"></a>What additive is genuinely good at</h2>
+<p>The honest list is shorter than the marketing list:</p>
+<ol>
+<li><strong>Geometric complexity is free.</strong> A lattice, an internal channel that curves, a topology-optimised bracket — all cost the same per gram as a plain block. On a mill, every feature costs a setup, a tool and a toolpath.</li>
+<li><strong>Quantity one is cheap.</strong> There is no tooling. The marginal cost of the first part equals the marginal cost of the thousandth, which is exactly the property injection moulding does not have.</li>
+<li><strong>Iteration latency is hours, not weeks.</strong> The design loop closes the same day. For fixtures, jigs and prototypes this is the entire value proposition.</li>
+<li><strong>Internal voids and enclosed geometry.</strong> A hollow shell with internal ribs is trivial additively and often impossible subtractively without splitting the part.</li>
+<li><strong>On-demand spares.</strong> A discontinued knob or bracket becomes a file rather than a supply-chain problem.</li>
+</ol>
+<h2 id="What-subtractive-is-still-better-at"><a href="#What-subtractive-is-still-better-at" class="headerlink" title="What subtractive is still better at"></a>What subtractive is still better at</h2>
+<ol>
+<li><strong>Tolerance and surface finish out of the machine.</strong> A milled feature can hold tolerances an order of magnitude tighter than a hobby FDM part, with a surface that needs no post-processing.</li>
+<li><strong>Isotropic material properties.</strong> Stock aluminium or acetal has the same strength in every direction because it was never built in layers.</li>
+<li><strong>Certified material provenance.</strong> You can buy a billet with a mill certificate. Filament data sheets are far weaker evidence.</li>
+<li><strong>Volume economics.</strong> Above a few hundred identical parts, moulding or machining wins on cost per part, usually decisively.</li>
+<li><strong>Flatness, roundness and bore quality.</strong> A reamed hole is round. A printed hole is a polygon approximation with a seam in it — post 03 and post 05 spend real time on this.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Additive (desktop)</th>
+<th>Subtractive (CNC)</th>
+<th>Formative (injection moulding)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tooling cost</td>
+<td>none</td>
+<td>fixturing only</td>
+<td>high, dominates low volumes</td>
+</tr>
+<tr>
+<td>Cost at quantity 1</td>
+<td>lowest</td>
+<td>moderate</td>
+<td>prohibitive</td>
+</tr>
+<tr>
+<td>Cost at quantity 10 000</td>
+<td>worst</td>
+<td>moderate</td>
+<td>lowest</td>
+</tr>
+<tr>
+<td>Geometric complexity</td>
+<td>nearly free</td>
+<td>expensive</td>
+<td>limited by draft and ejection</td>
+</tr>
+<tr>
+<td>Internal channels</td>
+<td>easy</td>
+<td>hard or impossible</td>
+<td>needs cores/inserts</td>
+</tr>
+<tr>
+<td>Achievable tolerance</td>
+<td>loosest</td>
+<td>tightest</td>
+<td>tight and repeatable</td>
+</tr>
+<tr>
+<td>Material isotropy</td>
+<td>poor (FDM) to good (SLS)</td>
+<td>excellent</td>
+<td>excellent</td>
+</tr>
+<tr>
+<td>Lead time for a change</td>
+<td>hours</td>
+<td>days</td>
+<td>weeks (retool)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Trick:</strong> the question is never &quot;can I print this?&quot; but &quot;is printing the cheapest path to a correct part?&quot; A 3 mm dowel pin should be bought, not printed. A bracket that holds three bought parts in a specific relative position should almost always be printed.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-The-process-families"><a href="#Chapter-2-—-The-process-families" class="headerlink" title="Chapter 2 — The process families"></a>Chapter 2 — The process families</h1>
+<p>Four families cover essentially everything a reader of this course will encounter. Only the first two are realistically owned at home; the third is bought as a service; the fourth is named for completeness.</p>
+<h2 id="FDM-FFF-—-fused-deposition-modelling"><a href="#FDM-FFF-—-fused-deposition-modelling" class="headerlink" title="FDM / FFF — fused deposition modelling"></a>FDM / FFF — fused deposition modelling</h2>
+<p>A thermoplastic filament is pushed through a heated nozzle and deposited as a road of molten polymer that fuses to its neighbours. &quot;FDM&quot; was a Stratasys trademark; &quot;FFF&quot; (fused filament fabrication) is the vendor-neutral name for the identical process. This is the overwhelming majority of desktop machines and the default assumption of this course unless stated otherwise.</p>
+<h2 id="Resin-—-SLA-and-MSLA"><a href="#Resin-—-SLA-and-MSLA" class="headerlink" title="Resin — SLA and MSLA"></a>Resin — SLA and MSLA</h2>
+<p>A photopolymer resin is cured layer by layer with ultraviolet light. <strong>SLA</strong> steers a laser spot across the surface; <strong>MSLA</strong> (masked stereolithography) shines a UV LED array through an LCD panel that masks the whole layer image at once, so exposure time is independent of how much area is being cured. Every affordable desktop resin printer today is MSLA.</p>
+<h2 id="SLS-—-selective-laser-sintering"><a href="#SLS-—-selective-laser-sintering" class="headerlink" title="SLS — selective laser sintering"></a>SLS — selective laser sintering</h2>
+<p>A laser fuses regions of a bed of polymer powder (usually nylon PA12). Unfused powder supports the part, so overhangs and captive geometry need no support structures. Industrial and service-bureau territory; a handful of &quot;benchtop&quot; SLS machines exist but the powder handling is a serious commitment.</p>
+<h2 id="Metal-processes-—-one-line"><a href="#Metal-processes-—-one-line" class="headerlink" title="Metal processes — one line"></a>Metal processes — one line</h2>
+<p>Laser powder bed fusion (L-PBF/SLM/DMLS), binder jetting and directed energy deposition all exist and all produce genuinely useful metal parts, but they are capital equipment with inert-gas, powder-safety and post-machining requirements that put them entirely outside the hobby envelope — buy metal parts as a service, do not plan to own the machine.</p>
+<h2 id="Honest-comparison"><a href="#Honest-comparison" class="headerlink" title="Honest comparison"></a>Honest comparison</h2>
+<p>Numbers below are typical <em>ranges</em> for the desktop/entry class, not specifications of any product. Where a figure depends on a variable, that variable is named, because the variable is the part you can actually control.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>FDM / FFF</th>
+<th>Resin MSLA</th>
+<th>SLS (PA12)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XY resolution driver</td>
+<td>nozzle diameter and extrusion width (commonly 0.4 mm nozzle)</td>
+<td>LCD pixel pitch = panel width ÷ horizontal pixel count; typically tens of micrometres</td>
+<td>laser spot size and powder particle size</td>
+</tr>
+<tr>
+<td>Z resolution driver</td>
+<td>layer height, typically 0.1–0.3 mm</td>
+<td>layer height, typically 0.02–0.1 mm</td>
+<td>layer height, typically ~0.1 mm</td>
+</tr>
+<tr>
+<td>Fine detail</td>
+<td>poor: a feature narrower than one extrusion width cannot exist</td>
+<td>excellent: crisp text and sub-millimetre detail</td>
+<td>good, but grainy surface from powder</td>
+</tr>
+<tr>
+<td>Material cost</td>
+<td>lowest; commodity spools sold by the kilogram</td>
+<td>higher per unit volume than commodity filament</td>
+<td>powder plus a refresh ratio of virgin powder per build</td>
+</tr>
+<tr>
+<td>Typical part cost</td>
+<td>lowest of the three</td>
+<td>low to moderate</td>
+<td>highest; usually priced per part by a bureau</td>
+</tr>
+<tr>
+<td>Mechanical properties</td>
+<td>tough, ductile options (PETG, ABS, nylon); weak across layers</td>
+<td>mostly stiff and brittle unless a &quot;tough&quot;/engineering resin; properties drift with post-cure</td>
+<td>tough and consistent; the best all-round hobby-accessible plastic parts</td>
+</tr>
+<tr>
+<td>Isotropy</td>
+<td><strong>poor</strong> — the defining problem of the process</td>
+<td>moderate — chemical crosslinking crosses the layer boundary, so much better than FDM but not perfect</td>
+<td>good — near-isotropic, which is why functional bureau parts are often SLS</td>
+</tr>
+<tr>
+<td>Support needed</td>
+<td>yes, for overhangs</td>
+<td>yes, plus drain/vent planning</td>
+<td>no — the powder bed supports everything</td>
+</tr>
+<tr>
+<td>Post-processing burden</td>
+<td>remove supports, optional sanding; otherwise print-and-use</td>
+<td><strong>high</strong>: drain, IPA wash, dry, UV post-cure, support removal, and PPE throughout</td>
+<td>depowdering, bead blast, optional dye</td>
+</tr>
+<tr>
+<td>Safety burden</td>
+<td>ventilation for styrenics; hot surfaces; mains-heated bed</td>
+<td>chemical PPE, ventilation, solvent and waste handling — not optional</td>
+<td>powder inhalation and dust-explosion controls</td>
+</tr>
+<tr>
+<td>Realistic home ownership</td>
+<td>yes</td>
+<td>yes, with a dedicated ventilated space</td>
+<td>effectively no</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Watch out:</strong> every &quot;resolution&quot; number quoted by a vendor is an XY pixel or a minimum layer height, not an accuracy claim. Resolution is the smallest step the machine can command. Accuracy is how close the resulting dimension is to the model. They are unrelated, and post 05 is entirely about the second one.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-The-physics-of-FDM"><a href="#Chapter-3-—-The-physics-of-FDM" class="headerlink" title="Chapter 3 — The physics of FDM"></a>Chapter 3 — The physics of FDM</h1>
+<h2 id="Terminology-1"><a href="#Terminology-1" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Melt zone</strong> — the region inside the hotend where the filament is above its melting or softening point and behaves as a viscous fluid.</li>
+<li><strong>Heatbreak</strong> — the deliberately thin-walled, low-conductivity section between the heatsink and the heater block that keeps the melt zone short and well defined.</li>
+<li><strong>Heat creep</strong> — failure mode where the melt zone migrates upward past the heatbreak, softening filament in the cold section and jamming it.</li>
+<li><strong>Extrudate</strong> — the material that has left the nozzle.</li>
+<li><strong>Road / extrusion</strong> — one deposited line of extrudate. Its cross-section is roughly a rectangle with rounded ends, width × layer height.</li>
+<li><strong>Weld / interface</strong> — the boundary between two roads, either side by side within a layer or stacked between layers.</li>
+<li><strong>Volumetric flow</strong> — the rate at which the hotend can melt and deliver material, in mm³/s. The real speed limit of the machine.</li>
+</ul>
+<h2 id="The-filament-is-a-plunger"><a href="#The-filament-is-a-plunger" class="headerlink" title="The filament is a plunger"></a>The filament is a plunger</h2>
+<p>The extruder gears grip the filament and push it into the hotend. Solid filament above the melt zone acts as a piston; the molten polymer below it is the working fluid. This is a positive-displacement pump, and the consequences are worth stating explicitly:</p>
+<ul>
+<li><strong>Flow is commanded by distance, not by pressure.</strong> The firmware asks for &quot;extrude 2.31 mm of filament&quot;, and the volume delivered is that length times the filament cross-section. If the filament diameter is not what the slicer assumed, every extrusion in the file is wrong by the same ratio.</li>
+<li><strong>The system is compliant.</strong> Molten polymer compresses slightly, the filament itself buckles slightly, the PTFE liner or Bowden tube stretches. Pressure therefore lags the commanded flow — which is exactly the problem that pressure advance / linear advance exists to correct (post 01).</li>
+<li><strong>The grip is the weak link.</strong> If the drive gear cannot push hard enough, it grinds a flat into the filament and stops gripping. Under-extrusion that gets progressively worse over minutes is nearly always this.</li>
+</ul>
+<h2 id="Melting-and-why-volumetric-flow-is-the-real-limit"><a href="#Melting-and-why-volumetric-flow-is-the-real-limit" class="headerlink" title="Melting, and why volumetric flow is the real limit"></a>Melting, and why volumetric flow is the real limit</h2>
+<p>Heat has to travel from the heater block into the filament core by conduction, and polymers are poor thermal conductors. The maximum flow the hotend supports is set by how much filament it can bring to temperature per second — which depends on melt-zone length, nozzle temperature, and the material's own thermal properties. This is why the same hotend will happily run PLA far faster than PETG, and why raising nozzle temperature raises attainable flow.</p>
+<p>Practically: your printer does not have a &quot;maximum speed&quot; in mm/s. It has a maximum volumetric flow in mm³/s, and speed follows from it.</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="text"><span class="line">volumetric flow (mm³/s) ≈ extrusion width (mm) × layer height (mm) × print speed (mm/s)</span><br><span class="line"> </span><br><span class="line">example: 0.42 mm width × 0.20 mm height × 150 mm/s ≈ 12.6 mm³/s</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>If that number exceeds what the hotend can melt, the print under-extrudes no matter what the slicer says. Post 01 gives the measurement procedure for finding your own machine's ceiling; do not trust a headline figure from a product page, because it is measured with a specific material at a specific temperature that is probably not yours.</p>
+<h2 id="Layer-bonding-is-polymer-chain-diffusion"><a href="#Layer-bonding-is-polymer-chain-diffusion" class="headerlink" title="Layer bonding is polymer chain diffusion"></a>Layer bonding is polymer chain diffusion</h2>
+<p>This is the single most important piece of physics in the course.</p>
+<p>When a hot road is laid onto a cooler road below it, the two do not glue together and they do not melt into a homogeneous mass. What happens is <strong>interdiffusion</strong>: polymer chains near the interface, if they are above the glass transition and mobile enough, wriggle across the boundary by reptation — snake-like motion along the tube formed by neighbouring chains — and entangle with chains on the other side. The strength of the weld is a function of how many chains crossed and how far, which is a function of <em>interface temperature</em> and <em>time above that temperature</em>. The classic treatment is Wool and O'Connor's crack-healing theory, and it maps onto FDM almost directly.</p>
+<p>The engineering consequences follow immediately:</p>
+<ul>
+<li><strong>Hotter nozzle → stronger layer bond</strong>, up to the point where the material degrades or the part slumps. This is a real, repeatable lever.</li>
+<li><strong>More cooling → weaker layer bond.</strong> Part cooling fans buy overhang quality and surface detail and pay for it in Z strength. Post 04 and post 07 return to this trade.</li>
+<li><strong>Smaller layer height → more interfaces per millimetre</strong>, but each interface is also smaller and the part reheats more often. The net effect on strength is material-dependent and genuinely contested; do not repeat a blanket claim in either direction.</li>
+<li><strong>An enclosure raises ambient temperature</strong>, which slows cooling at the interface and improves bonding. This is most of why ABS, ASA and PC want an enclosure.</li>
+<li><strong>Long print times per layer let the previous layer cool further.</strong> A tall thin part and a tall wide part with identical settings do not have identical layer adhesion.</li>
+</ul>
+<h2 id="Anisotropy-stated-properly"><a href="#Anisotropy-stated-properly" class="headerlink" title="Anisotropy, stated properly"></a>Anisotropy, stated properly</h2>
+<p>A load applied <em>along</em> the roads is carried by polymer chains that run continuously through the extrudate — essentially the bulk strength of the material, minus voids. A load applied <em>across</em> the layers is carried only by the chains that diffused across each weld interface, plus whatever mechanical interlock the road geometry provides.</p>
+<p>The Z direction is therefore always weaker, and the failure mode is different too: in-plane failure tends to be ductile yielding, while interlayer failure tends to be a clean, brittle-looking separation along a layer line.</p>
+<p>How much weaker? Published figures for Z-direction tensile strength as a fraction of in-plane strength scatter enormously — across materials, nozzle temperatures, layer heights, cooling settings, enclosure conditions and test-coupon geometry. Treat any single percentage you read as a statement about that study's conditions, not about your printer. What is robust, and what you should carry forward, is the <em>ordering</em>: in-plane strong, interlayer weak, and the gap is large enough to change the design.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> printing a hook, a lever or a bracket flat on the bed because it &quot;fits better that way&quot;, so that the working load pulls the layers apart. This is the most common structural failure in hobby printing and it is entirely an orientation decision. Post 03 works the example through in detail.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-Printer-anatomy"><a href="#Chapter-4-—-Printer-anatomy" class="headerlink" title="Chapter 4 — Printer anatomy"></a>Chapter 4 — Printer anatomy</h1>
+<h2 id="The-extruder-direct-drive-versus-Bowden"><a href="#The-extruder-direct-drive-versus-Bowden" class="headerlink" title="The extruder: direct drive versus Bowden"></a>The extruder: direct drive versus Bowden</h2>
+<p>The extruder is the geared drive that grips and pushes the filament. Two architectures:</p>
+<p><strong>Direct drive</strong> puts the extruder motor on the moving toolhead, immediately above the hotend. The filament path from gear to melt zone is short — typically tens of millimetres.</p>
+<p><strong>Bowden</strong> puts the motor on the frame and pushes filament through a PTFE tube, often several hundred millimetres, to a hotend that carries no motor.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Direct drive</th>
+<th>Bowden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toolhead mass</td>
+<td>higher</td>
+<td>lower</td>
+</tr>
+<tr>
+<td>Achievable acceleration before ringing</td>
+<td>lower</td>
+<td>higher</td>
+</tr>
+<tr>
+<td>Retraction distance needed</td>
+<td>short (roughly a couple of millimetres)</td>
+<td>long (often several times more)</td>
+</tr>
+<tr>
+<td>Responsiveness to flow changes</td>
+<td>good</td>
+<td>sluggish; more pressure-advance compensation needed</td>
+</tr>
+<tr>
+<td>Flexible filament (TPU)</td>
+<td>workable</td>
+<td>difficult to painful</td>
+</tr>
+<tr>
+<td>Maintenance access</td>
+<td>motor in the hot, moving area</td>
+<td>motor accessible, tube is a wear item</td>
+</tr>
+</tbody>
+</table>
+<p>Neither is &quot;better&quot;. Direct drive trades acceleration for control; Bowden trades control for acceleration. Modern direct-drive extruders have got light enough that the historical acceleration argument is much weaker than it was.</p>
+<h2 id="The-hotend"><a href="#The-hotend" class="headerlink" title="The hotend"></a>The hotend</h2>
+<p>Stacked from cold to hot: <strong>heatsink</strong> (with a fan that must never be switched off while hot), <strong>heatbreak</strong>, <strong>heater block</strong> carrying a cartridge heater and a thermistor, and the <strong>nozzle</strong>.</p>
+<p>The heatbreak's whole job is to make the transition from cold to molten as short as possible. A long, sloppy transition zone means a long column of soft filament that behaves like a spring, degrading extrusion control, and it invites heat creep.</p>
+<p>Two hotend classes matter:</p>
+<ul>
+<li><strong>PTFE-lined</strong>: a PTFE tube runs all the way down to the nozzle. Cheap, forgiving, excellent for PLA and PETG. The ceiling is the PTFE itself, which begins to degrade at elevated temperature and releases decomposition products; the widely used practical limit is around 240–250 °C, and going above it is both a part-quality and an air-quality problem.</li>
+<li><strong>All-metal</strong>: no PTFE in the hot zone, so high-temperature materials become possible. In exchange the melt zone is less well constrained and heat creep is a more real risk, particularly with materials that soften gradually.</li>
+</ul>
+<h2 id="The-nozzle"><a href="#The-nozzle" class="headerlink" title="The nozzle"></a>The nozzle</h2>
+<ul>
+<li><strong>Diameter</strong> sets the minimum feature width and, with layer height, the volumetric flow available. 0.4 mm is the default for good reasons: it balances detail against speed. 0.2 mm buys detail and costs enormous print time; 0.6 and 0.8 mm buy speed and strength on functional parts and cost fine detail.</li>
+<li><strong>Material</strong> matters as soon as you print composites. Brass conducts heat well and is soft; any filament loaded with carbon fibre, glass fibre, metal powder or glow-in-the-dark phosphor is abrasive and will wear a brass nozzle out of round in hours. Hardened steel, tool steel or a carbide/ruby-tipped nozzle is required for those, at a small cost in thermal conductivity.</li>
+<li><strong>Wear is invisible until it is not.</strong> A worn nozzle prints wider than commanded and loses corner definition. If dimensional behaviour drifts over months, measure the nozzle orifice or simply replace it — nozzles are consumables.</li>
+</ul>
+<h2 id="The-bed-and-adhesion-surfaces"><a href="#The-bed-and-adhesion-surfaces" class="headerlink" title="The bed and adhesion surfaces"></a>The bed and adhesion surfaces</h2>
+<p>The bed must be flat, at a controlled temperature, and chemically willing to hold the first layer and then let it go. Common surfaces, covered properly in post 01:</p>
+<ul>
+<li><strong>Smooth PEI</strong> — strong, chemically-driven adhesion; glossy first-layer finish; can hold some materials (PETG especially) hard enough to damage the sheet without a release agent.</li>
+<li><strong>Textured PEI</strong> — mechanical keying rather than pure chemical grip; matte first layer that hides imperfections; releases much more willingly as the bed cools. The forgiving default.</li>
+<li><strong>Glass</strong> — extremely flat, usually needs an adhesive (glue stick, hairspray); prints release as the glass cools.</li>
+<li><strong>Garolite / FR4</strong> — the traditional answer for nylon, which sticks to it well and to most other things poorly.</li>
+</ul>
+<p>Removable spring-steel sheets on a magnetic base have become the norm because flexing the sheet is the single most reliable release mechanism.</p>
+<h2 id="Motion-systems"><a href="#Motion-systems" class="headerlink" title="Motion systems"></a>Motion systems</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>How it moves</th>
+<th>Consequences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bedslinger</strong> (Cartesian i3)</td>
+<td>bed moves in Y, gantry carries X, Z lifts the gantry</td>
+<td>simple, cheap, easy to service. Moving mass in Y <em>includes the part</em>, so ringing and accuracy get worse as the print gets taller and heavier. Tall thin parts are its weakness.</td>
+</tr>
+<tr>
+<td><strong>CoreXY</strong></td>
+<td>two frame-mounted motors drive both X and Y through a crossed belt path; the bed only moves in Z</td>
+<td>constant, low moving mass regardless of part size; supports much higher acceleration; the natural choice for fast machines. Belt path is longer and belt tension/squareness matter more.</td>
+</tr>
+<tr>
+<td><strong>Delta</strong></td>
+<td>three vertical towers with arms meeting at an effector</td>
+<td>very low moving mass, very high speed potential, tall cylindrical build volume. Position is a trigonometric function of three carriages, so calibration is fussy and accuracy varies across the bed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ringing</strong> (also called ghosting) is the ripple you see downstream of a sharp corner: the toolhead's acceleration step excites a mechanical resonance in the frame and gantry, and the vibration is printed into the surface. It is a function of moving mass, frame stiffness, belt tension and acceleration. The modern fix is <strong>input shaping</strong> — the firmware pre-shapes the motion command to cancel the dominant resonance, with the resonant frequency measured using an accelerometer. Klipper implements this as <code>input_shaper</code>; Marlin has its own input-shaping implementation in recent versions. Either way it is a <em>measurement</em>, not a preset: the frequency belongs to your machine.</p>
+<hr>
+<h1 id="Chapter-5-—-The-resin-process-and-its-safety-requirements"><a href="#Chapter-5-—-The-resin-process-and-its-safety-requirements" class="headerlink" title="Chapter 5 — The resin process, and its safety requirements"></a>Chapter 5 — The resin process, and its safety requirements</h1>
+<h2 id="How-MSLA-actually-works"><a href="#How-MSLA-actually-works" class="headerlink" title="How MSLA actually works"></a>How MSLA actually works</h2>
+<ol>
+<li>The build plate descends into a vat of liquid photopolymer until the gap between plate (or the last cured layer) and the transparent film at the bottom equals one layer height.</li>
+<li>A UV LED array beneath the vat illuminates an LCD panel. The panel is driven as a <strong>mask</strong>: pixels for the current cross-section are transparent, everything else is opaque.</li>
+<li>The resin in the illuminated gap crosslinks and cures for the programmed <strong>exposure time</strong>. Because the whole layer is exposed at once, exposure time is independent of layer area — a full-plate layer takes the same time as a single tiny part.</li>
+<li>The plate <strong>lifts</strong>, peeling the cured layer off the film, then returns for the next layer.</li>
+</ol>
+<p>Cure chemistry is free-radical or cationic photopolymerisation initiated by UV, on desktop machines typically around the 405 nm range. The correct exposure time is a property of <em>the resin, the panel and the layer height together</em>, so it must be found by test — printed exposure-test models are the standard method, and every resin change means a new test.</p>
+<h2 id="Lift-and-peel-forces-—-the-real-difficulty"><a href="#Lift-and-peel-forces-—-the-real-difficulty" class="headerlink" title="Lift and peel forces — the real difficulty"></a>Lift and peel forces — the real difficulty</h2>
+<p>The cured layer is stuck to two things: the previous layer (which is what you want) and the release film at the bottom of the vat (which you do not). Separating it requires overcoming adhesion <em>and</em> the suction created as resin has to flow in behind the retreating part. Peel force scales with the cross-sectional area being separated, which is why:</p>
+<ul>
+<li>Large flat cross-sections parallel to the plate are the worst case, and are why parts are usually tilted rather than laid flat.</li>
+<li>Hollowing a model with adequate drain holes dramatically reduces both peel force and resin consumption. Without drain holes, a hollow shell becomes a suction cup and can pull itself off the plate or deform.</li>
+<li>Slow lift speed, a lift height that clears the part, and a <strong>light-off delay</strong> (a pause before exposure that lets resin flow back into the gap) all buy reliability at the cost of print time.</li>
+<li>Failures show up as layers torn off and left stuck to the film, a part detached from the supports, or a &quot;layer shift&quot; that is really a partial delamination.</li>
+</ul>
+<p>Bottom layers get a much longer exposure to key the part to the plate. Over-exposing them causes <strong>elephant foot</strong> in exactly the same way that a too-low first layer does on FDM.</p>
+<h2 id="Post-processing-is-part-of-the-process-not-an-afterthought"><a href="#Post-processing-is-part-of-the-process-not-an-afterthought" class="headerlink" title="Post-processing is part of the process, not an afterthought"></a>Post-processing is part of the process, not an afterthought</h2>
+<p>Drain the part, wash it in isopropyl alcohol (or water for water-washable resins) to remove uncured surface resin, dry it, then post-cure it under UV. Post-cure is not cosmetic — mechanical properties and, to a small degree, dimensions change between the green state and the fully cured state. Over-curing makes many resins more brittle.</p>
+<h2 id="Safety-—-the-non-negotiable-part"><a href="#Safety-—-the-non-negotiable-part" class="headerlink" title="Safety — the non-negotiable part"></a>Safety — the non-negotiable part</h2>
+<p>Uncured photopolymer resin is a skin and respiratory irritant, and formulations commonly contain <strong>sensitisers</strong>: substances where repeated exposure can trigger an allergic response that becomes progressively worse and can be effectively permanent. This is not a &quot;be a bit careful&quot; hazard; it is a &quot;the third exposure can be much worse than the first&quot; hazard, and it is the reason experienced resin users are strict about it.</p>
+<p>The working rules:</p>
+<ul>
+<li><strong>Nitrile gloves, always. Not latex</strong> — latex is not an adequate barrier for these chemistries. Change them when contaminated; do not touch door handles, phones or keyboards while gloved.</li>
+<li><strong>Eye protection</strong> when handling the vat, decanting resin, or working with a wash tank.</li>
+<li><strong>Ventilation.</strong> A dedicated ventilated space, extracted outdoors where possible. A closed cupboard in a bedroom is not ventilation. Enclosures with carbon filters reduce odour more reliably than they reduce hazard.</li>
+<li><strong>Skin contact → soap and warm water immediately.</strong> Do <strong>not</strong> wash resin off with IPA or any other solvent; solvents carry the resin into the skin rather than off it.</li>
+<li><strong>Read the SDS for the specific resin.</strong> Formulations differ substantially between vendors and even between product lines from one vendor, and the safety data sheet is the authoritative document.</li>
+<li><strong>Waste disposal.</strong> Never pour resin, resin-contaminated IPA or wash water down a drain. Cure liquid waste to a solid under UV or sunlight, then dispose of the solid according to local regulations. Contaminated IPA can be cured, the solids filtered out, and the IPA reused. Paper towels, gloves and failed prints are all contaminated waste until cured.</li>
+<li><strong>Keep it out of food areas</strong> and away from children and pets, permanently.</li>
+</ul>
+<blockquote>
+<p><strong>Watch out:</strong> the largest exposure risk with resin is not printing; it is the wash and cleanup step, where hands are near liquid resin and solvent for extended periods. Set that station up properly before the first print, not after the first mess.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-The-pipeline-CAD-→-mesh-→-slicer-→-G-code-→-printer"><a href="#Chapter-6-—-The-pipeline-CAD-→-mesh-→-slicer-→-G-code-→-printer" class="headerlink" title="Chapter 6 — The pipeline: CAD → mesh → slicer → G-code → printer"></a>Chapter 6 — The pipeline: CAD → mesh → slicer → G-code → printer</h1>
+<p>Every post in this series lives at one stage of this chain. Knowing which stage a problem belongs to is most of debugging.</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span></pre></td><td class="code"><pre><code class="text"><span class="line">CAD model            parametric solid, exact curved surfaces (B-rep)</span><br><span class="line">   ↓ export/tessellate</span><br><span class="line">Mesh (STL / 3MF)     triangles only; curves become facets</span><br><span class="line">   ↓ slice</span><br><span class="line">Slicer               per-layer polygons → perimeters, infill, supports → toolpath</span><br><span class="line">   ↓ generate</span><br><span class="line">G-code               explicit machine instructions: move here, extrude this much, set that temperature</span><br><span class="line">   ↓ interpret</span><br><span class="line">Firmware             parses G-code, plans acceleration, drives steppers and heaters</span><br><span class="line">   ↓</span><br><span class="line">Physical part</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Stage-by-stage"><a href="#Stage-by-stage" class="headerlink" title="Stage by stage"></a>Stage by stage</h2>
+<p><strong>CAD</strong> holds exact geometry. A cylinder is a mathematical cylinder. Post 06 covers CAD for printing properly.</p>
+<p><strong>Mesh export</strong> is lossy and irreversible. The solid is tessellated into triangles, and the tessellation tolerance you choose at export decides how faceted your curves are. Export too coarse and a 20 mm hole visibly becomes a polygon; export absurdly fine and you get a slow, enormous file for no benefit.</p>
+<ul>
+<li><strong>STL</strong> stores nothing but a bag of triangles. No units, no colour, no materials, no assembly structure, no metadata. The unit ambiguity is why models occasionally arrive at 1/25.4 scale.</li>
+<li><strong>3MF</strong> is a modern zipped-XML format that carries units, transforms, colours, materials, multiple objects and slicer metadata, and is far less prone to invalid geometry. <strong>Prefer 3MF wherever both ends support it</strong> — which today is essentially all mainstream CAD and all mainstream slicers.</li>
+<li><strong>STEP</strong> is a true solid format; several slicers now import it directly and tessellate internally, which removes the export-tolerance decision from your hands but also removes a failure mode.</li>
+</ul>
+<p><strong>Slicing</strong> turns the mesh into toolpaths and is the subject of post 02. This is where the overwhelming majority of your decisions actually live.</p>
+<p><strong>G-code</strong> is a flat, human-readable list of machine commands. A one-line taste:</p>
+<pre><code class="language-gcode"><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="gcode"><span class="line"><span class="hljs-name">M104</span> S<span class="hljs-number">215</span>          ; set <span class="hljs-symbol">nozzle to 215</span> °C, <span class="hljs-keyword">do</span> <span class="hljs-symbol">not wait</span><br><span class="line">M140</span> S<span class="hljs-number">60</span>           ; set bed to <span class="hljs-number">60</span> °C, <span class="hljs-keyword">do</span> <span class="hljs-symbol">not wait</span><br><span class="line">M109</span> S<span class="hljs-number">215</span>          ; set <span class="hljs-symbol">nozzle to 215</span> °C a<span class="hljs-symbol">nd WAIT until reached</span><br><span class="line">G28</span>                ; home all axes</span><br><span class="line"><span class="hljs-name">G1</span> Z<span class="hljs-number">0.2</span> F<span class="hljs-number">3000</span>      ; move to first layer height</span><br><span class="line"><span class="hljs-name">G1</span> X<span class="hljs-number">20</span> Y<span class="hljs-number">20</span> E<span class="hljs-number">1.2</span> F<span class="hljs-number">1200</span>   ; move to <span class="hljs-comment">(20,20)</span> <span class="hljs-keyword">while</span> extrudi<span class="hljs-symbol">ng 1</span><span class="hljs-number">.2</span> mm of filame<span class="hljs-symbol">nt</span><br><span class="line">M106</span> S<span class="hljs-number">255</span>          ; part cooli<span class="hljs-symbol">ng fan to 100</span> <span class="hljs-meta">%</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Resin printers are the exception: they consume a <strong>stack of sliced images</strong> plus per-layer exposure and motion parameters, in vendor container formats (<code>.ctb</code>, <code>.pwmx</code>, <code>.goo</code> and friends) rather than G-code. Some FDM vendors also ship binary G-code containers to cut file size and parse time.</p>
+<p><strong>Firmware</strong> parses the file, does look-ahead motion planning and acceleration limiting, runs the heater control loops and the safety interlocks. Post 01 gives an orientation to the firmware landscape.</p>
+<blockquote>
+<p><strong>Trick:</strong> when something is wrong, identify the stage before you change a setting. Wrong shape → CAD or mesh. Right shape, wrong toolpaths → slicer. Right toolpaths, wrong physical result → printer, material or calibration. Changing slicer settings to fix a mesh problem is the most common wasted afternoon in this hobby.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-Capabilities-limits-and-how-to-buy-a-machine"><a href="#Chapter-7-—-Capabilities-limits-and-how-to-buy-a-machine" class="headerlink" title="Chapter 7 — Capabilities, limits, and how to buy a machine"></a>Chapter 7 — Capabilities, limits, and how to buy a machine</h1>
+<h2 id="Can-reliably-with-a-tuned-machine"><a href="#Can-reliably-with-a-tuned-machine" class="headerlink" title="Can, reliably, with a tuned machine"></a>Can, reliably, with a tuned machine</h2>
+<ul>
+<li>Functional brackets, mounts, enclosures, spacers, adapters and cable management.</li>
+<li>Jigs and fixtures — arguably the single highest-value application, because a fixture only has to be right once.</li>
+<li>Replacement parts for things that are otherwise scrap: knobs, clips, feet, gears in low-load applications.</li>
+<li>Prototypes for form, fit and ergonomics, same day.</li>
+<li>Geometry that cannot be machined: internal channels, lattices, captive assemblies, print-in-place mechanisms.</li>
+<li>Short-run production of tens of parts, where tooling would never pay for itself.</li>
+</ul>
+<h2 id="Cannot-or-not-without-much-more-work-than-expected"><a href="#Cannot-or-not-without-much-more-work-than-expected" class="headerlink" title="Cannot, or not without much more work than expected"></a>Cannot, or not without much more work than expected</h2>
+<ul>
+<li><strong>Hold a tolerance out of the box.</strong> Dimensional accuracy is achievable, but it is an outcome of calibration and compensation, not a default. Post 05.</li>
+<li><strong>Survive heat.</strong> PLA loses stiffness not far above room temperature and creeps under sustained load; a PLA part in a parked car or clamped under permanent tension is a slow failure. Material choice fixes this; post 04.</li>
+<li><strong>Be watertight or pressure-tight by default.</strong> Achievable with wall-count, material and sealing strategy, but never assume it.</li>
+<li><strong>Be food-safe.</strong> Layer crevices harbour bacteria, and neither the filament additives nor the brass nozzle are automatically food-contact rated. Treat &quot;food safe&quot; as an engineering claim requiring evidence.</li>
+<li><strong>Be optically clear.</strong> &quot;Transparent&quot; filaments give translucent parts with visible layer structure without significant post-processing.</li>
+<li><strong>Print large engineering-plastic parts without warping.</strong> ABS, ASA, PC and nylon shrink as they cool; large flat parts in these need an enclosure and good design, and sometimes still fail.</li>
+<li><strong>Beat injection moulding on cost at volume.</strong> At a few hundred identical parts, run the numbers again.</li>
+<li><strong>Run unattended without thought.</strong> Mains-powered heaters and a moving machine deserve a smoke alarm in the room, thermal-runaway protection enabled in firmware, and a hard look at anything you are tempted to leave running overnight.</li>
+</ul>
+<h2 id="Buying-criteria-not-model-names"><a href="#Buying-criteria-not-model-names" class="headerlink" title="Buying criteria, not model names"></a>Buying criteria, not model names</h2>
+<p>Specific model recommendations date within months. Criteria do not. Score candidates against these:</p>
+<ol>
+<li><strong>Build volume you actually need.</strong> Most parts most people print fit in a 200 mm cube. Paying for a larger machine you use twice is a worse deal than paying for a better small one.</li>
+<li><strong>Enclosure — required or not?</strong> If ABS, ASA, PC or nylon are on the roadmap, an enclosure is close to mandatory. If it is PLA and PETG only, an enclosure is a nice-to-have that mostly buys quiet.</li>
+<li><strong>Hotend class and maximum temperature.</strong> All-metal and a genuine 280–300 °C capability keep engineering materials available. PTFE-lined caps you around 240–250 °C.</li>
+<li><strong>Extruder architecture.</strong> Direct drive if TPU or fine retraction control matters; either is fine otherwise.</li>
+<li><strong>Motion system.</strong> CoreXY if speed and tall parts matter; bedslinger if simplicity, serviceability and price matter.</li>
+<li><strong>Bed levelling and probe type.</strong> Some form of automatic mesh probing is close to standard now; what varies is probe technology and whether the machine can also <em>tram</em> the bed physically. Post 01 covers what auto-levelling does and does not fix.</li>
+<li><strong>Firmware and profile openness.</strong> Can you flash your own firmware? Are slicer profiles open and editable? Can you use a third-party slicer? A closed ecosystem is convenient right up to the day you need something it does not do.</li>
+<li><strong>Consumables lock-in.</strong> Does it require proprietary filament, proprietary build plates, or a cloud account to print? Check whether local printing works with no network.</li>
+<li><strong>Spare parts and documentation.</strong> Can you buy a nozzle, a hotend, a belt, a mainboard? Is there a wiring diagram? This is what separates a five-year machine from a two-year one.</li>
+<li><strong>Community size.</strong> The practical value of a large user base is that your specific failure has already been diagnosed by someone, in public, with photos.</li>
+<li><strong>Safety features.</strong> Thermal runaway protection, sane mains wiring for a heated bed, a thermistor that is mechanically captive.</li>
+<li><strong>Total cost.</strong> Add spare nozzles, extra build plates, filament, a dry box, and — for resin — gloves, IPA, a wash/cure station and ventilation. Resin's sticker price is the smaller half of its cost.</li>
+</ol>
+<blockquote>
+<p><strong>Common pitfall:</strong> buying for the maximum-speed number in the marketing material. Maximum speed is quoted at a flow rate and a quality level nobody prints at. The number that predicts your experience is <em>reliable</em> volumetric flow with the material you actually use, and no vendor prints that on the box.</p>
+</blockquote>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Classify-five-parts"><a href="#Exercise-1-—-Classify-five-parts" class="headerlink" title="Exercise 1 — Classify five parts"></a>Exercise 1 — Classify five parts</h2>
+<p>For each, decide whether you would print it (and by which process), machine it, or buy it, and give the deciding reason: (a) an M4 bolt, (b) a bracket holding a camera at 37° to a desk edge, (c) a chess piece with fine surface detail, (d) a gear that will run continuously under load, (e) a replacement drawer runner clip.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="text"><span class="line">(a) M4 bolt        → BUY. Threads under load, isotropy required, costs pennies.</span><br><span class="line">(b) 37° bracket    → PRINT FDM. Quantity one, arbitrary angle is free, low load.</span><br><span class="line">(c) chess piece    → PRINT RESIN. Detail is the whole point; strength is irrelevant.</span><br><span class="line">(d) loaded gear    → BUY, or MACHINE, or SLS via a bureau. Continuous load plus</span><br><span class="line">                     wear plus fatigue is where FDM anisotropy bites hardest.</span><br><span class="line">(e) drawer clip    → PRINT FDM, in a tough material (PETG/ABS/nylon), oriented so</span><br><span class="line">                     the snap-fit flexes along layers rather than across them.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-Compute-the-flow-ceiling"><a href="#Exercise-2-—-Compute-the-flow-ceiling" class="headerlink" title="Exercise 2 — Compute the flow ceiling"></a>Exercise 2 — Compute the flow ceiling</h2>
+<p>Your profile uses 0.45 mm extrusion width and 0.24 mm layer height. Compute the volumetric flow demanded at 80, 150 and 250 mm/s. Then state, in one sentence, what you would need to <em>measure</em> before believing that any of these is achievable on your machine.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="text"><span class="line">flow = width × height × speed</span><br><span class="line"> </span><br><span class="line"> 80 mm/s : 0.45 × 0.24 ×  80 =  8.64 mm³/s</span><br><span class="line">150 mm/s : 0.45 × 0.24 × 150 = 16.2  mm³/s</span><br><span class="line">250 mm/s : 0.45 × 0.24 × 250 = 27.0  mm³/s</span><br><span class="line"> </span><br><span class="line">You would need to measure the maximum volumetric flow your hotend sustains</span><br><span class="line">with THIS filament at THIS nozzle temperature, using a flow-ramp test print</span><br><span class="line">(post 01) — because the ceiling belongs to the material-and-hotend pair, not</span><br><span class="line">to the printer.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-3-—-Predict-the-failure-direction"><a href="#Exercise-3-—-Predict-the-failure-direction" class="headerlink" title="Exercise 3 — Predict the failure direction"></a>Exercise 3 — Predict the failure direction</h2>
+<p>A hook is printed lying flat on the bed, so the layers are horizontal planes and the hook's curve lies in the XY plane. A bag is hung from it. Sketch (or describe) where and how it fails. Then describe an orientation that fixes it and say what that orientation costs.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="text"><span class="line">Lying flat, the load pulls the hook open in-plane, so the stress runs ALONG</span><br><span class="line">the roads — this orientation is actually the strong one for a hook, and it is</span><br><span class="line">the classic exception that proves you must reason rather than memorise.</span><br><span class="line"> </span><br><span class="line">The failure case is the opposite: printing the hook STANDING UP, with layers</span><br><span class="line">perpendicular to the plane of the curve. Then the bending load at the root</span><br><span class="line">peels layer from layer, and it snaps cleanly along a single layer line at the</span><br><span class="line">point of maximum bending moment — the inside root of the hook.</span><br><span class="line"> </span><br><span class="line">Fix: print it flat (layers in the plane of the hook).</span><br><span class="line">Cost: the flat orientation needs a larger bed footprint, and the top and</span><br><span class="line">bottom faces get the flat, dull surface finish while the curve gets stepped</span><br><span class="line">edges. Support may be needed if the hook has any out-of-plane feature.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-4-—-Read-the-G-code"><a href="#Exercise-4-—-Read-the-G-code" class="headerlink" title="Exercise 4 — Read the G-code"></a>Exercise 4 — Read the G-code</h2>
+<p>Take the G-code snippet in Chapter 6 and answer: which line would cause the printer to pause and wait, which line commands material to be deposited, and how much filament (in millimetres of filament, not of travel) does that line deposit?</p>
+<h2 id="Exercise-5-—-Export-tolerance-experiment"><a href="#Exercise-5-—-Export-tolerance-experiment" class="headerlink" title="Exercise 5 — Export tolerance experiment"></a>Exercise 5 — Export tolerance experiment</h2>
+<p>Export the same 20 mm-diameter cylinder from your CAD tool three times at coarse, default and fine tessellation settings. Open all three in a slicer, zoom to the top face, and describe the difference. Record the file sizes. Decide which setting you will use as your default and write down why.</p>
+<h2 id="Exercise-6-—-Build-a-buying-scorecard"><a href="#Exercise-6-—-Build-a-buying-scorecard" class="headerlink" title="Exercise 6 — Build a buying scorecard"></a>Exercise 6 — Build a buying scorecard</h2>
+<p>Take the twelve buying criteria in Chapter 7, weight each 1–3 for your own situation, and score two real printers you can currently buy. If the winner surprises you, examine which weighting drove it — that weighting is the real decision.</p>
+<h2 id="Exercise-7-—-Resin-safety-audit"><a href="#Exercise-7-—-Resin-safety-audit" class="headerlink" title="Exercise 7 — Resin safety audit"></a>Exercise 7 — Resin safety audit</h2>
+<p>Whether or not you own a resin printer, write the plan you would need before the first print: where the machine goes, how the space is ventilated, where the gloves and eye protection live, where washing happens, where contaminated IPA is stored, and how waste gets cured and disposed of under your local rules. If any line is blank, that is the line that will cause the problem.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Process family for detail</td>
+<td>Resin MSLA</td>
+</tr>
+<tr>
+<td>Process family for functional plastic parts</td>
+<td>FDM, or SLS via a bureau</td>
+</tr>
+<tr>
+<td>The real speed limit</td>
+<td>volumetric flow in mm³/s, not mm/s</td>
+</tr>
+<tr>
+<td>Volumetric flow formula</td>
+<td><code>width × layer height × speed</code></td>
+</tr>
+<tr>
+<td>Why layers bond</td>
+<td>polymer chain interdiffusion across the interface</td>
+</tr>
+<tr>
+<td>Lever that improves layer bonding</td>
+<td>higher nozzle temperature, less cooling, enclosure</td>
+</tr>
+<tr>
+<td>Lever that improves overhangs and detail</td>
+<td>more cooling — the direct trade against the line above</td>
+</tr>
+<tr>
+<td>Weakest direction of an FDM part</td>
+<td>Z, across the layers</td>
+</tr>
+<tr>
+<td>Nozzle for abrasive (CF/GF/glow) filament</td>
+<td>hardened steel or carbide — brass wears out fast</td>
+</tr>
+<tr>
+<td>PTFE-lined hotend ceiling</td>
+<td>roughly 240–250 °C</td>
+</tr>
+<tr>
+<td>Bowden vs direct drive</td>
+<td>acceleration vs extrusion control</td>
+</tr>
+<tr>
+<td>Bedslinger weakness</td>
+<td>moving mass grows with the part → ringing on tall prints</td>
+</tr>
+<tr>
+<td>CoreXY strength</td>
+<td>constant low moving mass → higher usable acceleration</td>
+</tr>
+<tr>
+<td>Fix for ringing</td>
+<td>input shaping, with the resonance <em>measured</em> on your machine</td>
+</tr>
+<tr>
+<td>Preferred mesh format</td>
+<td>3MF over STL (units, colours, materials, validity)</td>
+</tr>
+<tr>
+<td>Resin gloves</td>
+<td>nitrile, never latex</td>
+</tr>
+<tr>
+<td>Resin on skin</td>
+<td>soap and warm water, never solvent</td>
+</tr>
+<tr>
+<td>Resin waste</td>
+<td>cure to solid under UV, then dispose per local rules</td>
+</tr>
+<tr>
+<td>Pipeline</td>
+<td>CAD → mesh/3MF → slicer → G-code → firmware → part</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 01 puts a real part on the bed. It covers the first-layer doctrine — bed tramming, the nozzle-to-bed gap, Z-offset and mesh levelling — then the full calibration sequence in the order that actually works: extruder rotation distance, temperature tower, flow, retraction, pressure advance, maximum volumetric flow and cooling, each as a procedure with a measurement you take yourself. It closes with a failure-to-cause table for the problems that show up in the first week.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.iso.org/standard/74514.html" target="_blank" rel="noopener external nofollow noreferrer">ISO/ASTM 52900 — Additive manufacturing, general principles, terminology</a> — the standard that defines the process-category vocabulary used throughout this course.</li>
+<li><a href="https://reprap.org/wiki/G-code" target="_blank" rel="noopener external nofollow noreferrer">RepRap wiki — G-code</a> — the community reference for what each G-code command means across firmwares.</li>
+<li><a href="https://marlinfw.org/docs/" target="_blank" rel="noopener external nofollow noreferrer">Marlin firmware documentation</a> — G-code reference and configuration.</li>
+<li><a href="https://www.klipper3d.org/" target="_blank" rel="noopener external nofollow noreferrer">Klipper documentation</a> — including <a href="https://www.klipper3d.org/Rotation_Distance.html" target="_blank" rel="noopener external nofollow noreferrer">Rotation distance</a> and the input-shaping and pressure-advance guides used later in this series.</li>
+<li><a href="https://help.prusa3d.com/" target="_blank" rel="noopener external nofollow noreferrer">PrusaSlicer knowledge base</a> — one of the better-written vendor documentation sets, and largely applicable to PrusaSlicer forks.</li>
+<li><a href="https://github.com/OrcaSlicer/OrcaSlicer/wiki/Calibration" target="_blank" rel="noopener external nofollow noreferrer">OrcaSlicer calibration wiki</a> — documented, repeatable calibration test procedures.</li>
+<li><a href="https://ellis3dp.com/Print-Tuning-Guide/" target="_blank" rel="noopener external nofollow noreferrer">Ellis' Print Tuning Guide</a> — the most careful community-maintained tuning methodology available.</li>
+<li>R. P. Wool and K. M. O'Connor, &quot;A theory of crack healing in polymers&quot;, <em>Journal of Applied Physics</em> 52, 5953 (1981) — the interdiffusion/healing model underlying layer adhesion.</li>
+<li><a href="https://radtech.org/safe-handling-of-3d-printing-resins/" target="_blank" rel="noopener external nofollow noreferrer">RadTech — Safe handling of 3D printing resins</a> — industry association guidance on photopolymer handling and PPE.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a cross-section diagram of the hotend melt zone; a photographed comparison of in-plane versus interlayer fracture surfaces; a worked cost model comparing print, machine and buy at quantities 1, 50 and 5000.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"3D Printing Course — 00 · How 3D Printing Works\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"3D Printing Course — 00 · How 3D Printing Works"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-15T02:15:04.000Z","title":"Created 2026-08-15 10:15:04","children":"2026-08-15"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-15T02:15:04.000Z","title":"Updated 2026-08-15 10:15:04","children":"2026-08-15"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Engineering",{"className":"post-meta-categories","href":"/blog/categories/Engineering/","children":"Engineering"}]],[["$","span","sep-3D Printing",{"children":" > "}],["$","a","3D Printing",{"className":"post-meta-categories","href":"/blog/categories/3D-Printing/","children":"3D Printing"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"3D Printing Course — 00 · How 3D Printing Works","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/15/print3d_00_how_it_works/","children":"https://invokfung.github.io/blog/2026/08/15/print3d_00_how_it_works/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","3D Printing",{"className":"post-meta__tags","href":"/blog/tags/3D-Printing/","children":"3D Printing"}],["$","a","Manufacturing",{"className":"post-meta__tags","href":"/blog/tags/Manufacturing/","children":"Manufacturing"}],["$","a","FDM",{"className":"post-meta__tags","href":"/blog/tags/FDM/","children":"FDM"}],["$","a","Resin",{"className":"post-meta__tags","href":"/blog/tags/Resin/","children":"Resin"}],["$","a","Hardware",{"className":"post-meta__tags","href":"/blog/tags/Hardware/","children":"Hardware"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","print3d_01_first_print_calibration",{"children":["$","a",null,{"href":"/blog/2026/08/21/print3d_01_first_print_calibration/","title":"3D Printing Course — 01 · First Print and Calibration","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-21</div><div class=\"title\">3D Printing Course — 01 · First Print and Calibration</div></div>"}}]}],["$","div","print3d_02_slicing_in_depth",{"children":["$","a",null,{"href":"/blog/2026/08/26/print3d_02_slicing_in_depth/","title":"3D Printing Course — 02 · Slicing in Depth","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-26</div><div class=\"title\">3D Printing Course — 02 · Slicing in Depth</div></div>"}}]}],["$","div","print3d_03_orientation_supports_dfm",{"children":["$","a",null,{"href":"/blog/2026/09/01/print3d_03_orientation_supports_dfm/","title":"3D Printing Course — 03 · Orientation, Supports and Design for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-01</div><div class=\"title\">3D Printing Course — 03 · Orientation, Supports and Design for Printing</div></div>"}}]}],["$","div","print3d_04_materials",{"children":["$","a",null,{"href":"/blog/2026/09/06/print3d_04_materials/","title":"3D Printing Course — 04 · Materials","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-06</div><div class=\"title\">3D Printing Course — 04 · Materials</div></div>"}}]}],["$","div","print3d_05_accuracy_tolerances",{"children":["$","a",null,{"href":"/blog/2026/09/12/print3d_05_accuracy_tolerances/","title":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-12</div><div class=\"title\">3D Printing Course — 05 · Dimensional Accuracy and Tolerances</div></div>"}}]}],["$","div","print3d_06_cad_for_printing",{"children":["$","a",null,{"href":"/blog/2026/09/17/print3d_06_cad_for_printing/","title":"3D Printing Course — 06 · CAD for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-17</div><div class=\"title\">3D Printing Course — 06 · CAD for Printing</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Additive-versus-subtractive",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Additive-versus-subtractive","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Additive versus subtractive"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","What-additive-is-genuinely-good-at",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-additive-is-genuinely-good-at","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"What additive is genuinely good at"}]]}],null]}],["$","li","What-subtractive-is-still-better-at",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-subtractive-is-still-better-at","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"What subtractive is still better at"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-The-process-families",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-The-process-families","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — The process families"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","FDM-FFF-—-fused-deposition-modelling",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#FDM-FFF-—-fused-deposition-modelling","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"FDM / FFF — fused deposition modelling"}]]}],null]}],["$","li","Resin-—-SLA-and-MSLA",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Resin-—-SLA-and-MSLA","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Resin — SLA and MSLA"}]]}],null]}],["$","li","SLS-—-selective-laser-sintering",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#SLS-—-selective-laser-sintering","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"SLS — selective laser sintering"}]]}],null]}],["$","li","Metal-processes-—-one-line",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Metal-processes-—-one-line","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"Metal processes — one line"}]]}],null]}],["$","li","Honest-comparison",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Honest-comparison","children":[["$","span",null,{"className":"toc-number","children":"3.5."}]," ",["$","span",null,{"className":"toc-text","children":"Honest comparison"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-The-physics-of-FDM",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-The-physics-of-FDM","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — The physics of FDM"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology-1",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology-1","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","The-filament-is-a-plunger",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-filament-is-a-plunger","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"The filament is a plunger"}]]}],null]}],["$","li","Melting-and-why-volumetric-flow-is-the-real-limit",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Melting-and-why-volumetric-flow-is-the-real-limit","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"Melting, and why volumetric flow is the real limit"}]]}],null]}],["$","li","Layer-bonding-is-polymer-chain-diffusion",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Layer-bonding-is-polymer-chain-diffusion","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"Layer bonding is polymer chain diffusion"}]]}],null]}],["$","li","Anisotropy-stated-properly",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Anisotropy-stated-properly","children":[["$","span",null,{"className":"toc-number","children":"4.5."}]," ",["$","span",null,{"className":"toc-text","children":"Anisotropy, stated properly"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Printer-anatomy",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Printer-anatomy","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Printer anatomy"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-extruder-direct-drive-versus-Bowden",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-extruder-direct-drive-versus-Bowden","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"The extruder: direct drive versus Bowden"}]]}],null]}],["$","li","The-hotend",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-hotend","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"The hotend"}]]}],null]}],["$","li","The-nozzle",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-nozzle","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"The nozzle"}]]}],null]}],["$","li","The-bed-and-adhesion-surfaces",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-bed-and-adhesion-surfaces","children":[["$","span",null,{"className":"toc-number","children":"5.4."}]," ",["$","span",null,{"className":"toc-text","children":"The bed and adhesion surfaces"}]]}],null]}],["$","li","Motion-systems",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Motion-systems","children":[["$","span",null,{"className":"toc-number","children":"5.5."}]," ",["$","span",null,{"className":"toc-text","children":"Motion systems"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-The-resin-process-and-its-safety-requirements",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-The-resin-process-and-its-safety-requirements","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — The resin process, and its safety requirements"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","How-MSLA-actually-works",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#How-MSLA-actually-works","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"How MSLA actually works"}]]}],null]}],["$","li","Lift-and-peel-forces-—-the-real-difficulty",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Lift-and-peel-forces-—-the-real-difficulty","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"Lift and peel forces — the real difficulty"}]]}],null]}],["$","li","Post-processing-is-part-of-the-process-not-an-afterthought",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Post-processing-is-part-of-the-process-not-an-afterthought","children":[["$","span",null,{"className":"toc-number","children":"6.3."}]," ",["$","span",null,{"className":"toc-text","children":"Post-processing is part of the process, not an afterthought"}]]}],null]}],["$","li","Safety-—-the-non-negotiable-part",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Safety-—-the-non-negotiable-part","children":[["$","span",null,{"className":"toc-number","children":"6.4."}]," ",["$","span",null,{"className":"toc-text","children":"Safety — the non-negotiable part"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-The-pipeline-CAD-→-mesh-→-slicer-→-G-code-→-printer",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-The-pipeline-CAD-→-mesh-→-slicer-→-G-code-→-printer","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — The pipeline: CAD → mesh → slicer → G-code → printer"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Stage-by-stage",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Stage-by-stage","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Stage by stage"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Capabilities-limits-and-how-to-buy-a-machine",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Capabilities-limits-and-how-to-buy-a-machine","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Capabilities, limits, and how to buy a machine"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Can-reliably-with-a-tuned-machine",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Can-reliably-with-a-tuned-machine","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Can, reliably, with a tuned machine"}]]}],null]}],["$","li","Cannot-or-not-without-much-more-work-than-expected",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Cannot-or-not-without-much-more-work-than-expected","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"Cannot, or not without much more work than expected"}]]}],null]}],["$","li","Buying-criteria-not-model-names",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Buying-criteria-not-model-names","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"Buying criteria, not model names"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Classify-five-parts",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Classify-five-parts","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Classify five parts"}]]}],null]}],["$","li","Exercise-2-—-Compute-the-flow-ceiling",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Compute-the-flow-ceiling","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Compute the flow ceiling"}]]}],null]}],["$","li","Exercise-3-—-Predict-the-failure-direction",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Predict-the-failure-direction","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Predict the failure direction"}]]}],null]}],["$","li","Exercise-4-—-Read-the-G-code",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Read-the-G-code","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Read the G-code"}]]}],null]}],["$","li","Exercise-5-—-Export-tolerance-experiment",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Export-tolerance-experiment","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Export tolerance experiment"}]]}],null]}],["$","li","Exercise-6-—-Build-a-buying-scorecard",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Build-a-buying-scorecard","children":[["$","span",null,{"className":"toc-number","children":"9.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Build a buying scorecard"}]]}],null]}],["$","li","Exercise-7-—-Resin-safety-audit",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-7-—-Resin-safety-audit","children":[["$","span",null,{"className":"toc-number","children":"9.7."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 7 — Resin safety audit"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"3D Printing Course — 00 · How 3D Printing Works | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Desktop 3D printing looks like a solved problem from the outside: load a file, press print, collect a part. In practice the machine is a small chemica"}],["$","meta","5",{"name":"keywords","content":"3D Printing,Manufacturing,FDM,Resin,Hardware,Course"}],["$","meta","6",{"property":"og:title","content":"3D Printing Course — 00 · How 3D Printing Works"}],["$","meta","7",{"property":"og:description","content":"Desktop 3D printing looks like a solved problem from the outside: load a file, press print, collect a part. In practice the machine is a small chemica"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"3D Printing Course — 00 · How 3D Printing Works"}],["$","meta","11",{"name":"twitter:description","content":"Desktop 3D printing looks like a solved problem from the outside: load a file, press print, collect a part. In practice the machine is a small chemica"}]]
+1:null

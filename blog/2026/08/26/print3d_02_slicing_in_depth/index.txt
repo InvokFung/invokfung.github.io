@@ -1,0 +1,696 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","26","d"]
+7:["slug","print3d_02_slicing_in_depth","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["tSi4Bl_e6QraTpHUkvsOl",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","26","d"],{"children":[["slug","print3d_02_slicing_in_depth","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"26\",\"slug\":\"print3d_02_slicing_in_depth\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","26","d"],{"children":[["slug","print3d_02_slicing_in_depth","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Te326,<p>The slicer is where almost all of your decisions actually live. The printer executes; the slicer decides. Yet most people use it as a box with a &quot;quality&quot; dropdown, which means the interesting settings — the ones that decide whether a part is strong, accurate, fast or pretty — are being chosen by a vendor who has never seen your part. This post opens the box: what the slicer computes, what the G-code it emits actually says, and what each of the two hundred settings is really controlling. The organising principle throughout is that a slicer setting is only worth changing if you can state the physical mechanism it acts through.</p>
+<blockquote>
+<p>Series map: 00 How 3D Printing Works → 01 First Print and Calibration → <strong>02 Slicing in Depth</strong> (this post) → 03 Orientation, Supports and Design for Printing → 04 Materials → 05 Dimensional Accuracy and Tolerances → 06 CAD for Printing → 07 Strength, Failure Modes and Functional Parts.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Describe the slicer's computation from mesh to G-code, stage by stage, and say which stage a given artefact comes from.</li>
+<li>Read G-code fluently enough to find a layer change, a retraction, a temperature command and an extrusion, and to compute how much filament a move deposits.</li>
+<li>Choose layer height with reference to nozzle diameter, and state precisely what layer height does and does not control.</li>
+<li>Explain why extrusion width is decoupled from nozzle diameter, and use that decoupling deliberately.</li>
+<li>Set perimeter count, perimeter order and seam placement from the mechanism rather than from habit.</li>
+<li>Specify solid skins by thickness rather than by layer count.</li>
+<li>Compare infill patterns honestly, separating what is measurable at hobby level from what is not.</li>
+<li>Reason about speed and acceleration well enough to know when a speed setting is not being reached at all.</li>
+<li>Use modifiers, per-region settings and the quality features (ironing, adaptive layers, fuzzy skin, Arachne) for the cases each was built for.</li>
+<li>Maintain a profile discipline that makes a good print reproducible six months later.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-What-a-slicer-actually-computes"><a href="#Chapter-1-—-What-a-slicer-actually-computes" class="headerlink" title="Chapter 1 — What a slicer actually computes"></a>Chapter 1 — What a slicer actually computes</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Mesh</strong> — the triangle soup the slicer receives. Must be <strong>manifold</strong> (watertight, every edge shared by exactly two faces, consistent normals) for slicing to be well defined.</li>
+<li><strong>Layer polygon</strong> — the set of closed 2D contours produced by intersecting the mesh with a horizontal plane at one Z. Outer contours are the part; inner contours are holes.</li>
+<li><strong>Offset (inset)</strong> — shrinking a polygon inward by a fixed distance. Perimeter generation is repeated offsetting.</li>
+<li><strong>Perimeter / wall</strong> — a closed extrusion loop following the layer's contour.</li>
+<li><strong>Skin / solid layer</strong> — fully dense region on a top or bottom surface.</li>
+<li><strong>Sparse infill</strong> — the low-density interior lattice.</li>
+<li><strong>Toolpath</strong> — an ordered sequence of moves with extrusion amounts attached.</li>
+<li><strong>Seam</strong> — the point where a closed perimeter loop starts and ends.</li>
+<li><strong>Extrusion width</strong> — the intended width of one deposited road. A slicer parameter, not a nozzle property.</li>
+</ul>
+<h2 id="The-pipeline"><a href="#The-pipeline" class="headerlink" title="The pipeline"></a>The pipeline</h2>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="text"><span class="line">1  Load mesh          triangles in; validate and repair</span><br><span class="line">                      (non-manifold edges, flipped normals, self-intersections)</span><br><span class="line">2  Transform          orientation, scale, placement on the bed</span><br><span class="line">3  Slice              intersect with a plane at each Z → closed 2D polygons per layer</span><br><span class="line">4  Perimeters         offset each contour inward by ½ width, then by 1 width, ...</span><br><span class="line">5  Region split       remaining interior → sparse infill region</span><br><span class="line">                      minus everything within N layers of a top/bottom face → solid skin</span><br><span class="line">6  Skin detection     boolean of this layer&#x27;s region against the layers above and below</span><br><span class="line">7  Supports           overhang detection → support volume → support toolpaths + interface</span><br><span class="line">8  Ordering           which island first, which loop first, where the seam goes,</span><br><span class="line">                      travel routing, retraction decisions</span><br><span class="line">9  Extrusion amounts  for each path: length × cross-section ÷ filament cross-section</span><br><span class="line">10 Emit               G-code with per-feature speeds, accelerations, fan and temperature</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Two things are worth noticing about this list.</p>
+<p><strong>Step 3 is why mesh quality matters.</strong> A plane–mesh intersection only yields closed loops if the mesh is closed. A hole in the mesh gives an open polyline, which the slicer must guess how to close — and its guess is where the weird stray extrusion in the middle of your part comes from. Fix the model, not the slicer settings.</p>
+<p><strong>Step 5 is why &quot;top layers&quot; behaves unintuitively.</strong> Solid skin is not a property of the top face; it is a boolean result computed per layer. A shallow dome has a top surface at nearly every layer, so it gets skin over a large part of its height, and that is why gently sloped surfaces are slow and material-hungry.</p>
+<h2 id="The-extrusion-amount"><a href="#The-extrusion-amount" class="headerlink" title="The extrusion amount"></a>The extrusion amount</h2>
+<p>For each extrusion path, the slicer computes how many millimetres of <em>filament</em> to feed:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="text"><span class="line">E = (path_length × road_cross_section × flow) / filament_cross_section</span><br><span class="line"> </span><br><span class="line">filament_cross_section = π × (filament_diameter / 2)²</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The road cross-section is where slicers differ slightly. A naive model treats it as a rectangle, <code>width × height</code>. A better one treats it as a rectangle with semicircular ends — the shape a squashed extrudate actually takes:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="text"><span class="line">rectangle model:  A = w × h</span><br><span class="line">stadium model:    A = (w − h) × h + π × (h/2)²</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>For a 0.45 mm wide, 0.20 mm tall road these differ by around 10 %. That difference is real, it is one reason two slicers produce visibly different results from the same settings, and it is exactly the kind of systematic error your flow calibration from post 01 absorbs — which is why flow is calibrated <em>in the slicer you actually use</em>.</p>
+<hr>
+<h1 id="Chapter-2-—-Reading-the-G-code"><a href="#Chapter-2-—-Reading-the-G-code" class="headerlink" title="Chapter 2 — Reading the G-code"></a>Chapter 2 — Reading the G-code</h1>
+<p>G-code is a flat list of commands. There is no loop, no variable, no geometry — every move is spelled out. A 40 MB file is 40 MB of <code>G1</code> lines.</p>
+<h2 id="The-commands-that-matter"><a href="#The-commands-that-matter" class="headerlink" title="The commands that matter"></a>The commands that matter</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>G0</code> / <code>G1</code></td>
+<td>linear move. <code>G0</code> nominally means &quot;rapid, no extrusion&quot;; most printer firmwares treat the two identically, and many slicers emit <code>G1</code> for everything</td>
+</tr>
+<tr>
+<td><code>X Y Z</code></td>
+<td>target coordinates in mm</td>
+</tr>
+<tr>
+<td><code>E</code></td>
+<td>the extruder axis, in <strong>mm of filament</strong> — not mm of travel</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>feedrate in <strong>mm per minute</strong>. Divide by 60 to get the mm/s in your slicer UI</td>
+</tr>
+<tr>
+<td><code>M82</code> / <code>M83</code></td>
+<td>absolute / relative extrusion mode. Relative (<code>M83</code>) is now the common choice</td>
+</tr>
+<tr>
+<td><code>G92 E0</code></td>
+<td>reset the extruder position counter (used by absolute-mode slicers to avoid huge E values)</td>
+</tr>
+<tr>
+<td><code>M104 S&lt;t&gt;</code></td>
+<td>set nozzle temperature and <strong>continue</strong></td>
+</tr>
+<tr>
+<td><code>M109 S&lt;t&gt;</code></td>
+<td>set nozzle temperature and <strong>wait</strong> until reached</td>
+</tr>
+<tr>
+<td><code>M140</code> / <code>M190</code></td>
+<td>same pair for the bed</td>
+</tr>
+<tr>
+<td><code>M106 S&lt;0-255&gt;</code></td>
+<td>part cooling fan speed</td>
+</tr>
+<tr>
+<td><code>M107</code></td>
+<td>fan off</td>
+</tr>
+<tr>
+<td><code>G28</code></td>
+<td>home axes</td>
+</tr>
+<tr>
+<td><code>M204</code></td>
+<td>set acceleration</td>
+</tr>
+<tr>
+<td><code>M900 K&lt;v&gt;</code></td>
+<td>linear advance (Marlin)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="A-layer-change-annotated"><a href="#A-layer-change-annotated" class="headerlink" title="A layer change, annotated"></a>A layer change, annotated</h2>
+<pre><code class="language-gcode"><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="gcode"><span class="line">;LAYER_CHA<span class="hljs-symbol">NGE</span><br><span class="line">;Z:0</span><span class="hljs-number">.60</span></span><br><span class="line">;HEIGHT:<span class="hljs-number">0.2</span></span><br><span class="line"><span class="hljs-name">G1</span> E<span class="hljs-number">-0.80</span> F<span class="hljs-number">2100</span>          ; retract <span class="hljs-number">0.8</span> mm of filame<span class="hljs-symbol">nt at 35</span> mm/s</span><br><span class="line"><span class="hljs-name">G1</span> Z<span class="hljs-number">0.80</span> F<span class="hljs-number">9000</span>           ; Z-hop: lift clear of the part</span><br><span class="line"><span class="hljs-name">G1</span> X<span class="hljs-number">92.412</span> Y<span class="hljs-number">94.107</span> F<span class="hljs-number">9000</span> ; travel — <span class="hljs-symbol">no E word, so nothing is extruded</span><br><span class="line">G1</span> Z<span class="hljs-number">0.60</span> F<span class="hljs-number">9000</span>           ; drop to the <span class="hljs-symbol">new layer height</span><br><span class="line">G1</span> E<span class="hljs-number">0.80</span> F<span class="hljs-number">2100</span>           ; u<span class="hljs-symbol">nretract</span><br><span class="line">;TYPE:External perimeter</span><br><span class="line">G1</span> F<span class="hljs-number">1800</span>                 ; <span class="hljs-number">1800</span> mm/mi<span class="hljs-symbol">n = 30</span> mm/s</span><br><span class="line"><span class="hljs-name">G1</span> X<span class="hljs-number">107.588</span> Y<span class="hljs-number">94.107</span> E<span class="hljs-number">0.5063</span></span><br><span class="line"><span class="hljs-name">G1</span> X<span class="hljs-number">107.588</span> Y<span class="hljs-number">105.893</span> E<span class="hljs-number">0.3931</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Reading it back:</p>
+<ul>
+<li>The <code>;LAYER_CHANGE</code> and <code>;TYPE:</code> lines are <strong>comments</strong>. The printer ignores them; the slicer's preview, and any post-processing script, rely on them entirely. Cura uses <code>;LAYER:n</code> instead — different dialect, same idea.</li>
+<li>The layer change is a Z move surrounded by a retract/unretract pair. That pair is where seam blobs are born.</li>
+<li>The travel move has no <code>E</code> word, so the extruder does not turn.</li>
+<li><code>E0.5063</code> on a 15.176 mm move means 0.5063 mm of 1.75 mm filament was fed over that distance. Working backwards gives the road cross-section, which is how you audit what your slicer is really doing.</li>
+</ul>
+<blockquote>
+<p><strong>Trick:</strong> when a slicer setting does not appear to be doing what you expect, slice a 20 mm cube, open the G-code in a text editor and search for the feature. Five minutes of reading beats an hour of speculation, and G-code cannot lie about what it is going to do.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-Layer-height-and-extrusion-width"><a href="#Chapter-3-—-Layer-height-and-extrusion-width" class="headerlink" title="Chapter 3 — Layer height and extrusion width"></a>Chapter 3 — Layer height and extrusion width</h1>
+<h2 id="Layer-height-versus-nozzle-diameter"><a href="#Layer-height-versus-nozzle-diameter" class="headerlink" title="Layer height versus nozzle diameter"></a>Layer height versus nozzle diameter</h2>
+<p>The widely used rule of thumb is a practical ceiling of roughly <strong>75–80 % of nozzle diameter</strong> — about 0.30–0.32 mm on a 0.4 mm nozzle. It is a rule of thumb, not a physical constant, and it exists for a mechanical reason worth understanding.</p>
+<p>The flat annular face around the nozzle orifice acts as a <strong>shoe</strong>. It rides above the previous layer at the layer height and irons the emerging extrudate down into it, which is what creates the wide contact patch and the pressure that drives interdiffusion (post 00). As layer height approaches nozzle diameter, the shoe stops touching the extrudate at all: material simply falls out of the orifice as a round noodle, keys poorly to the layer below, and stacks unstably.</p>
+<p>Caveats in both directions:</p>
+<ul>
+<li>High-flow hotends and internally-restructured nozzles change the melting side of the problem but not the shoe geometry. Some users run higher ratios successfully; verify on your own machine before designing around it.</li>
+<li>Going very thin has its own floor. Below roughly a quarter of nozzle diameter, small Z errors and bed-mesh residuals become a large fraction of the layer, and print time grows without a proportional gain in quality.</li>
+</ul>
+<h2 id="The-first-layer-exception"><a href="#The-first-layer-exception" class="headerlink" title="The first-layer exception"></a>The first-layer exception</h2>
+<p>The first layer routinely ignores the rule and runs thicker — commonly 0.2–0.3 mm even in fine profiles — for two reasons: a thicker layer swallows small bed irregularities and mesh residuals, and it produces a larger contact patch for adhesion. It is also frequently printed <strong>wider</strong> than other layers for the same reason.</p>
+<h2 id="What-layer-height-does-and-does-not-control"><a href="#What-layer-height-does-and-does-not-control" class="headerlink" title="What layer height does and does not control"></a>What layer height does and does not control</h2>
+<table>
+<thead>
+<tr>
+<th>Layer height controls</th>
+<th>Layer height does <strong>not</strong> control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visible stepping on sloped and curved surfaces</td>
+<td>detail in the XY plane — that is nozzle diameter and extrusion width</td>
+</tr>
+<tr>
+<td>The Z resolution of features (a 0.15 mm step cannot exist in a 0.2 mm layer)</td>
+<td>hole roundness or XY dimensional accuracy</td>
+</tr>
+<tr>
+<td>Print time — roughly inversely, but not exactly</td>
+<td>wall thickness</td>
+</tr>
+<tr>
+<td>The number of layer interfaces per millimetre of height</td>
+<td>whether a part is strong (interface count and interface quality pull in opposite directions; see below)</td>
+</tr>
+<tr>
+<td>Overhang behaviour, indirectly (each layer's unsupported step scales with height)</td>
+<td>support requirement</td>
+</tr>
+</tbody>
+</table>
+<p>On strength, resist the confident claim in either direction. Thinner layers give more interfaces but each one is smaller, cools differently and reheats more often. The published results are material- and geometry-dependent, and the effect is generally much smaller than the effect of orientation (post 03) or of wall count. Spend your attention there instead.</p>
+<h2 id="Extrusion-width-is-not-nozzle-diameter"><a href="#Extrusion-width-is-not-nozzle-diameter" class="headerlink" title="Extrusion width is not nozzle diameter"></a>Extrusion width is not nozzle diameter</h2>
+<p>This surprises people, and it is the single most useful conceptual unlock in the slicer.</p>
+<p>The width of a deposited road is set by <strong>how much material you push per unit of travel and how high the nozzle is</strong>, not by the orifice diameter. Push more, and the extrudate spreads sideways under the shoe until it is wider. Push less, and it is narrower. The orifice only limits how fast you can push it.</p>
+<p>Usable range is roughly <strong>100–200 % of nozzle diameter</strong>. Below about 100 %, the road becomes unreliable and the nozzle drags. Above about 200 %, the extrudate escapes past the shoe's control and the surface becomes lumpy.</p>
+<p>How to use the decoupling deliberately:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Typical choice</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First layer</td>
+<td>wider than default</td>
+<td>more contact patch, better adhesion, more tolerance of bed variation</td>
+</tr>
+<tr>
+<td>External perimeter</td>
+<td>at or slightly below nozzle diameter</td>
+<td>narrower roads follow corners more tightly and give better dimensional control on the visible surface</td>
+</tr>
+<tr>
+<td>Internal perimeters</td>
+<td>above nozzle diameter (often ~110–120 %)</td>
+<td>fewer, fatter roads for the same wall thickness — faster and fewer internal interfaces</td>
+</tr>
+<tr>
+<td>Solid infill</td>
+<td>above nozzle diameter</td>
+<td>fewer passes to fill an area</td>
+</tr>
+<tr>
+<td>Sparse infill</td>
+<td>wider still</td>
+<td>infill is invisible; width buys speed directly</td>
+</tr>
+<tr>
+<td>Support interface</td>
+<td>narrower</td>
+<td>finer surface where the part rests on it</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> setting an extrusion width and forgetting that flow calibration (post 01) targets a <em>specific</em> width. Change your external perimeter width and your measured wall thickness changes, which looks like a flow error and is not.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-Walls-count-order-seams-gap-fill"><a href="#Chapter-4-—-Walls-count-order-seams-gap-fill" class="headerlink" title="Chapter 4 — Walls: count, order, seams, gap fill"></a>Chapter 4 — Walls: count, order, seams, gap fill</h1>
+<h2 id="Perimeter-count"><a href="#Perimeter-count" class="headerlink" title="Perimeter count"></a>Perimeter count</h2>
+<p>Wall thickness ≈ perimeter count × extrusion width. Two perimeters at 0.45 mm gives a 0.9 mm wall; four gives 1.8 mm.</p>
+<p>Perimeter count is usually a better investment than infill density for stiffness and strength, and the reason is elementary beam mechanics: in bending, material's contribution to stiffness scales with the square of its distance from the neutral axis. The walls are the material furthest from the neutral axis. Infill in the middle of the section contributes comparatively little. Going from two walls to four on a bracket typically does more than doubling infill, and costs less time and material.</p>
+<p>Typical practice: 2 walls for decorative parts, 3–4 for general functional parts, 5+ for parts under real load or that need to be watertight or tapped.</p>
+<h2 id="Perimeter-order"><a href="#Perimeter-order" class="headerlink" title="Perimeter order"></a>Perimeter order</h2>
+<p>Two orders, both defensible:</p>
+<p><strong>Inner first, external last</strong> (the usual default). The external perimeter is laid against already-solid inner walls, so it has something to lean on, and nothing is printed afterwards to disturb it. Generally better surface quality and better behaviour on overhanging walls.</p>
+<p><strong>External first.</strong> The outer wall is laid before any inner wall can push it outward, which can improve dimensional accuracy on some machines. Costs surface quality and overhang reliability.</p>
+<p>Slicers in the PrusaSlicer lineage expose this as an &quot;external perimeters first&quot; toggle, and some offer a hybrid ordering. The honest guidance is that the effect size is machine-dependent: print a test part both ways, measure it with calipers <em>and</em> look at it, and decide for your machine. Post 05 returns to the accuracy side of this.</p>
+<h2 id="Seams"><a href="#Seams" class="headerlink" title="Seams"></a>Seams</h2>
+<p>Every closed loop must start and stop somewhere. At that point the extruder transitions from zero pressure to steady pressure and back, and the result is a small defect — a blob, a notch, or both — stacked on every layer.</p>
+<p>Seam placement strategies:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nearest</strong></td>
+<td>seam goes wherever travel is shortest; fastest, scattered, unpredictable</td>
+</tr>
+<tr>
+<td><strong>Aligned</strong></td>
+<td>seams stack into a single vertical line; ugly but <em>predictable</em>, and you can rotate it to the back</td>
+</tr>
+<tr>
+<td><strong>Rear</strong></td>
+<td>forced to the back of the plate</td>
+</tr>
+<tr>
+<td><strong>Random</strong></td>
+<td>scattered; hides the line at the cost of scattering small defects across the whole surface</td>
+</tr>
+<tr>
+<td><strong>Painted</strong></td>
+<td>you choose, per region, in the slicer — put it inside a corner where geometry hides it</td>
+</tr>
+</tbody>
+</table>
+<p>Mechanically, a stack of aligned seams is a line of small stress concentrations and reduced wall continuity, so on a pressure-bearing or load-bearing part, do not let the seam line up with the region of highest stress.</p>
+<p>Reducing the seam artefact itself: tune pressure advance (post 01), and use the slicer's <strong>wipe</strong> and <strong>coasting</strong> options, which stop extruding slightly before the end of the loop and move the nozzle to smear the remainder. Some slicers additionally offer a <strong>scarf</strong> or ramped seam that spreads the transition over a Z ramp instead of a single point; where available, it is the most effective option for a visible cylindrical surface.</p>
+<h2 id="Gap-fill"><a href="#Gap-fill" class="headerlink" title="Gap fill"></a>Gap fill</h2>
+<p>When a region is too narrow for another whole perimeter but too wide to ignore, classic perimeter generation leaves a gap and fills it with a short, thin extrusion. Gap fill is a common source of noise, vibration, blobs and stuttering motion, because it is many tiny moves with rapid flow changes.</p>
+<p>The modern answer is variable-width extrusion (Chapter 6), which mostly eliminates the problem by widening the perimeters themselves to close the gap.</p>
+<hr>
+<h1 id="Chapter-5-—-Skins-and-infill"><a href="#Chapter-5-—-Skins-and-infill" class="headerlink" title="Chapter 5 — Skins and infill"></a>Chapter 5 — Skins and infill</h1>
+<h2 id="The-thickness-not-count-rule"><a href="#The-thickness-not-count-rule" class="headerlink" title="The thickness-not-count rule"></a>The thickness-not-count rule</h2>
+<p>Solid layers are specified in most slicers as a <em>count</em>, which is a trap. What matters physically is total <strong>thickness</strong> of solid material.</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="text"><span class="line">5 top layers × 0.20 mm = 1.00 mm   ← fine</span><br><span class="line">5 top layers × 0.12 mm = 0.60 mm   ← the same profile, now too thin</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Halving your layer height silently halves your top skin. The result is <strong>pillowing</strong>: the top surface sags into the infill voids and shows holes and bumps.</p>
+<p>The rule: <strong>specify a thickness, then derive the count.</strong> Around 0.8–1.2 mm of top solid is a sensible general target; more if infill density is low, because thin skin has to bridge longer unsupported spans. Modern slicers have a &quot;minimum shell thickness&quot; setting that enforces this automatically — turn it on. Bottom skins can be thinner, because the build plate supports them.</p>
+<p><strong>Monotonic ordering</strong> for the top solid layer is worth enabling where available: it forces solid infill lines to be laid in a consistent direction so each new road overlaps the previous one the same way, producing a visually uniform surface instead of a patchwork.</p>
+<h2 id="Infill-patterns-honestly"><a href="#Infill-patterns-honestly" class="headerlink" title="Infill patterns, honestly"></a>Infill patterns, honestly</h2>
+<p>First, what is <em>reliably measurable</em> at hobby level and what is not.</p>
+<p><strong>Measurable, repeatable, and worth optimising:</strong> estimated and actual print time, material mass (weigh the part), whether the pattern self-intersects within a layer (which makes the nozzle run over its own deposits, adding noise and artefacts), and whether the pattern is 2D (identical every layer) or 3D (varies with Z, giving out-of-plane structure).</p>
+<p><strong>Not reliably measurable without a test rig, standardised coupons and repeated samples:</strong> the small percentage strength differences between patterns that appear in blog comparisons. These figures are usually a single specimen, in a single load direction, on a single machine, and they do not generalise. Treat them as anecdote.</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Structure</th>
+<th>Print speed</th>
+<th>Material at equal density</th>
+<th>Honest strength note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rectilinear / lines</strong></td>
+<td>2D, alternating direction per layer</td>
+<td>fastest</td>
+<td>lowest</td>
+<td>no intersections within a layer; layers only touch at crossings, so poor out-of-plane contribution</td>
+</tr>
+<tr>
+<td><strong>Grid</strong></td>
+<td>2D, both directions in the same layer</td>
+<td>fast</td>
+<td>low</td>
+<td>nozzle crosses its own deposits at every intersection — can cause knocking and artefacts at high density</td>
+</tr>
+<tr>
+<td><strong>Triangles</strong></td>
+<td>2D, three directions</td>
+<td>moderate</td>
+<td>moderate</td>
+<td>good in-plane isotropy; more material at nodes</td>
+</tr>
+<tr>
+<td><strong>Honeycomb</strong></td>
+<td>2D hexagonal</td>
+<td>slow — many direction changes</td>
+<td>moderate</td>
+<td>high in-plane stiffness for its mass, paid for in time</td>
+</tr>
+<tr>
+<td><strong>Cubic / adaptive cubic</strong></td>
+<td>3D, stacked cubes on a corner</td>
+<td>moderate</td>
+<td>moderate; adaptive saves a lot</td>
+<td>contributes in all three axes; adaptive subdivides only near surfaces</td>
+</tr>
+<tr>
+<td><strong>Gyroid</strong></td>
+<td>3D, smooth continuous non-intersecting surface</td>
+<td>moderate</td>
+<td>moderate</td>
+<td>near-isotropic by construction; smooth continuous motion; the common default for functional parts, and good for flexibles because it compresses evenly</td>
+</tr>
+<tr>
+<td><strong>Lightning</strong></td>
+<td>tree-like, grows only where a top surface needs support</td>
+<td>very fast</td>
+<td>very low</td>
+<td>contributes essentially nothing structurally — that is the point. For decorative parts and hollow bodies</td>
+</tr>
+<tr>
+<td><strong>Concentric</strong></td>
+<td>follows the contour</td>
+<td>moderate</td>
+<td>moderate</td>
+<td>used for flexible parts, where following the wall keeps the part uniformly compliant</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Density"><a href="#Density" class="headerlink" title="Density"></a>Density</h2>
+<p>Strength does not scale linearly with infill density; the returns diminish, and the time cost does not. The efficient move is almost always: <strong>add walls before you add infill</strong>, for the second-moment-of-area reason in Chapter 4. Typical practice:</p>
+<ul>
+<li>Decorative: 5–15 %, or lightning.</li>
+<li>General functional: 15–25 % with 3–4 walls.</li>
+<li>Loaded parts: 30–50 % with 5+ walls — and read post 07 before assuming that is enough.</li>
+<li>100 %: rarely correct. Over-packing solid infill causes over-extrusion, dimensional growth and worse surfaces. If you need a solid part, increase walls until they meet in the middle.</li>
+</ul>
+<hr>
+<h1 id="Chapter-6-—-Motion-and-the-quality-features"><a href="#Chapter-6-—-Motion-and-the-quality-features" class="headerlink" title="Chapter 6 — Motion, and the quality features"></a>Chapter 6 — Motion, and the quality features</h1>
+<h2 id="Per-feature-speeds"><a href="#Per-feature-speeds" class="headerlink" title="Per-feature speeds"></a>Per-feature speeds</h2>
+<p>Slicers set a different speed for external perimeters, internal perimeters, solid infill, sparse infill, top solid, bridges, gap fill and travel. The important asymmetry:</p>
+<p><strong>Outer-wall speed dominates surface quality, and costs very little total time.</strong> The external perimeter is the only extrusion anyone sees; it is where ringing lands, where pressure-advance error is visible, and where corner rounding shows. It is also a small fraction of total extruded volume on most parts. Halving outer-wall speed typically adds a few percent to print time and produces a visibly better part. This is the best quality-per-minute trade in the whole slicer.</p>
+<p>Conversely, sparse infill speed is nearly free to raise — until it hits the volumetric flow ceiling you measured in post 01.</p>
+<h2 id="Acceleration-is-the-real-print-time-variable"><a href="#Acceleration-is-the-real-print-time-variable" class="headerlink" title="Acceleration is the real print-time variable"></a>Acceleration is the real print-time variable</h2>
+<p>On small parts the toolhead rarely reaches its commanded speed at all. The distance needed to accelerate from rest to speed <code>v</code> at acceleration <code>a</code> is:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="text"><span class="line">d = v² / (2a)</span><br><span class="line"> </span><br><span class="line">a = 4000 mm/s², v = 250 mm/s  →  d = 62500 / 8000 = 7.81 mm</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Accelerating <em>and</em> decelerating therefore needs about 15.6 mm of travel. A 10 mm wall segment never sees 250 mm/s. Its peak speed is <code>√(a × d/2)</code> = <code>√(4000 × 5)</code> ≈ 141 mm/s, and its average is lower still.</p>
+<p>Consequences:</p>
+<ul>
+<li>Raising the speed setting on a part made of short segments changes nothing. Raising acceleration does.</li>
+<li>Raising acceleration excites resonance, which is what input shaping (post 01) exists to manage. The two settings are coupled.</li>
+<li><strong>Jerk</strong> (Marlin's classic model), <strong>junction deviation</strong> and Klipper's <strong>square corner velocity</strong> all describe the same thing: how much speed is retained through a direction change. Raising it speeds up detailed parts and adds ringing.</li>
+<li><strong>Minimum layer time</strong> / &quot;slow down for short layers&quot; forces small cross-sections to take long enough to solidify. It is a cooling setting wearing a speed setting's clothes.</li>
+</ul>
+<h2 id="Cooling"><a href="#Cooling" class="headerlink" title="Cooling"></a>Cooling</h2>
+<p>Set from material, as measured in post 01. Briefly: PLA wants a lot, PETG a moderate amount, ABS/ASA very little in an enclosure, nylon and PC little. Cooling buys overhang and detail quality and pays in layer adhesion; that trade never goes away.</p>
+<h2 id="The-quality-features"><a href="#The-quality-features" class="headerlink" title="The quality features"></a>The quality features</h2>
+<p><strong>Ironing.</strong> After the top solid layer is complete, the nozzle sweeps the surface again at very low flow, remelting and smoothing it. Produces a genuinely flat, near-glossy top face. Costs time proportional to top-surface area, and can push a bead of material to the edges if flow is too high. Only applies to flat, horizontal top surfaces.</p>
+<p><strong>Adaptive layer height.</strong> Layer height varies with local surface slope — thin layers where the surface is shallow (where stepping is visible), thick where it is vertical (where stepping is invisible). Excellent on organic and curved shapes, useless on prisms, and it complicates any setting that is expressed per layer. Some slicers additionally let you paint a height range by hand.</p>
+<p><strong>Fuzzy skin.</strong> The outer wall is deliberately jittered in XY by a small random amount, giving a matte, textured surface. It hides layer lines, hides seams, and improves grip on handles. Costs a little time and a little dimensional precision on the fuzzed surface — never fuzz a mating face. Better slicers let you paint it onto selected surfaces only.</p>
+<p><strong>Variable-width extrusion (Arachne).</strong> The perimeter generator that, instead of laying fixed-width loops and dumping the remainder into gap fill, varies each loop's width to fill the available space exactly. Thin walls, tapering ribs, embossed text and small features all improve substantially. It originated in the Cura engine and became the default perimeter generator in PrusaSlicer from version 2.5; OrcaSlicer and Bambu Studio, both of PrusaSlicer lineage, carry it too. The classic fixed-width generator remains selectable and is occasionally preferred when you want perfectly uniform road width for its own sake.</p>
+<h2 id="Modifiers-and-per-region-settings"><a href="#Modifiers-and-per-region-settings" class="headerlink" title="Modifiers and per-region settings"></a>Modifiers and per-region settings</h2>
+<p>The most under-used capability in every modern slicer. You are not limited to one setting per part.</p>
+<ul>
+<li><strong>Per-object settings</strong> — different infill, walls or supports for each object on the plate.</li>
+<li><strong>Height ranges</strong> — different settings for a Z band, e.g. more solid layers around a threaded region.</li>
+<li><strong>Modifier meshes</strong> — drop a box or cylinder into the scene and any setting inside its volume is overridden. The canonical use is 100 % infill only inside a screw boss, or extra walls only around a bearing seat.</li>
+<li><strong>Negative volumes</strong> — subtract geometry at slice time without touching the CAD model. Useful for a quick clearance test.</li>
+<li><strong>Support blockers and enforcers</strong> — force supports on or off in a region rather than fighting the global threshold.</li>
+<li><strong>Painted seams and painted supports</strong> — direct manual control on the model surface.</li>
+</ul>
+<blockquote>
+<p><strong>Trick:</strong> a modifier mesh is the correct answer almost every time you are tempted to raise a global setting for the sake of one feature. Raising global infill from 20 % to 60 % because one boss needs to be solid costs you the whole part's print time; a modifier box costs you the boss.</p>
+</blockquote>
+<h2 id="Brims-rafts-and-skirts"><a href="#Brims-rafts-and-skirts" class="headerlink" title="Brims, rafts and skirts"></a>Brims, rafts and skirts</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>What it is</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Skirt</strong></td>
+<td>one or more loops around the part, not touching it</td>
+<td>always — it purges the nozzle and gives you a free look at the first layer before the part starts</td>
+</tr>
+<tr>
+<td><strong>Brim</strong></td>
+<td>a flat collar attached to the part's first layer</td>
+<td>small footprints, tall thin parts, warp-prone materials, sharp corners that lift. Costs cleanup and can mar the bottom edge</td>
+</tr>
+<tr>
+<td><strong>Raft</strong></td>
+<td>a full printed platform under the part</td>
+<td>a genuinely bad bed surface, materials that will not adhere directly, or parts whose footprint is nearly nothing. Costs material, time and the bottom-face finish</td>
+</tr>
+</tbody>
+</table>
+<p>&quot;Mouse ear&quot; brims — small discs added only at the corners that lift — give most of the benefit of a full brim with a fraction of the cleanup, and are available as a brim type or can be added as small modifier objects.</p>
+<hr>
+<h1 id="Chapter-7-—-Profiles-slicers-and-estimates"><a href="#Chapter-7-—-Profiles-slicers-and-estimates" class="headerlink" title="Chapter 7 — Profiles, slicers, and estimates"></a>Chapter 7 — Profiles, slicers, and estimates</h1>
+<h2 id="Profile-discipline"><a href="#Profile-discipline" class="headerlink" title="Profile discipline"></a>Profile discipline</h2>
+<p>The rule: <strong>start from the vendor profile, change one variable, keep notes.</strong></p>
+<ol>
+<li>Begin from the printer manufacturer's profile for your machine and a material profile for your filament. These encode machine limits you may not know about.</li>
+<li>Change one thing. Print the test that isolates it. Record the result.</li>
+<li>Save as a new named profile whose name says what changed — <code>PETG 0.2 walls4 outer25</code> beats <code>PETG final v3 REAL final</code>.</li>
+<li>Export the project as a <strong>3MF with settings embedded</strong> for anything you might reprint. A bare STL plus a memory of what you did is not reproducible; a project file is.</li>
+<li>Keep the same notebook you started in post 01. Slicer changes and machine changes belong in the same log because they interact.</li>
+</ol>
+<h2 id="The-slicer-landscape-by-capability"><a href="#The-slicer-landscape-by-capability" class="headerlink" title="The slicer landscape, by capability"></a>The slicer landscape, by capability</h2>
+<p>All four of the mainstream desktop slicers below share substantial code lineage, so most setting names transfer between them.</p>
+<table>
+<thead>
+<tr>
+<th>Slicer</th>
+<th>Lineage</th>
+<th>Notable capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PrusaSlicer</strong></td>
+<td>descends from Slic3r; open source</td>
+<td>strong documentation; Arachne default from 2.5; organic supports from 2.6; modifier meshes, height ranges, negative volumes; wide community printer profiles</td>
+</tr>
+<tr>
+<td><strong>OrcaSlicer</strong></td>
+<td>fork in the PrusaSlicer/Bambu Studio lineage; open source</td>
+<td>built-in guided calibration suite (flow, pressure advance, temperature, maximum volumetric speed, retraction); broad printer support; fast adoption of new features</td>
+</tr>
+<tr>
+<td><strong>Cura</strong></td>
+<td>Ultimaker; open source</td>
+<td>very large printer profile library; plugin marketplace; the engine where tree supports, lightning infill and the Arachne generator originated</td>
+</tr>
+<tr>
+<td><strong>Bambu Studio</strong></td>
+<td>PrusaSlicer lineage</td>
+<td>tight integration with its own hardware, multi-material and multi-plate workflow</td>
+</tr>
+</tbody>
+</table>
+<p>Choose on the capability you need — the calibration suite, the profile library, the plugin, the hardware integration — rather than on identity. Being able to read a setting in one and find it in another is a more valuable skill than loyalty to any of them.</p>
+<h2 id="Print-time-and-material-cost-estimates"><a href="#Print-time-and-material-cost-estimates" class="headerlink" title="Print time and material cost estimates"></a>Print time and material cost estimates</h2>
+<p><strong>Print time.</strong> The slicer estimates by simulating its own motion model: every move, with acceleration and jerk applied. It is a good model, and the error comes from the places where the printer does not behave like the model — firmware acceleration limits that clamp the slicer's requests, input shaping smoothing that changes effective acceleration, per-move minimum times, and heating and homing at the start.</p>
+<p>The right response is calibration rather than complaint:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="text"><span class="line">correction_factor = actual_print_time / estimated_print_time</span><br><span class="line"> </span><br><span class="line">Time three real prints of different sizes, compute the ratio, and apply it</span><br><span class="line">mentally from then on. It is usually stable for a given printer + profile.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>If the ratio is wildly different for small versus large parts, the discrepancy is in acceleration handling, not in the estimator.</p>
+<p><strong>Material.</strong> The slicer reports extruded filament length and usually a mass. Mass comes from <code>volume × density</code>, and the density value lives in the filament profile. For unfilled PLA and PETG the default is usually close; for carbon- or glass-filled, metal-filled, wood-filled or foaming materials it can be significantly off. Verify once per material by weighing a printed part on a kitchen scale and comparing.</p>
+<p><strong>Cost.</strong> The naive figure is <code>mass(g) / 1000 × spool_price</code>. The realistic figure adds electricity, amortised machine and consumable cost (nozzles, plates, belts), and — the term everyone omits — a <strong>failure allowance</strong>. If one print in eight fails at 70 % completion, your effective material cost is meaningfully higher than the slicer's number, and your effective time cost is much higher.</p>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Compute-an-extrusion"><a href="#Exercise-1-—-Compute-an-extrusion" class="headerlink" title="Exercise 1 — Compute an extrusion"></a>Exercise 1 — Compute an extrusion</h2>
+<p>A move is 15.20 mm long, extrusion width 0.45 mm, layer height 0.20 mm, filament 1.75 mm, flow 1.00. Compute the <code>E</code> value under both the rectangle and stadium cross-section models, and state the percentage difference.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span></pre></td><td class="code"><pre><code class="text"><span class="line">filament cross-section = π × (1.75/2)² = π × 0.765625 = 2.4053 mm²</span><br><span class="line"> </span><br><span class="line">Rectangle model:</span><br><span class="line">  A = 0.45 × 0.20                      = 0.0900 mm²</span><br><span class="line">  V = 0.0900 × 15.20                   = 1.3680 mm³</span><br><span class="line">  E = 1.3680 / 2.4053                  = 0.5687 mm</span><br><span class="line"> </span><br><span class="line">Stadium model:</span><br><span class="line">  A = (0.45 − 0.20) × 0.20 + π(0.10)²</span><br><span class="line">    = 0.0500 + 0.031416                = 0.0814 mm²</span><br><span class="line">  V = 0.0814 × 15.20                   = 1.2375 mm³</span><br><span class="line">  E = 1.2375 / 2.4053                  = 0.5145 mm</span><br><span class="line"> </span><br><span class="line">Difference: (0.5687 − 0.5145) / 0.5687 = 9.5 %</span><br><span class="line"> </span><br><span class="line">This is why a flow multiplier calibrated in one slicer should not be carried</span><br><span class="line">into another without re-measuring.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-Does-the-move-reach-its-speed"><a href="#Exercise-2-—-Does-the-move-reach-its-speed" class="headerlink" title="Exercise 2 — Does the move reach its speed?"></a>Exercise 2 — Does the move reach its speed?</h2>
+<p>Your profile requests 200 mm/s for internal perimeters, and your printer's acceleration is set to 3000 mm/s². Compute the distance needed to accelerate to 200 mm/s, and the peak speed actually reached on a 12 mm straight segment.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="text"><span class="line">Accel distance to 200 mm/s:</span><br><span class="line">  d = v² / (2a) = 200² / (2 × 3000) = 40000 / 6000 = 6.67 mm</span><br><span class="line">  accelerate + decelerate = 13.3 mm  →  a 12 mm segment never reaches 200 mm/s.</span><br><span class="line"> </span><br><span class="line">Peak on a 12 mm segment (accelerate for half, decelerate for half):</span><br><span class="line">  v_peak = √(a × d/2) = √(3000 × 6) = √18000 = 134 mm/s</span><br><span class="line"> </span><br><span class="line">So the commanded 200 mm/s is fiction for this feature. Raising the speed</span><br><span class="line">setting will do nothing; raising acceleration (and then re-checking ringing</span><br><span class="line">and input shaping) is the lever that works.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-3-—-Fix-a-silently-broken-profile"><a href="#Exercise-3-—-Fix-a-silently-broken-profile" class="headerlink" title="Exercise 3 — Fix a silently broken profile"></a>Exercise 3 — Fix a silently broken profile</h2>
+<p>You take a working 0.20 mm profile with 5 top layers and 5 bottom layers, and switch to a 0.12 mm layer height for a finer finish. The top surfaces now show holes and dimpling. Diagnose it and give the corrected values.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span></pre></td><td class="code"><pre><code class="text"><span class="line">Diagnosis: pillowing. Top solid THICKNESS collapsed when layer height</span><br><span class="line">changed, because the profile specifies a COUNT.</span><br><span class="line"> </span><br><span class="line">  before: 5 × 0.20 = 1.00 mm of solid top</span><br><span class="line">  after:  5 × 0.12 = 0.60 mm of solid top</span><br><span class="line"> </span><br><span class="line">0.60 mm of skin cannot reliably bridge the sparse infill voids beneath it,</span><br><span class="line">so it sags into them.</span><br><span class="line"> </span><br><span class="line">Fix: restore the thickness.</span><br><span class="line">  required count = 1.00 / 0.12 = 8.33  →  9 top layers (1.08 mm)</span><br><span class="line"> </span><br><span class="line">Better fix: enable the slicer&#x27;s minimum shell thickness setting (set to</span><br><span class="line">1.0 mm top / 0.6 mm bottom) so the count is derived automatically and this</span><br><span class="line">class of bug cannot recur when layer height changes again.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-4-—-Walls-versus-infill"><a href="#Exercise-4-—-Walls-versus-infill" class="headerlink" title="Exercise 4 — Walls versus infill"></a>Exercise 4 — Walls versus infill</h2>
+<p>Slice the same bracket twice: (a) 2 walls with 40 % gyroid infill, (b) 4 walls with 15 % gyroid infill. Record estimated print time and estimated mass for each. Then state which you would choose for a load-bearing application and justify it in terms of where the material sits relative to the neutral axis.</p>
+<h2 id="Exercise-5-—-Audit-your-own-G-code"><a href="#Exercise-5-—-Audit-your-own-G-code" class="headerlink" title="Exercise 5 — Audit your own G-code"></a>Exercise 5 — Audit your own G-code</h2>
+<p>Slice a 20 mm cube. In the G-code, find: the first <code>M109</code>, the first layer change, one retraction, one external-perimeter extrusion, and the fan command. For the external-perimeter move you found, compute the road cross-section from the move length and <code>E</code> value, and compare it to your configured extrusion width and layer height.</p>
+<h2 id="Exercise-6-—-Modifier-mesh"><a href="#Exercise-6-—-Modifier-mesh" class="headerlink" title="Exercise 6 — Modifier mesh"></a>Exercise 6 — Modifier mesh</h2>
+<p>Take any part with a screw boss or a bearing seat. Instead of raising global infill, add a modifier box around that feature only, set to 100 % infill and extra walls. Compare estimated print time to the global-setting version. Record the difference.</p>
+<h2 id="Exercise-7-—-Calibrate-your-time-estimate"><a href="#Exercise-7-—-Calibrate-your-time-estimate" class="headerlink" title="Exercise 7 — Calibrate your time estimate"></a>Exercise 7 — Calibrate your time estimate</h2>
+<p>Time three real prints of clearly different sizes with a stopwatch or the printer's own log. Compute <code>actual / estimated</code> for each. Report whether the ratio is consistent, and if it is not, state which direction the discrepancy runs with part size and what that implies about acceleration handling.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slicer pipeline</td>
+<td>mesh → layer polygons → perimeters → skin/infill split → supports → toolpath ordering → G-code</td>
+</tr>
+<tr>
+<td>Extrusion amount</td>
+<td><code>E = length × road_area × flow / (π × (d/2)²)</code></td>
+</tr>
+<tr>
+<td><code>F</code> in G-code</td>
+<td>mm per <strong>minute</strong> — divide by 60 for the slicer's mm/s</td>
+</tr>
+<tr>
+<td>Layer-height ceiling</td>
+<td>rule of thumb, roughly 75–80 % of nozzle diameter</td>
+</tr>
+<tr>
+<td>Extrusion width range</td>
+<td>roughly 100–200 % of nozzle diameter; it is a slicer choice, not a nozzle property</td>
+</tr>
+<tr>
+<td>Stiffness per gram</td>
+<td>add walls before adding infill (distance from the neutral axis, squared)</td>
+</tr>
+<tr>
+<td>Perimeter order</td>
+<td>inner-first for surface and overhangs; outer-first can help accuracy — test on your machine</td>
+</tr>
+<tr>
+<td>Seam control</td>
+<td>aligned + rotate to the back, or paint it into a corner; tune pressure advance and enable wipe</td>
+</tr>
+<tr>
+<td>Solid skin</td>
+<td>specify <strong>thickness</strong> (~0.8–1.2 mm top), derive the count; enable minimum shell thickness</td>
+</tr>
+<tr>
+<td>Pillowing</td>
+<td>too little top skin thickness over sparse infill</td>
+</tr>
+<tr>
+<td>Infill default for functional parts</td>
+<td>gyroid, 15–25 %, with 3–4 walls</td>
+</tr>
+<tr>
+<td>Infill for decorative parts</td>
+<td>lightning</td>
+</tr>
+<tr>
+<td>100 % infill</td>
+<td>almost never the right answer — add walls instead</td>
+</tr>
+<tr>
+<td>Best quality-per-minute setting</td>
+<td>slow the external perimeter</td>
+</tr>
+<tr>
+<td>Print time on small parts</td>
+<td>governed by acceleration, not by the speed setting</td>
+</tr>
+<tr>
+<td>Accel distance</td>
+<td><code>d = v² / (2a)</code>; peak on a short move is <code>√(a × d/2)</code></td>
+</tr>
+<tr>
+<td>Feature for one region only</td>
+<td>modifier mesh, not a global setting change</td>
+</tr>
+<tr>
+<td>Always enable</td>
+<td>a skirt — a free preview of the first layer</td>
+</tr>
+<tr>
+<td>Reproducibility</td>
+<td>export the project as 3MF with settings embedded</td>
+</tr>
+<tr>
+<td>Estimate trust</td>
+<td>calibrate <code>actual / estimated</code> on three prints and apply the ratio</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 03 covers the highest-leverage decision in the whole process: <strong>orientation</strong>. One choice simultaneously sets the strength axis, the surface quality, the support volume, the print time and the dimensional accuracy — and those objectives conflict, so the post works a single real part through the trade-off explicitly. It then covers overhangs and the 45-degree guideline stated properly, bridging, vertical versus horizontal holes, support types and the Z-gap that decides whether supports snap off or fuse on, and design techniques that avoid supports altogether.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://help.prusa3d.com/" target="_blank" rel="noopener external nofollow noreferrer">PrusaSlicer knowledge base</a> — including the <a href="https://help.prusa3d.com/article/arachne-perimeter-generator_352769" target="_blank" rel="noopener external nofollow noreferrer">Arachne perimeter generator</a> and <a href="https://help.prusa3d.com/article/organic-supports_480131" target="_blank" rel="noopener external nofollow noreferrer">Organic supports</a> articles.</li>
+<li><a href="https://github.com/OrcaSlicer/OrcaSlicer/wiki" target="_blank" rel="noopener external nofollow noreferrer">OrcaSlicer wiki</a> — setting-by-setting documentation and the calibration suite.</li>
+<li><a href="https://support.makerbot.com/s/ultimaker-cura" target="_blank" rel="noopener external nofollow noreferrer">Ultimaker Cura documentation</a> — settings reference for the Cura engine.</li>
+<li><a href="https://reprap.org/wiki/G-code" target="_blank" rel="noopener external nofollow noreferrer">RepRap wiki — G-code</a> — the cross-firmware command reference.</li>
+<li><a href="https://marlinfw.org/docs/" target="_blank" rel="noopener external nofollow noreferrer">Marlin firmware documentation</a> — authoritative behaviour for <code>M104</code>, <code>M109</code>, <code>M106</code>, <code>M204</code>, <code>M900</code> and the rest.</li>
+<li><a href="https://www.klipper3d.org/" target="_blank" rel="noopener external nofollow noreferrer">Klipper documentation</a> — kinematics, acceleration, square corner velocity and pressure advance.</li>
+<li><a href="https://ellis3dp.com/Print-Tuning-Guide/" target="_blank" rel="noopener external nofollow noreferrer">Ellis' Print Tuning Guide</a> — practical, well-reasoned coverage of extrusion width, flow and speed interactions.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: annotated slicer preview screenshots for each infill pattern; a side-by-side seam comparison across placement strategies; a worked modifier-mesh example with before/after time and mass figures.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"3D Printing Course — 02 · Slicing in Depth\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"3D Printing Course — 02 · Slicing in Depth"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-26T04:46:11.000Z","title":"Created 2026-08-26 12:46:11","children":"2026-08-26"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-26T04:46:11.000Z","title":"Updated 2026-08-26 12:46:11","children":"2026-08-26"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Engineering",{"className":"post-meta-categories","href":"/blog/categories/Engineering/","children":"Engineering"}]],[["$","span","sep-3D Printing",{"children":" > "}],["$","a","3D Printing",{"className":"post-meta-categories","href":"/blog/categories/3D-Printing/","children":"3D Printing"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"3D Printing Course — 02 · Slicing in Depth","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/26/print3d_02_slicing_in_depth/","children":"https://invokfung.github.io/blog/2026/08/26/print3d_02_slicing_in_depth/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","3D Printing",{"className":"post-meta__tags","href":"/blog/tags/3D-Printing/","children":"3D Printing"}],["$","a","FDM",{"className":"post-meta__tags","href":"/blog/tags/FDM/","children":"FDM"}],["$","a","Slicing",{"className":"post-meta__tags","href":"/blog/tags/Slicing/","children":"Slicing"}],["$","a","G-code",{"className":"post-meta__tags","href":"/blog/tags/G-code/","children":"G-code"}],["$","a","Toolpaths",{"className":"post-meta__tags","href":"/blog/tags/Toolpaths/","children":"Toolpaths"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/28/dev_09_versions_dependencies/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 09 · Versions and Dependencies — SemVer, Lockfiles, Safe Upgrades and Supply Chain</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/25/dev_08_floating_point/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","print3d_00_how_it_works",{"children":["$","a",null,{"href":"/blog/2026/08/15/print3d_00_how_it_works/","title":"3D Printing Course — 00 · How 3D Printing Works","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-15</div><div class=\"title\">3D Printing Course — 00 · How 3D Printing Works</div></div>"}}]}],["$","div","print3d_01_first_print_calibration",{"children":["$","a",null,{"href":"/blog/2026/08/21/print3d_01_first_print_calibration/","title":"3D Printing Course — 01 · First Print and Calibration","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-21</div><div class=\"title\">3D Printing Course — 01 · First Print and Calibration</div></div>"}}]}],["$","div","print3d_03_orientation_supports_dfm",{"children":["$","a",null,{"href":"/blog/2026/09/01/print3d_03_orientation_supports_dfm/","title":"3D Printing Course — 03 · Orientation, Supports and Design for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-01</div><div class=\"title\">3D Printing Course — 03 · Orientation, Supports and Design for Printing</div></div>"}}]}],["$","div","print3d_04_materials",{"children":["$","a",null,{"href":"/blog/2026/09/06/print3d_04_materials/","title":"3D Printing Course — 04 · Materials","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-06</div><div class=\"title\">3D Printing Course — 04 · Materials</div></div>"}}]}],["$","div","print3d_05_accuracy_tolerances",{"children":["$","a",null,{"href":"/blog/2026/09/12/print3d_05_accuracy_tolerances/","title":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-12</div><div class=\"title\">3D Printing Course — 05 · Dimensional Accuracy and Tolerances</div></div>"}}]}],["$","div","print3d_06_cad_for_printing",{"children":["$","a",null,{"href":"/blog/2026/09/17/print3d_06_cad_for_printing/","title":"3D Printing Course — 06 · CAD for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-17</div><div class=\"title\">3D Printing Course — 06 · CAD for Printing</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-What-a-slicer-actually-computes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-What-a-slicer-actually-computes","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — What a slicer actually computes"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","The-pipeline",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-pipeline","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"The pipeline"}]]}],null]}],["$","li","The-extrusion-amount",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-extrusion-amount","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"The extrusion amount"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Reading-the-G-code",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Reading-the-G-code","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Reading the G-code"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-commands-that-matter",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-commands-that-matter","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"The commands that matter"}]]}],null]}],["$","li","A-layer-change-annotated",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#A-layer-change-annotated","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"A layer change, annotated"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Layer-height-and-extrusion-width",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Layer-height-and-extrusion-width","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Layer height and extrusion width"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Layer-height-versus-nozzle-diameter",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Layer-height-versus-nozzle-diameter","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Layer height versus nozzle diameter"}]]}],null]}],["$","li","The-first-layer-exception",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-first-layer-exception","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"The first-layer exception"}]]}],null]}],["$","li","What-layer-height-does-and-does-not-control",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-layer-height-does-and-does-not-control","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"What layer height does and does not control"}]]}],null]}],["$","li","Extrusion-width-is-not-nozzle-diameter",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Extrusion-width-is-not-nozzle-diameter","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"Extrusion width is not nozzle diameter"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Walls-count-order-seams-gap-fill",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Walls-count-order-seams-gap-fill","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Walls: count, order, seams, gap fill"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Perimeter-count",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Perimeter-count","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Perimeter count"}]]}],null]}],["$","li","Perimeter-order",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Perimeter-order","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Perimeter order"}]]}],null]}],["$","li","Seams",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Seams","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"Seams"}]]}],null]}],["$","li","Gap-fill",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Gap-fill","children":[["$","span",null,{"className":"toc-number","children":"5.4."}]," ",["$","span",null,{"className":"toc-text","children":"Gap fill"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Skins-and-infill",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Skins-and-infill","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Skins and infill"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-thickness-not-count-rule",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-thickness-not-count-rule","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"The thickness-not-count rule"}]]}],null]}],["$","li","Infill-patterns-honestly",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Infill-patterns-honestly","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"Infill patterns, honestly"}]]}],null]}],["$","li","Density",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Density","children":[["$","span",null,{"className":"toc-number","children":"6.3."}]," ",["$","span",null,{"className":"toc-text","children":"Density"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Motion-and-the-quality-features",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Motion-and-the-quality-features","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Motion, and the quality features"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Per-feature-speeds",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Per-feature-speeds","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Per-feature speeds"}]]}],null]}],["$","li","Acceleration-is-the-real-print-time-variable",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Acceleration-is-the-real-print-time-variable","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"Acceleration is the real print-time variable"}]]}],null]}],["$","li","Cooling",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Cooling","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"Cooling"}]]}],null]}],["$","li","The-quality-features",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-quality-features","children":[["$","span",null,{"className":"toc-number","children":"7.4."}]," ",["$","span",null,{"className":"toc-text","children":"The quality features"}]]}],null]}],["$","li","Modifiers-and-per-region-settings",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Modifiers-and-per-region-settings","children":[["$","span",null,{"className":"toc-number","children":"7.5."}]," ",["$","span",null,{"className":"toc-text","children":"Modifiers and per-region settings"}]]}],null]}],["$","li","Brims-rafts-and-skirts",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Brims-rafts-and-skirts","children":[["$","span",null,{"className":"toc-number","children":"7.6."}]," ",["$","span",null,{"className":"toc-text","children":"Brims, rafts and skirts"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Profiles-slicers-and-estimates",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Profiles-slicers-and-estimates","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Profiles, slicers, and estimates"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Profile-discipline",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Profile-discipline","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Profile discipline"}]]}],null]}],["$","li","The-slicer-landscape-by-capability",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-slicer-landscape-by-capability","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"The slicer landscape, by capability"}]]}],null]}],["$","li","Print-time-and-material-cost-estimates",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Print-time-and-material-cost-estimates","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"Print time and material cost estimates"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Compute-an-extrusion",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Compute-an-extrusion","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Compute an extrusion"}]]}],null]}],["$","li","Exercise-2-—-Does-the-move-reach-its-speed",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Does-the-move-reach-its-speed","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Does the move reach its speed?"}]]}],null]}],["$","li","Exercise-3-—-Fix-a-silently-broken-profile",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Fix-a-silently-broken-profile","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Fix a silently broken profile"}]]}],null]}],["$","li","Exercise-4-—-Walls-versus-infill",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Walls-versus-infill","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Walls versus infill"}]]}],null]}],["$","li","Exercise-5-—-Audit-your-own-G-code",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Audit-your-own-G-code","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Audit your own G-code"}]]}],null]}],["$","li","Exercise-6-—-Modifier-mesh",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Modifier-mesh","children":[["$","span",null,{"className":"toc-number","children":"9.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Modifier mesh"}]]}],null]}],["$","li","Exercise-7-—-Calibrate-your-time-estimate",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-7-—-Calibrate-your-time-estimate","children":[["$","span",null,{"className":"toc-number","children":"9.7."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 7 — Calibrate your time estimate"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"3D Printing Course — 02 · Slicing in Depth | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"The slicer is where almost all of your decisions actually live. The printer executes; the slicer decides. Yet most people use it as a box with a \"qual"}],["$","meta","5",{"name":"keywords","content":"3D Printing,FDM,Slicing,G-code,Toolpaths,Course"}],["$","meta","6",{"property":"og:title","content":"3D Printing Course — 02 · Slicing in Depth"}],["$","meta","7",{"property":"og:description","content":"The slicer is where almost all of your decisions actually live. The printer executes; the slicer decides. Yet most people use it as a box with a \"qual"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"3D Printing Course — 02 · Slicing in Depth"}],["$","meta","11",{"name":"twitter:description","content":"The slicer is where almost all of your decisions actually live. The printer executes; the slicer decides. Yet most people use it as a box with a \"qual"}]]
+1:null

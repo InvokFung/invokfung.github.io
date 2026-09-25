@@ -1,0 +1,880 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+4:["year","2026","d"]
+5:["month","09","d"]
+6:["day","23","d"]
+7:["slug","print3d_07_strength_functional_parts","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["tSi4Bl_e6QraTpHUkvsOl",[[["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","23","d"],{"children":[["slug","print3d_07_strength_functional_parts","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"09\",\"day\":\"23\",\"slug\":\"print3d_07_strength_functional_parts\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","23","d"],{"children":[["slug","print3d_07_strength_functional_parts","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T12d8c,<p>The base course closes where it should: with the question of whether the part actually works. Posts 00–03 covered the process, Post 04 the materials, Post 05 whether the part is the right size, and Post 06 how to model it. This post covers whether it survives being used. That requires a working vocabulary of mechanics, an honest treatment of the anisotropy that makes a printed part fundamentally different from a moulded one, a correctly-ordered list of which print settings actually matter for strength, a catalogue mapping observed failures to their causes, and — the section most 3D printing material omits — a clear-eyed account of when the right answer is not to print the part at all.</p>
+<blockquote>
+<p>Series map: 00 How 3D Printing Works → 01 First Print and Calibration → 02 Slicing in Depth → 03 Orientation, Supports and Design for Printing → 04 Materials → 05 Dimensional Accuracy and Tolerances → 06 CAD for Printing → <strong>07 Strength, Failure Modes and Functional Parts</strong> (this post).</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Use the mechanics vocabulary correctly: stress, strain, stiffness, strength, toughness, yield, ultimate, ductile, brittle, fatigue, creep.</li>
+<li>Explain why creep — not strength — is what quietly destroys loaded PLA parts, and design around it.</li>
+<li>Describe printed-part anisotropy correctly, and run a test that measures <em>your</em> Z-strength ratio rather than quoting someone else's number.</li>
+<li>Rank the print-profile levers on strength in the correct order, and explain why infill density sits far lower than beginners assume.</li>
+<li>Argue the perimeters-versus-infill case from where bending stress actually acts.</li>
+<li>Design out stress concentrations, and use fillets as the cheapest strength upgrade available.</li>
+<li>Diagnose a broken part from the fracture surface and map symptom to root cause to fix.</li>
+<li>Build a repeatable comparative test rig and test the actual part rather than a coupon.</li>
+<li>Decide when machining, moulding, sheet metal, or simply buying the part is the better answer.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-The-mechanics-you-actually-need"><a href="#Chapter-1-—-The-mechanics-you-actually-need" class="headerlink" title="Chapter 1 — The mechanics you actually need"></a>Chapter 1 — The mechanics you actually need</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Stress (σ)</strong> — force per unit area, in pascals (N/m²) or MPa. What the material experiences, independent of the part's size.</li>
+<li><strong>Strain (ε)</strong> — deformation per unit length, dimensionless. How much the material stretched relative to its original length.</li>
+<li><strong>Stiffness (elastic modulus, E)</strong> — the slope of stress against strain in the elastic region. <em>How much it deflects under load.</em> A stiff material barely moves.</li>
+<li><strong>Strength</strong> — the stress at which the material fails, whether by yielding or by fracturing. <em>How much load it takes before something goes wrong.</em> Stiffness and strength are independent properties: a material can be stiff and weak (glass), or compliant and strong (many elastomers).</li>
+<li><strong>Yield strength</strong> — the stress at which deformation stops being elastic and becomes permanent. Past yield the part is bent, even after the load comes off.</li>
+<li><strong>Ultimate tensile strength (UTS)</strong> — the maximum stress the material carries before fracture.</li>
+<li><strong>Toughness</strong> — the energy absorbed before fracture; the area under the stress-strain curve. <em>How much abuse it takes before breaking.</em> A tough material bends, absorbs and survives.</li>
+<li><strong>Ductile failure</strong> — the material yields, stretches, necks and then tears. It gives warning. PETG, ABS, nylon, TPU.</li>
+<li><strong>Brittle failure</strong> — the material fractures suddenly at or near its elastic limit, with little permanent deformation and no warning. PLA, standard photopolymer resin, and most fibre-filled composites.</li>
+<li><strong>Fatigue</strong> — failure from repeated cycles of load well below the static strength. A part that survives a 100 N pull once may fail after 10,000 cycles at 30 N.</li>
+<li><strong>Creep</strong> — slow, continuous deformation under a <em>constant</em> load over time, without any increase in load. It accelerates dramatically as temperature approaches Tg.</li>
+<li><strong>Stress concentration</strong> — a local multiplication of stress at a geometric discontinuity (a sharp internal corner, a notch, a hole edge, a sudden change of section).</li>
+<li><strong>Neutral axis</strong> — in a beam under bending, the surface where the stress is zero; material on one side is in tension, on the other in compression.</li>
+</ul>
+<h2 id="The-distinction-beginners-get-wrong-most-often"><a href="#The-distinction-beginners-get-wrong-most-often" class="headerlink" title="The distinction beginners get wrong most often"></a>The distinction beginners get wrong most often</h2>
+<p><strong>Stiff ≠ strong ≠ tough.</strong> These are three different questions and different materials win each:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Property</th>
+<th>The common filament that wins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How much does it bend under load?</td>
+<td>stiffness</td>
+<td>PLA is the stiffest common filament — genuinely</td>
+</tr>
+<tr>
+<td>How much load until it breaks?</td>
+<td>strength</td>
+<td>depends heavily on direction; PLA is competitive <em>in-plane</em></td>
+</tr>
+<tr>
+<td>Does it survive being dropped or shocked?</td>
+<td>toughness</td>
+<td>PLA is <strong>poor</strong>; PETG, ABS, PC and nylon are far better</td>
+</tr>
+</tbody>
+</table>
+<p>This is why PLA feels great on the bench (stiff, holds shape, precise) and disappoints in service (brittle, notch-sensitive, creeps). It is not a bad material. It is a material with a specific and well-known profile.</p>
+<h2 id="Creep-—-the-quiet-killer"><a href="#Creep-—-the-quiet-killer" class="headerlink" title="Creep — the quiet killer"></a>Creep — the quiet killer</h2>
+<p>Creep deserves its own treatment because it is the failure mode most often misdiagnosed as &quot;the print was weak&quot;.</p>
+<p>Polymers are <strong>viscoelastic</strong>: under sustained load they behave partly like solids and partly like very stiff liquids. Hold a constant load on a printed bracket and it will slowly, continuously deform. Not fail — deform. Over hours, days, months, depending on the material, the stress level and the temperature.</p>
+<p>The temperature dependence is the sting. Creep rate rises sharply as the material approaches Tg (Post 04). A PLA part at 20 °C creeps slowly enough to be irrelevant for many uses. The <em>same</em> part at 50 °C — a closed car in summer, a sunlit window sill, a shelf above a radiator, next to a stepper motor — is within striking distance of PLA's Tg of roughly 55–65 °C, and creeps fast enough to be visible in a day.</p>
+<p>The canonical failure: a PLA phone mount, wall hook, or shelf bracket that was perfectly fine for weeks and one day is simply drooping. Nothing broke. It flowed.</p>
+<p>Design responses, in order of effectiveness:</p>
+<ol>
+<li><strong>Don't use PLA for a sustained load in a warm place.</strong> PETG is a large improvement, ABS/ASA more, PC more again, and a fibre-filled grade of any of them better still.</li>
+<li><strong>Reduce the stress.</strong> Creep rate is strongly stress-dependent; halving the stress helps disproportionately. Thicker sections, more perimeters, a shorter moment arm.</li>
+<li><strong>Put the load into compression rather than bending.</strong> Compressive creep in a well-supported column is far less troublesome than bending creep in a cantilever.</li>
+<li><strong>Carry the sustained load in metal.</strong> A printed body with a steel screw, rod or bracket taking the actual load is a robust pattern.</li>
+<li><strong>Anneal</strong> (Post 04) if the part is PLA and must be warm — increased crystallinity meaningfully raises creep resistance. Then re-check the fit, because the dimensions changed.</li>
+</ol>
+<blockquote>
+<p><strong>Watch out:</strong> static strength tests tell you nothing about creep. Hanging a weight on a bracket for thirty seconds and declaring it strong is not a test of a load it will carry for a year. If the part carries a sustained load, the only meaningful test is a sustained one.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-Anisotropy-honestly"><a href="#Chapter-2-—-Anisotropy-honestly" class="headerlink" title="Chapter 2 — Anisotropy, honestly"></a>Chapter 2 — Anisotropy, honestly</h1>
+<h2 id="What-is-actually-going-on"><a href="#What-is-actually-going-on" class="headerlink" title="What is actually going on"></a>What is actually going on</h2>
+<p>A moulded part is essentially <strong>isotropic</strong>: the polymer is a continuous mass and its properties are the same in every direction. A printed part is not. It is a stack of extruded beads bonded to their neighbours, and the bond between beads is not the same as the bulk material.</p>
+<ul>
+<li><strong>In-plane (X/Y)</strong>, along and across the extrusion direction, load is carried mostly by continuous polymer within beads and by side-to-side welds between adjacent beads laid down while both were hot.</li>
+<li><strong>Through-thickness (Z)</strong>, across layers, load is carried entirely by the <strong>interlayer weld</strong>: the region where a new bead was deposited onto a layer that had already partly cooled, and the polymer chains had a limited time and a limited temperature at which to diffuse across the interface and entangle.</li>
+</ul>
+<p>That diffusion process is the entire mechanism. The strength of the Z direction is the strength of that weld, and the weld is imperfect: it forms in a fraction of a second, at a temperature falling rapidly toward Tg, between two surfaces that also have geometric voids at the bead junctions.</p>
+<p><strong>The honest statement of the magnitude:</strong> interlayer (Z) strength is <strong>substantially lower</strong> than in-plane strength for essentially every FDM material and profile. The size of the gap varies enormously — it depends on the polymer, the nozzle temperature, the layer height, the part cooling, the chamber temperature, the layer time, the bead geometry, and whether the part was annealed. Published studies find a wide range of ratios, and any single percentage quoted as a general fact about &quot;3D printing&quot; is not one.</p>
+<p>You will see figures like &quot;Z is 50 % of XY&quot; repeated widely. Treat them the way Post 05 taught you to treat &quot;0.05 mm accuracy&quot;: as a number for someone's specific machine, material and profile, not as a property of the technology. <strong>Measure it on yours.</strong> Exercise 2 gives the procedure.</p>
+<h2 id="Reducing-the-gap"><a href="#Reducing-the-gap" class="headerlink" title="Reducing the gap"></a>Reducing the gap</h2>
+<table>
+<thead>
+<tr>
+<th>Lever</th>
+<th>Effect on interlayer strength</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Higher nozzle temperature</strong></td>
+<td>strong positive — more time above the diffusion temperature</td>
+<td>surface quality, stringing, oozing; bounded by material degradation</td>
+</tr>
+<tr>
+<td><strong>Enclosure / warm chamber</strong></td>
+<td>strong positive — the previous layer is hotter when the new one lands</td>
+<td>equipment; not appropriate for PLA (Post 04)</td>
+</tr>
+<tr>
+<td><strong>Less part cooling</strong></td>
+<td>positive</td>
+<td>overhangs and bridges degrade; a real trade-off</td>
+</tr>
+<tr>
+<td><strong>Thicker layers</strong></td>
+<td>positive — more bonded area per interface and more retained heat</td>
+<td>resolution, surface finish</td>
+</tr>
+<tr>
+<td><strong>Wider extrusion / bigger nozzle</strong></td>
+<td>positive — larger weld area, fewer voids</td>
+<td>resolution, detail</td>
+</tr>
+<tr>
+<td><strong>Slower printing</strong></td>
+<td>mixed — slower gives more heat per unit length, but a longer layer time means the previous layer is cooler when you return to it</td>
+<td>time</td>
+</tr>
+<tr>
+<td><strong>Annealing</strong></td>
+<td>positive — chains interdiffuse across interfaces given time above Tg</td>
+<td>dimensional change (Post 04)</td>
+</tr>
+<tr>
+<td><strong>Ironing / higher flow</strong></td>
+<td>small positive — reduces interlayer voids</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Orientation</strong></td>
+<td><strong>eliminates the problem</strong> — put the load in-plane</td>
+<td>usually free; occasionally costs support material</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Watch out:</strong> every mitigation in that table trades something away — surface quality, overhang capability, resolution, or time — and none of them removes the weakness. Only orientation does.</p>
+</blockquote>
+<p>The last row is the point of the whole chapter. Every other lever is a partial mitigation with a cost. <strong>Orientation makes the weakness irrelevant</strong>, and it usually costs nothing but a decision. That is why it heads the next chapter's list.</p>
+<hr>
+<h1 id="Chapter-3-—-What-actually-controls-strength-in-order"><a href="#Chapter-3-—-What-actually-controls-strength-in-order" class="headerlink" title="Chapter 3 — What actually controls strength, in order"></a>Chapter 3 — What actually controls strength, in order</h1>
+<p>Beginners tune this list in roughly reverse order. Here it is correctly ordered by leverage.</p>
+<h2 id="1-Orientation-—-by-a-wide-margin-the-most-important"><a href="#1-Orientation-—-by-a-wide-margin-the-most-important" class="headerlink" title="1. Orientation — by a wide margin the most important"></a>1. Orientation — by a wide margin the most important</h2>
+<p>Rotating the part on the plate can change its breaking load by a factor. Nothing else in the profile comes close.</p>
+<p>The rule: <strong>never let the primary tensile load path cross a layer boundary.</strong> Identify how the part is loaded, identify where the tension is highest, and orient so the layers run <em>along</em> the load, not across it.</p>
+<p>Concrete cases:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Wrong orientation</th>
+<th>Right orientation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hook carrying a downward load</td>
+<td>printed upright — the bending tension at the root is across layers</td>
+<td>printed flat on its side (or standing in the load plane) so layers run along the hook</td>
+</tr>
+<tr>
+<td>Bracket with an L-shape</td>
+<td>either leg vertical — the corner is a layer interface in tension</td>
+<td>flat, with both legs in the layer plane</td>
+</tr>
+<tr>
+<td>Threaded boss taking a pull-out load</td>
+<td>axis vertical — the thread strips layer by layer</td>
+<td>axis horizontal, or use a heat-set insert (Post 06)</td>
+</tr>
+<tr>
+<td>Long thin rod under tension</td>
+<td>vertical — every layer is a potential fracture plane</td>
+<td>horizontal</td>
+</tr>
+<tr>
+<td>A gear</td>
+<td>either works for tooth bending; hub axis vertical is standard</td>
+<td>axis vertical, so tooth loads are in-plane</td>
+</tr>
+</tbody>
+</table>
+<p>Post 03 covers orientation for surface quality and supports. This is the same decision viewed through strength, and when the two conflict, strength usually wins on a functional part.</p>
+<h2 id="2-Perimeter-wall-count"><a href="#2-Perimeter-wall-count" class="headerlink" title="2. Perimeter (wall) count"></a>2. Perimeter (wall) count</h2>
+<p>Second-largest lever, and much larger than infill. Going from 2 to 4 perimeters typically makes a far bigger difference than going from 20 % to 50 % infill, at a fraction of the material and time cost.</p>
+<h3 id="Why-where-bending-stress-actually-acts"><a href="#Why-where-bending-stress-actually-acts" class="headerlink" title="Why: where bending stress actually acts"></a>Why: where bending stress actually acts</h3>
+<p>Most printed parts fail in <strong>bending</strong>, not pure tension. In a beam under bending:</p>
+<ul>
+<li>The material on the outside of the bend is in <strong>tension</strong>; on the inside, in <strong>compression</strong>; and somewhere between them, at the <strong>neutral axis</strong>, the stress is zero.</li>
+<li>Stress varies <strong>linearly with distance from the neutral axis</strong>. The extreme fibres carry the maximum; material at the neutral axis carries nothing.</li>
+<li>Bending stiffness is governed by the <strong>second moment of area</strong>, which weights material by the <em>square</em> of its distance from the neutral axis. Bending <em>strength</em> is governed by the section modulus, which likewise rewards distance from the axis.</li>
+</ul>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="text"><span class="line">Cross-section of a printed beam under bending:</span><br><span class="line"> </span><br><span class="line">   perimeters (outer shell) ----&gt; ####################   &lt;- TENSION, max stress</span><br><span class="line">                                  #··················#</span><br><span class="line">   infill (interior)      ------&gt; #··· · · · · · ·  ·#   &lt;- near neutral axis,</span><br><span class="line">                                  #··················#      near-zero stress</span><br><span class="line">                                  ####################   &lt;- COMPRESSION, max stress</span><br><span class="line"> </span><br><span class="line">   Perimeters sit exactly where the stress is highest.</span><br><span class="line">   Infill sits exactly where the stress is lowest.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>That is the entire argument. Perimeters are the material at the extreme fibres — the material that is doing the work. Infill is the material near the neutral axis, where the stress is small. Adding infill adds mass and print time in the place where it contributes least.</p>
+<p>Infill is not useless; it does three real jobs:</p>
+<ol>
+<li><strong>Supports the top surfaces</strong> so they can be printed at all (Post 02).</li>
+<li><strong>Stabilises the perimeters against buckling</strong> — a thin shell under compression fails by buckling long before it fails by crushing, and infill braces it.</li>
+<li><strong>Carries compression and shear</strong> in a part loaded through its bulk rather than in bending.</li>
+</ol>
+<p>But for the common case — a bracket, a hook, a mount, a lever, anything cantilevered — perimeters win decisively.</p>
+<h2 id="3-Material"><a href="#3-Material" class="headerlink" title="3. Material"></a>3. Material</h2>
+<p>Third. Choosing PETG over PLA for a part that gets knocked, or nylon over PETG for a part that wears, changes the outcome more than any slicer setting except the two above. Post 04's decision tree is the tool. Note that the material choice interacts with orientation: fibre-filled composites are dramatically stiffer in-plane and are usually <em>more</em> brittle across layers, so the anisotropy gets worse, not better.</p>
+<h2 id="4-Temperature-and-cooling"><a href="#4-Temperature-and-cooling" class="headerlink" title="4. Temperature and cooling"></a>4. Temperature and cooling</h2>
+<p>Fourth. Nozzle temperature is the strongest single lever on interlayer strength within a given material (Chapter 2). Reduced part cooling helps interlayer bonding and hurts overhangs. An enclosure helps materials that want one. These are real effects with real trade-offs — but they are refinements on top of the first three decisions, not substitutes for them.</p>
+<h2 id="5-Infill-density-and-pattern"><a href="#5-Infill-density-and-pattern" class="headerlink" title="5. Infill density and pattern"></a>5. Infill density and pattern</h2>
+<p>Fifth, and well below where beginners put it.</p>
+<ul>
+<li><strong>Density.</strong> Beyond roughly 40–50 %, additional infill buys little strength for a lot of time and material; the curve flattens. Below about 15 % the part becomes noticeably soft and top surfaces suffer. For most functional parts, 20–30 % infill with 4–6 perimeters outperforms 50 % infill with 2 perimeters, using less material.</li>
+<li><strong>Pattern.</strong> Matters more than density in some load cases. <strong>Gyroid</strong> is isotropic, self-supporting, prints fast and is a strong general default. <strong>Cubic</strong> and <strong>triangular</strong> are stiff and good under multi-axis load. <strong>Grid</strong> creates crossing points where the nozzle collides with previously-laid material. <strong>Lines/rectilinear</strong> is weak in one direction. <strong>Concentric</strong> is right under flexible parts.</li>
+<li><strong>Special case:</strong> a <em>fully solid</em> part (100 % infill) is not automatically the strongest thing you can print. Over-extrusion in a solid part introduces internal stress and can leave voids; and the part still fails at layer interfaces. Solid is heavy, slow and often not better than thick perimeters plus moderate infill.</li>
+</ul>
+<h2 id="6-Layer-height"><a href="#6-Layer-height" class="headerlink" title="6. Layer height"></a>6. Layer height</h2>
+<p>Sixth. Thicker layers bond somewhat better and print faster; thinner layers give finer detail and better surface. Its effect on strength is real but small next to the levers above.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> the reflex &quot;print it at 100 % infill so it's strong&quot;. It costs hours and grams, and it usually loses to reorienting the part and adding two perimeters — which costs nothing.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-Stress-concentration-and-design-patterns"><a href="#Chapter-4-—-Stress-concentration-and-design-patterns" class="headerlink" title="Chapter 4 — Stress concentration and design patterns"></a>Chapter 4 — Stress concentration and design patterns</h1>
+<h2 id="The-notch-effect"><a href="#The-notch-effect" class="headerlink" title="The notch effect"></a>The notch effect</h2>
+<p>A sharp internal corner is a stress concentrator. The local stress at the corner can be several times the nominal stress in the surrounding material, and it rises as the corner radius falls — approaching, in the idealised limit of a perfectly sharp corner, an unbounded value. Real materials do not see infinite stress, but the multiplication is large and real, and it is where cracks start.</p>
+<p>Printed parts are unusually vulnerable to this for two reasons:</p>
+<ol>
+<li><strong>PLA and filled composites are notch-sensitive</strong> — brittle materials do not locally yield to blunt the peak, so the concentration translates directly into a crack.</li>
+<li><strong>A layer interface at a sharp internal corner combines a stress raiser with the weakest plane in the part.</strong> That combination is the single most common origin of a printed-part fracture.</li>
+</ol>
+<h2 id="Fillets-the-cheapest-strength-upgrade-available"><a href="#Fillets-the-cheapest-strength-upgrade-available" class="headerlink" title="Fillets: the cheapest strength upgrade available"></a>Fillets: the cheapest strength upgrade available</h2>
+<p>Adding a fillet to a loaded internal corner costs one CAD feature, a negligible amount of material, and essentially no print time. It reduces the peak stress substantially. There is no other change with that ratio of benefit to cost.</p>
+<p>Practical guidance:</p>
+<ul>
+<li><strong>Fillet every loaded internal corner.</strong> A radius comparable to the local wall thickness is a reasonable default; larger is better, up to what the geometry allows.</li>
+<li><strong>A larger radius is better than a smaller one.</strong> The benefit is strongly nonlinear at small radii — going from sharp to a small fillet buys most of the improvement.</li>
+<li><strong>Fillet transitions between sections too.</strong> A sudden change from thick to thin is a stress raiser even without a corner. Taper it.</li>
+<li><strong>Watch the printing rules</strong> (Post 06): fillet vertical and top edges freely; <strong>chamfer</strong> bottom edges.</li>
+<li><strong>Do not fillet a corner that needs to mate flush with something.</strong> Chamfer that one, or add a relief groove on the mating part.</li>
+</ul>
+<h2 id="Design-patterns-for-functional-parts"><a href="#Design-patterns-for-functional-parts" class="headerlink" title="Design patterns for functional parts"></a>Design patterns for functional parts</h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Instead of</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ribs</strong></td>
+<td>solid bulk</td>
+<td>a rib places material away from the neutral axis; you get most of the stiffness for a fraction of the material and time. Rib thickness ≈ 0.5–1× the wall it stands on; rib height ≈ 2–3× thickness; add a draft or taper and a fillet at the root</td>
+</tr>
+<tr>
+<td><strong>Gussets</strong> (triangular webs)</td>
+<td>a bare right-angle joint</td>
+<td>carries the bending moment at a corner directly into a stiff triangle. The single most effective addition to an L-bracket</td>
+</tr>
+<tr>
+<td><strong>Generous fillets everywhere loaded</strong></td>
+<td>sharp internal corners</td>
+<td>Chapter 4 above</td>
+</tr>
+<tr>
+<td><strong>Load spread over multiple fasteners</strong></td>
+<td>one big screw</td>
+<td>distributes stress; a single fastener creates a concentrated bearing load in soft plastic that will creep</td>
+</tr>
+<tr>
+<td><strong>Washers or a metal backing plate under fastener heads</strong></td>
+<td>screw head directly on plastic</td>
+<td>prevents the head pulling through and spreads the bearing area</td>
+</tr>
+<tr>
+<td><strong>Load path within the layer plane</strong></td>
+<td>load path crossing layers</td>
+<td>Chapter 3, lever 1</td>
+</tr>
+<tr>
+<td><strong>Compression rather than bending</strong></td>
+<td>cantilevers</td>
+<td>polymers are far better in compression, and creep less</td>
+</tr>
+<tr>
+<td><strong>Increased section depth</strong></td>
+<td>increased material</td>
+<td>stiffness scales with the <em>cube</em> of depth in bending — making a beam twice as deep is worth eight times as much as making it twice as wide</td>
+</tr>
+<tr>
+<td><strong>Metal where load is sustained</strong></td>
+<td>plastic carrying it alone</td>
+<td>a threaded rod, a steel pin, a bought bracket</td>
+</tr>
+<tr>
+<td><strong>Rounded rather than square holes near an edge</strong></td>
+<td>square cutouts</td>
+<td>corners of square cutouts are stress raisers; radius them</td>
+</tr>
+<tr>
+<td><strong>A relief slot at the end of a flexure</strong></td>
+<td>a flexure terminating in a corner</td>
+<td>terminates the crack path in a rounded feature</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Trick:</strong> the single highest-value five-minute change to almost any printed bracket is: add a gusset, fillet the internal corner, and rotate it so the layers run along the load. Those three together frequently more than double the failure load, and cost no extra material worth mentioning.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Post-processing"><a href="#Chapter-5-—-Post-processing" class="headerlink" title="Chapter 5 — Post-processing"></a>Chapter 5 — Post-processing</h1>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>What it changes</th>
+<th>Notes and safety</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Annealing</strong></td>
+<td>crystallinity, stiffness, heat resistance, creep resistance, interlayer bonding — and <strong>dimensions</strong></td>
+<td>Post 04, Chapter 6. Support the part. Measure before and after. Amorphous polymers gain stress relief but not crystallinity</td>
+</tr>
+<tr>
+<td><strong>Sanding</strong></td>
+<td>surface finish; removes stress-raising surface features</td>
+<td>wet-sand to control dust; <strong>always wear a respirator with fine plastic dust</strong>, and never dry-sand fibre-filled materials without one</td>
+</tr>
+<tr>
+<td><strong>Vapour smoothing (ABS/ASA)</strong></td>
+<td>glossy sealed surface; <strong>improves interlayer strength at the surface</strong> by dissolving and re-fusing it; softens sharp detail</td>
+<td><strong>acetone is highly flammable and its vapour forms explosive mixtures with air.</strong> No ignition sources — no sparks, no pilot lights, no motors in the vapour space. Ventilate. Use a sealed container and a cold-vapour method rather than heat. Also softens the part temporarily; it must dry fully before loading</td>
+</tr>
+<tr>
+<td><strong>Chemical smoothing (PLA, PETG)</strong></td>
+<td>limited; PLA responds poorly to common solvents and the aggressive ones are hazardous</td>
+<td>generally not worth it; sand and prime instead</td>
+</tr>
+<tr>
+<td><strong>Priming and painting</strong></td>
+<td>appearance, UV protection, some moisture sealing</td>
+<td>filler primer fills layer lines; sand between coats. A UV-stable topcoat genuinely extends outdoor life</td>
+</tr>
+<tr>
+<td><strong>Epoxy coating</strong></td>
+<td>seals the part, adds stiffness, waterproofs</td>
+<td>good for parts that must hold liquid or resist moisture</td>
+</tr>
+<tr>
+<td><strong>Threaded inserts</strong></td>
+<td>a real metal thread</td>
+<td>Post 06, Chapter 6 — pocket per the insert datasheet, temperature-controlled iron, press straight and slowly</td>
+</tr>
+<tr>
+<td><strong>Drilling / reaming / tapping</strong></td>
+<td>dimensional accuracy on the one feature that needs it</td>
+<td>Post 05's recommended answer for a critical hole. Clamp properly; printed plastic grabs a drill</td>
+</tr>
+<tr>
+<td><strong>Heat-staking / plastic welding</strong></td>
+<td>joins printed parts</td>
+<td>works well with a soldering iron and filament of the same material as filler</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> loading a part immediately after vapour smoothing or solvent gluing. The solvent is still in the polymer, the surface is soft, and the part is temporarily far weaker than it was before you improved it. Give it days, not hours, in a ventilated place before putting load on it.</p>
+</blockquote>
+<h2 id="Gluing-by-material"><a href="#Gluing-by-material" class="headerlink" title="Gluing, by material"></a>Gluing, by material</h2>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Adhesive that works</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PLA</td>
+<td>cyanoacrylate (superglue); two-part epoxy for structural joints</td>
+<td>solvent welding is unreliable</td>
+</tr>
+<tr>
+<td>PETG</td>
+<td>cyanoacrylate; two-part epoxy</td>
+<td>solvents are largely ineffective</td>
+</tr>
+<tr>
+<td>ABS / ASA</td>
+<td><strong>acetone</strong> (solvent weld — genuinely fuses the parts), ABS slurry (ABS dissolved in acetone), cyanoacrylate, epoxy</td>
+<td>the solvent weld is by far the strongest option and is essentially a repair of the base material</td>
+</tr>
+<tr>
+<td>Nylon</td>
+<td>notoriously difficult — most adhesives do not bond. Cyanoacrylate with a plastic primer, or specialist polyamide adhesives</td>
+<td>design a mechanical joint instead</td>
+</tr>
+<tr>
+<td>TPU</td>
+<td>flexible cyanoacrylate, polyurethane adhesive, contact cement</td>
+<td>rigid glues crack at the joint under flex</td>
+</tr>
+<tr>
+<td>PC</td>
+<td>cyanoacrylate, epoxy; solvent cements exist but PC is prone to <strong>solvent stress-cracking</strong></td>
+<td>test on a scrap first</td>
+</tr>
+</tbody>
+</table>
+<p>Universal rules for a glued joint: <strong>roughen</strong> both faces, <strong>degrease</strong> with IPA, maximise <strong>surface area</strong> (a lap joint beats a butt joint), and <strong>clamp</strong> during cure. A glued joint that relies on end-grain-equivalent contact between two flat printed faces will disappoint; design a scarf, a lap or a tongue.</p>
+<hr>
+<h1 id="Chapter-6-—-Failure-mode-catalogue"><a href="#Chapter-6-—-Failure-mode-catalogue" class="headerlink" title="Chapter 6 — Failure-mode catalogue"></a>Chapter 6 — Failure-mode catalogue</h1>
+<p>Read the fracture surface. It tells you what happened.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>What the fracture looks like</th>
+<th>Root cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Snapped cleanly along a layer line</strong></td>
+<td>flat, matching the layer plane exactly; you can see the bead pattern on the face</td>
+<td>tensile load crossed the layer interface</td>
+<td><strong>reorient</strong> so the load runs in-plane. Then: hotter nozzle, less cooling, thicker layers, enclosure. Consider annealing</td>
+</tr>
+<tr>
+<td><strong>Cracked at a sharp internal corner</strong></td>
+<td>crack initiates at the corner and runs outward</td>
+<td>stress concentration, often compounded by a layer interface at the corner</td>
+<td><strong>fillet the corner.</strong> Add a gusset. Reorient so the corner is not a layer boundary</td>
+</tr>
+<tr>
+<td><strong>Split between perimeters and infill</strong></td>
+<td>separation at the shell/infill boundary</td>
+<td>insufficient perimeter-to-infill overlap, under-extrusion, or too few perimeters</td>
+<td>increase perimeter count; check flow calibration (Post 01); increase infill/perimeter overlap</td>
+</tr>
+<tr>
+<td><strong>Stripped a printed thread</strong></td>
+<td>thread crests sheared off, often in a layer-wise spiral</td>
+<td>printed threads are weak; the crest is layer-bonded plastic</td>
+<td><strong>heat-set insert</strong> or captive nut (Post 06). If it must be a printed thread: coarser pitch, axis vertical, more engagement length</td>
+</tr>
+<tr>
+<td><strong>Screw pulled through the plastic</strong></td>
+<td>conical crater under the head</td>
+<td>bearing stress under the head exceeded what the polymer takes</td>
+<td>washer or metal backing plate; larger head; spread across more fasteners; thicker section</td>
+</tr>
+<tr>
+<td><strong>Boss cracked around an insert</strong></td>
+<td>radial cracks from the insert outward</td>
+<td>boss wall too thin, or the insert forced in cold / too fast / crooked</td>
+<td>thicker boss wall; correct pocket dimensions per datasheet; proper installation temperature and slow, straight pressure</td>
+</tr>
+<tr>
+<td><strong>Warped over time on the shelf</strong></td>
+<td>no fracture; the part simply is not the shape it was</td>
+<td>residual stress relaxing, or moisture absorption (nylon), or heat exposure</td>
+<td>print with an appropriate thermal environment (Post 04); anneal to relieve stress deliberately; store away from heat</td>
+</tr>
+<tr>
+<td><strong>Sagged under a sustained load</strong></td>
+<td>no fracture; permanent bend, often at the highest-moment section</td>
+<td><strong>creep</strong></td>
+<td>Chapter 1. Change material, reduce stress, put the load in compression, or carry it in metal</td>
+</tr>
+<tr>
+<td><strong>Failed after long use at a load it once held easily</strong></td>
+<td>fracture surface with a smooth region (crack growth) and a rough final region</td>
+<td><strong>fatigue</strong></td>
+<td>reduce stress amplitude; eliminate stress raisers; a tougher material; more section</td>
+</tr>
+<tr>
+<td><strong>Became brittle and chalky outdoors</strong></td>
+<td>surface crazing, colour fade, snaps with no warning</td>
+<td><strong>UV degradation</strong>, plus thermal cycling</td>
+<td>ASA. Paint with a UV-stable coating. Never PLA outdoors</td>
+</tr>
+<tr>
+<td><strong>Delaminated mid-print or shortly after</strong></td>
+<td>horizontal split, often in a tall thin part</td>
+<td>thermal gradient plus residual stress; poor interlayer bonding</td>
+<td>enclosure; hotter nozzle; less cooling; shorter/wider geometry (Post 04)</td>
+</tr>
+<tr>
+<td><strong>Layers separated at an overhang or bridge</strong></td>
+<td>localised, at the geometry transition</td>
+<td>poor support of the region; excessive cooling variation</td>
+<td>supports or reorientation (Post 03); bridging settings</td>
+</tr>
+<tr>
+<td><strong>Snapped where a section changed abruptly</strong></td>
+<td>fracture right at the step</td>
+<td>stress concentration at the section change</td>
+<td>taper or fillet the transition</td>
+</tr>
+<tr>
+<td><strong>Part dissolved / softened in service</strong></td>
+<td>swelling, tackiness, dimensional growth</td>
+<td>chemical incompatibility with a solvent, oil or cleaner</td>
+<td>check chemical resistance (Post 04); change material or coat it</td>
+</tr>
+<tr>
+<td><strong>Loosened at a press fit over time</strong></td>
+<td>joint has play that was not there when assembled</td>
+<td>polymer <strong>stress relaxation</strong> — the interference decayed</td>
+<td>do not rely on a plastic press fit for a permanent joint; use a fastener, a snap with a positive lock, or adhesive</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Trick:</strong> photograph every fracture surface before you throw the part away, with the load direction noted. A folder of these is the most useful engineering reference you will build, because it is entirely about your machine, your materials and your designs.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-Testing-and-when-not-to-print"><a href="#Chapter-7-—-Testing-and-when-not-to-print" class="headerlink" title="Chapter 7 — Testing, and when not to print"></a>Chapter 7 — Testing, and when not to print</h1>
+<h2 id="Test-the-part-not-a-coupon"><a href="#Test-the-part-not-a-coupon" class="headerlink" title="Test the part, not a coupon"></a>Test the part, not a coupon</h2>
+<p>Standardised tensile coupons (ISO 527, ASTM D638) exist for a reason: they let laboratories compare materials on equal terms. They are the right tool for <em>material</em> comparison and the wrong tool for answering &quot;will my bracket hold&quot;.</p>
+<p>A coupon tells you about a dogbone specimen printed in one orientation. Your part has a specific geometry, specific stress concentrations, a specific orientation, a specific load path, specific infill, and a specific set of fillets and section changes. Those interactions dominate. <strong>Test the actual part, loaded the way it will actually be loaded.</strong></p>
+<h2 id="A-repeatable-comparative-test-rig"><a href="#A-repeatable-comparative-test-rig" class="headerlink" title="A repeatable comparative test rig"></a>A repeatable comparative test rig</h2>
+<p>You are not trying to produce absolute engineering data. You are trying to answer &quot;is A better than B on my machine&quot;. That requires only <strong>repeatability and a controlled comparison</strong> — both achievable with cheap equipment.</p>
+<p>The minimum viable rig:</p>
+<ol>
+<li><strong>A fixture that holds the part exactly the same way every time.</strong> This is the most important part. Print a jig that clamps the part in one repeatable position. Variation in how the part is held will swamp everything else.</li>
+<li><strong>A way to apply load progressively and measure it.</strong> Options in ascending order of cost: a bucket you add water or sand to and then weigh; a luggage scale or fish scale pulled by hand; a hanging digital scale with a peak-hold function; a lever arm with hanging weights; an inexpensive load cell with an amplifier logging to a microcontroller.</li>
+<li><strong>A record.</strong> Load at first audible crack, load at failure, where it failed, a photograph of the fracture.</li>
+</ol>
+<p>The disciplines that make the results mean something:</p>
+<ul>
+<li><strong>Change exactly one variable at a time.</strong> Same spool, same day, same profile except the one thing being tested.</li>
+<li><strong>Print all specimens in the same batch</strong>, on the same plate where possible, so filament and machine state are shared.</li>
+<li><strong>n ≥ 3 per condition.</strong> Five is better. Printed parts scatter; a single specimen tells you nothing, exactly as in Post 05.</li>
+<li><strong>Report the spread, not just the mean.</strong> If A's mean beats B's by less than the within-group spread, you have not shown anything.</li>
+<li><strong>Note the temperature.</strong> Polymer strength is temperature-dependent, so a test in a cold garage is not comparable to one in a warm room.</li>
+</ul>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># compare.py — is condition A actually better than condition B?</span></span><br><span class="line"><span class="hljs-keyword">import</span> statistics <span class="hljs-keyword">as</span> st</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">report</span>(<span class="hljs-params">label, loads</span>):</span><br><span class="line">    m, s = st.fmean(loads), (st.stdev(loads) <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(loads) &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-number">0.0</span>)</span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{label:22s}</span> n=<span class="hljs-subst">{<span class="hljs-built_in">len</span>(loads)}</span>  mean=<span class="hljs-subst">{m:<span class="hljs-number">8.2</span>f}</span>  sd=<span class="hljs-subst">{s:<span class="hljs-number">7.2</span>f}</span>  &quot;</span></span><br><span class="line">          <span class="hljs-string">f&quot;min=<span class="hljs-subst">{<span class="hljs-built_in">min</span>(loads):<span class="hljs-number">8.2</span>f}</span>  max=<span class="hljs-subst">{<span class="hljs-built_in">max</span>(loads):<span class="hljs-number">8.2</span>f}</span>&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">return</span> m, s</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Failure loads (N, or kg — units just have to be consistent). YOUR data.</span></span><br><span class="line">A = []   <span class="hljs-comment"># e.g. 4 perimeters, flat orientation</span></span><br><span class="line">B = []   <span class="hljs-comment"># e.g. 2 perimeters, flat orientation</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(A) &gt;= <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">len</span>(B) &gt;= <span class="hljs-number">3</span>:</span><br><span class="line">    ma, sa = report(<span class="hljs-string">&quot;A&quot;</span>, A)</span><br><span class="line">    mb, sb = report(<span class="hljs-string">&quot;B&quot;</span>, B)</span><br><span class="line">    diff   = ma - mb</span><br><span class="line">    pooled = ((sa**<span class="hljs-number">2</span> + sb**<span class="hljs-number">2</span>) / <span class="hljs-number">2</span>) ** <span class="hljs-number">0.5</span></span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;\ndifference = <span class="hljs-subst">{diff:+<span class="hljs-number">.2</span>f}</span>   pooled sd = <span class="hljs-subst">{pooled:<span class="hljs-number">.2</span>f}</span>&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(diff) &lt; pooled:</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;NOT a demonstrated difference — the spread swamps the effect.&quot;</span>)</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Increase n, or the effect is genuinely small.&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">else</span>:</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Difference exceeds the spread. Worth acting on.&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Anisotropy-test-procedure"><a href="#Anisotropy-test-procedure" class="headerlink" title="Anisotropy test procedure"></a>Anisotropy test procedure</h2>
+<p>Print the <em>same</em> simple beam three times in each of three orientations — flat, on-edge, and upright — with everything else identical. Break each in three-point bending in your fixture. The upright specimens fail across layers; the others do not. The ratio of mean failure loads is <strong>your</strong> anisotropy figure, for that material and profile.</p>
+<pre><code class="language-openscad"><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="openscad"><span class="line"><span class="hljs-comment">// beam.scad — a minimal comparative test coupon.</span></span><br><span class="line"><span class="hljs-comment">// Print sets of &gt;=3 in each orientation. Change NOTHING else between sets.</span></span><br><span class="line">length = <span class="hljs-number">80</span>;</span><br><span class="line">width  = <span class="hljs-number">12</span>;</span><br><span class="line">depth  = <span class="hljs-number">6</span>;      <span class="hljs-comment">// bending stiffness scales with depth^3 — keep it identical</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">cube</span>([length, width, depth]);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// Orientations to compare (set in the slicer, not here):</span></span><br><span class="line"><span class="hljs-comment">//   FLAT     — laid on the length x width face   -&gt; layers along the beam</span></span><br><span class="line"><span class="hljs-comment">//   ON EDGE  — rotated 90 deg about the length   -&gt; layers along the beam,</span></span><br><span class="line"><span class="hljs-comment">//                                                   different bead direction</span></span><br><span class="line"><span class="hljs-comment">//   UPRIGHT  — stood on the width x depth face   -&gt; layers ACROSS the beam;</span></span><br><span class="line"><span class="hljs-comment">//                                                   every layer is a crack plane</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> comparing A against B when the two batches were printed on different days, from different spools, or with the fixture reassembled in between. Any of those can shift the result by more than the effect you are trying to measure, and the comparison then tells you about the day rather than about the change.</p>
+</blockquote>
+<h2 id="When-not-to-3D-print"><a href="#When-not-to-3D-print" class="headerlink" title="When not to 3D print"></a>When not to 3D print</h2>
+<p>This section is the honest one, and it is missing from most 3D printing material because it is not what the audience wants to hear. FDM is a superb process for a specific envelope: <strong>one-off or low-volume parts with complex geometry, needed quickly, at low cost, where moderate strength and moderate accuracy suffice.</strong> Outside that envelope, something else wins.</p>
+<table>
+<thead>
+<tr>
+<th>Instead consider</th>
+<th>When it wins</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Buying the part</strong></td>
+<td>it exists as a standard component — brackets, hinges, enclosures, knobs, clamps, standoffs, gears, bearings, fasteners</td>
+<td>a mass-produced part is stronger, cheaper, and available now. Printing a worse copy of a €3 bracket over six hours is a hobby, not engineering. <strong>Search first.</strong></td>
+</tr>
+<tr>
+<td><strong>CNC machining</strong></td>
+<td>precision, isotropic strength, metal, surface finish</td>
+<td>milled aluminium is strong in every direction, dimensionally accurate to a far tighter tolerance, and holds up under heat and sustained load</td>
+</tr>
+<tr>
+<td><strong>Injection moulding</strong></td>
+<td>quantity — hundreds up, and certainly thousands</td>
+<td>per-part cost collapses once tooling is amortised; parts are isotropic and dimensionally consistent. Print the <em>prototype</em>, mould the <em>product</em></td>
+</tr>
+<tr>
+<td><strong>Sheet metal</strong></td>
+<td>flat panels, brackets, enclosures, chassis</td>
+<td>enormously stiff and strong per gram; cheap; laser-cut and bent quickly. Most bracket-shaped problems are sheet-metal problems</td>
+</tr>
+<tr>
+<td><strong>Laser cutting (acrylic, ply, MDF)</strong></td>
+<td>flat parts and panels</td>
+<td>seconds per part instead of hours, dimensionally excellent in-plane, isotropic</td>
+</tr>
+<tr>
+<td><strong>Casting (silicone mould, resin or urethane)</strong></td>
+<td>tens of copies of a complex shape</td>
+<td>print the master, mould it, cast in a material with better properties than any filament</td>
+</tr>
+<tr>
+<td><strong>Woodwork / metalwork</strong></td>
+<td>large structures, furniture, anything over a few hundred millimetres</td>
+<td>a printed part at that scale is slow, expensive, weak and warped</td>
+</tr>
+<tr>
+<td><strong>Extruded profile + fasteners</strong></td>
+<td>frames and structures</td>
+<td>aluminium extrusion is straight, strong and instant</td>
+</tr>
+<tr>
+<td><strong>Hybrid: print + bought parts</strong></td>
+<td>almost always</td>
+<td>a printed body carrying bought bearings, shafts, fasteners and springs is the strongest, cheapest and fastest answer far more often than a fully printed one</td>
+</tr>
+</tbody>
+</table>
+<p>The productive way to hold this: <strong>3D printing's genuine superpower is geometry, not material.</strong> It makes shapes that no other process can make at any price, in a single operation, in an afternoon, with no tooling. Use it for that. When a part's requirement is strength, precision, temperature resistance, or quantity — the things other processes are actually good at — the printer is not the answer, and knowing that is a mark of competence rather than defeat.</p>
+<h2 id="The-functional-part-checklist"><a href="#The-functional-part-checklist" class="headerlink" title="The functional-part checklist"></a>The functional-part checklist</h2>
+<p>Run this before committing a functional part to a long print.</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span></pre></td><td class="code"><pre><code class="text"><span class="line">LOAD</span><br><span class="line">[ ] Do I know the actual load — magnitude, direction, and duration?</span><br><span class="line">[ ] Is it sustained (creep), cyclic (fatigue), or one-off (static)?</span><br><span class="line">[ ] Is the primary tension in-plane, not across layers?</span><br><span class="line">[ ] Is the part in compression rather than bending where possible?</span><br><span class="line"> </span><br><span class="line">ENVIRONMENT</span><br><span class="line">[ ] Maximum service temperature, compared against the material&#x27;s Tg with margin?</span><br><span class="line">[ ] UV exposure? Moisture? Chemicals, oils, solvents, cleaners?</span><br><span class="line">[ ] Food or skin contact? (If yes: it is a system problem — Post 04.)</span><br><span class="line"> </span><br><span class="line">MATERIAL</span><br><span class="line">[ ] Chosen from the requirement (Post 04&#x27;s tree), not from what is loaded?</span><br><span class="line">[ ] Filament dry? Datasheet read?</span><br><span class="line"> </span><br><span class="line">GEOMETRY</span><br><span class="line">[ ] Every loaded internal corner filleted?</span><br><span class="line">[ ] Gussets at loaded right angles?</span><br><span class="line">[ ] Section changes tapered, not stepped?</span><br><span class="line">[ ] Ribs instead of solid bulk?</span><br><span class="line">[ ] Wall thickness an integer multiple of extrusion width (Post 06)?</span><br><span class="line">[ ] Bottom edges chamfered (Post 05/06)?</span><br><span class="line"> </span><br><span class="line">FASTENING</span><br><span class="line">[ ] Heat-set inserts or captive nuts rather than printed threads?</span><br><span class="line">[ ] Load spread over multiple fasteners?</span><br><span class="line">[ ] Washers or a backing plate under screw heads?</span><br><span class="line">[ ] Sustained load carried by metal where possible?</span><br><span class="line"> </span><br><span class="line">PROFILE</span><br><span class="line">[ ] Orientation chosen for the load path FIRST?</span><br><span class="line">[ ] 4-6 perimeters rather than high infill?</span><br><span class="line">[ ] Infill 20-30 %, pattern appropriate (gyroid as default)?</span><br><span class="line">[ ] Nozzle temperature at the upper end of the material&#x27;s range?</span><br><span class="line">[ ] Cooling reduced as far as the geometry allows?</span><br><span class="line"> </span><br><span class="line">FIT</span><br><span class="line">[ ] Clearances from YOUR measured fit gauge (Post 05), as named parameters?</span><br><span class="line">[ ] One adjustable dimension per tolerance chain?</span><br><span class="line">[ ] Critical holes to be reamed after printing?</span><br><span class="line"> </span><br><span class="line">SANITY</span><br><span class="line">[ ] Could I buy this part instead?</span><br><span class="line">[ ] Would sheet metal, laser cutting, machining or moulding be better?</span><br><span class="line">[ ] Have I tested a small version of the critical feature before the 9-hour print?</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Feel-the-anisotropy"><a href="#Exercise-1-—-Feel-the-anisotropy" class="headerlink" title="Exercise 1 — Feel the anisotropy"></a>Exercise 1 — Feel the anisotropy</h2>
+<p>Print two identical small beams (Chapter 7's coupon), one flat and one upright. Break both by hand or in a fixture. Note how much force each needed and what the fracture surface looks like. Photograph both fractures.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span></pre></td><td class="code"><pre><code class="text"><span class="line">What you will observe:</span><br><span class="line"> </span><br><span class="line">FLAT beam</span><br><span class="line">  - Requires substantially more force.</span><br><span class="line">  - Fracture is irregular, may show whitening/stretching before it breaks</span><br><span class="line">    (in PETG/ABS), and does not follow a single flat plane.</span><br><span class="line">  - Load was carried by continuous polymer along the beads.</span><br><span class="line"> </span><br><span class="line">UPRIGHT beam</span><br><span class="line">  - Fails at a markedly lower load, often suddenly.</span><br><span class="line">  - Fracture surface is FLAT and coincides exactly with one layer plane.</span><br><span class="line">    You can see the bead pattern on the face like a fingerprint.</span><br><span class="line">  - Load was carried entirely by one interlayer weld.</span><br><span class="line"> </span><br><span class="line">The lesson to write down: the two parts are the same CAD model, the same</span><br><span class="line">material, the same profile, and the same machine. The ONLY difference is</span><br><span class="line">which way up they were printed — and that decision was free.</span><br><span class="line"> </span><br><span class="line">Do not quote a percentage from this test as a general fact. It is a number</span><br><span class="line">for your machine, material and profile. That is exactly why you measured it.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-Measure-your-Z-strength-ratio"><a href="#Exercise-2-—-Measure-your-Z-strength-ratio" class="headerlink" title="Exercise 2 — Measure your Z-strength ratio"></a>Exercise 2 — Measure your Z-strength ratio</h2>
+<p>Extend Exercise 1 properly: three specimens in each of flat, on-edge and upright, all from one plate, one spool, one profile. Break each in the same fixture. Report the mean and standard deviation for each orientation and the flat-to-upright ratio. Then repeat with the nozzle 15 °C hotter and see how much the ratio moves.</p>
+<h2 id="Exercise-3-—-Perimeters-versus-infill-settled-empirically"><a href="#Exercise-3-—-Perimeters-versus-infill-settled-empirically" class="headerlink" title="Exercise 3 — Perimeters versus infill, settled empirically"></a>Exercise 3 — Perimeters versus infill, settled empirically</h2>
+<p>Print six identical beams: three at 2 perimeters / 50 % infill and three at 6 perimeters / 15 % infill. Record the material used and print time for each set. Break all six in three-point bending. Run <code>compare.py</code> on the results.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span></pre></td><td class="code"><pre><code class="text"><span class="line">Expected outcome:</span><br><span class="line"> </span><br><span class="line">  6 perimeters / 15 % infill  -&gt;  higher failure load</span><br><span class="line">                              -&gt;  LESS material</span><br><span class="line">                              -&gt;  LESS print time</span><br><span class="line"> </span><br><span class="line">  2 perimeters / 50 % infill  -&gt;  lower failure load, more material, more time</span><br><span class="line"> </span><br><span class="line">Why, in one sentence: in bending, stress varies linearly with distance from</span><br><span class="line">the neutral axis and bending stiffness scales with the SECOND MOMENT of that</span><br><span class="line">distance — so material in the perimeters (at the extreme fibres) is doing the</span><br><span class="line">work, and material in the infill (near the neutral axis) is mostly ballast.</span><br><span class="line"> </span><br><span class="line">Caveats that keep the conclusion honest:</span><br><span class="line">- It is a BENDING result. In pure compression through the bulk, or in a</span><br><span class="line">  part loaded through its interior, infill matters much more.</span><br><span class="line">- Very low infill under a large flat top will still cause pillowing.</span><br><span class="line">  Infill&#x27;s job of supporting top surfaces does not go away.</span><br><span class="line">- Check your spread first. If the two means differ by less than the</span><br><span class="line">  within-group standard deviation, the experiment has not shown anything —</span><br><span class="line">  print more specimens.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-4-—-What-a-fillet-is-worth"><a href="#Exercise-4-—-What-a-fillet-is-worth" class="headerlink" title="Exercise 4 — What a fillet is worth"></a>Exercise 4 — What a fillet is worth</h2>
+<p>Print three L-brackets with a sharp internal corner and three identical ones with a fillet of roughly one wall thickness at that corner. Load them until failure in the same fixture. Note where each cracked. Then print three more with a gusset added and repeat.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span></pre></td><td class="code"><pre><code class="text"><span class="line">Expected pattern:</span><br><span class="line"> </span><br><span class="line">  sharp corner  -&gt; cracks initiate exactly AT the corner, at the lowest load</span><br><span class="line">  filleted      -&gt; higher failure load; the crack, when it comes, often starts</span><br><span class="line">                   somewhere other than the corner</span><br><span class="line">  gusseted      -&gt; highest failure load; failure mode frequently MOVES</span><br><span class="line">                   elsewhere entirely (the gusset, the fastener holes, or</span><br><span class="line">                   the arm itself)</span><br><span class="line"> </span><br><span class="line">The engineering reading: when a design change moves the failure to a</span><br><span class="line">different location, that change has done its job — the original weak point</span><br><span class="line">is no longer the weakest link. Iterate by chasing the failure around the</span><br><span class="line">part until it fails somewhere you are content with.</span><br><span class="line"> </span><br><span class="line">Cost accounting: the fillet added a negligible amount of material and</span><br><span class="line">essentially no print time. Nothing else in this course has that ratio of</span><br><span class="line">benefit to cost.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-5-—-Creep-observed"><a href="#Exercise-5-—-Creep-observed" class="headerlink" title="Exercise 5 — Creep, observed"></a>Exercise 5 — Creep, observed</h2>
+<p>Print two identical PLA hooks. Hang the same modest weight on both — well below the load that breaks them. Leave one at room temperature and one somewhere warm (a sunny window, a warm cupboard, near a radiator). Photograph both against a printed reference scale at day 0, day 1, day 7 and day 30. Then repeat the whole experiment in PETG.</p>
+<h2 id="Exercise-6-—-Build-the-fixture"><a href="#Exercise-6-—-Build-the-fixture" class="headerlink" title="Exercise 6 — Build the fixture"></a>Exercise 6 — Build the fixture</h2>
+<p>Design and print a test fixture that holds your chosen test coupon in exactly the same position every time, and that interfaces with whatever load-measuring device you have. Test its repeatability by breaking five identical specimens and reporting the standard deviation. If that spread is large, improve the fixture before trusting any comparison you make with it.</p>
+<h2 id="Exercise-7-—-The-should-I-print-this-audit"><a href="#Exercise-7-—-The-should-I-print-this-audit" class="headerlink" title="Exercise 7 — The &quot;should I print this?&quot; audit"></a>Exercise 7 — The &quot;should I print this?&quot; audit</h2>
+<p>List the last ten things you printed. For each, answer: could it have been bought, and for how much? Would another process have been better? Be honest. Then, for the next functional part you design, run the full Chapter 7 checklist before starting the print and note which items caught something.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stiffness</td>
+<td>resistance to deflection (modulus E) — PLA is the stiffest common filament</td>
+</tr>
+<tr>
+<td>Strength</td>
+<td>stress at failure — direction-dependent in a printed part</td>
+</tr>
+<tr>
+<td>Toughness</td>
+<td>energy absorbed before fracture — PLA is poor; PETG/ABS/PC/PA are good</td>
+</tr>
+<tr>
+<td><strong>Creep</strong></td>
+<td>slow deformation under sustained load; accelerates sharply near Tg</td>
+</tr>
+<tr>
+<td>The classic creep failure</td>
+<td>a PLA bracket that droops in a hot car — nothing broke, it flowed</td>
+</tr>
+<tr>
+<td>Anisotropy</td>
+<td>Z (interlayer) strength is <strong>substantially</strong> lower than in-plane — magnitude is machine/material/profile-specific; <strong>measure yours</strong></td>
+</tr>
+<tr>
+<td>Strength lever 1</td>
+<td><strong>orientation</strong> — never let the tensile load path cross layers</td>
+</tr>
+<tr>
+<td>Strength lever 2</td>
+<td><strong>perimeter count</strong> — 4–6 for functional parts</td>
+</tr>
+<tr>
+<td>Strength lever 3</td>
+<td>material (Post 04's decision tree)</td>
+</tr>
+<tr>
+<td>Strength lever 4</td>
+<td>nozzle temperature up, part cooling down, enclosure if the material wants one</td>
+</tr>
+<tr>
+<td>Strength lever 5</td>
+<td>infill — 20–30 %, gyroid as default; returns flatten past ~40–50 %</td>
+</tr>
+<tr>
+<td>Why perimeters beat infill</td>
+<td>in bending, stress is highest at the extreme fibres and zero at the neutral axis</td>
+</tr>
+<tr>
+<td>Stress concentration</td>
+<td>sharp internal corners multiply local stress; PLA is notch-sensitive</td>
+</tr>
+<tr>
+<td>Cheapest strength upgrade</td>
+<td><strong>fillet the loaded internal corner</strong> — one CAD feature, negligible cost</td>
+</tr>
+<tr>
+<td>Instead of solid bulk</td>
+<td>ribs (0.5–1× wall thick, 2–3× tall, filleted at the root)</td>
+</tr>
+<tr>
+<td>Threads</td>
+<td>heat-set inserts or captive nuts, not printed threads</td>
+</tr>
+<tr>
+<td>Fastener heads</td>
+<td>washer or backing plate; spread the load over several fasteners</td>
+</tr>
+<tr>
+<td>Sustained load</td>
+<td>carry it in metal, or in compression, or both</td>
+</tr>
+<tr>
+<td>Vapour smoothing</td>
+<td>ABS/ASA only; <strong>acetone vapour is explosive</strong> — ventilate, no ignition sources</td>
+</tr>
+<tr>
+<td>Snapped along a layer line</td>
+<td>reorient. Then hotter, less cooling, thicker layers, enclosure</td>
+</tr>
+<tr>
+<td>Cracked at a corner</td>
+<td>fillet it; add a gusset</td>
+</tr>
+<tr>
+<td>Sagged over time</td>
+<td>creep — change material, reduce stress, or use metal</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>test the <strong>part</strong>, not a coupon; n ≥ 3; one variable at a time; report the spread</td>
+</tr>
+<tr>
+<td>Don't print it when</td>
+<td>you can buy it, or when it needs precision, isotropic strength, heat resistance, or quantity</td>
+</tr>
+<tr>
+<td>FDM's real superpower</td>
+<td><strong>geometry</strong> — shapes nothing else can make, with no tooling, in an afternoon</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Course-base-complete-—-whats-next"><a href="#Course-base-complete-—-whats-next" class="headerlink" title="Course base complete — what's next"></a>Course base complete — what's next</h1>
+<p>You now have the full base: how the process works, how to calibrate a machine, how slicing decisions map to physical outcomes, how orientation and supports shape a design, what materials do and why, how to reason honestly about dimensions and tolerances, how to model for the process, and how to make parts that survive being used.</p>
+<p>The through-line of the whole course, and the thing worth carrying forward: <strong>every number in this series is either a physical constant, a published material property with a range, or a value you must measure on your own machine — and the third category is much larger than beginners expect.</strong> A course that hands you settings makes you dependent on someone else's setup. A course that hands you procedures makes you able to characterise any machine you sit down at. That was the goal.</p>
+<p><strong>Planned future posts (extensions):</strong></p>
+<ul>
+<li><strong>08 — Resin printing deep dive.</strong> MSLA mechanics, exposure calibration and test artefacts, supports and orientation for resin, wash and post-cure workflows, resin chemistry families, and the safety and waste handling this post only touched on.</li>
+<li><strong>09 — Multi-material and multi-colour printing.</strong> AMS/MMU/tool-changer architectures, purge towers and the real waste economics, interface layers and soluble supports in practice, and designing parts that exploit material combinations rather than just colour.</li>
+<li><strong>10 — Klipper tuning, input shaping and speed.</strong> Moving from Marlin, resonance measurement with an accelerometer, input shaping and pressure advance, and where speed genuinely costs quality versus where it is free.</li>
+<li><strong>11 — Printer modification, maintenance and repair.</strong> Preventive maintenance schedules, hotend and extruder rebuilds, bed levelling and probe systems, frame squaring, belts and linear motion, and diagnosing a machine that has drifted.</li>
+<li><strong>12 — Engineering materials and high-temperature printing.</strong> PA-CF, PPS, PPA, PEI/ULTEM and PEEK; hot chambers, all-metal high-temperature hotends, hardened everything, and whether any of it is justified for your work.</li>
+<li><strong>13 — Large-format printing and print farms.</strong> Scaling geometry and warp, segmenting and joining large parts, queue management and remote monitoring, and the economics of running several machines.</li>
+<li><strong>14 — From print to product.</strong> Cost modelling per part, batching and plate optimisation, finishing at scale, packaging, liability and standards, and what changes when you sell what you print.</li>
+<li><strong>15 — 3D printing meets furniture and CAD.</strong> Jigs, drilling templates, hardware fitting templates, and the millimetre-precision question — the direct bridge to the planned CAD/furniture series, which makes this course's Post 05 argument again in wood: <strong>CAD precision does not survive contact with the physical world.</strong></li>
+</ul>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.iso.org/standard/74514.html" target="_blank" rel="noopener external nofollow noreferrer">ISO/ASTM 52900:2021 — Additive manufacturing: general principles, fundamentals and vocabulary</a></li>
+<li><a href="https://www.iso.org/standard/527-1" target="_blank" rel="noopener external nofollow noreferrer">ISO 527-1:2019 — Plastics: determination of tensile properties, general principles</a> — the standard behind most published filament tensile data.</li>
+<li><a href="https://www.astm.org/d0638-22.html" target="_blank" rel="noopener external nofollow noreferrer">ASTM D638 — Standard test method for tensile properties of plastics</a></li>
+<li><a href="https://www.iso.org/standard/84393.html" target="_blank" rel="noopener external nofollow noreferrer">ISO 179-1 — Plastics: determination of Charpy impact properties</a> — the standard behind published impact figures.</li>
+<li><a href="https://www.astm.org/d2990-17.html" target="_blank" rel="noopener external nofollow noreferrer">ASTM D2990 — Standard test methods for tensile, compressive, and flexural creep and creep-rupture of plastics</a> — how creep is actually measured.</li>
+<li><em>Mechanical Behavior of Materials</em> by Norman E. Dowling — the standard textbook for stress, strain, yield, fatigue and fracture.</li>
+<li><em>Materials Selection in Mechanical Design</em> by Michael F. Ashby — the canonical treatment of choosing a material from a requirement.</li>
+<li><em>Engineering Design with Polymers and Composites</em> by Gerdeen, Lord and Rorrer — polymer-specific design, including creep and viscoelasticity.</li>
+<li><a href="https://help.prusa3d.com/" target="_blank" rel="noopener external nofollow noreferrer">Prusa Knowledge Base — print quality troubleshooting</a> — symptom-driven diagnosis for print defects.</li>
+<li><a href="https://docs.vorondesign.com/materials.html" target="_blank" rel="noopener external nofollow noreferrer">Voron Design documentation — materials selection</a> — engineering reasoning about printed parts under thermal and mechanical load.</li>
+<li>Your own folder of photographed fracture surfaces — genuinely the most useful reference in this list.</li>
+</ul>
+<blockquote>
+<p>Note: this post — and the base course — is <strong>in progress</strong>. Planned additions: a printable load-test fixture with a load-cell interface and logging firmware, a measured anisotropy study across four materials with full data published, a rib and gusset sizing guide with test results, and a worked cost comparison of printing versus buying versus machining for one real bracket.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-09-23T14:38:34.000Z","title":"Updated 2026-09-23 22:38:34","children":"2026-09-23"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Engineering",{"className":"post-meta-categories","href":"/blog/categories/Engineering/","children":"Engineering"}]],[["$","span","sep-3D Printing",{"children":" > "}],["$","a","3D Printing",{"className":"post-meta-categories","href":"/blog/categories/3D-Printing/","children":"3D Printing"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/09/23/print3d_07_strength_functional_parts/","children":"https://invokfung.github.io/blog/2026/09/23/print3d_07_strength_functional_parts/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","3D Printing",{"className":"post-meta__tags","href":"/blog/tags/3D-Printing/","children":"3D Printing"}],["$","a","Mechanical Design",{"className":"post-meta__tags","href":"/blog/tags/Mechanical-Design/","children":"Mechanical Design"}],["$","a","Materials",{"className":"post-meta__tags","href":"/blog/tags/Materials/","children":"Materials"}],["$","a","Failure Analysis",{"className":"post-meta__tags","href":"/blog/tags/Failure-Analysis/","children":"Failure Analysis"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/09/24/dev_24_desk_health/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/09/22/dev_23_money_basics/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","print3d_04_materials",{"children":["$","a",null,{"href":"/blog/2026/09/06/print3d_04_materials/","title":"3D Printing Course — 04 · Materials","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-06</div><div class=\"title\">3D Printing Course — 04 · Materials</div></div>"}}]}],["$","div","print3d_00_how_it_works",{"children":["$","a",null,{"href":"/blog/2026/08/15/print3d_00_how_it_works/","title":"3D Printing Course — 00 · How 3D Printing Works","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-15</div><div class=\"title\">3D Printing Course — 00 · How 3D Printing Works</div></div>"}}]}],["$","div","print3d_01_first_print_calibration",{"children":["$","a",null,{"href":"/blog/2026/08/21/print3d_01_first_print_calibration/","title":"3D Printing Course — 01 · First Print and Calibration","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-21</div><div class=\"title\">3D Printing Course — 01 · First Print and Calibration</div></div>"}}]}],["$","div","print3d_02_slicing_in_depth",{"children":["$","a",null,{"href":"/blog/2026/08/26/print3d_02_slicing_in_depth/","title":"3D Printing Course — 02 · Slicing in Depth","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-26</div><div class=\"title\">3D Printing Course — 02 · Slicing in Depth</div></div>"}}]}],["$","div","print3d_03_orientation_supports_dfm",{"children":["$","a",null,{"href":"/blog/2026/09/01/print3d_03_orientation_supports_dfm/","title":"3D Printing Course — 03 · Orientation, Supports and Design for Printing","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-01</div><div class=\"title\">3D Printing Course — 03 · Orientation, Supports and Design for Printing</div></div>"}}]}],["$","div","print3d_05_accuracy_tolerances",{"children":["$","a",null,{"href":"/blog/2026/09/12/print3d_05_accuracy_tolerances/","title":"3D Printing Course — 05 · Dimensional Accuracy and Tolerances","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-12</div><div class=\"title\">3D Printing Course — 05 · Dimensional Accuracy and Tolerances</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-The-mechanics-you-actually-need",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-The-mechanics-you-actually-need","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — The mechanics you actually need"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","The-distinction-beginners-get-wrong-most-often",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-distinction-beginners-get-wrong-most-often","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"The distinction beginners get wrong most often"}]]}],null]}],["$","li","Creep-—-the-quiet-killer",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Creep-—-the-quiet-killer","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"Creep — the quiet killer"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Anisotropy-honestly",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Anisotropy-honestly","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Anisotropy, honestly"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","What-is-actually-going-on",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-is-actually-going-on","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"What is actually going on"}]]}],null]}],["$","li","Reducing-the-gap",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Reducing-the-gap","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Reducing the gap"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-What-actually-controls-strength-in-order",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-What-actually-controls-strength-in-order","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — What actually controls strength, in order"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","1-Orientation-—-by-a-wide-margin-the-most-important",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#1-Orientation-—-by-a-wide-margin-the-most-important","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"1. Orientation — by a wide margin the most important"}]]}],null]}],["$","li","2-Perimeter-wall-count",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#2-Perimeter-wall-count","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"2. Perimeter (wall) count"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Why-where-bending-stress-actually-acts",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#Why-where-bending-stress-actually-acts","children":[["$","span",null,{"className":"toc-number","children":"4.2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Why: where bending stress actually acts"}]]}],null]}]]}]]}],["$","li","3-Material",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#3-Material","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"3. Material"}]]}],null]}],["$","li","4-Temperature-and-cooling",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#4-Temperature-and-cooling","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"4. Temperature and cooling"}]]}],null]}],["$","li","5-Infill-density-and-pattern",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#5-Infill-density-and-pattern","children":[["$","span",null,{"className":"toc-number","children":"4.5."}]," ",["$","span",null,{"className":"toc-text","children":"5. Infill density and pattern"}]]}],null]}],["$","li","6-Layer-height",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#6-Layer-height","children":[["$","span",null,{"className":"toc-number","children":"4.6."}]," ",["$","span",null,{"className":"toc-text","children":"6. Layer height"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Stress-concentration-and-design-patterns",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Stress-concentration-and-design-patterns","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Stress concentration and design patterns"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-notch-effect",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-notch-effect","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"The notch effect"}]]}],null]}],["$","li","Fillets-the-cheapest-strength-upgrade-available",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Fillets-the-cheapest-strength-upgrade-available","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Fillets: the cheapest strength upgrade available"}]]}],null]}],["$","li","Design-patterns-for-functional-parts",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Design-patterns-for-functional-parts","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"Design patterns for functional parts"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Post-processing",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Post-processing","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Post-processing"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Gluing-by-material",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Gluing-by-material","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"Gluing, by material"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Failure-mode-catalogue",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Failure-mode-catalogue","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Failure-mode catalogue"}]]}],null]}],["$","li","Chapter-7-—-Testing-and-when-not-to-print",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Testing-and-when-not-to-print","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Testing, and when not to print"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Test-the-part-not-a-coupon",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Test-the-part-not-a-coupon","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Test the part, not a coupon"}]]}],null]}],["$","li","A-repeatable-comparative-test-rig",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#A-repeatable-comparative-test-rig","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"A repeatable comparative test rig"}]]}],null]}],["$","li","Anisotropy-test-procedure",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Anisotropy-test-procedure","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"Anisotropy test procedure"}]]}],null]}],["$","li","When-not-to-3D-print",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#When-not-to-3D-print","children":[["$","span",null,{"className":"toc-number","children":"8.4."}]," ",["$","span",null,{"className":"toc-text","children":"When not to 3D print"}]]}],null]}],["$","li","The-functional-part-checklist",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-functional-part-checklist","children":[["$","span",null,{"className":"toc-number","children":"8.5."}]," ",["$","span",null,{"className":"toc-text","children":"The functional-part checklist"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Feel-the-anisotropy",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Feel-the-anisotropy","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Feel the anisotropy"}]]}],null]}],["$","li","Exercise-2-—-Measure-your-Z-strength-ratio",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Measure-your-Z-strength-ratio","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Measure your Z-strength ratio"}]]}],null]}],["$","li","Exercise-3-—-Perimeters-versus-infill-settled-empirically",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Perimeters-versus-infill-settled-empirically","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Perimeters versus infill, settled empirically"}]]}],null]}],["$","li","Exercise-4-—-What-a-fillet-is-worth",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-What-a-fillet-is-worth","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — What a fillet is worth"}]]}],null]}],["$","li","Exercise-5-—-Creep-observed",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Creep-observed","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Creep, observed"}]]}],null]}],["$","li","Exercise-6-—-Build-the-fixture",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Build-the-fixture","children":[["$","span",null,{"className":"toc-number","children":"9.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Build the fixture"}]]}],null]}],["$","li","Exercise-7-—-The-should-I-print-this-audit",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-7-—-The-should-I-print-this-audit","children":[["$","span",null,{"className":"toc-number","children":"9.7."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 7 — The \"should I print this?\" audit"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Course-base-complete-—-whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Course-base-complete-—-whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Course base complete — what's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"The base course closes where it should: with the question of whether the part actually works. Posts 00–03 covered the process, Post 04 the materials, "}],["$","meta","5",{"name":"keywords","content":"3D Printing,Mechanical Design,Materials,Failure Analysis,Course"}],["$","meta","6",{"property":"og:title","content":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","meta","7",{"property":"og:description","content":"The base course closes where it should: with the question of whether the part actually works. Posts 00–03 covered the process, Post 04 the materials, "}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","meta","11",{"name":"twitter:description","content":"The base course closes where it should: with the question of whether the part actually works. Posts 00–03 covered the process, Post 04 the materials, "}]]
+1:null

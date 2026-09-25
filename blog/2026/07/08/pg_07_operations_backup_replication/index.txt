@@ -1,0 +1,830 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+4:["year","2026","d"]
+5:["month","07","d"]
+6:["day","08","d"]
+7:["slug","pg_07_operations_backup_replication","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["tSi4Bl_e6QraTpHUkvsOl",[[["",{"children":[["year","2026","d"],{"children":[["month","07","d"],{"children":[["day","08","d"],{"children":[["slug","pg_07_operations_backup_replication","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"07\",\"day\":\"08\",\"slug\":\"pg_07_operations_backup_replication\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","07","d"],{"children":[["day","08","d"],{"children":[["slug","pg_07_operations_backup_replication","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T15bbd,<p>Everything in the previous six posts assumed a database that is up, reachable, and holding correct data. This post is about keeping that true. It covers the write-ahead log that underpins both durability and replication, backup strategies from a logical dump to point-in-time recovery, streaming and logical replication with the failover hazards they bring, why PostgreSQL's process-per-connection model makes a pooler near-mandatory, the security surface from <code>pg_hba.conf</code> to row-level security, and the monitoring that tells you any of this is going wrong before a user does. It closes the <strong>base</strong> PostgreSQL course.</p>
+<blockquote>
+<p>Series map: 00 Foundations &amp; Setup → 01 SQL Fundamentals &amp; Data Types → 02 Joins, Aggregation &amp; Window Functions → 03 Indexes &amp; the Query Planner → 04 Query Optimization &amp; Statistics → 05 Transactions, MVCC, Isolation &amp; Locking → 06 Schema Design, Normalization &amp; JSONB → <strong>07 Operations, Backup, Replication &amp; Security</strong> (this post) → (future: extensions, full-text search, pgvector, partitioning at scale, tuning, PL/pgSQL, ORMs, managed PostgreSQL).</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Explain what the WAL is, why full page writes exist, and what a checkpoint does.</li>
+<li>Choose between logical dumps, physical base backups, and continuous archiving, and perform a point-in-time recovery.</li>
+<li>Set up streaming replication with a replication slot, and monitor lag correctly.</li>
+<li>Explain the split-brain hazard and why automatic failover needs fencing.</li>
+<li>Use logical replication, including for a near-zero-downtime major version upgrade.</li>
+<li>Configure PgBouncer in transaction mode and list exactly what breaks there.</li>
+<li>Grant privileges correctly, write a row-level security policy, and configure <code>pg_hba.conf</code> with <code>scram-sha-256</code> and TLS.</li>
+<li>Name the handful of PostgreSQL metrics worth alerting on and where each comes from.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-The-write-ahead-log"><a href="#Chapter-1-—-The-write-ahead-log" class="headerlink" title="Chapter 1 — The write-ahead log"></a>Chapter 1 — The write-ahead log</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>WAL</strong> — the write-ahead log. Every change to a data page is described in a WAL record that is flushed to durable storage <em>before</em> the page itself is written.</li>
+<li><strong>LSN</strong> — Log Sequence Number, a monotonically increasing byte position in the WAL stream (<code>0/16B3748</code>). The universal currency of replication and recovery.</li>
+<li><strong>WAL segment</strong> — a WAL file, 16 MB by default.</li>
+<li><strong>Checkpoint</strong> — a point at which all dirty shared buffers are flushed to the data files, allowing WAL before that point to be recycled.</li>
+<li><strong>Full page write</strong> — the first change to a page after a checkpoint writes the <em>entire</em> 8 KB page into the WAL, not just the delta.</li>
+</ul>
+<p>The write-ahead rule is what makes crash recovery possible: after a crash, PostgreSQL replays WAL from the last checkpoint forward, reconstructing every committed change. <code>COMMIT</code> returns only once the commit record is durably flushed — this is exactly the D in ACID, and it is why <code>fsync = off</code> is a data-loss setting, not a performance setting.</p>
+<h2 id="Full-page-writes"><a href="#Full-page-writes" class="headerlink" title="Full page writes"></a>Full page writes</h2>
+<p>Operating systems and storage do not guarantee that an 8 KB page write is atomic. A crash mid-write can leave a <em>torn page</em>: half old, half new — a page WAL deltas cannot be applied to, because the base is corrupt. <code>full_page_writes = on</code> (the default) solves this by writing a complete image of the page the first time it is modified after each checkpoint, giving recovery a known-good base to replay from.</p>
+<p>The cost is WAL volume, and it is the reason WAL generation spikes immediately after every checkpoint. It is also the reason random-write workloads (see UUIDv4 keys in post 06) generate far more WAL than sequential ones: they touch more distinct pages, so more of them need full images.</p>
+<h2 id="Checkpoints"><a href="#Checkpoints" class="headerlink" title="Checkpoints"></a>Checkpoints</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>checkpoint_timeout</code></td>
+<td><code>5min</code></td>
+<td>Maximum time between checkpoints. Commonly raised to <code>15min</code>–<code>30min</code>.</td>
+</tr>
+<tr>
+<td><code>max_wal_size</code></td>
+<td><code>1GB</code></td>
+<td>Soft ceiling on WAL between checkpoints; exceeding it triggers one early.</td>
+</tr>
+<tr>
+<td><code>min_wal_size</code></td>
+<td><code>80MB</code></td>
+<td>WAL kept preallocated for recycling.</td>
+</tr>
+<tr>
+<td><code>checkpoint_completion_target</code></td>
+<td><code>0.9</code></td>
+<td>Fraction of the interval over which the flush is spread.</td>
+</tr>
+<tr>
+<td><code>wal_compression</code></td>
+<td><code>off</code></td>
+<td>Compresses full-page images. Often a clear win on modern CPUs.</td>
+</tr>
+</tbody>
+</table>
+<p>Longer intervals mean fewer full page writes and less total I/O, but a longer crash-recovery time and larger I/O bursts. Set <code>log_checkpoints = on</code> (default since PostgreSQL 15) and watch for the phrase <code>checkpoints are occurring too frequently</code> in the log — that means <code>max_wal_size</code> is too small for the write rate.</p>
+<p><code>synchronous_commit</code> controls how much durability you pay for per transaction:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Guarantee</th>
+<th>Risk on crash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>on</code> (default)</td>
+<td>WAL flushed locally before <code>COMMIT</code> returns</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>remote_apply</code></td>
+<td>Flushed <em>and applied</em> on a synchronous standby</td>
+<td>None; highest latency</td>
+</tr>
+<tr>
+<td><code>remote_write</code></td>
+<td>Written (not flushed) on the standby</td>
+<td>Standby OS crash could lose it</td>
+</tr>
+<tr>
+<td><code>local</code></td>
+<td>Local flush only, ignoring synchronous standbys</td>
+<td>Loss only if the primary is lost</td>
+</tr>
+<tr>
+<td><code>off</code></td>
+<td><code>COMMIT</code> returns before the flush</td>
+<td>Up to <code>wal_writer_delay × 3</code> of committed transactions lost — but <strong>never corruption</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>synchronous_commit = off</code> is a legitimate choice for a bulk load or an analytics table where losing the last 600 ms of transactions is acceptable. <code>fsync = off</code> never is.</p>
+<hr>
+<h1 id="Chapter-2-—-Backups"><a href="#Chapter-2-—-Backups" class="headerlink" title="Chapter 2 — Backups"></a>Chapter 2 — Backups</h1>
+<p>Three families, and you probably want two of them.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Granularity</th>
+<th>Restore target</th>
+<th>Cross-version</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pg_dump</code> / <code>pg_dumpall</code></td>
+<td>Logical (SQL or archive)</td>
+<td>Any point you took a dump</td>
+<td>Yes — restores into a newer major version</td>
+<td>Slow on large databases; restore is slower still</td>
+</tr>
+<tr>
+<td><code>pg_basebackup</code></td>
+<td>Physical (whole cluster)</td>
+<td>The moment the backup ended</td>
+<td>No — same major version, same architecture</td>
+<td>Fast; size of the data directory</td>
+</tr>
+<tr>
+<td>Base backup + WAL archive</td>
+<td>Physical + continuous</td>
+<td><strong>Any moment</strong> covered by the archive</td>
+<td>No</td>
+<td>Base backup plus ongoing WAL storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Logical-dumps"><a href="#Logical-dumps" class="headerlink" title="Logical dumps"></a>Logical dumps</h2>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-comment"># Custom format: compressed, parallel-restorable, selectively restorable. Prefer it.</span></span><br><span class="line">pg_dump -Fc -Z 6 -d shop -f shop.dump</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Directory format allows a parallel dump as well</span></span><br><span class="line">pg_dump -Fd -j 4 -d shop -f shop_dumpdir/</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Roles, tablespaces and other cluster-wide objects are NOT in pg_dump:</span></span><br><span class="line">pg_dumpall --globals-only -f globals.sql</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Restore</span></span><br><span class="line">createdb shop_restored</span><br><span class="line">psql -d shop_restored -f globals.sql</span><br><span class="line">pg_restore -d shop_restored -j 4 shop.dump</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Properties to internalise: a <code>pg_dump</code> is a <strong>consistent snapshot</strong> (it runs in a <code>REPEATABLE READ</code> transaction), it does <strong>not</strong> block writers, but it <em>does</em> hold that snapshot for the whole run — which pins the vacuum horizon (post 05). It does not include statistics, so <code>ANALYZE</code> after restoring. And <code>-Fc</code> lets you restore one table out of a full dump, which plain SQL output does not.</p>
+<h2 id="Physical-base-backups"><a href="#Physical-base-backups" class="headerlink" title="Physical base backups"></a>Physical base backups</h2>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="bash"><span class="line">pg_basebackup -h primary.internal -U replicator \</span><br><span class="line">    -D /var/lib/postgresql/backup \</span><br><span class="line">    -X stream -c fast -P --checkpoint=fast</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>-X stream</code> streams the WAL generated during the backup alongside it, so the result is self-consistent and immediately restorable. In PostgreSQL 15 the old exclusive backup mode was removed; the low-level API is now <code>pg_backup_start()</code> / <code>pg_backup_stop()</code> (renamed from <code>pg_start_backup</code> / <code>pg_stop_backup</code>).</p>
+<h2 id="Continuous-archiving-and-point-in-time-recovery"><a href="#Continuous-archiving-and-point-in-time-recovery" class="headerlink" title="Continuous archiving and point-in-time recovery"></a>Continuous archiving and point-in-time recovery</h2>
+<p>Configure the primary to hand every completed WAL segment to an archive:</p>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-comment"># postgresql.conf</span></span><br><span class="line"><span class="hljs-attr">wal_level</span> = replica</span><br><span class="line"><span class="hljs-attr">archive_mode</span> = <span class="hljs-literal">on</span></span><br><span class="line"><span class="hljs-attr">archive_command</span> = <span class="hljs-string">&#x27;test ! -f /wal_archive/%f &amp;&amp; cp %p /wal_archive/%f&#x27;</span></span><br><span class="line"><span class="hljs-attr">archive_timeout</span> = <span class="hljs-string">&#x27;5min&#x27;</span>      <span class="hljs-comment"># force a segment switch so low-traffic gaps are bounded</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The <code>archive_command</code> must return non-zero if it fails — PostgreSQL retries and keeps the segment until it succeeds. A command that silently succeeds while writing nowhere is the most common way a PITR setup turns out to be fiction.</p>
+<blockquote>
+<p><strong>Watch out:</strong> a failing <code>archive_command</code> makes WAL accumulate in <code>pg_wal</code> until the disk fills and the primary shuts down. Alert on <code>pg_stat_archiver.last_failed_time</code> and on <code>pg_wal</code> directory size.</p>
+</blockquote>
+<p>Worked restore to a specific moment:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-comment"># 1. Stop the broken cluster. Do NOT delete the old data directory - move it aside.</span></span><br><span class="line"><span class="hljs-built_in">sudo</span> systemctl stop postgresql</span><br><span class="line"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> /var/lib/postgresql/17/main /var/lib/postgresql/17/main.broken</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># 2. Restore the most recent base backup taken BEFORE the target time.</span></span><br><span class="line"><span class="hljs-built_in">sudo</span> -u postgres tar -xzf /backups/base_2026-06-01.tar.gz \</span><br><span class="line">     -C /var/lib/postgresql/17/main</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># 3. Point recovery at the archive and name the target.</span></span><br><span class="line"><span class="hljs-built_in">sudo</span> -u postgres <span class="hljs-built_in">tee</span> -a /var/lib/postgresql/17/main/postgresql.auto.conf &lt;&lt;<span class="hljs-string">&#x27;EOF&#x27;</span></span><br><span class="line">restore_command = <span class="hljs-string">&#x27;cp /wal_archive/%f %p&#x27;</span></span><br><span class="line">recovery_target_time = <span class="hljs-string">&#x27;2026-06-02 09:14:00+09&#x27;</span></span><br><span class="line">recovery_target_action = <span class="hljs-string">&#x27;pause&#x27;</span></span><br><span class="line">EOF</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># 4. Signal recovery mode (PostgreSQL 12+ uses a signal file, not recovery.conf).</span></span><br><span class="line"><span class="hljs-built_in">sudo</span> -u postgres <span class="hljs-built_in">touch</span> /var/lib/postgresql/17/main/recovery.signal</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># 5. Start. It replays WAL to the target and pauses.</span></span><br><span class="line"><span class="hljs-built_in">sudo</span> systemctl start postgresql</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># 6. Verify the data is what you expect, THEN release recovery.</span></span><br><span class="line">psql -c <span class="hljs-string">&quot;SELECT count(*) FROM orders WHERE ordered_at &lt; &#x27;2026-06-02 09:14+09&#x27;;&quot;</span></span><br><span class="line">psql -c <span class="hljs-string">&quot;SELECT pg_wal_replay_resume();&quot;</span>      -- promotes the cluster to normal operation</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Recovery targets available: <code>recovery_target_time</code>, <code>recovery_target_lsn</code>, <code>recovery_target_xid</code>, <code>recovery_target_name</code> (set beforehand with <code>pg_create_restore_point('before_migration')</code>), and <code>recovery_target = 'immediate'</code>. <code>recovery_target_action = 'pause'</code> is the safe default — it gives you a chance to check before the timeline advances irreversibly.</p>
+<p>In production, use a purpose-built tool rather than hand-rolled scripts: <strong>pgBackRest</strong>, <strong>Barman</strong>, or <strong>WAL-G</strong> all handle retention, parallel compression, encryption, incremental backups, and — critically — verification.</p>
+<h2 id="An-untested-backup-is-not-a-backup"><a href="#An-untested-backup-is-not-a-backup" class="headerlink" title="An untested backup is not a backup"></a>An untested backup is not a backup</h2>
+<p>The only evidence a backup works is a restore that produced a working database. Practices worth enforcing:</p>
+<ul>
+<li>A scheduled automated restore into a scratch environment, at least weekly, that runs a real query afterwards and fails loudly if it does not.</li>
+<li>Record and track the <strong>restore time</strong>, not just the backup time. Your RTO is a measured number or it is a hope.</li>
+<li>Keep at least one copy off the machine, off the account, and immutable. Backups on the same volume protect against nothing that actually happens.</li>
+<li>Practise the restore under time pressure once, with the runbook, before you need it.</li>
+</ul>
+<hr>
+<h1 id="Chapter-3-—-Streaming-replication"><a href="#Chapter-3-—-Streaming-replication" class="headerlink" title="Chapter 3 — Streaming replication"></a>Chapter 3 — Streaming replication</h1>
+<p>A standby connects to the primary over the replication protocol, receives WAL as it is generated, and replays it continuously. It is physical, byte-for-byte identical replication of the whole cluster.</p>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2>
+<p>On the primary:</p>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-attr">wal_level</span> = replica                 <span class="hljs-comment"># or logical, if you also want logical replication</span></span><br><span class="line"><span class="hljs-attr">max_wal_senders</span> = <span class="hljs-number">10</span></span><br><span class="line"><span class="hljs-attr">max_replication_slots</span> = <span class="hljs-number">10</span></span><br><span class="line"><span class="hljs-attr">hot_standby</span> = <span class="hljs-literal">on</span>                    <span class="hljs-comment"># standby setting, but set it in the shared config</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> ROLE replicator <span class="hljs-keyword">WITH</span> REPLICATION LOGIN PASSWORD <span class="hljs-string">&#x27;...&#x27;</span>;</span><br><span class="line"><span class="hljs-comment">-- pg_hba.conf:  host  replication  replicator  10.0.0.0/8  scram-sha-256</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> pg_create_physical_replication_slot(<span class="hljs-string">&#x27;standby_1&#x27;</span>);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>On the standby:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="bash"><span class="line">pg_basebackup -h primary.internal -U replicator -D /var/lib/postgresql/17/main \</span><br><span class="line">    -X stream -R -S standby_1 -P</span><br><span class="line"><span class="hljs-comment"># -R writes primary_conninfo and creates standby.signal automatically</span></span><br><span class="line"><span class="hljs-comment"># -S binds it to the replication slot</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Replication-slots"><a href="#Replication-slots" class="headerlink" title="Replication slots"></a>Replication slots</h2>
+<p>A slot makes the primary retain WAL until the standby has confirmed consuming it. That removes the classic failure where a standby falls behind, the primary recycles the WAL it still needed, and the standby is permanently broken.</p>
+<p>The slot's danger is symmetrical: a <strong>forgotten or dropped standby leaves an active slot</strong>, the primary retains WAL forever, and <code>pg_wal</code> fills the disk. Bound it:</p>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-attr">max_slot_wal_keep_size</span> = <span class="hljs-string">&#x27;64GB&#x27;</span>    <span class="hljs-comment"># PostgreSQL 13+: invalidate the slot rather than die</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- Audit slots regularly; anything inactive with a growing lag is a disk-space incident</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> slot_name, slot_type, active,</span><br><span class="line">       pg_size_pretty(pg_wal_lsn_diff(pg_current_wal_lsn(), restart_lsn)) <span class="hljs-keyword">AS</span> retained</span><br><span class="line"><span class="hljs-keyword">FROM</span> pg_replication_slots;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Synchronous-vs-asynchronous"><a href="#Synchronous-vs-asynchronous" class="headerlink" title="Synchronous vs asynchronous"></a>Synchronous vs asynchronous</h2>
+<p>Asynchronous (the default) means <code>COMMIT</code> returns as soon as the primary has flushed locally. A primary failure can lose the last few transactions. Synchronous replication waits for a standby:</p>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-attr">synchronous_standby_names</span> = <span class="hljs-string">&#x27;ANY 1 (standby_1, standby_2)&#x27;</span></span><br><span class="line"><span class="hljs-attr">synchronous_commit</span> = <span class="hljs-literal">on</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The trade is unambiguous: synchronous replication buys zero data loss on failover and costs one network round trip on every commit. Configure <code>ANY 1 (a, b)</code> rather than a single named standby — with one synchronous standby and no alternative, losing that standby stalls every commit on the primary.</p>
+<h2 id="Hot-standby-and-read-scaling"><a href="#Hot-standby-and-read-scaling" class="headerlink" title="Hot standby and read scaling"></a>Hot standby and read scaling</h2>
+<p><code>hot_standby = on</code> lets the standby serve read-only queries. Two conflicts follow:</p>
+<ul>
+<li>A long query on the standby can be <strong>cancelled</strong> when WAL replay needs to remove rows it is reading (<code>max_standby_streaming_delay</code>, default 30 s, controls how long replay waits first).</li>
+<li><code>hot_standby_feedback = on</code> tells the primary to hold back vacuum for the standby's oldest snapshot, which prevents those cancellations — and reintroduces the long-transaction bloat problem from post 05, now caused remotely.</li>
+</ul>
+<p>Pick one deliberately. Analytics standby: <code>hot_standby_feedback = on</code> and accept the bloat. Failover-only standby: leave it off.</p>
+<h2 id="Monitoring-lag"><a href="#Monitoring-lag" class="headerlink" title="Monitoring lag"></a>Monitoring lag</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- On the primary: per-standby byte lag at each stage</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> client_addr, application_name, state, sync_state,</span><br><span class="line">       pg_size_pretty(pg_wal_lsn_diff(sent_lsn,   write_lsn))  <span class="hljs-keyword">AS</span> write_lag_bytes,</span><br><span class="line">       pg_size_pretty(pg_wal_lsn_diff(sent_lsn,   flush_lsn))  <span class="hljs-keyword">AS</span> flush_lag_bytes,</span><br><span class="line">       pg_size_pretty(pg_wal_lsn_diff(sent_lsn,   replay_lsn)) <span class="hljs-keyword">AS</span> replay_lag_bytes,</span><br><span class="line">       write_lag, flush_lag, replay_lag                        <span class="hljs-comment">-- as time intervals</span></span><br><span class="line"><span class="hljs-keyword">FROM</span> pg_stat_replication;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- On the standby: time lag, and whether the stream is alive</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> now() <span class="hljs-operator">-</span> pg_last_xact_replay_timestamp() <span class="hljs-keyword">AS</span> replay_delay,</span><br><span class="line">       pg_is_in_recovery()                     <span class="hljs-keyword">AS</span> is_standby,</span><br><span class="line">       pg_last_wal_receive_lsn(), pg_last_wal_replay_lsn();</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Alert on <strong>replay</strong> lag in bytes, not on the time figure alone: on an idle primary, <code>now() - pg_last_xact_replay_timestamp()</code> grows simply because nothing has been committed, which produces false alarms.</p>
+<h2 id="Failover-and-split-brain"><a href="#Failover-and-split-brain" class="headerlink" title="Failover and split brain"></a>Failover and split brain</h2>
+<p>Promotion itself is trivial:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">pg_ctl promote -D /var/lib/postgresql/17/main</span><br><span class="line"><span class="hljs-comment"># or: SELECT pg_promote();</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The danger is <strong>split brain</strong>: the old primary is not actually dead — it was unreachable — and it keeps accepting writes while the new primary also accepts writes. Two divergent timelines, both containing real customer data, and no automatic way to merge them.</p>
+<p>Automatic failover therefore requires more than a health check:</p>
+<ul>
+<li><strong>Fencing / STONITH</strong> — make certain the old primary cannot accept writes: kill the instance, revoke its network path, or detach its storage.</li>
+<li><strong>Quorum</strong> — the decision to promote must be made by a majority of an odd-numbered set of observers, not by one watcher that may itself be the partitioned party.</li>
+<li><strong>A single write endpoint</strong> — clients must reach the primary through a VIP, a proxy, or <code>target_session_attrs=read-write</code> in a multi-host connection string, so promotion actually redirects them.</li>
+</ul>
+<p>Use <strong>Patroni</strong> (with etcd/Consul/Kubernetes for consensus) or <strong>repmgr</strong>. Hand-rolled failover scripts are the classic source of split-brain incidents, and <code>pg_rewind</code> — which can resynchronise a diverged old primary — only helps if the divergence is small and <code>wal_log_hints</code> or data checksums were enabled beforehand.</p>
+<hr>
+<h1 id="Chapter-4-—-Logical-replication"><a href="#Chapter-4-—-Logical-replication" class="headerlink" title="Chapter 4 — Logical replication"></a>Chapter 4 — Logical replication</h1>
+<p>Streaming replication copies bytes. Logical replication decodes the WAL into row-level changes and applies them as ordinary inserts, updates and deletes on the subscriber. That makes it selective and cross-version.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- Publisher (needs wal_level = logical)</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> PUBLICATION shop_pub <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">TABLE</span> orders, order_lines, customers;</span><br><span class="line"><span class="hljs-comment">-- or: CREATE PUBLICATION all_pub FOR ALL TABLES;</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- Subscriber</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> SUBSCRIPTION shop_sub</span><br><span class="line">  CONNECTION <span class="hljs-string">&#x27;host=primary.internal dbname=shop user=replicator password=...&#x27;</span></span><br><span class="line">  PUBLICATION shop_pub;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- Monitor</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> pg_stat_subscription;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> pg_replication_slots <span class="hljs-keyword">WHERE</span> slot_type <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;logical&#x27;</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>What it can do that physical replication cannot: replicate a subset of tables, replicate between different major versions, replicate into a differently-indexed target, filter rows (<code>WHERE</code> clauses on publications, PostgreSQL 15+) and columns (15+), and support two-way or many-to-one topologies.</p>
+<p>What it does <strong>not</strong> do, and these bite:</p>
+<ul>
+<li><strong>DDL is not replicated.</strong> Schema changes must be applied on both sides, subscriber first for additive changes.</li>
+<li><strong>Sequence values are not replicated</strong> (through PostgreSQL 17). At cutover you must advance every sequence on the subscriber manually with <code>setval()</code>.</li>
+<li><strong>Every replicated table needs a replica identity</strong> — a primary key, or <code>REPLICA IDENTITY FULL</code> (which makes updates and deletes far more expensive), otherwise updates and deletes cannot be applied.</li>
+<li>Large objects are not replicated. Truncate is (11+), but only for tables in the publication.</li>
+</ul>
+<h2 id="Major-version-upgrade-via-logical-replication"><a href="#Major-version-upgrade-via-logical-replication" class="headerlink" title="Major-version upgrade via logical replication"></a>Major-version upgrade via logical replication</h2>
+<p>This is logical replication's most valuable use, because it reduces the downtime of a major upgrade from &quot;however long <code>pg_upgrade</code> takes&quot; to &quot;however long a DNS or proxy switch takes&quot;.</p>
+<ol>
+<li>Build a new cluster on the target major version, restore the schema only (<code>pg_dump --schema-only</code>).</li>
+<li>Create a publication on the old cluster and a subscription on the new one. Initial data sync copies existing rows, then streaming catches up.</li>
+<li>Wait until <code>pg_stat_subscription</code> shows negligible lag. Verify row counts on both sides.</li>
+<li>Stop application writes (this is the entire downtime window).</li>
+<li>Confirm zero lag, advance all sequences with <code>setval()</code>, then repoint the application at the new cluster.</li>
+<li>Drop the subscription. Keep the old cluster shut down but intact for a rollback window.</li>
+</ol>
+<p>Compare with <code>pg_upgrade</code>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>pg_upgrade</code></th>
+<th>Logical replication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Downtime</td>
+<td>Minutes to hours; <code>--link</code>/<code>--clone</code> makes it minutes</td>
+<td>Seconds — the cutover only</td>
+</tr>
+<tr>
+<td>Extra disk</td>
+<td>None with <code>--link</code></td>
+<td>A full second copy of the data</td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td>Hard once <code>--link</code> has been used</td>
+<td>Easy — the old cluster is untouched and still running</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>One command plus a post-upgrade <code>ANALYZE</code></td>
+<td>Sequences, DDL freeze, and verification to manage</td>
+</tr>
+<tr>
+<td>Extension/index caveats</td>
+<td>Statistics are not carried over; <code>ANALYZE</code> immediately</td>
+<td>Target can even be re-indexed differently</td>
+</tr>
+</tbody>
+</table>
+<p><code>pg_upgrade --link</code> is right for a small database with an acceptable maintenance window. Logical replication is right when downtime is measured in seconds and you want a live rollback path.</p>
+<hr>
+<h1 id="Chapter-5-—-Connection-pooling"><a href="#Chapter-5-—-Connection-pooling" class="headerlink" title="Chapter 5 — Connection pooling"></a>Chapter 5 — Connection pooling</h1>
+<p>PostgreSQL forks <strong>one operating-system process per connection</strong>. Each backend carries its own memory (<code>work_mem</code> allocations, catalogue caches, prepared statement plans), typically several megabytes at rest and much more under load. Consequences:</p>
+<ul>
+<li>Establishing a connection costs a <code>fork()</code> plus catalogue loading — milliseconds, which is enormous compared to a 0.3 ms query.</li>
+<li>Idle connections are not free; they hold memory and appear in every snapshot computation.</li>
+<li>Throughput peaks at a fairly small number of <em>active</em> backends — roughly in the neighbourhood of the core count plus effective spindle count — and <strong>declines</strong> beyond it as lock contention and context switching dominate. Raising <code>max_connections</code> to 2000 does not raise throughput; it lowers it.</li>
+</ul>
+<p>This is why a pooler is near-mandatory for any application with more than a handful of application servers, and why serverless platforms that open a connection per request need one absolutely.</p>
+<h2 id="PgBouncer-modes"><a href="#PgBouncer-modes" class="headerlink" title="PgBouncer modes"></a>PgBouncer modes</h2>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-section">[databases]</span></span><br><span class="line"><span class="hljs-attr">shop</span> = host=<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> port=<span class="hljs-number">5432</span> dbname=shop</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">[pgbouncer]</span></span><br><span class="line"><span class="hljs-attr">listen_addr</span> = <span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span></span><br><span class="line"><span class="hljs-attr">listen_port</span> = <span class="hljs-number">6432</span></span><br><span class="line"><span class="hljs-attr">auth_type</span> = scram-sha-<span class="hljs-number">256</span></span><br><span class="line"><span class="hljs-attr">auth_file</span> = /etc/pgbouncer/userlist.txt</span><br><span class="line"><span class="hljs-attr">pool_mode</span> = transaction</span><br><span class="line"><span class="hljs-attr">default_pool_size</span> = <span class="hljs-number">20</span>          <span class="hljs-comment"># server connections per (database, user)</span></span><br><span class="line"><span class="hljs-attr">max_client_conn</span> = <span class="hljs-number">5000</span>          <span class="hljs-comment"># client connections accepted</span></span><br><span class="line"><span class="hljs-attr">reserve_pool_size</span> = <span class="hljs-number">5</span></span><br><span class="line"><span class="hljs-attr">server_idle_timeout</span> = <span class="hljs-number">600</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>A server connection is returned to the pool</th>
+<th>Multiplexing</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session</code></td>
+<td>When the client disconnects</td>
+<td>None — 1:1 while connected</td>
+<td>Legacy apps that depend on session state</td>
+</tr>
+<tr>
+<td><code>transaction</code></td>
+<td>At the end of each transaction</td>
+<td>High — the reason to use PgBouncer</td>
+<td>Almost all web applications</td>
+</tr>
+<tr>
+<td><code>statement</code></td>
+<td>After every statement</td>
+<td>Highest</td>
+<td>Only for autocommit-only, single-statement workloads</td>
+</tr>
+</tbody>
+</table>
+<h2 id="What-breaks-in-transaction-mode"><a href="#What-breaks-in-transaction-mode" class="headerlink" title="What breaks in transaction mode"></a>What breaks in transaction mode</h2>
+<p>Your session may be a different backend for every transaction. Anything that lives in a <em>session</em> rather than a <em>transaction</em> is therefore unsafe:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Status in transaction mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SET</code> / <code>SET SESSION</code> outside a transaction</td>
+<td>Broken — lands on an arbitrary backend. Use <code>SET LOCAL</code> inside the transaction.</td>
+</tr>
+<tr>
+<td>Session-level advisory locks (<code>pg_advisory_lock</code>)</td>
+<td>Broken — the unlock may run on a different backend. Use <code>pg_advisory_xact_lock</code>.</td>
+</tr>
+<tr>
+<td><code>LISTEN</code> / <code>NOTIFY</code></td>
+<td>Broken — <code>LISTEN</code> needs a persistent session. Keep a direct connection for it.</td>
+</tr>
+<tr>
+<td>Session-level prepared statements</td>
+<td>Historically broken. PgBouncer 1.21+ supports protocol-level prepared statements in transaction mode via <code>max_prepared_statements</code>; enable it and match the driver's behaviour.</td>
+</tr>
+<tr>
+<td><code>WITH HOLD</code> cursors</td>
+<td>Broken — they outlive the transaction.</td>
+</tr>
+<tr>
+<td>Temporary tables</td>
+<td>Broken — session-scoped.</td>
+</tr>
+<tr>
+<td>Sequence <code>currval()</code> across transactions</td>
+<td>Broken. Use <code>RETURNING</code> instead.</td>
+</tr>
+<tr>
+<td><code>SET ROLE</code> for row-level security</td>
+<td>Only safe as <code>SET LOCAL ROLE</code> inside the transaction.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> ORMs and drivers frequently use server-side prepared statements by default (psycopg3's prepare threshold, JDBC's <code>prepareThreshold</code>, Prisma's behaviour). Either enable <code>max_prepared_statements</code> in PgBouncer or turn prepared statements off in the driver. Silently mismatched configuration produces intermittent <code>prepared statement &quot;S_1&quot; does not exist</code> errors under load and nowhere else.</p>
+</blockquote>
+<p>Sizing: total server connections across all poolers should stay comfortably under <code>max_connections</code>. A common shape is <code>max_connections = 200</code> on the server, <code>default_pool_size = 20</code> per pooler instance, and thousands of client connections above that. Alternatives worth knowing: <strong>Odyssey</strong> (multi-threaded), <strong>pgcat</strong> (pooling plus load balancing and sharding), and the pooler built into most managed platforms.</p>
+<hr>
+<h1 id="Chapter-6-—-Security"><a href="#Chapter-6-—-Security" class="headerlink" title="Chapter 6 — Security"></a>Chapter 6 — Security</h1>
+<h2 id="Roles-and-privileges"><a href="#Roles-and-privileges" class="headerlink" title="Roles and privileges"></a>Roles and privileges</h2>
+<p>PostgreSQL has one concept — the <strong>role</strong> — that plays the part of both user and group. <code>LOGIN</code> is just an attribute.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- Group roles carry the privileges; login roles inherit them.</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> ROLE app_read   NOLOGIN;</span><br><span class="line"><span class="hljs-keyword">CREATE</span> ROLE app_write  NOLOGIN;</span><br><span class="line"><span class="hljs-keyword">CREATE</span> ROLE app_svc    LOGIN PASSWORD <span class="hljs-string">&#x27;...&#x27;</span> <span class="hljs-keyword">IN</span> ROLE app_write;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">CONNECT</span> <span class="hljs-keyword">ON</span> DATABASE shop <span class="hljs-keyword">TO</span> app_read;</span><br><span class="line"><span class="hljs-keyword">GRANT</span> USAGE   <span class="hljs-keyword">ON</span> SCHEMA public <span class="hljs-keyword">TO</span> app_read;</span><br><span class="line"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SELECT</span>  <span class="hljs-keyword">ON</span> <span class="hljs-keyword">ALL</span> TABLES <span class="hljs-keyword">IN</span> SCHEMA public <span class="hljs-keyword">TO</span> app_read;</span><br><span class="line"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">INSERT</span>, <span class="hljs-keyword">UPDATE</span>, <span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">ALL</span> TABLES <span class="hljs-keyword">IN</span> SCHEMA public <span class="hljs-keyword">TO</span> app_write;</span><br><span class="line"><span class="hljs-keyword">GRANT</span> app_read <span class="hljs-keyword">TO</span> app_write;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- ALL TABLES applies only to tables that exist NOW. For future ones:</span></span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">DEFAULT</span> PRIVILEGES <span class="hljs-keyword">IN</span> SCHEMA public</span><br><span class="line">    <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ON</span> TABLES <span class="hljs-keyword">TO</span> app_read;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">DEFAULT</span> PRIVILEGES <span class="hljs-keyword">IN</span> SCHEMA public</span><br><span class="line">    <span class="hljs-keyword">GRANT</span> USAGE, <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ON</span> SEQUENCES <span class="hljs-keyword">TO</span> app_write;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>ALTER DEFAULT PRIVILEGES</code> applies to objects created <strong>by the role that runs it</strong>. Run it as the role that owns your migrations, or specify <code>FOR ROLE migrator</code>, or the next table created will silently be inaccessible.</p>
+<p>Baseline hardening:</p>
+<ul>
+<li>The application never connects as a superuser, and never as the schema owner. A compromised application should not be able to <code>DROP TABLE</code>.</li>
+<li>Revoke the default public access: since PostgreSQL 15 the <code>public</code> schema no longer grants <code>CREATE</code> to <code>PUBLIC</code>, but on older clusters run <code>REVOKE CREATE ON SCHEMA public FROM PUBLIC;</code>.</li>
+<li><code>REVOKE ALL ON DATABASE shop FROM PUBLIC;</code> then grant <code>CONNECT</code> explicitly.</li>
+<li>Separate roles for migrations (DDL), the application (DML), read replicas/analytics (<code>SELECT</code> only), and backups (<code>pg_read_all_data</code>, a predefined role since PostgreSQL 14).</li>
+</ul>
+<h2 id="Row-level-security"><a href="#Row-level-security" class="headerlink" title="Row-level security"></a>Row-level security</h2>
+<p>RLS makes the database itself filter rows per user — the multi-tenancy control that cannot be forgotten by an application developer.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> documents (</span><br><span class="line">    id         <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY,</span><br><span class="line">    tenant_id  <span class="hljs-type">bigint</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    owner      text   <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    body       text</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> documents ENABLE <span class="hljs-type">ROW</span> LEVEL SECURITY;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> documents FORCE <span class="hljs-type">ROW</span> LEVEL SECURITY;   <span class="hljs-comment">-- applies to the table owner too</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- Read policy: only rows for the tenant in the current session setting</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> POLICY tenant_read <span class="hljs-keyword">ON</span> documents</span><br><span class="line">    <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">SELECT</span></span><br><span class="line">    <span class="hljs-keyword">USING</span> (tenant_id <span class="hljs-operator">=</span> current_setting(<span class="hljs-string">&#x27;app.tenant_id&#x27;</span>)::<span class="hljs-type">bigint</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- Write policy: cannot insert or move a row into another tenant</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> POLICY tenant_write <span class="hljs-keyword">ON</span> documents</span><br><span class="line">    <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">ALL</span></span><br><span class="line">    <span class="hljs-keyword">USING</span>      (tenant_id <span class="hljs-operator">=</span> current_setting(<span class="hljs-string">&#x27;app.tenant_id&#x27;</span>)::<span class="hljs-type">bigint</span>)</span><br><span class="line">    <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">CHECK</span> (tenant_id <span class="hljs-operator">=</span> current_setting(<span class="hljs-string">&#x27;app.tenant_id&#x27;</span>)::<span class="hljs-type">bigint</span>);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The application sets the tenant at the start of each transaction:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">BEGIN</span>;</span><br><span class="line"><span class="hljs-keyword">SET</span> <span class="hljs-keyword">LOCAL</span> app.tenant_id <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;4711&#x27;</span>;     <span class="hljs-comment">-- LOCAL: reverts at commit, pooler-safe</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> documents;              <span class="hljs-comment">-- only tenant 4711&#x27;s rows exist, as far as this query knows</span></span><br><span class="line"><span class="hljs-keyword">COMMIT</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Three things to get right:</p>
+<ul>
+<li><code>USING</code> filters what is <strong>visible</strong>; <code>WITH CHECK</code> constrains what may be <strong>written</strong>. Omit <code>WITH CHECK</code> and a tenant can insert rows belonging to another tenant that it then cannot see.</li>
+<li>Without <code>FORCE ROW LEVEL SECURITY</code>, the table owner bypasses all policies. Superusers and roles with <code>BYPASSRLS</code> always bypass them.</li>
+<li>Use <code>SET LOCAL</code>, never <code>SET</code>, when a pooler is in front (Chapter 5). A leaked <code>app.tenant_id</code> on a reused backend is a cross-tenant data leak.</li>
+<li>Index the policy column. Every query now carries <code>tenant_id = ...</code>, so <code>(tenant_id, ...)</code> should lead your indexes.</li>
+</ul>
+<h2 id="pg_hbaconf-and-authentication"><a href="#pg_hbaconf-and-authentication" class="headerlink" title="pg_hba.conf and authentication"></a>pg_hba.conf and authentication</h2>
+<p><code>pg_hba.conf</code> is evaluated <strong>top to bottom, first match wins</strong>. The most common misconfiguration is a broad early rule shadowing the strict rule below it.</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line"><span class="hljs-comment"># TYPE  DATABASE      USER         ADDRESS          METHOD</span></span><br><span class="line"><span class="hljs-attribute">local</span>   <span class="hljs-literal">all</span>           postgres                      peer</span><br><span class="line"><span class="hljs-attribute">host</span>    shop          app_svc      <span class="hljs-number">10.0.1.0</span>/<span class="hljs-number">24</span>      scram-sha-<span class="hljs-number">256</span></span><br><span class="line"><span class="hljs-attribute">hostssl</span> shop          app_svc      <span class="hljs-number">0.0.0.0</span>/<span class="hljs-number">0</span>        scram-sha-<span class="hljs-number">256</span>   clientcert=verify-ca</span><br><span class="line"><span class="hljs-attribute">host</span>    replication   replicator   <span class="hljs-number">10.0.0.0</span>/<span class="hljs-number">8</span>       scram-sha-<span class="hljs-number">256</span></span><br><span class="line"><span class="hljs-attribute">host</span>    <span class="hljs-literal">all</span>           <span class="hljs-literal">all</span>          <span class="hljs-number">0.0.0.0</span>/<span class="hljs-number">0</span>        reject</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scram-sha-256</code></td>
+<td>The correct default. Set <code>password_encryption = 'scram-sha-256'</code> (the default since PostgreSQL 14) and reset every password so the stored verifier is upgraded.</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td>Deprecated and weak. Migrate off it.</td>
+</tr>
+<tr>
+<td><code>trust</code></td>
+<td>No authentication at all. Never outside a throwaway container.</td>
+</tr>
+<tr>
+<td><code>peer</code> / <code>ident</code></td>
+<td>OS-user based; fine for local admin access.</td>
+</tr>
+<tr>
+<td><code>cert</code></td>
+<td>TLS client certificates. Strong, operationally heavy.</td>
+</tr>
+<tr>
+<td><code>ldap</code> / <code>gss</code> / <code>sspi</code></td>
+<td>Enterprise directory integration.</td>
+</tr>
+</tbody>
+</table>
+<p>Reload after editing: <code>SELECT pg_reload_conf();</code> — no restart needed. Inspect the effective rules with <code>SELECT * FROM pg_hba_file_rules;</code>, which also reports parse errors.</p>
+<h2 id="TLS"><a href="#TLS" class="headerlink" title="TLS"></a>TLS</h2>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-attr">ssl</span> = <span class="hljs-literal">on</span></span><br><span class="line"><span class="hljs-attr">ssl_cert_file</span> = <span class="hljs-string">&#x27;/etc/ssl/certs/server.crt&#x27;</span></span><br><span class="line"><span class="hljs-attr">ssl_key_file</span>  = <span class="hljs-string">&#x27;/etc/ssl/private/server.key&#x27;</span></span><br><span class="line"><span class="hljs-attr">ssl_min_protocol_version</span> = <span class="hljs-string">&#x27;TLSv1.2&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Server-side <code>ssl = on</code> only <em>permits</em> TLS. The client decides whether to require it, and the default (<code>sslmode=prefer</code>) silently falls back to plaintext. Force it from the client, and use <code>verify-full</code> so the certificate is actually checked against the hostname:</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="plaintext"><span class="line">postgresql:<span class="hljs-regexp">//</span>app_svc@db.internal:<span class="hljs-number">5432</span><span class="hljs-regexp">/shop?sslmode=verify-full&amp;sslrootcert=/</span>etc<span class="hljs-regexp">/ssl/</span>ca.pem</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Use <code>hostssl</code> (not <code>host</code>) lines in <code>pg_hba.conf</code> for anything crossing a network boundary, so the server rejects plaintext rather than trusting the client to ask.</p>
+<h2 id="Secrets"><a href="#Secrets" class="headerlink" title="Secrets"></a>Secrets</h2>
+<ul>
+<li>Never in the repository, never in a connection string in application source, never in a shell history.</li>
+<li>Use the platform's secret manager (AWS Secrets Manager, GCP Secret Manager, Vault, Kubernetes secrets with encryption at rest) and inject at runtime.</li>
+<li>Prefer short-lived credentials where the platform offers them — IAM authentication on RDS/Cloud SQL issues a token valid for minutes rather than a static password.</li>
+<li><code>~/.pgpass</code> (mode <code>0600</code>) for operator tooling; environment variables for containers; never a command-line <code>-W</code> password argument, which lands in the process list.</li>
+<li>Rotate on a schedule, and make the rotation a tested procedure rather than a theoretical one.</li>
+</ul>
+<hr>
+<h1 id="Chapter-7-—-Monitoring-and-alerting"><a href="#Chapter-7-—-Monitoring-and-alerting" class="headerlink" title="Chapter 7 — Monitoring and alerting"></a>Chapter 7 — Monitoring and alerting</h1>
+<h2 id="The-views-that-matter"><a href="#The-views-that-matter" class="headerlink" title="The views that matter"></a>The views that matter</h2>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>Tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pg_stat_activity</code></td>
+<td>What every backend is doing right now: <code>state</code>, <code>wait_event_type</code>, <code>xact_start</code>, <code>query</code></td>
+</tr>
+<tr>
+<td><code>pg_stat_database</code></td>
+<td>Per database: commits, rollbacks, <code>blks_hit</code>/<code>blks_read</code>, <code>deadlocks</code>, <code>temp_files</code>, <code>conflicts</code></td>
+</tr>
+<tr>
+<td><code>pg_stat_user_tables</code></td>
+<td>Per table: seq vs index scans, <code>n_dead_tup</code>, last (auto)vacuum and analyze</td>
+</tr>
+<tr>
+<td><code>pg_stat_user_indexes</code></td>
+<td>Per index: <code>idx_scan</code> — zero means an unused index costing write throughput</td>
+</tr>
+<tr>
+<td><code>pg_stat_statements</code></td>
+<td>Query-level aggregate cost. The starting point of tuning (post 04)</td>
+</tr>
+<tr>
+<td><code>pg_stat_replication</code></td>
+<td>Per-standby lag at each stage</td>
+</tr>
+<tr>
+<td><code>pg_stat_archiver</code></td>
+<td>WAL archiving success and failure counts</td>
+</tr>
+<tr>
+<td><code>pg_stat_bgwriter</code></td>
+<td>Checkpoint counts — a high <code>checkpoints_req</code> vs <code>checkpoints_timed</code> ratio means <code>max_wal_size</code> is too small</td>
+</tr>
+<tr>
+<td><code>pg_stat_io</code></td>
+<td>Per-backend-type I/O breakdown (PostgreSQL 16+)</td>
+</tr>
+<tr>
+<td><code>pg_locks</code></td>
+<td>Lock waits and blocking chains</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- Blocking chains: who is stuck behind whom, right now</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> blocked.pid        <span class="hljs-keyword">AS</span> blocked_pid,</span><br><span class="line">       blocked.query      <span class="hljs-keyword">AS</span> blocked_query,</span><br><span class="line">       blocking.pid       <span class="hljs-keyword">AS</span> blocking_pid,</span><br><span class="line">       blocking.query     <span class="hljs-keyword">AS</span> blocking_query,</span><br><span class="line">       now() <span class="hljs-operator">-</span> blocked.query_start <span class="hljs-keyword">AS</span> blocked_for</span><br><span class="line"><span class="hljs-keyword">FROM</span> pg_stat_activity blocked</span><br><span class="line"><span class="hljs-keyword">JOIN</span> <span class="hljs-keyword">LATERAL</span> <span class="hljs-built_in">unnest</span>(pg_blocking_pids(blocked.pid)) <span class="hljs-keyword">AS</span> b(pid) <span class="hljs-keyword">ON</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-keyword">JOIN</span> pg_stat_activity blocking <span class="hljs-keyword">ON</span> blocking.pid <span class="hljs-operator">=</span> b.pid</span><br><span class="line"><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">cardinality</span>(pg_blocking_pids(blocked.pid)) <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-attr">log_min_duration_statement</span> = <span class="hljs-number">500</span>      <span class="hljs-comment"># log every statement over 500 ms, with parameters</span></span><br><span class="line"><span class="hljs-attr">log_checkpoints</span> = <span class="hljs-literal">on</span></span><br><span class="line"><span class="hljs-attr">log_lock_waits</span> = <span class="hljs-literal">on</span>                   <span class="hljs-comment"># logs waits exceeding deadlock_timeout</span></span><br><span class="line"><span class="hljs-attr">log_temp_files</span> = <span class="hljs-number">0</span>                    <span class="hljs-comment"># every temp file - finds work_mem problems</span></span><br><span class="line"><span class="hljs-attr">log_autovacuum_min_duration</span> = <span class="hljs-number">1000</span></span><br><span class="line"><span class="hljs-attr">log_connections</span> = <span class="hljs-literal">on</span></span><br><span class="line"><span class="hljs-attr">log_disconnections</span> = <span class="hljs-literal">on</span></span><br><span class="line"><span class="hljs-attr">log_line_prefix</span> = <span class="hljs-string">&#x27;%m [%p] %q%u@%d app=%a &#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>log_min_duration_statement</code> complements <code>pg_stat_statements</code> rather than duplicating it: <code>pg_stat_statements</code> gives aggregates with normalised text, the log gives individual slow executions <strong>with their actual parameter values</strong> — which is what you need to reproduce a plan.</p>
+<p>For heavier sampling use <code>auto_explain</code> with <code>auto_explain.log_min_duration</code> and <code>auto_explain.log_analyze</code> (understanding that <code>log_analyze</code> adds real overhead), which captures the actual plan of slow statements as they happen.</p>
+<h2 id="What-to-alert-on"><a href="#What-to-alert-on" class="headerlink" title="What to alert on"></a>What to alert on</h2>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Source</th>
+<th>Why it wakes someone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Replication replay lag over threshold (bytes)</td>
+<td><code>pg_stat_replication</code></td>
+<td>Failover would lose data; read replicas serve stale results</td>
+</tr>
+<tr>
+<td>Inactive replication slot with growing retention</td>
+<td><code>pg_replication_slots</code></td>
+<td>Primary's <code>pg_wal</code> will fill the disk</td>
+</tr>
+<tr>
+<td>WAL archiver failures</td>
+<td><code>pg_stat_archiver.last_failed_time</code></td>
+<td>PITR is silently broken <em>and</em> disk will fill</td>
+</tr>
+<tr>
+<td>Transaction ID age approaching <code>autovacuum_freeze_max_age</code></td>
+<td><code>age(datfrozenxid)</code></td>
+<td>Cluster will refuse writes (post 05)</td>
+</tr>
+<tr>
+<td>Disk usage on the data and WAL volumes</td>
+<td>OS</td>
+<td>A full volume shuts PostgreSQL down</td>
+</tr>
+<tr>
+<td>Connections near <code>max_connections</code></td>
+<td><code>pg_stat_activity</code> count</td>
+<td>New connections will be refused</td>
+</tr>
+<tr>
+<td>Longest transaction / longest <code>idle in transaction</code></td>
+<td><code>pg_stat_activity</code></td>
+<td>Blocks vacuum cluster-wide; blocks DDL</td>
+</tr>
+<tr>
+<td>Deadlocks per interval</td>
+<td><code>pg_stat_database.deadlocks</code></td>
+<td>A lock-ordering bug shipped</td>
+</tr>
+<tr>
+<td>Cache hit ratio falling sharply</td>
+<td><code>pg_stat_database</code></td>
+<td>Working set outgrew memory; investigate, do not alert on a fixed number</td>
+</tr>
+<tr>
+<td>p99 query latency, and error rate by SQLSTATE</td>
+<td>Application / <code>pg_stat_statements</code></td>
+<td>The signal your users actually feel</td>
+</tr>
+<tr>
+<td>Backup job success, <strong>and last successful restore test</strong></td>
+<td>Backup tool</td>
+<td>The only proof the backup exists</td>
+</tr>
+</tbody>
+</table>
+<p>Alert on things that are actionable and that precede user-visible failure. Cache hit ratio, transactions per second and index counts are dashboard metrics, not pager metrics.</p>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Full-PITR-drill"><a href="#Exercise-1-—-Full-PITR-drill" class="headerlink" title="Exercise 1 — Full PITR drill"></a>Exercise 1 — Full PITR drill</h2>
+<p>Set up continuous archiving on a scratch cluster. Take a base backup, insert recognisable data, note the wall-clock time, then <code>DROP TABLE</code> something important. Restore to one minute before the drop and prove the table is back.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-comment"># Before: archive_mode = on, archive_command set, wal_level = replica</span></span><br><span class="line">pg_basebackup -D /backups/base -X stream -c fast -P</span><br><span class="line">psql -c <span class="hljs-string">&quot;INSERT INTO audit(note) VALUES (&#x27;marker before drop&#x27;);&quot;</span></span><br><span class="line">psql -c <span class="hljs-string">&quot;SELECT now();&quot;</span>          <span class="hljs-comment"># -&gt; 2026-06-02 09:13:22+09</span></span><br><span class="line">psql -c <span class="hljs-string">&quot;DROP TABLE orders;&quot;</span>     <span class="hljs-comment"># the accident</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Restore</span></span><br><span class="line">systemctl stop postgresql</span><br><span class="line"><span class="hljs-built_in">mv</span> /var/lib/postgresql/17/main /var/lib/postgresql/17/main.broken</span><br><span class="line"><span class="hljs-built_in">cp</span> -a /backups/base /var/lib/postgresql/17/main</span><br><span class="line"><span class="hljs-built_in">cat</span> &gt;&gt; /var/lib/postgresql/17/main/postgresql.auto.conf &lt;&lt;<span class="hljs-string">&#x27;EOF&#x27;</span></span><br><span class="line">restore_command = <span class="hljs-string">&#x27;cp /wal_archive/%f %p&#x27;</span></span><br><span class="line">recovery_target_time = <span class="hljs-string">&#x27;2026-06-02 09:13:22+09&#x27;</span></span><br><span class="line">recovery_target_action = <span class="hljs-string">&#x27;pause&#x27;</span></span><br><span class="line">EOF</span><br><span class="line"><span class="hljs-built_in">touch</span> /var/lib/postgresql/17/main/recovery.signal</span><br><span class="line">systemctl start postgresql</span><br><span class="line">psql -c <span class="hljs-string">&quot;SELECT count(*) FROM orders;&quot;</span>      <span class="hljs-comment"># verify, THEN:</span></span><br><span class="line">psql -c <span class="hljs-string">&quot;SELECT pg_wal_replay_resume();&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-Streaming-replication-with-a-slot"><a href="#Exercise-2-—-Streaming-replication-with-a-slot" class="headerlink" title="Exercise 2 — Streaming replication with a slot"></a>Exercise 2 — Streaming replication with a slot</h2>
+<p>Build a primary and one standby with a physical replication slot. Write continuously on the primary and read on the standby. Then stop the standby for ten minutes and show, from <code>pg_replication_slots</code>, exactly how much WAL the primary retained on its behalf.</p>
+<h2 id="Exercise-3-—-Break-the-slot-deliberately"><a href="#Exercise-3-—-Break-the-slot-deliberately" class="headerlink" title="Exercise 3 — Break the slot deliberately"></a>Exercise 3 — Break the slot deliberately</h2>
+<p>Set <code>max_slot_wal_keep_size</code> to a small value, stop the standby, and generate enough WAL to exceed it. Observe the slot becoming <code>lost</code> and the standby failing to resume. Explain in two sentences why this outcome is preferable to the primary filling its disk.</p>
+<h2 id="Exercise-4-—-Transaction-pooling-failures"><a href="#Exercise-4-—-Transaction-pooling-failures" class="headerlink" title="Exercise 4 — Transaction pooling failures"></a>Exercise 4 — Transaction pooling failures</h2>
+<p>Put PgBouncer in <code>pool_mode = transaction</code> in front of a test database. Reproduce three distinct failures: a <code>SET</code> outside a transaction that does not stick, a session advisory lock that is never released, and a prepared-statement error. Then fix each one.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- 1. Session SET does not stick -&gt; use SET LOCAL inside the transaction</span></span><br><span class="line"><span class="hljs-keyword">BEGIN</span>; <span class="hljs-keyword">SET</span> <span class="hljs-keyword">LOCAL</span> app.tenant_id <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;42&#x27;</span>; <span class="hljs-keyword">SELECT</span> current_setting(<span class="hljs-string">&#x27;app.tenant_id&#x27;</span>); <span class="hljs-keyword">COMMIT</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- 2. Session advisory lock leaks -&gt; use the transaction-scoped variant</span></span><br><span class="line"><span class="hljs-keyword">BEGIN</span>; <span class="hljs-keyword">SELECT</span> pg_advisory_xact_lock(<span class="hljs-number">42</span>); <span class="hljs-comment">/* work */</span> <span class="hljs-keyword">COMMIT</span>;   <span class="hljs-comment">-- released at COMMIT</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- 3. Prepared statements: either enable protocol-level support in PgBouncer</span></span><br><span class="line"><span class="hljs-comment">--      max_prepared_statements = 200</span></span><br><span class="line"><span class="hljs-comment">--    or disable them in the driver, e.g. psycopg3:</span></span><br><span class="line"><span class="hljs-comment">--      conn.prepare_threshold = None</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-5-—-Row-level-security"><a href="#Exercise-5-—-Row-level-security" class="headerlink" title="Exercise 5 — Row-level security"></a>Exercise 5 — Row-level security</h2>
+<p>Create a two-tenant <code>documents</code> table with RLS. Show that a query with <code>app.tenant_id = '1'</code> cannot see tenant 2's rows, that <code>FORCE ROW LEVEL SECURITY</code> also constrains the owner, and that omitting <code>WITH CHECK</code> lets a tenant insert a row it then cannot read back.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> documents ENABLE <span class="hljs-type">ROW</span> LEVEL SECURITY;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> documents FORCE <span class="hljs-type">ROW</span> LEVEL SECURITY;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">CREATE</span> POLICY tenant_all <span class="hljs-keyword">ON</span> documents</span><br><span class="line">    <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">ALL</span></span><br><span class="line">    <span class="hljs-keyword">USING</span>      (tenant_id <span class="hljs-operator">=</span> current_setting(<span class="hljs-string">&#x27;app.tenant_id&#x27;</span>)::<span class="hljs-type">bigint</span>)</span><br><span class="line">    <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">CHECK</span> (tenant_id <span class="hljs-operator">=</span> current_setting(<span class="hljs-string">&#x27;app.tenant_id&#x27;</span>)::<span class="hljs-type">bigint</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">BEGIN</span>; <span class="hljs-keyword">SET</span> <span class="hljs-keyword">LOCAL</span> app.tenant_id <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;1&#x27;</span>;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FROM</span> documents;                         <span class="hljs-comment">-- tenant 1 only</span></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> documents(tenant_id, owner, body) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-string">&#x27;y&#x27;</span>);</span><br><span class="line"><span class="hljs-comment">-- ERROR: new row violates row-level security policy for table &quot;documents&quot;</span></span><br><span class="line"><span class="hljs-keyword">COMMIT</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">CREATE</span> INDEX <span class="hljs-keyword">ON</span> documents (tenant_id, id);   <span class="hljs-comment">-- the policy predicate needs an index</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-6-—-Audit-pg_hbaconf"><a href="#Exercise-6-—-Audit-pg_hbaconf" class="headerlink" title="Exercise 6 — Audit pg_hba.conf"></a>Exercise 6 — Audit pg_hba.conf</h2>
+<p>Take a default <code>pg_hba.conf</code> and harden it: no <code>trust</code>, <code>scram-sha-256</code> everywhere, <code>hostssl</code> for anything non-local, a dedicated replication line, and an explicit <code>reject</code> at the end. Verify with <code>pg_hba_file_rules</code> and confirm a plaintext connection is refused.</p>
+<h2 id="Exercise-7-—-Design-the-alert-set"><a href="#Exercise-7-—-Design-the-alert-set" class="headerlink" title="Exercise 7 — Design the alert set"></a>Exercise 7 — Design the alert set</h2>
+<p>For a two-node cluster with nightly base backups and continuous archiving, write out every alert you would configure: the metric, its source query, the threshold, and the first three steps of the runbook for each. Deliberately include no alert that is not actionable.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logical dump (best format)</td>
+<td><code>pg_dump -Fc -d db -f db.dump</code></td>
+</tr>
+<tr>
+<td>Roles and globals</td>
+<td><code>pg_dumpall --globals-only -f globals.sql</code></td>
+</tr>
+<tr>
+<td>Parallel restore</td>
+<td><code>pg_restore -d db -j 4 db.dump</code></td>
+</tr>
+<tr>
+<td>Physical base backup</td>
+<td><code>pg_basebackup -D dir -X stream -c fast -P</code></td>
+</tr>
+<tr>
+<td>Enable archiving</td>
+<td><code>archive_mode = on</code> + a failing-on-error <code>archive_command</code></td>
+</tr>
+<tr>
+<td>Recovery target</td>
+<td><code>recovery_target_time</code> + <code>recovery.signal</code> (PG 12+)</td>
+</tr>
+<tr>
+<td>Pause before committing to recovery</td>
+<td><code>recovery_target_action = 'pause'</code>, then <code>pg_wal_replay_resume()</code></td>
+</tr>
+<tr>
+<td>Create a physical slot</td>
+<td><code>SELECT pg_create_physical_replication_slot('standby_1');</code></td>
+</tr>
+<tr>
+<td>Standby from scratch</td>
+<td><code>pg_basebackup -R -S standby_1 -X stream</code></td>
+</tr>
+<tr>
+<td>Cap slot WAL retention</td>
+<td><code>max_slot_wal_keep_size = '64GB'</code> (PG 13+)</td>
+</tr>
+<tr>
+<td>Synchronous replication</td>
+<td><code>synchronous_standby_names = 'ANY 1 (a, b)'</code></td>
+</tr>
+<tr>
+<td>Replication lag (primary)</td>
+<td><code>pg_stat_replication</code> — <code>replay_lsn</code> diff and <code>replay_lag</code></td>
+</tr>
+<tr>
+<td>Replication lag (standby)</td>
+<td><code>now() - pg_last_xact_replay_timestamp()</code></td>
+</tr>
+<tr>
+<td>Promote a standby</td>
+<td><code>pg_ctl promote</code> or <code>SELECT pg_promote();</code></td>
+</tr>
+<tr>
+<td>Avoid split brain</td>
+<td>quorum + fencing (Patroni / repmgr), single write endpoint</td>
+</tr>
+<tr>
+<td>Logical replication</td>
+<td><code>CREATE PUBLICATION</code> / <code>CREATE SUBSCRIPTION</code>, <code>wal_level = logical</code></td>
+</tr>
+<tr>
+<td>Near-zero-downtime major upgrade</td>
+<td>logical replication + sequence <code>setval()</code> at cutover</td>
+</tr>
+<tr>
+<td>Fast in-place major upgrade</td>
+<td><code>pg_upgrade --link</code>, then <code>ANALYZE</code></td>
+</tr>
+<tr>
+<td>Pooling mode for web apps</td>
+<td>PgBouncer <code>pool_mode = transaction</code></td>
+</tr>
+<tr>
+<td>Pooler-safe session settings</td>
+<td><code>SET LOCAL</code>, <code>pg_advisory_xact_lock</code></td>
+</tr>
+<tr>
+<td>Future-table grants</td>
+<td><code>ALTER DEFAULT PRIVILEGES IN SCHEMA ... GRANT ...</code></td>
+</tr>
+<tr>
+<td>Row-level security</td>
+<td><code>ENABLE</code> + <code>FORCE ROW LEVEL SECURITY</code> + policy with <code>USING</code> <strong>and</strong> <code>WITH CHECK</code></td>
+</tr>
+<tr>
+<td>Auth method</td>
+<td><code>scram-sha-256</code>; check with <code>pg_hba_file_rules</code></td>
+</tr>
+<tr>
+<td>Force TLS from the client</td>
+<td><code>sslmode=verify-full&amp;sslrootcert=...</code></td>
+</tr>
+<tr>
+<td>Log slow statements</td>
+<td><code>log_min_duration_statement = 500</code></td>
+</tr>
+<tr>
+<td>Who is blocking whom</td>
+<td><code>pg_blocking_pids(pid)</code> joined to <code>pg_stat_activity</code></td>
+</tr>
+<tr>
+<td>Wraparound margin</td>
+<td><code>SELECT datname, age(datfrozenxid) FROM pg_database;</code></td>
+</tr>
+<tr>
+<td>Proof a backup works</td>
+<td>a scheduled automated restore that runs a query and fails loudly</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Course-base-complete-—-whats-next"><a href="#Course-base-complete-—-whats-next" class="headerlink" title="Course base complete — what's next"></a>Course base complete — what's next</h1>
+<p>You now have the base PostgreSQL course end to end: installation and the client, SQL and the type system, joins and window functions, indexes and the planner, cost-based optimization and statistics, MVCC and concurrency control, schema design and JSONB, and the operational layer that keeps all of it running. That is the working knowledge behind most day-to-day PostgreSQL engineering, and enough to be the person on a team who can answer &quot;why is this slow&quot; and &quot;can we restore that&quot;.</p>
+<p>The remaining posts go deeper into specialisations, each of which is a topic in its own right.</p>
+<p><strong>Planned future posts (extensions):</strong></p>
+<ul>
+<li>PostgreSQL 08: the extensions ecosystem — PostGIS, pgvector, TimescaleDB, pg_cron, pg_partman, and how to evaluate an extension before depending on it</li>
+<li>PostgreSQL 09: full-text search deep dive — <code>tsvector</code>/<code>tsquery</code>, dictionaries and stemming, ranking, GIN vs GiST, trigram fuzzy matching, and where a dedicated search engine becomes the better answer</li>
+<li>PostgreSQL 10: pgvector and RAG on PostgreSQL — embeddings, HNSW and IVFFlat indexes, hybrid search, and a production build (cross-reference <code>mongo_22_rag_production_build</code> for the Atlas Vector Search equivalent)</li>
+<li>PostgreSQL 11: partitioning and time-series at scale — pg_partman, retention and rollup strategies, TimescaleDB hypertables and compression</li>
+<li>PostgreSQL 12: performance tuning deep dive — <code>postgresql.conf</code> from first principles, kernel settings (huge pages, <code>vm.overcommit</code>, I/O schedulers), filesystem and storage choices, and benchmarking with <code>pgbench</code></li>
+<li>PostgreSQL 13: PL/pgSQL, triggers, and stored procedures — when server-side logic is right, when it is a maintenance trap, and testing it with pgTAP</li>
+<li>PostgreSQL 14: ORMs and drivers — psycopg3, SQLAlchemy 2.0, Prisma, Drizzle: pooling behaviour, prepared statements, migration tooling, and the N+1 patterns each one encourages</li>
+<li>PostgreSQL 15: managed PostgreSQL — RDS and Aurora, Cloud SQL, Neon, Supabase: what each takes over, what each takes away, and cost models (cross-reference the AWS series, particularly <code>aws_04_managed_data</code>)</li>
+</ul>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/wal-intro.html" target="_blank" rel="noopener external nofollow noreferrer">Write-Ahead Logging</a></li>
+<li><a href="https://www.postgresql.org/docs/current/backup.html" target="_blank" rel="noopener external nofollow noreferrer">Backup and Restore</a></li>
+<li><a href="https://www.postgresql.org/docs/current/continuous-archiving.html" target="_blank" rel="noopener external nofollow noreferrer">Continuous Archiving and Point-in-Time Recovery</a></li>
+<li><a href="https://www.postgresql.org/docs/current/high-availability.html" target="_blank" rel="noopener external nofollow noreferrer">High Availability, Load Balancing, and Replication</a></li>
+<li><a href="https://www.postgresql.org/docs/current/logical-replication.html" target="_blank" rel="noopener external nofollow noreferrer">Logical Replication</a></li>
+<li><a href="https://www.postgresql.org/docs/current/pgupgrade.html" target="_blank" rel="noopener external nofollow noreferrer"><code>pg_upgrade</code></a></li>
+<li><a href="https://www.postgresql.org/docs/current/client-authentication.html" target="_blank" rel="noopener external nofollow noreferrer">Client Authentication — <code>pg_hba.conf</code></a></li>
+<li><a href="https://www.postgresql.org/docs/current/ddl-rowsecurity.html" target="_blank" rel="noopener external nofollow noreferrer">Row Security Policies</a></li>
+<li><a href="https://www.postgresql.org/docs/current/ssl-tcp.html" target="_blank" rel="noopener external nofollow noreferrer">Secure TCP/IP Connections with SSL</a></li>
+<li><a href="https://www.postgresql.org/docs/current/monitoring-stats.html" target="_blank" rel="noopener external nofollow noreferrer">The Cumulative Statistics System</a></li>
+<li><a href="https://www.pgbouncer.org/" target="_blank" rel="noopener external nofollow noreferrer">PgBouncer documentation</a></li>
+<li><a href="https://patroni.readthedocs.io/" target="_blank" rel="noopener external nofollow noreferrer">Patroni</a> · <a href="https://pgbackrest.org/" target="_blank" rel="noopener external nofollow noreferrer">pgBackRest</a> · <a href="https://pgbarman.org/" target="_blank" rel="noopener external nofollow noreferrer">Barman</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a Patroni-on-Kubernetes walkthrough, a worked <code>pg_rewind</code> recovery of a diverged old primary, and a cost/behaviour comparison of pgBackRest, Barman and WAL-G on the same dataset.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"PostgreSQL Course — 07 · Operations, Backup, Replication and Security\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"PostgreSQL Course — 07 · Operations, Backup, Replication and Security"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-07-08T12:20:39.000Z","title":"Created 2026-07-08 20:20:39","children":"2026-07-08"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-07-08T12:20:39.000Z","title":"Updated 2026-07-08 20:20:39","children":"2026-07-08"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Database",{"className":"post-meta-categories","href":"/blog/categories/Database/","children":"Database"}]],[["$","span","sep-PostgreSQL",{"children":" > "}],["$","a","PostgreSQL",{"className":"post-meta-categories","href":"/blog/categories/PostgreSQL/","children":"PostgreSQL"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"PostgreSQL Course — 07 · Operations, Backup, Replication and Security","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/07/08/pg_07_operations_backup_replication/","children":"https://invokfung.github.io/blog/2026/07/08/pg_07_operations_backup_replication/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Database",{"className":"post-meta__tags","href":"/blog/tags/Database/","children":"Database"}],["$","a","PostgreSQL",{"className":"post-meta__tags","href":"/blog/tags/PostgreSQL/","children":"PostgreSQL"}],["$","a","Operations",{"className":"post-meta__tags","href":"/blog/tags/Operations/","children":"Operations"}],["$","a","Replication",{"className":"post-meta__tags","href":"/blog/tags/Replication/","children":"Replication"}],["$","a","Security",{"className":"post-meta__tags","href":"/blog/tags/Security/","children":"Security"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/07/09/threejs_13_ai_navmesh_procedural/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/threejs/cover_13_ai_navmesh_procedural.png\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Three.js Course — 13 · AI-Assisted 3D, NavMesh Pathfinding, Procedural</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/07/07/mongo_16_atlas_search_vector_triggers/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/mongo/cover_16_atlas_search_vector_triggers.png\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">MongoDB Course — 16 · Atlas — Search, Vector Search (RAG), Triggers, Stream Processing</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","pg_00_foundations_setup",{"children":["$","a",null,{"href":"/blog/2026/06/05/pg_00_foundations_setup/","title":"PostgreSQL Course — 00 · Foundations and Setup","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-05</div><div class=\"title\">PostgreSQL Course — 00 · Foundations and Setup</div></div>"}}]}],["$","div","pg_01_sql_fundamentals_types",{"children":["$","a",null,{"href":"/blog/2026/06/10/pg_01_sql_fundamentals_types/","title":"PostgreSQL Course — 01 · SQL Fundamentals and Data Types","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-10</div><div class=\"title\">PostgreSQL Course — 01 · SQL Fundamentals and Data Types</div></div>"}}]}],["$","div","pg_02_joins_aggregation_windows",{"children":["$","a",null,{"href":"/blog/2026/06/14/pg_02_joins_aggregation_windows/","title":"PostgreSQL Course — 02 · Joins, Aggregation and Window Functions","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-14</div><div class=\"title\">PostgreSQL Course — 02 · Joins, Aggregation and Window Functions</div></div>"}}]}],["$","div","pg_03_indexes_planner",{"children":["$","a",null,{"href":"/blog/2026/06/19/pg_03_indexes_planner/","title":"PostgreSQL Course — 03 · Indexes and the Query Planner","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-19</div><div class=\"title\">PostgreSQL Course — 03 · Indexes and the Query Planner</div></div>"}}]}],["$","div","mongo_10_replica_sets",{"children":["$","a",null,{"href":"/blog/2026/06/21/mongo_10_replica_sets/","title":"MongoDB Course — 10 · Replica Sets — Primary, Secondary, Oplog, Elections","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_10_replica_sets.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-21</div><div class=\"title\">MongoDB Course — 10 · Replica Sets — Primary, Secondary, Oplog, Elections</div></div>"}}]}],["$","div","pg_04_query_optimization",{"children":["$","a",null,{"href":"/blog/2026/06/25/pg_04_query_optimization/","title":"PostgreSQL Course — 04 · Query Optimization and Statistics","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-25</div><div class=\"title\">PostgreSQL Course — 04 · Query Optimization and Statistics</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-The-write-ahead-log",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-The-write-ahead-log","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — The write-ahead log"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","Full-page-writes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Full-page-writes","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"Full page writes"}]]}],null]}],["$","li","Checkpoints",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Checkpoints","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"Checkpoints"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Backups",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Backups","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Backups"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Logical-dumps",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Logical-dumps","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Logical dumps"}]]}],null]}],["$","li","Physical-base-backups",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Physical-base-backups","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Physical base backups"}]]}],null]}],["$","li","Continuous-archiving-and-point-in-time-recovery",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Continuous-archiving-and-point-in-time-recovery","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"Continuous archiving and point-in-time recovery"}]]}],null]}],["$","li","An-untested-backup-is-not-a-backup",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#An-untested-backup-is-not-a-backup","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"An untested backup is not a backup"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Streaming-replication",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Streaming-replication","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Streaming replication"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Setup",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Setup","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Setup"}]]}],null]}],["$","li","Replication-slots",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Replication-slots","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Replication slots"}]]}],null]}],["$","li","Synchronous-vs-asynchronous",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Synchronous-vs-asynchronous","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"Synchronous vs asynchronous"}]]}],null]}],["$","li","Hot-standby-and-read-scaling",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Hot-standby-and-read-scaling","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"Hot standby and read scaling"}]]}],null]}],["$","li","Monitoring-lag",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Monitoring-lag","children":[["$","span",null,{"className":"toc-number","children":"4.5."}]," ",["$","span",null,{"className":"toc-text","children":"Monitoring lag"}]]}],null]}],["$","li","Failover-and-split-brain",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Failover-and-split-brain","children":[["$","span",null,{"className":"toc-number","children":"4.6."}]," ",["$","span",null,{"className":"toc-text","children":"Failover and split brain"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Logical-replication",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Logical-replication","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Logical replication"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Major-version-upgrade-via-logical-replication",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Major-version-upgrade-via-logical-replication","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Major-version upgrade via logical replication"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Connection-pooling",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Connection-pooling","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Connection pooling"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","PgBouncer-modes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#PgBouncer-modes","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"PgBouncer modes"}]]}],null]}],["$","li","What-breaks-in-transaction-mode",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-breaks-in-transaction-mode","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"What breaks in transaction mode"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Security",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Security","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Security"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Roles-and-privileges",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Roles-and-privileges","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Roles and privileges"}]]}],null]}],["$","li","Row-level-security",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Row-level-security","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"Row-level security"}]]}],null]}],["$","li","pg_hbaconf-and-authentication",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#pg_hbaconf-and-authentication","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"pg_hba.conf and authentication"}]]}],null]}],["$","li","TLS",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#TLS","children":[["$","span",null,{"className":"toc-number","children":"7.4."}]," ",["$","span",null,{"className":"toc-text","children":"TLS"}]]}],null]}],["$","li","Secrets",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Secrets","children":[["$","span",null,{"className":"toc-number","children":"7.5."}]," ",["$","span",null,{"className":"toc-text","children":"Secrets"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Monitoring-and-alerting",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Monitoring-and-alerting","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Monitoring and alerting"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-views-that-matter",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-views-that-matter","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"The views that matter"}]]}],null]}],["$","li","Logging",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Logging","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"Logging"}]]}],null]}],["$","li","What-to-alert-on",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-to-alert-on","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"What to alert on"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Full-PITR-drill",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Full-PITR-drill","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Full PITR drill"}]]}],null]}],["$","li","Exercise-2-—-Streaming-replication-with-a-slot",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Streaming-replication-with-a-slot","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Streaming replication with a slot"}]]}],null]}],["$","li","Exercise-3-—-Break-the-slot-deliberately",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Break-the-slot-deliberately","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Break the slot deliberately"}]]}],null]}],["$","li","Exercise-4-—-Transaction-pooling-failures",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Transaction-pooling-failures","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Transaction pooling failures"}]]}],null]}],["$","li","Exercise-5-—-Row-level-security",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Row-level-security","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Row-level security"}]]}],null]}],["$","li","Exercise-6-—-Audit-pg_hbaconf",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Audit-pg_hbaconf","children":[["$","span",null,{"className":"toc-number","children":"9.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Audit pg_hba.conf"}]]}],null]}],["$","li","Exercise-7-—-Design-the-alert-set",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-7-—-Design-the-alert-set","children":[["$","span",null,{"className":"toc-number","children":"9.7."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 7 — Design the alert set"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Course-base-complete-—-whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Course-base-complete-—-whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Course base complete — what's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"PostgreSQL Course — 07 · Operations, Backup, Replication and Security | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Everything in the previous six posts assumed a database that is up, reachable, and holding correct data. This post is about keeping that true. It cove"}],["$","meta","5",{"name":"keywords","content":"Database,PostgreSQL,Operations,Replication,Security,Course"}],["$","meta","6",{"property":"og:title","content":"PostgreSQL Course — 07 · Operations, Backup, Replication and Security"}],["$","meta","7",{"property":"og:description","content":"Everything in the previous six posts assumed a database that is up, reachable, and holding correct data. This post is about keeping that true. It cove"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"PostgreSQL Course — 07 · Operations, Backup, Replication and Security"}],["$","meta","11",{"name":"twitter:description","content":"Everything in the previous six posts assumed a database that is up, reachable, and holding correct data. This post is about keeping that true. It cove"}]]
+1:null

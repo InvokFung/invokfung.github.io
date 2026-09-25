@@ -1,0 +1,894 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-d028973b9f8f3887.js"],"default"]
+4:["year","2026","d"]
+5:["month","06","d"]
+6:["day","10","d"]
+7:["slug","pg_01_sql_fundamentals_types","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["tSi4Bl_e6QraTpHUkvsOl",[[["",{"children":[["year","2026","d"],{"children":[["month","06","d"],{"children":[["day","10","d"],{"children":[["slug","pg_01_sql_fundamentals_types","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"06\",\"day\":\"10\",\"slug\":\"pg_01_sql_fundamentals_types\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","06","d"],{"children":[["day","10","d"],{"children":[["slug","pg_01_sql_fundamentals_types","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T1c6c6,<p>Type choices are the most expensive decisions in a schema. A wrong index costs a <code>CREATE INDEX</code>; a wrong column type costs a migration, a rewrite, a maintenance window, and — if the type was <code>float</code> for money or <code>timestamp</code> for an instant — a class of bugs that ships to production and only surfaces at quarter-end or the daylight-saving boundary. This post covers the DDL and DML you will write every day, then spends most of its length on the type system, <code>NULL</code> semantics, and constraints, because those are the parts you cannot cheaply change later. Examples target <strong>PostgreSQL 17/18</strong>; version-specific behaviour is called out inline.</p>
+<blockquote>
+<p>Series map: 00 Foundations &amp; Setup → <strong>01 SQL Fundamentals &amp; Data Types</strong> (this post) → 02 Joins, Aggregation &amp; Window Functions → 03 Indexes &amp; the Query Planner → 04 Query Optimization &amp; Statistics → 05 Transactions, MVCC, Isolation &amp; Locking → 06 Schema Design, Normalization &amp; JSONB → 07 Operations, Backup, Replication &amp; Security.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Write DDL: <code>CREATE</code>, <code>ALTER</code>, and <code>DROP TABLE</code>, including the <code>ALTER</code> forms that avoid a full table rewrite.</li>
+<li>Write DML confidently: <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>RETURNING</code>, and upserts via <code>ON CONFLICT</code>.</li>
+<li>Choose correctly among the integer family, <code>numeric</code> vs floating point, <code>text</code> vs <code>varchar</code>, enum vs lookup table.</li>
+<li>Explain why <code>timestamptz</code> is the default correct answer and <code>timestamp</code> almost never is.</li>
+<li>Predict the result of any expression involving <code>NULL</code> under three-valued logic.</li>
+<li>Apply the six constraint types, including <code>EXCLUDE</code>, and add them to live tables without long locks.</li>
+<li>Explain the difference between identity columns and <code>serial</code>, and why new work uses identity.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-DDL-creating-and-evolving-tables"><a href="#Chapter-1-—-DDL-creating-and-evolving-tables" class="headerlink" title="Chapter 1 — DDL: creating and evolving tables"></a>Chapter 1 — DDL: creating and evolving tables</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>DDL</strong> — Data Definition Language: <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>. Changes the shape of the database.</li>
+<li><strong>DML</strong> — Data Manipulation Language: <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>SELECT</code>, <code>MERGE</code>. Changes or reads the contents.</li>
+<li><strong>Table rewrite</strong> — an <code>ALTER TABLE</code> variant that must rebuild every row on disk. Holds an <code>ACCESS EXCLUSIVE</code> lock for the duration, which blocks <em>everything</em>, including reads.</li>
+<li><strong>Catalog</strong> — the system tables (<code>pg_class</code>, <code>pg_attribute</code>, <code>pg_constraint</code>, …) describing the database to itself.</li>
+<li><strong>Domain</strong> — a named, reusable type with constraints attached.</li>
+</ul>
+<h2 id="CREATE-TABLE"><a href="#CREATE-TABLE" class="headerlink" title="CREATE TABLE"></a><code>CREATE TABLE</code></h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> products (</span><br><span class="line">    id          <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY,</span><br><span class="line">    sku         text        <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">UNIQUE</span>,</span><br><span class="line">    name        text        <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    price       <span class="hljs-type">numeric</span>(<span class="hljs-number">12</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">CHECK</span> (price <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span>),</span><br><span class="line">    currency    <span class="hljs-type">char</span>(<span class="hljs-number">3</span>)     <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&#x27;USD&#x27;</span>,</span><br><span class="line">    tags        text[]      <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&#x27;{}&#x27;</span>,</span><br><span class="line">    attributes  jsonb       <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&#x27;{}&#x27;</span>::jsonb,</span><br><span class="line">    discontinued_at timestamptz,</span><br><span class="line">    created_at  timestamptz <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> now(),</span><br><span class="line">    updated_at  timestamptz <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> now()</span><br><span class="line">);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Useful variants:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> products (...);</span><br><span class="line"><span class="hljs-keyword">CREATE</span> TEMPORARY <span class="hljs-keyword">TABLE</span> scratch (...);            <span class="hljs-comment">-- dropped at session end</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> UNLOGGED <span class="hljs-keyword">TABLE</span> cache_rows (...);          <span class="hljs-comment">-- no WAL: fast, but lost on crash</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> archive_2025 (<span class="hljs-keyword">LIKE</span> orders INCLUDING <span class="hljs-keyword">ALL</span>);   <span class="hljs-comment">-- clone structure</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> paid_orders <span class="hljs-keyword">AS</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;paid&#x27;</span>;  <span class="hljs-comment">-- CTAS</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Watch out:</strong> <code>UNLOGGED</code> tables are truncated after a crash and are <strong>not replicated</strong> to standbys. They are correct for genuinely disposable data (materialised scratch, import staging), and a data-loss incident anywhere else.</p>
+</blockquote>
+<h2 id="ALTER-TABLE-—-the-operations-that-are-cheap-and-the-ones-that-are-not"><a href="#ALTER-TABLE-—-the-operations-that-are-cheap-and-the-ones-that-are-not" class="headerlink" title="ALTER TABLE — the operations that are cheap and the ones that are not"></a><code>ALTER TABLE</code> — the operations that are cheap and the ones that are not</h2>
+<p>This is the table to memorise, because the difference between a two-millisecond <code>ALTER</code> and a forty-minute outage is which row you land on.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Rewrite?</th>
+<th>Lock</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADD COLUMN c type</code> (no default)</td>
+<td>No</td>
+<td><code>ACCESS EXCLUSIVE</code>, brief</td>
+<td>Catalog-only</td>
+</tr>
+<tr>
+<td><code>ADD COLUMN c type DEFAULT v</code></td>
+<td><strong>No</strong> since PG 11</td>
+<td><code>ACCESS EXCLUSIVE</code>, brief</td>
+<td>Default stored in catalog, applied on read</td>
+</tr>
+<tr>
+<td><code>ADD COLUMN c type DEFAULT &lt;volatile fn&gt;</code></td>
+<td><strong>Yes</strong></td>
+<td>Long</td>
+<td>e.g. <code>DEFAULT gen_random_uuid()</code> — each row needs a distinct value</td>
+</tr>
+<tr>
+<td><code>DROP COLUMN</code></td>
+<td>No</td>
+<td><code>ACCESS EXCLUSIVE</code>, brief</td>
+<td>Column is marked dead; space reclaimed by later rewrite</td>
+</tr>
+<tr>
+<td><code>ALTER COLUMN … TYPE</code> (binary-coercible, e.g. <code>varchar(50)</code>→<code>text</code>)</td>
+<td>No</td>
+<td><code>ACCESS EXCLUSIVE</code>, brief</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ALTER COLUMN … TYPE</code> (<code>integer</code>→<code>bigint</code>)</td>
+<td><strong>Yes</strong></td>
+<td>Long</td>
+<td>The classic id-exhaustion migration</td>
+</tr>
+<tr>
+<td><code>ALTER COLUMN … SET/DROP DEFAULT</code></td>
+<td>No</td>
+<td>Brief</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ALTER COLUMN … SET NOT NULL</code></td>
+<td>No rewrite, but <strong>full scan</strong></td>
+<td><code>ACCESS EXCLUSIVE</code> for the scan</td>
+<td>See the trick below</td>
+</tr>
+<tr>
+<td><code>ADD CONSTRAINT … CHECK … NOT VALID</code></td>
+<td>No</td>
+<td>Brief</td>
+<td>Then <code>VALIDATE CONSTRAINT</code> under a weaker lock</td>
+</tr>
+<tr>
+<td><code>ADD FOREIGN KEY … NOT VALID</code></td>
+<td>No</td>
+<td><code>SHARE ROW EXCLUSIVE</code></td>
+<td>Then validate separately</td>
+</tr>
+<tr>
+<td><code>SET LOGGED</code> / <code>SET UNLOGGED</code></td>
+<td><strong>Yes</strong></td>
+<td>Long</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">COLUMN</span> weight_grams <span class="hljs-type">integer</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">COLUMN</span> currency <span class="hljs-keyword">SET</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&#x27;EUR&#x27;</span>;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products RENAME <span class="hljs-keyword">COLUMN</span> name <span class="hljs-keyword">TO</span> title;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">COLUMN</span> weight_grams;</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">COLUMN</span> price TYPE <span class="hljs-type">numeric</span>(<span class="hljs-number">14</span>,<span class="hljs-number">4</span>);   <span class="hljs-comment">-- rewrite</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Trick (zero-downtime <code>NOT NULL</code>):</strong> adding <code>NOT NULL</code> directly scans the whole table under <code>ACCESS EXCLUSIVE</code>. Instead add an equivalent <code>CHECK (c IS NOT NULL) NOT VALID</code>, <code>VALIDATE CONSTRAINT</code> it (weaker lock, concurrent reads and writes continue), then <code>SET NOT NULL</code> — PostgreSQL 12+ recognises the validated check and skips the scan. <strong>PostgreSQL 18</strong> simplifies this further by allowing <code>ALTER TABLE … ADD CONSTRAINT … NOT NULL … NOT VALID</code> directly.</p>
+</blockquote>
+<h2 id="Generated-columns"><a href="#Generated-columns" class="headerlink" title="Generated columns"></a>Generated columns</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- STORED: computed on write, occupies disk. PostgreSQL 12+.</span></span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products</span><br><span class="line">  <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">COLUMN</span> search_name text</span><br><span class="line">  GENERATED ALWAYS <span class="hljs-keyword">AS</span> (<span class="hljs-built_in">lower</span>(title)) STORED;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- VIRTUAL: computed on read, no disk. PostgreSQL 18+ (and the default there).</span></span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> products</span><br><span class="line">  <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">COLUMN</span> price_cents <span class="hljs-type">bigint</span></span><br><span class="line">  GENERATED ALWAYS <span class="hljs-keyword">AS</span> ((price <span class="hljs-operator">*</span> <span class="hljs-number">100</span>)::<span class="hljs-type">bigint</span>) VIRTUAL;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The expression must be immutable — no <code>now()</code>, no other tables.</p>
+<h2 id="DROP"><a href="#DROP" class="headerlink" title="DROP"></a><code>DROP</code></h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> products;</span><br><span class="line"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">EXISTS</span> products CASCADE;   <span class="hljs-comment">-- CASCADE also drops dependent views, FKs</span></span><br><span class="line"><span class="hljs-keyword">TRUNCATE</span> products;                       <span class="hljs-comment">-- delete all rows, fast, resets nothing else</span></span><br><span class="line"><span class="hljs-keyword">TRUNCATE</span> products RESTART <span class="hljs-keyword">IDENTITY</span> CASCADE;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>TRUNCATE</code> is DDL, not DML: it takes an <code>ACCESS EXCLUSIVE</code> lock, does not fire row triggers, and does not produce dead tuples for <code>VACUUM</code> to clean. It is transactional in PostgreSQL — you can roll it back, unlike in some other engines.</p>
+<hr>
+<h1 id="Chapter-2-—-DML-INSERT-UPDATE-DELETE-RETURNING-upserts"><a href="#Chapter-2-—-DML-INSERT-UPDATE-DELETE-RETURNING-upserts" class="headerlink" title="Chapter 2 — DML: INSERT, UPDATE, DELETE, RETURNING, upserts"></a>Chapter 2 — DML: <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>RETURNING</code>, upserts</h1>
+<h2 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a><code>INSERT</code></h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> products (sku, title, price) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&#x27;A-1&#x27;</span>, <span class="hljs-string">&#x27;Widget&#x27;</span>, <span class="hljs-number">9.99</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- multi-row: one statement, one round trip, one WAL flush</span></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> products (sku, title, price) <span class="hljs-keyword">VALUES</span></span><br><span class="line">  (<span class="hljs-string">&#x27;A-2&#x27;</span>, <span class="hljs-string">&#x27;Gadget&#x27;</span>,  <span class="hljs-number">19.99</span>),</span><br><span class="line">  (<span class="hljs-string">&#x27;A-3&#x27;</span>, <span class="hljs-string">&#x27;Doohickey&#x27;</span>, <span class="hljs-number">4.50</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- from a query</span></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> archive_products (id, sku, title)</span><br><span class="line"><span class="hljs-keyword">SELECT</span> id, sku, title <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">WHERE</span> discontinued_at <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>For bulk loading, <code>COPY</code> is an order of magnitude faster than row-at-a-time <code>INSERT</code>:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">COPY</span> products (sku, title, price) <span class="hljs-keyword">FROM</span> <span class="hljs-string">&#x27;/data/products.csv&#x27;</span> CSV HEADER;</span><br><span class="line">\<span class="hljs-keyword">copy</span> products (sku,title,price) <span class="hljs-keyword">FROM</span> <span class="hljs-string">&#x27;products.csv&#x27;</span> CSV HEADER   <span class="hljs-comment">-- client-side</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>PostgreSQL 17+</strong> adds error tolerance to <code>COPY</code>:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">COPY</span> products <span class="hljs-keyword">FROM</span> <span class="hljs-string">&#x27;/data/dirty.csv&#x27;</span> CSV HEADER (ON_ERROR ignore, LOG_VERBOSITY verbose);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="RETURNING"><a href="#RETURNING" class="headerlink" title="RETURNING"></a><code>RETURNING</code></h2>
+<p>Every one of <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> (and <code>MERGE</code> since PostgreSQL 17) can return rows. This eliminates the read-after-write round trip that most ORMs would otherwise perform.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> products (sku, title, price)</span><br><span class="line"><span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&#x27;A-4&#x27;</span>, <span class="hljs-string">&#x27;Thing&#x27;</span>, <span class="hljs-number">12.00</span>)</span><br><span class="line">RETURNING id, created_at;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">UPDATE</span> products <span class="hljs-keyword">SET</span> price <span class="hljs-operator">=</span> price <span class="hljs-operator">*</span> <span class="hljs-number">1.10</span></span><br><span class="line"><span class="hljs-keyword">WHERE</span> currency <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;USD&#x27;</span></span><br><span class="line">RETURNING id, sku, price;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">WHERE</span> discontinued_at <span class="hljs-operator">&lt;</span> now() <span class="hljs-operator">-</span> <span class="hljs-type">interval</span> <span class="hljs-string">&#x27;2 years&#x27;</span></span><br><span class="line">RETURNING id, sku;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>A pattern worth knowing — a transactional queue pop, using <code>RETURNING</code> with <code>FOR UPDATE SKIP LOCKED</code> (locking is Post 05):</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> job_queue</span><br><span class="line"><span class="hljs-keyword">WHERE</span> id <span class="hljs-operator">=</span> (</span><br><span class="line">    <span class="hljs-keyword">SELECT</span> id <span class="hljs-keyword">FROM</span> job_queue</span><br><span class="line">    <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> priority <span class="hljs-keyword">DESC</span>, id</span><br><span class="line">    <span class="hljs-keyword">FOR</span> <span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">SKIP</span> LOCKED</span><br><span class="line">    LIMIT <span class="hljs-number">1</span></span><br><span class="line">)</span><br><span class="line">RETURNING id, payload;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="UPDATE-and-DELETE-with-joins"><a href="#UPDATE-and-DELETE-with-joins" class="headerlink" title="UPDATE and DELETE with joins"></a><code>UPDATE</code> and <code>DELETE</code> with joins</h2>
+<p>PostgreSQL uses <code>FROM</code> / <code>USING</code> rather than the <code>UPDATE … JOIN</code> syntax of MySQL:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">UPDATE</span> orders o</span><br><span class="line"><span class="hljs-keyword">SET</span>    customer_country <span class="hljs-operator">=</span> c.country</span><br><span class="line"><span class="hljs-keyword">FROM</span>   customers c</span><br><span class="line"><span class="hljs-keyword">WHERE</span>  c.id <span class="hljs-operator">=</span> o.customer_id;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> order_items oi</span><br><span class="line"><span class="hljs-keyword">USING</span>  orders o</span><br><span class="line"><span class="hljs-keyword">WHERE</span>  o.id <span class="hljs-operator">=</span> oi.order_id</span><br><span class="line">  <span class="hljs-keyword">AND</span>  o.status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;cancelled&#x27;</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> an <code>UPDATE … FROM</code> where the <code>FROM</code> side matches multiple rows is <em>not</em> an error. PostgreSQL picks one arbitrarily and applies it. If the join is not guaranteed unique, aggregate it into a subquery first.</p>
+</blockquote>
+<h2 id="Upsert-ON-CONFLICT"><a href="#Upsert-ON-CONFLICT" class="headerlink" title="Upsert: ON CONFLICT"></a>Upsert: <code>ON CONFLICT</code></h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- ignore duplicates</span></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> products (sku, title, price)</span><br><span class="line"><span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&#x27;A-1&#x27;</span>, <span class="hljs-string">&#x27;Widget&#x27;</span>, <span class="hljs-number">9.99</span>)</span><br><span class="line"><span class="hljs-keyword">ON</span> CONFLICT (sku) DO NOTHING;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- update on conflict; EXCLUDED is the row that would have been inserted</span></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> products (sku, title, price, updated_at)</span><br><span class="line"><span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&#x27;A-1&#x27;</span>, <span class="hljs-string">&#x27;Widget Mk II&#x27;</span>, <span class="hljs-number">11.99</span>, now())</span><br><span class="line"><span class="hljs-keyword">ON</span> CONFLICT (sku) DO <span class="hljs-keyword">UPDATE</span></span><br><span class="line"><span class="hljs-keyword">SET</span> title      <span class="hljs-operator">=</span> EXCLUDED.title,</span><br><span class="line">    price      <span class="hljs-operator">=</span> EXCLUDED.price,</span><br><span class="line">    updated_at <span class="hljs-operator">=</span> EXCLUDED.updated_at</span><br><span class="line"><span class="hljs-keyword">WHERE</span> products.price <span class="hljs-keyword">IS</span> <span class="hljs-keyword">DISTINCT</span> <span class="hljs-keyword">FROM</span> EXCLUDED.price   <span class="hljs-comment">-- skip no-op updates</span></span><br><span class="line">RETURNING id, (xmax <span class="hljs-operator">=</span> <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> was_inserted;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Rules that matter:</p>
+<ul>
+<li>The <strong>conflict target</strong> must be backed by a unique index or constraint. <code>ON CONFLICT DO UPDATE</code> requires a target; <code>DO NOTHING</code> may omit one (in which case it swallows <em>any</em> conflict).</li>
+<li>Inside <code>DO UPDATE</code>, the proposed row is <code>EXCLUDED.*</code> and the existing row is <code>tablename.*</code>.</li>
+<li>To target a <strong>partial</strong> unique index, repeat its predicate: <code>ON CONFLICT (email) WHERE deleted_at IS NULL DO UPDATE …</code>.</li>
+<li><code>xmax = 0</code> in <code>RETURNING</code> distinguishes an insert from an update — a widely used idiom, though it relies on an implementation detail.</li>
+<li>A single statement cannot update the same row twice: <code>ON CONFLICT DO UPDATE command cannot affect row a second time</code>. De-duplicate the input first.</li>
+</ul>
+<h2 id="MERGE"><a href="#MERGE" class="headerlink" title="MERGE"></a><code>MERGE</code></h2>
+<p><code>MERGE</code> arrived in <strong>PostgreSQL 15</strong> and gained <code>RETURNING</code> in <strong>PostgreSQL 17</strong>. It is the SQL-standard multi-action form, and unlike <code>ON CONFLICT</code> it does not require a unique constraint — but it also gives no built-in concurrency guarantee, so concurrent <code>MERGE</code>s can raise serialization failures.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">MERGE</span> <span class="hljs-keyword">INTO</span> products p</span><br><span class="line"><span class="hljs-keyword">USING</span> staging_products s <span class="hljs-keyword">ON</span> p.sku <span class="hljs-operator">=</span> s.sku</span><br><span class="line"><span class="hljs-keyword">WHEN</span> MATCHED <span class="hljs-keyword">AND</span> s.price <span class="hljs-keyword">IS</span> <span class="hljs-keyword">DISTINCT</span> <span class="hljs-keyword">FROM</span> p.price <span class="hljs-keyword">THEN</span></span><br><span class="line">    <span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">SET</span> price <span class="hljs-operator">=</span> s.price, updated_at <span class="hljs-operator">=</span> now()</span><br><span class="line"><span class="hljs-keyword">WHEN</span> <span class="hljs-keyword">NOT</span> MATCHED <span class="hljs-keyword">THEN</span></span><br><span class="line">    <span class="hljs-keyword">INSERT</span> (sku, title, price) <span class="hljs-keyword">VALUES</span> (s.sku, s.title, s.price)</span><br><span class="line">RETURNING merge_action(), p.id;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Guidance: use <code>ON CONFLICT</code> for concurrent single-row upserts from application code; use <code>MERGE</code> for batch reconciliation against a staging table.</p>
+<hr>
+<h1 id="Chapter-3-—-The-type-system"><a href="#Chapter-3-—-The-type-system" class="headerlink" title="Chapter 3 — The type system"></a>Chapter 3 — The type system</h1>
+<h2 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Bytes</th>
+<th>Range / precision</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>smallint</code></td>
+<td>2</td>
+<td>±32,767</td>
+<td>Small enumerated counts. Rarely worth it.</td>
+</tr>
+<tr>
+<td><code>integer</code> / <code>int</code></td>
+<td>4</td>
+<td>±2,147,483,647</td>
+<td>Default integer. Counts, small ids.</td>
+</tr>
+<tr>
+<td><code>bigint</code></td>
+<td>8</td>
+<td>±9.2 × 10¹⁸</td>
+<td><strong>All surrogate keys.</strong></td>
+</tr>
+<tr>
+<td><code>numeric(p,s)</code></td>
+<td>variable</td>
+<td>Exact, up to 131072 digits before the point</td>
+<td>Money, quantities, anything summed and compared for equality</td>
+</tr>
+<tr>
+<td><code>real</code></td>
+<td>4</td>
+<td>~6 decimal digits, IEEE 754</td>
+<td>Sensor data, approximations</td>
+</tr>
+<tr>
+<td><code>double precision</code></td>
+<td>8</td>
+<td>~15 decimal digits, IEEE 754</td>
+<td>Scientific computation</td>
+</tr>
+<tr>
+<td><code>money</code></td>
+<td>8</td>
+<td>Locale-dependent</td>
+<td><strong>Avoid.</strong> Its output format depends on <code>lc_monetary</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bigint-for-keys-always"><a href="#bigint-for-keys-always" class="headerlink" title="bigint for keys, always"></a><code>bigint</code> for keys, always</h3>
+<p><code>integer</code> exhausts at 2.1 billion. That sounds distant until you learn that a sequence advances on <strong>failed</strong> inserts too — every <code>ON CONFLICT DO NOTHING</code> that conflicts still burns an id. The <code>integer → bigint</code> migration on a hot table is a full rewrite with an <code>ACCESS EXCLUSIVE</code> lock. The four extra bytes per row are cheap by comparison.</p>
+<h3 id="numeric-vs-floating-point-for-money"><a href="#numeric-vs-floating-point-for-money" class="headerlink" title="numeric vs floating point for money"></a><code>numeric</code> vs floating point for money</h3>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-number">0.1</span>::<span class="hljs-type">double precision</span> <span class="hljs-operator">+</span> <span class="hljs-number">0.2</span>::<span class="hljs-type">double precision</span>;   <span class="hljs-comment">-- 0.30000000000000004</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-number">0.1</span>::<span class="hljs-type">numeric</span> <span class="hljs-operator">+</span> <span class="hljs-number">0.2</span>::<span class="hljs-type">numeric</span>;                     <span class="hljs-comment">-- 0.3</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">sum</span>(x) <span class="hljs-keyword">FROM</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-number">0.1</span>::<span class="hljs-type">double precision</span> <span class="hljs-keyword">FROM</span> generate_series(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)) t(x);</span><br><span class="line"><span class="hljs-comment">-- 0.9999999999999999</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">sum</span>(x) <span class="hljs-keyword">FROM</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-number">0.1</span>::<span class="hljs-type">numeric</span> <span class="hljs-keyword">FROM</span> generate_series(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)) t(x);</span><br><span class="line"><span class="hljs-comment">-- 1.0</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Binary floating point cannot represent <code>0.1</code> exactly. Financial code that sums floats produces drift that accumulates silently and fails reconciliation. Use <code>numeric(12,2)</code> for currency amounts, or store integer minor units (cents) in a <code>bigint</code> if you need maximum arithmetic speed. <code>numeric</code> is slower — it is arbitrary-precision software arithmetic, not a CPU instruction — but the correctness is non-negotiable for money.</p>
+<blockquote>
+<p><strong>Watch out:</strong> <code>NaN</code> in <code>numeric</code> compares as <em>equal to itself and greater than all other values</em>, which differs from the IEEE 754 rule used for <code>double precision</code>, where <code>NaN = NaN</code> is false. This is documented and deliberate, so that <code>numeric</code> can be sorted and indexed.</p>
+</blockquote>
+<h2 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td>Unlimited length. <strong>The default choice.</strong></td>
+</tr>
+<tr>
+<td><code>varchar(n)</code></td>
+<td>Same storage and performance as <code>text</code>, plus a length check</td>
+</tr>
+<tr>
+<td><code>varchar</code> (no <code>n</code>)</td>
+<td>Identical to <code>text</code></td>
+</tr>
+<tr>
+<td><code>char(n)</code></td>
+<td>Blank-padded to <code>n</code> on storage; comparison ignores trailing spaces. <strong>Avoid.</strong></td>
+</tr>
+</tbody>
+</table>
+<p>In PostgreSQL there is <strong>no performance difference</strong> between <code>text</code> and <code>varchar(n)</code> — both are varlena types with the same TOAST behaviour. <code>varchar(n)</code> is a <code>CHECK (length(x) &lt;= n)</code> in disguise. Since a length limit is a business rule and business rules change, prefer <code>text</code> plus an explicit, alterable <code>CHECK</code> constraint:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line">sku text <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">CHECK</span> (length(sku) <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">3</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">32</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Changing that check is a validate-only operation; changing <code>varchar(32)</code> to <code>varchar(64)</code> is cheap, but shrinking it requires a rewrite.</p>
+<p>Values over roughly 2 KB are compressed and moved out-of-line into a <strong>TOAST</strong> table automatically. This is why a <code>text</code> column holding a megabyte of JSON does not bloat the main heap — but it does mean any query touching that column pays an extra fetch.</p>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2>
+<p><code>boolean</code> accepts <code>true</code>/<code>false</code>/<code>NULL</code>, and on input also <code>'t'</code>, <code>'yes'</code>, <code>'on'</code>, <code>'1'</code>. One byte. Note that a nullable boolean is a <strong>three-state</strong> column — see Chapter 4.</p>
+<h2 id="Enum-vs-lookup-table"><a href="#Enum-vs-lookup-table" class="headerlink" title="Enum vs lookup table"></a>Enum vs lookup table</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> TYPE order_status <span class="hljs-keyword">AS</span> ENUM (<span class="hljs-string">&#x27;pending&#x27;</span>, <span class="hljs-string">&#x27;paid&#x27;</span>, <span class="hljs-string">&#x27;shipped&#x27;</span>, <span class="hljs-string">&#x27;cancelled&#x27;</span>);</span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> orders <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">COLUMN</span> status order_status <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&#x27;pending&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">ALTER</span> TYPE order_status <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">VALUE</span> <span class="hljs-string">&#x27;refunded&#x27;</span> AFTER <span class="hljs-string">&#x27;shipped&#x27;</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>enum</code></th>
+<th>Lookup table + FK</th>
+<th><code>text</code> + <code>CHECK</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Storage</td>
+<td>4 bytes</td>
+<td>2–8 byte FK</td>
+<td>Full string per row</td>
+</tr>
+<tr>
+<td>Sort order</td>
+<td>Declaration order</td>
+<td>Whatever column you add</td>
+<td>Alphabetical</td>
+</tr>
+<tr>
+<td>Add a value</td>
+<td><code>ALTER TYPE … ADD VALUE</code></td>
+<td><code>INSERT</code></td>
+<td><code>ALTER</code> the check constraint</td>
+</tr>
+<tr>
+<td>Remove a value</td>
+<td><strong>Not supported</strong></td>
+<td><code>DELETE</code></td>
+<td><code>ALTER</code> the check</td>
+</tr>
+<tr>
+<td>Rename a value</td>
+<td><code>ALTER TYPE … RENAME VALUE</code> (10+)</td>
+<td><code>UPDATE</code></td>
+<td><code>ALTER</code> the check</td>
+</tr>
+<tr>
+<td>Attach metadata (label, colour, sort key)</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Readable in raw dumps</td>
+<td>Yes</td>
+<td>Needs a join</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Decision rule: <strong>enum</strong> for a small, genuinely closed set with a meaningful order (<code>pending &lt; paid &lt; shipped</code>) that changes at most yearly. <strong>Lookup table</strong> whenever values carry metadata, are managed by non-engineers, or need deleting. <strong><code>text</code> + <code>CHECK</code></strong> as a light middle ground.</p>
+<blockquote>
+<p><strong>Watch out (PostgreSQL 12+):</strong> <code>ALTER TYPE … ADD VALUE</code> may run inside a transaction block, but the new value <strong>cannot be used</strong> in that same transaction. Migration frameworks that wrap everything in one transaction hit this constantly. Split it into two migrations.</p>
+</blockquote>
+<h2 id="Date-and-time"><a href="#Date-and-time" class="headerlink" title="Date and time"></a>Date and time</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Stores</th>
+<th>Bytes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date</code></td>
+<td>Calendar day, no time</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>Time of day, no date, no zone</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>timetz</code></td>
+<td>Time with zone offset</td>
+<td>12 — <strong>avoid</strong>, semantically incoherent</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>Date + time, <strong>no zone</strong></td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>timestamptz</code></td>
+<td>An absolute instant</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td>A duration</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Why-timestamptz-is-almost-always-right"><a href="#Why-timestamptz-is-almost-always-right" class="headerlink" title="Why timestamptz is almost always right"></a>Why <code>timestamptz</code> is almost always right</h3>
+<p>The name is misleading. <code>timestamptz</code> does <strong>not</strong> store a timezone. It stores an absolute point in time (microseconds from an epoch, in UTC). On input, a value is converted from the session's <code>TimeZone</code> to UTC; on output, from UTC back to the session's <code>TimeZone</code>. It is the type that answers &quot;when did this happen?&quot; unambiguously anywhere on Earth.</p>
+<p><code>timestamp</code> (without time zone) stores a wall-clock reading with no anchor. Two servers in different regions will disagree about what instant it names, and it cannot represent the DST fall-back hour unambiguously.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SET</span> TimeZone <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;UTC&#x27;</span>;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;2026-03-29 01:30:00+00&#x27;</span>::timestamptz;   <span class="hljs-comment">-- 2026-03-29 01:30:00+00</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">SET</span> TimeZone <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;Europe/London&#x27;</span>;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;2026-03-29 01:30:00+00&#x27;</span>::timestamptz;   <span class="hljs-comment">-- 2026-03-29 02:30:00+01</span></span><br><span class="line"><span class="hljs-comment">-- Same instant. Different rendering. That is the point.</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">SELECT</span> now();                      <span class="hljs-comment">-- timestamptz, transaction start time</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> clock_timestamp();          <span class="hljs-comment">-- timestamptz, actual wall clock, advances mid-statement</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">current_date</span>, <span class="hljs-built_in">current_time</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The narrow legitimate uses of plain <code>timestamp</code>: a <em>local</em> wall-clock concept with no instant attached — &quot;the shop opens at 09:00 in whatever timezone the shop is in&quot;, a recurring alarm, a birthday. Even then, store the IANA zone name alongside it in a separate column.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- render an instant in a specific zone</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> placed_at <span class="hljs-keyword">AT</span> <span class="hljs-type">TIME</span> ZONE <span class="hljs-string">&#x27;Asia/Tokyo&#x27;</span> <span class="hljs-keyword">FROM</span> orders;   <span class="hljs-comment">-- timestamptz → timestamp</span></span><br><span class="line"><span class="hljs-comment">-- interpret a local wall clock in a zone</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;2026-06-02 09:00&#x27;</span>::<span class="hljs-type">timestamp</span> <span class="hljs-keyword">AT</span> <span class="hljs-type">TIME</span> ZONE <span class="hljs-string">&#x27;Asia/Tokyo&#x27;</span>;  <span class="hljs-comment">-- timestamp → timestamptz</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>AT TIME ZONE</code> flips between the two types in both directions — which direction depends on the input type. That asymmetry catches everyone once.</p>
+<h3 id="interval"><a href="#interval" class="headerlink" title="interval"></a><code>interval</code></h3>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> now() <span class="hljs-operator">+</span> <span class="hljs-type">interval</span> <span class="hljs-string">&#x27;1 month 3 days&#x27;</span>;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> age(timestamptz <span class="hljs-string">&#x27;2026-06-02&#x27;</span>, timestamptz <span class="hljs-string">&#x27;1990-01-15&#x27;</span>);  <span class="hljs-comment">-- 36 years 4 mons 18 days</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> justify_interval(<span class="hljs-type">interval</span> <span class="hljs-string">&#x27;90 days&#x27;</span>);                     <span class="hljs-comment">-- 3 mons</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">extract</span>(epoch <span class="hljs-keyword">FROM</span> <span class="hljs-type">interval</span> <span class="hljs-string">&#x27;2 hours 30 minutes&#x27;</span>);        <span class="hljs-comment">-- 9000</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>An <code>interval</code> stores months, days, and microseconds <strong>separately</strong>, because a month is not a fixed number of days and a day is not always 24 hours across a DST boundary. <code>interval '1 month'</code> added to January 31 gives February 28 or 29. This is correct calendar arithmetic, not a rounding bug.</p>
+<h2 id="UUID"><a href="#UUID" class="headerlink" title="UUID"></a>UUID</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> events (id uuid <span class="hljs-keyword">PRIMARY</span> KEY <span class="hljs-keyword">DEFAULT</span> gen_random_uuid(), ...);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>16 bytes, stored binary. <code>gen_random_uuid()</code> (UUIDv4) is built in since <strong>PostgreSQL 13</strong> — no <code>pgcrypto</code> needed. <strong>PostgreSQL 18</strong> adds <code>uuidv4()</code> and <code>uuidv7()</code> as standard functions.</p>
+<p>The trade-off against <code>bigint</code> identity:</p>
+<ul>
+<li>UUIDv4 is random, so inserts land at random points in the primary-key B-tree. That causes page splits, poor cache locality, and index bloat on high-insert tables.</li>
+<li><strong>UUIDv7</strong> is time-ordered in its high bits, which restores the append-at-the-right-edge insert pattern of a sequence while keeping global uniqueness and non-guessability. On PG 18, <code>uuidv7()</code> is the right default when you want UUIDs.</li>
+<li><code>bigint</code> identity remains smallest and fastest, at the cost of being guessable and requiring a central sequence.</li>
+</ul>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> posts (id <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span>, tags text[]);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> posts (tags) <span class="hljs-keyword">VALUES</span> (<span class="hljs-keyword">ARRAY</span>[<span class="hljs-string">&#x27;sql&#x27;</span>,<span class="hljs-string">&#x27;postgres&#x27;</span>]), (<span class="hljs-string">&#x27;{&quot;docs&quot;,&quot;draft&quot;}&#x27;</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> posts <span class="hljs-keyword">WHERE</span> <span class="hljs-string">&#x27;sql&#x27;</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">ANY</span>(tags);       <span class="hljs-comment">-- membership</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> posts <span class="hljs-keyword">WHERE</span> tags @<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ARRAY</span>[<span class="hljs-string">&#x27;sql&#x27;</span>];    <span class="hljs-comment">-- contains; GIN-indexable</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> tags[<span class="hljs-number">1</span>] <span class="hljs-keyword">FROM</span> posts;                         <span class="hljs-comment">-- 1-based indexing</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> array_length(tags, <span class="hljs-number">1</span>) <span class="hljs-keyword">FROM</span> posts;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> id, <span class="hljs-built_in">unnest</span>(tags) <span class="hljs-keyword">AS</span> tag <span class="hljs-keyword">FROM</span> posts;         <span class="hljs-comment">-- expand to rows</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">array_agg</span>(<span class="hljs-keyword">DISTINCT</span> tag) <span class="hljs-keyword">FROM</span> ...;           <span class="hljs-comment">-- collapse rows to array</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Arrays are genuinely useful for small, fixed-cardinality, always-read-together sets (tags, permission flags, embedding dimensions). They are a poor substitute for a join table when you need per-element metadata, referential integrity, or per-element updates. Index with GIN (<code>CREATE INDEX ON posts USING gin (tags)</code>) if you filter with <code>@&gt;</code> or <code>&amp;&amp;</code> — see Post 03.</p>
+<h2 id="bytea-and-other-types-worth-knowing"><a href="#bytea-and-other-types-worth-knowing" class="headerlink" title="bytea and other types worth knowing"></a><code>bytea</code> and other types worth knowing</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;\x48656c6c6f&#x27;</span>::bytea;          <span class="hljs-comment">-- hex input/output format</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> encode(digest(<span class="hljs-string">&#x27;x&#x27;</span>,<span class="hljs-string">&#x27;sha256&#x27;</span>), <span class="hljs-string">&#x27;hex&#x27;</span>);   <span class="hljs-comment">-- needs pgcrypto</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>bytea</code> holds arbitrary binary. It is fine for small blobs (thumbnails, hashes, encrypted tokens); it is the wrong place for user-uploaded files — put those in object storage and keep the key in a <code>text</code> column.</p>
+<p>Also in the standard distribution and worth remembering: <code>inet</code>/<code>cidr</code>/<code>macaddr</code> for networking, <code>tsvector</code>/<code>tsquery</code> for full-text search, <code>int4range</code>/<code>tstzrange</code>/<code>daterange</code> for ranges, <code>point</code>/<code>polygon</code> for basic geometry, <code>json</code>/<code>jsonb</code> (Post 06), and <code>xml</code>.</p>
+<h2 id="Domains"><a href="#Domains" class="headerlink" title="Domains"></a>Domains</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> DOMAIN email <span class="hljs-keyword">AS</span> text</span><br><span class="line">  <span class="hljs-keyword">CHECK</span> (<span class="hljs-keyword">VALUE</span> <span class="hljs-operator">~</span> <span class="hljs-string">&#x27;^[^@\s]+@[^@\s]+\.[^@\s]+$&#x27;</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">CREATE</span> DOMAIN positive_money <span class="hljs-keyword">AS</span> <span class="hljs-type">numeric</span>(<span class="hljs-number">12</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">CHECK</span> (<span class="hljs-keyword">VALUE</span> <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> users (id <span class="hljs-type">bigint</span>, contact email <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>, balance positive_money);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>A domain is a named type plus constraints, reusable across tables. Cheaper than a composite type, and it keeps validation in one place.</p>
+<blockquote>
+<p><strong>Migration note:</strong> when moving a relational schema to a document store, the type mapping is where fidelity is lost — <code>numeric</code> has no exact BSON equivalent, and array/<code>jsonb</code> columns collapse into the document naturally while enums do not. The <strong>SQL → MongoDB migration post</strong> walks through that mapping in both directions.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-NULL-and-three-valued-logic"><a href="#Chapter-4-—-NULL-and-three-valued-logic" class="headerlink" title="Chapter 4 — NULL and three-valued logic"></a>Chapter 4 — <code>NULL</code> and three-valued logic</h1>
+<p><code>NULL</code> is not a value. It is a marker meaning <em>unknown</em>. Every comparison involving it yields <code>NULL</code> (neither true nor false), and SQL's <code>WHERE</code> clause keeps only rows where the predicate is <strong>true</strong> — so <code>NULL</code> behaves like false at filter time but not in any other context. This asymmetry is the source of an enormous share of production SQL bugs.</p>
+<h2 id="The-surprising-results-table"><a href="#The-surprising-results-table" class="headerlink" title="The surprising-results table"></a>The surprising-results table</h2>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NULL = NULL</code></td>
+<td><code>NULL</code></td>
+<td>Unknown compared to unknown is unknown</td>
+</tr>
+<tr>
+<td><code>NULL &lt;&gt; NULL</code></td>
+<td><code>NULL</code></td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>NULL IS NULL</code></td>
+<td><code>true</code></td>
+<td><code>IS NULL</code> is a test, not a comparison</td>
+</tr>
+<tr>
+<td><code>NULL IS NOT DISTINCT FROM NULL</code></td>
+<td><code>true</code></td>
+<td><code>IS DISTINCT FROM</code> treats <code>NULL</code> as a comparable value</td>
+</tr>
+<tr>
+<td><code>1 + NULL</code></td>
+<td><code>NULL</code></td>
+<td>Arithmetic propagates</td>
+</tr>
+<tr>
+<td><code>'abc' || NULL</code></td>
+<td><code>NULL</code></td>
+<td><code>||</code> propagates</td>
+</tr>
+<tr>
+<td><code>concat('abc', NULL)</code></td>
+<td><code>'abc'</code></td>
+<td><code>concat()</code> <em>ignores</em> <code>NULL</code> — unlike <code>||</code></td>
+</tr>
+<tr>
+<td><code>NULL = ''</code></td>
+<td><code>NULL</code></td>
+<td>In PostgreSQL, <code>''</code> and <code>NULL</code> are different (unlike Oracle)</td>
+</tr>
+<tr>
+<td><code>true OR NULL</code></td>
+<td><code>true</code></td>
+<td>Result is determined regardless</td>
+</tr>
+<tr>
+<td><code>false OR NULL</code></td>
+<td><code>NULL</code></td>
+<td>Undetermined</td>
+</tr>
+<tr>
+<td><code>true AND NULL</code></td>
+<td><code>NULL</code></td>
+<td>Undetermined</td>
+</tr>
+<tr>
+<td><code>false AND NULL</code></td>
+<td><code>false</code></td>
+<td>Result is determined regardless</td>
+</tr>
+<tr>
+<td><code>NOT NULL</code> (the operator)</td>
+<td><code>NULL</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>2 IN (1, NULL)</code></td>
+<td><code>NULL</code></td>
+<td>Not <code>false</code> — this is the <code>NOT IN</code> trap</td>
+</tr>
+<tr>
+<td><code>2 NOT IN (1, NULL)</code></td>
+<td><code>NULL</code></td>
+<td><strong>Row is filtered out.</strong> See below</td>
+</tr>
+<tr>
+<td><code>count(*)</code> on 3 rows, one <code>NULL</code> col</td>
+<td><code>3</code></td>
+<td>Counts rows</td>
+</tr>
+<tr>
+<td><code>count(col)</code> on the same</td>
+<td><code>2</code></td>
+<td>Aggregates skip <code>NULL</code> inputs</td>
+</tr>
+<tr>
+<td><code>sum(col)</code> where all values are <code>NULL</code></td>
+<td><code>NULL</code></td>
+<td>Not <code>0</code></td>
+</tr>
+<tr>
+<td><code>avg(col)</code></td>
+<td>Ignores <code>NULL</code>s in both numerator and denominator</td>
+<td></td>
+</tr>
+<tr>
+<td><code>array_agg(col)</code></td>
+<td>Keeps <code>NULL</code> elements</td>
+<td>Aggregates that build collections are the exception</td>
+</tr>
+<tr>
+<td><code>SELECT DISTINCT</code> over <code>NULL</code>s</td>
+<td><code>NULL</code>s collapse to one</td>
+<td><code>DISTINCT</code> treats them as equal</td>
+</tr>
+<tr>
+<td><code>GROUP BY col</code> with <code>NULL</code>s</td>
+<td>One <code>NULL</code> group</td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>ORDER BY col ASC</code></td>
+<td><code>NULL</code>s last</td>
+<td><code>NULL</code> sorts as larger than everything</td>
+</tr>
+<tr>
+<td><code>ORDER BY col DESC</code></td>
+<td><code>NULL</code>s first</td>
+<td>Same rule, reversed</td>
+</tr>
+<tr>
+<td><code>UNIQUE</code> column with two <code>NULL</code>s</td>
+<td>Both allowed</td>
+<td><code>NULL</code>s are distinct for uniqueness</td>
+</tr>
+</tbody>
+</table>
+<h2 id="The-NOT-IN-trap"><a href="#The-NOT-IN-trap" class="headerlink" title="The NOT IN trap"></a>The <code>NOT IN</code> trap</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- Intent: customers with no orders</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> customers</span><br><span class="line"><span class="hljs-keyword">WHERE</span> id <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (<span class="hljs-keyword">SELECT</span> customer_id <span class="hljs-keyword">FROM</span> orders);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>If <strong>any</strong> row in <code>orders</code> has a <code>NULL</code> <code>customer_id</code>, the subquery list contains <code>NULL</code>, every <code>NOT IN</code> test evaluates to <code>NULL</code> instead of <code>true</code>, and the query returns <strong>zero rows</strong>. Silently. No error.</p>
+<p>Three safe rewrites, in order of preference:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-comment">-- 1. NOT EXISTS — NULL-safe, and usually the best plan (anti-join)</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> customers c</span><br><span class="line"><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-number">1</span> <span class="hljs-keyword">FROM</span> orders o <span class="hljs-keyword">WHERE</span> o.customer_id <span class="hljs-operator">=</span> c.id);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- 2. LEFT JOIN ... IS NULL — also NULL-safe</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> c.<span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> customers c</span><br><span class="line"><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> orders o <span class="hljs-keyword">ON</span> o.customer_id <span class="hljs-operator">=</span> c.id</span><br><span class="line"><span class="hljs-keyword">WHERE</span> o.id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- 3. NOT IN with an explicit filter — works, but fragile to future schema changes</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> customers</span><br><span class="line"><span class="hljs-keyword">WHERE</span> id <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (<span class="hljs-keyword">SELECT</span> customer_id <span class="hljs-keyword">FROM</span> orders <span class="hljs-keyword">WHERE</span> customer_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Post 02 compares the plans these produce.</p>
+<h2 id="Tools-for-handling-NULL"><a href="#Tools-for-handling-NULL" class="headerlink" title="Tools for handling NULL"></a>Tools for handling <code>NULL</code></h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">coalesce</span>(nickname, full_name, <span class="hljs-string">&#x27;anonymous&#x27;</span>);   <span class="hljs-comment">-- first non-NULL</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">nullif</span>(price, <span class="hljs-number">0</span>);                             <span class="hljs-comment">-- NULL if the two are equal</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> a <span class="hljs-keyword">IS</span> <span class="hljs-keyword">DISTINCT</span> <span class="hljs-keyword">FROM</span> b;                         <span class="hljs-comment">-- NULL-safe &lt;&gt;</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> a <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">DISTINCT</span> <span class="hljs-keyword">FROM</span> b;                     <span class="hljs-comment">-- NULL-safe =</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> greatest(a, b), least(a, b);                  <span class="hljs-comment">-- ignore NULLs</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FILTER</span> (<span class="hljs-keyword">WHERE</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;paid&#x27;</span>);      <span class="hljs-comment">-- Post 02</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- ordering control</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> products <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> discontinued_at <span class="hljs-keyword">DESC</span> NULLS <span class="hljs-keyword">LAST</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> <code>WHERE deleted_at != 'x'</code> skips rows where <code>deleted_at IS NULL</code>. If &quot;not equal to x&quot; should include unknowns, write <code>WHERE deleted_at IS DISTINCT FROM 'x'</code>. This bug hides in soft-delete filters constantly.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Constraints"><a href="#Chapter-5-—-Constraints" class="headerlink" title="Chapter 5 — Constraints"></a>Chapter 5 — Constraints</h1>
+<p>Constraints are the only guarantee that survives a buggy deployment, a rogue script, and the next developer. Application-level validation is a user-experience feature; a database constraint is the actual invariant.</p>
+<h2 id="The-six-types"><a href="#The-six-types" class="headerlink" title="The six types"></a>The six types</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> bookings (</span><br><span class="line">    id          <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY,        <span class="hljs-comment">-- PK</span></span><br><span class="line">    room_id     <span class="hljs-type">bigint</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">REFERENCES</span> rooms(id) <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DELETE</span> RESTRICT, <span class="hljs-comment">-- FK</span></span><br><span class="line">    guest_email text   <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,                                         <span class="hljs-comment">-- NOT NULL</span></span><br><span class="line">    reference   text   <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">UNIQUE</span>,                                  <span class="hljs-comment">-- UNIQUE</span></span><br><span class="line">    price       <span class="hljs-type">numeric</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">CHECK</span> (price <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span>),               <span class="hljs-comment">-- CHECK</span></span><br><span class="line">    during      tstzrange <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    EXCLUDE <span class="hljs-keyword">USING</span> gist (room_id <span class="hljs-keyword">WITH</span> <span class="hljs-operator">=</span>, during <span class="hljs-keyword">WITH</span> <span class="hljs-operator">&amp;&amp;</span>)                  <span class="hljs-comment">-- EXCLUDE</span></span><br><span class="line">);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h3 id="PRIMARY-KEY"><a href="#PRIMARY-KEY" class="headerlink" title="PRIMARY KEY"></a><code>PRIMARY KEY</code></h3>
+<p><code>NOT NULL</code> + <code>UNIQUE</code> + designated as the table's identity. One per table. Backed by a unique B-tree index automatically.</p>
+<h3 id="FOREIGN-KEY-and-the-ON-DELETE-actions"><a href="#FOREIGN-KEY-and-the-ON-DELETE-actions" class="headerlink" title="FOREIGN KEY and the ON DELETE actions"></a><code>FOREIGN KEY</code> and the <code>ON DELETE</code> actions</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Effect when the referenced row is deleted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NO ACTION</code> (default)</td>
+<td>Error, checked at end of statement (deferrable)</td>
+</tr>
+<tr>
+<td><code>RESTRICT</code></td>
+<td>Error, checked immediately (not deferrable)</td>
+</tr>
+<tr>
+<td><code>CASCADE</code></td>
+<td>Delete the referencing rows too</td>
+</tr>
+<tr>
+<td><code>SET NULL</code></td>
+<td>Set the FK column to <code>NULL</code> (column must be nullable)</td>
+</tr>
+<tr>
+<td><code>SET DEFAULT</code></td>
+<td>Set it to the column default (which must itself satisfy the FK)</td>
+</tr>
+</tbody>
+</table>
+<p><code>ON UPDATE</code> takes the same set. PostgreSQL 15+ allows column lists: <code>ON DELETE SET NULL (col_a)</code> for composite keys.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> orders</span><br><span class="line">  <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> orders_customer_fk</span><br><span class="line">  <span class="hljs-keyword">FOREIGN</span> KEY (customer_id) <span class="hljs-keyword">REFERENCES</span> customers(id)</span><br><span class="line">  <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DELETE</span> CASCADE <span class="hljs-keyword">ON</span> <span class="hljs-keyword">UPDATE</span> CASCADE</span><br><span class="line">  DEFERRABLE INITIALLY IMMEDIATE;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Watch out:</strong> PostgreSQL does <strong>not</strong> automatically index the referencing column. Every <code>DELETE</code> on the parent then triggers a sequential scan of the child to check the constraint. Index every foreign key column yourself — this is one of the most common causes of mysteriously slow deletes.</p>
+</blockquote>
+<blockquote>
+<p><strong>Trick (zero-downtime FK):</strong> <code>ADD CONSTRAINT … FOREIGN KEY … NOT VALID</code> takes a <code>SHARE ROW EXCLUSIVE</code> lock and skips the existing-data scan; new rows are enforced immediately. Follow with <code>ALTER TABLE … VALIDATE CONSTRAINT …</code>, which scans under a lock that permits concurrent reads and writes.</p>
+</blockquote>
+<h3 id="UNIQUE"><a href="#UNIQUE" class="headerlink" title="UNIQUE"></a><code>UNIQUE</code></h3>
+<p>Backed by a unique index. Multiple <code>NULL</code>s are permitted by default because <code>NULL</code>s are distinct. <strong>PostgreSQL 15+</strong> can change that:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t (a <span class="hljs-type">int</span>, b <span class="hljs-type">int</span>, <span class="hljs-keyword">UNIQUE</span> NULLS <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">DISTINCT</span> (a, b));</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>For conditional uniqueness — &quot;email unique among non-deleted users&quot; — use a <strong>partial unique index</strong> rather than a constraint, since constraints cannot carry a predicate:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">UNIQUE</span> INDEX users_email_active_uq</span><br><span class="line">  <span class="hljs-keyword">ON</span> users (email) <span class="hljs-keyword">WHERE</span> deleted_at <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h3 id="CHECK"><a href="#CHECK" class="headerlink" title="CHECK"></a><code>CHECK</code></h3>
+<p>Any boolean expression over the row's own columns. It must be immutable and may not reference other tables or <code>now()</code>.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CHECK</span> (price <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span>)</span><br><span class="line"><span class="hljs-keyword">CHECK</span> (status <span class="hljs-keyword">IN</span> (<span class="hljs-string">&#x27;pending&#x27;</span>,<span class="hljs-string">&#x27;paid&#x27;</span>,<span class="hljs-string">&#x27;shipped&#x27;</span>,<span class="hljs-string">&#x27;cancelled&#x27;</span>))</span><br><span class="line"><span class="hljs-keyword">CHECK</span> (ends_at <span class="hljs-operator">&gt;</span> starts_at)</span><br><span class="line"><span class="hljs-keyword">CHECK</span> (email <span class="hljs-operator">~</span> <span class="hljs-string">&#x27;^[^@]+@[^@]+$&#x27;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>A <code>CHECK</code> that evaluates to <code>NULL</code> <strong>passes</strong>. <code>CHECK (price &gt; 0)</code> on a nullable <code>price</code> accepts <code>NULL</code>. Add <code>NOT NULL</code> if you mean it.</p>
+<h3 id="EXCLUDE"><a href="#EXCLUDE" class="headerlink" title="EXCLUDE"></a><code>EXCLUDE</code></h3>
+<p>The constraint type that has no equivalent in most other databases: &quot;no two rows may both satisfy these operator comparisons&quot;. The canonical use is preventing overlapping reservations.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> EXTENSION IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> btree_gist;   <span class="hljs-comment">-- needed to mix = with &amp;&amp; in one GiST index</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> bookings</span><br><span class="line">  <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> no_double_booking</span><br><span class="line">  EXCLUDE <span class="hljs-keyword">USING</span> gist (room_id <span class="hljs-keyword">WITH</span> <span class="hljs-operator">=</span>, during <span class="hljs-keyword">WITH</span> <span class="hljs-operator">&amp;&amp;</span>);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Now any attempt to insert a booking for the same room whose time range overlaps an existing one is rejected by the database, atomically, with no application-level locking. <code>UNIQUE</code> is in fact a special case of <code>EXCLUDE</code> where every operator is <code>=</code>.</p>
+<p><strong>PostgreSQL 18</strong> generalises this further with temporal keys: <code>PRIMARY KEY (id, valid_at WITHOUT OVERLAPS)</code> and matching <code>FOREIGN KEY … PERIOD</code>.</p>
+<h2 id="Deferrable-constraints"><a href="#Deferrable-constraints" class="headerlink" title="Deferrable constraints"></a>Deferrable constraints</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> ... <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> c <span class="hljs-keyword">FOREIGN</span> KEY (...) <span class="hljs-keyword">REFERENCES</span> ...</span><br><span class="line">  DEFERRABLE INITIALLY DEFERRED;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">BEGIN</span>;</span><br><span class="line">  <span class="hljs-keyword">SET</span> CONSTRAINTS <span class="hljs-keyword">ALL</span> DEFERRED;   <span class="hljs-comment">-- check only at COMMIT</span></span><br><span class="line">  <span class="hljs-comment">-- circular inserts, swap two unique values, etc.</span></span><br><span class="line"><span class="hljs-keyword">COMMIT</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Deferring lets you write two rows that only jointly satisfy a constraint — swapping the <code>sort_order</code> of two rows under a unique index is the standard example. <code>NOT NULL</code> and <code>CHECK</code> cannot be deferred; <code>UNIQUE</code>, <code>PRIMARY KEY</code>, <code>EXCLUDE</code>, and <code>FOREIGN KEY</code> can.</p>
+<h2 id="Inspecting-constraints"><a href="#Inspecting-constraints" class="headerlink" title="Inspecting constraints"></a>Inspecting constraints</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> conname, contype, convalidated, pg_get_constraintdef(oid)</span><br><span class="line"><span class="hljs-keyword">FROM</span> pg_constraint</span><br><span class="line"><span class="hljs-keyword">WHERE</span> conrelid <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;bookings&#x27;</span>::regclass;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>contype</code> is <code>p</code> primary, <code>f</code> foreign, <code>u</code> unique, <code>c</code> check, <code>x</code> exclusion, <code>n</code> not-null (PG 18 records these in <code>pg_constraint</code> too).</p>
+<hr>
+<h1 id="Chapter-6-—-Identity-vs-serial-and-casting"><a href="#Chapter-6-—-Identity-vs-serial-and-casting" class="headerlink" title="Chapter 6 — Identity vs serial, and casting"></a>Chapter 6 — Identity vs <code>serial</code>, and casting</h1>
+<h2 id="serial-is-a-macro-not-a-type"><a href="#serial-is-a-macro-not-a-type" class="headerlink" title="serial is a macro, not a type"></a><code>serial</code> is a macro, not a type</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t (id serial <span class="hljs-keyword">PRIMARY</span> KEY);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>expands to:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> SEQUENCE t_id_seq;</span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t (id <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> nextval(<span class="hljs-string">&#x27;t_id_seq&#x27;</span>) <span class="hljs-keyword">PRIMARY</span> KEY);</span><br><span class="line"><span class="hljs-keyword">ALTER</span> SEQUENCE t_id_seq OWNED <span class="hljs-keyword">BY</span> t.id;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Its problems: the column is only a <code>DEFAULT</code>, so anyone can insert an explicit id and desynchronise the sequence; the sequence is a separate object requiring separate <code>GRANT USAGE</code> for inserting roles; and it is a PostgreSQL-specific extension rather than standard SQL.</p>
+<h2 id="Identity-columns-SQL-standard-PostgreSQL-10"><a href="#Identity-columns-SQL-standard-PostgreSQL-10" class="headerlink" title="Identity columns (SQL standard, PostgreSQL 10+)"></a>Identity columns (SQL standard, PostgreSQL 10+)</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> t (</span><br><span class="line">    id <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY,</span><br><span class="line">    ...</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">-- BY DEFAULT: explicit values allowed (needed by some data-loading tools)</span></span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> u (id <span class="hljs-type">bigint</span> GENERATED <span class="hljs-keyword">BY</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>serial</code> / <code>bigserial</code></th>
+<th><code>GENERATED … AS IDENTITY</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard SQL</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Explicit insert of a value</td>
+<td>Always allowed</td>
+<td>Blocked by <code>ALWAYS</code> (overridable)</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Needs <code>USAGE</code> on the sequence</td>
+<td>Handled with the table</td>
+</tr>
+<tr>
+<td>Sequence dropped with the column</td>
+<td>Only via ownership</td>
+<td>Always</td>
+</tr>
+<tr>
+<td>Recommended for new work</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The escape hatch when you genuinely must insert an id into an <code>ALWAYS</code> column — during a data migration, for instance:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> t (id, name) OVERRIDING <span class="hljs-keyword">SYSTEM</span> <span class="hljs-keyword">VALUE</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">42</span>, <span class="hljs-string">&#x27;legacy row&#x27;</span>);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>And the repair for a desynchronised sequence, which is the standard aftermath of a bulk load into a <code>serial</code> column:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> setval(pg_get_serial_sequence(<span class="hljs-string">&#x27;t&#x27;</span>,<span class="hljs-string">&#x27;id&#x27;</span>), (<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">max</span>(id) <span class="hljs-keyword">FROM</span> t));</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Watch out:</strong> sequences are <strong>not transactional</strong> for gap-freeness. A rolled-back transaction does not return its consumed values, and <code>ON CONFLICT DO NOTHING</code> burns an id per conflicting row. Identity and serial columns produce <em>ordered, unique</em> values, never <em>gapless</em> ones. If a business requires gapless invoice numbers, that is an application-level counter guarded by a lock, not a sequence.</p>
+</blockquote>
+<h2 id="Casting"><a href="#Casting" class="headerlink" title="Casting"></a>Casting</h2>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;42&#x27;</span>::<span class="hljs-type">integer</span>;                    <span class="hljs-comment">-- PostgreSQL shorthand</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">CAST</span>(<span class="hljs-string">&#x27;42&#x27;</span> <span class="hljs-keyword">AS</span> <span class="hljs-type">integer</span>);            <span class="hljs-comment">-- SQL standard, portable</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-type">integer</span> <span class="hljs-string">&#x27;42&#x27;</span>;                     <span class="hljs-comment">-- literal syntax</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-number">7</span> <span class="hljs-operator">/</span> <span class="hljs-number">2</span>;          <span class="hljs-comment">-- 3     integer division</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-number">7</span>::<span class="hljs-type">numeric</span> <span class="hljs-operator">/</span> <span class="hljs-number">2</span>; <span class="hljs-comment">-- 3.5</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-number">7</span> <span class="hljs-operator">/</span> <span class="hljs-number">2.0</span>;        <span class="hljs-comment">-- 3.5   the literal 2.0 is numeric</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;2026-06-02&#x27;</span>::<span class="hljs-type">date</span> <span class="hljs-operator">+</span> <span class="hljs-number">30</span>;                <span class="hljs-comment">-- date + integer = date</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> now()::<span class="hljs-type">date</span>;                            <span class="hljs-comment">-- truncate to day</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;{&quot;a&quot;:1}&#x27;</span>::jsonb <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> <span class="hljs-string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;a1b2c3&#x27;</span>::text <span class="hljs-operator">~</span> <span class="hljs-string">&#x27;^[a-z0-9]+$&#x27;</span>;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>PostgreSQL recognises three cast strengths: <strong>implicit</strong> (applied automatically in any expression — deliberately rare, to prevent MySQL-style silent coercion), <strong>assignment</strong> (applied on <code>INSERT</code>/<code>UPDATE</code> into a column), and <strong>explicit</strong> (only with <code>::</code> or <code>CAST</code>). This strictness is why <code>SELECT 'abc' + 1</code> is an error rather than <code>1</code>.</p>
+<p>Safe casting of untrusted text on <strong>PostgreSQL 16+</strong>:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> pg_input_is_valid(<span class="hljs-string">&#x27;abc&#x27;</span>, <span class="hljs-string">&#x27;integer&#x27;</span>);       <span class="hljs-comment">-- false, no exception raised</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> pg_input_error_info(<span class="hljs-string">&#x27;abc&#x27;</span>, <span class="hljs-string">&#x27;integer&#x27;</span>);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> <code>::</code> binds more tightly than most operators. <code>-1::integer</code> parses as <code>-(1::integer)</code>, and <code>a || b::text</code> casts only <code>b</code>. Parenthesise when the intent is not obvious.</p>
+</blockquote>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Type-audit"><a href="#Exercise-1-—-Type-audit" class="headerlink" title="Exercise 1 — Type audit"></a>Exercise 1 — Type audit</h2>
+<p>Given this table, list every type decision you would change and why:</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> payments (</span><br><span class="line">    id          serial <span class="hljs-keyword">PRIMARY</span> KEY,</span><br><span class="line">    amount      <span class="hljs-type">float</span>,</span><br><span class="line">    currency    <span class="hljs-type">varchar</span>(<span class="hljs-number">3</span>),</span><br><span class="line">    paid_at     <span class="hljs-type">timestamp</span>,</span><br><span class="line">    status      <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>),</span><br><span class="line">    note        <span class="hljs-type">char</span>(<span class="hljs-number">255</span>)</span><br><span class="line">);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> payments (</span><br><span class="line">    id       <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY, <span class="hljs-comment">-- bigint + identity, not serial int4</span></span><br><span class="line">    amount   <span class="hljs-type">numeric</span>(<span class="hljs-number">14</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">CHECK</span> (amount <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span>),      <span class="hljs-comment">-- float loses cents</span></span><br><span class="line">    currency <span class="hljs-type">char</span>(<span class="hljs-number">3</span>)       <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,                          <span class="hljs-comment">-- fixed-width ISO 4217 is a fair char(3)</span></span><br><span class="line">    paid_at  timestamptz   <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> now(),            <span class="hljs-comment">-- absolute instant, not wall clock</span></span><br><span class="line">    status   text          <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span></span><br><span class="line">             <span class="hljs-keyword">CHECK</span> (status <span class="hljs-keyword">IN</span> (<span class="hljs-string">&#x27;pending&#x27;</span>,<span class="hljs-string">&#x27;settled&#x27;</span>,<span class="hljs-string">&#x27;failed&#x27;</span>,<span class="hljs-string">&#x27;refunded&#x27;</span>)),</span><br><span class="line">    note     text                                              <span class="hljs-comment">-- char(255) blank-pads every row</span></span><br><span class="line">);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Key points: <code>float</code> for money, <code>timestamp</code> for an instant, and <code>char(n)</code> for free text are the three that cause real bugs; <code>serial</code> and <code>varchar(n)</code> are style problems that become migrations later.</p>
+</details>
+<h2 id="Exercise-2-—-Predict-the-NULL-results"><a href="#Exercise-2-—-Predict-the-NULL-results" class="headerlink" title="Exercise 2 — Predict the NULL results"></a>Exercise 2 — Predict the <code>NULL</code> results</h2>
+<p>Without running them, give the value of each: <code>NULL = NULL</code>, <code>false AND NULL</code>, <code>true OR NULL</code>, <code>concat('a', NULL)</code>, <code>'a' || NULL</code>, <code>3 NOT IN (1, 2, NULL)</code>, <code>sum(x)</code> over three <code>NULL</code> rows, <code>count(*)</code> over three <code>NULL</code> rows. Then verify in <code>psql</code>.</p>
+<details>
+<summary>Solution</summary>
+<p><code>NULL</code>, <code>false</code>, <code>true</code>, <code>'a'</code>, <code>NULL</code>, <code>NULL</code>, <code>NULL</code>, <code>3</code>.</p>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">NULL</span>, <span class="hljs-literal">false</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">NULL</span>, <span class="hljs-literal">true</span> <span class="hljs-keyword">OR</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">       concat(<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-keyword">NULL</span>), <span class="hljs-string">&#x27;a&#x27;</span> <span class="hljs-operator">||</span> <span class="hljs-keyword">NULL</span>, <span class="hljs-number">3</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-keyword">NULL</span>);</span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">sum</span>(x), <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FROM</span> (<span class="hljs-keyword">VALUES</span> (<span class="hljs-keyword">NULL</span>::<span class="hljs-type">int</span>),(<span class="hljs-keyword">NULL</span>),(<span class="hljs-keyword">NULL</span>)) v(x);</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-3-—-Upsert-a-daily-counter"><a href="#Exercise-3-—-Upsert-a-daily-counter" class="headerlink" title="Exercise 3 — Upsert a daily counter"></a>Exercise 3 — Upsert a daily counter</h2>
+<p>Write a single statement that records a page view for <code>(page, day)</code>, inserting a row with count 1 if none exists, otherwise incrementing the existing count. Return the resulting count.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> page_views (</span><br><span class="line">    page  text  <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    <span class="hljs-keyword">day</span>   <span class="hljs-type">date</span>  <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    views <span class="hljs-type">bigint</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-number">0</span>,</span><br><span class="line">    <span class="hljs-keyword">PRIMARY</span> KEY (page, <span class="hljs-keyword">day</span>)</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> page_views (page, <span class="hljs-keyword">day</span>, views)</span><br><span class="line"><span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&#x27;/pg-01&#x27;</span>, <span class="hljs-built_in">current_date</span>, <span class="hljs-number">1</span>)</span><br><span class="line"><span class="hljs-keyword">ON</span> CONFLICT (page, <span class="hljs-keyword">day</span>) DO <span class="hljs-keyword">UPDATE</span></span><br><span class="line"><span class="hljs-keyword">SET</span> views <span class="hljs-operator">=</span> page_views.views <span class="hljs-operator">+</span> <span class="hljs-number">1</span></span><br><span class="line">RETURNING views;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-4-—-No-double-booking"><a href="#Exercise-4-—-No-double-booking" class="headerlink" title="Exercise 4 — No double booking"></a>Exercise 4 — No double booking</h2>
+<p>Build a <code>room_bookings</code> table where the database itself prevents two overlapping bookings for the same room. Prove it by attempting an overlapping insert.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-sql"><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span></pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="hljs-keyword">CREATE</span> EXTENSION IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> btree_gist;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> room_bookings (</span><br><span class="line">    id      <span class="hljs-type">bigint</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> <span class="hljs-keyword">IDENTITY</span> <span class="hljs-keyword">PRIMARY</span> KEY,</span><br><span class="line">    room_id <span class="hljs-type">bigint</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    during  tstzrange <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,</span><br><span class="line">    EXCLUDE <span class="hljs-keyword">USING</span> gist (room_id <span class="hljs-keyword">WITH</span> <span class="hljs-operator">=</span>, during <span class="hljs-keyword">WITH</span> <span class="hljs-operator">&amp;&amp;</span>)</span><br><span class="line">);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> room_bookings (room_id, during)</span><br><span class="line"><span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;[2026-06-02 09:00, 2026-06-02 11:00)&#x27;</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> room_bookings (room_id, during)</span><br><span class="line"><span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;[2026-06-02 10:00, 2026-06-02 12:00)&#x27;</span>);</span><br><span class="line"><span class="hljs-comment">-- ERROR: conflicting key value violates exclusion constraint &quot;room_bookings_room_id_during_excl&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-5-—-Anti-join-without-the-trap"><a href="#Exercise-5-—-Anti-join-without-the-trap" class="headerlink" title="Exercise 5 — Anti-join without the trap"></a>Exercise 5 — Anti-join without the trap</h2>
+<p>Write &quot;products never ordered&quot; three ways: <code>NOT IN</code>, <code>NOT EXISTS</code>, and <code>LEFT JOIN … IS NULL</code>. Then insert one <code>order_items</code> row with a <code>NULL</code> <code>product_id</code> and re-run all three. Explain the difference.</p>
+<h2 id="Exercise-6-—-Safe-NOT-NULL"><a href="#Exercise-6-—-Safe-NOT-NULL" class="headerlink" title="Exercise 6 — Safe NOT NULL"></a>Exercise 6 — Safe <code>NOT NULL</code></h2>
+<p>Add a <code>NOT NULL</code> constraint to an existing large column without taking a long <code>ACCESS EXCLUSIVE</code> lock. Write out the statement sequence.</p>
+<h2 id="Exercise-7-—-Time-zone-reasoning"><a href="#Exercise-7-—-Time-zone-reasoning" class="headerlink" title="Exercise 7 — Time zone reasoning"></a>Exercise 7 — Time zone reasoning</h2>
+<p>With <code>SET TimeZone = 'America/New_York'</code>, insert a <code>timestamptz</code> and a <code>timestamp</code> holding the same literal. Change the session timezone to <code>Asia/Tokyo</code> and select both. Explain which one changed and why that is the desired behaviour.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surrogate key</td>
+<td><code>bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY</code></td>
+</tr>
+<tr>
+<td>Money</td>
+<td><code>numeric(12,2)</code> — never <code>float</code>, never <code>money</code></td>
+</tr>
+<tr>
+<td>Strings</td>
+<td><code>text</code> (+ a <code>CHECK</code> on length if needed)</td>
+</tr>
+<tr>
+<td>Instant in time</td>
+<td><code>timestamptz</code></td>
+</tr>
+<tr>
+<td>Duration</td>
+<td><code>interval</code></td>
+</tr>
+<tr>
+<td>Random / sortable UUID</td>
+<td><code>gen_random_uuid()</code> / <code>uuidv7()</code> (PG 18)</td>
+</tr>
+<tr>
+<td>Add column with default</td>
+<td><code>ADD COLUMN c type DEFAULT v</code> — no rewrite since PG 11</td>
+</tr>
+<tr>
+<td>Safe <code>NOT NULL</code></td>
+<td><code>CHECK (c IS NOT NULL) NOT VALID</code> → <code>VALIDATE</code> → <code>SET NOT NULL</code></td>
+</tr>
+<tr>
+<td>Safe FK</td>
+<td><code>ADD … FOREIGN KEY … NOT VALID</code> → <code>VALIDATE CONSTRAINT</code></td>
+</tr>
+<tr>
+<td>Insert and get the id</td>
+<td><code>INSERT … RETURNING id</code></td>
+</tr>
+<tr>
+<td>Upsert</td>
+<td><code>INSERT … ON CONFLICT (k) DO UPDATE SET c = EXCLUDED.c</code></td>
+</tr>
+<tr>
+<td>Batch reconcile</td>
+<td><code>MERGE INTO … USING … WHEN MATCHED/NOT MATCHED</code> (PG 15+)</td>
+</tr>
+<tr>
+<td>Bulk load</td>
+<td><code>COPY</code> / <code>\copy … CSV HEADER</code></td>
+</tr>
+<tr>
+<td>Update from another table</td>
+<td><code>UPDATE t SET … FROM u WHERE …</code></td>
+</tr>
+<tr>
+<td>NULL-safe equality</td>
+<td><code>IS NOT DISTINCT FROM</code></td>
+</tr>
+<tr>
+<td>First non-NULL</td>
+<td><code>coalesce(a, b, c)</code></td>
+</tr>
+<tr>
+<td>Conditional uniqueness</td>
+<td><code>CREATE UNIQUE INDEX … WHERE predicate</code></td>
+</tr>
+<tr>
+<td>No overlapping ranges</td>
+<td><code>EXCLUDE USING gist (k WITH =, range WITH &amp;&amp;)</code></td>
+</tr>
+<tr>
+<td>Cast</td>
+<td><code>expr::type</code> or <code>CAST(expr AS type)</code></td>
+</tr>
+<tr>
+<td>Fix a desynced sequence</td>
+<td><code>setval(pg_get_serial_sequence('t','id'), max(id))</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 02 covers <strong>joins, aggregation, and window functions</strong>: the full join family worked row by row, why <code>NOT IN</code> produces a different plan from <code>NOT EXISTS</code>, <code>GROUP BY</code> with <code>FILTER</code> and <code>GROUPING SETS</code>, <code>DISTINCT ON</code> as PostgreSQL's greatest-n-per-group tool, and window functions in depth — frames, ranking, running totals, and moving averages — plus CTEs, the PostgreSQL 12 fencing change, and recursive tree traversal.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/datatype.html" target="_blank" rel="noopener external nofollow noreferrer">Data Types</a> — the complete type reference.</li>
+<li><a href="https://www.postgresql.org/docs/current/datatype-datetime.html" target="_blank" rel="noopener external nofollow noreferrer">Date/Time Types</a> — the <code>timestamptz</code> semantics in full.</li>
+<li><a href="https://www.postgresql.org/docs/current/ddl-constraints.html" target="_blank" rel="noopener external nofollow noreferrer">Constraints</a> — including exclusion constraints.</li>
+<li><a href="https://www.postgresql.org/docs/current/sql-insert.html" target="_blank" rel="noopener external nofollow noreferrer"><code>INSERT</code></a> — <code>ON CONFLICT</code> and <code>RETURNING</code>.</li>
+<li><a href="https://www.postgresql.org/docs/current/sql-altertable.html" target="_blank" rel="noopener external nofollow noreferrer"><code>ALTER TABLE</code></a> — the notes section documents which forms rewrite.</li>
+<li><a href="https://www.postgresql.org/docs/current/functions.html" target="_blank" rel="noopener external nofollow noreferrer">Functions and Operators</a> — <code>coalesce</code>, <code>nullif</code>, <code>IS DISTINCT FROM</code>, date arithmetic.</li>
+<li><a href="https://www.postgresql.org/docs/18/release-18.html" target="_blank" rel="noopener external nofollow noreferrer">PostgreSQL 18 release notes</a> — <code>uuidv7()</code>, virtual generated columns, temporal constraints.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a full range-type section with <code>tstzrange</code> operators, a composite-type and <code>ROW()</code> walkthrough, and a benchmark harness comparing <code>numeric</code> against integer-cents arithmetic.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"PostgreSQL Course — 01 · SQL Fundamentals and Data Types\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 16:15:54\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"PostgreSQL Course — 01 · SQL Fundamentals and Data Types"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-06-10T05:05:36.000Z","title":"Created 2026-06-10 13:05:36","children":"2026-06-10"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-06-10T05:05:36.000Z","title":"Updated 2026-06-10 13:05:36","children":"2026-06-10"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Database",{"className":"post-meta-categories","href":"/blog/categories/Database/","children":"Database"}]],[["$","span","sep-PostgreSQL",{"children":" > "}],["$","a","PostgreSQL",{"className":"post-meta-categories","href":"/blog/categories/PostgreSQL/","children":"PostgreSQL"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"PostgreSQL Course — 01 · SQL Fundamentals and Data Types","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/06/10/pg_01_sql_fundamentals_types/","children":"https://invokfung.github.io/blog/2026/06/10/pg_01_sql_fundamentals_types/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Database",{"className":"post-meta__tags","href":"/blog/tags/Database/","children":"Database"}],["$","a","PostgreSQL",{"className":"post-meta__tags","href":"/blog/tags/PostgreSQL/","children":"PostgreSQL"}],["$","a","SQL",{"className":"post-meta__tags","href":"/blog/tags/SQL/","children":"SQL"}],["$","a","Data Types",{"className":"post-meta__tags","href":"/blog/tags/Data-Types/","children":"Data Types"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/06/10/mongo_06_aggregation_advanced/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/mongo/cover_06_aggregation_advanced.png\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">MongoDB Course — 06 · Aggregation Advanced — $facet, $bucket, $graphLookup, Window Functions, $merge</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/06/08/mongo_05_aggregation_basics/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/mongo/cover_05_aggregation_basics.png\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">MongoDB Course — 05 · Aggregation Basics — Pipeline, $match, $group, $project, $lookup</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","pg_00_foundations_setup",{"children":["$","a",null,{"href":"/blog/2026/06/05/pg_00_foundations_setup/","title":"PostgreSQL Course — 00 · Foundations and Setup","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-05</div><div class=\"title\">PostgreSQL Course — 00 · Foundations and Setup</div></div>"}}]}],["$","div","pg_02_joins_aggregation_windows",{"children":["$","a",null,{"href":"/blog/2026/06/14/pg_02_joins_aggregation_windows/","title":"PostgreSQL Course — 02 · Joins, Aggregation and Window Functions","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-14</div><div class=\"title\">PostgreSQL Course — 02 · Joins, Aggregation and Window Functions</div></div>"}}]}],["$","div","pg_04_query_optimization",{"children":["$","a",null,{"href":"/blog/2026/06/25/pg_04_query_optimization/","title":"PostgreSQL Course — 04 · Query Optimization and Statistics","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-25</div><div class=\"title\">PostgreSQL Course — 04 · Query Optimization and Statistics</div></div>"}}]}],["$","div","pg_03_indexes_planner",{"children":["$","a",null,{"href":"/blog/2026/06/19/pg_03_indexes_planner/","title":"PostgreSQL Course — 03 · Indexes and the Query Planner","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-19</div><div class=\"title\">PostgreSQL Course — 03 · Indexes and the Query Planner</div></div>"}}]}],["$","div","pg_05_transactions_mvcc_locking",{"children":["$","a",null,{"href":"/blog/2026/06/29/pg_05_transactions_mvcc_locking/","title":"PostgreSQL Course — 05 · Transactions, MVCC, Isolation and Locking","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-29</div><div class=\"title\">PostgreSQL Course — 05 · Transactions, MVCC, Isolation and Locking</div></div>"}}]}],["$","div","pg_06_schema_design_jsonb",{"children":["$","a",null,{"href":"/blog/2026/07/03/pg_06_schema_design_jsonb/","title":"PostgreSQL Course — 06 · Schema Design, Normalization and JSONB","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-03</div><div class=\"title\">PostgreSQL Course — 06 · Schema Design, Normalization and JSONB</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":138}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":261}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":18}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-DDL-creating-and-evolving-tables",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-DDL-creating-and-evolving-tables","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — DDL: creating and evolving tables"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","CREATE-TABLE",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#CREATE-TABLE","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"CREATE TABLE"}]]}],null]}],["$","li","ALTER-TABLE-—-the-operations-that-are-cheap-and-the-ones-that-are-not",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#ALTER-TABLE-—-the-operations-that-are-cheap-and-the-ones-that-are-not","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"ALTER TABLE — the operations that are cheap and the ones that are not"}]]}],null]}],["$","li","Generated-columns",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Generated-columns","children":[["$","span",null,{"className":"toc-number","children":"2.4."}]," ",["$","span",null,{"className":"toc-text","children":"Generated columns"}]]}],null]}],["$","li","DROP",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#DROP","children":[["$","span",null,{"className":"toc-number","children":"2.5."}]," ",["$","span",null,{"className":"toc-text","children":"DROP"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-DML-INSERT-UPDATE-DELETE-RETURNING-upserts",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-DML-INSERT-UPDATE-DELETE-RETURNING-upserts","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — DML: INSERT, UPDATE, DELETE, RETURNING, upserts"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","INSERT",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#INSERT","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"INSERT"}]]}],null]}],["$","li","RETURNING",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#RETURNING","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"RETURNING"}]]}],null]}],["$","li","UPDATE-and-DELETE-with-joins",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#UPDATE-and-DELETE-with-joins","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"UPDATE and DELETE with joins"}]]}],null]}],["$","li","Upsert-ON-CONFLICT",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Upsert-ON-CONFLICT","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"Upsert: ON CONFLICT"}]]}],null]}],["$","li","MERGE",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#MERGE","children":[["$","span",null,{"className":"toc-number","children":"3.5."}]," ",["$","span",null,{"className":"toc-text","children":"MERGE"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-The-type-system",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-The-type-system","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — The type system"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Numbers",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Numbers","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Numbers"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","bigint-for-keys-always",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#bigint-for-keys-always","children":[["$","span",null,{"className":"toc-number","children":"4.1.1."}]," ",["$","span",null,{"className":"toc-text","children":"bigint for keys, always"}]]}],null]}],["$","li","numeric-vs-floating-point-for-money",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#numeric-vs-floating-point-for-money","children":[["$","span",null,{"className":"toc-number","children":"4.1.2."}]," ",["$","span",null,{"className":"toc-text","children":"numeric vs floating point for money"}]]}],null]}]]}]]}],["$","li","Text",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Text","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Text"}]]}],null]}],["$","li","Boolean",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Boolean","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"Boolean"}]]}],null]}],["$","li","Enum-vs-lookup-table",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Enum-vs-lookup-table","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"Enum vs lookup table"}]]}],null]}],["$","li","Date-and-time",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Date-and-time","children":[["$","span",null,{"className":"toc-number","children":"4.5."}]," ",["$","span",null,{"className":"toc-text","children":"Date and time"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Why-timestamptz-is-almost-always-right",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#Why-timestamptz-is-almost-always-right","children":[["$","span",null,{"className":"toc-number","children":"4.5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Why timestamptz is almost always right"}]]}],null]}],["$","li","interval",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#interval","children":[["$","span",null,{"className":"toc-number","children":"4.5.2."}]," ",["$","span",null,{"className":"toc-text","children":"interval"}]]}],null]}]]}]]}],["$","li","UUID",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#UUID","children":[["$","span",null,{"className":"toc-number","children":"4.6."}]," ",["$","span",null,{"className":"toc-text","children":"UUID"}]]}],null]}],["$","li","Arrays",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Arrays","children":[["$","span",null,{"className":"toc-number","children":"4.7."}]," ",["$","span",null,{"className":"toc-text","children":"Arrays"}]]}],null]}],["$","li","bytea-and-other-types-worth-knowing",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#bytea-and-other-types-worth-knowing","children":[["$","span",null,{"className":"toc-number","children":"4.8."}]," ",["$","span",null,{"className":"toc-text","children":"bytea and other types worth knowing"}]]}],null]}],["$","li","Domains",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Domains","children":[["$","span",null,{"className":"toc-number","children":"4.9."}]," ",["$","span",null,{"className":"toc-text","children":"Domains"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-NULL-and-three-valued-logic",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-NULL-and-three-valued-logic","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — NULL and three-valued logic"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-surprising-results-table",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-surprising-results-table","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"The surprising-results table"}]]}],null]}],["$","li","The-NOT-IN-trap",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-NOT-IN-trap","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"The NOT IN trap"}]]}],null]}],["$","li","Tools-for-handling-NULL",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Tools-for-handling-NULL","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"Tools for handling NULL"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Constraints",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Constraints","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Constraints"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-six-types",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-six-types","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"The six types"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","PRIMARY-KEY",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#PRIMARY-KEY","children":[["$","span",null,{"className":"toc-number","children":"6.1.1."}]," ",["$","span",null,{"className":"toc-text","children":"PRIMARY KEY"}]]}],null]}],["$","li","FOREIGN-KEY-and-the-ON-DELETE-actions",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#FOREIGN-KEY-and-the-ON-DELETE-actions","children":[["$","span",null,{"className":"toc-number","children":"6.1.2."}]," ",["$","span",null,{"className":"toc-text","children":"FOREIGN KEY and the ON DELETE actions"}]]}],null]}],["$","li","UNIQUE",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#UNIQUE","children":[["$","span",null,{"className":"toc-number","children":"6.1.3."}]," ",["$","span",null,{"className":"toc-text","children":"UNIQUE"}]]}],null]}],["$","li","CHECK",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#CHECK","children":[["$","span",null,{"className":"toc-number","children":"6.1.4."}]," ",["$","span",null,{"className":"toc-text","children":"CHECK"}]]}],null]}],["$","li","EXCLUDE",{"className":"toc-item toc-level-3","children":[["$","a",null,{"className":"toc-link","href":"#EXCLUDE","children":[["$","span",null,{"className":"toc-number","children":"6.1.5."}]," ",["$","span",null,{"className":"toc-text","children":"EXCLUDE"}]]}],null]}]]}]]}],["$","li","Deferrable-constraints",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Deferrable-constraints","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"Deferrable constraints"}]]}],null]}],["$","li","Inspecting-constraints",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Inspecting-constraints","children":[["$","span",null,{"className":"toc-number","children":"6.3."}]," ",["$","span",null,{"className":"toc-text","children":"Inspecting constraints"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Identity-vs-serial-and-casting",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Identity-vs-serial-and-casting","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Identity vs serial, and casting"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","serial-is-a-macro-not-a-type",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#serial-is-a-macro-not-a-type","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"serial is a macro, not a type"}]]}],null]}],["$","li","Identity-columns-SQL-standard-PostgreSQL-10",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Identity-columns-SQL-standard-PostgreSQL-10","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"Identity columns (SQL standard, PostgreSQL 10+)"}]]}],null]}],["$","li","Casting",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Casting","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"Casting"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Type-audit",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Type-audit","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Type audit"}]]}],null]}],["$","li","Exercise-2-—-Predict-the-NULL-results",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Predict-the-NULL-results","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Predict the NULL results"}]]}],null]}],["$","li","Exercise-3-—-Upsert-a-daily-counter",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Upsert-a-daily-counter","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Upsert a daily counter"}]]}],null]}],["$","li","Exercise-4-—-No-double-booking",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-No-double-booking","children":[["$","span",null,{"className":"toc-number","children":"8.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — No double booking"}]]}],null]}],["$","li","Exercise-5-—-Anti-join-without-the-trap",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Anti-join-without-the-trap","children":[["$","span",null,{"className":"toc-number","children":"8.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Anti-join without the trap"}]]}],null]}],["$","li","Exercise-6-—-Safe-NOT-NULL",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Safe-NOT-NULL","children":[["$","span",null,{"className":"toc-number","children":"8.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Safe NOT NULL"}]]}],null]}],["$","li","Exercise-7-—-Time-zone-reasoning",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-7-—-Time-zone-reasoning","children":[["$","span",null,{"className":"toc-number","children":"8.7."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 7 — Time zone reasoning"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"PostgreSQL Course — 01 · SQL Fundamentals and Data Types | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Type choices are the most expensive decisions in a schema. A wrong index costs a `CREATE INDEX`; a wrong column type costs a migration, a rewrite, a m"}],["$","meta","5",{"name":"keywords","content":"Database,PostgreSQL,SQL,Data Types,Course"}],["$","meta","6",{"property":"og:title","content":"PostgreSQL Course — 01 · SQL Fundamentals and Data Types"}],["$","meta","7",{"property":"og:description","content":"Type choices are the most expensive decisions in a schema. A wrong index costs a `CREATE INDEX`; a wrong column type costs a migration, a rewrite, a m"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"PostgreSQL Course — 01 · SQL Fundamentals and Data Types"}],["$","meta","11",{"name":"twitter:description","content":"Type choices are the most expensive decisions in a schema. A wrong index costs a `CREATE INDEX`; a wrong column type costs a migration, a rewrite, a m"}]]
+1:null
