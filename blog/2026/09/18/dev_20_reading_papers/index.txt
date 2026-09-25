@@ -1,0 +1,598 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","09","d"]
+6:["day","18","d"]
+7:["slug","dev_20_reading_papers","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","18","d"],{"children":[["slug","dev_20_reading_papers","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"09\",\"day\":\"18\",\"slug\":\"dev_20_reading_papers\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","18","d"],{"children":[["slug","dev_20_reading_papers","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Tbbba,<p>Many ideas you use every day started as a research paper. Consistent hashing, MapReduce and the Transformer all came from papers. Reading one front to back, word by word, is slow and tiring. There is a better way. This post teaches the <strong>three-pass method</strong> from S. Keshav's short 2007 paper. It also covers how to find papers, read figures and math, judge quality, and keep notes you can use again. It opens Part E, which is about skills outside code.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → … → 19 RAG → <strong>20 Reading Papers</strong> (this post) → 21 Estimating → … → 24 Desk Health. Part E · Growth outside code.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Explain the three passes and how long each one should take.</li>
+<li>Answer the <strong>five Cs</strong> after a 5-10 minute first pass.</li>
+<li>Run a small literature survey with Keshav's three steps.</li>
+<li>Find papers with Google Scholar, arXiv, Semantic Scholar, the ACM Digital Library and dblp.</li>
+<li>Read figures and tables first, and turn math notation into code.</li>
+<li>Judge a paper: peer review, venue, preprint status, replication.</li>
+<li>Keep notes with a copy-ready template.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-What-a-paper-looks-like"><a href="#Chapter-1-—-What-a-paper-looks-like" class="headerlink" title="Chapter 1 — What a paper looks like"></a>Chapter 1 — What a paper looks like</h1>
+<p>Most computer science papers follow the same shape. Once you know the shape, you know where to look.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What it tells you</th>
+<th>Read in pass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title + abstract</td>
+<td>The claim in one paragraph</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Introduction</td>
+<td>The problem, why it matters, the contributions (often a bullet list)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Background / related work</td>
+<td>What came before, and how this paper differs</td>
+<td>2 (skim in 1)</td>
+</tr>
+<tr>
+<td>Design / method</td>
+<td>How the idea works</td>
+<td>2, 3</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>What was built</td>
+<td>2, 3</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Experiments, figures, tables</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Discussion / lessons</td>
+<td>Limits, surprises</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Conclusion</td>
+<td>The claim again, plus future work</td>
+<td>1</td>
+</tr>
+<tr>
+<td>References</td>
+<td>The paper's family tree</td>
+<td>1 (glance)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Peer review</strong> — other experts read the paper before it is accepted. They check that it is new, sound and clear. They do not re-run everything.</li>
+<li><strong>Venue</strong> — where the paper appeared: a conference (SOSP, OSDI, NeurIPS), a journal, or a workshop. In computer science, top conferences often matter more than journals.</li>
+<li><strong>Proceedings</strong> — the book (now a website) of all papers from one conference.</li>
+<li><strong>Preprint</strong> — a version posted before or without peer review, often on arXiv.</li>
+<li><strong>Artifact</strong> — the code, data or scripts behind a paper.</li>
+<li><strong>DOI</strong> — a permanent ID for a paper, like <code>10.1145/1273445.1273458</code>.</li>
+<li><strong>Survey paper</strong> — a paper that summarises a whole area. Gold for a newcomer.</li>
+</ul>
+<hr>
+<h1 id="Chapter-2-—-The-three-pass-method"><a href="#Chapter-2-—-The-three-pass-method" class="headerlink" title="Chapter 2 — The three-pass method"></a>Chapter 2 — The three-pass method</h1>
+<p>The source is S. Keshav, &quot;How to Read a Paper&quot;, <em>ACM SIGCOMM Computer Communication Review</em> 37(3), July 2007, pages 83-84. It is two pages long. Keshav has updated it over the years; later versions (for example, one dated February 17, 2016) keep the same method.</p>
+<p>The key idea: read a paper in <strong>up to three passes</strong>, not once from start to end. Each pass has its own goal. You can stop after any pass.</p>
+<h2 id="First-pass-—-the-birds-eye-view-about-5-10-minutes"><a href="#First-pass-—-the-birds-eye-view-about-5-10-minutes" class="headerlink" title="First pass — the bird's-eye view (about 5-10 minutes)"></a>First pass — the bird's-eye view (about 5-10 minutes)</h2>
+<p>Keshav's steps:</p>
+<ol>
+<li>Carefully read the <strong>title, abstract and introduction</strong>.</li>
+<li>Read the <strong>section and sub-section headings</strong>, and ignore everything else.</li>
+<li><strong>Glance at the math</strong> (if any) to see what theory it rests on.</li>
+<li>Read the <strong>conclusions</strong>.</li>
+<li><strong>Glance over the references</strong> and tick off the ones you have already read.</li>
+</ol>
+<p>At the end, you should be able to answer the <strong>five Cs</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>C</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>What type of paper is this? A measurement paper? An analysis of an existing system? A description of a research prototype?</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Which other papers is it related to? What theory does it use?</td>
+</tr>
+<tr>
+<td><strong>Correctness</strong></td>
+<td>Do the assumptions seem valid?</td>
+</tr>
+<tr>
+<td><strong>Contributions</strong></td>
+<td>What are the main contributions?</td>
+</tr>
+<tr>
+<td><strong>Clarity</strong></td>
+<td>Is it well written?</td>
+</tr>
+</tbody>
+</table>
+<p>Now you decide. Maybe the paper does not interest you. Maybe you lack the background. Maybe the assumptions look wrong. Stopping here is fine. Keshav says the first pass is enough for papers outside your area that may matter some day.</p>
+<blockquote>
+<p><strong>Trick:</strong> the same logic works in reverse when <em>you</em> write. Most readers make only one pass. Clear headings and a tight abstract decide whether anyone reads further. (See Dev Essentials 22 · Design Docs.)</p>
+</blockquote>
+<h2 id="Second-pass-—-the-content-up-to-about-an-hour"><a href="#Second-pass-—-the-content-up-to-about-an-hour" class="headerlink" title="Second pass — the content (up to about an hour)"></a>Second pass — the content (up to about an hour)</h2>
+<p>Read with more care, but <strong>skip details such as proofs</strong>. Write key points and questions in the margin as you go. Two special jobs:</p>
+<ol>
+<li><strong>Look hard at the figures, diagrams and graphs.</strong> Are the axes labelled? Are there error bars, so the result is statistically meaningful? Keshav notes that mistakes like these separate rushed work from excellent work.</li>
+<li><strong>Mark relevant references you have not read.</strong> They are your reading list for background.</li>
+</ol>
+<p>After this pass you should be able to <strong>summarise the main idea, with evidence, to someone else</strong>. Keshav says this pass takes up to an hour for an experienced reader.</p>
+<p>Sometimes you still will not understand the paper. The topic may be new, the terms unfamiliar, or the writing poor. You then have three choices: (a) put it aside, (b) come back after reading background material, or (c) push on to the third pass.</p>
+<h2 id="Third-pass-—-virtual-re-implementation-hours"><a href="#Third-pass-—-virtual-re-implementation-hours" class="headerlink" title="Third pass — virtual re-implementation (hours)"></a>Third pass — virtual re-implementation (hours)</h2>
+<p>The key is to <strong>virtually re-implement</strong> the paper: make the same assumptions as the authors and re-create the work in your head (or on paper, or in code). Then compare your version with theirs. The gaps show you both the new ideas and the hidden weak points.</p>
+<ul>
+<li>Challenge every assumption in every statement.</li>
+<li>Ask how <em>you</em> would present each idea.</li>
+<li>Write down ideas for future work.</li>
+</ul>
+<p>Time: the 2007 version says about four or five hours for beginners and about an hour for an experienced reader. The 2016 version is less optimistic: many hours for beginners and more than an hour or two even for experienced readers.</p>
+<p>At the end, you should be able to rebuild the paper's structure from memory, and point out implicit assumptions, missing citations and problems with the experiments or analysis.</p>
+<h2 id="The-three-passes-at-a-glance"><a href="#The-three-passes-at-a-glance" class="headerlink" title="The three passes at a glance"></a>The three passes at a glance</h2>
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th>Time (Keshav)</th>
+<th>You read</th>
+<th>You come out with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5-10 min</td>
+<td>Title, abstract, intro, headings, conclusions, reference list</td>
+<td>The five Cs; a go / no-go decision</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Up to ~1 hour</td>
+<td>Whole paper, skip proofs; study figures</td>
+<td>A summary with evidence; a list of unread references</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hours</td>
+<td>Everything, in depth</td>
+<td>A mental re-implementation; strengths, weak points, future work</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> starting with pass 3 on page 1. You drown in details before you know what the paper claims. Always do pass 1 first, even on a paper you &quot;must&quot; read in depth.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-A-literature-survey-in-three-steps"><a href="#Chapter-3-—-A-literature-survey-in-three-steps" class="headerlink" title="Chapter 3 — A literature survey in three steps"></a>Chapter 3 — A literature survey in three steps</h1>
+<p>Keshav's paper also shows how to survey a new field. You may need to read tens of papers.</p>
+<ol>
+<li><strong>Seed.</strong> Use an academic search engine (Keshav names Google Scholar and CiteSeer) with good keywords. Find <strong>three to five recent, highly cited papers</strong>. Do one pass on each. Read their related-work sections. If one of them points to a recent <strong>survey paper</strong>, read that and you are nearly done.</li>
+<li><strong>Find the core.</strong> Look for <strong>shared citations</strong> and <strong>repeated author names</strong> across the seed papers. These are the key papers and people. Visit the key researchers' pages and see where they publish. That tells you the <strong>top venues</strong> of the field.</li>
+<li><strong>Scan the venues.</strong> Go to those conferences' recent proceedings. A quick scan finds recent strong work. These papers, plus the key papers from step 2, are the first version of your survey. Do two passes on them. If they all cite a key paper you missed, read it and repeat.</li>
+</ol>
+<p>Step 2 is easy to automate once you have the reference lists. Paste a few references from each seed paper (short keys are fine):</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># shared_citations.py</span></span><br><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter</span><br><span class="line"> </span><br><span class="line">references = {</span><br><span class="line">    <span class="hljs-string">&quot;paper A&quot;</span>: [<span class="hljs-string">&quot;Dynamo 2007&quot;</span>, <span class="hljs-string">&quot;Bigtable 2006&quot;</span>, <span class="hljs-string">&quot;Chord 2001&quot;</span>, <span class="hljs-string">&quot;Paxos 1998&quot;</span>],</span><br><span class="line">    <span class="hljs-string">&quot;paper B&quot;</span>: [<span class="hljs-string">&quot;Dynamo 2007&quot;</span>, <span class="hljs-string">&quot;Cassandra 2010&quot;</span>, <span class="hljs-string">&quot;Chord 2001&quot;</span>, <span class="hljs-string">&quot;Raft 2014&quot;</span>],</span><br><span class="line">    <span class="hljs-string">&quot;paper C&quot;</span>: [<span class="hljs-string">&quot;Dynamo 2007&quot;</span>, <span class="hljs-string">&quot;Spanner 2012&quot;</span>, <span class="hljs-string">&quot;Paxos 1998&quot;</span>, <span class="hljs-string">&quot;Raft 2014&quot;</span>],</span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line">counts = Counter(ref <span class="hljs-keyword">for</span> refs <span class="hljs-keyword">in</span> references.values() <span class="hljs-keyword">for</span> ref <span class="hljs-keyword">in</span> <span class="hljs-built_in">set</span>(refs))</span><br><span class="line"><span class="hljs-keyword">for</span> ref, n <span class="hljs-keyword">in</span> counts.most_common():</span><br><span class="line">    <span class="hljs-keyword">if</span> n &gt;= <span class="hljs-number">2</span>:</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{n}</span> of <span class="hljs-subst">{<span class="hljs-built_in">len</span>(references)}</span> seed papers cite: <span class="hljs-subst">{ref}</span>&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="text"><span class="line">3 of 3 seed papers cite: Dynamo 2007</span><br><span class="line">2 of 3 seed papers cite: Chord 2001</span><br><span class="line">2 of 3 seed papers cite: Paxos 1998</span><br><span class="line">2 of 3 seed papers cite: Raft 2014</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The paper that every seed cites goes to the top of your reading list.</p>
+<hr>
+<h1 id="Chapter-4-—-Finding-papers-state-in-September-2026"><a href="#Chapter-4-—-Finding-papers-state-in-September-2026" class="headerlink" title="Chapter 4 — Finding papers (state in September 2026)"></a>Chapter 4 — Finding papers (state in September 2026)</h1>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Good for</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Scholar</strong></td>
+<td>Broad search; &quot;Cited by&quot; to move forward in time; &quot;All versions&quot; to find a free copy</td>
+<td>Citation counts include non-peer-reviewed items</td>
+</tr>
+<tr>
+<td><strong>arXiv</strong></td>
+<td>Preprints in CS, math, physics and more</td>
+<td>Moderated, <strong>not</strong> peer reviewed (see Chapter 7)</td>
+</tr>
+<tr>
+<td><strong>Semantic Scholar</strong></td>
+<td>Search, citation graph, a free API</td>
+<td>Run by the Allen Institute for AI (Ai2)</td>
+</tr>
+<tr>
+<td><strong>ACM Digital Library</strong></td>
+<td>ACM conferences and journals (SOSP, SIGCOMM, CHI, …)</td>
+<td>Fully open access since January 1, 2026</td>
+</tr>
+<tr>
+<td><strong>dblp</strong></td>
+<td>A clean list of a researcher's papers, sorted by venue</td>
+<td>Great for Keshav's step 2</td>
+</tr>
+<tr>
+<td><strong>OpenReview</strong></td>
+<td>Some ML conferences (for example ICLR) publish the reviews</td>
+<td>Reading reviews teaches you what experts question</td>
+</tr>
+<tr>
+<td><strong>Hugging Face Papers</strong></td>
+<td>Trending ML papers, often with code links</td>
+<td>Papers with Code was shut down in July 2025; its domain now redirects here</td>
+</tr>
+</tbody>
+</table>
+<p>To get a free copy legally, try, in order: the venue itself (many are open access, including USENIX papers), the arXiv version, the authors' home pages, your library, or a polite email to the author.</p>
+<p>Searching arXiv from Python takes a few lines. The arXiv API returns Atom XML:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-string">&quot;&quot;&quot;arxiv_search.py - search arXiv from the terminal.  pip install requests&quot;&quot;&quot;</span></span><br><span class="line"><span class="hljs-keyword">import</span> sys</span><br><span class="line"><span class="hljs-keyword">import</span> xml.etree.ElementTree <span class="hljs-keyword">as</span> ET</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">ATOM = <span class="hljs-string">&quot;{http://www.w3.org/2005/Atom}&quot;</span></span><br><span class="line">API = <span class="hljs-string">&quot;https://export.arxiv.org/api/query&quot;</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">search_arxiv</span>(<span class="hljs-params">query, max_results=<span class="hljs-number">5</span></span>):</span><br><span class="line">    resp = requests.get(</span><br><span class="line">        API,</span><br><span class="line">        params={<span class="hljs-string">&quot;search_query&quot;</span>: query, <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-number">0</span>,</span><br><span class="line">                <span class="hljs-string">&quot;max_results&quot;</span>: max_results, <span class="hljs-string">&quot;sortBy&quot;</span>: <span class="hljs-string">&quot;relevance&quot;</span>},</span><br><span class="line">        headers={<span class="hljs-string">&quot;User-Agent&quot;</span>: <span class="hljs-string">&quot;paper-notes/0.1&quot;</span>},</span><br><span class="line">        timeout=<span class="hljs-number">30</span>,</span><br><span class="line">    )</span><br><span class="line">    resp.raise_for_status()</span><br><span class="line">    root = ET.fromstring(resp.content)</span><br><span class="line">    <span class="hljs-keyword">for</span> entry <span class="hljs-keyword">in</span> root.findall(ATOM + <span class="hljs-string">&quot;entry&quot;</span>):</span><br><span class="line">        title = <span class="hljs-string">&quot; &quot;</span>.join(entry.find(ATOM + <span class="hljs-string">&quot;title&quot;</span>).text.split())</span><br><span class="line">        published = entry.find(ATOM + <span class="hljs-string">&quot;published&quot;</span>).text[:<span class="hljs-number">10</span>]</span><br><span class="line">        link = entry.find(ATOM + <span class="hljs-string">&quot;id&quot;</span>).text</span><br><span class="line">        authors = [a.find(ATOM + <span class="hljs-string">&quot;name&quot;</span>).text <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> entry.findall(ATOM + <span class="hljs-string">&quot;author&quot;</span>)]</span><br><span class="line">        first = authors[<span class="hljs-number">0</span>] + (<span class="hljs-string">&quot; et al.&quot;</span> <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(authors) &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;&quot;</span>)</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{published}</span>  <span class="hljs-subst">{first}</span>\n  <span class="hljs-subst">{title}</span>\n  <span class="hljs-subst">{link}</span>\n&quot;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:</span><br><span class="line">    q = sys.argv[<span class="hljs-number">1</span>] <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(sys.argv) &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;ti:&quot;attention is all you need&quot;&#x27;</span></span><br><span class="line">    search_arxiv(q)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">python arxiv_search.py</span><br><span class="line">python arxiv_search.py <span class="hljs-string">&#x27;ti:mapreduce AND cat:cs.DC&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="powershell"><span class="line">python arxiv_search.py</span><br><span class="line">python arxiv_search.py <span class="hljs-string">&#x27;ti:mapreduce AND cat:cs.DC&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>First result of the default query: <code>2017-06-12  Ashish Vaswani et al. — Attention Is All You Need — http://arxiv.org/abs/1706.03762v7</code>. Field prefixes: <code>ti:</code> title, <code>au:</code> author, <code>abs:</code> abstract, <code>cat:</code> category, <code>all:</code> everything.</p>
+<blockquote>
+<p><strong>Watch out:</strong> the arXiv API manual asks you to wait about 3 seconds between calls. If you loop over many queries, add <code>time.sleep(3)</code>.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Read-figures-and-tables-first"><a href="#Chapter-5-—-Read-figures-and-tables-first" class="headerlink" title="Chapter 5 — Read figures and tables first"></a>Chapter 5 — Read figures and tables first</h1>
+<p>In pass 2, the figures often tell the story faster than the text. Use this checklist on every graph:</p>
+<ul>
+<li><strong>Axes:</strong> labelled? Units? Linear or <strong>log</strong> scale? Does the y-axis start at zero, or is a small gap made to look big?</li>
+<li><strong>What is compared:</strong> which <strong>baseline</strong>? Is it a fair, well-tuned one, or a weak straw man?</li>
+<li><strong>Spread:</strong> error bars, confidence intervals, or at least several runs? One run proves little.</li>
+<li><strong>Sample:</strong> how many machines, users, datasets or trials?</li>
+<li><strong>Range:</strong> does the plot stop right before things get interesting?</li>
+<li><strong>Caption:</strong> can you understand the figure from the caption alone?</li>
+</ul>
+<p>For tables:</p>
+<ul>
+<li>Bold usually marks the best number. Check how big the gap to second place is, and whether it is within noise.</li>
+<li>An <strong>ablation</strong> table removes one part at a time. It shows which parts of the idea actually matter.</li>
+<li>Look for missing rows: a dataset or setting the method might lose on.</li>
+</ul>
+<blockquote>
+<p><strong>Trick:</strong> before reading the evaluation text, write one sentence per figure: &quot;This shows that ___.&quot; Then read the text and compare. Your version and the authors' version will not always match.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-Handling-math-notation"><a href="#Chapter-6-—-Handling-math-notation" class="headerlink" title="Chapter 6 — Handling math notation"></a>Chapter 6 — Handling math notation</h1>
+<p>Math is a compact language. You do not need to follow every line on pass 2. Some habits help:</p>
+<ol>
+<li><strong>Build a notation table</strong> as you read. Each symbol, its meaning, and its shape or unit.</li>
+<li><strong>Read the words around the equation.</strong> Authors usually say in plain words what it does.</li>
+<li><strong>Plug in small numbers.</strong> Two items, three dimensions. Work it out by hand.</li>
+<li><strong>Skip proofs on pass 2.</strong> Trust the statement first; check it in pass 3.</li>
+<li><strong>Turn it into code.</strong> Code forces you to decide every shape.</li>
+</ol>
+<p>Common symbols:</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Usually means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Σ</code>, <code>∏</code></td>
+<td>Sum, product over a range</td>
+</tr>
+<tr>
+<td><code>∈</code>, <code>∀</code>, <code>∃</code></td>
+<td>&quot;is in&quot;, &quot;for all&quot;, &quot;there exists&quot;</td>
+</tr>
+<tr>
+<td><code>‖x‖</code></td>
+<td>Length (norm) of a vector</td>
+</tr>
+<tr>
+<td><code>argmax f(x)</code></td>
+<td>The <code>x</code> that makes <code>f(x)</code> biggest</td>
+</tr>
+<tr>
+<td><code>E[X]</code></td>
+<td>Expected (average) value</td>
+</tr>
+<tr>
+<td><code>x ~ D</code></td>
+<td><code>x</code> is drawn from distribution <code>D</code></td>
+</tr>
+<tr>
+<td><code>:=</code></td>
+<td>&quot;is defined as&quot;</td>
+</tr>
+<tr>
+<td><code>∝</code>, <code>≈</code></td>
+<td>Proportional to, approximately equal</td>
+</tr>
+<tr>
+<td><code>O(n log n)</code></td>
+<td>Grows no faster than <code>n log n</code></td>
+</tr>
+<tr>
+<td><code>Xᵀ</code></td>
+<td>Transpose of matrix <code>X</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example: the core formula of &quot;Attention Is All You Need&quot; (Section 3.2.1) is</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">Attention(Q, K, V) = softmax( Q Kᵀ / sqrt(d_k) ) V</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Notation table first: <code>Q</code> is queries (one row per query), <code>K</code> is keys, <code>V</code> is values, <code>d_k</code> is the key size, and softmax turns each row of scores into weights that sum to 1. Now code:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">softmax</span>(<span class="hljs-params">x, axis=-<span class="hljs-number">1</span></span>):</span><br><span class="line">    x = x - x.<span class="hljs-built_in">max</span>(axis=axis, keepdims=<span class="hljs-literal">True</span>)   <span class="hljs-comment"># subtract max for numerical safety</span></span><br><span class="line">    e = np.exp(x)</span><br><span class="line">    <span class="hljs-keyword">return</span> e / e.<span class="hljs-built_in">sum</span>(axis=axis, keepdims=<span class="hljs-literal">True</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">attention</span>(<span class="hljs-params">Q, K, V</span>):</span><br><span class="line">    d_k = K.shape[-<span class="hljs-number">1</span>]</span><br><span class="line">    scores = Q @ K.T / np.sqrt(d_k)          <span class="hljs-comment"># (n_queries, n_keys)</span></span><br><span class="line">    weights = softmax(scores, axis=-<span class="hljs-number">1</span>)       <span class="hljs-comment"># each row sums to 1</span></span><br><span class="line">    <span class="hljs-keyword">return</span> weights @ V, weights</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">rng = np.random.default_rng(<span class="hljs-number">0</span>)</span><br><span class="line">Q = rng.normal(size=(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>))   <span class="hljs-comment"># 2 queries, d_k = 4</span></span><br><span class="line">K = rng.normal(size=(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))   <span class="hljs-comment"># 3 keys,    d_k = 4</span></span><br><span class="line">V = rng.normal(size=(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>))   <span class="hljs-comment"># 3 values,  d_v = 5</span></span><br><span class="line"> </span><br><span class="line">out, w = attention(Q, K, V)</span><br><span class="line"><span class="hljs-built_in">print</span>(out.shape)              <span class="hljs-comment"># (2, 5)</span></span><br><span class="line"><span class="hljs-built_in">print</span>(w.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>))          <span class="hljs-comment"># [1. 1.]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Writing this answers questions the text leaves open: <code>K</code> must have the same width as <code>Q</code>, and the output has one row per query. (Dev Essentials 17 · How LLMs Work explains what attention does in a model.)</p>
+<hr>
+<h1 id="Chapter-7-—-Judging-quality"><a href="#Chapter-7-—-Judging-quality" class="headerlink" title="Chapter 7 — Judging quality"></a>Chapter 7 — Judging quality</h1>
+<p>A paper is a claim with evidence, not a fact. Weigh it.</p>
+<ul>
+<li><strong>Peer review</strong> is a filter, not a proof. Reviewers check that the work is new, sound and clear. They rarely re-run the experiments.</li>
+<li><strong>Venue.</strong> A paper at a top venue passed a hard filter. A workshop paper is often early work. Neither guarantees the result holds.</li>
+<li><strong>Preprints.</strong> arXiv states that its &quot;moderation process is not a peer-review process&quot;. A preprint may be excellent, or wrong. Check whether a later peer-reviewed version exists.</li>
+<li><strong>Replication.</strong> Can others get the same result? Many CS conferences now run <strong>artifact evaluation</strong>. ACM badges mark this: <em>Artifacts Available</em> (code is public), <em>Results Reproduced</em> (another team got the main results using the authors' artifacts) and <em>Results Replicated</em> (another team got them without the authors' artifacts).</li>
+<li><strong>Retractions.</strong> The Retraction Watch database has been free and open since Crossref acquired it in September 2023. Check it for papers you plan to rely on.</li>
+<li><strong>Citation counts</strong> show attention, not truth. They also lag: a strong new paper can have few citations.</li>
+<li><strong>Industry papers</strong> (such as Dynamo and MapReduce) describe systems at a scale you cannot rebuild. Judge them by the data they show and by what later systems learned.</li>
+</ul>
+<p>Red flags: vague baselines, a single run, no limitations section, claims in the abstract that the evaluation does not support, and code &quot;available on request&quot;.</p>
+<hr>
+<h1 id="Chapter-8-—-A-paper-notes-template"><a href="#Chapter-8-—-A-paper-notes-template" class="headerlink" title="Chapter 8 — A paper-notes template"></a>Chapter 8 — A paper-notes template</h1>
+<p>Copy this into your notes tool. One file per paper.</p>
+<pre><code class="language-markdown"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span></pre></td><td class="code"><pre><code class="markdown"><span class="line"><span class="hljs-section"># <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Paper</span> <span class="hljs-attr">title</span>&gt;</span></span></span></span><br><span class="line"><span class="hljs-bullet">-</span> Authors / year / venue:</span><br><span class="line"><span class="hljs-bullet">-</span> Link (DOI or arXiv):</span><br><span class="line"><span class="hljs-bullet">-</span> Date read:            Passes done: 1 / 2 / 3</span><br><span class="line"><span class="hljs-bullet">-</span> Why read it now:</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Five Cs (after pass 1)</span></span><br><span class="line"><span class="hljs-bullet">-</span> Category:</span><br><span class="line"><span class="hljs-bullet">-</span> Context (related papers, theory):</span><br><span class="line"><span class="hljs-bullet">-</span> Correctness (do assumptions look valid?):</span><br><span class="line"><span class="hljs-bullet">-</span> Contributions (1-3 bullets):</span><br><span class="line"><span class="hljs-bullet">-</span> Clarity (1-5):</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Summary (after pass 2, max 5 sentences)</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Key figures / tables</span></span><br><span class="line"><span class="hljs-bullet">-</span> Fig/Table N: &quot;This shows that ...&quot;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Notation table</span></span><br><span class="line">| Symbol | Meaning | Shape / unit |</span><br><span class="line">|--------|---------|--------------|</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Assumptions and weak points</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## References to read next</span></span><br><span class="line"><span class="hljs-bullet">-</span> [ ]</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Ideas / how this applies to current work</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Trick:</strong> keep the notes in a git repository as Markdown. Search across all your notes later with <code>grep</code> or <code>Select-String</code> (see Dev Essentials 05 · Command Line).</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-9-—-Three-practice-papers-for-this-blog"><a href="#Chapter-9-—-Three-practice-papers-for-this-blog" class="headerlink" title="Chapter 9 — Three practice papers for this blog"></a>Chapter 9 — Three practice papers for this blog</h1>
+<p>These three connect to other series here. All are free to read.</p>
+<table>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Venue</th>
+<th>Why read it</th>
+<th>Connects to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeCandia et al., &quot;Dynamo: Amazon's Highly Available Key-value Store&quot;</td>
+<td>SOSP 2007</td>
+<td>Consistent hashing, quorums, vector clocks, hinted handoff: a tour of distributed-systems ideas</td>
+<td>MongoDB Course (replication, sharding), AWS Course</td>
+</tr>
+<tr>
+<td>Dean and Ghemawat, &quot;MapReduce: Simplified Data Processing on Large Clusters&quot;</td>
+<td>OSDI 2004</td>
+<td>A clean idea, a clear system, honest experience section</td>
+<td>Python Course, MongoDB Course (aggregation)</td>
+</tr>
+<tr>
+<td>Vaswani et al., &quot;Attention Is All You Need&quot;</td>
+<td>NIPS 2017 (now called NeurIPS)</td>
+<td>The Transformer; base of today's LLMs</td>
+<td>Dev Essentials 17 · How LLMs Work, 19 · RAG</td>
+</tr>
+</tbody>
+</table>
+<p>First-pass hints:</p>
+<ul>
+<li><strong>Dynamo.</strong> Read the intro, then find the table early in the architecture section that pairs each problem with the technique used. That table <em>is</em> the paper in miniature. Note: Amazon <strong>DynamoDB</strong> is a later, different system. Its own paper (USENIX ATC 2022) explains how its design differs from Dynamo.</li>
+<li><strong>MapReduce.</strong> Start from the execution-overview figure (Figure 1). Then read the fault-tolerance part of the implementation section.</li>
+<li><strong>Attention.</strong> Look at the model-architecture figure (Figure 1) and the results table that compares quality and training cost. Keep Chapter 6's notation table next to you.</li>
+</ul>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-A-timed-first-pass"><a href="#Exercise-1-—-A-timed-first-pass" class="headerlink" title="Exercise 1 — A timed first pass"></a>Exercise 1 — A timed first pass</h2>
+<p>Pick one of the three papers. Set a 10-minute timer. Do only Keshav's five first-pass steps. Stop when the timer rings.</p>
+<details>
+<summary>Solution</summary>
+<p>A good first pass reads the title, abstract and intro in full, only the headings of the body, glances at any math, reads the conclusion and scans the references. If you read a full section of the body, you went too deep. The output is a go / no-go decision, not understanding.</p>
+</details>
+<h2 id="Exercise-2-—-Write-the-five-Cs"><a href="#Exercise-2-—-Write-the-five-Cs" class="headerlink" title="Exercise 2 — Write the five Cs"></a>Exercise 2 — Write the five Cs</h2>
+<p>Using the template in Chapter 8, write the five Cs for the paper from Exercise 1. One or two lines each.</p>
+<details>
+<summary>Solution</summary>
+<p>Example for MapReduce:</p>
+<ul>
+<li><strong>Category:</strong> description of a working system, with a performance evaluation and experience report.</li>
+<li><strong>Context:</strong> parallel and distributed processing; the paper compares itself with earlier parallel programming systems in its related-work section.</li>
+<li><strong>Correctness:</strong> assumes cheap commodity machines that fail often, and tasks that can be split into independent map and reduce steps. Reasonable for batch jobs at Google.</li>
+<li><strong>Contributions:</strong> a simple programming model; a runtime that handles splitting, scheduling and machine failures; lessons from real use.</li>
+<li><strong>Clarity:</strong> high; short sections and one clear overview figure.</li>
+</ul>
+</details>
+<h2 id="Exercise-3-—-Critique-a-figure"><a href="#Exercise-3-—-Critique-a-figure" class="headerlink" title="Exercise 3 — Critique a figure"></a>Exercise 3 — Critique a figure</h2>
+<p>Take any results figure from your chosen paper. Answer the Chapter 5 checklist for it.</p>
+<details>
+<summary>Solution</summary>
+<p>Answer each point in writing: axes and units, scale, baseline, spread (error bars or number of runs), sample size, range, and whether the caption stands alone. A useful last line: &quot;The figure supports / partly supports / does not support the claim that ___.&quot;</p>
+</details>
+<h2 id="Exercise-4-—-Notation-to-code"><a href="#Exercise-4-—-Notation-to-code" class="headerlink" title="Exercise 4 — Notation to code"></a>Exercise 4 — Notation to code</h2>
+<p>Write a notation table for the attention formula, then change the code in Chapter 6 so <code>Q</code> has 3 queries. Predict the output shape before running.</p>
+<details>
+<summary>Solution</summary>
+<p><code>Q = rng.normal(size=(3, 4))</code>. The scores are <code>(3, 3)</code> (3 queries by 3 keys), the weights are <code>(3, 3)</code>, and the output is <code>(3, 5)</code>: one row per query, <code>d_v</code> columns. <code>w.sum(axis=1)</code> prints three ones.</p>
+</details>
+<h2 id="Exercise-5-—-Mini-survey"><a href="#Exercise-5-—-Mini-survey" class="headerlink" title="Exercise 5 — Mini survey"></a>Exercise 5 — Mini survey</h2>
+<p>Pick a topic (for example &quot;vector databases&quot;). Find three recent, highly cited papers. Put 5-10 references from each into <code>shared_citations.py</code>.</p>
+<details>
+<summary>Solution</summary>
+<p>The references cited by two or more seeds are your core reading list. Look up their authors on dblp to see which venues come up again and again. Those are the venues to scan in Keshav's step 3.</p>
+</details>
+<h2 id="Exercise-6-—-Judge-a-preprint"><a href="#Exercise-6-—-Judge-a-preprint" class="headerlink" title="Exercise 6 — Judge a preprint"></a>Exercise 6 — Judge a preprint</h2>
+<p>Find an arXiv paper in your area from the last year. Is there a peer-reviewed version? Is the code public? Has anyone reproduced it?</p>
+<details>
+<summary>Solution</summary>
+<p>Check the arXiv &quot;Comments&quot; and &quot;Journal reference&quot; fields, then search the title on Google Scholar or Semantic Scholar for a venue version. Look for a code link and for later papers that report re-running it. If none exist, treat the claims as unconfirmed.</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decide if a paper is worth it</td>
+<td>Pass 1, 5-10 min: title, abstract, intro, headings, conclusions, references</td>
+</tr>
+<tr>
+<td>After pass 1</td>
+<td>Write the five Cs: category, context, correctness, contributions, clarity</td>
+</tr>
+<tr>
+<td>Understand the content</td>
+<td>Pass 2, up to ~1 h: skip proofs, study figures, mark unread references</td>
+</tr>
+<tr>
+<td>Understand in depth</td>
+<td>Pass 3, hours: virtually re-implement; challenge every assumption</td>
+</tr>
+<tr>
+<td>Survey a field</td>
+<td>3-5 seed papers → shared citations and authors → top venues' proceedings</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Google Scholar, arXiv, Semantic Scholar, ACM DL, dblp, OpenReview</td>
+</tr>
+<tr>
+<td>Read a graph</td>
+<td>Axes, scale, baseline, error bars, sample size, range</td>
+</tr>
+<tr>
+<td>Read math</td>
+<td>Notation table, small numbers, then code</td>
+</tr>
+<tr>
+<td>Judge quality</td>
+<td>Venue, peer review vs preprint, artifacts, replication, retractions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Dev Essentials 21 · Estimating covers how to estimate software tasks: breaking work down, giving ranges instead of single numbers, and why estimates slip.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://dl.acm.org/doi/10.1145/1273445.1273458" target="_blank" rel="noopener external nofollow noreferrer">S. Keshav, &quot;How to Read a Paper&quot;, ACM SIGCOMM CCR 37(3), 2007 (ACM DL)</a></li>
+<li><a href="https://systems.cs.columbia.edu/ds2-class/papers/keshav-paper.pdf" target="_blank" rel="noopener external nofollow noreferrer">S. Keshav, &quot;How to Read a Paper&quot;, version of February 17, 2016 (PDF)</a></li>
+<li><a href="https://info.arxiv.org/help/api/user-manual.html" target="_blank" rel="noopener external nofollow noreferrer">arXiv API user manual</a></li>
+<li><a href="https://info.arxiv.org/help/moderation/index.html" target="_blank" rel="noopener external nofollow noreferrer">arXiv moderation (not peer review)</a></li>
+<li><a href="https://scholar.google.com/" target="_blank" rel="noopener external nofollow noreferrer">Google Scholar</a> · <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener external nofollow noreferrer">Semantic Scholar</a> · <a href="https://dblp.org/" target="_blank" rel="noopener external nofollow noreferrer">dblp</a> · <a href="https://openreview.net/" target="_blank" rel="noopener external nofollow noreferrer">OpenReview</a> · <a href="https://huggingface.co/papers" target="_blank" rel="noopener external nofollow noreferrer">Hugging Face Papers</a></li>
+<li><a href="https://dl.acm.org/openaccess" target="_blank" rel="noopener external nofollow noreferrer">ACM Digital Library open access</a></li>
+<li><a href="https://www.crossref.org/blog/news-crossref-and-retraction-watch" target="_blank" rel="noopener external nofollow noreferrer">Crossref and Retraction Watch</a></li>
+<li><a href="https://github.com/paperswithcode/paperswithcode-data/issues/116" target="_blank" rel="noopener external nofollow noreferrer">Papers with Code redirect report (GitHub issue, August 2025)</a></li>
+<li><a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" target="_blank" rel="noopener external nofollow noreferrer">DeCandia et al., &quot;Dynamo&quot;, SOSP 2007 (PDF)</a></li>
+<li><a href="https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters" target="_blank" rel="noopener external nofollow noreferrer">Dean and Ghemawat, &quot;MapReduce&quot;, OSDI 2004 (USENIX)</a></li>
+<li><a href="https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html" target="_blank" rel="noopener external nofollow noreferrer">Vaswani et al., &quot;Attention Is All You Need&quot;, NIPS 2017 proceedings</a></li>
+<li><a href="https://www.usenix.org/conference/atc22/presentation/elhemali" target="_blank" rel="noopener external nofollow noreferrer">Elhemali et al., &quot;Amazon DynamoDB&quot;, USENIX ATC 2022</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a worked second pass on the Dynamo paper, a Semantic Scholar API example for citation graphs, and tips for reading papers outside computer science.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-09-18T12:25:21.000Z","title":"Updated 2026-09-18 20:25:21","children":"2026-09-18"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/09/18/dev_20_reading_papers/","children":"https://invokfung.github.io/blog/2026/09/18/dev_20_reading_papers/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","Research Papers",{"className":"post-meta__tags","href":"/blog/tags/Research-Papers/","children":"Research Papers"}],["$","a","Study Skills",{"className":"post-meta__tags","href":"/blog/tags/Study-Skills/","children":"Study Skills"}],["$","a","Computer Science",{"className":"post-meta__tags","href":"/blog/tags/Computer-Science/","children":"Computer Science"}],["$","a","Learning",{"className":"post-meta__tags","href":"/blog/tags/Learning/","children":"Learning"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/09/19/dev_21_estimating/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/09/15/dev_19_rag_from_scratch/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 19 · RAG from Scratch in Python</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_02_dates_time_zones",{"children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-14</div><div class=\"title\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}],["$","div","dev_04_line_endings",{"children":["$","a",null,{"href":"/blog/2026/08/18/dev_04_line_endings/","title":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-18</div><div class=\"title\">Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes</div></div>"}}]}],["$","div","dev_03_git_rescue_kit",{"children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","title":"Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-16</div><div class=\"title\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div","dev_05_command_line",{"children":["$","a",null,{"href":"/blog/2026/08/19/dev_05_command_line/","title":"Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-19</div><div class=\"title\">Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell</div></div>"}}]}],["$","div","dev_06_regex",{"children":["$","a",null,{"href":"/blog/2026/08/20/dev_06_regex/","title":"Dev Essentials — 06 · Regex from Zero to Useful","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-20</div><div class=\"title\">Dev Essentials — 06 · Regex from Zero to Useful</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-What-a-paper-looks-like",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-What-a-paper-looks-like","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — What a paper looks like"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-The-three-pass-method",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-The-three-pass-method","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — The three-pass method"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","First-pass-—-the-birds-eye-view-about-5-10-minutes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#First-pass-—-the-birds-eye-view-about-5-10-minutes","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"First pass — the bird's-eye view (about 5-10 minutes)"}]]}],null]}],["$","li","Second-pass-—-the-content-up-to-about-an-hour",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Second-pass-—-the-content-up-to-about-an-hour","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Second pass — the content (up to about an hour)"}]]}],null]}],["$","li","Third-pass-—-virtual-re-implementation-hours",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Third-pass-—-virtual-re-implementation-hours","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"Third pass — virtual re-implementation (hours)"}]]}],null]}],["$","li","The-three-passes-at-a-glance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-three-passes-at-a-glance","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"The three passes at a glance"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-A-literature-survey-in-three-steps",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-A-literature-survey-in-three-steps","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — A literature survey in three steps"}]]}],null]}],["$","li","Chapter-4-—-Finding-papers-state-in-September-2026",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Finding-papers-state-in-September-2026","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Finding papers (state in September 2026)"}]]}],null]}],["$","li","Chapter-5-—-Read-figures-and-tables-first",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Read-figures-and-tables-first","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Read figures and tables first"}]]}],null]}],["$","li","Chapter-6-—-Handling-math-notation",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Handling-math-notation","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Handling math notation"}]]}],null]}],["$","li","Chapter-7-—-Judging-quality",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Judging-quality","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Judging quality"}]]}],null]}],["$","li","Chapter-8-—-A-paper-notes-template",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-A-paper-notes-template","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — A paper-notes template"}]]}],null]}],["$","li","Chapter-9-—-Three-practice-papers-for-this-blog",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Three-practice-papers-for-this-blog","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Three practice papers for this blog"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-A-timed-first-pass",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-A-timed-first-pass","children":[["$","span",null,{"className":"toc-number","children":"11.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — A timed first pass"}]]}],null]}],["$","li","Exercise-2-—-Write-the-five-Cs",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Write-the-five-Cs","children":[["$","span",null,{"className":"toc-number","children":"11.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Write the five Cs"}]]}],null]}],["$","li","Exercise-3-—-Critique-a-figure",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Critique-a-figure","children":[["$","span",null,{"className":"toc-number","children":"11.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Critique a figure"}]]}],null]}],["$","li","Exercise-4-—-Notation-to-code",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Notation-to-code","children":[["$","span",null,{"className":"toc-number","children":"11.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Notation to code"}]]}],null]}],["$","li","Exercise-5-—-Mini-survey",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Mini-survey","children":[["$","span",null,{"className":"toc-number","children":"11.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Mini survey"}]]}],null]}],["$","li","Exercise-6-—-Judge-a-preprint",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Judge-a-preprint","children":[["$","span",null,{"className":"toc-number","children":"11.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Judge a preprint"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Many ideas you use every day started as a research paper. Consistent hashing, MapReduce and the Transformer all came from papers. Reading one front to"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,Research Papers,Study Skills,Computer Science,Learning"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","meta","7",{"property":"og:description","content":"Many ideas you use every day started as a research paper. Consistent hashing, MapReduce and the Transformer all came from papers. Reading one front to"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","meta","11",{"name":"twitter:description","content":"Many ideas you use every day started as a research paper. Consistent hashing, MapReduce and the Transformer all came from papers. Reading one front to"}]]
+1:null

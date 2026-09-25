@@ -1,0 +1,451 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","06","d"]
+6:["day","28","d"]
+7:["slug","mongo_13_security","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","06","d"],{"children":[["day","28","d"],{"children":[["slug","mongo_13_security","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"06\",\"day\":\"28\",\"slug\":\"mongo_13_security\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","06","d"],{"children":[["day","28","d"],{"children":[["slug","mongo_13_security","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:51\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T80a1,<p>A leaky MongoDB is one of the worst possible operational mistakes — open instances on the public internet are ransomwared within hours. This post is the production security checklist: <strong>auth</strong> (SCRAM / x.509 / LDAP / Kerberos / AWS IAM), <strong>RBAC</strong> (built-in + custom roles), <strong>network isolation</strong>, <strong>TLS in transit</strong>, <strong>encryption at rest</strong>, <strong>Client-Side Field-Level Encryption (CSFLE)</strong>, and the newer <strong>Queryable Encryption</strong> that keeps data encrypted on the server <em>and</em> still queryable.</p>
+<blockquote>
+<p>Series map: 00 Foundations → … → 12 Change Streams → <strong>13 Security</strong> (this post) → 14 Backup &amp; Ops → … → 17 Drivers &amp; Case Studies.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Enable authentication + create roles + users with least privilege.</li>
+<li>Use TLS in transit + encryption at rest.</li>
+<li>Apply network isolation (Atlas private endpoint / VPC peering / IP allowlist).</li>
+<li>Use Client-Side Field-Level Encryption for sensitive fields.</li>
+<li>Use Queryable Encryption when encrypted data must still be searchable.</li>
+<li>Audit access via the audit log.</li>
+<li>Apply the production-hardening checklist.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Auth-—-the-basics"><a href="#Chapter-1-—-Auth-—-the-basics" class="headerlink" title="Chapter 1 — Auth — the basics"></a>Chapter 1 — Auth — the basics</h1>
+<p>Every production cluster runs with auth enabled. Self-hosted:</p>
+<pre><code class="language-yaml"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="yaml"><span class="line"><span class="hljs-comment"># /etc/mongod.conf</span></span><br><span class="line"><span class="hljs-attr">security:</span></span><br><span class="line">  <span class="hljs-attr">authorization:</span> <span class="hljs-string">enabled</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Or <code>mongod --auth</code>. Restart, then create the first admin (the <strong>localhost exception</strong> allows this on a freshly-secured instance):</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="js"><span class="line">use admin</span><br><span class="line">db.<span class="hljs-title function_">createUser</span>({</span><br><span class="line">  <span class="hljs-attr">user</span>: <span class="hljs-string">&quot;admin&quot;</span>,</span><br><span class="line">  <span class="hljs-attr">pwd</span>:  <span class="hljs-title function_">passwordPrompt</span>(),</span><br><span class="line">  <span class="hljs-attr">roles</span>: [{ <span class="hljs-attr">role</span>: <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-attr">db</span>: <span class="hljs-string">&quot;admin&quot;</span> }]</span><br><span class="line">})</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>After that, every connection must authenticate:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">mongodb://admin:pw@localhost:27017/?authSource=admin</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Atlas: auth is mandatory; you can't disable it.</p>
+<hr>
+<h1 id="Chapter-2-—-Authentication-mechanisms"><a href="#Chapter-2-—-Authentication-mechanisms" class="headerlink" title="Chapter 2 — Authentication mechanisms"></a>Chapter 2 — Authentication mechanisms</h1>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SCRAM</strong> (SCRAM-SHA-256)</td>
+<td>default; username + password</td>
+</tr>
+<tr>
+<td><strong>x.509 client certificate</strong></td>
+<td>mutual TLS — preferred for service-to-DB inside private networks</td>
+</tr>
+<tr>
+<td><strong>LDAP</strong> (Enterprise / Atlas)</td>
+<td>central directory</td>
+</tr>
+<tr>
+<td><strong>Kerberos</strong> (Enterprise)</td>
+<td>Active Directory environments</td>
+</tr>
+<tr>
+<td><strong>AWS IAM</strong> (Atlas only)</td>
+<td>service authenticates using its IAM role — no password to leak</td>
+</tr>
+<tr>
+<td><strong>OIDC</strong> (Atlas, 7.0+)</td>
+<td>federate to Auth0, Okta, etc.</td>
+</tr>
+</tbody>
+</table>
+<p>For Atlas in 2026, the modern stack is usually <strong>AWS IAM for AWS workloads + SCRAM for everything else, both gated behind a VPC endpoint</strong>.</p>
+<hr>
+<h1 id="Chapter-3-—-RBAC-—-roles-users"><a href="#Chapter-3-—-RBAC-—-roles-users" class="headerlink" title="Chapter 3 — RBAC — roles + users"></a>Chapter 3 — RBAC — roles + users</h1>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span></pre></td><td class="code"><pre><code class="js"><span class="line">db.<span class="hljs-title function_">createRole</span>({</span><br><span class="line">  <span class="hljs-attr">role</span>: <span class="hljs-string">&quot;app_orders_rw&quot;</span>,</span><br><span class="line">  <span class="hljs-attr">privileges</span>: [</span><br><span class="line">    { <span class="hljs-attr">resource</span>: { <span class="hljs-attr">db</span>: <span class="hljs-string">&quot;shop&quot;</span>, <span class="hljs-attr">collection</span>: <span class="hljs-string">&quot;orders&quot;</span> },</span><br><span class="line">      <span class="hljs-attr">actions</span>: [<span class="hljs-string">&quot;find&quot;</span>, <span class="hljs-string">&quot;insert&quot;</span>, <span class="hljs-string">&quot;update&quot;</span>, <span class="hljs-string">&quot;remove&quot;</span>] },</span><br><span class="line">    { <span class="hljs-attr">resource</span>: { <span class="hljs-attr">db</span>: <span class="hljs-string">&quot;shop&quot;</span>, <span class="hljs-attr">collection</span>: <span class="hljs-string">&quot;products&quot;</span> },</span><br><span class="line">      <span class="hljs-attr">actions</span>: [<span class="hljs-string">&quot;find&quot;</span>] }</span><br><span class="line">  ],</span><br><span class="line">  <span class="hljs-attr">roles</span>: []</span><br><span class="line">})</span><br><span class="line"> </span><br><span class="line">db.<span class="hljs-title function_">createUser</span>({</span><br><span class="line">  <span class="hljs-attr">user</span>: <span class="hljs-string">&quot;app&quot;</span>,</span><br><span class="line">  <span class="hljs-attr">pwd</span>:  <span class="hljs-title function_">passwordPrompt</span>(),</span><br><span class="line">  <span class="hljs-attr">roles</span>: [</span><br><span class="line">    { <span class="hljs-attr">role</span>: <span class="hljs-string">&quot;app_orders_rw&quot;</span>, <span class="hljs-attr">db</span>: <span class="hljs-string">&quot;shop&quot;</span> }</span><br><span class="line">  ]</span><br><span class="line">})</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The user <code>app</code> can read+write <code>orders</code> and only read <code>products</code>. No access elsewhere.</p>
+<h2 id="Built-in-roles-most-used"><a href="#Built-in-roles-most-used" class="headerlink" title="Built-in roles (most-used)"></a>Built-in roles (most-used)</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>read</code>, <code>readWrite</code></td>
+<td>per database</td>
+</tr>
+<tr>
+<td><code>dbAdmin</code>, <code>dbOwner</code></td>
+<td>per database</td>
+</tr>
+<tr>
+<td><code>readAnyDatabase</code>, <code>readWriteAnyDatabase</code></td>
+<td>cluster-wide</td>
+</tr>
+<tr>
+<td><code>clusterAdmin</code>, <code>clusterMonitor</code>, <code>clusterManager</code></td>
+<td>cluster ops</td>
+</tr>
+<tr>
+<td><code>backup</code>, <code>restore</code></td>
+<td>for backup tools</td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>superuser — keep one human emergency account; no app should use it</td>
+</tr>
+</tbody>
+</table>
+<p>Apps should never run as <code>root</code>. Define a custom role per service, granting only the collections + actions it needs.</p>
+<h2 id="Principle-of-least-privilege"><a href="#Principle-of-least-privilege" class="headerlink" title="Principle of least privilege"></a>Principle of least privilege</h2>
+<p>For a typical service:</p>
+<ul>
+<li>One <strong>read-write</strong> role on its own collections.</li>
+<li>One <strong>read-only</strong> role on shared / reference collections.</li>
+<li>No access elsewhere.</li>
+</ul>
+<p>Even for an admin user, prefer <code>dbOwner</code> on the relevant DB rather than <code>root</code>.</p>
+<hr>
+<h1 id="Chapter-4-—-TLS-in-transit"><a href="#Chapter-4-—-TLS-in-transit" class="headerlink" title="Chapter 4 — TLS in transit"></a>Chapter 4 — TLS in transit</h1>
+<p>Every wire connection should be TLS-encrypted. Self-hosted:</p>
+<pre><code class="language-yaml"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="yaml"><span class="line"><span class="hljs-attr">net:</span></span><br><span class="line">  <span class="hljs-attr">tls:</span></span><br><span class="line">    <span class="hljs-attr">mode:</span> <span class="hljs-string">requireTLS</span></span><br><span class="line">    <span class="hljs-attr">certificateKeyFile:</span> <span class="hljs-string">/etc/ssl/mongo.pem</span></span><br><span class="line">    <span class="hljs-attr">CAFile:</span> <span class="hljs-string">/etc/ssl/ca.pem</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Client connection string:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">mongodb+srv://...?tls=true</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Atlas: TLS is mandatory + the cert is auto-managed. Connections without TLS are refused.</p>
+<p>Disable plaintext / require TLS even for localhost — accidental cleartext on a shared host is a real risk.</p>
+<hr>
+<h1 id="Chapter-5-—-Network-isolation"><a href="#Chapter-5-—-Network-isolation" class="headerlink" title="Chapter 5 — Network isolation"></a>Chapter 5 — Network isolation</h1>
+<p>Layer your defences:</p>
+<ol>
+<li><strong>Atlas Private Endpoint</strong> (AWS PrivateLink / Azure Private Link / GCP Private Service Connect) — traffic stays on the cloud backbone; cluster has no public IP.</li>
+<li><strong>VPC Peering</strong> — your VPC talks to the Atlas VPC over private addresses.</li>
+<li><strong>IP allowlist</strong> — restrict which IPs can connect (a fallback, not a primary defence).</li>
+<li><strong>Self-hosted</strong> — bind <code>mongod</code> to private interface only (<code>bindIp: 127.0.0.1,10.0.0.10</code>); never <code>0.0.0.0</code> on public-internet hosts.</li>
+<li><strong>Firewall / Security Group</strong> — only your app subnets reach port 27017.</li>
+</ol>
+<p>The infamous &quot;unsecured Mongo on the internet&quot; stories are always: default bind + no auth + no firewall. Avoid all three.</p>
+<hr>
+<h1 id="Chapter-6-—-Encryption-at-rest"><a href="#Chapter-6-—-Encryption-at-rest" class="headerlink" title="Chapter 6 — Encryption at rest"></a>Chapter 6 — Encryption at rest</h1>
+<p>Self-hosted (Enterprise / Atlas):</p>
+<ul>
+<li>WiredTiger native encryption — AES-256 with keys from KMIP, Vault, Azure Key Vault, GCP KMS, AWS KMS, or a local keyfile.</li>
+<li>Atlas: enabled by default with customer-managed keys (CMK) optional on dedicated tiers.</li>
+</ul>
+<p>Backups, snapshots, oplog files are all encrypted on disk.</p>
+<p>Encryption at rest protects against <strong>disk theft</strong>. It does NOT protect against a logged-in attacker (they have the cluster's own decryption key, transparently). For that, you need field-level encryption (next).</p>
+<hr>
+<h1 id="Chapter-7-—-Client-Side-Field-Level-Encryption-CSFLE"><a href="#Chapter-7-—-Client-Side-Field-Level-Encryption-CSFLE" class="headerlink" title="Chapter 7 — Client-Side Field-Level Encryption (CSFLE)"></a>Chapter 7 — Client-Side Field-Level Encryption (CSFLE)</h1>
+<p><strong>Sensitive fields are encrypted by the driver before they leave the application.</strong> The server only ever sees ciphertext.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">ClientEncryption</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongodb&#x27;</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// 1. set up the key vault (a special collection)</span></span><br><span class="line"><span class="hljs-keyword">const</span> keyVaultNamespace = <span class="hljs-string">&quot;encryption.__keyVault&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// 2. config the client with CSFLE</span></span><br><span class="line"><span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MongoClient</span>(uri, {</span><br><span class="line">  <span class="hljs-attr">autoEncryption</span>: {</span><br><span class="line">    keyVaultNamespace,</span><br><span class="line">    <span class="hljs-attr">kmsProviders</span>: { <span class="hljs-attr">aws</span>: { accessKeyId, secretAccessKey } },</span><br><span class="line">    <span class="hljs-attr">schemaMap</span>: {</span><br><span class="line">      <span class="hljs-string">&quot;shop.users&quot;</span>: {</span><br><span class="line">        <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;object&quot;</span>,</span><br><span class="line">        <span class="hljs-attr">encryptMetadata</span>: {</span><br><span class="line">          <span class="hljs-attr">keyId</span>: [<span class="hljs-comment">/* dataKeyId */</span>]</span><br><span class="line">        },</span><br><span class="line">        <span class="hljs-attr">properties</span>: {</span><br><span class="line">          <span class="hljs-attr">ssn</span>:   { <span class="hljs-attr">encrypt</span>: { <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;string&quot;</span>, <span class="hljs-attr">algorithm</span>: <span class="hljs-string">&quot;AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic&quot;</span> } },</span><br><span class="line">          <span class="hljs-attr">dob</span>:   { <span class="hljs-attr">encrypt</span>: { <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;date&quot;</span>,   <span class="hljs-attr">algorithm</span>: <span class="hljs-string">&quot;AEAD_AES_256_CBC_HMAC_SHA_512-Random&quot;</span> } },</span><br><span class="line">          <span class="hljs-attr">email</span>: { <span class="hljs-attr">encrypt</span>: { <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;string&quot;</span>, <span class="hljs-attr">algorithm</span>: <span class="hljs-string">&quot;AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic&quot;</span> } }</span><br><span class="line">        }</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">});</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Algorithm matters:</p>
+<ul>
+<li><strong>Deterministic</strong> — same plaintext → same ciphertext. Allows <strong>equality lookups</strong> (<code>find({ email: &quot;x&quot; })</code>).</li>
+<li><strong>Random</strong> — same plaintext → different ciphertext each time. <strong>Hides distribution + frequency</strong> but no equality lookups.</li>
+</ul>
+<p>The driver intercepts queries + writes, encrypts/decrypts as needed. Server, admins, backups, replicas all see ciphertext only.</p>
+<p><strong>Key Management</strong>: data keys are encrypted by a <strong>master key</strong> held in your KMS (AWS KMS, Azure Key Vault, GCP KMS, KMIP). The key vault collection stores encrypted data keys; the master key never leaves the KMS.</p>
+<p>Constraints with CSFLE:</p>
+<ul>
+<li>Only equality queries on deterministically-encrypted fields.</li>
+<li>No range / sort / aggregation on encrypted fields.</li>
+<li>For &quot;range queries on encrypted data&quot; → use Queryable Encryption.</li>
+</ul>
+<hr>
+<h1 id="Chapter-8-—-Queryable-Encryption-GA-in-70"><a href="#Chapter-8-—-Queryable-Encryption-GA-in-70" class="headerlink" title="Chapter 8 — Queryable Encryption (GA in 7.0)"></a>Chapter 8 — Queryable Encryption (GA in 7.0)</h1>
+<p>Queryable Encryption extends field-level encryption to support <strong>equality + range + prefix queries</strong> on encrypted data — without ever decrypting on the server.</p>
+<pre><code class="language-js"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="js"><span class="line"><span class="hljs-attr">schemaMap</span>: {</span><br><span class="line">  <span class="hljs-string">&quot;shop.users&quot;</span>: {</span><br><span class="line">    <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;object&quot;</span>,</span><br><span class="line">    <span class="hljs-attr">properties</span>: {</span><br><span class="line">      <span class="hljs-attr">email</span>:   { <span class="hljs-attr">encrypt</span>: { <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;string&quot;</span>, <span class="hljs-attr">queries</span>: { <span class="hljs-attr">queryType</span>: <span class="hljs-string">&quot;equality&quot;</span> } } },</span><br><span class="line">      <span class="hljs-attr">salary</span>:  { <span class="hljs-attr">encrypt</span>: { <span class="hljs-attr">bsonType</span>: <span class="hljs-string">&quot;long&quot;</span>,   <span class="hljs-attr">queries</span>: { <span class="hljs-attr">queryType</span>: <span class="hljs-string">&quot;range&quot;</span>, <span class="hljs-attr">min</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">max</span>: <span class="hljs-number">1_000_000</span> } } }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// then:</span></span><br><span class="line">db.<span class="hljs-property">users</span>.<span class="hljs-title function_">find</span>({ <span class="hljs-attr">email</span>: <span class="hljs-string">&quot;ada@x&quot;</span> })                          <span class="hljs-comment">// equality on encrypted field — works</span></span><br><span class="line">db.<span class="hljs-property">users</span>.<span class="hljs-title function_">find</span>({ <span class="hljs-attr">salary</span>: { <span class="hljs-attr">$gte</span>: <span class="hljs-number">50000</span>, <span class="hljs-attr">$lt</span>: <span class="hljs-number">100000</span> } })    <span class="hljs-comment">// range on encrypted field — works</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Use cases:</p>
+<ul>
+<li>PII fields needing search (email lookup for password reset).</li>
+<li>Salaries, balances, ages — range queries while keeping plaintext invisible to DBAs.</li>
+<li>Compliance (HIPAA, GDPR) — data is encrypted to ops staff but still queryable to apps with the right key.</li>
+</ul>
+<p>Caveats: slower than unencrypted queries; some index types unsupported; key management complexity. Plan carefully.</p>
+<p>Atlas: Queryable Encryption is supported on dedicated tiers + recent Mongo versions.</p>
+<hr>
+<h1 id="Chapter-9-—-Audit-log"><a href="#Chapter-9-—-Audit-log" class="headerlink" title="Chapter 9 — Audit log"></a>Chapter 9 — Audit log</h1>
+<p>The audit log records authentication + authorization + operations.</p>
+<p>Self-hosted (Enterprise):</p>
+<pre><code class="language-yaml"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="yaml"><span class="line"><span class="hljs-attr">auditLog:</span></span><br><span class="line">  <span class="hljs-attr">destination:</span> <span class="hljs-string">file</span></span><br><span class="line">  <span class="hljs-attr">format:</span> <span class="hljs-string">JSON</span></span><br><span class="line">  <span class="hljs-attr">path:</span> <span class="hljs-string">/var/log/mongodb/audit.log</span></span><br><span class="line">  <span class="hljs-attr">filter:</span> <span class="hljs-string">&#x27;{ atype: { $in: [&quot;authenticate&quot;, &quot;createCollection&quot;, &quot;dropDatabase&quot;] } }&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Atlas: audit logs available on dedicated tiers; shipped to S3, splunk, etc.</p>
+<p>Standard ops to audit: privileged role grants, user creation, collection drops, failed logins, schema changes.</p>
+<hr>
+<h1 id="Chapter-10-—-Secrets-management"><a href="#Chapter-10-—-Secrets-management" class="headerlink" title="Chapter 10 — Secrets management"></a>Chapter 10 — Secrets management</h1>
+<p>Never:</p>
+<ul>
+<li>Commit connection strings with passwords to git.</li>
+<li>Hardcode passwords in config files in the image.</li>
+<li>Print connection strings in logs.</li>
+</ul>
+<p>Use:</p>
+<ul>
+<li><strong>HashiCorp Vault</strong>, <strong>AWS Secrets Manager</strong>, <strong>Azure Key Vault</strong>, <strong>GCP Secret Manager</strong>.</li>
+<li>Kubernetes: <code>Secret</code> resources mounted as env vars or files.</li>
+<li>For AWS workloads → IAM auth to Atlas → no password to manage.</li>
+</ul>
+<p>Rotate secrets quarterly. Automate via your secrets manager's rotation hooks.</p>
+<hr>
+<h1 id="Chapter-11-—-Production-hardening-checklist"><a href="#Chapter-11-—-Production-hardening-checklist" class="headerlink" title="Chapter 11 — Production-hardening checklist"></a>Chapter 11 — Production-hardening checklist</h1>
+<ul>
+<li>[ ] Auth enabled (<code>authorization: enabled</code> or Atlas).</li>
+<li>[ ] No <code>root</code> for application users; least-privilege custom roles.</li>
+<li>[ ] TLS in transit (Atlas: default; self-hosted: <code>requireTLS</code>).</li>
+<li>[ ] No public IPs / no <code>bindIp: 0.0.0.0</code> on internet-facing hosts.</li>
+<li>[ ] Atlas: private endpoint OR VPC peering; IP allowlist as backup.</li>
+<li>[ ] Encryption at rest enabled (default in Atlas).</li>
+<li>[ ] CSFLE / Queryable Encryption for highly sensitive fields.</li>
+<li>[ ] Secrets in a secrets manager, not in env / repo.</li>
+<li>[ ] Audit log capturing privileged ops + failed logins.</li>
+<li>[ ] Routine backups (Post 14) tested with restore drills.</li>
+<li>[ ] MFA on Atlas accounts; SSO for org access.</li>
+<li>[ ] Quarterly review of users, roles, IP allowlists, network rules.</li>
+<li>[ ] Version current; security patches applied within agreed SLA.</li>
+</ul>
+<hr>
+<h1 id="Chapter-12-—-Common-pitfalls"><a href="#Chapter-12-—-Common-pitfalls" class="headerlink" title="Chapter 12 — Common pitfalls"></a>Chapter 12 — Common pitfalls</h1>
+<table>
+<thead>
+<tr>
+<th>Pitfall</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Mongo on public IP</td>
+<td>default install + no auth + no firewall</td>
+<td>bind to private; auth; firewall</td>
+</tr>
+<tr>
+<td>App user has <code>root</code></td>
+<td>&quot;to make it easier&quot;</td>
+<td>refactor to least-privilege role</td>
+</tr>
+<tr>
+<td>Password in connection string in git</td>
+<td>unaware</td>
+<td>secrets manager; pre-commit hook</td>
+</tr>
+<tr>
+<td>Plaintext between app + DB</td>
+<td>TLS not enforced</td>
+<td><code>requireTLS</code></td>
+</tr>
+<tr>
+<td>PII visible to DBAs</td>
+<td>only encryption at rest</td>
+<td>CSFLE / Queryable Encryption</td>
+</tr>
+<tr>
+<td>Lost decryption key after team rotation</td>
+<td>KMS keys not in central management</td>
+<td>hold KMS keys in org-level KMS, not personal accounts</td>
+</tr>
+<tr>
+<td>Auth allowed but no MFA on Atlas</td>
+<td>account hijack risk</td>
+<td>enforce org-wide MFA</td>
+</tr>
+<tr>
+<td>No audit trail of privileged ops</td>
+<td>no audit log enabled</td>
+<td>enable + ship to SIEM</td>
+</tr>
+<tr>
+<td>Backup files unencrypted</td>
+<td>backup pipeline outside Atlas</td>
+<td>encrypt backups; restrict access</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Enable-auth"><a href="#Exercise-1-—-Enable-auth" class="headerlink" title="Exercise 1 — Enable auth"></a>Exercise 1 — Enable auth</h2>
+<p>In a local Mongo, enable auth. Create <code>admin</code> user. Create per-DB user <code>shop_app</code> with <code>readWrite</code> on <code>shop</code>. Confirm <code>shop_app</code> can't access <code>admin</code> DB.</p>
+<h2 id="Exercise-2-—-Custom-role"><a href="#Exercise-2-—-Custom-role" class="headerlink" title="Exercise 2 — Custom role"></a>Exercise 2 — Custom role</h2>
+<p>Define a role <code>orders_rw_products_ro</code>: read+write on <code>orders</code>, read-only on <code>products</code>. Test.</p>
+<h2 id="Exercise-3-—-TLS-local"><a href="#Exercise-3-—-TLS-local" class="headerlink" title="Exercise 3 — TLS local"></a>Exercise 3 — TLS local</h2>
+<p>Generate a self-signed cert with <code>openssl</code>. Configure local mongod to require TLS. Connect with <code>tls=true&amp;tlsAllowInvalidCertificates=true</code>.</p>
+<h2 id="Exercise-4-—-Atlas-private-endpoint"><a href="#Exercise-4-—-Atlas-private-endpoint" class="headerlink" title="Exercise 4 — Atlas private endpoint"></a>Exercise 4 — Atlas private endpoint</h2>
+<p>Set up a free Atlas cluster + AWS PrivateLink endpoint. Connect from an EC2 in the same VPC. Confirm public IPs can't connect.</p>
+<h2 id="Exercise-5-—-CSFLE-PoC"><a href="#Exercise-5-—-CSFLE-PoC" class="headerlink" title="Exercise 5 — CSFLE PoC"></a>Exercise 5 — CSFLE PoC</h2>
+<p>Wire up CSFLE with a local KMS file (for dev only). Insert a user with <code>ssn</code> (deterministic) + <code>dob</code> (random). Query by <code>ssn</code> — works. Query <code>dob</code> range — fails (need Queryable Encryption).</p>
+<h2 id="Exercise-6-—-Audit-log"><a href="#Exercise-6-—-Audit-log" class="headerlink" title="Exercise 6 — Audit log"></a>Exercise 6 — Audit log</h2>
+<p>Enable audit log on local mongod. Trigger a failed login. Inspect the log entry.</p>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable auth</td>
+<td><code>security.authorization: enabled</code></td>
+</tr>
+<tr>
+<td>Auth mechanism</td>
+<td>SCRAM (default); x.509 / LDAP / Kerberos / AWS IAM / OIDC</td>
+</tr>
+<tr>
+<td>Least privilege</td>
+<td>custom role per service, narrow scope</td>
+</tr>
+<tr>
+<td>TLS</td>
+<td><code>net.tls.mode: requireTLS</code> + cert</td>
+</tr>
+<tr>
+<td>Bind interface</td>
+<td><code>bindIp</code> to private only</td>
+</tr>
+<tr>
+<td>Atlas isolation</td>
+<td>private endpoint &gt; peering &gt; IP allowlist</td>
+</tr>
+<tr>
+<td>Encryption at rest</td>
+<td>default in Atlas; WiredTiger encryption self-hosted</td>
+</tr>
+<tr>
+<td>Field encryption (equality)</td>
+<td>CSFLE deterministic</td>
+</tr>
+<tr>
+<td>Field encryption (random / better security, no query)</td>
+<td>CSFLE random</td>
+</tr>
+<tr>
+<td>Field encryption + equality + range queryable</td>
+<td>Queryable Encryption (7.0+)</td>
+</tr>
+<tr>
+<td>KMS</td>
+<td>AWS KMS / Azure KV / GCP KMS / KMIP; never local in prod</td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td>Vault / AWS Secrets / K8s Secret</td>
+</tr>
+<tr>
+<td>Audit</td>
+<td>enable + ship to SIEM</td>
+</tr>
+<tr>
+<td>MFA on Atlas</td>
+<td>org-wide enforcement</td>
+</tr>
+<tr>
+<td>Don't</td>
+<td><code>root</code> for apps; <code>0.0.0.0</code> bind; password in code</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 14 covers <strong>backup + ops</strong> — <code>mongodump</code> / <code>mongorestore</code>, BSON snapshots, oplog tailing, <strong>point-in-time recovery (PITR)</strong>, Atlas continuous backup, monitoring (profiler, currentOp, server-status), capacity planning, restore drills.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.mongodb.com/docs/manual/administration/security-checklist/" target="_blank" rel="noopener external nofollow noreferrer">Security Checklist</a></li>
+<li><a href="https://www.mongodb.com/docs/manual/core/authorization/" target="_blank" rel="noopener external nofollow noreferrer">Role-Based Access Control</a></li>
+<li><a href="https://www.mongodb.com/docs/manual/tutorial/configure-ssl/" target="_blank" rel="noopener external nofollow noreferrer">TLS / SSL Configuration</a></li>
+<li><a href="https://www.mongodb.com/docs/manual/core/csfle/" target="_blank" rel="noopener external nofollow noreferrer">Client-Side Field Level Encryption</a></li>
+<li><a href="https://www.mongodb.com/docs/manual/core/queryable-encryption/" target="_blank" rel="noopener external nofollow noreferrer">Queryable Encryption</a></li>
+<li><a href="https://www.mongodb.com/docs/atlas/security/" target="_blank" rel="noopener external nofollow noreferrer">Atlas Security</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: PCI / HIPAA pattern walkthrough; KMS key rotation procedure; OIDC + Okta wiring; egress lockdown patterns.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:51\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/mongo/cover_13_security.png)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-06-28T06:10:33.000Z","title":"Created 2026-06-28 14:10:33","children":"2026-06-28"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-06-28T06:10:33.000Z","title":"Updated 2026-06-28 14:10:33","children":"2026-06-28"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Database",{"className":"post-meta-categories","href":"/blog/categories/Database/","children":"Database"}]],[["$","span","sep-MongoDB",{"children":" > "}],["$","a","MongoDB",{"className":"post-meta-categories","href":"/blog/categories/MongoDB/","children":"MongoDB"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/06/28/mongo_13_security/","children":"https://invokfung.github.io/blog/2026/06/28/mongo_13_security/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Database",{"className":"post-meta__tags","href":"/blog/tags/Database/","children":"Database"}],["$","a","MongoDB",{"className":"post-meta__tags","href":"/blog/tags/MongoDB/","children":"MongoDB"}],["$","a","Security",{"className":"post-meta__tags","href":"/blog/tags/Security/","children":"Security"}],["$","a","Encryption",{"className":"post-meta__tags","href":"/blog/tags/Encryption/","children":"Encryption"}],["$","a","Course",{"className":"post-meta__tags","href":"/blog/tags/Course/","children":"Course"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/07/01/threejs_11_physics_interactivity/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/threejs/cover_11_physics_interactivity.png\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Three.js Course — 11 · Physics &amp; Interactivity — Rapier, Raycaster, Gizmos</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/06/26/threejs_10_post_processing/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/threejs/cover_10_post_processing.png\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Three.js Course — 10 · Post-Processing, Tone Mapping, Color Management</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","mongo_00_foundations",{"children":["$","a",null,{"href":"/blog/2026/05/24/mongo_00_foundations/","title":"MongoDB Course — 00 · Foundations, Document Model, Install, Tools","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_00_foundations.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-24</div><div class=\"title\">MongoDB Course — 00 · Foundations, Document Model, Install, Tools</div></div>"}}]}],["$","div","mongo_01_crud_basics",{"children":["$","a",null,{"href":"/blog/2026/05/28/mongo_01_crud_basics/","title":"MongoDB Course — 01 · CRUD Basics — Insert, Find, Update, Delete, Bulk","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_01_crud_basics.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-28</div><div class=\"title\">MongoDB Course — 01 · CRUD Basics — Insert, Find, Update, Delete, Bulk</div></div>"}}]}],["$","div","mongo_02_query_operators",{"children":["$","a",null,{"href":"/blog/2026/06/01/mongo_02_query_operators/","title":"MongoDB Course — 02 · Query Operators, Projections, Range Pagination","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_02_query_operators.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-01</div><div class=\"title\">MongoDB Course — 02 · Query Operators, Projections, Range Pagination</div></div>"}}]}],["$","div","mongo_03_indexes",{"children":["$","a",null,{"href":"/blog/2026/06/02/mongo_03_indexes/","title":"MongoDB Course — 03 · Indexes — Single, Compound, Multikey, Text, Geo, TTL, Wildcard, Hashed","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_03_indexes.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-02</div><div class=\"title\">MongoDB Course — 03 · Indexes — Single, Compound, Multikey, Text, Geo, TTL, Wildcard, Hashed</div></div>"}}]}],["$","div","mongo_04_query_optimization",{"children":["$","a",null,{"href":"/blog/2026/06/05/mongo_04_query_optimization/","title":"MongoDB Course — 04 · Query Optimization — explain, Planner, Plan Cache, $indexStats","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_04_query_optimization.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-05</div><div class=\"title\">MongoDB Course — 04 · Query Optimization — explain, Planner, Plan Cache, $indexStats</div></div>"}}]}],["$","div","mongo_05_aggregation_basics",{"children":["$","a",null,{"href":"/blog/2026/06/08/mongo_05_aggregation_basics/","title":"MongoDB Course — 05 · Aggregation Basics — Pipeline, $match, $group, $project, $lookup","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_05_aggregation_basics.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-08</div><div class=\"title\">MongoDB Course — 05 · Aggregation Basics — Pipeline, $match, $group, $project, $lookup</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Auth-—-the-basics",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Auth-—-the-basics","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Auth — the basics"}]]}],null]}],["$","li","Chapter-2-—-Authentication-mechanisms",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Authentication-mechanisms","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Authentication mechanisms"}]]}],null]}],["$","li","Chapter-3-—-RBAC-—-roles-users",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-RBAC-—-roles-users","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — RBAC — roles + users"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Built-in-roles-most-used",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Built-in-roles-most-used","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Built-in roles (most-used)"}]]}],null]}],["$","li","Principle-of-least-privilege",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Principle-of-least-privilege","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Principle of least privilege"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-TLS-in-transit",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-TLS-in-transit","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — TLS in transit"}]]}],null]}],["$","li","Chapter-5-—-Network-isolation",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Network-isolation","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Network isolation"}]]}],null]}],["$","li","Chapter-6-—-Encryption-at-rest",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Encryption-at-rest","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Encryption at rest"}]]}],null]}],["$","li","Chapter-7-—-Client-Side-Field-Level-Encryption-CSFLE",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Client-Side-Field-Level-Encryption-CSFLE","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Client-Side Field-Level Encryption (CSFLE)"}]]}],null]}],["$","li","Chapter-8-—-Queryable-Encryption-GA-in-70",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Queryable-Encryption-GA-in-70","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Queryable Encryption (GA in 7.0)"}]]}],null]}],["$","li","Chapter-9-—-Audit-log",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Audit-log","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Audit log"}]]}],null]}],["$","li","Chapter-10-—-Secrets-management",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-10-—-Secrets-management","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 10 — Secrets management"}]]}],null]}],["$","li","Chapter-11-—-Production-hardening-checklist",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-11-—-Production-hardening-checklist","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 11 — Production-hardening checklist"}]]}],null]}],["$","li","Chapter-12-—-Common-pitfalls",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-12-—-Common-pitfalls","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 12 — Common pitfalls"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Enable-auth",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Enable-auth","children":[["$","span",null,{"className":"toc-number","children":"14.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Enable auth"}]]}],null]}],["$","li","Exercise-2-—-Custom-role",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Custom-role","children":[["$","span",null,{"className":"toc-number","children":"14.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Custom role"}]]}],null]}],["$","li","Exercise-3-—-TLS-local",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-TLS-local","children":[["$","span",null,{"className":"toc-number","children":"14.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — TLS local"}]]}],null]}],["$","li","Exercise-4-—-Atlas-private-endpoint",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Atlas-private-endpoint","children":[["$","span",null,{"className":"toc-number","children":"14.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Atlas private endpoint"}]]}],null]}],["$","li","Exercise-5-—-CSFLE-PoC",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-CSFLE-PoC","children":[["$","span",null,{"className":"toc-number","children":"14.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — CSFLE PoC"}]]}],null]}],["$","li","Exercise-6-—-Audit-log",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Audit-log","children":[["$","span",null,{"className":"toc-number","children":"14.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Audit log"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"15."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"16."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"17."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"A leaky MongoDB is one of the worst possible operational mistakes — open instances on the public internet are ransomwared within hours. This post is t"}],["$","meta","5",{"name":"keywords","content":"Database,MongoDB,Security,Encryption,Course"}],["$","meta","6",{"property":"og:title","content":"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption"}],["$","meta","7",{"property":"og:description","content":"A leaky MongoDB is one of the worst possible operational mistakes — open instances on the public internet are ransomwared within hours. This post is t"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/mongo/cover_13_security.png"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption"}],["$","meta","12",{"name":"twitter:description","content":"A leaky MongoDB is one of the worst possible operational mistakes — open instances on the public internet are ransomwared within hours. This post is t"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/mongo/cover_13_security.png"}]]
+1:null

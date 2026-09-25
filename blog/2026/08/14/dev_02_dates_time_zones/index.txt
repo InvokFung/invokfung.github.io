@@ -1,0 +1,645 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","14","d"]
+7:["slug","dev_02_dates_time_zones","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","14","d"],{"children":[["slug","dev_02_dates_time_zones","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"14\",\"slug\":\"dev_02_dates_time_zones\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","14","d"],{"children":[["slug","dev_02_dates_time_zones","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:51\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T10152,<p><code>2026-05-21 15:00:00</code> looks like a clear moment in time. It is not. Without a time zone it is only a wall-clock reading, and different programs turn it into different instants, hours apart. This post explains the three kinds of &quot;time&quot;, UTC, offsets vs IANA zones, daylight saving gaps and overlaps, ISO 8601, Unix epoch numbers, and the date APIs in Python, JavaScript and Java. It ends with a real case: how this blog's own post dates are read by three different tools.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → <strong>02 Dates &amp; Time Zones</strong> (this post) → 03 Git Rescue Kit → 04 Line Endings → 05 Command Line → … → 24 Desk Health. Part A · Real bugs, explained.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Tell an <strong>instant</strong>, a <strong>wall-clock time</strong> and a <strong>calendar date</strong> apart, and store each one correctly.</li>
+<li>Explain why an IANA zone such as <code>Asia/Hong_Kong</code> carries more information than an offset such as <code>+08:00</code>.</li>
+<li>Predict what happens in a DST gap and a DST overlap, with real 2026 dates.</li>
+<li>Write and read ISO 8601 / RFC 3339 timestamps, and Unix epoch seconds vs milliseconds.</li>
+<li>Use aware datetimes and <code>zoneinfo</code> in Python, and avoid the JavaScript <code>Date</code> parsing traps.</li>
+<li>Know the real shipping status of the JavaScript Temporal API in September 2026.</li>
+<li>Schedule cron jobs that survive DST.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Three-kinds-of-time"><a href="#Chapter-1-—-Three-kinds-of-time" class="headerlink" title="Chapter 1 — Three kinds of &quot;time&quot;"></a>Chapter 1 — Three kinds of &quot;time&quot;</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Instant</strong></td>
+<td>One exact point on the global timeline. Same for everyone on Earth.</td>
+<td><code>2026-05-21T07:00:00Z</code></td>
+</tr>
+<tr>
+<td><strong>Wall-clock time</strong></td>
+<td>What a clock on a wall shows. Means nothing until you add a place.</td>
+<td><code>2026-05-21 15:00</code></td>
+</tr>
+<tr>
+<td><strong>Calendar date</strong></td>
+<td>A day on the calendar, with no time and no zone.</td>
+<td>a birthday, <code>2026-05-21</code></td>
+</tr>
+<tr>
+<td><strong>UTC</strong></td>
+<td>Coordinated Universal Time. The reference clock. Has no DST.</td>
+<td><code>Z</code> suffix</td>
+</tr>
+<tr>
+<td><strong>Offset</strong></td>
+<td>Difference from UTC at one moment.</td>
+<td><code>+08:00</code>, <code>-04:00</code></td>
+</tr>
+<tr>
+<td><strong>Time zone</strong></td>
+<td>A region's full history and future of offsets.</td>
+<td><code>Asia/Hong_Kong</code></td>
+</tr>
+<tr>
+<td><strong>DST</strong></td>
+<td>Daylight saving time: clocks move forward in spring and back in autumn.</td>
+<td>New York, London</td>
+</tr>
+<tr>
+<td><strong>Epoch time</strong></td>
+<td>A count of seconds (or milliseconds) since <code>1970-01-01T00:00:00Z</code>.</td>
+<td><code>1779346800</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="What-to-store-for-each"><a href="#What-to-store-for-each" class="headerlink" title="What to store for each"></a>What to store for each</h2>
+<table>
+<thead>
+<tr>
+<th>You have</th>
+<th>Store</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Something that happened (log line, payment, login)</td>
+<td>The <strong>instant</strong>, in UTC</td>
+<td>It is a fact about the timeline.</td>
+</tr>
+<tr>
+<td>A future event people attend (&quot;09:00 in London&quot;)</td>
+<td><strong>Wall-clock time + IANA zone</strong></td>
+<td>Offset rules can change before the event.</td>
+</tr>
+<tr>
+<td>A pure date (birthday, due date, holiday)</td>
+<td><strong>Date only</strong></td>
+<td>Converting it to an instant can move it to another day.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> storing a birthday as midnight UTC. A user in New York then sees the day before, because midnight UTC is 20:00 the previous evening there.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-UTC-offsets-and-IANA-zones"><a href="#Chapter-2-—-UTC-offsets-and-IANA-zones" class="headerlink" title="Chapter 2 — UTC, offsets and IANA zones"></a>Chapter 2 — UTC, offsets and IANA zones</h1>
+<h2 id="Offsets"><a href="#Offsets" class="headerlink" title="Offsets"></a>Offsets</h2>
+<p>An offset says how far a clock is from UTC at one moment. <code>15:00+08:00</code> and <code>07:00Z</code> are the same instant. To convert to UTC, subtract the offset: 15:00 − 8 h = 07:00.</p>
+<h2 id="Zones-are-more-than-offsets"><a href="#Zones-are-more-than-offsets" class="headerlink" title="Zones are more than offsets"></a>Zones are more than offsets</h2>
+<p>The <strong>IANA time zone database</strong> (also called tzdata or the Olson database) names zones as <code>Area/Location</code>: <code>Asia/Hong_Kong</code>, <code>Europe/London</code>, <code>America/New_York</code>. Each zone stores <strong>every offset change</strong> in that region's history, plus the current rules for the future.</p>
+<p>Today <code>+08:00</code> is shared by several zones. Their histories differ. From the tzdata files:</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Offset today</th>
+<th>History that <code>+08:00</code> alone cannot tell you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Asia/Hong_Kong</code></td>
+<td>+08:00</td>
+<td>Used summer time until 1979; the last change was on 1979-10-21.</td>
+</tr>
+<tr>
+<td><code>Asia/Singapore</code></td>
+<td>+08:00</td>
+<td>Was +07:30 until 1982-01-01.</td>
+</tr>
+<tr>
+<td><code>Australia/Perth</code></td>
+<td>+08:00</td>
+<td>Ran a DST trial from 2006-12-03 to 2009-03-29 (+09:00 in summer).</td>
+</tr>
+</tbody>
+</table>
+<p>So an offset tells you about <strong>one moment</strong>. A zone tells you about <strong>every moment</strong>, including next year. Governments change the rules, and tzdata is updated when they do, so keep your OS, language runtime and <code>tzdata</code> packages current.</p>
+<blockquote>
+<p><strong>Watch out:</strong> Windows uses its own zone IDs. This Windows machine reports <code>China Standard Time</code> (&quot;Beijing, Chongqing, Hong Kong, Urumqi&quot;), and Node.js on it reports the IANA zone <code>Asia/Shanghai</code>, not <code>Asia/Hong_Kong</code>. The two zones agree today but not in 1979. Pass an explicit IANA zone to your code rather than trusting the machine.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-DST-gaps-and-overlaps"><a href="#Chapter-3-—-DST-gaps-and-overlaps" class="headerlink" title="Chapter 3 — DST gaps and overlaps"></a>Chapter 3 — DST gaps and overlaps</h1>
+<p>When clocks jump <strong>forward</strong>, one hour of wall-clock time does not exist (a <strong>gap</strong>). When clocks go <strong>back</strong>, one hour happens twice (an <strong>overlap</strong>).</p>
+<h2 id="Real-2026-transitions"><a href="#Real-2026-transitions" class="headerlink" title="Real 2026 transitions"></a>Real 2026 transitions</h2>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Change</th>
+<th>Local clock</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>America/New_York</code></td>
+<td>Sun 2026-03-08</td>
+<td>02:00 EST → 03:00 EDT</td>
+<td><strong>Gap:</strong> 02:00–02:59 never happens</td>
+</tr>
+<tr>
+<td><code>America/New_York</code></td>
+<td>Sun 2026-11-01</td>
+<td>02:00 EDT → 01:00 EST</td>
+<td><strong>Overlap:</strong> 01:00–01:59 happens twice</td>
+</tr>
+<tr>
+<td><code>Europe/London</code></td>
+<td>Sun 2026-03-29</td>
+<td>01:00 GMT → 02:00 BST</td>
+<td><strong>Gap:</strong> 01:00–01:59 never happens</td>
+</tr>
+<tr>
+<td><code>Europe/London</code></td>
+<td>Sun 2026-10-25</td>
+<td>02:00 BST → 01:00 GMT</td>
+<td><strong>Overlap:</strong> 01:00–01:59 happens twice</td>
+</tr>
+</tbody>
+</table>
+<p>(US rule: second Sunday in March to first Sunday in November. UK rule, per <a href="http://GOV.UK" target="_blank" rel="noopener external nofollow noreferrer">GOV.UK</a>: forward at 1am on the last Sunday in March, back at 2am on the last Sunday in October.)</p>
+<h2 id="What-a-library-does-with-a-gap-or-overlap"><a href="#What-a-library-does-with-a-gap-or-overlap" class="headerlink" title="What a library does with a gap or overlap"></a>What a library does with a gap or overlap</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, UTC</span><br><span class="line"><span class="hljs-keyword">from</span> zoneinfo <span class="hljs-keyword">import</span> ZoneInfo</span><br><span class="line"> </span><br><span class="line">ny = ZoneInfo(<span class="hljs-string">&quot;America/New_York&quot;</span>)</span><br><span class="line"> </span><br><span class="line">gap = datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">30</span>, tzinfo=ny)          <span class="hljs-comment"># does not exist</span></span><br><span class="line"><span class="hljs-built_in">print</span>(gap.astimezone(UTC).astimezone(ny).isoformat())</span><br><span class="line"><span class="hljs-comment"># 2026-03-08T03:30:00-04:00   (moved forward by the gap)</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">for</span> fold <span class="hljs-keyword">in</span> (<span class="hljs-number">0</span>, <span class="hljs-number">1</span>):                                    <span class="hljs-comment"># happens twice</span></span><br><span class="line">    t = datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">11</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">30</span>, tzinfo=ny, fold=fold)</span><br><span class="line">    <span class="hljs-built_in">print</span>(fold, t.isoformat(), t.astimezone(UTC).isoformat())</span><br><span class="line"><span class="hljs-comment"># 0 2026-11-01T01:30:00-04:00 2026-11-01T05:30:00+00:00   (first time, EDT)</span></span><br><span class="line"><span class="hljs-comment"># 1 2026-11-01T01:30:00-05:00 2026-11-01T06:30:00+00:00   (second time, EST)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Python's <code>fold</code> attribute (added in 3.6) picks which of the two moments you mean: <code>0</code> is the earlier, <code>1</code> the later.</p>
+<h2 id="One-day-later-is-not-always-24-hours-later"><a href="#One-day-later-is-not-always-24-hours-later" class="headerlink" title="&quot;One day later&quot; is not always &quot;24 hours later&quot;"></a>&quot;One day later&quot; is not always &quot;24 hours later&quot;</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, timedelta, UTC</span><br><span class="line"><span class="hljs-keyword">from</span> zoneinfo <span class="hljs-keyword">import</span> ZoneInfo</span><br><span class="line"> </span><br><span class="line">ny = ZoneInfo(<span class="hljs-string">&quot;America/New_York&quot;</span>)</span><br><span class="line">start = datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">12</span>, <span class="hljs-number">0</span>, tzinfo=ny)          <span class="hljs-comment"># Saturday noon, EST</span></span><br><span class="line"> </span><br><span class="line">wall = start + timedelta(hours=<span class="hljs-number">24</span>)                      <span class="hljs-comment"># same-zone math = wall clock</span></span><br><span class="line"><span class="hljs-built_in">print</span>(wall.isoformat())                                 <span class="hljs-comment"># 2026-03-08T12:00:00-04:00</span></span><br><span class="line"><span class="hljs-built_in">print</span>(wall.astimezone(UTC) - start.astimezone(UTC))     <span class="hljs-comment"># 23:00:00  (real time!)</span></span><br><span class="line"> </span><br><span class="line">real = (start.astimezone(UTC) + timedelta(hours=<span class="hljs-number">24</span>)).astimezone(ny)</span><br><span class="line"><span class="hljs-built_in">print</span>(real.isoformat())                                 <span class="hljs-comment"># 2026-03-08T13:00:00-04:00</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Trick:</strong> in Python, arithmetic between aware datetimes <strong>in the same zone</strong> works on the wall clock. For elapsed time (timeouts, durations, billing), convert to UTC first.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-Writing-timestamps-ISO-8601-and-RFC-3339"><a href="#Chapter-4-—-Writing-timestamps-ISO-8601-and-RFC-3339" class="headerlink" title="Chapter 4 — Writing timestamps: ISO 8601 and RFC 3339"></a>Chapter 4 — Writing timestamps: ISO 8601 and RFC 3339</h1>
+<p><strong>ISO 8601</strong> is the international standard for dates and times. <strong>RFC 3339</strong> is a strict, simple profile of it for the internet. Use it for every timestamp you send or store as text.</p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2026-05-21</code></td>
+<td>A calendar date</td>
+</tr>
+<tr>
+<td><code>2026-05-21T15:00:00</code></td>
+<td>A wall-clock time, <strong>no zone</strong> (ambiguous as an instant)</td>
+</tr>
+<tr>
+<td><code>2026-05-21T07:00:00Z</code></td>
+<td>An instant in UTC</td>
+</tr>
+<tr>
+<td><code>2026-05-21T15:00:00+08:00</code></td>
+<td>The same instant, written with Hong Kong's offset</td>
+</tr>
+<tr>
+<td><code>2026-05-21T15:00:00+08:00[Asia/Hong_Kong]</code></td>
+<td>The same instant plus the zone name (RFC 9557)</td>
+</tr>
+</tbody>
+</table>
+<p>Notes from the RFCs:</p>
+<ul>
+<li>RFC 3339's grammar uses <code>T</code> between date and time. A note allows a space &quot;for the sake of readability&quot;, but many parsers only accept <code>T</code>.</li>
+<li>RFC 3339 used <code>-00:00</code> to mean &quot;UTC time known, local offset unknown&quot;. RFC 9557 (2024) updates this: <code>Z</code> now carries that meaning too.</li>
+<li>RFC 9557 adds bracketed suffixes such as <code>[Asia/Hong_Kong]</code>. Temporal in JavaScript (Chapter 7) prints this format.</li>
+</ul>
+<blockquote>
+<p><strong>Common pitfall:</strong> <code>05/06/2026</code> is 6 May in the US and 5 June in the UK. Never use a local display format for storage or APIs. ISO 8601 also sorts correctly as plain text.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Unix-epoch-time"><a href="#Chapter-5-—-Unix-epoch-time" class="headerlink" title="Chapter 5 — Unix epoch time"></a>Chapter 5 — Unix epoch time</h1>
+<p>Unix time counts seconds since <code>1970-01-01T00:00:00Z</code>. It ignores leap seconds: the ECMAScript spec says its time values &quot;do not account for UTC leap seconds&quot;, and POSIX time works the same way.</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Who uses it</th>
+<th>Digits in 2026</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seconds</td>
+<td>Unix tools, Python <code>time.time()</code>, most APIs, JWT <code>exp</code></td>
+<td>10</td>
+<td><code>1790312844</code></td>
+</tr>
+<tr>
+<td>Milliseconds</td>
+<td>JavaScript <code>Date.now()</code>, Java <code>System.currentTimeMillis()</code>, MongoDB</td>
+<td>13</td>
+<td><code>1790312844000</code></td>
+</tr>
+</tbody>
+</table>
+<p>Both examples are <code>2026-09-25T05:07:24Z</code>. Mixing them up is a classic bug:</p>
+<pre><code class="language-javascript"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-number">1790312844</span> * <span class="hljs-number">1000</span>).<span class="hljs-title function_">toISOString</span>(); <span class="hljs-comment">// &quot;2026-09-25T05:07:24.000Z&quot;  (seconds → ms)</span></span><br><span class="line"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-number">1790312844</span>).<span class="hljs-title function_">toISOString</span>();        <span class="hljs-comment">// &quot;1970-01-21T17:18:32.844Z&quot;  (forgot * 1000)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">date</span> -u -d @1790312844 +%Y-%m-%dT%H:%M:%SZ      <span class="hljs-comment"># GNU date (Git Bash, Linux): 2026-09-25T05:07:24Z</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="powershell"><span class="line">[<span class="hljs-built_in">DateTime</span><span class="hljs-type">Offset</span>]::FromUnixTimeSeconds(<span class="hljs-number">1790312844</span>).UtcDateTime.ToString(<span class="hljs-string">&#x27;o&#x27;</span>)   <span class="hljs-comment"># 2026-09-25T05:07:24.0000000Z</span></span><br><span class="line">[<span class="hljs-built_in">DateTime</span><span class="hljs-type">Offset</span>]::UtcNow.ToUnixTimeSeconds()                                  <span class="hljs-comment"># now, as Int64</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="The-year-2038-problem"><a href="#The-year-2038-problem" class="headerlink" title="The year 2038 problem"></a>The year 2038 problem</h2>
+<p>A <strong>signed 32-bit</strong> count of seconds tops out at <code>2^31 − 1 = 2147483647</code>, which is <code>2038-01-19T03:14:07Z</code>. One second later it wraps to a negative number (a date in 1901). Old C code with a 32-bit <code>time_t</code>, file formats and database columns are at risk. For example, MySQL documents its <code>TIMESTAMP</code> type range as <code>'1970-01-01 00:00:01'</code> UTC to <code>'2038-01-19 03:14:07'</code> UTC. Use 64-bit integers or proper date types.</p>
+<p>For comparison, a JavaScript <code>Date</code> holds milliseconds in a range of exactly ±100,000,000 days around 1970 (±8.64 × 10^15 ms), so it reaches the year 275760.</p>
+<hr>
+<h1 id="Chapter-6-—-The-storage-rule"><a href="#Chapter-6-—-The-storage-rule" class="headerlink" title="Chapter 6 — The storage rule"></a>Chapter 6 — The storage rule</h1>
+<ol>
+<li><strong>Store instants in UTC.</strong> Use a real date-time type (<code>timestamptz</code> in PostgreSQL, BSON Date in MongoDB, <code>Instant</code> in Java) or ISO 8601 text with <code>Z</code>.</li>
+<li><strong>Keep the zone when the user's local time matters.</strong> For a future meeting or a &quot;every day at 09:00&quot; rule, store the wall-clock time and the IANA zone name. Work out the instant when you need it, so new DST rules are picked up.</li>
+<li><strong>Convert to local time only at the edges</strong>: when you display, and when you read user input.</li>
+<li><strong>Store pure dates as dates.</strong></li>
+</ol>
+<p>Why rule 2 matters: a meeting at 09:00 <code>Europe/London</code> is <code>09:00Z</code> on 2026-12-07 but <code>08:00Z</code> on 2026-06-08. A stored UTC instant would put the June meeting at the wrong local hour.</p>
+<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2>
+<p>MongoDB's docs say a BSON Date &quot;is a 64-bit integer that represents the number of milliseconds since the Unix epoch&quot;. It is signed, so dates before 1970 work. It stores <strong>no zone</strong>. If you need the user's zone, put it in its own field:</p>
+<pre><code class="language-javascript"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="javascript"><span class="line">db.<span class="hljs-property">meetings</span>.<span class="hljs-title function_">insertOne</span>({</span><br><span class="line">  <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;Standup&quot;</span>,</span><br><span class="line">  <span class="hljs-attr">startsAt</span>: <span class="hljs-title class_">ISODate</span>(<span class="hljs-string">&quot;2026-12-07T09:00:00Z&quot;</span>),   <span class="hljs-comment">// instant, for queries and sorting</span></span><br><span class="line">  <span class="hljs-attr">localTime</span>: <span class="hljs-string">&quot;09:00&quot;</span>,                          <span class="hljs-comment">// what the user chose</span></span><br><span class="line">  <span class="hljs-attr">tz</span>: <span class="hljs-string">&quot;Europe/London&quot;</span>                          <span class="hljs-comment">// how to recompute it</span></span><br><span class="line">});</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>See MongoDB Course 00 · Foundations for BSON types, and MongoDB Course 28 · Time-Series for time-based data at scale.</p>
+<hr>
+<h1 id="Chapter-7-—-The-APIs-Python-JavaScript-Java"><a href="#Chapter-7-—-The-APIs-Python-JavaScript-Java" class="headerlink" title="Chapter 7 — The APIs: Python, JavaScript, Java"></a>Chapter 7 — The APIs: Python, JavaScript, Java</h1>
+<h2 id="Python-aware-vs-naive"><a href="#Python-aware-vs-naive" class="headerlink" title="Python: aware vs naive"></a>Python: aware vs naive</h2>
+<p>The Python docs define an <strong>aware</strong> object as one that &quot;represents a specific moment in time that is not open to interpretation&quot;. A <strong>naive</strong> object has no zone, and whether it means UTC or local time &quot;is purely up to the program&quot;.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, UTC</span><br><span class="line"><span class="hljs-keyword">from</span> zoneinfo <span class="hljs-keyword">import</span> ZoneInfo          <span class="hljs-comment"># Python 3.9+</span></span><br><span class="line"> </span><br><span class="line">now = datetime.now(UTC)                <span class="hljs-comment"># aware, UTC. Not datetime.utcnow()</span></span><br><span class="line">hk = ZoneInfo(<span class="hljs-string">&quot;Asia/Hong_Kong&quot;</span>)</span><br><span class="line">meeting = datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">5</span>, <span class="hljs-number">21</span>, <span class="hljs-number">15</span>, <span class="hljs-number">0</span>, tzinfo=hk)</span><br><span class="line"><span class="hljs-built_in">print</span>(meeting.isoformat())                    <span class="hljs-comment"># 2026-05-21T15:00:00+08:00</span></span><br><span class="line"><span class="hljs-built_in">print</span>(meeting.astimezone(UTC).isoformat())    <span class="hljs-comment"># 2026-05-21T07:00:00+00:00</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">print</span>(datetime.fromisoformat(<span class="hljs-string">&quot;2026-05-21 15:00:00&quot;</span>).tzinfo)   <span class="hljs-comment"># None: naive!</span></span><br><span class="line"><span class="hljs-built_in">print</span>(datetime.fromisoformat(<span class="hljs-string">&quot;2026-05-21T07:00:00Z&quot;</span>))         <span class="hljs-comment"># aware (Python 3.11+)</span></span><br><span class="line"> </span><br><span class="line">datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">5</span>, <span class="hljs-number">21</span>, <span class="hljs-number">15</span>) &lt; now</span><br><span class="line"><span class="hljs-comment"># TypeError: can&#x27;t compare offset-naive and offset-aware datetimes</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<ul>
+<li><code>datetime.utcnow()</code> is <strong>deprecated since Python 3.12</strong>. It returns a naive value that looks like local time to other code. Use <code>datetime.now(UTC)</code> (the <code>UTC</code> alias needs Python 3.11+; on older versions use <code>datetime.now(timezone.utc)</code>).</li>
+<li><code>zoneinfo</code> reads the system tz database. Windows has none, so install the first-party package: <code>pip install tzdata</code>. Without it, <code>ZoneInfo(&quot;Asia/Hong_Kong&quot;)</code> raises <code>ZoneInfoNotFoundError</code> on Windows.</li>
+</ul>
+<h2 id="JavaScript-Date-parsing-traps"><a href="#JavaScript-Date-parsing-traps" class="headerlink" title="JavaScript: Date parsing traps"></a>JavaScript: <code>Date</code> parsing traps</h2>
+<p>A <code>Date</code> is one instant (milliseconds since the epoch). Its getters then show that instant in <strong>local</strong> time or in UTC. The trouble is in parsing. The ECMAScript spec says: &quot;When the UTC offset representation is absent, date-only forms are interpreted as a UTC time and date-time forms are interpreted as a local time.&quot; Strings outside the spec's format &quot;may fall back to any implementation-specific heuristics&quot;.</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Spec rule</th>
+<th>Result with TZ <code>America/New_York</code></th>
+<th>Result with TZ <code>Asia/Hong_Kong</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new Date(&quot;2026-05-21&quot;)</code></td>
+<td>Date-only → <strong>UTC</strong></td>
+<td><code>2026-05-21T00:00:00.000Z</code></td>
+<td><code>2026-05-21T00:00:00.000Z</code></td>
+</tr>
+<tr>
+<td><code>new Date(&quot;2026-05-21T00:00&quot;)</code></td>
+<td>Date-time → <strong>local</strong></td>
+<td><code>2026-05-21T04:00:00.000Z</code></td>
+<td><code>2026-05-20T16:00:00.000Z</code></td>
+</tr>
+<tr>
+<td><code>new Date(&quot;2026-05-21 00:00&quot;)</code></td>
+<td>Not the spec format → <strong>engine decides</strong></td>
+<td>V8 (Node/Chrome): local, as above</td>
+<td>V8: local, as above</td>
+</tr>
+<tr>
+<td><code>new Date(&quot;2026-05-21T00:00Z&quot;)</code></td>
+<td>Explicit UTC</td>
+<td><code>2026-05-21T00:00:00.000Z</code></td>
+<td><code>2026-05-21T00:00:00.000Z</code></td>
+</tr>
+</tbody>
+</table>
+<p>(Tested in Node.js 20 with the <code>TZ</code> environment variable set.) The first row surprises people: in New York, <code>new Date(&quot;2026-05-21&quot;).getDate()</code> returns <strong>20</strong>, because UTC midnight is still 20 May there.</p>
+<p>Display in a chosen zone with <code>Intl</code>:</p>
+<pre><code class="language-javascript"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="hljs-keyword">const</span> d = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&quot;2026-05-21T07:00:00Z&quot;</span>);</span><br><span class="line"><span class="hljs-keyword">new</span> <span class="hljs-title class_">Intl</span>.<span class="hljs-title class_">DateTimeFormat</span>(<span class="hljs-string">&quot;en-GB&quot;</span>, {</span><br><span class="line">  <span class="hljs-attr">timeZone</span>: <span class="hljs-string">&quot;Asia/Hong_Kong&quot;</span>, <span class="hljs-attr">dateStyle</span>: <span class="hljs-string">&quot;medium&quot;</span>, <span class="hljs-attr">timeStyle</span>: <span class="hljs-string">&quot;short&quot;</span>,</span><br><span class="line">}).<span class="hljs-title function_">format</span>(d);                                         <span class="hljs-comment">// &quot;21 May 2026, 15:00&quot;</span></span><br><span class="line">d.<span class="hljs-title function_">toLocaleString</span>(<span class="hljs-string">&quot;en-US&quot;</span>, { <span class="hljs-attr">timeZone</span>: <span class="hljs-string">&quot;America/New_York&quot;</span> });   <span class="hljs-comment">// &quot;5/21/2026, 3:00:00 AM&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="JavaScript-Temporal"><a href="#JavaScript-Temporal" class="headerlink" title="JavaScript: Temporal"></a>JavaScript: Temporal</h2>
+<p><strong>Temporal</strong> is the new built-in date/time API. It separates the concepts: <code>Temporal.Instant</code>, <code>Temporal.ZonedDateTime</code>, <code>Temporal.PlainDate</code>, <code>Temporal.PlainDateTime</code> and more. Status as of September 2026:</p>
+<ul>
+<li>It reached <strong>Stage 4</strong> at TC39 in March 2026 and is listed for <strong>ECMAScript 2027</strong>.</li>
+<li>Shipped in <strong>Chrome 144</strong> (and Edge), <strong>Firefox 139</strong>, <strong>Node.js 26</strong> and <strong>Deno 2.7</strong>, per MDN's compatibility data.</li>
+<li><strong>Safari</strong> has it only in Technology Preview. MDN marks Temporal &quot;Limited availability&quot;. For websites, use a polyfill (<code>@js-temporal/polyfill</code> or <code>temporal-polyfill</code>) until Safari ships.</li>
+</ul>
+<pre><code class="language-javascript"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span></pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="hljs-keyword">const</span> gap = <span class="hljs-title class_">Temporal</span>.<span class="hljs-property">ZonedDateTime</span>.<span class="hljs-title function_">from</span>(<span class="hljs-string">&quot;2026-03-08T02:30[America/New_York]&quot;</span>);</span><br><span class="line">gap.<span class="hljs-title function_">toString</span>();            <span class="hljs-comment">// &quot;2026-03-08T03:30:00-04:00[America/New_York]&quot;</span></span><br><span class="line"><span class="hljs-title class_">Temporal</span>.<span class="hljs-property">ZonedDateTime</span>.<span class="hljs-title function_">from</span>(<span class="hljs-string">&quot;2026-03-08T02:30[America/New_York]&quot;</span>,</span><br><span class="line">  { <span class="hljs-attr">disambiguation</span>: <span class="hljs-string">&quot;reject&quot;</span> });                  <span class="hljs-comment">// throws RangeError</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> later = <span class="hljs-title class_">Temporal</span>.<span class="hljs-property">ZonedDateTime</span>.<span class="hljs-title function_">from</span>(<span class="hljs-string">&quot;2026-11-01T01:30[America/New_York]&quot;</span>,</span><br><span class="line">  { <span class="hljs-attr">disambiguation</span>: <span class="hljs-string">&quot;later&quot;</span> });</span><br><span class="line">later.<span class="hljs-title function_">toString</span>();          <span class="hljs-comment">// &quot;2026-11-01T01:30:00-05:00[America/New_York]&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">const</span> sat = <span class="hljs-title class_">Temporal</span>.<span class="hljs-property">ZonedDateTime</span>.<span class="hljs-title function_">from</span>(<span class="hljs-string">&quot;2026-03-07T12:00[America/New_York]&quot;</span>);</span><br><span class="line">sat.<span class="hljs-title function_">add</span>({ <span class="hljs-attr">days</span>: <span class="hljs-number">1</span> }).<span class="hljs-title function_">toString</span>();   <span class="hljs-comment">// &quot;2026-03-08T12:00:00-04:00[America/New_York]&quot;</span></span><br><span class="line">sat.<span class="hljs-title function_">add</span>({ <span class="hljs-attr">hours</span>: <span class="hljs-number">24</span> }).<span class="hljs-title function_">toString</span>(); <span class="hljs-comment">// &quot;2026-03-08T13:00:00-04:00[America/New_York]&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-title class_">Temporal</span>.<span class="hljs-property">PlainDateTime</span>.<span class="hljs-title function_">from</span>(<span class="hljs-string">&quot;2026-05-21T15:00:00&quot;</span>)</span><br><span class="line">  .<span class="hljs-title function_">toZonedDateTime</span>(<span class="hljs-string">&quot;Asia/Hong_Kong&quot;</span>).<span class="hljs-title function_">toInstant</span>().<span class="hljs-title function_">toString</span>();   <span class="hljs-comment">// &quot;2026-05-21T07:00:00Z&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Unlike Python's same-zone arithmetic, Temporal keeps &quot;1 day&quot; (calendar) and &quot;24 hours&quot; (exact time) apart. (Outputs above checked in Chromium 152.)</p>
+<h2 id="Java-javatime"><a href="#Java-javatime" class="headerlink" title="Java: java.time"></a>Java: <code>java.time</code></h2>
+<p>Java 8 added <code>java.time</code>, with one class per concept (see Java Development p1 and p2 for the language basics):</p>
+<pre><code class="language-java"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span></pre></td><td class="code"><pre><code class="java"><span class="line"><span class="hljs-keyword">import</span> java.time.*;</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TimeDemo</span> {</span><br><span class="line">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {</span><br><span class="line">        <span class="hljs-type">Instant</span> <span class="hljs-variable">now</span> <span class="hljs-operator">=</span> Instant.now();                      <span class="hljs-comment">// an instant</span></span><br><span class="line">        <span class="hljs-type">LocalDate</span> <span class="hljs-variable">due</span> <span class="hljs-operator">=</span> LocalDate.of(<span class="hljs-number">2026</span>, <span class="hljs-number">5</span>, <span class="hljs-number">21</span>);        <span class="hljs-comment">// a calendar date</span></span><br><span class="line">        <span class="hljs-type">ZoneId</span> <span class="hljs-variable">ny</span> <span class="hljs-operator">=</span> ZoneId.of(<span class="hljs-string">&quot;America/New_York&quot;</span>);</span><br><span class="line"> </span><br><span class="line">        <span class="hljs-type">ZonedDateTime</span> <span class="hljs-variable">gap</span> <span class="hljs-operator">=</span> ZonedDateTime.of(<span class="hljs-number">2026</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, ny);</span><br><span class="line">        System.out.println(gap);          <span class="hljs-comment">// 2026-03-08T03:30-04:00[America/New_York]</span></span><br><span class="line"> </span><br><span class="line">        <span class="hljs-type">ZonedDateTime</span> <span class="hljs-variable">overlap</span> <span class="hljs-operator">=</span> ZonedDateTime.of(<span class="hljs-number">2026</span>, <span class="hljs-number">11</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, ny);</span><br><span class="line">        System.out.println(overlap);                            <span class="hljs-comment">// ...T01:30-04:00[...]</span></span><br><span class="line">        System.out.println(overlap.withLaterOffsetAtOverlap()); <span class="hljs-comment">// ...T01:30-05:00[...]</span></span><br><span class="line"> </span><br><span class="line">        <span class="hljs-type">ZonedDateTime</span> <span class="hljs-variable">hk</span> <span class="hljs-operator">=</span> LocalDateTime.of(<span class="hljs-number">2026</span>, <span class="hljs-number">5</span>, <span class="hljs-number">21</span>, <span class="hljs-number">15</span>, <span class="hljs-number">0</span>)</span><br><span class="line">                .atZone(ZoneId.of(<span class="hljs-string">&quot;Asia/Hong_Kong&quot;</span>));</span><br><span class="line">        System.out.println(hk.toInstant());                     <span class="hljs-comment">// 2026-05-21T07:00:00Z</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The <code>ZonedDateTime</code> docs give the rules: in a gap the local time is &quot;shifted forwards by the length of the Gap&quot;; in an overlap the earlier offset is used unless you call <code>withLaterOffsetAtOverlap()</code>.</p>
+<hr>
+<h1 id="Chapter-8-—-Cron-jobs-and-DST"><a href="#Chapter-8-—-Cron-jobs-and-DST" class="headerlink" title="Chapter 8 — Cron jobs and DST"></a>Chapter 8 — Cron jobs and DST</h1>
+<p>Classic cron runs jobs by the machine's <strong>local</strong> clock. On a machine in a DST zone, a job at <code>30 2 * * *</code> meets the gap in spring and the overlap in autumn. The Debian <code>cron(8)</code> manual describes its behaviour for clock changes of less than 3 hours:</p>
+<ul>
+<li>Moving <strong>forward</strong>: &quot;those jobs which would have run in the time that was skipped will be run soon after the change.&quot;</li>
+<li>Moving <strong>back</strong>: &quot;those jobs that fall into the repeated time will not be re-run.&quot;</li>
+<li>Jobs with <code>*</code> in the hour or minute field &quot;are run based on the new time immediately&quot;.</li>
+</ul>
+<p>Other schedulers behave differently, so check yours. Safe habits:</p>
+<ul>
+<li>Run servers in <strong>UTC</strong>. Then there is no DST at all.</li>
+<li>If a job must follow local time, avoid 01:00–03:00 local in zones with DST.</li>
+<li><strong>GitHub Actions</strong>: <code>on.schedule</code> cron runs in <strong>UTC</strong> by default. You can add an IANA <code>timezone:</code>; for zones with DST, GitHub's docs say a schedule inside the skipped hour advances to the next valid time (a 2:30 AM schedule runs at 3:00 AM). More in Dev Essentials 16 · CI/CD.</li>
+</ul>
+<pre><code class="language-yaml"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="yaml"><span class="line"><span class="hljs-attr">on:</span></span><br><span class="line">  <span class="hljs-attr">schedule:</span></span><br><span class="line">    <span class="hljs-bullet">-</span> <span class="hljs-attr">cron:</span> <span class="hljs-string">&quot;30 5 * * 1-5&quot;</span>          <span class="hljs-comment"># 05:30 on weekdays</span></span><br><span class="line">      <span class="hljs-attr">timezone:</span> <span class="hljs-string">&quot;America/New_York&quot;</span>  <span class="hljs-comment"># optional; UTC if omitted</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-9-—-Case-study-when-is-this-blogs-post-published"><a href="#Chapter-9-—-Case-study-when-is-this-blogs-post-published" class="headerlink" title="Chapter 9 — Case study: when is this blog's post published?"></a>Chapter 9 — Case study: when is this blog's post published?</h1>
+<p>Every post on this blog starts with frontmatter like this:</p>
+<pre><code class="language-yaml"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="yaml"><span class="line"><span class="hljs-attr">date:</span> <span class="hljs-number">2026-05-21 15:00:00</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>There is no zone. The author means 15:00 <strong>Hong Kong</strong> time. Three readers turn this text into an instant.</p>
+<h2 id="Reader-1-—-gray-matter-js-yaml-YAML-11-rule"><a href="#Reader-1-—-gray-matter-js-yaml-YAML-11-rule" class="headerlink" title="Reader 1 — gray-matter / js-yaml (YAML 1.1 rule)"></a>Reader 1 — gray-matter / js-yaml (YAML 1.1 rule)</h2>
+<p>The Next.js port of the blog parses frontmatter with gray-matter, which uses js-yaml. The YAML 1.1 timestamp type says: &quot;If the time zone is omitted, the timestamp is assumed to be specified in UTC.&quot; So js-yaml returns <code>2026-05-21T15:00:00.000Z</code>, which is <strong>23:00</strong> in Hong Kong. (Checked with gray-matter 4.0.3 and js-yaml 3.14.)</p>
+<h2 id="Reader-2-—-the-ports-post-loader"><a href="#Reader-2-—-the-ports-post-loader" class="headerlink" title="Reader 2 — the port's post loader"></a>Reader 2 — the port's post loader</h2>
+<p>The port corrects this. Its loader reads the wall-clock fields back out of that Date and anchors them to Hong Kong time with a fixed offset. Simplified from the source:</p>
+<pre><code class="language-typescript"><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="typescript"><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">TZ_OFFSET_HOURS</span> = <span class="hljs-number">8</span>; <span class="hljs-comment">// Hexo blog built in Asia/Hong_Kong.</span></span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-title function_">pad</span> = (<span class="hljs-params"><span class="hljs-attr">n</span>: <span class="hljs-built_in">number</span></span>) =&gt; <span class="hljs-title class_">String</span>(n).<span class="hljs-title function_">padStart</span>(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;0&quot;</span>);</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">function</span> <span class="hljs-title function_">parseFrontmatterDate</span>(<span class="hljs-params"><span class="hljs-attr">v</span>: <span class="hljs-title class_">Date</span></span>): <span class="hljs-title class_">Date</span> {</span><br><span class="line">  <span class="hljs-keyword">const</span> y = v.<span class="hljs-title function_">getUTCFullYear</span>(), mo = v.<span class="hljs-title function_">getUTCMonth</span>(), d = v.<span class="hljs-title function_">getUTCDate</span>();</span><br><span class="line">  <span class="hljs-keyword">const</span> h = v.<span class="hljs-title function_">getUTCHours</span>(), mi = v.<span class="hljs-title function_">getUTCMinutes</span>(), s = v.<span class="hljs-title function_">getUTCSeconds</span>();</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-title class_">Date</span>.<span class="hljs-title function_">UTC</span>(y, mo, d, h - <span class="hljs-variable constant_">TZ_OFFSET_HOURS</span>, mi, s));</span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">function</span> <span class="hljs-title function_">postPath</span>(<span class="hljs-params"><span class="hljs-attr">date</span>: <span class="hljs-title class_">Date</span>, <span class="hljs-attr">slug</span>: <span class="hljs-built_in">string</span></span>) {</span><br><span class="line">  <span class="hljs-keyword">const</span> d = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(date.<span class="hljs-title function_">getTime</span>() + <span class="hljs-variable constant_">TZ_OFFSET_HOURS</span> * <span class="hljs-number">3600_000</span>); <span class="hljs-comment">// shift to HKT</span></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${d.getUTCFullYear()}</span>/<span class="hljs-subst">${pad(d.getUTCMonth() + <span class="hljs-number">1</span>)}</span>/<span class="hljs-subst">${pad(d.getUTCDate())}</span>/<span class="hljs-subst">${slug}</span>/`</span>;</span><br><span class="line">}</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Result: <code>2026-05-21T07:00:00Z</code> (15:00 HKT), and the URL <code>/2026/05/21/slug/</code> uses the Hong Kong calendar date. <code>Date.UTC</code> accepts an hour below 0 and rolls back to the previous day, so a post at 03:00 HKT still gets the right instant. A fixed <code>+8</code> is safe here only because Hong Kong has had no DST since 1979. The same trick would be wrong for London.</p>
+<h2 id="Reader-3-—-Hexo"><a href="#Reader-3-—-Hexo" class="headerlink" title="Reader 3 — Hexo"></a>Reader 3 — Hexo</h2>
+<p>The original Hexo site has <code>timezone: ''</code> in <code>_config.yml</code>. The Hexo docs say: &quot;Hexo uses the setting on your computer by default.&quot; In Hexo 6, the front-matter parser (hexo-front-matter 3.x) reads each zone-less date as the <strong>build machine's</strong> local wall-clock time, and Hexo then re-anchors it only if <code>timezone</code> is set. The Hexo site builds on a GitHub Actions <code>ubuntu-latest</code> runner. GitHub-hosted runners run in UTC in practice (GitHub states UTC explicitly for scheduled workflows; add a <code>run: date</code> step to see it).</p>
+<h2 id="Same-text-different-instants"><a href="#Same-text-different-instants" class="headerlink" title="Same text, different instants"></a>Same text, different instants</h2>
+<table>
+<thead>
+<tr>
+<th>Reader</th>
+<th>Rule</th>
+<th>Instant</th>
+<th>Hong Kong time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>js-yaml alone</td>
+<td>No zone = UTC</td>
+<td><code>2026-05-21T15:00:00Z</code></td>
+<td>23:00</td>
+</tr>
+<tr>
+<td>Port loader</td>
+<td>Wall clock in HKT (+8)</td>
+<td><code>2026-05-21T07:00:00Z</code></td>
+<td>15:00</td>
+</tr>
+<tr>
+<td>Hexo 6, <code>timezone: ''</code>, runner in UTC</td>
+<td>Wall clock in machine zone</td>
+<td><code>2026-05-21T15:00:00Z</code></td>
+<td>23:00</td>
+</tr>
+<tr>
+<td>Hexo 6, <code>timezone: ''</code>, laptop in HK</td>
+<td>Wall clock in machine zone</td>
+<td><code>2026-05-21T07:00:00Z</code></td>
+<td>15:00</td>
+</tr>
+</tbody>
+</table>
+<p>The URL date is the same in all four, because each reader keeps the written calendar date. The instant is not, and anything that shows or compares instants (a feed timestamp, a &quot;published&quot; <code>&lt;time&gt;</code> tag, a future-post filter) can differ by 8 hours.</p>
+<h2 id="Where-future-fits"><a href="#Where-future-fits" class="headerlink" title="Where future fits"></a>Where <code>future</code> fits</h2>
+<p>The Hexo config also has <code>future: true</code>. The docs describe it as &quot;Display future posts?&quot;, default <code>true</code>. With <code>true</code>, a post dated later than the build time is still published. With <code>false</code>, it is skipped until a later build, and &quot;later than now&quot; is judged with whatever instant the build machine computed. Near the boundary, the zone decides.</p>
+<h2 id="The-lesson-pin-the-zone"><a href="#The-lesson-pin-the-zone" class="headerlink" title="The lesson: pin the zone"></a>The lesson: pin the zone</h2>
+<ul>
+<li><strong>Say the zone once, in config.</strong> For Hexo: <code>timezone: Asia/Hong_Kong</code> (an IANA name; the docs give <code>America/New_York</code> as an example). Then the build machine's zone no longer matters.</li>
+<li><strong>Or write the offset in the data</strong>, such as <code>date: 2026-05-21T15:00:00+08:00</code>. This is the portable fix for YAML readers. Check each consumer first: the current hexo-front-matter source honours an explicit offset, but version 3.x (Hexo 6) reads every date's UTC fields as local wall-clock time, so the offset does not survive there.</li>
+</ul>
+<blockquote>
+<p><strong>Watch out:</strong> the port's loader is written for zone-less dates. It reads the UTC fields of whatever js-yaml returns and treats them as HKT. If posts ever gain an explicit offset, update the loader in the same change, or those dates will move by 8 hours.</p>
+</blockquote>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Classify"><a href="#Exercise-1-—-Classify" class="headerlink" title="Exercise 1 — Classify"></a>Exercise 1 — Classify</h2>
+<p>For each, say instant, wall-clock + zone, or calendar date: (a) a server log line, (b) a user's birthday, (c) a weekly 09:00 team call in Singapore, (d) a payment's time, (e) a public holiday.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) instant (UTC). (b) calendar date. (c) wall-clock + zone: <code>09:00</code> + <code>Asia/Singapore</code> + a weekly rule. (d) instant (UTC). (e) calendar date (and it may differ by country).</p>
+</details>
+<h2 id="Exercise-2-—-The-London-gap"><a href="#Exercise-2-—-The-London-gap" class="headerlink" title="Exercise 2 — The London gap"></a>Exercise 2 — The London gap</h2>
+<p>What does Python print for <code>datetime(2026, 3, 29, 1, 30, tzinfo=ZoneInfo(&quot;Europe/London&quot;))</code> after a round trip through UTC?</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, UTC</span><br><span class="line"><span class="hljs-keyword">from</span> zoneinfo <span class="hljs-keyword">import</span> ZoneInfo</span><br><span class="line"> </span><br><span class="line">lon = ZoneInfo(<span class="hljs-string">&quot;Europe/London&quot;</span>)</span><br><span class="line">t = datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">3</span>, <span class="hljs-number">29</span>, <span class="hljs-number">1</span>, <span class="hljs-number">30</span>, tzinfo=lon)</span><br><span class="line"><span class="hljs-built_in">print</span>(t.astimezone(UTC).astimezone(lon).isoformat())   <span class="hljs-comment"># 2026-03-29T02:30:00+01:00</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>01:30 does not exist on that day (01:00 GMT jumps to 02:00 BST). With <code>fold=0</code>, Python uses the offset from before the jump (+00:00), which is 01:30Z, and that is 02:30 BST.</p>
+</details>
+<h2 id="Exercise-3-—-Seconds-or-milliseconds"><a href="#Exercise-3-—-Seconds-or-milliseconds" class="headerlink" title="Exercise 3 — Seconds or milliseconds?"></a>Exercise 3 — Seconds or milliseconds?</h2>
+<p>An API returns <code>1779346800</code>. Another returns <code>1779346800000</code>. Convert both to ISO 8601 in Python.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, UTC</span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">print</span>(datetime.fromtimestamp(<span class="hljs-number">1779346800</span>, tz=UTC).isoformat())           <span class="hljs-comment"># 2026-05-21T07:00:00+00:00</span></span><br><span class="line"><span class="hljs-built_in">print</span>(datetime.fromtimestamp(<span class="hljs-number">1779346800000</span> / <span class="hljs-number">1000</span>, tz=UTC).isoformat()) <span class="hljs-comment"># same instant</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>10 digits means seconds and 13 digits means milliseconds, for dates between 2001 and 2286.</p>
+</details>
+<h2 id="Exercise-4-—-Predict-the-JavaScript"><a href="#Exercise-4-—-Predict-the-JavaScript" class="headerlink" title="Exercise 4 — Predict the JavaScript"></a>Exercise 4 — Predict the JavaScript</h2>
+<p>With <code>TZ=America/New_York</code>, what do <code>new Date(&quot;2026-05-21&quot;).getDate()</code> and <code>new Date(&quot;2026-05-21T00:00&quot;).getDate()</code> return?</p>
+<details>
+<summary>Solution</summary>
+<p><code>20</code> and <code>21</code>. The date-only string is parsed as UTC midnight, which is 20:00 on 20 May in New York (UTC−4 in May). The date-time string is parsed as local midnight on 21 May. To get a plain date safely, use <code>Temporal.PlainDate.from(&quot;2026-05-21&quot;)</code>, or split the string yourself.</p>
+</details>
+<h2 id="Exercise-5-—-Store-a-recurring-meeting"><a href="#Exercise-5-—-Store-a-recurring-meeting" class="headerlink" title="Exercise 5 — Store a recurring meeting"></a>Exercise 5 — Store a recurring meeting</h2>
+<p>A team meets every Monday at 09:00 in London. Design the stored fields and compute the UTC instants for 2026-06-08 and 2026-12-07.</p>
+<details>
+<summary>Solution</summary>
+<p>Store <code>{ &quot;weekday&quot;: &quot;MO&quot;, &quot;localTime&quot;: &quot;09:00&quot;, &quot;tz&quot;: &quot;Europe/London&quot; }</code>. Compute each instant when needed:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, UTC</span><br><span class="line"><span class="hljs-keyword">from</span> zoneinfo <span class="hljs-keyword">import</span> ZoneInfo</span><br><span class="line"> </span><br><span class="line">lon = ZoneInfo(<span class="hljs-string">&quot;Europe/London&quot;</span>)</span><br><span class="line"><span class="hljs-keyword">for</span> day <span class="hljs-keyword">in</span> (datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, tzinfo=lon), datetime(<span class="hljs-number">2026</span>, <span class="hljs-number">12</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, tzinfo=lon)):</span><br><span class="line">    <span class="hljs-built_in">print</span>(day.astimezone(UTC).isoformat())</span><br><span class="line"><span class="hljs-comment"># 2026-06-08T08:00:00+00:00   (BST, UTC+1)</span></span><br><span class="line"><span class="hljs-comment"># 2026-12-07T09:00:00+00:00   (GMT, UTC+0)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-6-—-Pin-this-blogs-dates"><a href="#Exercise-6-—-Pin-this-blogs-dates" class="headerlink" title="Exercise 6 — Pin this blog's dates"></a>Exercise 6 — Pin this blog's dates</h2>
+<p>Give two ways to make <code>date: 2026-05-21 15:00:00</code> mean 15:00 Hong Kong time for every reader, and one risk of each.</p>
+<details>
+<summary>Solution</summary>
+<ol>
+<li>Set <code>timezone: Asia/Hong_Kong</code> in the Hexo config. Risk: it only fixes Hexo. Other readers (plain js-yaml, scripts) still read the text as UTC, so the port keeps its own +8 correction.</li>
+<li>Write <code>date: 2026-05-21T15:00:00+08:00</code>. Risk: every reader must honour offsets. Hexo 6's front-matter parser and the port's current loader do not, so both would need changing together.</li>
+</ol>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Store an event that happened</td>
+<td>UTC instant: <code>2026-05-21T07:00:00Z</code></td>
+</tr>
+<tr>
+<td>Store a future local event</td>
+<td>wall-clock + IANA zone: <code>09:00</code> + <code>Europe/London</code></td>
+</tr>
+<tr>
+<td>Store a birthday</td>
+<td>date only: <code>2026-05-21</code></td>
+</tr>
+<tr>
+<td>Now, aware (Python)</td>
+<td><code>datetime.now(UTC)</code></td>
+</tr>
+<tr>
+<td>Attach a zone (Python)</td>
+<td><code>datetime(..., tzinfo=ZoneInfo(&quot;Asia/Hong_Kong&quot;))</code></td>
+</tr>
+<tr>
+<td>Zone data on Windows (Python)</td>
+<td><code>pip install tzdata</code></td>
+</tr>
+<tr>
+<td>Pick the second 01:30 (Python)</td>
+<td><code>fold=1</code></td>
+</tr>
+<tr>
+<td>Elapsed time (Python)</td>
+<td>convert both to UTC, then subtract</td>
+</tr>
+<tr>
+<td>Parse safely (JS)</td>
+<td>always include <code>Z</code> or an offset</td>
+</tr>
+<tr>
+<td>Show in a zone (JS)</td>
+<td><code>Intl.DateTimeFormat(locale, { timeZone })</code></td>
+</tr>
+<tr>
+<td>Plain date (JS)</td>
+<td><code>Temporal.PlainDate.from(&quot;2026-05-21&quot;)</code></td>
+</tr>
+<tr>
+<td>Seconds → Date (JS)</td>
+<td><code>new Date(sec * 1000)</code></td>
+</tr>
+<tr>
+<td>Epoch → ISO (bash)</td>
+<td><code>date -u -d @1790312844</code></td>
+</tr>
+<tr>
+<td>Epoch → ISO (PowerShell)</td>
+<td><code>[DateTimeOffset]::FromUnixTimeSeconds(n).UtcDateTime</code></td>
+</tr>
+<tr>
+<td>32-bit limit</td>
+<td><code>2038-01-19T03:14:07Z</code></td>
+</tr>
+<tr>
+<td>Hexo site zone</td>
+<td><code>timezone: Asia/Hong_Kong</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p><strong>Dev Essentials 03 · Git Rescue Kit</strong> covers reflog, restore, reset, revert and rebase: the tools that made the repair in Dev Essentials 01 a routine job instead of a disaster.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc3339" target="_blank" rel="noopener external nofollow noreferrer">RFC 3339 — Date and Time on the Internet: Timestamps</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9557" target="_blank" rel="noopener external nofollow noreferrer">RFC 9557 — Timestamps with Additional Information</a></li>
+<li><a href="https://www.iana.org/time-zones" target="_blank" rel="noopener external nofollow noreferrer">IANA — Time Zone Database</a></li>
+<li><a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format" target="_blank" rel="noopener external nofollow noreferrer">ECMAScript — Date Time String Format and Date.parse</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse" target="_blank" rel="noopener external nofollow noreferrer">MDN — Date.parse()</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal" target="_blank" rel="noopener external nofollow noreferrer">MDN — Temporal</a></li>
+<li><a href="https://github.com/tc39/proposal-temporal" target="_blank" rel="noopener external nofollow noreferrer">TC39 — Temporal proposal</a></li>
+<li><a href="https://docs.python.org/3/library/datetime.html" target="_blank" rel="noopener external nofollow noreferrer">Python — datetime</a></li>
+<li><a href="https://docs.python.org/3/library/zoneinfo.html" target="_blank" rel="noopener external nofollow noreferrer">Python — zoneinfo</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/ZonedDateTime.html" target="_blank" rel="noopener external nofollow noreferrer">Java — ZonedDateTime (Java SE 21)</a></li>
+<li><a href="https://www.mongodb.com/docs/manual/reference/bson-types/" target="_blank" rel="noopener external nofollow noreferrer">MongoDB — BSON Types (Date)</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.4/en/datetime.html" target="_blank" rel="noopener external nofollow noreferrer">MySQL 8.4 — DATE, DATETIME and TIMESTAMP</a></li>
+<li><a href="https://yaml.org/type/timestamp.html" target="_blank" rel="noopener external nofollow noreferrer">YAML 1.1 — Timestamp type</a></li>
+<li><a href="https://hexo.io/docs/configuration" target="_blank" rel="noopener external nofollow noreferrer">Hexo — Configuration (timezone, future)</a></li>
+<li><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows" target="_blank" rel="noopener external nofollow noreferrer">GitHub Docs — Events that trigger workflows (schedule)</a></li>
+<li><a href="https://www.gov.uk/when-do-the-clocks-change" target="_blank" rel="noopener external nofollow noreferrer">GOV.UK — When do the clocks change?</a></li>
+<li><a href="https://manpages.debian.org/bookworm/cron/cron.8.en.html" target="_blank" rel="noopener external nofollow noreferrer">Debian — cron(8) manual</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: time zones in PostgreSQL (<code>timestamptz</code> vs <code>timestamp</code>), leap seconds and clock sync (NTP), and a diagram of the three readers in the case study.</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:51\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-14T04:21:51.000Z","title":"Created 2026-08-14 12:21:51","children":"2026-08-14"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-14T04:21:51.000Z","title":"Updated 2026-08-14 12:21:51","children":"2026-08-14"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/14/dev_02_dates_time_zones/","children":"https://invokfung.github.io/blog/2026/08/14/dev_02_dates_time_zones/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","Computer Science",{"className":"post-meta__tags","href":"/blog/tags/Computer-Science/","children":"Computer Science"}],["$","a","Programming",{"className":"post-meta__tags","href":"/blog/tags/Programming/","children":"Programming"}],["$","a","Time Zones",{"className":"post-meta__tags","href":"/blog/tags/Time-Zones/","children":"Time Zones"}],["$","a","Python",{"className":"post-meta__tags","href":"/blog/tags/Python/","children":"Python"}],["$","a","JavaScript",{"className":"post-meta__tags","href":"/blog/tags/JavaScript/","children":"JavaScript"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_08_floating_point",{"children":["$","a",null,{"href":"/blog/2026/08/25/dev_08_floating_point/","title":"Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-25</div><div class=\"title\">Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money</div></div>"}}]}],["$","div","dev_04_line_endings",{"children":["$","a",null,{"href":"/blog/2026/08/18/dev_04_line_endings/","title":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-18</div><div class=\"title\">Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes</div></div>"}}]}],["$","div","py_00_setup_hello",{"children":["$","a",null,{"href":"/blog/2026/05/10/py_00_setup_hello/","title":"Python Course — 00 · Setup, REPL, and Hello World","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/python/cover_00_setup.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-10</div><div class=\"title\">Python Course — 00 · Setup, REPL, and Hello World</div></div>"}}]}],["$","div","py_01_syntax_basics",{"children":["$","a",null,{"href":"/blog/2026/05/11/py_01_syntax_basics/","title":"Python Course — 01 · Syntax, Types, and Control Flow","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/python/cover_01_syntax.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-11</div><div class=\"title\">Python Course — 01 · Syntax, Types, and Control Flow</div></div>"}}]}],["$","div","py_02_data_structures",{"children":["$","a",null,{"href":"/blog/2026/05/12/py_02_data_structures/","title":"Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/python/cover_02_data.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-05-12</div><div class=\"title\">Python Course — 02 · Data Structures (list, tuple, dict, set, comprehensions)</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Three-kinds-of-time",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Three-kinds-of-time","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Three kinds of \"time\""}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","What-to-store-for-each",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-to-store-for-each","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"What to store for each"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-UTC-offsets-and-IANA-zones",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-UTC-offsets-and-IANA-zones","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — UTC, offsets and IANA zones"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Offsets",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Offsets","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Offsets"}]]}],null]}],["$","li","Zones-are-more-than-offsets",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Zones-are-more-than-offsets","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Zones are more than offsets"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-DST-gaps-and-overlaps",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-DST-gaps-and-overlaps","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — DST gaps and overlaps"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Real-2026-transitions",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Real-2026-transitions","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Real 2026 transitions"}]]}],null]}],["$","li","What-a-library-does-with-a-gap-or-overlap",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-a-library-does-with-a-gap-or-overlap","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"What a library does with a gap or overlap"}]]}],null]}],["$","li","One-day-later-is-not-always-24-hours-later",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#One-day-later-is-not-always-24-hours-later","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"\"One day later\" is not always \"24 hours later\""}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Writing-timestamps-ISO-8601-and-RFC-3339",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Writing-timestamps-ISO-8601-and-RFC-3339","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Writing timestamps: ISO 8601 and RFC 3339"}]]}],null]}],["$","li","Chapter-5-—-Unix-epoch-time",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Unix-epoch-time","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Unix epoch time"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-year-2038-problem",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-year-2038-problem","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"The year 2038 problem"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-The-storage-rule",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-The-storage-rule","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — The storage rule"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","MongoDB",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#MongoDB","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"MongoDB"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-The-APIs-Python-JavaScript-Java",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-The-APIs-Python-JavaScript-Java","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — The APIs: Python, JavaScript, Java"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Python-aware-vs-naive",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Python-aware-vs-naive","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"Python: aware vs naive"}]]}],null]}],["$","li","JavaScript-Date-parsing-traps",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#JavaScript-Date-parsing-traps","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"JavaScript: Date parsing traps"}]]}],null]}],["$","li","JavaScript-Temporal",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#JavaScript-Temporal","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"JavaScript: Temporal"}]]}],null]}],["$","li","Java-javatime",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Java-javatime","children":[["$","span",null,{"className":"toc-number","children":"8.4."}]," ",["$","span",null,{"className":"toc-text","children":"Java: java.time"}]]}],null]}]]}]]}],["$","li","Chapter-8-—-Cron-jobs-and-DST",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Cron-jobs-and-DST","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Cron jobs and DST"}]]}],null]}],["$","li","Chapter-9-—-Case-study-when-is-this-blogs-post-published",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Case-study-when-is-this-blogs-post-published","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Case study: when is this blog's post published?"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Reader-1-—-gray-matter-js-yaml-YAML-11-rule",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Reader-1-—-gray-matter-js-yaml-YAML-11-rule","children":[["$","span",null,{"className":"toc-number","children":"10.1."}]," ",["$","span",null,{"className":"toc-text","children":"Reader 1 — gray-matter / js-yaml (YAML 1.1 rule)"}]]}],null]}],["$","li","Reader-2-—-the-ports-post-loader",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Reader-2-—-the-ports-post-loader","children":[["$","span",null,{"className":"toc-number","children":"10.2."}]," ",["$","span",null,{"className":"toc-text","children":"Reader 2 — the port's post loader"}]]}],null]}],["$","li","Reader-3-—-Hexo",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Reader-3-—-Hexo","children":[["$","span",null,{"className":"toc-number","children":"10.3."}]," ",["$","span",null,{"className":"toc-text","children":"Reader 3 — Hexo"}]]}],null]}],["$","li","Same-text-different-instants",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Same-text-different-instants","children":[["$","span",null,{"className":"toc-number","children":"10.4."}]," ",["$","span",null,{"className":"toc-text","children":"Same text, different instants"}]]}],null]}],["$","li","Where-future-fits",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Where-future-fits","children":[["$","span",null,{"className":"toc-number","children":"10.5."}]," ",["$","span",null,{"className":"toc-text","children":"Where future fits"}]]}],null]}],["$","li","The-lesson-pin-the-zone",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-lesson-pin-the-zone","children":[["$","span",null,{"className":"toc-number","children":"10.6."}]," ",["$","span",null,{"className":"toc-text","children":"The lesson: pin the zone"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Classify",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Classify","children":[["$","span",null,{"className":"toc-number","children":"11.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Classify"}]]}],null]}],["$","li","Exercise-2-—-The-London-gap",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-The-London-gap","children":[["$","span",null,{"className":"toc-number","children":"11.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — The London gap"}]]}],null]}],["$","li","Exercise-3-—-Seconds-or-milliseconds",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Seconds-or-milliseconds","children":[["$","span",null,{"className":"toc-number","children":"11.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Seconds or milliseconds?"}]]}],null]}],["$","li","Exercise-4-—-Predict-the-JavaScript",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Predict-the-JavaScript","children":[["$","span",null,{"className":"toc-number","children":"11.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Predict the JavaScript"}]]}],null]}],["$","li","Exercise-5-—-Store-a-recurring-meeting",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Store-a-recurring-meeting","children":[["$","span",null,{"className":"toc-number","children":"11.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Store a recurring meeting"}]]}],null]}],["$","li","Exercise-6-—-Pin-this-blogs-dates",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Pin-this-blogs-dates","children":[["$","span",null,{"className":"toc-number","children":"11.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Pin this blog's dates"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"`2026-05-21 15:00:00` looks like a clear moment in time. It is not. Without a time zone it is only a wall-clock reading, and different programs turn i"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,Computer Science,Programming,Time Zones,Python,JavaScript"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets"}],["$","meta","7",{"property":"og:description","content":"`2026-05-21 15:00:00` looks like a clear moment in time. It is not. Without a time zone it is only a wall-clock reading, and different programs turn i"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets"}],["$","meta","11",{"name":"twitter:description","content":"`2026-05-21 15:00:00` looks like a clear moment in time. It is not. Without a time zone it is only a wall-clock reading, and different programs turn i"}]]
+1:null

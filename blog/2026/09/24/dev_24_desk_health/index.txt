@@ -1,0 +1,616 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","09","d"]
+6:["day","24","d"]
+7:["slug","dev_24_desk_health","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","24","d"],{"children":[["slug","dev_24_desk_health","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"09\",\"day\":\"24\",\"slug\":\"dev_24_desk_health\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","24","d"],{"children":[["slug","dev_24_desk_health","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Tbf22,<p>Developers spend thousands of hours a year at a screen. Dry, tired eyes, a stiff neck and sore wrists are common, and mostly avoidable. This last post of the series covers eye strain, desk and chair setup, movement and breaks, simple stretches, warning signs, and sleep. Each recommendation carries an <strong>evidence label</strong>, because some advice rests on solid research and some is just sensible habit. It ends with a checklist and a small script to measure your own setup, then looks back over the whole series.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → … → 22 Design Docs → 23 Money Basics → <strong>24 Desk Health</strong> (this post). Part E · Growth outside code.</p>
+</blockquote>
+<blockquote>
+<p><strong>Watch out:</strong> this post is <strong>educational, not medical advice</strong>. See a doctor, physiotherapist or eye-care professional if you have pain that does not go away, <strong>numbness or tingling</strong>, weakness, or <strong>any change in your vision</strong>. Do not wait for a checklist to tell you something is wrong.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Read the evidence labels and know what each one means.</li>
+<li>Explain what causes digital eye strain and apply the 20-20-20 rule.</li>
+<li>Set screen distance, screen height, lighting and text size to published targets.</li>
+<li>Set chair, desk, keyboard and mouse for a neutral posture, including on a laptop.</li>
+<li>Explain why movement matters more than one &quot;perfect&quot; posture.</li>
+<li>Say what the Cochrane review found about sit-stand desks.</li>
+<li>Recognise the warning signs of repetitive strain injury (RSI).</li>
+<li>Measure your own setup and check it with a short script.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Evidence-labels"><a href="#Chapter-1-—-Evidence-labels" class="headerlink" title="Chapter 1 — Evidence labels"></a>Chapter 1 — Evidence labels</h1>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strong evidence</strong></td>
+<td>Many good studies agree; systematic reviews support it</td>
+</tr>
+<tr>
+<td><strong>Moderate evidence</strong></td>
+<td>Some good studies or a review, but with limits (short follow-up, mixed results)</td>
+</tr>
+<tr>
+<td><strong>Limited evidence</strong></td>
+<td>Few, small or low-quality studies; could change with better research</td>
+</tr>
+<tr>
+<td><strong>Expert guidance</strong></td>
+<td>Recommended by official or professional bodies (OSHA, AOA, AAO, NHS), mostly on ergonomic principles rather than trials</td>
+</tr>
+<tr>
+<td><strong>Rule of thumb</strong></td>
+<td>A handy simplification; useful, but the exact numbers are not research results</td>
+</tr>
+<tr>
+<td><strong>Anecdotal</strong></td>
+<td>People report it helps; no good evidence either way</td>
+</tr>
+</tbody>
+</table>
+<p>Most desk advice is <strong>expert guidance</strong>. That is not a weakness; it just means you should adjust it to your body instead of treating the numbers as exact.</p>
+<hr>
+<h1 id="Chapter-2-—-Digital-eye-strain"><a href="#Chapter-2-—-Digital-eye-strain" class="headerlink" title="Chapter 2 — Digital eye strain"></a>Chapter 2 — Digital eye strain</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Digital eye strain</strong> (also called computer vision syndrome) — tired, dry, sore or blurry eyes and headaches after long screen use.</li>
+<li><strong>Accommodation</strong> — the eye's focusing effort. Near work keeps the focusing muscles working.</li>
+<li><strong>Glare</strong> — bright light reflecting off the screen or shining into your eyes.</li>
+</ul>
+<h2 id="Causes"><a href="#Causes" class="headerlink" title="Causes"></a>Causes</h2>
+<ul>
+<li><strong>Less blinking.</strong> The American Academy of Ophthalmology (AAO) says people normally blink about 15 times a minute, but only about 5 to 7 times a minute while using computers. The eye surface dries.</li>
+<li><strong>Long near focus</strong> without a break.</li>
+<li><strong>Glare and poor lighting.</strong></li>
+<li><strong>Screen too close, too high or too far.</strong></li>
+<li><strong>Uncorrected vision problems.</strong> The American Optometric Association (AOA) lists them as a cause. An eye test can fix what no desk setup can.</li>
+</ul>
+<p>The AAO states that eye strain does not injure the eye and does not cause permanent damage. It is still worth fixing: it is uncomfortable and makes work harder.</p>
+<h2 id="The-20-20-20-rule-—-expert-guidance-one-small-trial"><a href="#The-20-20-20-rule-—-expert-guidance-one-small-trial" class="headerlink" title="The 20-20-20 rule — expert guidance; one small trial"></a>The 20-20-20 rule — <em>expert guidance; one small trial</em></h2>
+<p><strong>Every 20 minutes, look at something at least 20 feet (about 6 m) away for at least 20 seconds.</strong> Both the AAO and the AOA recommend it. The AOA also suggests resting the eyes for 15 minutes after two hours of continuous computer use (<em>expert guidance</em>).</p>
+<p>What does research say? A 2023 study in <em>Contact Lens and Anterior Eye</em> (Talens-Estarelles and colleagues) gave 29 computer users break-reminder software for two weeks. Eye strain and dry-eye symptoms improved while they used it, but the gains were gone one week after they stopped. Binocular vision and tear-film measures did not change. The study is small and short, so treat it as <em>limited evidence</em> that the habit helps <strong>while you keep it up</strong>.</p>
+<h2 id="Screen-distance-and-height-—-expert-guidance"><a href="#Screen-distance-and-height-—-expert-guidance" class="headerlink" title="Screen distance and height — expert guidance"></a>Screen distance and height — <em>expert guidance</em></h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Distance</th>
+<th>Height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OSHA computer workstations eTool</td>
+<td>20-40 in (50-100 cm), eye to screen</td>
+<td>Top of the screen at or slightly below eye level; centre of the screen 15-20° below horizontal eye level</td>
+</tr>
+<tr>
+<td>AOA</td>
+<td>20-28 in (about 51-71 cm)</td>
+<td>Centre of the screen 15-20° below eye level (about 4-5 in, 10-13 cm)</td>
+</tr>
+<tr>
+<td>AAO</td>
+<td>About 25 in (about 64 cm), roughly arm's length</td>
+<td>Gaze slightly downward</td>
+</tr>
+</tbody>
+</table>
+<p>They agree: about an arm's length away, top edge near eye level, and you look slightly <strong>down</strong>. OSHA adds that people with bifocals may need the screen lower, so they do not tilt their head back to read through the bottom of the lens.</p>
+<h2 id="Lighting-and-glare-—-expert-guidance"><a href="#Lighting-and-glare-—-expert-guidance" class="headerlink" title="Lighting and glare — expert guidance"></a>Lighting and glare — <em>expert guidance</em></h2>
+<ul>
+<li>Place the monitor <strong>side-on to windows</strong> (OSHA: perpendicular to the window), not facing them or with them behind it. Use blinds (AOA).</li>
+<li>Match screen brightness to the room (AAO). A bright screen in a dark room, or a dim screen in a bright room, both strain.</li>
+<li>Tilting the screen back too far can catch overhead lights (OSHA). Tilt it so it faces your line of sight.</li>
+<li>A matte screen filter can cut glare (AAO).</li>
+</ul>
+<h2 id="Text-size-—-rule-of-thumb"><a href="#Text-size-—-rule-of-thumb" class="headerlink" title="Text size — rule of thumb"></a>Text size — <em>rule of thumb</em></h2>
+<p>If you lean in to read, the text is too small. Increase the zoom or the system scaling instead of moving closer. OSHA notes text may need to be bigger on smaller monitors.</p>
+<h2 id="Blue-light-and-dry-eyes"><a href="#Blue-light-and-dry-eyes" class="headerlink" title="Blue light and dry eyes"></a>Blue light and dry eyes</h2>
+<ul>
+<li><strong>Blue-light glasses</strong> — <em>moderate evidence against</em>. The AAO does not recommend them and says there is no scientific evidence that light from computer screens damages the eyes. A 2023 Cochrane review (17 studies, 619 people) found blue-light filtering lenses may not reduce eye strain from computer use in the short term.</li>
+<li><strong>Dry eyes</strong> — blink on purpose during breaks, and the AAO suggests artificial tears when eyes feel dry (<em>expert guidance</em>).</li>
+<li><strong>Dark mode</strong> — <em>anecdotal</em>. Many people find it comfortable, especially at night. There is no strong reason to choose one theme over the other; use what feels better.</li>
+</ul>
+<blockquote>
+<p><strong>Common pitfall:</strong> buying gadgets before booking an eye test. An out-of-date prescription, or none at all, is a common cause that no filter can fix.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-Posture-and-setup"><a href="#Chapter-3-—-Posture-and-setup" class="headerlink" title="Chapter 3 — Posture and setup"></a>Chapter 3 — Posture and setup</h1>
+<h2 id="OSHAs-neutral-posture-—-expert-guidance"><a href="#OSHAs-neutral-posture-—-expert-guidance" class="headerlink" title="OSHA's neutral posture — expert guidance"></a>OSHA's neutral posture — <em>expert guidance</em></h2>
+<p>OSHA's eTool describes a neutral working posture:</p>
+<ul>
+<li><strong>Hands, wrists and forearms</strong> straight, in line, roughly parallel to the floor.</li>
+<li><strong>Elbows</strong> close to the body, bent <strong>between 90 and 120 degrees</strong>.</li>
+<li><strong>Shoulders</strong> relaxed, upper arms hanging normally.</li>
+<li><strong>Feet</strong> fully supported by the floor, or by a footrest if the desk is not adjustable.</li>
+<li><strong>Thighs</strong> supported and roughly parallel to the floor; <strong>knees</strong> about level with the hips.</li>
+<li><strong>Back</strong> fully supported, with lumbar (lower-back) support, upright or leaning back slightly.</li>
+<li><strong>Head</strong> level, facing forward, balanced over the torso.</li>
+</ul>
+<h2 id="Set-up-in-this-order"><a href="#Set-up-in-this-order" class="headerlink" title="Set up in this order"></a>Set up in this order</h2>
+<ol>
+<li><strong>Chair first.</strong> Set the height so your whole foot rests on the floor and the back of the knee is slightly higher than the seat (OSHA). The seat should support most of your thigh without pressing into the back of the knee. Move the lumbar support to fit the small of your back.</li>
+<li><strong>Keyboard at elbow height.</strong> OSHA: elbows about the same height as the keyboard, wrists straight, not bent up, down or sideways. Put the mouse right next to the keyboard to avoid reaching.</li>
+<li><strong>If the desk is too high</strong>, raise the chair and add a footrest. If it is too low, raise the desk.</li>
+<li><strong>Screen last</strong>, using Chapter 2's targets.</li>
+</ol>
+<p>Cornell University's ergonomics guide adds that a slightly <strong>reclined</strong> seated posture of about 100-110 degrees is better than a bolt-upright 90 degrees (<em>expert guidance</em>).</p>
+<h2 id="Laptops-—-expert-guidance"><a href="#Laptops-—-expert-guidance" class="headerlink" title="Laptops — expert guidance"></a>Laptops — <em>expert guidance</em></h2>
+<p>Cornell's guide calls laptop design &quot;inherently&quot; problematic: when the screen is at a good height, the keyboard is not, and the other way round. For regular long sessions:</p>
+<ul>
+<li>Raise the laptop on a <strong>stand</strong> so the top of the screen is near eye level.</li>
+<li>Use an <strong>external keyboard and mouse</strong> at elbow height.</li>
+<li>Or use an external monitor and keep the laptop as a second screen.</li>
+</ul>
+<h2 id="The-best-posture-is-the-next-posture-—-expert-guidance"><a href="#The-best-posture-is-the-next-posture-—-expert-guidance" class="headerlink" title="The best posture is the next posture — expert guidance"></a>The best posture is the next posture — <em>expert guidance</em></h2>
+<p>No single position is safe for eight hours. Workplace-safety bodies such as WorkSafeNB (Canada) use the phrase &quot;the best posture is your next posture&quot;, and OSHA advises changing position through small adjustments, stretching, standing and walking. A 2019 viewpoint in the <em>Journal of Orthopaedic &amp; Sports Physical Therapy</em> (Slater and colleagues, <em>expert opinion</em>) argues there is little strong evidence that &quot;sitting up straight&quot; prevents back pain. The practical message: set up a comfortable, supported base position, then <strong>move often</strong>.</p>
+<hr>
+<h1 id="Chapter-4-—-Sitting-time-breaks-and-standing-desks"><a href="#Chapter-4-—-Sitting-time-breaks-and-standing-desks" class="headerlink" title="Chapter 4 — Sitting time, breaks and standing desks"></a>Chapter 4 — Sitting time, breaks and standing desks</h1>
+<h2 id="What-the-Cochrane-review-found-—-limited-evidence"><a href="#What-the-Cochrane-review-found-—-limited-evidence" class="headerlink" title="What the Cochrane review found — limited evidence"></a>What the Cochrane review found — <em>limited evidence</em></h2>
+<p>The Cochrane review &quot;Workplace interventions for reducing sitting at work&quot; (Shrestha and colleagues, 2018; searches up to August 2017) is the latest version found for this post. It included <strong>34 studies with 3,397 office workers</strong> from high-income countries.</p>
+<ul>
+<li><strong>Sit-stand desks</strong> reduced workplace sitting by about <strong>84 to 116 minutes per workday</strong> in the short term, and about 57 minutes a day at 3-12 months.</li>
+<li>The <strong>quality of evidence was low to very low</strong> for most interventions, mainly due to study design limits and small samples.</li>
+<li>The effects of policies, information and counselling were mostly inconsistent.</li>
+<li>There was no evidence on longer-term effects, and the review did not show health benefits such as less disease.</li>
+</ul>
+<p>So: a sit-stand desk probably helps you sit less, at least at first. Whether that improves long-term health is not proven.</p>
+<h2 id="Break-patterns"><a href="#Break-patterns" class="headerlink" title="Break patterns"></a>Break patterns</h2>
+<ul>
+<li><strong>Cornell's 20-8-2 pattern</strong> — <em>rule of thumb</em>. About 20 minutes sitting, 8 minutes standing, 2 minutes moving and stretching. Cornell presents it as a &quot;ball park goal&quot;, not an exact prescription.</li>
+<li><strong>Cornell's break types</strong> — <em>expert guidance</em>: short eye breaks, micro-breaks (under 2 minutes), and a rest break every 30-60 minutes where you stand up and move.</li>
+<li><strong>Standing all day is not the goal.</strong> Long, still standing has its own discomfort. Alternate.</li>
+</ul>
+<p>A tiny reminder script (stop with Ctrl+C):</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-string">&quot;&quot;&quot;breaks.py - simple 20-20-20 and move reminders. Stop with Ctrl+C.&quot;&quot;&quot;</span></span><br><span class="line"><span class="hljs-keyword">import</span> time</span><br><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime</span><br><span class="line"> </span><br><span class="line">EYE_BREAK_MIN = <span class="hljs-number">20</span>          <span class="hljs-comment"># minutes between eye breaks</span></span><br><span class="line">MOVE_EVERY = <span class="hljs-number">3</span>              <span class="hljs-comment"># every 3rd eye break (about once an hour), stand up and move</span></span><br><span class="line"> </span><br><span class="line">count = <span class="hljs-number">0</span></span><br><span class="line"><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:</span><br><span class="line">    time.sleep(EYE_BREAK_MIN * <span class="hljs-number">60</span>)</span><br><span class="line">    count += <span class="hljs-number">1</span></span><br><span class="line">    now = datetime.now().strftime(<span class="hljs-string">&quot;%H:%M&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">if</span> count % MOVE_EVERY == <span class="hljs-number">0</span>:</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;\a<span class="hljs-subst">{now}</span>  Stand up, walk, stretch for 2-5 minutes.&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">else</span>:</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;\a<span class="hljs-subst">{now}</span>  20-20-20: look at something about 6 m away for 20 seconds.&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line">python breaks.py</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="powershell"><span class="line">python breaks.py</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>\a</code> rings the terminal bell where the terminal supports it. A timer app or an OS focus feature does the same job.</p>
+<hr>
+<h1 id="Chapter-5-—-Simple-stretches-—-expert-guidance"><a href="#Chapter-5-—-Simple-stretches-—-expert-guidance" class="headerlink" title="Chapter 5 — Simple stretches — expert guidance"></a>Chapter 5 — Simple stretches — <em>expert guidance</em></h1>
+<p>These are from the NHS &quot;sitting exercises&quot; guide, adapted for a desk break. Move slowly, stay within a comfortable range, and <strong>stop if anything hurts</strong>. The NHS advises a stable chair <strong>without wheels</strong> for these, so push your office chair against a wall or use another chair.</p>
+<table>
+<thead>
+<tr>
+<th>Stretch</th>
+<th>How</th>
+<th>Dose (NHS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chest stretch</td>
+<td>Sit tall, away from the backrest. Pull shoulders back and down, arms out to the sides, gently push the chest forward and up</td>
+<td>Hold 5-10 s, 5 times</td>
+</tr>
+<tr>
+<td>Upper-body twist</td>
+<td>Sit tall, feet flat, arms crossed to opposite shoulders. Turn the upper body to one side without moving the hips, then the other</td>
+<td>Hold 5 s, 5 each side</td>
+</tr>
+<tr>
+<td>Neck rotation</td>
+<td>Sit tall, shoulders down. Turn the head slowly towards one shoulder as far as comfortable, back to centre, then the other side</td>
+<td>Hold 5 s, 3 each side</td>
+</tr>
+<tr>
+<td>Ankle stretch</td>
+<td>Hold the chair, straighten one leg off the floor, point the toes away, then pull them back towards you</td>
+<td>2 sets of 5 per foot</td>
+</tr>
+<tr>
+<td>Hip marching</td>
+<td>Hold the chair sides, lift one bent knee, lower it with control, then the other</td>
+<td>5 per leg</td>
+</tr>
+</tbody>
+</table>
+<p>Stretching during breaks mainly helps you feel less stiff. This post does not claim it prevents injury; the evidence for that is not established here.</p>
+<hr>
+<h1 id="Chapter-6-—-RSI-warning-signs-—-expert-guidance"><a href="#Chapter-6-—-RSI-warning-signs-—-expert-guidance" class="headerlink" title="Chapter 6 — RSI warning signs — expert guidance"></a>Chapter 6 — RSI warning signs — <em>expert guidance</em></h1>
+<p>Repetitive strain injury (RSI) is pain in muscles, nerves and tendons from repeated movement and overuse. Typing is one of the listed causes, along with poor posture at work. The NHS lists symptoms that usually start gradually:</p>
+<ul>
+<li>Pain that may feel <strong>burning, aching or throbbing</strong></li>
+<li><strong>Stiffness</strong> and <strong>weakness</strong></li>
+<li><strong>Tingling, pins and needles, or numbness</strong></li>
+<li>Muscle <strong>cramps</strong></li>
+<li><strong>Swelling</strong></li>
+</ul>
+<p>The NHS advises seeing a GP (a family doctor) if symptoms <strong>do not go away or get worse</strong>. Numbness, tingling or weakness deserve a professional look sooner rather than later.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> pushing through wrist or forearm pain to finish a sprint. Early, mild symptoms are the cheap time to change your setup, take breaks and get advice. Do not self-diagnose from the internet.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-Sleep-and-learning"><a href="#Chapter-7-—-Sleep-and-learning" class="headerlink" title="Chapter 7 — Sleep and learning"></a>Chapter 7 — Sleep and learning</h1>
+<ul>
+<li><strong>Sleep helps memory</strong> — <em>strong evidence (mainly lab studies)</em>. A major review (Rasch and Born, <em>Physiological Reviews</em>, 2013) sums up over a century of research: sleep after learning helps you keep what you learned, and memories are actively consolidated during sleep.</li>
+<li><strong>How much</strong> — <em>expert guidance</em>. The American Academy of Sleep Medicine and the Sleep Research Society (2015 consensus) recommend <strong>7 or more hours per night</strong> on a regular basis for adults aged 18 to 60.</li>
+<li><strong>Practical rule</strong> — <em>rule of thumb</em>. Study or learn a new tool earlier in the day, then sleep, instead of cutting sleep to cram late at night. A tired brain also writes more bugs (see Dev Essentials 10 · Debugging).</li>
+</ul>
+<hr>
+<h1 id="Chapter-8-—-Measure-your-own-setup"><a href="#Chapter-8-—-Measure-your-own-setup" class="headerlink" title="Chapter 8 — Measure your own setup"></a>Chapter 8 — Measure your own setup</h1>
+<p>This post gives <strong>no formula for desk or screen height from body height</strong>. No official source verified for this post gives one, and bodies differ (long legs, short torso, and so on). Measure instead. Sit in your normal work position and use a tape measure. Measure in centimetres from the floor.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Target</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Feet</td>
+<td>Flat on floor or footrest; back of knee slightly above seat</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Thighs</td>
+<td>Roughly parallel to floor, supported</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Back</td>
+<td>Supported; lumbar support in the small of the back; 100-110° recline is fine</td>
+<td>OSHA, Cornell</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Elbows</td>
+<td>Close to body, 90-120°</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Keyboard</td>
+<td>About elbow height; wrists straight</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Mouse</td>
+<td>Right next to the keyboard</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Screen distance</td>
+<td>50-100 cm (about arm's length)</td>
+<td>OSHA, AAO</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Screen top</td>
+<td>At or slightly below eye level</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Screen centre</td>
+<td>15-20° below horizontal eye level</td>
+<td>OSHA, AOA</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Windows</td>
+<td>Screen side-on to windows</td>
+<td>OSHA</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Brightness</td>
+<td>Matches the room</td>
+<td>AAO</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Breaks</td>
+<td>20-20-20 for eyes; stand and move every 30-60 min</td>
+<td>AAO, AOA, Cornell</td>
+</tr>
+</tbody>
+</table>
+<p>The script below checks the measurable items. Replace the numbers with yours.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-string">&quot;&quot;&quot;desk_check.py - compare YOUR measured desk setup with published guidance.</span><br><span class="line"> </span><br><span class="line">Measure sitting in your normal work position, in centimetres, from the floor</span><br><span class="line">(except distance). This script does not guess from body height; it only</span><br><span class="line">checks numbers you measured. The tolerances for &quot;slightly below&quot; and</span><br><span class="line">&quot;about elbow height&quot; are this script&#x27;s rule of thumb, not official numbers.</span><br><span class="line">&quot;&quot;&quot;</span></span><br><span class="line"><span class="hljs-keyword">import</span> math</span><br><span class="line"> </span><br><span class="line">setup = {</span><br><span class="line">    <span class="hljs-string">&quot;eye_height&quot;</span>: <span class="hljs-number">118</span>,        <span class="hljs-comment"># floor to your eyes</span></span><br><span class="line">    <span class="hljs-string">&quot;screen_top&quot;</span>: <span class="hljs-number">116</span>,        <span class="hljs-comment"># floor to top edge of the visible screen</span></span><br><span class="line">    <span class="hljs-string">&quot;screen_center&quot;</span>: <span class="hljs-number">98</span>,      <span class="hljs-comment"># floor to middle of the visible screen</span></span><br><span class="line">    <span class="hljs-string">&quot;eye_to_screen&quot;</span>: <span class="hljs-number">65</span>,      <span class="hljs-comment"># eyes to screen surface</span></span><br><span class="line">    <span class="hljs-string">&quot;elbow_height&quot;</span>: <span class="hljs-number">68</span>,       <span class="hljs-comment"># floor to elbow, upper arm hanging relaxed</span></span><br><span class="line">    <span class="hljs-string">&quot;keyboard_height&quot;</span>: <span class="hljs-number">70</span>,    <span class="hljs-comment"># floor to the home row of keys</span></span><br><span class="line">    <span class="hljs-string">&quot;seat_height&quot;</span>: <span class="hljs-number">47</span>,        <span class="hljs-comment"># floor to front edge of seat</span></span><br><span class="line">    <span class="hljs-string">&quot;knee_crease_height&quot;</span>: <span class="hljs-number">48</span>, <span class="hljs-comment"># floor to back of knee, feet flat, shin vertical</span></span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">check</span>(<span class="hljs-params">s</span>):</span><br><span class="line">    rows = []</span><br><span class="line">    d = s[<span class="hljs-string">&quot;eye_to_screen&quot;</span>]</span><br><span class="line">    rows.append((<span class="hljs-string">&quot;screen distance&quot;</span>, <span class="hljs-string">f&quot;<span class="hljs-subst">{d}</span> cm&quot;</span>, <span class="hljs-string">&quot;50-100 cm (OSHA)&quot;</span>, <span class="hljs-number">50</span> &lt;= d &lt;= <span class="hljs-number">100</span>))</span><br><span class="line"> </span><br><span class="line">    top_gap = s[<span class="hljs-string">&quot;eye_height&quot;</span>] - s[<span class="hljs-string">&quot;screen_top&quot;</span>]</span><br><span class="line">    rows.append((<span class="hljs-string">&quot;screen top vs eyes&quot;</span>, <span class="hljs-string">f&quot;<span class="hljs-subst">{top_gap:+}</span> cm below&quot;</span>,</span><br><span class="line">                 <span class="hljs-string">&quot;at or slightly below eye level (OSHA)&quot;</span>, <span class="hljs-number">0</span> &lt;= top_gap &lt;= <span class="hljs-number">10</span>))</span><br><span class="line"> </span><br><span class="line">    drop = s[<span class="hljs-string">&quot;eye_height&quot;</span>] - s[<span class="hljs-string">&quot;screen_center&quot;</span>]</span><br><span class="line">    angle = math.degrees(math.atan2(drop, d))</span><br><span class="line">    rows.append((<span class="hljs-string">&quot;gaze to screen centre&quot;</span>, <span class="hljs-string">f&quot;<span class="hljs-subst">{angle:<span class="hljs-number">.0</span>f}</span> deg down&quot;</span>,</span><br><span class="line">                 <span class="hljs-string">&quot;15-20 deg below horizontal (OSHA, AOA)&quot;</span>, <span class="hljs-number">15</span> &lt;= angle &lt;= <span class="hljs-number">20</span>))</span><br><span class="line"> </span><br><span class="line">    kb = s[<span class="hljs-string">&quot;keyboard_height&quot;</span>] - s[<span class="hljs-string">&quot;elbow_height&quot;</span>]</span><br><span class="line">    rows.append((<span class="hljs-string">&quot;keyboard vs elbow&quot;</span>, <span class="hljs-string">f&quot;<span class="hljs-subst">{kb:+}</span> cm&quot;</span>,</span><br><span class="line">                 <span class="hljs-string">&quot;about elbow height (OSHA)&quot;</span>, -<span class="hljs-number">5</span> &lt;= kb &lt;= <span class="hljs-number">3</span>))</span><br><span class="line"> </span><br><span class="line">    seat = s[<span class="hljs-string">&quot;knee_crease_height&quot;</span>] - s[<span class="hljs-string">&quot;seat_height&quot;</span>]</span><br><span class="line">    rows.append((<span class="hljs-string">&quot;seat vs back of knee&quot;</span>, <span class="hljs-string">f&quot;<span class="hljs-subst">{seat:+}</span> cm&quot;</span>,</span><br><span class="line">                 <span class="hljs-string">&quot;knee slightly above seat, feet flat (OSHA)&quot;</span>, seat &gt;= <span class="hljs-number">0</span>))</span><br><span class="line">    <span class="hljs-keyword">return</span> rows</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">for</span> name, value, target, ok <span class="hljs-keyword">in</span> check(setup):</span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-string">&#x27;OK &#x27;</span> <span class="hljs-keyword">if</span> ok <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;FIX&#x27;</span>}</span> <span class="hljs-subst">{name:&lt;<span class="hljs-number">22</span>}</span> <span class="hljs-subst">{value:&lt;<span class="hljs-number">14</span>}</span> target: <span class="hljs-subst">{target}</span>&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Output for the example desk with an external monitor:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="text"><span class="line">OK  screen distance        65 cm          target: 50-100 cm (OSHA)</span><br><span class="line">OK  screen top vs eyes     +2 cm below    target: at or slightly below eye level (OSHA)</span><br><span class="line">OK  gaze to screen centre  17 deg down    target: 15-20 deg below horizontal (OSHA, AOA)</span><br><span class="line">OK  keyboard vs elbow      +2 cm          target: about elbow height (OSHA)</span><br><span class="line">OK  seat vs back of knee   +1 cm          target: knee slightly above seat, feet flat (OSHA)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The same person working on a laptop flat on the desk (<code>screen_top=95</code>, <code>screen_center=85</code>, <code>eye_to_screen=55</code>, <code>keyboard_height=75</code>):</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="text"><span class="line">OK  screen distance        55 cm          target: 50-100 cm (OSHA)</span><br><span class="line">FIX screen top vs eyes     +23 cm below   target: at or slightly below eye level (OSHA)</span><br><span class="line">FIX gaze to screen centre  31 deg down    target: 15-20 deg below horizontal (OSHA, AOA)</span><br><span class="line">FIX keyboard vs elbow      +7 cm          target: about elbow height (OSHA)</span><br><span class="line">OK  seat vs back of knee   +1 cm          target: knee slightly above seat, feet flat (OSHA)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>That is Cornell's laptop problem in numbers: the screen is far too low and the keyboard too high at the same time. A stand plus an external keyboard fixes both.</p>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Measure-and-check"><a href="#Exercise-1-—-Measure-and-check" class="headerlink" title="Exercise 1 — Measure and check"></a>Exercise 1 — Measure and check</h2>
+<p>Measure the eight values in <code>desk_check.py</code> for your own desk and run it.</p>
+<details>
+<summary>Solution</summary>
+<p>Measure while sitting normally, not sitting up extra straight for the tape measure. Fix items in the order of Chapter 3: chair, then keyboard, then screen. Changing the chair height changes every other number, so re-measure after each change.</p>
+</details>
+<h2 id="Exercise-2-—-Screen-height-from-the-angle"><a href="#Exercise-2-—-Screen-height-from-the-angle" class="headerlink" title="Exercise 2 — Screen height from the angle"></a>Exercise 2 — Screen height from the angle</h2>
+<p>Your eyes are 120 cm from the floor and the screen is 60 cm away. At what heights should the screen centre be for a 15° and a 20° downward gaze?</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> math</span><br><span class="line"><span class="hljs-keyword">for</span> deg <span class="hljs-keyword">in</span> (<span class="hljs-number">15</span>, <span class="hljs-number">20</span>):</span><br><span class="line">    drop = <span class="hljs-number">60</span> * math.tan(math.radians(deg))</span><br><span class="line">    <span class="hljs-built_in">print</span>(deg, <span class="hljs-built_in">round</span>(<span class="hljs-number">120</span> - drop, <span class="hljs-number">1</span>))   <span class="hljs-comment"># 15 -&gt; 103.9 cm, 20 -&gt; 98.2 cm</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The screen centre belongs about 98-104 cm from the floor, which is 16-22 cm below the eyes.</p>
+</details>
+<h2 id="Exercise-3-—-Label-the-evidence"><a href="#Exercise-3-—-Label-the-evidence" class="headerlink" title="Exercise 3 — Label the evidence"></a>Exercise 3 — Label the evidence</h2>
+<p>Label each claim: (a) &quot;a sit-stand desk makes you sit less&quot;, (b) &quot;blue-light glasses cure eye strain&quot;, (c) &quot;look 6 m away every 20 minutes&quot;, (d) &quot;20 minutes sitting, 8 standing, 2 moving&quot;.</p>
+<details>
+<summary>Solution</summary>
+<p>(a) <em>Limited evidence</em> for less sitting in the short term (Cochrane: low to very low quality); health benefits unproven. (b) The evidence points the other way: the AAO does not recommend them, and a Cochrane review found they may not reduce eye strain. (c) <em>Expert guidance</em> from the AAO and AOA, plus one small trial that found benefits only while people kept doing it. (d) <em>Rule of thumb</em> (Cornell calls it a ball-park goal).</p>
+</details>
+<h2 id="Exercise-4-—-Glare-audit"><a href="#Exercise-4-—-Glare-audit" class="headerlink" title="Exercise 4 — Glare audit"></a>Exercise 4 — Glare audit</h2>
+<p>Sit at your desk at the time of day you work most. Turn the screen off and look at the black glass. What do you see reflected?</p>
+<details>
+<summary>Solution</summary>
+<p>Windows or ceiling lights in the reflection are glare sources. Turn the desk so the screen is side-on to windows, close blinds, reduce the backward tilt, or move the light. Turn the screen on again and match its brightness to the room.</p>
+</details>
+<h2 id="Exercise-5-—-Break-routine"><a href="#Exercise-5-—-Break-routine" class="headerlink" title="Exercise 5 — Break routine"></a>Exercise 5 — Break routine</h2>
+<p>Run <code>breaks.py</code> for one working day. Count how many reminders you actually followed.</p>
+<details>
+<summary>Solution</summary>
+<p>If you ignored most, the interval or the action is wrong for you, not the idea. Try linking breaks to natural pauses instead: after each commit, each test run, or each meeting. The 2023 trial suggests the benefit lasts only while the habit does, so choose something you can keep.</p>
+</details>
+<h2 id="Exercise-6-—-Laptop-fix-plan"><a href="#Exercise-6-—-Laptop-fix-plan" class="headerlink" title="Exercise 6 — Laptop fix plan"></a>Exercise 6 — Laptop fix plan</h2>
+<p>Using the laptop output in Chapter 8, what is the smallest change that fixes all three <code>FIX</code> lines?</p>
+<details>
+<summary>Solution</summary>
+<p>A laptop stand that raises the screen by about 13-18 cm, plus an external keyboard and mouse placed at elbow height. Check it with the script: raising by 15 cm gives a screen top 8 cm below the eyes and a centre about 18° down. Raising by 23 cm would put the top at eye level but the centre only about 10° down, which is too high. Raising the chair instead would fix the keyboard line but make the screen angle worse.</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Target</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eye breaks</td>
+<td>20-20-20; 15 min rest after 2 h continuous (AOA)</td>
+<td>Expert guidance; one small trial</td>
+</tr>
+<tr>
+<td>Screen distance</td>
+<td>50-100 cm; about arm's length</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Screen height</td>
+<td>Top at or slightly below eye level; centre 15-20° down</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Glare</td>
+<td>Screen side-on to windows; brightness matches room</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Blue-light glasses</td>
+<td>Not recommended by the AAO</td>
+<td>Moderate evidence of no benefit</td>
+</tr>
+<tr>
+<td>Elbows / keyboard</td>
+<td>90-120°, keyboard at elbow height, wrists straight</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Chair</td>
+<td>Feet flat, knee slightly above seat, lumbar support</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Laptop</td>
+<td>Stand + external keyboard and mouse</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Posture</td>
+<td>Move often; &quot;the best posture is the next posture&quot;</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Sit-stand desk</td>
+<td>Less sitting short term (84-116 min/day)</td>
+<td>Limited evidence</td>
+</tr>
+<tr>
+<td>20-8-2</td>
+<td>Sit 20, stand 8, move 2</td>
+<td>Rule of thumb</td>
+</tr>
+<tr>
+<td>RSI signs</td>
+<td>Pain, stiffness, weakness, tingling, numbness, cramps, swelling → see a professional</td>
+<td>Expert guidance</td>
+</tr>
+<tr>
+<td>Sleep</td>
+<td>7+ hours for adults 18-60; sleep helps memory</td>
+<td>Expert guidance; strong evidence</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>This post closes <strong>Dev Essentials</strong>. The five parts fit together:</p>
+<ul>
+<li><strong>Part A · Real bugs, explained</strong> (01-04): Text Encoding, Dates &amp; Time Zones, Git Rescue Kit, Line Endings — the bugs that waste the most hours.</li>
+<li><strong>Part B · Everyday skills</strong> (05-10): Command Line, Regex, HTTPS, Floating Point, Versions &amp; Dependencies, Debugging — the tools you use every day.</li>
+<li><strong>Part C · Building safely</strong> (11-16): Auth, OWASP Top 10, Caching, API Reliability, Testing, CI/CD — how to ship code you can trust.</li>
+<li><strong>Part D · AI tools</strong> (17-19): How LLMs Work, Coding with AI Agents, RAG — working well with the new tools.</li>
+<li><strong>Part E · Growth outside code</strong> (20-24): Reading Papers, Estimating, Design Docs, Money Basics, Desk Health — the skills that make a long career work.</li>
+</ul>
+<p>A good way to revisit the series: pick the one post whose topic bit you most recently, and do its exercises again.</p>
+<p><strong>Planned follow-up series:</strong> precise measurement, CAD and building your own furniture, for example <strong>designing and building a standing desk</strong> fitted to the measurements you took in Chapter 8.</p>
+<h2 id="Planned-future-extensions"><a href="#Planned-future-extensions" class="headerlink" title="Planned future extensions"></a>Planned future extensions</h2>
+<table>
+<thead>
+<tr>
+<th>Idea</th>
+<th>Would fit in</th>
+<th>What it would cover</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker basics</td>
+<td>Part B · Everyday skills</td>
+<td>Images, containers, volumes, Compose; running a dev database locally</td>
+</tr>
+<tr>
+<td>SQL fundamentals</td>
+<td>Part B · Everyday skills</td>
+<td>SELECT, JOIN, GROUP BY, indexes, reading a query plan</td>
+</tr>
+<tr>
+<td>Linux permissions</td>
+<td>Part B · Everyday skills</td>
+<td>Users, groups, <code>chmod</code>, <code>chown</code>, <code>sudo</code>, file modes</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>Part C · Building safely</td>
+<td>Logs, metrics, traces; what to alert on</td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td>Part C · Building safely</td>
+<td>Semantic HTML, keyboard use, contrast, screen-reader testing</td>
+</tr>
+<tr>
+<td>Web performance profiling</td>
+<td>Part C · Building safely</td>
+<td>Browser dev tools, Core Web Vitals, finding slow code</td>
+</tr>
+<tr>
+<td>Public speaking</td>
+<td>Part E · Growth outside code</td>
+<td>Structuring a tech talk, slides, practice, handling questions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.aao.org/eye-health/tips-prevention/computer-usage" target="_blank" rel="noopener external nofollow noreferrer">AAO — Computers, Digital Devices and Eye Strain</a></li>
+<li><a href="https://www.aao.org/eye-health/diseases/what-is-eye-strain" target="_blank" rel="noopener external nofollow noreferrer">AAO — Eye Strain (20-20-20 rule)</a></li>
+<li><a href="https://www.aao.org/eye-health/tips-prevention/are-computer-glasses-worth-it" target="_blank" rel="noopener external nofollow noreferrer">AAO — Are Blue Light-Blocking Glasses Worth It?</a></li>
+<li><a href="https://www.aoa.org/healthy-eyes/eye-and-vision-conditions/computer-vision-syndrome" target="_blank" rel="noopener external nofollow noreferrer">AOA — Computer Vision Syndrome (Digital Eye Strain)</a></li>
+<li><a href="https://doi.org/10.1016/j.clae.2022.101744" target="_blank" rel="noopener external nofollow noreferrer">Talens-Estarelles et al. (2023), Testing the 20-20-20 rule, <em>Contact Lens and Anterior Eye</em> 46(2):101744 (DOI)</a></li>
+<li><a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013244.pub2/full" target="_blank" rel="noopener external nofollow noreferrer">Singh et al. (2023), Blue-light filtering spectacle lenses, Cochrane Library</a></li>
+<li><a href="https://www.osha.gov/etools/computer-workstations/components/monitors" target="_blank" rel="noopener external nofollow noreferrer">OSHA eTool — Computer Workstations: Monitors</a></li>
+<li><a href="https://www.osha.gov/etools/computer-workstations/positions" target="_blank" rel="noopener external nofollow noreferrer">OSHA eTool — Good Working Positions</a></li>
+<li><a href="https://www.osha.gov/etools/computer-workstations/components/chairs" target="_blank" rel="noopener external nofollow noreferrer">OSHA eTool — Chairs</a> · <a href="https://www.osha.gov/etools/computer-workstations/components/keyboards" target="_blank" rel="noopener external nofollow noreferrer">Keyboards</a></li>
+<li><a href="https://www.ergo.human.cornell.edu/ergoguide.html" target="_blank" rel="noopener external nofollow noreferrer">Cornell University — Computer Workstation Ergonomics Guidelines</a></li>
+<li><a href="https://ergo.human.cornell.edu/CUESitStandPrograms.html" target="_blank" rel="noopener external nofollow noreferrer">Cornell University — Sit-stand programs (20-8-2)</a></li>
+<li><a href="https://www.worksafenb.ca/about-us/news-and-events/news/2019/why-the-best-posture-is-your-next-posture/" target="_blank" rel="noopener external nofollow noreferrer">WorkSafeNB — Why the best posture is your next posture</a></li>
+<li><a href="https://www.jospt.org/doi/10.2519/jospt.2019.0610" target="_blank" rel="noopener external nofollow noreferrer">Slater et al. (2019), &quot;Sit Up Straight&quot;: Time to Re-evaluate, JOSPT</a></li>
+<li><a href="https://www.cochrane.org/evidence/CD010912_workplace-interventions-methods-reducing-time-spent-sitting-work" target="_blank" rel="noopener external nofollow noreferrer">Cochrane — Workplace interventions for reducing sitting at work (2018)</a></li>
+<li><a href="https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/" target="_blank" rel="noopener external nofollow noreferrer">NHS — Sitting exercises</a></li>
+<li><a href="https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/" target="_blank" rel="noopener external nofollow noreferrer">NHS — Repetitive strain injury (RSI)</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3768102/" target="_blank" rel="noopener external nofollow noreferrer">Rasch and Born (2013), About Sleep's Role in Memory, <em>Physiological Reviews</em> (PMC)</a></li>
+<li><a href="https://aasm.org/aasm-and-srs-publish-new-sleep-duration-consensus-statement/" target="_blank" rel="noopener external nofollow noreferrer">AASM and SRS — adult sleep duration consensus (2015)</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: photos of a measured setup before and after, a standing-desk height section tied to the furniture/CAD follow-up series, and a short guide to choosing a chair.</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-09-24T15:30:11.000Z","title":"Updated 2026-09-24 23:30:11","children":"2026-09-24"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/09/24/dev_24_desk_health/","children":"https://invokfung.github.io/blog/2026/09/24/dev_24_desk_health/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","Ergonomics",{"className":"post-meta__tags","href":"/blog/tags/Ergonomics/","children":"Ergonomics"}],["$","a","Health",{"className":"post-meta__tags","href":"/blog/tags/Health/","children":"Health"}],["$","a","Eye Strain",{"className":"post-meta__tags","href":"/blog/tags/Eye-Strain/","children":"Eye Strain"}],["$","a","Workspace",{"className":"post-meta__tags","href":"/blog/tags/Workspace/","children":"Workspace"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":["$undefined",["$","div",null,{"className":"next-post pull-full","children":["$","a",null,{"href":"/blog/2026/09/22/dev_23_money_basics/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_02_dates_time_zones",{"children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-14</div><div class=\"title\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}],["$","div","dev_03_git_rescue_kit",{"children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","title":"Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-16</div><div class=\"title\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div","dev_04_line_endings",{"children":["$","a",null,{"href":"/blog/2026/08/18/dev_04_line_endings/","title":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-18</div><div class=\"title\">Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes</div></div>"}}]}],["$","div","dev_05_command_line",{"children":["$","a",null,{"href":"/blog/2026/08/19/dev_05_command_line/","title":"Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-19</div><div class=\"title\">Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell</div></div>"}}]}],["$","div","dev_06_regex",{"children":["$","a",null,{"href":"/blog/2026/08/20/dev_06_regex/","title":"Dev Essentials — 06 · Regex from Zero to Useful","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-20</div><div class=\"title\">Dev Essentials — 06 · Regex from Zero to Useful</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Evidence-labels",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Evidence-labels","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Evidence labels"}]]}],null]}],["$","li","Chapter-2-—-Digital-eye-strain",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Digital-eye-strain","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Digital eye strain"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","Causes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Causes","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"Causes"}]]}],null]}],["$","li","The-20-20-20-rule-—-expert-guidance-one-small-trial",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-20-20-20-rule-—-expert-guidance-one-small-trial","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"The 20-20-20 rule — expert guidance; one small trial"}]]}],null]}],["$","li","Screen-distance-and-height-—-expert-guidance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Screen-distance-and-height-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"Screen distance and height — expert guidance"}]]}],null]}],["$","li","Lighting-and-glare-—-expert-guidance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Lighting-and-glare-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"3.5."}]," ",["$","span",null,{"className":"toc-text","children":"Lighting and glare — expert guidance"}]]}],null]}],["$","li","Text-size-—-rule-of-thumb",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Text-size-—-rule-of-thumb","children":[["$","span",null,{"className":"toc-number","children":"3.6."}]," ",["$","span",null,{"className":"toc-text","children":"Text size — rule of thumb"}]]}],null]}],["$","li","Blue-light-and-dry-eyes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Blue-light-and-dry-eyes","children":[["$","span",null,{"className":"toc-number","children":"3.7."}]," ",["$","span",null,{"className":"toc-text","children":"Blue light and dry eyes"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Posture-and-setup",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Posture-and-setup","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Posture and setup"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","OSHAs-neutral-posture-—-expert-guidance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#OSHAs-neutral-posture-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"OSHA's neutral posture — expert guidance"}]]}],null]}],["$","li","Set-up-in-this-order",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Set-up-in-this-order","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Set up in this order"}]]}],null]}],["$","li","Laptops-—-expert-guidance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Laptops-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"Laptops — expert guidance"}]]}],null]}],["$","li","The-best-posture-is-the-next-posture-—-expert-guidance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-best-posture-is-the-next-posture-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"The best posture is the next posture — expert guidance"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Sitting-time-breaks-and-standing-desks",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Sitting-time-breaks-and-standing-desks","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Sitting time, breaks and standing desks"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","What-the-Cochrane-review-found-—-limited-evidence",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-the-Cochrane-review-found-—-limited-evidence","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"What the Cochrane review found — limited evidence"}]]}],null]}],["$","li","Break-patterns",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Break-patterns","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Break patterns"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Simple-stretches-—-expert-guidance",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Simple-stretches-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Simple stretches — expert guidance"}]]}],null]}],["$","li","Chapter-6-—-RSI-warning-signs-—-expert-guidance",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-RSI-warning-signs-—-expert-guidance","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — RSI warning signs — expert guidance"}]]}],null]}],["$","li","Chapter-7-—-Sleep-and-learning",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Sleep-and-learning","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Sleep and learning"}]]}],null]}],["$","li","Chapter-8-—-Measure-your-own-setup",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Measure-your-own-setup","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Measure your own setup"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Measure-and-check",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Measure-and-check","children":[["$","span",null,{"className":"toc-number","children":"10.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Measure and check"}]]}],null]}],["$","li","Exercise-2-—-Screen-height-from-the-angle",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Screen-height-from-the-angle","children":[["$","span",null,{"className":"toc-number","children":"10.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Screen height from the angle"}]]}],null]}],["$","li","Exercise-3-—-Label-the-evidence",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Label-the-evidence","children":[["$","span",null,{"className":"toc-number","children":"10.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Label the evidence"}]]}],null]}],["$","li","Exercise-4-—-Glare-audit",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Glare-audit","children":[["$","span",null,{"className":"toc-number","children":"10.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Glare audit"}]]}],null]}],["$","li","Exercise-5-—-Break-routine",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Break-routine","children":[["$","span",null,{"className":"toc-number","children":"10.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Break routine"}]]}],null]}],["$","li","Exercise-6-—-Laptop-fix-plan",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Laptop-fix-plan","children":[["$","span",null,{"className":"toc-number","children":"10.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Laptop fix plan"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Planned-future-extensions",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Planned-future-extensions","children":[["$","span",null,{"className":"toc-number","children":"12.1."}]," ",["$","span",null,{"className":"toc-text","children":"Planned future extensions"}]]}],null]}]]}]]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Developers spend thousands of hours a year at a screen. Dry, tired eyes, a stiff neck and sore wrists are common, and mostly avoidable. This last post"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,Ergonomics,Health,Eye Strain,Workspace"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","meta","7",{"property":"og:description","content":"Developers spend thousands of hours a year at a screen. Dry, tired eyes, a stiff neck and sore wrists are common, and mostly avoidable. This last post"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","meta","11",{"name":"twitter:description","content":"Developers spend thousands of hours a year at a screen. Dry, tired eyes, a stiff neck and sore wrists are common, and mostly avoidable. This last post"}]]
+1:null

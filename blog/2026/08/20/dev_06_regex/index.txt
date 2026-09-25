@@ -1,0 +1,748 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","20","d"]
+7:["slug","dev_06_regex","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","20","d"],{"children":[["slug","dev_06_regex","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"20\",\"slug\":\"dev_06_regex\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","20","d"],{"children":[["slug","dev_06_regex","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T10a26,<p>A regular expression (regex) is a tiny language for describing text patterns: &quot;four digits, a dash, two digits&quot;, &quot;a line that starts with <code>date:</code>&quot;, &quot;the same word twice in a row&quot;. You meet regexes in <code>grep</code>, <code>sed</code>, editors, Python, JavaScript, PowerShell and every log tool. This post builds them up from single characters to lookarounds, shows where the flavors differ, gives recipes you will reuse, and ends with the dark side: a regex that can freeze a server.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → … → 05 Command Line → <strong>06 Regex</strong> (this post) → 07 HTTPS → … → 24 Desk Health. Part B · Everyday skills.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Read and write patterns with literals, character classes, quantifiers, anchors, groups and alternation.</li>
+<li>Explain greedy vs lazy matching, backreferences, named groups, and lookahead/lookbehind.</li>
+<li>Use flags (ignore case, multiline, dot-all, verbose) in Python, JavaScript and PowerShell.</li>
+<li>Know what changes between POSIX BRE/ERE, PCRE, Python <code>re</code>, JavaScript and .NET.</li>
+<li>Use Python's <code>re</code> module with raw strings, and apply regexes to logs, dates, frontmatter and file names.</li>
+<li>Explain why a regex should not fully validate email addresses.</li>
+<li>Recognize catastrophic backtracking (ReDoS) and fix it.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-What-a-regex-is-and-how-to-test-one"><a href="#Chapter-1-—-What-a-regex-is-and-how-to-test-one" class="headerlink" title="Chapter 1 — What a regex is, and how to test one"></a>Chapter 1 — What a regex is, and how to test one</h1>
+<p>A regex engine walks through the text and tries to match your pattern at each position. Most characters match themselves. A few <strong>metacharacters</strong> have special jobs: <code>.</code> <code>^</code> <code>$</code> <code>*</code> <code>+</code> <code>?</code> <code>(</code> <code>)</code> <code>[</code> <code>]</code> <code>{</code> <code>}</code> <code>|</code> <code>\</code>.</p>
+<p>Test patterns before you trust them. Two good ways:</p>
+<ol>
+<li><strong><a href="http://regex101.com" target="_blank" rel="noopener external nofollow noreferrer">regex101.com</a></strong> — paste a pattern and sample text, pick the <strong>flavor</strong> (PCRE2, ECMAScript, Python, Golang, Java, .NET, Rust), and it explains every token and shows every match.</li>
+<li><strong>A Python prompt:</strong></li>
+</ol>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> re</span><br><span class="line">re.findall(<span class="hljs-string">r&quot;\d{4}-\d{2}-\d{2}&quot;</span>, <span class="hljs-string">&quot;Released 2026-03-14, patched 2026-04-02.&quot;</span>)</span><br><span class="line"><span class="hljs-comment"># [&#x27;2026-03-14&#x27;, &#x27;2026-04-02&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pattern</td>
+<td>The regex itself, e.g. <code>\d{4}</code></td>
+</tr>
+<tr>
+<td>Match</td>
+<td>A piece of text the pattern fits</td>
+</tr>
+<tr>
+<td>Flavor</td>
+<td>One engine's dialect (POSIX, PCRE, Python, JavaScript, .NET…)</td>
+</tr>
+<tr>
+<td>Metacharacter</td>
+<td>A character with a special meaning, like <code>.</code> or <code>*</code></td>
+</tr>
+<tr>
+<td>Character class</td>
+<td>A set of allowed characters, like <code>[a-z]</code></td>
+</tr>
+<tr>
+<td>Quantifier</td>
+<td>&quot;How many&quot;: <code>*</code>, <code>+</code>, <code>?</code>, <code>{2,5}</code></td>
+</tr>
+<tr>
+<td>Anchor</td>
+<td>A position, not a character: <code>^</code>, <code>$</code>, <code>\b</code></td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Parentheses that bundle part of a pattern and (usually) capture it</td>
+</tr>
+<tr>
+<td>Backtracking</td>
+<td>The engine going back to try another way after a dead end</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Chapter-2-—-Literals-and-escaping"><a href="#Chapter-2-—-Literals-and-escaping" class="headerlink" title="Chapter 2 — Literals and escaping"></a>Chapter 2 — Literals and escaping</h1>
+<p><code>cat</code> matches the three letters <code>c</code>, <code>a</code>, <code>t</code> — anywhere, including inside <code>concatenate</code>. To match a metacharacter literally, put a backslash before it: <code>\.</code> is a real dot, <code>\$</code> a real dollar sign, <code>\(</code> a real parenthesis.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="python"><span class="line">re.findall(<span class="hljs-string">r&quot;\$\d+\.\d{2}&quot;</span>, <span class="hljs-string">&quot;Coffee $4.50, cake $12.00&quot;</span>)   <span class="hljs-comment"># [&#x27;$4.50&#x27;, &#x27;$12.00&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>When the text to match comes from a user or a file, <strong>never paste it into a pattern raw</strong>. Escape it: <code>re.escape(text)</code> in Python, <code>[regex]::Escape($text)</code> in PowerShell. Both turn <code>price (USD) $5.00?</code> into <code>price\ \(USD\)\ \$5\.00\?</code>. JavaScript added <code>RegExp.escape()</code> in ECMAScript 2025; older runtimes such as Node.js 20 do not have it yet.</p>
+<hr>
+<h1 id="Chapter-3-—-Character-classes"><a href="#Chapter-3-—-Character-classes" class="headerlink" title="Chapter 3 — Character classes"></a>Chapter 3 — Character classes</h1>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[aeiou]</code></td>
+<td>one vowel</td>
+</tr>
+<tr>
+<td><code>[a-z]</code>, <code>[A-Za-z0-9]</code></td>
+<td>one character from a range</td>
+</tr>
+<tr>
+<td><code>[^0-9]</code></td>
+<td>one character that is <strong>not</strong> a digit (<code>^</code> first inside <code>[]</code> means &quot;not&quot;)</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>any character except newline (unless the dot-all flag is on)</td>
+</tr>
+<tr>
+<td><code>\d</code> / <code>\D</code></td>
+<td>a digit / a non-digit</td>
+</tr>
+<tr>
+<td><code>\w</code> / <code>\W</code></td>
+<td>a &quot;word&quot; character (letter, digit, underscore) / anything else</td>
+</tr>
+<tr>
+<td><code>\s</code> / <code>\S</code></td>
+<td>whitespace (space, tab, newline…) / anything else</td>
+</tr>
+<tr>
+<td><code>[[:digit:]]</code>, <code>[[:space:]]</code>, <code>[[:alpha:]]</code></td>
+<td>POSIX classes, for <code>grep</code> and <code>sed</code></td>
+</tr>
+</tbody>
+</table>
+<p>Inside <code>[]</code>, most metacharacters lose their power: <code>[.$]</code> matches a dot or a dollar. Only <code>]</code>, <code>\</code>, <code>^</code> (at the start) and <code>-</code> (between two characters) are special there.</p>
+<blockquote>
+<p><strong>Watch out:</strong> &quot;digit&quot; is not the same everywhere. In Python (for <code>str</code> patterns) and .NET, <code>\d</code> matches <em>any</em> Unicode decimal digit, including Arabic-Indic <code>٣٤</code>. In JavaScript, <code>\d</code> is only <code>0-9</code>. If you mean ASCII digits, write <code>[0-9]</code> or pass <code>re.ASCII</code> in Python.</p>
+</blockquote>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="python"><span class="line">re.findall(<span class="hljs-string">r&quot;\d+&quot;</span>, <span class="hljs-string">&quot;Price: ٣٤ and 56&quot;</span>)             <span class="hljs-comment"># [&#x27;٣٤&#x27;, &#x27;56&#x27;]</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;\d+&quot;</span>, <span class="hljs-string">&quot;Price: ٣٤ and 56&quot;</span>, re.ASCII)   <span class="hljs-comment"># [&#x27;56&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-4-—-Quantifiers-greedy-and-lazy"><a href="#Chapter-4-—-Quantifiers-greedy-and-lazy" class="headerlink" title="Chapter 4 — Quantifiers, greedy and lazy"></a>Chapter 4 — Quantifiers, greedy and lazy</h1>
+<p><code>*</code> means 0 or more, <code>+</code> 1 or more, <code>?</code> 0 or 1 (optional), <code>{3}</code> exactly 3, <code>{2,}</code> 2 or more, <code>{2,5}</code> 2 to 5. A quantifier applies to the thing right before it: <code>ab+</code> is <code>a</code> then one or more <code>b</code>; <code>(ab)+</code> repeats <code>ab</code>.</p>
+<p><strong>Greedy vs lazy.</strong> By default, quantifiers are <strong>greedy</strong>: they take as much as they can, then give back only if the rest of the pattern fails. Add <code>?</code> to make them <strong>lazy</strong>: take as little as possible.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="python"><span class="line">html = <span class="hljs-string">&quot;&lt;b&gt;bold&lt;/b&gt;&quot;</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;&lt;.+&gt;&quot;</span>, html)      <span class="hljs-comment"># [&#x27;&lt;b&gt;bold&lt;/b&gt;&#x27;]   greedy: one huge match</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;&lt;.+?&gt;&quot;</span>, html)     <span class="hljs-comment"># [&#x27;&lt;b&gt;&#x27;, &#x27;&lt;/b&gt;&#x27;]   lazy: shortest matches</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;&lt;[^&gt;]+&gt;&quot;</span>, html)   <span class="hljs-comment"># [&#x27;&lt;b&gt;&#x27;, &#x27;&lt;/b&gt;&#x27;]   negated class: often clearest and fastest</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Trick:</strong> &quot;anything up to the next <code>X</code>&quot; is best written as <code>[^X]*X</code>. It cannot run past the first <code>X</code>, so it never needs to backtrack.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Anchors-boundaries-and-alternation"><a href="#Chapter-5-—-Anchors-boundaries-and-alternation" class="headerlink" title="Chapter 5 — Anchors, boundaries and alternation"></a>Chapter 5 — Anchors, boundaries and alternation</h1>
+<table>
+<thead>
+<tr>
+<th>Anchor</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^</code></td>
+<td>start of the string (or of each line, in multiline mode)</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>end of the string (or of each line, in multiline mode)</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>word boundary: between a <code>\w</code> and a <code>\W</code> character</td>
+</tr>
+<tr>
+<td><code>\B</code></td>
+<td>not a word boundary</td>
+</tr>
+<tr>
+<td><code>\A</code>, <code>\Z</code> (Python) / <code>\A</code>, <code>\z</code> (.NET, PCRE)</td>
+<td>the very start / the very end of the whole string</td>
+</tr>
+</tbody>
+</table>
+<p><code>\bcat\b</code> matches <code>cat</code> in &quot;the cat sat&quot; but not in &quot;concatenate&quot;.</p>
+<blockquote>
+<p><strong>Watch out:</strong> in Python and .NET, <code>$</code> also matches <em>just before a final newline</em>. <code>re.match(r&quot;^\d+$&quot;, &quot;123\n&quot;)</code> succeeds. To demand &quot;nothing after&quot;, use <code>re.fullmatch(r&quot;\d+&quot;, s)</code> in Python or <code>\z</code> in .NET. In JavaScript, <code>$</code> (without the <code>m</code> flag) means the true end.</p>
+</blockquote>
+<p><strong>Alternation</strong> <code>|</code> means &quot;or&quot;, and it has the <strong>lowest</strong> priority of all operators. <code>^cat|dog$</code> means &quot;<code>cat</code> at the start&quot; <strong>or</strong> &quot;<code>dog</code> at the end&quot;:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;cat food&quot;</span>, <span class="hljs-string">&quot;hotdog&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>]:</span><br><span class="line">    <span class="hljs-built_in">print</span>(s, <span class="hljs-built_in">bool</span>(re.search(<span class="hljs-string">r&quot;^cat|dog$&quot;</span>, s)), <span class="hljs-built_in">bool</span>(re.search(<span class="hljs-string">r&quot;^(?:cat|dog)$&quot;</span>, s)))</span><br><span class="line"><span class="hljs-comment"># cat food True False</span></span><br><span class="line"><span class="hljs-comment"># hotdog   True False</span></span><br><span class="line"><span class="hljs-comment"># cat      True True</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Wrap alternatives in a group when they belong together: <code>^(?:cat|dog)$</code>.</p>
+<hr>
+<h1 id="Chapter-6-—-Groups-backreferences-and-named-groups"><a href="#Chapter-6-—-Groups-backreferences-and-named-groups" class="headerlink" title="Chapter 6 — Groups, backreferences and named groups"></a>Chapter 6 — Groups, backreferences and named groups</h1>
+<p>Parentheses do two jobs: they <strong>group</strong> (so a quantifier or <code>|</code> applies to the whole part) and they <strong>capture</strong> (so you can read the matched text later).</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line">m = re.search(<span class="hljs-string">r&quot;(\d{4})-(\d{2})-(\d{2})&quot;</span>, <span class="hljs-string">&quot;Due 2026-09-24.&quot;</span>)</span><br><span class="line">m.group(<span class="hljs-number">0</span>), m.group(<span class="hljs-number">1</span>), m.groups()     <span class="hljs-comment"># (&#x27;2026-09-24&#x27;, &#x27;2026&#x27;, (&#x27;2026&#x27;, &#x27;09&#x27;, &#x27;24&#x27;))</span></span><br><span class="line">re.sub(<span class="hljs-string">r&quot;(\d{4})-(\d{2})-(\d{2})&quot;</span>, <span class="hljs-string">r&quot;\3/\2/\1&quot;</span>, <span class="hljs-string">&quot;Due 2026-09-24.&quot;</span>)   <span class="hljs-comment"># &#x27;Due 24/09/2026.&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<ul>
+<li><code>(?:...)</code> groups <strong>without</strong> capturing. Use it when you only need grouping — it keeps group numbers tidy and <code>findall</code> output simple.</li>
+<li>A <strong>backreference</strong> <code>\1</code> matches <em>the same text</em> that group 1 matched. Find doubled words:</li>
+</ul>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="python"><span class="line">re.findall(<span class="hljs-string">r&quot;\b(\w+)\s+\1\b&quot;</span>, <span class="hljs-string">&quot;This is the the test of of words&quot;</span>, re.I)   <span class="hljs-comment"># [&#x27;the&#x27;, &#x27;of&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>Named groups</strong> make long patterns readable. The syntax differs by flavor:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Define</th>
+<th>Backreference in pattern</th>
+<th>In replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td><code>(?P&lt;year&gt;\d{4})</code></td>
+<td><code>(?P=year)</code></td>
+<td><code>\g&lt;year&gt;</code></td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td><code>(?&lt;year&gt;\d{4})</code></td>
+<td><code>\k&lt;year&gt;</code></td>
+<td><code>$&lt;year&gt;</code></td>
+</tr>
+<tr>
+<td>.NET / PowerShell</td>
+<td><code>(?&lt;year&gt;\d{4})</code></td>
+<td><code>\k&lt;year&gt;</code></td>
+<td><code>${year}</code></td>
+</tr>
+<tr>
+<td>PCRE (<code>grep -P</code>)</td>
+<td><code>(?&lt;year&gt;\d{4})</code> or <code>(?P&lt;year&gt;…)</code></td>
+<td><code>\k&lt;year&gt;</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>In Python, <code>re.search(r&quot;(?P&lt;y&gt;\d{4})-(?P&lt;m&gt;\d{2})-(?P&lt;d&gt;\d{2})&quot;, s)</code> gives a match where <code>m[&quot;y&quot;]</code> is <code>'2026'</code> and <code>m.groupdict()</code> is <code>{'y': '2026', 'm': '09', 'd': '24'}</code>. In PowerShell:</p>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-string">&#x27;2026-09-24&#x27;</span> <span class="hljs-operator">-replace</span> <span class="hljs-string">&#x27;(?&lt;y&gt;\d{4})-(?&lt;m&gt;\d{2})-(?&lt;d&gt;\d{2})&#x27;</span>, <span class="hljs-string">&#x27;${d}.${m}.${y}&#x27;</span>   <span class="hljs-comment"># 24.09.2026</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> in PowerShell, write the replacement in <strong>single quotes</strong>. In double quotes, PowerShell expands <code>$1</code> or <code>${d}</code> as its own variables first — <code>'2026-09-24' -replace '(\d{4})-(\d{2})-(\d{2})', &quot;$3/$2/$1&quot;</code> returns <code>//</code>.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-Lookahead-and-lookbehind"><a href="#Chapter-7-—-Lookahead-and-lookbehind" class="headerlink" title="Chapter 7 — Lookahead and lookbehind"></a>Chapter 7 — Lookahead and lookbehind</h1>
+<p>Lookarounds check what is next to the current position <strong>without consuming it</strong>. They match a position, like <code>\b</code> does.</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>X(?=Y)</code></td>
+<td>lookahead</td>
+<td><code>X</code>, only if followed by <code>Y</code></td>
+</tr>
+<tr>
+<td><code>X(?!Y)</code></td>
+<td>negative lookahead</td>
+<td><code>X</code>, only if <em>not</em> followed by <code>Y</code></td>
+</tr>
+<tr>
+<td><code>(?&lt;=Y)X</code></td>
+<td>lookbehind</td>
+<td><code>X</code>, only if preceded by <code>Y</code></td>
+</tr>
+<tr>
+<td><code>(?&lt;!Y)X</code></td>
+<td>negative lookbehind</td>
+<td><code>X</code>, only if <em>not</em> preceded by <code>Y</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line">re.findall(<span class="hljs-string">r&quot;(?&lt;=\$)\d+(?:\.\d{2})?&quot;</span>, <span class="hljs-string">&quot;Coffee $4.50, cake $12, tax 8%&quot;</span>)   <span class="hljs-comment"># [&#x27;4.50&#x27;, &#x27;12&#x27;]</span></span><br><span class="line">re.sub(<span class="hljs-string">r&quot;\B(?=(\d{3})+(?!\d))&quot;</span>, <span class="hljs-string">&quot;,&quot;</span>, <span class="hljs-string">&quot;1234567&quot;</span>)                            <span class="hljs-comment"># &#x27;1,234,567&#x27;</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;^(?!.*healthcheck).*$&quot;</span>, <span class="hljs-string">&quot;GET /\nGET /healthcheck\nPOST /x&quot;</span>, re.M)   <span class="hljs-comment"># [&#x27;GET /&#x27;, &#x27;POST /x&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The middle one reads: &quot;at a position that is not a word boundary, where a multiple of three digits follows up to the end of the number, insert a comma&quot;.</p>
+<blockquote>
+<p><strong>Watch out:</strong> Python's lookbehind must be <strong>fixed width</strong>. <code>(?&lt;=\$\s*)\d+</code> raises <code>look-behind requires fixed-width pattern</code>. JavaScript and .NET accept variable-length lookbehind. POSIX <code>grep</code>/<code>sed</code> have no lookarounds at all — use <code>grep -P</code> or another tool.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-8-—-Flags"><a href="#Chapter-8-—-Flags" class="headerlink" title="Chapter 8 — Flags"></a>Chapter 8 — Flags</h1>
+<table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>Python</th>
+<th>JavaScript</th>
+<th>.NET / PowerShell</th>
+<th>Inline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ignore case</td>
+<td><code>re.I</code></td>
+<td><code>i</code></td>
+<td><code>IgnoreCase</code> (on by default for <code>-match</code>)</td>
+<td><code>(?i)</code></td>
+</tr>
+<tr>
+<td><code>^</code>/<code>$</code> per line</td>
+<td><code>re.M</code></td>
+<td><code>m</code></td>
+<td><code>Multiline</code></td>
+<td><code>(?m)</code></td>
+</tr>
+<tr>
+<td><code>.</code> matches newline</td>
+<td><code>re.S</code></td>
+<td><code>s</code></td>
+<td><code>Singleline</code></td>
+<td><code>(?s)</code></td>
+</tr>
+<tr>
+<td>Spaces and <code>#</code> comments allowed</td>
+<td><code>re.X</code></td>
+<td>—</td>
+<td><code>IgnorePatternWhitespace</code></td>
+<td><code>(?x)</code></td>
+</tr>
+<tr>
+<td>All matches</td>
+<td><code>findall</code>/<code>finditer</code></td>
+<td><code>g</code></td>
+<td><code>[regex]::Matches</code> / <code>-AllMatches</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>JavaScript has a few more: <code>u</code> and <code>v</code> turn on full Unicode handling, <code>y</code> is &quot;sticky&quot; (match only at <code>lastIndex</code>), and <code>d</code> returns match indices.</p>
+<p>Verbose mode lets you lay a pattern out like code:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="python"><span class="line">DATE = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;&quot;&quot;</span><br><span class="line">    (?P&lt;year&gt;\d{4}) -     # year</span><br><span class="line">    (?P&lt;month&gt;\d{2}) -    # month</span><br><span class="line">    (?P&lt;day&gt;\d{2})        # day</span><br><span class="line">&quot;&quot;&quot;</span>, re.VERBOSE)</span><br><span class="line">DATE.search(<span class="hljs-string">&quot;Due 2026-09-24.&quot;</span>).groupdict()   <span class="hljs-comment"># {&#x27;year&#x27;: &#x27;2026&#x27;, &#x27;month&#x27;: &#x27;09&#x27;, &#x27;day&#x27;: &#x27;24&#x27;}</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Watch out:</strong> PowerShell's <code>-match</code>, <code>-replace</code> and <code>Select-String</code> are <strong>case-insensitive by default</strong>. Use <code>-cmatch</code>, <code>-creplace</code> or <code>Select-String -CaseSensitive</code> when case matters, or start the pattern with <code>(?-i)</code>.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-9-—-Flavors-what-changes-where"><a href="#Chapter-9-—-Flavors-what-changes-where" class="headerlink" title="Chapter 9 — Flavors: what changes where"></a>Chapter 9 — Flavors: what changes where</h1>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>POSIX BRE (<code>grep</code>, <code>sed</code>)</th>
+<th>POSIX ERE (<code>grep -E</code>, <code>sed -E</code>)</th>
+<th>PCRE (<code>grep -P</code>)</th>
+<th>Python <code>re</code></th>
+<th>JavaScript</th>
+<th>.NET (PowerShell)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+ ? ( ) { }</code> and alternation special</td>
+<td>only with a backslash: <code>\+</code>, <code>\?</code>, <code>\(</code>…<code>\)</code> (GNU)</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>no — use <code>[0-9]</code></td>
+<td>no — use <code>[0-9]</code></td>
+<td>yes</td>
+<td>yes (Unicode)</td>
+<td>yes (ASCII)</td>
+<td>yes (Unicode)</td>
+</tr>
+<tr>
+<td>Named groups</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+<td><code>(?P&lt;n&gt;…)</code></td>
+<td><code>(?&lt;n&gt;…)</code></td>
+<td><code>(?&lt;n&gt;…)</code></td>
+</tr>
+<tr>
+<td>Lookbehind</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+<td>fixed width only</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Atomic groups / possessive</td>
+<td>no</td>
+<td>no</td>
+<td>both</td>
+<td>both (3.11+)</td>
+<td>neither</td>
+<td>atomic only</td>
+</tr>
+<tr>
+<td>Group in replacement</td>
+<td><code>\1</code></td>
+<td><code>\1</code></td>
+<td>—</td>
+<td><code>\1</code>, <code>\g&lt;n&gt;</code></td>
+<td><code>$1</code>, <code>$&lt;n&gt;</code></td>
+<td><code>$1</code>, <code>${n}</code></td>
+</tr>
+</tbody>
+</table>
+<p>The classic trap is <code>\d</code> in <code>grep</code>:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;abc123&#x27;</span> | grep -E <span class="hljs-string">&#x27;\d&#x27;</span>           <span class="hljs-comment"># no match: \d is not a digit here</span></span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;dad 123&#x27;</span> | grep -oE <span class="hljs-string">&#x27;\d&#x27;</span>         <span class="hljs-comment"># prints &quot;d&quot; twice: GNU grep treats \d as a plain d</span></span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;abc123&#x27;</span> | grep -oE <span class="hljs-string">&#x27;[0-9]+&#x27;</span>      <span class="hljs-comment"># 123</span></span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;abc123&#x27;</span> | grep -oP <span class="hljs-string">&#x27;\d+&#x27;</span>         <span class="hljs-comment"># 123 (PCRE)</span></span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;abbbc&#x27;</span> | grep -o <span class="hljs-string">&#x27;ab\+c&#x27;</span>         <span class="hljs-comment"># BRE (GNU): \+ means &quot;one or more&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Newer GNU grep (3.8 and later) also prints a warning about the &quot;stray&quot; backslash. In Git Bash, <code>grep -P</code> may need a UTF-8 locale: <code>LC_ALL=en_US.UTF-8 grep -P ...</code> (see Dev Essentials 05 · Command Line).</p>
+<p>Python needs <strong>raw strings</strong>. In a normal string, <code>&quot;\n&quot;</code> is a newline and <code>&quot;\b&quot;</code> is a backspace character, so the regex engine never sees the backslash. Write <code>r&quot;\b\d+\b&quot;</code>. The <code>re</code> docs themselves recommend raw string notation for patterns.</p>
+<hr>
+<h1 id="Chapter-10-—-Pythons-re-in-practice"><a href="#Chapter-10-—-Pythons-re-in-practice" class="headerlink" title="Chapter 10 — Python's re in practice"></a>Chapter 10 — Python's <code>re</code> in practice</h1>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>re.search(p, s)</code></td>
+<td>first match anywhere, or <code>None</code></td>
+</tr>
+<tr>
+<td><code>re.match(p, s)</code></td>
+<td>a match only at the <strong>start</strong> of <code>s</code>, or <code>None</code></td>
+</tr>
+<tr>
+<td><code>re.fullmatch(p, s)</code></td>
+<td>a match only if the <strong>whole</strong> <code>s</code> matches</td>
+</tr>
+<tr>
+<td><code>re.findall(p, s)</code></td>
+<td>list of matched strings — or of <strong>groups</strong>, if the pattern has groups</td>
+</tr>
+<tr>
+<td><code>re.finditer(p, s)</code></td>
+<td>iterator of match objects (positions, named groups)</td>
+</tr>
+<tr>
+<td><code>re.sub(p, repl, s)</code></td>
+<td>new string with replacements; <code>repl</code> can be a function</td>
+</tr>
+<tr>
+<td><code>re.split(p, s)</code></td>
+<td>list of pieces between matches</td>
+</tr>
+<tr>
+<td><code>re.compile(p)</code></td>
+<td>reusable pattern object with the same methods</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line">re.split(<span class="hljs-string">r&quot;\s*[,;]\s*&quot;</span>, <span class="hljs-string">&quot;a, b;c ,d&quot;</span>)                      <span class="hljs-comment"># [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]</span></span><br><span class="line">re.sub(<span class="hljs-string">r&quot;\s+&quot;</span>, <span class="hljs-string">&quot; &quot;</span>, <span class="hljs-string">&quot;  too   many\t spaces &quot;</span>).strip()      <span class="hljs-comment"># &#x27;too many spaces&#x27;</span></span><br><span class="line">re.sub(<span class="hljs-string">r&quot;_([a-z])&quot;</span>, <span class="hljs-keyword">lambda</span> m: m.group(<span class="hljs-number">1</span>).upper(), <span class="hljs-string">&quot;snake_case_name&quot;</span>)   <span class="hljs-comment"># &#x27;snakeCaseName&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> <code>findall</code> with capturing groups returns the <em>groups</em>, not the whole match. <code>re.findall(r&quot;(\d{4})-(\d{2})&quot;, &quot;2026-09&quot;)</code> gives <code>[('2026', '09')]</code>. Use <code>(?:...)</code> for groups you do not need, or <code>finditer</code> and <code>m.group(0)</code>.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-11-—-Practical-recipes"><a href="#Chapter-11-—-Practical-recipes" class="headerlink" title="Chapter 11 — Practical recipes"></a>Chapter 11 — Practical recipes</h1>
+<h2 id="Parse-log-lines-with-named-groups"><a href="#Parse-log-lines-with-named-groups" class="headerlink" title="Parse log lines with named groups"></a>Parse log lines with named groups</h2>
+<p>Using the sample <code>access.log</code> from Dev Essentials 05:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> re</span><br><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter</span><br><span class="line"> </span><br><span class="line">LINE = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;&quot;&quot;</span><br><span class="line">    ^(?P&lt;ts&gt;\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)\s+</span><br><span class="line">    (?P&lt;ip&gt;\d{1,3}(?:\.\d{1,3}){3})\s+</span><br><span class="line">    (?P&lt;method&gt;[A-Z]+)\s+</span><br><span class="line">    (?P&lt;path&gt;\S+)\s+</span><br><span class="line">    (?P&lt;status&gt;\d{3})\s+</span><br><span class="line">    (?P&lt;size&gt;\d+)$</span><br><span class="line">&quot;&quot;&quot;</span>, re.VERBOSE)</span><br><span class="line"> </span><br><span class="line">errors = Counter()</span><br><span class="line"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;access.log&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">    <span class="hljs-keyword">for</span> n, line <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(f, <span class="hljs-number">1</span>):</span><br><span class="line">        m = LINE.<span class="hljs-keyword">match</span>(line.rstrip(<span class="hljs-string">&quot;\r\n&quot;</span>))</span><br><span class="line">        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> m:</span><br><span class="line">            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;line <span class="hljs-subst">{n}</span>: no match: <span class="hljs-subst">{line!r}</span>&quot;</span>)</span><br><span class="line">            <span class="hljs-keyword">continue</span></span><br><span class="line">        <span class="hljs-keyword">if</span> m[<span class="hljs-string">&quot;status&quot;</span>][<span class="hljs-number">0</span>] <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;45&quot;</span>:</span><br><span class="line">            errors[m[<span class="hljs-string">&quot;ip&quot;</span>]] += <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-built_in">print</span>(errors.most_common())     <span class="hljs-comment"># [(&#x27;203.0.113.7&#x27;, 2), (&#x27;198.51.100.23&#x27;, 1)]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Always report lines that do <strong>not</strong> match. Silent skips hide format changes.</p>
+<h2 id="Match-ISO-dates-—-then-let-a-real-parser-decide"><a href="#Match-ISO-dates-—-then-let-a-real-parser-decide" class="headerlink" title="Match ISO dates — then let a real parser decide"></a>Match ISO dates — then let a real parser decide</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line">ISO = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;\b\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])\b&quot;</span>)</span><br><span class="line">ISO.findall(<span class="hljs-string">&quot;Released 2026-03-14; typo 2026-99-99; review 2026-10-01&quot;</span>)</span><br><span class="line"><span class="hljs-comment"># [&#x27;2026-03-14&#x27;, &#x27;2026-10-01&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The regex still accepts <code>2026-02-30</code>. Use it to <em>find</em> candidates, then check each with <code>datetime.date.fromisoformat()</code>, which raises <code>ValueError</code> for impossible dates. Dev Essentials 02 · Dates &amp; Time Zones covers the rest.</p>
+<h2 id="Pull-a-field-from-Markdown-frontmatter"><a href="#Pull-a-field-from-Markdown-frontmatter" class="headerlink" title="Pull a field from Markdown frontmatter"></a>Pull a field from Markdown frontmatter</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="python"><span class="line">text = <span class="hljs-string">&quot;---\ntitle: Regex notes\ndate: 2026-09-24 10:30:00\n---\n\ndate: this line is in the body\n&quot;</span></span><br><span class="line"> </span><br><span class="line">re.findall(<span class="hljs-string">r&quot;^date: (.+)$&quot;</span>, text, re.M)</span><br><span class="line"><span class="hljs-comment"># [&#x27;2026-09-24 10:30:00&#x27;, &#x27;this line is in the body&#x27;]   &lt;- body line matched too!</span></span><br><span class="line"> </span><br><span class="line">fm = re.search(<span class="hljs-string">r&quot;\A---\n(.*?)\n---\n&quot;</span>, text, re.S).group(<span class="hljs-number">1</span>)   <span class="hljs-comment"># isolate the frontmatter first</span></span><br><span class="line">re.search(<span class="hljs-string">r&quot;^date: (.+)$&quot;</span>, fm, re.M).group(<span class="hljs-number">1</span>)                  <span class="hljs-comment"># &#x27;2026-09-24 10:30:00&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Two lessons: scope the search to the frontmatter block first, and beware Windows line endings. With CRLF files, <code>(.+)$</code> captures a trailing <code>\r</code> (<code>'2026-09-24 10:30:00\r'</code>). Use <code>^date:\s*(.+?)\s*$</code> or strip the result (see Dev Essentials 04 · Line Endings).</p>
+<h2 id="Rename-files-with-a-preview"><a href="#Rename-files-with-a-preview" class="headerlink" title="Rename files with a preview"></a>Rename files with a preview</h2>
+<p>Goal: <code>IMG_20260920_101502.jpg</code> → <code>2026-09-20_101502.jpg</code>. Always dry-run first.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path</span><br><span class="line">pat = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;^IMG_(\d{4})(\d{2})(\d{2})_&quot;</span>)</span><br><span class="line"><span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> Path(<span class="hljs-string">&quot;.&quot;</span>).glob(<span class="hljs-string">&quot;IMG_*.jpg&quot;</span>):</span><br><span class="line">    new = pat.sub(<span class="hljs-string">r&quot;\1-\2-\3_&quot;</span>, p.name)</span><br><span class="line">    <span class="hljs-built_in">print</span>(p.name, <span class="hljs-string">&quot;-&gt;&quot;</span>, new)          <span class="hljs-comment"># when happy: p.rename(p.with_name(new))</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-built_in">Get-ChildItem</span> <span class="hljs-literal">-Filter</span> <span class="hljs-string">&#x27;IMG_*.jpg&#x27;</span> |</span><br><span class="line">    <span class="hljs-built_in">Rename-Item</span> <span class="hljs-literal">-NewName</span> { <span class="hljs-variable">$_</span>.Name <span class="hljs-operator">-replace</span> <span class="hljs-string">&#x27;^IMG_(\d{4})(\d{2})(\d{2})_&#x27;</span>, <span class="hljs-string">&#x27;$1-$2-$3_&#x27;</span> } <span class="hljs-literal">-WhatIf</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> IMG_*.jpg; <span class="hljs-keyword">do</span></span><br><span class="line">  new=$(<span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%s\n&#x27;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$f</span>&quot;</span> | sed -E <span class="hljs-string">&#x27;s/^IMG_([0-9]{4})([0-9]{2})([0-9]{2})_/\1-\2-\3_/&#x27;</span>)</span><br><span class="line">  <span class="hljs-built_in">echo</span> <span class="hljs-built_in">mv</span> -- <span class="hljs-string">&quot;<span class="hljs-variable">$f</span>&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$new</span>&quot;</span>            <span class="hljs-comment"># remove &quot;echo&quot; to really rename</span></span><br><span class="line"><span class="hljs-keyword">done</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Editor-find-and-replace-with-groups"><a href="#Editor-find-and-replace-with-groups" class="headerlink" title="Editor find and replace with groups"></a>Editor find and replace with groups</h2>
+<p>In VS Code, turn on the <code>.*</code> (regex) toggle in the Find widget. The replacement refers to groups as <code>$1</code>, <code>$2</code>; <code>\u</code> / <code>\l</code> change the case of the next character and <code>\U</code> / <code>\L</code> of the rest of the group. Example — turn <code>getUserName</code> calls into <code>get_user_name</code>: find <code>([a-z])([A-Z])</code>, replace <code>$1_\l$2</code>. Test on one file before &quot;Replace All&quot;.</p>
+<hr>
+<h1 id="Chapter-12-—-Dont-fully-validate-email-with-a-regex"><a href="#Chapter-12-—-Dont-fully-validate-email-with-a-regex" class="headerlink" title="Chapter 12 — Don't fully validate email with a regex"></a>Chapter 12 — Don't fully validate email with a regex</h1>
+<p>Real email syntax (RFC 5322) allows quoted local parts, comments and other rare forms, so a &quot;complete&quot; regex is huge, hard to read and still does not tell you whether the mailbox <strong>exists</strong>. The HTML standard itself does not follow RFC 5322 for <code>&lt;input type=&quot;email&quot;&gt;</code>: it calls its own simpler rule a &quot;willful violation&quot; of that RFC, because the RFC grammar is too strict in some places and too loose in others to be practical.</p>
+<p>A sensible approach:</p>
+<ol>
+<li>Do a <strong>light sanity check</strong>: one <code>@</code>, no spaces, a dot in the domain part.</li>
+<li>Send a <strong>confirmation email</strong>. Only a click on the link proves the address works.</li>
+</ol>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="python"><span class="line">EMAIL_SANITY = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;[^@\s]+@[^@\s]+\.[^@\s]+&quot;</span>)</span><br><span class="line"><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;ada@example.com&quot;</span>, <span class="hljs-string">&quot;a.b+tag@sub.example.co.uk&quot;</span>, <span class="hljs-string">&quot;no-at.example.com&quot;</span>, <span class="hljs-string">&quot;two@@example.com&quot;</span>]:</span><br><span class="line">    <span class="hljs-built_in">print</span>(e, <span class="hljs-built_in">bool</span>(EMAIL_SANITY.fullmatch(e)))</span><br><span class="line"><span class="hljs-comment"># True, True, False, False</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>This check rejects some legal but odd addresses (such as <code>user@localhost</code>) and accepts some that bounce. That is fine: its only job is to catch typos early.</p>
+<hr>
+<h1 id="Chapter-13-—-Catastrophic-backtracking-and-ReDoS"><a href="#Chapter-13-—-Catastrophic-backtracking-and-ReDoS" class="headerlink" title="Chapter 13 — Catastrophic backtracking and ReDoS"></a>Chapter 13 — Catastrophic backtracking and ReDoS</h1>
+<p>Most engines (Python, JavaScript, .NET, PCRE, Java) are <strong>backtracking</strong> engines. When part of a pattern fails, they go back and try the other ways the earlier parts could have matched. Usually there are only a few ways. But <strong>nested or overlapping quantifiers</strong> create an exponential number of ways, and on text that <em>almost</em> matches, the engine tries them all.</p>
+<p>The textbook case is <code>(a+)+$</code> against <code>aaaa…ab</code>. The inner and outer <code>+</code> can split the <code>a</code>s in about 2ⁿ ways, and the final <code>b</code> makes every split fail. A timing on one Windows 11 laptop with Python 3.11.9 (one run each — an informal measurement, not a benchmark; your numbers will differ, the doubling will not):</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> re, time</span><br><span class="line"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> (<span class="hljs-number">18</span>, <span class="hljs-number">20</span>, <span class="hljs-number">22</span>, <span class="hljs-number">24</span>):</span><br><span class="line">    s = <span class="hljs-string">&quot;a&quot;</span> * n + <span class="hljs-string">&quot;b&quot;</span></span><br><span class="line">    t = time.perf_counter()</span><br><span class="line">    re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&quot;(a+)+$&quot;</span>, s)</span><br><span class="line">    <span class="hljs-built_in">print</span>(n, <span class="hljs-string">f&quot;<span class="hljs-subst">{time.perf_counter() - t:<span class="hljs-number">.3</span>f}</span>s&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th><code>n</code> (number of <code>a</code>s)</th>
+<th>18</th>
+<th>20</th>
+<th>22</th>
+<th>24</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>0.012 s</td>
+<td>0.055 s</td>
+<td>0.221 s</td>
+<td>0.802 s</td>
+</tr>
+</tbody>
+</table>
+<p>Every 2 extra characters cost about 4 times more. Extrapolating, 40 characters would take more than ten hours. That is <strong>ReDoS</strong> (regular expression denial of service): one short, crafted input keeps a CPU core busy. OWASP lists typical &quot;evil&quot; shapes: <code>(a+)+</code>, <code>([a-zA-Z]+)*</code>, <code>(a|aa)+</code>, <code>(a|a?)+</code>. Real-life versions look innocent, like <code>^(\w+\s?)*$</code> for &quot;words separated by spaces&quot; — in the same test, 22 letters plus a <code>!</code> took 0.25 s.</p>
+<p>This is not theory. On 2 July 2019, one Cloudflare WAF rule with a badly backtracking regex (the part <code>.*(?:.*=.*)</code>) exhausted CPUs across Cloudflare's network and caused about 27 minutes of downtime.</p>
+<h2 id="Fixes-from-best-to-last-resort"><a href="#Fixes-from-best-to-last-resort" class="headerlink" title="Fixes, from best to last resort"></a>Fixes, from best to last resort</h2>
+<p><strong>1. Rewrite the pattern so each character can be matched only one way.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Evil</th>
+<th>Safe</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(a+)+$</code></td>
+<td><code>a+$</code></td>
+<td>the nesting added nothing</td>
+</tr>
+<tr>
+<td><code>^(\d+)*$</code></td>
+<td><code>^\d*$</code></td>
+<td>same language, one way to split</td>
+</tr>
+<tr>
+<td><code>^(\w+\s?)*$</code></td>
+<td><code>^(?:\w+\s)*\w*$</code></td>
+<td>each repeat must end with a space, so splits are fixed</td>
+</tr>
+</tbody>
+</table>
+<p>On 100,000 characters, the rewritten <code>^(?:\w+\s)*\w*$</code> finished in about 1 ms in the same test. It also gave the same yes/no answer as the original on every test string tried (<code>&quot;hello world&quot;</code>, <code>&quot;hello  world&quot;</code>, <code>&quot;hello world &quot;</code>, <code>&quot;&quot;</code>, <code>&quot; lead&quot;</code>, <code>&quot;x!&quot;</code>).</p>
+<p><strong>2. Forbid backtracking into a part</strong> with an atomic group <code>(?&gt;...)</code> or a possessive quantifier (<code>*+</code>, <code>++</code>, <code>?+</code>). Once matched, the engine will not try other splits. Python supports both since 3.11; PCRE and Java support both; .NET supports atomic groups only; JavaScript supports neither.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="python"><span class="line">re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&quot;(?&gt;a+)+$&quot;</span>, <span class="hljs-string">&quot;a&quot;</span> * <span class="hljs-number">100_000</span> + <span class="hljs-string">&quot;b&quot;</span>)    <span class="hljs-comment"># returns None at once (Python 3.11+)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>3. Use a linear-time engine for untrusted patterns or input.</strong> Google's RE2, Go's <code>regexp</code> and Rust's <code>regex</code> crate guarantee time linear in the input size (Rust documents O(m × n) for pattern size m and text size n). The price: no backreferences and no lookarounds. .NET 7 and later offer <code>RegexOptions.NonBacktracking</code> with the same kind of guarantee; Windows PowerShell 5.1 runs on .NET Framework and does not have it. After its outage, Cloudflare planned to move to RE2 or the Rust engine for exactly this reason.</p>
+<p><strong>4. Limit the damage.</strong> Cap input length before matching. In .NET, pass a timeout — the default is infinite:</p>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-variable">$re</span> = [<span class="hljs-type">regex</span>]::new(<span class="hljs-string">&#x27;^(a+)+$&#x27;</span>, <span class="hljs-string">&#x27;None&#x27;</span>, [<span class="hljs-type">TimeSpan</span>]::FromMilliseconds(<span class="hljs-number">100</span>))</span><br><span class="line"><span class="hljs-variable">$re</span>.IsMatch((<span class="hljs-string">&#x27;a&#x27;</span> * <span class="hljs-number">40</span>) + <span class="hljs-string">&#x27;b&#x27;</span>)     <span class="hljs-comment"># error after ~100 ms: &quot;The RegEx engine has timed out...&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Python's built-in <code>re</code> has no timeout, so rewrite the pattern or run risky matching in a separate process you can stop.</p>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Real-dates-only"><a href="#Exercise-1-—-Real-dates-only" class="headerlink" title="Exercise 1 — Real dates only"></a>Exercise 1 — Real dates only</h2>
+<p>From <code>&quot;Released 2026-03-14, patched 2026-04-02. Ticket 2026-99-99 is a typo. Next review: 2026-10-01.&quot;</code>, extract the dates with valid month and day ranges. Make sure <code>findall</code> returns whole dates, not tuples.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line">text = <span class="hljs-string">&quot;Released 2026-03-14, patched 2026-04-02. Ticket 2026-99-99 is a typo. Next review: 2026-10-01.&quot;</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;\b\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])\b&quot;</span>, text)</span><br><span class="line"><span class="hljs-comment"># [&#x27;2026-03-14&#x27;, &#x27;2026-04-02&#x27;, &#x27;2026-10-01&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>With capturing groups <code>(0[1-9]|1[0-2])</code>, <code>findall</code> would return tuples like <code>('2026', '03', '14')</code>.</p>
+</details>
+<h2 id="Exercise-2-—-Client-errors-per-path"><a href="#Exercise-2-—-Client-errors-per-path" class="headerlink" title="Exercise 2 — Client errors per path"></a>Exercise 2 — Client errors per path</h2>
+<p>From the <code>access.log</code> lines (Dev Essentials 05), count 4xx responses per path using named groups.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter</span><br><span class="line"><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path</span><br><span class="line">log = Path(<span class="hljs-string">&quot;access.log&quot;</span>).read_text(encoding=<span class="hljs-string">&quot;utf-8&quot;</span>)</span><br><span class="line">pat = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;^\S+ \S+ (?P&lt;method&gt;[A-Z]+) (?P&lt;path&gt;\S+) (?P&lt;status&gt;4\d\d) \d+$&quot;</span>, re.M)</span><br><span class="line">Counter(m[<span class="hljs-string">&quot;path&quot;</span>] <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> pat.finditer(log))</span><br><span class="line"><span class="hljs-comment"># Counter({&#x27;/login&#x27;: 1, &#x27;/missing&#x27;: 1, &#x27;/admin&#x27;: 1})</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-3-—-Last-First-to-First-Last"><a href="#Exercise-3-—-Last-First-to-First-Last" class="headerlink" title="Exercise 3 — &quot;Last, First&quot; to &quot;First Last&quot;"></a>Exercise 3 — &quot;Last, First&quot; to &quot;First Last&quot;</h2>
+<p>Turn <code>Lovelace, Ada</code> / <code>Hopper, Grace</code> / <code>Torvalds, Linus</code> (one per line) into <code>Ada Lovelace</code> etc. — in Python, PowerShell and <code>sed</code>.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="python"><span class="line">names = <span class="hljs-string">&quot;Lovelace, Ada\nHopper, Grace\nTorvalds, Linus&quot;</span></span><br><span class="line"><span class="hljs-built_in">print</span>(re.sub(<span class="hljs-string">r&quot;^(\w+),\s*(\w+)$&quot;</span>, <span class="hljs-string">r&quot;\2 \1&quot;</span>, names, flags=re.M))</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-string">&#x27;Lovelace, Ada&#x27;</span> <span class="hljs-operator">-replace</span> <span class="hljs-string">&#x27;^(\w+),\s*(\w+)$&#x27;</span>, <span class="hljs-string">&#x27;$2 $1&#x27;</span>      <span class="hljs-comment"># Ada Lovelace</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;Lovelace, Ada\nHopper, Grace\n&#x27;</span> | sed -E <span class="hljs-string">&#x27;s/^([A-Za-z]+), *([A-Za-z]+)$/\2 \1/&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>sed -E</code> has no <code>\w</code> or <code>\s</code> in POSIX terms, so the bracket classes spell it out.</p>
+</details>
+<h2 id="Exercise-4-—-Frontmatter-title-CRLF-safe"><a href="#Exercise-4-—-Frontmatter-title-CRLF-safe" class="headerlink" title="Exercise 4 — Frontmatter title, CRLF-safe"></a>Exercise 4 — Frontmatter title, CRLF-safe</h2>
+<p>Get the title from <code>&quot;---\r\ntitle: Regex from Zero to Useful\r\ndate: 2026-09-24 10:30:00\r\n---\r\nBody text\r\n&quot;</code> without a trailing <code>\r</code>.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="python"><span class="line">post = <span class="hljs-string">&quot;---\r\ntitle: Regex from Zero to Useful\r\ndate: 2026-09-24 10:30:00\r\n---\r\nBody text\r\n&quot;</span></span><br><span class="line">re.search(<span class="hljs-string">r&quot;^title:\s*(.+?)\s*$&quot;</span>, post, re.M).group(<span class="hljs-number">1</span>)   <span class="hljs-comment"># &#x27;Regex from Zero to Useful&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The lazy <code>(.+?)</code> stops as early as it can, and <code>\s*$</code> swallows the <code>\r</code> before the line end. The naive <code>^title: (.+)$</code> returns <code>'Regex from Zero to Useful\r'</code>.</p>
+</details>
+<h2 id="Exercise-5-—-Defuse-a-slow-pattern"><a href="#Exercise-5-—-Defuse-a-slow-pattern" class="headerlink" title="Exercise 5 — Defuse a slow pattern"></a>Exercise 5 — Defuse a slow pattern</h2>
+<p><code>^(\d+)*$</code> is used to check &quot;only digits&quot;. Time it on <code>&quot;1&quot; * 24 + &quot;x&quot;</code>, then rewrite it.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> time</span><br><span class="line">s = <span class="hljs-string">&quot;1&quot;</span> * <span class="hljs-number">24</span> + <span class="hljs-string">&quot;x&quot;</span></span><br><span class="line">t = time.perf_counter(); re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&quot;^(\d+)*$&quot;</span>, s); <span class="hljs-built_in">print</span>(time.perf_counter() - t)   <span class="hljs-comment"># ~0.5 s on the test laptop</span></span><br><span class="line">t = time.perf_counter(); re.<span class="hljs-keyword">match</span>(<span class="hljs-string">r&quot;^\d*$&quot;</span>, s);    <span class="hljs-built_in">print</span>(time.perf_counter() - t)   <span class="hljs-comment"># microseconds</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>^\d*$</code> accepts exactly the same strings, with one way to match each. Better still for this job: <code>re.fullmatch(r&quot;[0-9]+&quot;, s)</code> — ASCII digits only, at least one, and nothing after (not even a newline).</p>
+</details>
+<h2 id="Exercise-6-—-CSS-hex-colors"><a href="#Exercise-6-—-CSS-hex-colors" class="headerlink" title="Exercise 6 — CSS hex colors"></a>Exercise 6 — CSS hex colors</h2>
+<p>In <code>&quot;color: #fff; bg: #1a2b3c; bad: #ffff; also #ABCDEF; nope #12345678.&quot;</code>, match 3- or 6-digit hex colors only.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="python"><span class="line">css = <span class="hljs-string">&quot;color: #fff; bg: #1a2b3c; bad: #ffff; also #ABCDEF; nope #12345678.&quot;</span></span><br><span class="line">re.findall(<span class="hljs-string">r&quot;#(?:[0-9a-fA-F]{3}){1,2}\b&quot;</span>, css)     <span class="hljs-comment"># [&#x27;#fff&#x27;, &#x27;#1a2b3c&#x27;, &#x27;#ABCDEF&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The <code>\b</code> at the end stops <code>#ffff</code> and <code>#12345678</code> from matching a shorter prefix.</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Any digit / word char / space</td>
+<td><code>\d</code> <code>\w</code> <code>\s</code> (ASCII only: <code>[0-9]</code>, or <code>re.ASCII</code>)</td>
+</tr>
+<tr>
+<td>One of / none of</td>
+<td><code>[abc]</code> / <code>[^abc]</code></td>
+</tr>
+<tr>
+<td>Repeat</td>
+<td><code>*</code> <code>+</code> <code>?</code> <code>{n}</code> <code>{n,m}</code> — add <code>?</code> for lazy</td>
+</tr>
+<tr>
+<td>Anything up to X</td>
+<td><code>[^X]*X</code></td>
+</tr>
+<tr>
+<td>Start / end / word edge</td>
+<td><code>^</code> <code>$</code> <code>\b</code> (whole string: <code>fullmatch</code>, <code>\A</code>…<code>\z</code>)</td>
+</tr>
+<tr>
+<td>Group / no capture / or</td>
+<td><code>(...)</code> / <code>(?:...)</code> / <code>a|b</code></td>
+</tr>
+<tr>
+<td>Same text again</td>
+<td><code>\1</code>, <code>(?P=name)</code> (Python), <code>\k&lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>Named group</td>
+<td><code>(?P&lt;n&gt;...)</code> Python, <code>(?&lt;n&gt;...)</code> JS/.NET/PCRE</td>
+</tr>
+<tr>
+<td>Replacement refs</td>
+<td>Python <code>\1</code> <code>\g&lt;n&gt;</code> · JS <code>$1</code> <code>$&lt;n&gt;</code> · .NET <code>$1</code> <code>${n}</code> · sed <code>\1</code></td>
+</tr>
+<tr>
+<td>Followed / not followed by</td>
+<td><code>(?=...)</code> / <code>(?!...)</code></td>
+</tr>
+<tr>
+<td>Preceded / not preceded by</td>
+<td><code>(?&lt;=...)</code> / <code>(?&lt;!...)</code></td>
+</tr>
+<tr>
+<td>Flags</td>
+<td><code>(?i)</code> ignore case, <code>(?m)</code> multiline, <code>(?s)</code> dot-all, <code>(?x)</code> verbose</td>
+</tr>
+<tr>
+<td>Escape user text</td>
+<td><code>re.escape</code>, <code>[regex]::Escape</code>, <code>RegExp.escape</code> (ES2025)</td>
+</tr>
+<tr>
+<td>Stop runaway backtracking</td>
+<td>rewrite, <code>(?&gt;...)</code>, <code>a++</code>, RE2/Rust/Go, .NET timeout</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Dev Essentials 07 · HTTPS follows a request from DNS lookup through TCP, the TLS 1.3 handshake and the certificate chain — the plumbing under every <code>curl</code> call from Dev Essentials 05.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://docs.python.org/3/library/re.html" target="_blank" rel="noopener external nofollow noreferrer">Python <code>re</code> — regular expression operations</a> and <a href="https://docs.python.org/3/howto/regex.html" target="_blank" rel="noopener external nofollow noreferrer">Regular Expression HOWTO</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank" rel="noopener external nofollow noreferrer">MDN — Regular expressions (JavaScript)</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion" target="_blank" rel="noopener external nofollow noreferrer">lookbehind assertion</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options" target="_blank" rel="noopener external nofollow noreferrer">.NET — regular expression options</a> and <a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-regex" target="_blank" rel="noopener external nofollow noreferrer">best practices (timeouts)</a></li>
+<li><a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank" rel="noopener external nofollow noreferrer">GNU grep manual — regular expressions</a></li>
+<li><a href="https://github.com/google/re2/wiki/Syntax" target="_blank" rel="noopener external nofollow noreferrer">RE2 syntax</a>, <a href="https://pkg.go.dev/regexp" target="_blank" rel="noopener external nofollow noreferrer">Go <code>regexp</code></a>, <a href="https://docs.rs/regex/latest/regex/" target="_blank" rel="noopener external nofollow noreferrer">Rust <code>regex</code> crate</a></li>
+<li><a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS" target="_blank" rel="noopener external nofollow noreferrer">OWASP — Regular expression Denial of Service (ReDoS)</a> and <a href="https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/" target="_blank" rel="noopener external nofollow noreferrer">Cloudflare — Details of the outage on July 2, 2019</a></li>
+<li><a href="https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address" target="_blank" rel="noopener external nofollow noreferrer">WHATWG HTML — valid email address</a></li>
+<li><a href="https://code.visualstudio.com/docs/editing/codebasics" target="_blank" rel="noopener external nofollow noreferrer">VS Code — basic editing (regex find/replace)</a> and <a href="https://regex101.com/" target="_blank" rel="noopener external nofollow noreferrer">regex101</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: Unicode property classes (<code>\p{L}</code>), a visual walk-through of how backtracking explores a pattern, and regex use in SQL (<code>LIKE</code> vs <code>REGEXP</code>) and MongoDB (<code>$regex</code>).</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 06 · Regex from Zero to Useful\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 06 · Regex from Zero to Useful"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-20T15:30:32.000Z","title":"Created 2026-08-20 23:30:32","children":"2026-08-20"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-20T15:30:32.000Z","title":"Updated 2026-08-20 23:30:32","children":"2026-08-20"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 06 · Regex from Zero to Useful","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/20/dev_06_regex/","children":"https://invokfung.github.io/blog/2026/08/20/dev_06_regex/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","Regex",{"className":"post-meta__tags","href":"/blog/tags/Regex/","children":"Regex"}],["$","a","Python",{"className":"post-meta__tags","href":"/blog/tags/Python/","children":"Python"}],["$","a","Command Line",{"className":"post-meta__tags","href":"/blog/tags/Command-Line/","children":"Command Line"}],["$","a","Text Processing",{"className":"post-meta__tags","href":"/blog/tags/Text-Processing/","children":"Text Processing"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/23/dev_07_https_tls/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/19/dev_05_command_line/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_02_dates_time_zones",{"children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-14</div><div class=\"title\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}],["$","div","dev_03_git_rescue_kit",{"children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","title":"Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-16</div><div class=\"title\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div","dev_05_command_line",{"children":["$","a",null,{"href":"/blog/2026/08/19/dev_05_command_line/","title":"Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-19</div><div class=\"title\">Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell</div></div>"}}]}],["$","div","dev_08_floating_point",{"children":["$","a",null,{"href":"/blog/2026/08/25/dev_08_floating_point/","title":"Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-25</div><div class=\"title\">Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money</div></div>"}}]}],["$","div","dev_09_versions_dependencies",{"children":["$","a",null,{"href":"/blog/2026/08/28/dev_09_versions_dependencies/","title":"Dev Essentials — 09 · Versions and Dependencies — SemVer, Lockfiles, Safe Upgrades and Supply Chain","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-28</div><div class=\"title\">Dev Essentials — 09 · Versions and Dependencies — SemVer, Lockfiles, Safe Upgrades and Supply Chain</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-What-a-regex-is-and-how-to-test-one",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-What-a-regex-is-and-how-to-test-one","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — What a regex is, and how to test one"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Literals-and-escaping",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Literals-and-escaping","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Literals and escaping"}]]}],null]}],["$","li","Chapter-3-—-Character-classes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Character-classes","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Character classes"}]]}],null]}],["$","li","Chapter-4-—-Quantifiers-greedy-and-lazy",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Quantifiers-greedy-and-lazy","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Quantifiers, greedy and lazy"}]]}],null]}],["$","li","Chapter-5-—-Anchors-boundaries-and-alternation",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Anchors-boundaries-and-alternation","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Anchors, boundaries and alternation"}]]}],null]}],["$","li","Chapter-6-—-Groups-backreferences-and-named-groups",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Groups-backreferences-and-named-groups","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Groups, backreferences and named groups"}]]}],null]}],["$","li","Chapter-7-—-Lookahead-and-lookbehind",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Lookahead-and-lookbehind","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Lookahead and lookbehind"}]]}],null]}],["$","li","Chapter-8-—-Flags",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Flags","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Flags"}]]}],null]}],["$","li","Chapter-9-—-Flavors-what-changes-where",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Flavors-what-changes-where","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Flavors: what changes where"}]]}],null]}],["$","li","Chapter-10-—-Pythons-re-in-practice",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-10-—-Pythons-re-in-practice","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 10 — Python's re in practice"}]]}],null]}],["$","li","Chapter-11-—-Practical-recipes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-11-—-Practical-recipes","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 11 — Practical recipes"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Parse-log-lines-with-named-groups",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Parse-log-lines-with-named-groups","children":[["$","span",null,{"className":"toc-number","children":"12.1."}]," ",["$","span",null,{"className":"toc-text","children":"Parse log lines with named groups"}]]}],null]}],["$","li","Match-ISO-dates-—-then-let-a-real-parser-decide",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Match-ISO-dates-—-then-let-a-real-parser-decide","children":[["$","span",null,{"className":"toc-number","children":"12.2."}]," ",["$","span",null,{"className":"toc-text","children":"Match ISO dates — then let a real parser decide"}]]}],null]}],["$","li","Pull-a-field-from-Markdown-frontmatter",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Pull-a-field-from-Markdown-frontmatter","children":[["$","span",null,{"className":"toc-number","children":"12.3."}]," ",["$","span",null,{"className":"toc-text","children":"Pull a field from Markdown frontmatter"}]]}],null]}],["$","li","Rename-files-with-a-preview",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Rename-files-with-a-preview","children":[["$","span",null,{"className":"toc-number","children":"12.4."}]," ",["$","span",null,{"className":"toc-text","children":"Rename files with a preview"}]]}],null]}],["$","li","Editor-find-and-replace-with-groups",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Editor-find-and-replace-with-groups","children":[["$","span",null,{"className":"toc-number","children":"12.5."}]," ",["$","span",null,{"className":"toc-text","children":"Editor find and replace with groups"}]]}],null]}]]}]]}],["$","li","Chapter-12-—-Dont-fully-validate-email-with-a-regex",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-12-—-Dont-fully-validate-email-with-a-regex","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 12 — Don't fully validate email with a regex"}]]}],null]}],["$","li","Chapter-13-—-Catastrophic-backtracking-and-ReDoS",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-13-—-Catastrophic-backtracking-and-ReDoS","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 13 — Catastrophic backtracking and ReDoS"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Fixes-from-best-to-last-resort",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Fixes-from-best-to-last-resort","children":[["$","span",null,{"className":"toc-number","children":"14.1."}]," ",["$","span",null,{"className":"toc-text","children":"Fixes, from best to last resort"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"15."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Real-dates-only",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Real-dates-only","children":[["$","span",null,{"className":"toc-number","children":"15.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Real dates only"}]]}],null]}],["$","li","Exercise-2-—-Client-errors-per-path",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Client-errors-per-path","children":[["$","span",null,{"className":"toc-number","children":"15.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Client errors per path"}]]}],null]}],["$","li","Exercise-3-—-Last-First-to-First-Last",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Last-First-to-First-Last","children":[["$","span",null,{"className":"toc-number","children":"15.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — \"Last, First\" to \"First Last\""}]]}],null]}],["$","li","Exercise-4-—-Frontmatter-title-CRLF-safe",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Frontmatter-title-CRLF-safe","children":[["$","span",null,{"className":"toc-number","children":"15.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Frontmatter title, CRLF-safe"}]]}],null]}],["$","li","Exercise-5-—-Defuse-a-slow-pattern",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Defuse-a-slow-pattern","children":[["$","span",null,{"className":"toc-number","children":"15.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Defuse a slow pattern"}]]}],null]}],["$","li","Exercise-6-—-CSS-hex-colors",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-CSS-hex-colors","children":[["$","span",null,{"className":"toc-number","children":"15.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — CSS hex colors"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"16."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"17."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"18."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 06 · Regex from Zero to Useful | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"A regular expression (regex) is a tiny language for describing text patterns: \"four digits, a dash, two digits\", \"a line that starts with `date:`\", \"t"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,Regex,Python,Command Line,Text Processing"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 06 · Regex from Zero to Useful"}],["$","meta","7",{"property":"og:description","content":"A regular expression (regex) is a tiny language for describing text patterns: \"four digits, a dash, two digits\", \"a line that starts with `date:`\", \"t"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 06 · Regex from Zero to Useful"}],["$","meta","11",{"name":"twitter:description","content":"A regular expression (regex) is a tiny language for describing text patterns: \"four digits, a dash, two digits\", \"a line that starts with `date:`\", \"t"}]]
+1:null

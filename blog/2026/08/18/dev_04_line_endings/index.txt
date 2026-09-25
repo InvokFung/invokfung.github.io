@@ -1,0 +1,526 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","18","d"]
+7:["slug","dev_04_line_endings","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","18","d"],{"children":[["slug","dev_04_line_endings","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"18\",\"slug\":\"dev_04_line_endings\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","18","d"],{"children":[["slug","dev_04_line_endings","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:50\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Tc21a,<p>Every line in a text file ends with one or two invisible bytes. Windows usually writes two (CR LF); Linux and macOS write one (LF). Most of the time nobody notices. Then a shell script fails in a Linux container, a pull request shows every line changed, or a test fails only on one machine. This post explains where CR and LF came from, how to see them, how Git converts them (<code>core.autocrlf</code>), and how to fix the rules once for everyone with <code>.gitattributes</code> and <code>.editorconfig</code>. It ends with this blog's own repository settings.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → 02 Dates &amp; Time Zones → 03 Git Rescue Kit → <strong>04 Line Endings</strong> (this post) → 05 Command Line → … → 24 Desk Health. Part A · Real bugs, explained.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Explain CR, LF and CRLF, and why Windows and Unix differ.</li>
+<li>See line endings with <code>file</code>, <code>cat -A</code>, <code>od -c</code> in bash and <code>Format-Hex</code> in PowerShell.</li>
+<li>Recognise the bugs they cause: broken shebangs, whole-file diffs, regex and CSV surprises.</li>
+<li>Choose a <code>core.autocrlf</code> value and explain what each one does.</li>
+<li>Write a <code>.gitattributes</code> file that makes line endings the same on every machine.</li>
+<li>Renormalize an existing repository safely with <code>git add --renormalize .</code>.</li>
+<li>Read <code>git ls-files --eol</code> output and the &quot;LF will be replaced by CRLF&quot; warning.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-CR-LF-and-CRLF"><a href="#Chapter-1-—-CR-LF-and-CRLF" class="headerlink" title="Chapter 1 — CR, LF and CRLF"></a>Chapter 1 — CR, LF and CRLF</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Byte</th>
+<th>Escape</th>
+<th>Shown by tools as</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CR</strong> (carriage return)</td>
+<td><code>0x0D</code> (13)</td>
+<td><code>\r</code></td>
+<td><code>^M</code></td>
+<td>Move to the start of the line</td>
+</tr>
+<tr>
+<td><strong>LF</strong> (line feed)</td>
+<td><code>0x0A</code> (10)</td>
+<td><code>\n</code></td>
+<td><code>$</code> in <code>cat -A</code></td>
+<td>Move down one line</td>
+</tr>
+<tr>
+<td><strong>CRLF</strong></td>
+<td><code>0D 0A</code></td>
+<td><code>\r\n</code></td>
+<td><code>^M$</code></td>
+<td>Both, in that order</td>
+</tr>
+<tr>
+<td><strong>EOL</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>&quot;End of line&quot;: whichever of the above a file uses</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Where-they-came-from"><a href="#Where-they-came-from" class="headerlink" title="Where they came from"></a>Where they came from</h2>
+<p>On a typewriter or an old teleprinter, two separate motions start a new line. The <strong>carriage return</strong> moves the print head back to the left margin. The <strong>line feed</strong> rolls the paper up one line. Teleprinters needed both codes, so early systems stored both.</p>
+<p>The choice then split:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Line ending</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CP/M, MS-DOS, Windows</td>
+<td>CRLF</td>
+</tr>
+<tr>
+<td>Unix, Linux, macOS (since Mac OS X)</td>
+<td>LF</td>
+</tr>
+<tr>
+<td>Classic Mac OS (before Mac OS X)</td>
+<td>CR</td>
+</tr>
+</tbody>
+</table>
+<p>Unix stores only LF in files and lets the terminal driver add the CR when printing. Windows kept the CP/M and MS-DOS habit of storing both.</p>
+<p>Many internet protocols still use CRLF on the wire, whatever the operating system. HTTP/1.1 (RFC 9112) defines a message as <code>start-line CRLF *( field-line CRLF ) CRLF</code>, and CSV (RFC 4180) ends each record with CRLF. That is the protocol's business; your library handles it. This post is about <strong>files in your repository</strong>.</p>
+<blockquote>
+<p><strong>Watch out:</strong> Windows Notepad only understood CRLF until 2018. Microsoft then added support for LF and CR files. New files in Notepad still use CRLF by default.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-Seeing-the-invisible-bytes"><a href="#Chapter-2-—-Seeing-the-invisible-bytes" class="headerlink" title="Chapter 2 — Seeing the invisible bytes"></a>Chapter 2 — Seeing the invisible bytes</h1>
+<p>Line endings are invisible in an editor. Look at the bytes instead.</p>
+<h2 id="Bash-Git-Bash-Linux-macOS"><a href="#Bash-Git-Bash-Linux-macOS" class="headerlink" title="Bash (Git Bash, Linux, macOS)"></a>Bash (Git Bash, Linux, macOS)</h2>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;a\r\nb\n&#x27;</span> &gt; mixed.txt</span><br><span class="line"> </span><br><span class="line">file mixed.txt</span><br><span class="line"><span class="hljs-comment"># mixed.txt: ASCII text, with CRLF, LF line terminators</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">cat</span> -A mixed.txt          <span class="hljs-comment"># GNU cat: ^M = CR, $ = end of line</span></span><br><span class="line"><span class="hljs-comment"># a^M$</span></span><br><span class="line"><span class="hljs-comment"># b$</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">od</span> -c mixed.txt</span><br><span class="line"><span class="hljs-comment"># 0000000   a  \r  \n   b  \n</span></span><br><span class="line"> </span><br><span class="line">xxd mixed.txt</span><br><span class="line"><span class="hljs-comment"># 00000000: 610d 0a62 0a                             a..b.</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>file</code> is the quick check. It reports &quot;with CRLF line terminators&quot;, &quot;with CRLF, LF line terminators&quot; (mixed), or nothing extra (LF only).</p>
+<h2 id="PowerShell-51"><a href="#PowerShell-51" class="headerlink" title="PowerShell 5.1"></a>PowerShell 5.1</h2>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-built_in">Format-Hex</span> <span class="hljs-literal">-Path</span> .\mixed.txt</span><br><span class="line"><span class="hljs-comment">#            00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F</span></span><br><span class="line"><span class="hljs-comment"># 00000000   61 0D 0A 62 0A                                   a..b.</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment"># Count CRLF pairs (read as UTF-8, not the ANSI default):</span></span><br><span class="line"><span class="hljs-variable">$t</span> = [<span class="hljs-type">System.IO.File</span>]::ReadAllText((<span class="hljs-built_in">Resolve-Path</span> .\mixed.txt).Path, [<span class="hljs-type">System.Text.Encoding</span>]::UTF8)</span><br><span class="line">([<span class="hljs-type">regex</span>]::Matches(<span class="hljs-variable">$t</span>, <span class="hljs-string">&quot;`r`n&quot;</span>)).Count        <span class="hljs-comment"># 1</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="python"><span class="line">data = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;mixed.txt&quot;</span>, <span class="hljs-string">&quot;rb&quot;</span>).read()        <span class="hljs-comment"># bytes: no translation</span></span><br><span class="line">crlf = data.count(<span class="hljs-string">b&quot;\r\n&quot;</span>)</span><br><span class="line"><span class="hljs-built_in">print</span>(crlf, data.count(<span class="hljs-string">b&quot;\n&quot;</span>) - crlf)        <span class="hljs-comment"># 1 1   (CRLF lines, bare LF lines)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="In-your-editor"><a href="#In-your-editor" class="headerlink" title="In your editor"></a>In your editor</h2>
+<p>VS Code shows <code>CRLF</code> or <code>LF</code> in the status bar; click it to change the current file. Most editors have a similar switch.</p>
+<h2 id="Two-invisible-byte-problems"><a href="#Two-invisible-byte-problems" class="headerlink" title="Two invisible byte problems"></a>Two invisible byte problems</h2>
+<p>Dev Essentials 01 · Text Encoding covered the BOM: three invisible bytes <code>EF BB BF</code> at the start of a file. CRLF is the same kind of problem: an invisible <code>0D</code> before every <code>0A</code>. One file can have both, and <code>file</code> reports both:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;\xef\xbb\xbfhi\r\n&#x27;</span> | file -</span><br><span class="line"><span class="hljs-comment"># /dev/stdin: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Both come from a tool that used a system default instead of a project rule. Both are fixed the same way: write the rule into the repository.</p>
+<hr>
+<h1 id="Chapter-3-—-How-line-endings-break-things"><a href="#Chapter-3-—-How-line-endings-break-things" class="headerlink" title="Chapter 3 — How line endings break things"></a>Chapter 3 — How line endings break things</h1>
+<h2 id="1-Shell-scripts-in-Linux-containers-and-CI"><a href="#1-Shell-scripts-in-Linux-containers-and-CI" class="headerlink" title="1. Shell scripts in Linux, containers and CI"></a>1. Shell scripts in Linux, containers and CI</h2>
+<p>A script saved with CRLF has a first line of <code>#!/bin/bash\r</code>. The system looks for an interpreter literally named <code>/bin/bash\r</code>, which does not exist.</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;#!/bin/bash\r\necho hi\r\n&#x27;</span> &gt; crlf.sh &amp;&amp; <span class="hljs-built_in">chmod</span> +x crlf.sh</span><br><span class="line">./crlf.sh</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>What you see depends on where you run it:</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu 24.04, bash 5.2 (tested)</td>
+<td><code>bash: ./crlf.sh: cannot execute: required file not found</code></td>
+</tr>
+<tr>
+<td>Older bash versions</td>
+<td><code>bash: ./crlf.sh: /bin/bash^M: bad interpreter: No such file or directory</code></td>
+</tr>
+<tr>
+<td>Git Bash on Windows (tested, bash 5.2 MSYS)</td>
+<td>runs and prints <code>hi</code></td>
+</tr>
+</tbody>
+</table>
+<p>The last row is the trap. The script works on the Windows machine where it was written, then fails in Docker or on a Linux CI runner. Even when bash starts (for example <code>bash crlf2.sh</code>), the <code>\r</code> stays at the end of every command:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">crlf2.sh: line 3: cd: $&#x27;/tmp\r&#x27;: No such file or directory</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="2-Diffs-where-every-line-changed"><a href="#2-Diffs-where-every-line-changed" class="headerlink" title="2. Diffs where every line changed"></a>2. Diffs where every line changed</h2>
+<p>If one person commits a file with LF and the next commits it with CRLF, Git sees a change on <strong>every line</strong>. The real one-line change is hidden, reviews become useless, and <code>git blame</code> now points every line at the wrong commit. <code>git diff --ignore-cr-at-eol</code> (or <code>-w</code>) hides CR-only changes so you can find the real one.</p>
+<h2 id="3-Regex-split-and-CSV"><a href="#3-Regex-split-and-CSV" class="headerlink" title="3. Regex, split and CSV"></a>3. Regex, split and CSV</h2>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> re</span><br><span class="line"> </span><br><span class="line">text = <span class="hljs-string">&quot;abc\r\ndef\r\n&quot;</span>                         <span class="hljs-comment"># CRLF text read in binary mode or with newline=&quot;&quot;</span></span><br><span class="line"><span class="hljs-built_in">print</span>(text.split(<span class="hljs-string">&quot;\n&quot;</span>))                         <span class="hljs-comment"># [&#x27;abc\r&#x27;, &#x27;def\r&#x27;, &#x27;&#x27;]</span></span><br><span class="line"><span class="hljs-built_in">print</span>(text.splitlines())                        <span class="hljs-comment"># [&#x27;abc&#x27;, &#x27;def&#x27;]</span></span><br><span class="line"><span class="hljs-built_in">print</span>(re.findall(<span class="hljs-string">r&quot;(?m)^(\w+)$&quot;</span>, text))         <span class="hljs-comment"># []  ($ matches before \n, but \r is in the way)</span></span><br><span class="line"><span class="hljs-built_in">print</span>(re.findall(<span class="hljs-string">r&quot;(?m)^(.+)$&quot;</span>, text))          <span class="hljs-comment"># [&#x27;abc\r&#x27;, &#x27;def\r&#x27;]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>A value such as <code>&quot;def\r&quot;</code> then fails an equality check, a dictionary lookup or a hash comparison. The last field of each CSV row is the usual victim.</p>
+<h2 id="4-Tests-and-checksums"><a href="#4-Tests-and-checksums" class="headerlink" title="4. Tests and checksums"></a>4. Tests and checksums</h2>
+<p>A test that compares output with a saved &quot;golden&quot; file, or a checksum of a text file, passes on one OS and fails on another. The bytes differ even though the text looks the same.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> Python's text mode on Windows <strong>writes CRLF</strong> by default. The docs say: &quot;if newline is None, any '\n' characters written are translated to the system default line separator, os.linesep.&quot; Pass <code>newline=&quot;\n&quot;</code> when a file must have LF: <code>open(&quot;out.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;, newline=&quot;\n&quot;)</code>.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-4-—-Gits-conversion-coreautocrlf"><a href="#Chapter-4-—-Gits-conversion-coreautocrlf" class="headerlink" title="Chapter 4 — Git's conversion: core.autocrlf"></a>Chapter 4 — Git's conversion: <code>core.autocrlf</code></h1>
+<p>Git keeps two copies of each file: the one <strong>in the repository</strong> (index and commits) and the one <strong>in your working tree</strong>. It can convert line endings when it moves a file between them.</p>
+<table>
+<thead>
+<tr>
+<th><code>core.autocrlf</code></th>
+<th>On commit (working tree → repo)</th>
+<th>On checkout (repo → working tree)</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td>CRLF → LF</td>
+<td>LF → CRLF</td>
+<td>Windows (GitHub's docs recommend it there)</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>CRLF → LF</td>
+<td>no change</td>
+<td>macOS / Linux (GitHub's recommendation)</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>no change</td>
+<td>no change</td>
+<td>You manage endings yourself, or with <code>.gitattributes</code></td>
+</tr>
+</tbody>
+</table>
+<p>The git-config docs describe <code>true</code> as &quot;the same as setting the <code>text</code> attribute to <code>auto</code> on all files and <code>core.eol</code> to <code>crlf</code>&quot;. So with <code>true</code>, the repository holds LF and your working tree holds CRLF.</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">git config --show-origin --get core.autocrlf    <span class="hljs-comment"># value, and which config file set it</span></span><br><span class="line">git config --global core.autocrlf <span class="hljs-literal">true</span>          <span class="hljs-comment"># set it for your user (Windows)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The Git for Windows installer asks about this. Its option &quot;Checkout Windows-style, commit Unix-style line endings&quot; sets <code>core.autocrlf=true</code>, usually in the <strong>system</strong> config file. That is why <code>--show-origin</code> helps when you do not remember setting it.</p>
+<h2 id="The-warning"><a href="#The-warning" class="headerlink" title="The warning"></a>The warning</h2>
+<p>With <code>core.autocrlf=true</code>, adding a file that has LF endings prints:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">warning: in the working copy of &#x27;post.md&#x27;, LF will be replaced by CRLF the next time Git touches it</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>This is information, not an error. The file goes into the repository with LF, as intended; the next checkout will write it to your working tree with CRLF. (Older Git versions worded it as <code>warning: LF will be replaced by CRLF in post.md.</code>) The check is controlled by <code>core.safecrlf</code>, which defaults to <code>warn</code>. With <code>core.safecrlf=true</code>, Git refuses instead: <code>fatal: LF would be replaced by CRLF in post.md</code>.</p>
+<h2 id="The-weakness-it-is-per-machine"><a href="#The-weakness-it-is-per-machine" class="headerlink" title="The weakness: it is per machine"></a>The weakness: it is per machine</h2>
+<p><code>core.autocrlf</code> lives in each person's config, not in the repository. Every clone behaves the way its own machine is set up. One teammate with <code>false</code> on Windows can commit CRLF files, and the repository has no defence. The fix is to put the rule <strong>in the repository</strong>.</p>
+<hr>
+<h1 id="Chapter-5-—-gitattributes-rules-that-travel-with-the-repo"><a href="#Chapter-5-—-gitattributes-rules-that-travel-with-the-repo" class="headerlink" title="Chapter 5 — .gitattributes: rules that travel with the repo"></a>Chapter 5 — <code>.gitattributes</code>: rules that travel with the repo</h1>
+<p>A <code>.gitattributes</code> file at the root of the repository sets per-path attributes. It is committed, so every clone follows it. GitHub's docs say: &quot;When you commit this file to a repository, it overrides the <code>core.autocrlf</code> setting for all repository contributors.&quot;</p>
+<h2 id="A-good-default-for-most-projects"><a href="#A-good-default-for-most-projects" class="headerlink" title="A good default for most projects"></a>A good default for most projects</h2>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="text"><span class="line"># .gitattributes</span><br><span class="line"> </span><br><span class="line"># Git decides text vs binary. Text is stored as LF and checked out as LF.</span><br><span class="line">* text=auto eol=lf</span><br><span class="line"> </span><br><span class="line"># Windows batch files need CRLF in the working tree.</span><br><span class="line">*.bat text eol=crlf</span><br><span class="line">*.cmd text eol=crlf</span><br><span class="line"> </span><br><span class="line"># Binary files: never convert, never diff or merge as text.</span><br><span class="line">*.png binary</span><br><span class="line">*.jpg binary</span><br><span class="line">*.webp binary</span><br><span class="line">*.pdf binary</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>What each attribute means, from the gitattributes docs:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text</code></td>
+<td>Normalize line endings to LF in the repository on every commit.</td>
+</tr>
+<tr>
+<td><code>text=auto</code></td>
+<td>Git decides if the file is text. If it is, convert it as above.</td>
+</tr>
+<tr>
+<td><code>-text</code></td>
+<td>Never convert.</td>
+</tr>
+<tr>
+<td><code>eol=lf</code> / <code>eol=crlf</code></td>
+<td>The line ending to use <strong>in the working tree</strong> on checkout. It &quot;automatically sets <code>text</code> if <code>text</code> was left unspecified&quot;.</td>
+</tr>
+<tr>
+<td><code>binary</code></td>
+<td>A built-in macro for <code>-diff -merge -text</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><code>text=auto eol=lf</code> together has been supported since Git 2.10 (per the <code>git ls-files</code> docs).</p>
+<h2 id="LF-everywhere-or-native-endings"><a href="#LF-everywhere-or-native-endings" class="headerlink" title="LF everywhere, or native endings?"></a>LF everywhere, or native endings?</h2>
+<ul>
+<li><strong><code>* text=auto eol=lf</code></strong>: LF in the repository and in every working tree, Windows included. Best when the project has shell scripts or Docker files, or builds on Linux CI. Modern Windows editors (VS Code, Notepad since 2018) handle LF.</li>
+<li><strong><code>* text=auto</code></strong> alone: LF in the repository, native endings in each working tree. The docs: if <code>text</code> is set but neither <code>core.autocrlf</code> nor <code>core.eol</code> is, &quot;the default is <code>eol=crlf</code> on Windows and <code>eol=lf</code> on all other platforms&quot;.</li>
+</ul>
+<p>Either way the <strong>repository</strong> content is LF and the same for everyone. That is what stops the whole-file diffs.</p>
+<blockquote>
+<p><strong>Trick:</strong> put per-type exceptions below the <code>*</code> line. When more than one line matches a path, the later line wins, one attribute at a time.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-Fixing-an-existing-repository"><a href="#Chapter-6-—-Fixing-an-existing-repository" class="headerlink" title="Chapter 6 — Fixing an existing repository"></a>Chapter 6 — Fixing an existing repository</h1>
+<p>Adding <code>.gitattributes</code> does not rewrite files already committed. To convert them, <strong>renormalize</strong>. Start from a clean working tree (commit or stash your work first; Dev Essentials 03 · Git Rescue Kit covers stashing safely).</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="bash"><span class="line">git status                                <span class="hljs-comment"># must be clean</span></span><br><span class="line"><span class="hljs-comment"># create .gitattributes as in Chapter 5, then:</span></span><br><span class="line">git add .gitattributes</span><br><span class="line">git add --renormalize .                   <span class="hljs-comment"># re-apply the rules to every tracked file</span></span><br><span class="line">git status                                <span class="hljs-comment"># lists files whose stored endings change</span></span><br><span class="line">git commit -m <span class="hljs-string">&quot;Normalize line endings&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>This is the sequence from the gitattributes docs and GitHub's line-ending guide. If a file that should not change shows up in <code>git status</code>, give it the <code>-text</code> or <code>binary</code> attribute and run the add again.</p>
+<p>Two follow-ups:</p>
+<ul>
+<li><strong>Working copies.</strong> Files already on disk keep their old endings until Git writes them again. The simplest way to get a working tree that matches the new rules is a fresh clone.</li>
+<li><strong>Blame noise.</strong> The normalize commit touches many lines. List its hash in a <code>.git-blame-ignore-revs</code> file at the repository root. GitHub's blame view reads that file, and locally you can run <code>git config blame.ignoreRevsFile .git-blame-ignore-revs</code>.</li>
+</ul>
+<h2 id="Checking-the-result-git-ls-files-eol"><a href="#Checking-the-result-git-ls-files-eol" class="headerlink" title="Checking the result: git ls-files --eol"></a>Checking the result: <code>git ls-files --eol</code></h2>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line">git ls-files --eol</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Each line shows three facts about a tracked file. Typical output:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="text"><span class="line">i/lf    w/crlf  attr/                 	content/posts/example.md</span><br><span class="line">i/lf    w/lf    attr/text=auto eol=lf 	scripts/build.sh</span><br><span class="line">i/-text w/-text attr/binary           	public/assets/cover.png</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i/...</code></td>
+<td>Line endings in the <strong>index</strong> (what will be committed): <code>lf</code>, <code>crlf</code>, <code>mixed</code>, <code>none</code>, or <code>-text</code> for binary</td>
+</tr>
+<tr>
+<td><code>w/...</code></td>
+<td>Line endings in the <strong>working tree</strong></td>
+</tr>
+<tr>
+<td><code>attr/...</code></td>
+<td>The attributes that apply (<code>text=auto eol=lf</code>, <code>binary</code>, or empty)</td>
+</tr>
+</tbody>
+</table>
+<p>The first line is what <code>core.autocrlf=true</code> with no <code>.gitattributes</code> looks like: LF in the repository, CRLF on disk, and no attribute. Any <code>i/crlf</code> or <code>i/mixed</code> on a text file is a file that was committed with CR bytes.</p>
+<hr>
+<h1 id="Chapter-7-—-Editors-editorconfig"><a href="#Chapter-7-—-Editors-editorconfig" class="headerlink" title="Chapter 7 — Editors: .editorconfig"></a>Chapter 7 — Editors: <code>.editorconfig</code></h1>
+<p><code>.gitattributes</code> controls what Git stores and checks out. It does not stop your editor from saving CRLF into a new file before Git sees it. <strong>EditorConfig</strong> is a small, widely supported file that tells editors how to save:</p>
+<pre><code class="language-ini"><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="ini"><span class="line"><span class="hljs-comment"># .editorconfig</span></span><br><span class="line"><span class="hljs-attr">root</span> = <span class="hljs-literal">true</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">[*]</span></span><br><span class="line"><span class="hljs-attr">charset</span> = utf-<span class="hljs-number">8</span></span><br><span class="line"><span class="hljs-attr">end_of_line</span> = lf</span><br><span class="line"><span class="hljs-attr">insert_final_newline</span> = <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">trim_trailing_whitespace</span> = <span class="hljs-literal">true</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">[*.{bat,cmd}]</span></span><br><span class="line"><span class="hljs-attr">end_of_line</span> = crlf</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">[*.md]</span></span><br><span class="line"><span class="hljs-attr">trim_trailing_whitespace</span> = <span class="hljs-literal">false</span>   <span class="hljs-comment"># two trailing spaces = a Markdown line break</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>From the EditorConfig spec: <code>end_of_line</code> accepts <code>lf</code>, <code>cr</code> or <code>crlf</code>; <code>charset</code> accepts <code>latin1</code>, <code>utf-8</code>, <code>utf-8-bom</code>, <code>utf-16be</code> or <code>utf-16le</code>; and <code>root = true</code> stops the search for more <code>.editorconfig</code> files in parent folders. Visual Studio and JetBrains IDEs read it with no plugin. VS Code needs the EditorConfig extension.</p>
+<p>Note the <code>charset = utf-8</code> line: the same file also guards against the encoding problems of Dev Essentials 01.</p>
+<hr>
+<h1 id="Chapter-8-—-Converting-files-by-hand"><a href="#Chapter-8-—-Converting-files-by-hand" class="headerlink" title="Chapter 8 — Converting files by hand"></a>Chapter 8 — Converting files by hand</h1>
+<p>Sometimes you just need to fix one file.</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="bash"><span class="line">dos2unix deploy.sh              <span class="hljs-comment"># CRLF -&gt; LF   (ships with Git for Windows)</span></span><br><span class="line">unix2dos run.bat                <span class="hljs-comment"># LF -&gt; CRLF</span></span><br><span class="line">sed -i <span class="hljs-string">&#x27;s/\r$//&#x27;</span> deploy.sh      <span class="hljs-comment"># CRLF -&gt; LF with plain sed</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>In Windows PowerShell 5.1, go through .NET so neither the encoding nor the endings change by accident:</p>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-variable">$p</span> = (<span class="hljs-built_in">Resolve-Path</span> .\deploy.sh).Path</span><br><span class="line"><span class="hljs-variable">$t</span> = [<span class="hljs-type">System.IO.File</span>]::ReadAllText(<span class="hljs-variable">$p</span>, [<span class="hljs-type">System.Text.Encoding</span>]::UTF8)</span><br><span class="line">[<span class="hljs-type">System.IO.File</span>]::WriteAllText(<span class="hljs-variable">$p</span>, (<span class="hljs-variable">$t</span> <span class="hljs-operator">-replace</span> <span class="hljs-string">&quot;`r`n&quot;</span>, <span class="hljs-string">&quot;`n&quot;</span>), (<span class="hljs-built_in">New-Object</span> System.Text.UTF8Encoding(<span class="hljs-variable">$false</span>)))</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> <code>(Get-Content file) | Set-Content file</code> in Windows PowerShell 5.1 changes two things at once. <code>Get-Content</code> splits the text into lines and drops the endings. <code>Set-Content</code> writes each line back followed by a Windows newline (CRLF), and by default in the ANSI code page. One harmless-looking line changes both the line endings and the encoding.</p>
+</blockquote>
+<p>In Python, work in bytes. Then there is no newline translation and no decoding step:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path</span><br><span class="line"> </span><br><span class="line">p = Path(<span class="hljs-string">&quot;deploy.sh&quot;</span>)</span><br><span class="line">p.write_bytes(p.read_bytes().replace(<span class="hljs-string">b&quot;\r\n&quot;</span>, <span class="hljs-string">b&quot;\n&quot;</span>))</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<hr>
+<h1 id="Chapter-9-—-Case-study-this-blogs-repository"><a href="#Chapter-9-—-Case-study-this-blogs-repository" class="headerlink" title="Chapter 9 — Case study: this blog's repository"></a>Chapter 9 — Case study: this blog's repository</h1>
+<p>The facts:</p>
+<ul>
+<li>The author's Windows machine has <code>core.autocrlf=true</code>.</li>
+<li>The blog repository has <strong>no <code>.gitattributes</code></strong> and no <code>.editorconfig</code>.</li>
+</ul>
+<p>What follows from the Git docs, and what <code>file</code> shows on the working copy:</p>
+<ul>
+<li><strong>The repository holds LF.</strong> With <code>autocrlf=true</code>, text files are normalized to LF when added. The Linux build on GitHub Actions checks out LF files.</li>
+<li><strong>The working copy is mixed.</strong> A post checked out by Git shows &quot;with CRLF line terminators&quot; in <code>file</code>. A file written later by a tool that saves LF shows no CRLF. Both are fine locally, because Git converts them to LF on commit. Adding such an LF file prints the &quot;LF will be replaced by CRLF the next time Git touches it&quot; warning.</li>
+<li><strong>The protection lives on one machine.</strong> A clone on another Windows machine with <code>core.autocrlf=false</code> would commit CRLF, and the next diff of that post would show every line changed. Nothing in the repository prevents it.</li>
+</ul>
+<p>A small change would move the rule into the repository:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="text"><span class="line"># .gitattributes (proposed)</span><br><span class="line">* text=auto eol=lf</span><br><span class="line">*.png binary</span><br><span class="line">*.jpg binary</span><br><span class="line">*.webp binary</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Add an <code>.editorconfig</code> with <code>end_of_line = lf</code> and <code>charset = utf-8</code>, then run <code>git add --renormalize .</code> in one dedicated commit.</p>
+<p>The link to Dev Essentials 01 is direct. The encoding damage and the CRLF question have the same root: a tool used a machine default (the ANSI code page, the platform newline) where the project needed an explicit rule. The fix is the same too: write the rule down in the repository, where every tool and every machine can see it.</p>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Read-the-bytes"><a href="#Exercise-1-—-Read-the-bytes" class="headerlink" title="Exercise 1 — Read the bytes"></a>Exercise 1 — Read the bytes</h2>
+<p><code>od -c notes.txt</code> prints <code>h  i  \r  \n  o  k  \n</code>. What does <code>file</code> report, and what does <code>cat -A</code> show?</p>
+<details>
+<summary>Solution</summary>
+<p>The file is mixed: one CRLF line and one LF line. <code>file</code> reports <code>ASCII text, with CRLF, LF line terminators</code>. <code>cat -A</code> shows:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="text"><span class="line">hi^M$</span><br><span class="line">ok$</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-Works-on-my-machine"><a href="#Exercise-2-—-Works-on-my-machine" class="headerlink" title="Exercise 2 — Works on my machine"></a>Exercise 2 — Works on my machine</h2>
+<p><code>./deploy.sh</code> runs in Git Bash on Windows but fails in a Linux Docker container with <code>cannot execute: required file not found</code>. Explain, and fix it twice: once now, once for good.</p>
+<details>
+<summary>Solution</summary>
+<p>The file has CRLF endings, so the shebang names <code>/bin/bash\r</code>. Git Bash tolerated it; Linux does not.</p>
+<p>Now: <code>dos2unix deploy.sh</code> (or <code>sed -i 's/\r$//' deploy.sh</code>), then commit.</p>
+<p>For good: add <code>*.sh text eol=lf</code> (or <code>* text=auto eol=lf</code>) to <code>.gitattributes</code>, run <code>git add --renormalize .</code>, and commit. Every checkout, on every OS, then gets LF.</p>
+</details>
+<h2 id="Exercise-3-—-Write-the-attributes"><a href="#Exercise-3-—-Write-the-attributes" class="headerlink" title="Exercise 3 — Write the attributes"></a>Exercise 3 — Write the attributes</h2>
+<p>A repository has <code>.sh</code>, <code>.ps1</code>, <code>.bat</code>, <code>.md</code> and <code>.png</code> files. The CI runs on Linux. Write its <code>.gitattributes</code>.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="text"><span class="line">* text=auto eol=lf</span><br><span class="line">*.bat text eol=crlf</span><br><span class="line">*.png binary</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>.sh</code>, <code>.ps1</code> and <code>.md</code> are covered by the first line; PowerShell reads LF scripts without trouble. Only <code>.bat</code> needs CRLF, and the later line wins for it.</p>
+</details>
+<h2 id="Exercise-4-—-Predict-coreautocrlf"><a href="#Exercise-4-—-Predict-coreautocrlf" class="headerlink" title="Exercise 4 — Predict core.autocrlf"></a>Exercise 4 — Predict <code>core.autocrlf</code></h2>
+<p>A file is stored in the repository with LF. What line endings does the working tree get on Windows with <code>core.autocrlf</code> set to <code>true</code>, <code>input</code> and <code>false</code> (no <code>.gitattributes</code>)?</p>
+<details>
+<summary>Solution</summary>
+<p><code>true</code>: CRLF (converted on checkout). <code>input</code>: LF (no conversion on checkout). <code>false</code>: LF (no conversion at all). Only <code>true</code> changes the working tree; <code>true</code> and <code>input</code> both convert CRLF to LF on commit.</p>
+</details>
+<h2 id="Exercise-5-—-LF-from-Python-on-Windows"><a href="#Exercise-5-—-LF-from-Python-on-Windows" class="headerlink" title="Exercise 5 — LF from Python on Windows"></a>Exercise 5 — LF from Python on Windows</h2>
+<p>This code writes CRLF on Windows. Fix it so the file always has LF.</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;out.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">    f.write(<span class="hljs-string">&quot;line 1\nline 2\n&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;out.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>, encoding=<span class="hljs-string">&quot;utf-8&quot;</span>, newline=<span class="hljs-string">&quot;\n&quot;</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">    f.write(<span class="hljs-string">&quot;line 1\nline 2\n&quot;</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>With <code>newline=None</code> (the default), Python translates each <code>\n</code> to <code>os.linesep</code>, which is <code>\r\n</code> on Windows. <code>newline=&quot;\n&quot;</code> (or <code>newline=&quot;&quot;</code>) turns the translation off.</p>
+</details>
+<h2 id="Exercise-6-—-Read-ls-files-eol"><a href="#Exercise-6-—-Read-ls-files-eol" class="headerlink" title="Exercise 6 — Read ls-files --eol"></a>Exercise 6 — Read <code>ls-files --eol</code></h2>
+<p>What does <code>i/crlf  w/crlf  attr/text=auto eol=lf  src/app.js</code> tell you, and what should you do?</p>
+<details>
+<summary>Solution</summary>
+<p>The rules say LF (<code>attr/text=auto eol=lf</code>), but the file was committed with CRLF (<code>i/crlf</code>) before the rules existed, and the working copy is CRLF too. Run <code>git add --renormalize .</code> and commit. After a fresh checkout, the file shows <code>i/lf w/lf</code>.</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Check a file (bash)</td>
+<td><code>file f.txt</code>, <code>cat -A f.txt</code>, <code>od -c f.txt</code></td>
+</tr>
+<tr>
+<td>Check a file (PowerShell)</td>
+<td><code>Format-Hex -Path f.txt</code> (look for <code>0D 0A</code>)</td>
+</tr>
+<tr>
+<td>CRLF → LF (bash)</td>
+<td><code>dos2unix f</code> or <code>sed -i 's/\r$//' f</code></td>
+</tr>
+<tr>
+<td>CRLF → LF (Python)</td>
+<td><code>p.write_bytes(p.read_bytes().replace(b&quot;\r\n&quot;, b&quot;\n&quot;))</code></td>
+</tr>
+<tr>
+<td>LF when writing (Python)</td>
+<td><code>open(p, &quot;w&quot;, encoding=&quot;utf-8&quot;, newline=&quot;\n&quot;)</code></td>
+</tr>
+<tr>
+<td>Where autocrlf is set</td>
+<td><code>git config --show-origin --get core.autocrlf</code></td>
+</tr>
+<tr>
+<td>Windows default</td>
+<td><code>core.autocrlf=true</code> (or rely on <code>.gitattributes</code>)</td>
+</tr>
+<tr>
+<td>macOS / Linux default</td>
+<td><code>core.autocrlf=input</code></td>
+</tr>
+<tr>
+<td>Repo-wide rule</td>
+<td><code>.gitattributes</code>: <code>* text=auto eol=lf</code></td>
+</tr>
+<tr>
+<td>Keep CRLF for batch files</td>
+<td><code>*.bat text eol=crlf</code></td>
+</tr>
+<tr>
+<td>Never convert</td>
+<td><code>*.png binary</code></td>
+</tr>
+<tr>
+<td>Re-apply rules</td>
+<td><code>git add --renormalize .</code></td>
+</tr>
+<tr>
+<td>Inspect endings in Git</td>
+<td><code>git ls-files --eol</code></td>
+</tr>
+<tr>
+<td>Diff without CR noise</td>
+<td><code>git diff --ignore-cr-at-eol</code></td>
+</tr>
+<tr>
+<td>Editor rule</td>
+<td><code>.editorconfig</code>: <code>end_of_line = lf</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p><strong>Dev Essentials 05 · Command Line</strong> starts Part B · Everyday skills: pipes, <code>grep</code>, <code>find</code>, <code>sed</code>, <code>jq</code> and <code>ssh</code>, side by side in bash and PowerShell. Several tools from this post (<code>file</code>, <code>od</code>, <code>sed -i</code>) appear there again in a wider kit.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://git-scm.com/docs/gitattributes" target="_blank" rel="noopener external nofollow noreferrer">Git — gitattributes</a></li>
+<li><a href="https://git-scm.com/docs/git-config" target="_blank" rel="noopener external nofollow noreferrer">Git — git-config (core.autocrlf, core.eol, core.safecrlf)</a></li>
+<li><a href="https://git-scm.com/docs/git-ls-files" target="_blank" rel="noopener external nofollow noreferrer">Git — git-ls-files (--eol)</a></li>
+<li><a href="https://git-scm.com/docs/git-diff" target="_blank" rel="noopener external nofollow noreferrer">Git — git-diff (--ignore-cr-at-eol)</a></li>
+<li><a href="https://docs.github.com/en/get-started/git-basics/configuring-git-to-handle-line-endings" target="_blank" rel="noopener external nofollow noreferrer">GitHub Docs — Configuring Git to handle line endings</a></li>
+<li><a href="https://docs.github.com/en/repositories/working-with-files/using-files/viewing-and-understanding-files" target="_blank" rel="noopener external nofollow noreferrer">GitHub Docs — Ignore commits in the blame view</a></li>
+<li><a href="https://spec.editorconfig.org/" target="_blank" rel="noopener external nofollow noreferrer">EditorConfig specification</a></li>
+<li><a href="https://docs.python.org/3/library/functions.html#open" target="_blank" rel="noopener external nofollow noreferrer">Python — open() and the newline parameter</a></li>
+<li><a href="https://devblogs.microsoft.com/commandline/extended-eol-in-notepad/" target="_blank" rel="noopener external nofollow noreferrer">Microsoft DevBlogs — Extended line endings support in Notepad</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9112" target="_blank" rel="noopener external nofollow noreferrer">RFC 9112 — HTTP/1.1 message format</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener external nofollow noreferrer">RFC 4180 — CSV format</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: line endings inside Docker builds (<code>COPY</code> and <code>.dockerignore</code>), <code>core.eol</code> vs <code>core.autocrlf</code> edge cases, and a pre-commit hook that rejects CRLF.</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:50\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-18T13:58:24.000Z","title":"Created 2026-08-18 21:58:24","children":"2026-08-18"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-18T13:58:24.000Z","title":"Updated 2026-08-18 21:58:24","children":"2026-08-18"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/18/dev_04_line_endings/","children":"https://invokfung.github.io/blog/2026/08/18/dev_04_line_endings/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","Computer Science",{"className":"post-meta__tags","href":"/blog/tags/Computer-Science/","children":"Computer Science"}],["$","a","Programming",{"className":"post-meta__tags","href":"/blog/tags/Programming/","children":"Programming"}],["$","a","Git",{"className":"post-meta__tags","href":"/blog/tags/Git/","children":"Git"}],["$","a","Windows",{"className":"post-meta__tags","href":"/blog/tags/Windows/","children":"Windows"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/19/dev_05_command_line/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_02_dates_time_zones",{"children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-14</div><div class=\"title\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}],["$","div","dev_03_git_rescue_kit",{"children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","title":"Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-16</div><div class=\"title\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div","dev_05_command_line",{"children":["$","a",null,{"href":"/blog/2026/08/19/dev_05_command_line/","title":"Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-19</div><div class=\"title\">Dev Essentials — 05 · Command Line Daily Kit — Pipes, grep, find, sed, jq and ssh in Bash and PowerShell</div></div>"}}]}],["$","div","dev_08_floating_point",{"children":["$","a",null,{"href":"/blog/2026/08/25/dev_08_floating_point/","title":"Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-25</div><div class=\"title\">Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money</div></div>"}}]}],["$","div","dev_10_debugging_method",{"children":["$","a",null,{"href":"/blog/2026/08/28/dev_10_debugging_method/","title":"Dev Essentials — 10 · Debugging Method — Stack Traces, Reproduce, Bisect, Debuggers and Profilers","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-28</div><div class=\"title\">Dev Essentials — 10 · Debugging Method — Stack Traces, Reproduce, Bisect, Debuggers and Profilers</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-CR-LF-and-CRLF",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-CR-LF-and-CRLF","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — CR, LF and CRLF"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","Where-they-came-from",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Where-they-came-from","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"Where they came from"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Seeing-the-invisible-bytes",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Seeing-the-invisible-bytes","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Seeing the invisible bytes"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Bash-Git-Bash-Linux-macOS",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Bash-Git-Bash-Linux-macOS","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Bash (Git Bash, Linux, macOS)"}]]}],null]}],["$","li","PowerShell-51",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#PowerShell-51","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"PowerShell 5.1"}]]}],null]}],["$","li","Python",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Python","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"Python"}]]}],null]}],["$","li","In-your-editor",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#In-your-editor","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"In your editor"}]]}],null]}],["$","li","Two-invisible-byte-problems",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Two-invisible-byte-problems","children":[["$","span",null,{"className":"toc-number","children":"3.5."}]," ",["$","span",null,{"className":"toc-text","children":"Two invisible byte problems"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-How-line-endings-break-things",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-How-line-endings-break-things","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — How line endings break things"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","1-Shell-scripts-in-Linux-containers-and-CI",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#1-Shell-scripts-in-Linux-containers-and-CI","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"1. Shell scripts in Linux, containers and CI"}]]}],null]}],["$","li","2-Diffs-where-every-line-changed",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#2-Diffs-where-every-line-changed","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"2. Diffs where every line changed"}]]}],null]}],["$","li","3-Regex-split-and-CSV",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#3-Regex-split-and-CSV","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"3. Regex, split and CSV"}]]}],null]}],["$","li","4-Tests-and-checksums",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#4-Tests-and-checksums","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"4. Tests and checksums"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Gits-conversion-coreautocrlf",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Gits-conversion-coreautocrlf","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Git's conversion: core.autocrlf"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-warning",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-warning","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"The warning"}]]}],null]}],["$","li","The-weakness-it-is-per-machine",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-weakness-it-is-per-machine","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"The weakness: it is per machine"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-gitattributes-rules-that-travel-with-the-repo",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-gitattributes-rules-that-travel-with-the-repo","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — .gitattributes: rules that travel with the repo"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","A-good-default-for-most-projects",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#A-good-default-for-most-projects","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"A good default for most projects"}]]}],null]}],["$","li","LF-everywhere-or-native-endings",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#LF-everywhere-or-native-endings","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"LF everywhere, or native endings?"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-Fixing-an-existing-repository",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-Fixing-an-existing-repository","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — Fixing an existing repository"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Checking-the-result-git-ls-files-eol",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Checking-the-result-git-ls-files-eol","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Checking the result: git ls-files --eol"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Editors-editorconfig",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Editors-editorconfig","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Editors: .editorconfig"}]]}],null]}],["$","li","Chapter-8-—-Converting-files-by-hand",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Converting-files-by-hand","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Converting files by hand"}]]}],null]}],["$","li","Chapter-9-—-Case-study-this-blogs-repository",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Case-study-this-blogs-repository","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Case study: this blog's repository"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Read-the-bytes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Read-the-bytes","children":[["$","span",null,{"className":"toc-number","children":"11.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Read the bytes"}]]}],null]}],["$","li","Exercise-2-—-Works-on-my-machine",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Works-on-my-machine","children":[["$","span",null,{"className":"toc-number","children":"11.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Works on my machine"}]]}],null]}],["$","li","Exercise-3-—-Write-the-attributes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Write-the-attributes","children":[["$","span",null,{"className":"toc-number","children":"11.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Write the attributes"}]]}],null]}],["$","li","Exercise-4-—-Predict-coreautocrlf",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Predict-coreautocrlf","children":[["$","span",null,{"className":"toc-number","children":"11.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Predict core.autocrlf"}]]}],null]}],["$","li","Exercise-5-—-LF-from-Python-on-Windows",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-LF-from-Python-on-Windows","children":[["$","span",null,{"className":"toc-number","children":"11.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — LF from Python on Windows"}]]}],null]}],["$","li","Exercise-6-—-Read-ls-files-eol",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Read-ls-files-eol","children":[["$","span",null,{"className":"toc-number","children":"11.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Read ls-files --eol"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Every line in a text file ends with one or two invisible bytes. Windows usually writes two (CR LF); Linux and macOS write one (LF). Most of the time n"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,Computer Science,Programming,Git,Windows"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes"}],["$","meta","7",{"property":"og:description","content":"Every line in a text file ends with one or two invisible bytes. Windows usually writes two (CR LF); Linux and macOS write one (LF). Most of the time n"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes"}],["$","meta","11",{"name":"twitter:description","content":"Every line in a text file ends with one or two invisible bytes. Windows usually writes two (CR LF); Linux and macOS write one (LF). Most of the time n"}]]
+1:null

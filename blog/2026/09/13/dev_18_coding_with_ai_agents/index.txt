@@ -1,0 +1,717 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","09","d"]
+6:["day","13","d"]
+7:["slug","dev_18_coding_with_ai_agents","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","13","d"],{"children":[["slug","dev_18_coding_with_ai_agents","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"09\",\"day\":\"13\",\"slug\":\"dev_18_coding_with_ai_agents\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","13","d"],{"children":[["slug","dev_18_coding_with_ai_agents","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:51\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T14b8f,<p>An AI coding agent is a language model that can read your files, run commands and edit code in a loop until a task is done. Used well, it removes hours of routine work. Used carelessly, it produces a confident mess, pushes it, and leaves you to find out later. This post explains what an agent really is, then tours one real tool in depth: Claude Code, with its project memory (<code>CLAUDE.md</code>), skills, hooks, subagents, permission modes, MCP servers and cloud sessions. It maps the same ideas onto <code>AGENTS.md</code>, GitHub Copilot and Cursor, gives a workflow that keeps you in charge, and ends with a review checklist and a real case study: the <code>CLAUDE.md</code> that runs this blog. Feature details were checked against the official docs in September 2026. These tools change monthly, so check the docs again before you rely on a detail.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → … → 17 How LLMs Work → <strong>18 Coding with AI Agents</strong> (this post) → 19 RAG → … → 24 Desk Health. Part D · AI tools.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Explain an agent as &quot;model + tools + a loop&quot;, and build a tiny read-only one in Python.</li>
+<li>Write a short, effective <code>CLAUDE.md</code>, and know where Claude Code loads it from.</li>
+<li>Choose between a <code>CLAUDE.md</code> rule, a skill, a hook, a subagent and an MCP server.</li>
+<li>Pick a permission mode, and block irreversible actions with permission rules.</li>
+<li>Know which files reach a cloud session and which stay on your machine.</li>
+<li>Share one instruction file across Claude Code, Copilot and Cursor with <code>AGENTS.md</code>.</li>
+<li>Work in small verified steps, and review AI-written code with a checklist.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-What-an-agent-is-model-tools-a-loop"><a href="#Chapter-1-—-What-an-agent-is-model-tools-a-loop" class="headerlink" title="Chapter 1 — What an agent is: model + tools + a loop"></a>Chapter 1 — What an agent is: model + tools + a loop</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tool</strong></td>
+<td>A function the model may ask to call: read a file, run a command, search the web. Your program runs it, not the model.</td>
+</tr>
+<tr>
+<td><strong>Agent</strong></td>
+<td>A model that calls tools in a loop, reading each result, until it decides the task is done.</td>
+</tr>
+<tr>
+<td><strong>Harness</strong></td>
+<td>The program around the model: it runs the loop, the tools, the permissions and the context. Claude Code, Cursor and Copilot are harnesses.</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Everything the model can see this turn: instructions, history, file contents, tool results (see Dev Essentials 17 · How LLMs Work).</td>
+</tr>
+<tr>
+<td><strong>MCP</strong></td>
+<td>Model Context Protocol, an open protocol for plugging external tools and data sources into a harness.</td>
+</tr>
+</tbody>
+</table>
+<p>Post 17 ended with tool use: the model answers with a structured call, your code runs it, and you send the result back. Put that in a loop and you have an agent. Here is a complete, <strong>read-only</strong> one. It can list and read files inside the current folder and nothing else:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># mini_agent.py - a read-only coding agent: model + tools + a loop</span></span><br><span class="line"><span class="hljs-keyword">import</span> pathlib</span><br><span class="line"><span class="hljs-keyword">import</span> anthropic</span><br><span class="line"> </span><br><span class="line">client = anthropic.Anthropic()</span><br><span class="line">ROOT = pathlib.Path(<span class="hljs-string">&quot;.&quot;</span>).resolve()</span><br><span class="line">TOOLS = [</span><br><span class="line">    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;list_files&quot;</span>,</span><br><span class="line">     <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;List project files under a folder, relative to the project root. Use &#x27;.&#x27; for the root.&quot;</span>,</span><br><span class="line">     <span class="hljs-string">&quot;input_schema&quot;</span>: {<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>, <span class="hljs-string">&quot;properties&quot;</span>: {<span class="hljs-string">&quot;folder&quot;</span>: {<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>}}, <span class="hljs-string">&quot;required&quot;</span>: [<span class="hljs-string">&quot;folder&quot;</span>]}},</span><br><span class="line">    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;read_file&quot;</span>,</span><br><span class="line">     <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Read one UTF-8 text file from the project.&quot;</span>,</span><br><span class="line">     <span class="hljs-string">&quot;input_schema&quot;</span>: {<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>, <span class="hljs-string">&quot;properties&quot;</span>: {<span class="hljs-string">&quot;path&quot;</span>: {<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>}}, <span class="hljs-string">&quot;required&quot;</span>: [<span class="hljs-string">&quot;path&quot;</span>]}},</span><br><span class="line">]</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">inside_project</span>(<span class="hljs-params">path</span>):</span><br><span class="line">    p = (ROOT / path).resolve()</span><br><span class="line">    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> p.is_relative_to(ROOT):                  <span class="hljs-comment"># refuse ../../ tricks</span></span><br><span class="line">        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&quot;path is outside the project&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">return</span> p</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">run_tool</span>(<span class="hljs-params">name, args</span>):</span><br><span class="line">    <span class="hljs-keyword">if</span> name == <span class="hljs-string">&quot;list_files&quot;</span>:</span><br><span class="line">        files = [p.relative_to(ROOT).as_posix() <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(inside_project(args[<span class="hljs-string">&quot;folder&quot;</span>]).rglob(<span class="hljs-string">&quot;*&quot;</span>))</span><br><span class="line">                 <span class="hljs-keyword">if</span> p.is_file() <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">any</span>(part.startswith(<span class="hljs-string">&quot;.&quot;</span>) <span class="hljs-keyword">for</span> part <span class="hljs-keyword">in</span> p.relative_to(ROOT).parts)]</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;\n&quot;</span>.join(files[:<span class="hljs-number">500</span>])</span><br><span class="line">    <span class="hljs-keyword">if</span> name == <span class="hljs-string">&quot;read_file&quot;</span>:</span><br><span class="line">        <span class="hljs-keyword">return</span> inside_project(args[<span class="hljs-string">&quot;path&quot;</span>]).read_text(encoding=<span class="hljs-string">&quot;utf-8&quot;</span>)[:<span class="hljs-number">20_000</span>]</span><br><span class="line">    <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">f&quot;unknown tool: <span class="hljs-subst">{name}</span>&quot;</span>)</span><br><span class="line"> </span><br><span class="line">messages = [{<span class="hljs-string">&quot;role&quot;</span>: <span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;What does this project do? Read the files before you answer.&quot;</span>}]</span><br><span class="line"><span class="hljs-keyword">for</span> turn <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):                                <span class="hljs-comment"># hard cap: never loop forever</span></span><br><span class="line">    response = client.messages.create(model=<span class="hljs-string">&quot;claude-opus-5-5&quot;</span>, max_tokens=<span class="hljs-number">16000</span>,</span><br><span class="line">                                      tools=TOOLS, messages=messages)</span><br><span class="line">    messages.append({<span class="hljs-string">&quot;role&quot;</span>: <span class="hljs-string">&quot;assistant&quot;</span>, <span class="hljs-string">&quot;content&quot;</span>: response.content})</span><br><span class="line">    <span class="hljs-keyword">if</span> response.stop_reason != <span class="hljs-string">&quot;tool_use&quot;</span>:</span><br><span class="line">        <span class="hljs-keyword">break</span></span><br><span class="line">    results = []</span><br><span class="line">    <span class="hljs-keyword">for</span> block <span class="hljs-keyword">in</span> response.content:</span><br><span class="line">        <span class="hljs-keyword">if</span> block.<span class="hljs-built_in">type</span> == <span class="hljs-string">&quot;tool_use&quot;</span>:</span><br><span class="line">            <span class="hljs-keyword">try</span>:</span><br><span class="line">                output, failed = run_tool(block.name, block.<span class="hljs-built_in">input</span>), <span class="hljs-literal">False</span></span><br><span class="line">            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> exc:                  <span class="hljs-comment"># report errors back to the model</span></span><br><span class="line">                output, failed = <span class="hljs-string">f&quot;Error: <span class="hljs-subst">{exc}</span>&quot;</span>, <span class="hljs-literal">True</span></span><br><span class="line">            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;[tool] <span class="hljs-subst">{block.name}</span>(<span class="hljs-subst">{block.<span class="hljs-built_in">input</span>}</span>) -&gt; <span class="hljs-subst">{<span class="hljs-built_in">len</span>(output)}</span> chars&quot;</span>)</span><br><span class="line">            results.append({<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;tool_result&quot;</span>, <span class="hljs-string">&quot;tool_use_id&quot;</span>: block.<span class="hljs-built_in">id</span>,</span><br><span class="line">                            <span class="hljs-string">&quot;content&quot;</span>: output, <span class="hljs-string">&quot;is_error&quot;</span>: failed})</span><br><span class="line">    messages.append({<span class="hljs-string">&quot;role&quot;</span>: <span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;content&quot;</span>: results})    <span class="hljs-comment"># all results in one message</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&quot;</span>.join(b.text <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> response.content <span class="hljs-keyword">if</span> b.<span class="hljs-built_in">type</span> == <span class="hljs-string">&quot;text&quot;</span>))</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Run it from inside any small project folder. Three details carry over to every real agent:</p>
+<ul>
+<li><strong>The loop has a hard cap.</strong> An agent that never stops burns money.</li>
+<li><strong>Tools check their inputs.</strong> <code>inside_project</code> refuses paths like <code>../../secrets</code>. The model's arguments are untrusted input.</li>
+<li><strong>The whole assistant turn goes back into the history</strong>, including any <code>thinking</code> blocks, and all tool results go back in one user message.</li>
+</ul>
+<p>Now add a <code>write_file</code> tool and a <code>run_command</code> tool, and you have a real coding agent. You also have a real risk. A production harness exists to manage exactly that risk: which actions need a human's approval, what fits in the context, and how to recover from mistakes. The rest of this post is about using those controls well.</p>
+<hr>
+<h1 id="Chapter-2-—-Claude-Code-project-memory-with-CLAUDEmd"><a href="#Chapter-2-—-Claude-Code-project-memory-with-CLAUDEmd" class="headerlink" title="Chapter 2 — Claude Code: project memory with CLAUDE.md"></a>Chapter 2 — Claude Code: project memory with <a href="http://CLAUDE.md" target="_blank" rel="noopener external nofollow noreferrer">CLAUDE.md</a></h1>
+<p>Claude Code is Anthropic's coding agent. It runs in the terminal, in IDEs, in a desktop app and in the cloud. Each session starts with a fresh context window, so knowledge that must survive between sessions lives in files.</p>
+<h2 id="Where-CLAUDEmd-files-live"><a href="#Where-CLAUDEmd-files-live" class="headerlink" title="Where CLAUDE.md files live"></a>Where <a href="http://CLAUDE.md" target="_blank" rel="noopener external nofollow noreferrer">CLAUDE.md</a> files live</h2>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Location</th>
+<th>Shared with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Managed policy</td>
+<td>Set by IT, e.g. <code>C:\Program Files\ClaudeCode\CLAUDE.md</code> on Windows</td>
+<td>Everyone in the organisation</td>
+</tr>
+<tr>
+<td>User</td>
+<td><code>~/.claude/CLAUDE.md</code></td>
+<td>Just you, all projects</td>
+</tr>
+<tr>
+<td>Project</td>
+<td><code>./CLAUDE.md</code> or <code>./.claude/CLAUDE.md</code></td>
+<td>The team, through git</td>
+</tr>
+<tr>
+<td>Local</td>
+<td><code>./CLAUDE.local.md</code> (add it to <code>.gitignore</code>)</td>
+<td>Just you, this project</td>
+</tr>
+</tbody>
+</table>
+<p>How they load (official docs, September 2026):</p>
+<ul>
+<li>At launch, Claude Code reads <code>CLAUDE.md</code> and <code>CLAUDE.local.md</code> from the working directory <strong>and every directory above it</strong>.</li>
+<li>Files are <strong>joined together, not overridden</strong>. Content runs from the filesystem root down to the working directory, so the closest instructions are read last.</li>
+<li>A <code>CLAUDE.md</code> inside a <strong>subdirectory</strong> loads later, when Claude reads files in that subdirectory.</li>
+<li><code>@path/to/file</code> inside a <code>CLAUDE.md</code> imports another file (up to four hops deep).</li>
+<li><code>/init</code> generates a starting file; <code>/memory</code> and <code>/context</code> show which files actually loaded.</li>
+</ul>
+<h2 id="What-to-write"><a href="#What-to-write" class="headerlink" title="What to write"></a>What to write</h2>
+<p>The docs suggest staying <strong>under 200 lines</strong>: every line costs context in every session, and long files reduce how well rules are followed. Write down what Claude cannot guess by reading the code:</p>
+<ul>
+<li>build, test and lint commands,</li>
+<li>style rules that differ from the language defaults,</li>
+<li>project layout and naming conventions,</li>
+<li>&quot;never do X&quot; rules, each with the <strong>reason</strong>,</li>
+<li>known traps in this repository.</li>
+</ul>
+<p>Leave out what the code already shows, long tutorials, and file-by-file descriptions. For every line, ask: &quot;Would removing this cause a mistake?&quot;</p>
+<blockquote>
+<p><strong>Trick:</strong> block-level HTML comments (<code>&lt;!-- note for humans --&gt;</code>) in a <code>CLAUDE.md</code> are stripped before the text reaches the model. Use them for notes to maintainers.</p>
+</blockquote>
+<h2 id="Rules-and-memory-Claude-writes-itself"><a href="#Rules-and-memory-Claude-writes-itself" class="headerlink" title="Rules, and memory Claude writes itself"></a>Rules, and memory Claude writes itself</h2>
+<ul>
+<li><strong><code>.claude/rules/*.md</code></strong> splits instructions by topic. A rule with a <code>paths:</code> list in its frontmatter (for example <code>&quot;src/api/**/*.ts&quot;</code>) only loads when Claude works on matching files.</li>
+<li><strong>Auto memory</strong> is a separate store of notes Claude writes about your corrections and preferences. It is loaded every session (the first 200 lines or 25KB).</li>
+</ul>
+<blockquote>
+<p><strong>Watch out:</strong> <code>CLAUDE.md</code> is <strong>context, not configuration</strong>. The docs are explicit: Claude treats it as guidance, and to block an action no matter what the model decides, you need a hook or a permission rule (Chapters 3 and 4).</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-Skills-hooks-and-subagents"><a href="#Chapter-3-—-Skills-hooks-and-subagents" class="headerlink" title="Chapter 3 — Skills, hooks and subagents"></a>Chapter 3 — Skills, hooks and subagents</h1>
+<h2 id="Skills-knowledge-and-workflows-loaded-on-demand"><a href="#Skills-knowledge-and-workflows-loaded-on-demand" class="headerlink" title="Skills: knowledge and workflows loaded on demand"></a>Skills: knowledge and workflows loaded on demand</h2>
+<p>A skill is a folder with a <code>SKILL.md</code> file. Project skills live in <code>.claude/skills/&lt;name&gt;/SKILL.md</code>, personal ones in <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>. Only each skill's <strong>description</strong> sits in context all the time. The full body loads when you type <code>/&lt;name&gt;</code> or when Claude decides the description matches the task.</p>
+<pre><code class="language-markdown"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="markdown"><span class="line">---</span><br><span class="line">name: release-notes</span><br><span class="line">description: Draft release notes from merged changes. Use when the user asks for release notes or a changelog entry.</span><br><span class="line"><span class="hljs-section">disable-model-invocation: true</span><br><span class="line">---</span></span><br><span class="line"><span class="hljs-bullet">1.</span> Run <span class="hljs-code">`git log --oneline &lt;last-tag&gt;..HEAD`</span> to list the changes.</span><br><span class="line"><span class="hljs-bullet">2.</span> Group them under Added, Changed, Fixed. Skip merge commits and chores.</span><br><span class="line"><span class="hljs-bullet">3.</span> Write the notes to <span class="hljs-code">`RELEASE_NOTES.md`</span>. Do not commit.</span><br><span class="line"><span class="hljs-bullet">4.</span> Show the draft and list anything you were unsure how to classify.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>disable-model-invocation: true</code> means only you can start it with <code>/release-notes</code>. Use that for any workflow with side effects.</p>
+<h2 id="Hooks-things-that-must-happen-every-time"><a href="#Hooks-things-that-must-happen-every-time" class="headerlink" title="Hooks: things that must happen every time"></a>Hooks: things that must happen every time</h2>
+<p>A hook is a command that Claude Code runs at a lifecycle event, such as <code>SessionStart</code>, <code>UserPromptSubmit</code>, <code>PreToolUse</code> (before a tool call, can block it), <code>PostToolUse</code> (after a tool call succeeds) or <code>Stop</code> (when Claude finishes). Hooks are <strong>deterministic</strong>: they fire whether or not the model remembers a rule. They live in <code>~/.claude/settings.json</code> (all your projects), <code>.claude/settings.json</code> (the project, can be committed) or <code>.claude/settings.local.json</code> (the project, just you).</p>
+<p>The official docs' example formats every edited file with Prettier:</p>
+<pre><code class="language-json"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="json"><span class="line"><span class="hljs-punctuation">{</span></span><br><span class="line">  <span class="hljs-attr">&quot;hooks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span></span><br><span class="line">    <span class="hljs-attr">&quot;PostToolUse&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span></span><br><span class="line">      <span class="hljs-punctuation">{</span></span><br><span class="line">        <span class="hljs-attr">&quot;matcher&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Edit|Write&quot;</span><span class="hljs-punctuation">,</span></span><br><span class="line">        <span class="hljs-attr">&quot;hooks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span></span><br><span class="line">          <span class="hljs-punctuation">{</span> <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;command&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;jq -r &#x27;.tool_input.file_path&#x27; | xargs npx prettier --write&quot;</span> <span class="hljs-punctuation">}</span></span><br><span class="line">        <span class="hljs-punctuation">]</span></span><br><span class="line">      <span class="hljs-punctuation">}</span></span><br><span class="line">    <span class="hljs-punctuation">]</span></span><br><span class="line">  <span class="hljs-punctuation">}</span></span><br><span class="line"><span class="hljs-punctuation">}</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The hook receives the event as JSON on standard input; <code>.tool_input.file_path</code> is the edited file. <code>jq</code> must be on your <code>PATH</code>. On Windows, Claude Code runs shell-form hooks with Git Bash (or PowerShell if Git Bash is not installed), so a Python script is often the most portable choice. Here is a guard that stops Claude from editing secret files:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># .claude/hooks/protect_secrets.py - PreToolUse hook: block edits to secret files</span></span><br><span class="line"><span class="hljs-keyword">import</span> json</span><br><span class="line"><span class="hljs-keyword">import</span> sys</span><br><span class="line"> </span><br><span class="line">event = json.load(sys.stdin)                          <span class="hljs-comment"># Claude Code sends the event as JSON</span></span><br><span class="line">path = event.get(<span class="hljs-string">&quot;tool_input&quot;</span>, {}).get(<span class="hljs-string">&quot;file_path&quot;</span>, <span class="hljs-string">&quot;&quot;</span>).replace(<span class="hljs-string">&quot;\\&quot;</span>, <span class="hljs-string">&quot;/&quot;</span>)</span><br><span class="line">name = path.rsplit(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-number">1</span>)[-<span class="hljs-number">1</span>]</span><br><span class="line"><span class="hljs-keyword">if</span> name == <span class="hljs-string">&quot;.env&quot;</span> <span class="hljs-keyword">or</span> name.startswith(<span class="hljs-string">&quot;.env.&quot;</span>) <span class="hljs-keyword">or</span> name.endswith((<span class="hljs-string">&quot;.pem&quot;</span>, <span class="hljs-string">&quot;.key&quot;</span>)):</span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Blocked: <span class="hljs-subst">{path}</span> holds secrets. Ask the user to edit it by hand.&quot;</span>, file=sys.stderr)</span><br><span class="line">    sys.exit(<span class="hljs-number">2</span>)                                       <span class="hljs-comment"># 2 = block; stderr goes back to Claude</span></span><br><span class="line">sys.exit(<span class="hljs-number">0</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-json"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="json"><span class="line"><span class="hljs-punctuation">{</span></span><br><span class="line">  <span class="hljs-attr">&quot;hooks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span></span><br><span class="line">    <span class="hljs-attr">&quot;PreToolUse&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span></span><br><span class="line">      <span class="hljs-punctuation">{</span></span><br><span class="line">        <span class="hljs-attr">&quot;matcher&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Edit|Write&quot;</span><span class="hljs-punctuation">,</span></span><br><span class="line">        <span class="hljs-attr">&quot;hooks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span></span><br><span class="line">          <span class="hljs-punctuation">{</span> <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;command&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;python \&quot;$CLAUDE_PROJECT_DIR\&quot;/.claude/hooks/protect_secrets.py&quot;</span> <span class="hljs-punctuation">}</span></span><br><span class="line">        <span class="hljs-punctuation">]</span></span><br><span class="line">      <span class="hljs-punctuation">}</span></span><br><span class="line">    <span class="hljs-punctuation">]</span></span><br><span class="line">  <span class="hljs-punctuation">}</span></span><br><span class="line"><span class="hljs-punctuation">}</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Common pitfall:</strong> exiting with code 1 to &quot;fail&quot;. For most events, <strong>only exit code 2 blocks</strong>; exit 1 is a non-blocking error and the action goes ahead. And <code>PostToolUse</code> cannot block at all, because the tool already ran.</p>
+</blockquote>
+<h2 id="Subagents-a-separate-context-for-side-jobs"><a href="#Subagents-a-separate-context-for-side-jobs" class="headerlink" title="Subagents: a separate context for side jobs"></a>Subagents: a separate context for side jobs</h2>
+<p>A subagent is a helper with <strong>its own context window</strong>. It does a noisy job (searching many files, reading long logs, reviewing a diff) and returns only a summary, so your main conversation stays clean. Claude Code ships with built-in ones (Explore, Plan and general-purpose), and you can define your own in <code>.claude/agents/</code> (project) or <code>~/.claude/agents/</code> (personal):</p>
+<pre><code class="language-markdown"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span></pre></td><td class="code"><pre><code class="markdown"><span class="line">---</span><br><span class="line">name: diff-reviewer</span><br><span class="line">description: Reviews the current uncommitted diff for bugs, missing tests and leaked secrets. Use after a change is finished.</span><br><span class="line">tools: Read, Grep, Glob, Bash</span><br><span class="line"><span class="hljs-section">model: sonnet</span><br><span class="line">---</span></span><br><span class="line">You review diffs. Run <span class="hljs-code">`git diff`</span> and read every changed file in full.</span><br><span class="line">Report only real problems: bugs, missing or weakened tests, secrets, unsafe input handling.</span><br><span class="line">Give file and line for each finding. Do not edit files.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<h2 id="Which-one-do-I-need"><a href="#Which-one-do-I-need" class="headerlink" title="Which one do I need?"></a>Which one do I need?</h2>
+<table>
+<thead>
+<tr>
+<th>You want...</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude to always know a fact or rule</td>
+<td><code>CLAUDE.md</code> (or a path-scoped rule)</td>
+</tr>
+<tr>
+<td>A playbook or reference used sometimes</td>
+<td>Skill</td>
+</tr>
+<tr>
+<td>Something to happen every time, no exceptions</td>
+<td>Hook</td>
+</tr>
+<tr>
+<td>A noisy side task kept out of your context</td>
+<td>Subagent</td>
+</tr>
+<tr>
+<td>Access to an outside system (issue tracker, database, browser)</td>
+<td>MCP server</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Chapter-4-—-Permissions-MCP-and-cloud-sessions"><a href="#Chapter-4-—-Permissions-MCP-and-cloud-sessions" class="headerlink" title="Chapter 4 — Permissions, MCP and cloud sessions"></a>Chapter 4 — Permissions, MCP and cloud sessions</h1>
+<h2 id="Permission-modes"><a href="#Permission-modes" class="headerlink" title="Permission modes"></a>Permission modes</h2>
+<p>A permission mode decides what Claude may do <strong>without asking</strong>. The official list (September 2026):</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Runs without asking</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code> (shown as <strong>Manual</strong>)</td>
+<td>Reads only</td>
+<td>Sensitive work, unfamiliar code</td>
+</tr>
+<tr>
+<td><code>acceptEdits</code></td>
+<td>Reads, file edits, common filesystem commands</td>
+<td>Iterating on code you are reviewing</td>
+</tr>
+<tr>
+<td><code>plan</code></td>
+<td>Reads (Claude proposes a plan, no edits)</td>
+<td>Exploring before changing anything</td>
+</tr>
+<tr>
+<td><code>auto</code></td>
+<td>Everything, with a classifier model checking each action</td>
+<td>Long tasks, less prompt fatigue</td>
+</tr>
+<tr>
+<td><code>dontAsk</code></td>
+<td>Only pre-approved tools; everything else is denied</td>
+<td>Locked-down CI and scripts</td>
+</tr>
+<tr>
+<td><code>bypassPermissions</code></td>
+<td>Everything</td>
+<td>Isolated containers and VMs <strong>only</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Switch modes with Shift+Tab in the CLI, or start with <code>claude --permission-mode plan</code>. On some plans <code>auto</code> is the default starting mode, so check which mode you are in.</p>
+<h2 id="Permission-rules-make-the-dangerous-things-impossible"><a href="#Permission-rules-make-the-dangerous-things-impossible" class="headerlink" title="Permission rules: make the dangerous things impossible"></a>Permission rules: make the dangerous things impossible</h2>
+<p>Modes set the baseline. <strong>Rules</strong> add exact allow, ask and deny lists in the same settings files as hooks. Rules are checked in the order <strong>deny, then ask, then allow</strong>, and the first match wins, so a broad deny always beats a narrow allow.</p>
+<pre><code class="language-json"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="json"><span class="line"><span class="hljs-punctuation">{</span></span><br><span class="line">  <span class="hljs-attr">&quot;permissions&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span></span><br><span class="line">    <span class="hljs-attr">&quot;allow&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Bash(npm run test *)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Bash(git status)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Bash(git diff *)&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span></span><br><span class="line">    <span class="hljs-attr">&quot;ask&quot;</span><span class="hljs-punctuation">:</span>   <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Bash(git commit *)&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span></span><br><span class="line">    <span class="hljs-attr">&quot;deny&quot;</span><span class="hljs-punctuation">:</span>  <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Bash(git push *)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Read(./.env)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Read(./secrets/**)&quot;</span><span class="hljs-punctuation">]</span></span><br><span class="line">  <span class="hljs-punctuation">}</span></span><br><span class="line"><span class="hljs-punctuation">}</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Watch out:</strong> a Bash rule matches the command <strong>as written</strong>. The docs note that <code>git -C . push</code> does not match <code>Bash(git push *)</code>. Treat rules as a strong guard rail, not a sandbox. For real isolation, use Claude Code's sandbox, a container or a VM.</p>
+</blockquote>
+<h2 id="MCP-servers"><a href="#MCP-servers" class="headerlink" title="MCP servers"></a>MCP servers</h2>
+<p>MCP servers give Claude new tools: your issue tracker, a database, a browser. Add one with <code>claude mcp add</code>:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">claude mcp add --transport http docs-search https://example.com/mcp                  <span class="hljs-comment"># just you, this project</span></span><br><span class="line">claude mcp add --transport http docs-search --scope project https://example.com/mcp  <span class="hljs-comment"># writes .mcp.json for the team</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The scopes are <strong>local</strong> (default, stored in <code>~/.claude.json</code>), <strong>project</strong> (<code>.mcp.json</code> at the repo root, shared through git) and <strong>user</strong> (all your projects). The docs warn that you should trust every server you connect: a server that fetches outside content can carry a <strong>prompt injection</strong>, which is text written to make the model do something you did not ask for.</p>
+<h2 id="Cloud-sessions-only-committed-files-travel"><a href="#Cloud-sessions-only-committed-files-travel" class="headerlink" title="Cloud sessions: only committed files travel"></a>Cloud sessions: only committed files travel</h2>
+<p>A cloud session (started at <a href="http://claude.ai/code" target="_blank" rel="noopener external nofollow noreferrer">claude.ai/code</a>, from the desktop or mobile app, or with <code>claude --cloud &quot;task&quot;</code>) runs on a <strong>fresh clone of your GitHub repository</strong>, on Anthropic-managed infrastructure. <code>--cloud</code> clones your remote at the current branch, not your local checkout, so push first if you have local commits. What reaches the session (official docs, September 2026):</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>In a cloud session?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repo <code>CLAUDE.md</code> and <code>.claude/rules/</code></td>
+<td>Yes, part of the clone</td>
+</tr>
+<tr>
+<td>Repo <code>.claude/settings.json</code> hooks and permission rules</td>
+<td>Yes, in a single-repository session</td>
+</tr>
+<tr>
+<td>Repo <code>.mcp.json</code></td>
+<td>Yes, in a single-repository session</td>
+</tr>
+<tr>
+<td>Repo <code>.claude/skills/</code>, <code>.claude/agents/</code>, <code>.claude/commands/</code></td>
+<td>Yes, part of the clone</td>
+</tr>
+<tr>
+<td><code>~/.claude/CLAUDE.md</code>, <code>~/.claude/skills/</code>, <code>~/.claude/agents/</code></td>
+<td><strong>No</strong>, they live on your machine</td>
+</tr>
+<tr>
+<td><code>~/.claude/settings.json</code>, <code>.claude/settings.local.json</code></td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>MCP servers added at local or user scope</td>
+<td><strong>No</strong>; add them with <code>--scope project</code> and commit <code>.mcp.json</code></td>
+</tr>
+<tr>
+<td>Plugins, gitignored files, uncommitted changes</td>
+<td><strong>No</strong></td>
+</tr>
+</tbody>
+</table>
+<p>In short: <strong>if it is not committed, the cloud session cannot see it.</strong> Git pushes from a cloud session are limited to the session's working branch, and you create the pull request when you are happy with it.</p>
+<hr>
+<h1 id="Chapter-5-—-One-instruction-file-for-many-tools"><a href="#Chapter-5-—-One-instruction-file-for-many-tools" class="headerlink" title="Chapter 5 — One instruction file for many tools"></a>Chapter 5 — One instruction file for many tools</h1>
+<p>Every agent tool invented its own instruction file. The common ground today:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Where it reads instructions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Many agents (Codex, Jules, Cursor, Copilot, Aider, Zed and others)</td>
+<td><code>AGENTS.md</code>, an open format now stewarded by the Agentic AI Foundation under the Linux Foundation. The nearest file up the directory tree wins.</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><code>CLAUDE.md</code>. Since v2.1.277 it also reads <code>AGENTS.md</code>, but by default only when no <code>CLAUDE.md</code> or <code>CLAUDE.local.md</code> exists in the working directory or above it.</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td><code>.github/copilot-instructions.md</code> for the whole repo; <code>.github/instructions/NAME.instructions.md</code> with an <code>applyTo</code> glob for parts of it; also <code>AGENTS.md</code> anywhere, or <code>CLAUDE.md</code> / <code>GEMINI.md</code> at the root.</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>.cursor/rules/*.mdc</code> rules (always, by description, by file glob, or manual); also <code>AGENTS.md</code>, including nested ones.</td>
+</tr>
+</tbody>
+</table>
+<p>The simplest way to keep one source of truth: put shared rules in <code>AGENTS.md</code>, and make <code>CLAUDE.md</code> import it, then add Claude-only notes below:</p>
+<pre><code class="language-markdown"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="markdown"><span class="line">@AGENTS.md</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Claude Code only</span></span><br><span class="line"><span class="hljs-bullet">-</span> Use the <span class="hljs-code">`diff-reviewer`</span> subagent before you say a change is done.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The Claude Code docs recommend this import over a <code>CLAUDE.md</code> → <code>AGENTS.md</code> symlink when anyone uses Windows: symlinks need Developer Mode or Administrator rights there, and Git may check a committed symlink out as a one-line text file.</p>
+<hr>
+<h1 id="Chapter-6-—-A-workflow-that-keeps-you-in-charge"><a href="#Chapter-6-—-A-workflow-that-keeps-you-in-charge" class="headerlink" title="Chapter 6 — A workflow that keeps you in charge"></a>Chapter 6 — A workflow that keeps you in charge</h1>
+<h2 id="Plan-then-small-steps-then-verify-each-one"><a href="#Plan-then-small-steps-then-verify-each-one" class="headerlink" title="Plan, then small steps, then verify each one"></a>Plan, then small steps, then verify each one</h2>
+<p>The Claude Code best-practices guide describes four phases, and they fit any agent:</p>
+<ol>
+<li><strong>Explore.</strong> In plan mode, ask the agent to read the relevant code and explain it. No edits yet.</li>
+<li><strong>Plan.</strong> Ask for a written plan: files to change, order of steps, tests to add. Edit the plan yourself. Skip planning only when you could describe the diff in one sentence.</li>
+<li><strong>Implement in small steps.</strong> One step, then a check, then the next step.</li>
+<li><strong>Commit.</strong> Small commits with real messages, so any step can be reverted (see Dev Essentials 03 · Git Rescue Kit).</li>
+</ol>
+<p>The most useful single habit: <strong>give the agent a check it can run.</strong> Tests, a build, a linter, a script that compares output. The guide puts it plainly: without a check, &quot;looks done&quot; is the only signal, and you become the verification loop.</p>
+<h2 id="Give-context-the-way-you-would-to-a-new-colleague"><a href="#Give-context-the-way-you-would-to-a-new-colleague" class="headerlink" title="Give context the way you would to a new colleague"></a>Give context the way you would to a new colleague</h2>
+<table>
+<thead>
+<tr>
+<th>Weak prompt</th>
+<th>Strong prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;fix the login bug&quot;</td>
+<td>&quot;Users are logged out after a session timeout. Check the token refresh in <code>src/auth/</code>. Write a failing test that shows it, then fix it.&quot;</td>
+</tr>
+<tr>
+<td>&quot;add tests for <a href="http://foo.py" target="_blank" rel="noopener external nofollow noreferrer">foo.py</a>&quot;</td>
+<td>&quot;Add a test for <code>foo.py</code> covering a logged-out user. Avoid mocks. Run <code>pytest tests/test_foo.py</code>.&quot;</td>
+</tr>
+<tr>
+<td>&quot;the build fails&quot;</td>
+<td>Paste the <strong>exact</strong> error, the command you ran, and what changed since it last passed.</td>
+</tr>
+</tbody>
+</table>
+<p>Name the files, paste real errors, state the constraints (versions, &quot;do not change the public API&quot;), and say what &quot;done&quot; means.</p>
+<h2 id="Keep-the-human-in-charge-of-irreversible-actions"><a href="#Keep-the-human-in-charge-of-irreversible-actions" class="headerlink" title="Keep the human in charge of irreversible actions"></a>Keep the human in charge of irreversible actions</h2>
+<p>Pushing, deploying, deleting data, running migrations, sending messages, and changing CI secrets are one-way doors. Let the agent <strong>prepare</strong> them. You <strong>do</strong> them. Enforce that with deny or ask rules (Chapter 4), not only with a sentence in <code>CLAUDE.md</code>.</p>
+<h2 id="Manage-context-like-a-scarce-resource"><a href="#Manage-context-like-a-scarce-resource" class="headerlink" title="Manage context like a scarce resource"></a>Manage context like a scarce resource</h2>
+<ul>
+<li><code>/clear</code> between unrelated tasks. A clean session with a better prompt usually beats a long one full of failed attempts.</li>
+<li>After two failed corrections on the same issue, stop, <code>/clear</code>, and rewrite the prompt with what you learned.</li>
+<li>Send research to a subagent so only the summary enters your context.</li>
+<li>Checkpoints (<code>Esc</code> <code>Esc</code> or <code>/rewind</code>) can undo Claude's file edits, but not changes made by shell commands. They are not a replacement for git.</li>
+</ul>
+<hr>
+<h1 id="Chapter-7-—-Reviewing-AI-output"><a href="#Chapter-7-—-Reviewing-AI-output" class="headerlink" title="Chapter 7 — Reviewing AI output"></a>Chapter 7 — Reviewing AI output</h1>
+<p>You own every line you merge, whoever typed it. Review AI-written changes at least as strictly as a new colleague's.</p>
+<h2 id="The-checklist"><a href="#The-checklist" class="headerlink" title="The checklist"></a>The checklist</h2>
+<ol>
+<li><strong>Read the whole diff.</strong> <code>git diff</code> and <code>git diff --staged</code>, every file. Look for changes outside the task.</li>
+<li><strong>Run the tests yourself</strong>, and check the tests were not weakened: deleted assertions, new <code>skip</code> or <code>xfail</code> markers, loosened expected values, <code>.only</code> left in (see Dev Essentials 15 · Testing).</li>
+<li><strong>Check every API, flag and config key you do not know.</strong> Open the official docs, run <code>--help</code>, or import it in a REPL. Invented functions and flags look perfectly plausible.</li>
+<li><strong>Check every new dependency.</strong> Does the package exist, is it the one you meant, is it maintained? Spracklen et al. (USENIX Security 2025) found code models suggesting packages that do not exist: at least 5.2% of suggested packages for commercial models and 21.7% for open-source models (independent measurement). Attackers can register those names (see Dev Essentials 09 · Versions &amp; Dependencies).</li>
+<li><strong>Security.</strong> Injection, missing authorisation checks, disabled TLS verification, unsafe deserialisation, overly broad CORS (see Dev Essentials 12 · OWASP Top 10). Claude Code has a <code>/security-review</code> command for a first pass, but it does not replace your own review.</li>
+<li><strong>Secrets.</strong> No keys, tokens or passwords in code, tests, logs or fixtures. A quick scan:</li>
+</ol>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line">git diff --staged | grep -inE <span class="hljs-string">&quot;api[_-]?key|secret|token|password|BEGIN .*PRIVATE KEY&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="powershell"><span class="line">git <span class="hljs-built_in">diff</span> <span class="hljs-literal">--staged</span> | <span class="hljs-built_in">Select-String</span> <span class="hljs-literal">-Pattern</span> <span class="hljs-string">&#x27;api[_-]?key|secret|token|password|BEGIN .*PRIVATE KEY&#x27;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<ol start="7">
+<li><strong>Licensing.</strong> Large blocks that look copied from elsewhere, removed license headers, new dependencies with incompatible licenses.</li>
+<li><strong>Text hygiene.</strong> Encoding, line endings and bulk reformatting noise (see Dev Essentials 01 · Text Encoding and 04 · Line Endings).</li>
+</ol>
+<blockquote>
+<p><strong>Trick:</strong> use a second, fresh reviewer. A new session or subagent that sees only the diff and your criteria is not biased by the reasoning that produced the change. Claude Code's bundled <code>/code-review</code> skill runs such a review in a fresh subagent.</p>
+</blockquote>
+<h2 id="Common-failure-modes"><a href="#Common-failure-modes" class="headerlink" title="Common failure modes"></a>Common failure modes</h2>
+<table>
+<thead>
+<tr>
+<th>Failure</th>
+<th>What it looks like</th>
+<th>Guard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invented APIs</td>
+<td>Plausible method or flag that does not exist</td>
+<td>Docs, <code>--help</code>, run it</td>
+</tr>
+<tr>
+<td>Scope creep</td>
+<td>&quot;While I was there I also refactored...&quot;</td>
+<td>Small tasks; read the whole diff</td>
+</tr>
+<tr>
+<td>Test tampering</td>
+<td>Tests pass because they were changed</td>
+<td>Review test diffs first</td>
+</tr>
+<tr>
+<td>&quot;Looks done&quot;</td>
+<td>Stops without running anything</td>
+<td>Give a runnable check; ask for evidence</td>
+</tr>
+<tr>
+<td>Ignored rules</td>
+<td>A long <code>CLAUDE.md</code> where rules get lost</td>
+<td>Keep it short; use hooks for hard rules</td>
+</tr>
+<tr>
+<td>Endless exploration</td>
+<td>Reads hundreds of files, context fills up</td>
+<td>Scope the task; use a subagent</td>
+</tr>
+<tr>
+<td>Prompt injection</td>
+<td>Follows instructions found in a web page, issue or file</td>
+<td>Treat fetched text as data; keep approvals on</td>
+</tr>
+<tr>
+<td>Bulk-edit damage</td>
+<td>A script rewrites many files in the wrong encoding</td>
+<td>Verify command after bulk edits (Chapter 8)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Chapter-8-—-Case-study-the-CLAUDEmd-behind-this-blog"><a href="#Chapter-8-—-Case-study-the-CLAUDEmd-behind-this-blog" class="headerlink" title="Chapter 8 — Case study: the CLAUDE.md behind this blog"></a>Chapter 8 — Case study: the <a href="http://CLAUDE.md" target="_blank" rel="noopener external nofollow noreferrer">CLAUDE.md</a> behind this blog</h1>
+<p>This blog is written with help from coding agents, and its repository has a root <code>CLAUDE.md</code> that Claude Code loads automatically at the start of every session. Every rule in it came from a real problem:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Why it exists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Never push; commit only</td>
+<td>The owner pushes. This was asked for repeatedly.</td>
+</tr>
+<tr>
+<td>Write directly in the main checkout; no git worktrees for content</td>
+<td>A worktree once caused real confusion.</td>
+</tr>
+<tr>
+<td>Post dates must be in the past</td>
+<td>The site generator silently skips future-dated posts. This already caused real 404s.</td>
+</tr>
+<tr>
+<td>Leave the <code>cover:</code> field blank</td>
+<td>Cover images are made separately.</td>
+</tr>
+<tr>
+<td>A parallel session may be editing; do not touch unrelated posts</td>
+<td>Two agent sessions sometimes work in the same repository at once.</td>
+</tr>
+<tr>
+<td>A UTF-8 hazard section, with a verify command</td>
+<td>See below.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="The-encoding-incident"><a href="#The-encoding-incident" class="headerlink" title="The encoding incident"></a>The encoding incident</h2>
+<p>A helper script once rewrote 44 posts through Windows PowerShell 5.1 and saved them in the system's ANSI code page instead of UTF-8. About 2,700 characters were destroyed: <code>—</code> became a literal <code>??</code>, and <code>·</code> became a stray CJK character, U+7E5A. Microsoft's docs confirm the trap: in Windows PowerShell 5.1, <code>Set-Content</code> and <code>Add-Content</code> use the <code>Default</code> encoding, which is the active ANSI code page, when the file is new or empty. Also, <code>-Encoding utf8</code> in 5.1 writes UTF-8 <strong>with</strong> a byte order mark (PowerShell 7 defaults to UTF-8 without one). The <code>CLAUDE.md</code> therefore shows the right way to write files, and a one-line check that searches every post for U+7E5A and must print nothing after any bulk edit. Written so that it does not depend on the shell's locale, the check looks like this:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line">grep -l <span class="hljs-string">&quot;<span class="hljs-subst">$(printf &#x27;\347\271\232&#x27;)</span>&quot;</span> content/posts/*.md    <span class="hljs-comment"># the three UTF-8 bytes of U+7E5A</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-built_in">Select-String</span> <span class="hljs-literal">-Path</span> content\posts\*.md <span class="hljs-literal">-Pattern</span> ([<span class="hljs-built_in">char</span>]<span class="hljs-number">0</span>x7E5A) <span class="hljs-literal">-List</span> | <span class="hljs-built_in">ForEach-Object</span> Path</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<blockquote>
+<p><strong>Watch out:</strong> check the checker. A shorter form using bash's <code>$'\uXXXX'</code> quoting only turns into the real character when bash runs in a UTF-8 locale. In a shell with no locale set, it stays plain text, and grep then searches for the wrong thing. In a quick test in such a shell, that form flagged a clean file and missed the corrupted one. The <code>printf</code> version above passes the raw UTF-8 bytes, so it works in any locale. Run any verify command once against a known-bad and a known-good file.</p>
+</blockquote>
+<h2 id="Why-the-rules-live-in-the-root-CLAUDEmd"><a href="#Why-the-rules-live-in-the-root-CLAUDEmd" class="headerlink" title="Why the rules live in the root CLAUDE.md"></a>Why the rules live in the root <a href="http://CLAUDE.md" target="_blank" rel="noopener external nofollow noreferrer">CLAUDE.md</a></h2>
+<p>In this repository the whole <code>.claude/</code> folder is gitignored. That has a direct consequence (Chapter 4): nothing inside <code>.claude/</code>, not settings, not hooks, not skills, reaches a cloud session or a fresh clone. The only instruction file every session is guaranteed to see is the committed root <code>CLAUDE.md</code>. So the durable rules had to go there, in plain words, with the reason for each.</p>
+<h2 id="A-trimmed-generic-version-you-can-adapt"><a href="#A-trimmed-generic-version-you-can-adapt" class="headerlink" title="A trimmed, generic version you can adapt"></a>A trimmed, generic version you can adapt</h2>
+<pre><code class="language-markdown"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span></pre></td><td class="code"><pre><code class="markdown"><span class="line"><span class="hljs-section"># Project instructions</span></span><br><span class="line"> </span><br><span class="line">Static blog. Posts live in <span class="hljs-code">`content/posts/`</span>, images in <span class="hljs-code">`public/assets/&lt;topic&gt;/`</span>.</span><br><span class="line">Build: <span class="hljs-code">`npm run build`</span> (must pass before you say a task is done).</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Hard rules</span></span><br><span class="line"><span class="hljs-bullet">1.</span> Never run <span class="hljs-code">`git push`</span>. Commit only; a human reviews and pushes.</span><br><span class="line"><span class="hljs-bullet">2.</span> Work in the main checkout. Do not create git worktrees.</span><br><span class="line"><span class="hljs-bullet">3.</span> Post dates must be in the past. The generator skips future-dated posts.</span><br><span class="line"><span class="hljs-bullet">4.</span> Leave <span class="hljs-code">`cover:`</span> empty in front matter. Covers are made separately.</span><br><span class="line"><span class="hljs-bullet">5.</span> Another session may be editing. Only touch the files named in the task.</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## UTF-8 hazard (Windows)</span></span><br><span class="line">Windows PowerShell 5.1 <span class="hljs-code">`Set-Content`</span> / <span class="hljs-code">`Add-Content`</span> default to the ANSI code page.</span><br><span class="line">A bulk rewrite once corrupted 44 posts (<span class="hljs-code">`—`</span> became <span class="hljs-code">`??`</span>).</span><br><span class="line"><span class="hljs-bullet">-</span> Write files with the editor tools. In PowerShell use</span><br><span class="line">  <span class="hljs-code">`[System.IO.File]::WriteAllText($p, $t, (New-Object System.Text.UTF8Encoding($false)))`</span>.</span><br><span class="line"><span class="hljs-bullet">-</span> After any bulk edit, this must print nothing (it looks for U+7E5A, the mojibake marker):</span><br><span class="line">  <span class="hljs-code">`grep -l &quot;$(printf &#x27;\347\271\232&#x27;)&quot; content/posts/*.md`</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Lessons that transfer to any project:</p>
+<ol>
+<li><strong>Write a rule after an incident, and include the reason.</strong> A reason lets the agent handle cases the rule did not foresee.</li>
+<li><strong>Give a verify command, not just a warning</strong>, and test the command itself. A check the agent can run beats a sentence it may skim.</li>
+<li><strong>Put durable rules where every session can see them.</strong> Committed and at the root.</li>
+<li><strong>Keep it short</strong>, so the important rules do not get lost.</li>
+<li><strong>Back prose rules with enforcement where you can.</strong> A <code>Bash(git push *)</code> deny rule in your user settings stops pushes locally even though the project's <code>.claude/</code> folder is not shared.</li>
+</ol>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-A-CLAUDEmd-for-a-small-Python-project"><a href="#Exercise-1-—-A-CLAUDEmd-for-a-small-Python-project" class="headerlink" title="Exercise 1 — A CLAUDE.md for a small Python project"></a>Exercise 1 — A <a href="http://CLAUDE.md" target="_blank" rel="noopener external nofollow noreferrer">CLAUDE.md</a> for a small Python project</h2>
+<p>Write a <code>CLAUDE.md</code> of at most 25 lines for a Python 3.12 web API that uses <code>uv</code>, <code>pytest</code> and <code>ruff</code>, keeps secrets in <code>.env</code>, and must never change the public <code>/v1/</code> routes.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-markdown"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span></pre></td><td class="code"><pre><code class="markdown"><span class="line"><span class="hljs-section"># Orders API</span></span><br><span class="line"> </span><br><span class="line">Python 3.12, FastAPI. Dependencies managed with uv.</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Commands</span></span><br><span class="line"><span class="hljs-bullet">-</span> Install: <span class="hljs-code">`uv sync`</span></span><br><span class="line"><span class="hljs-bullet">-</span> Test: <span class="hljs-code">`uv run pytest -q`</span> (run before saying a task is done)</span><br><span class="line"><span class="hljs-bullet">-</span> Lint/format: <span class="hljs-code">`uv run ruff check --fix . &amp;&amp; uv run ruff format .`</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Layout</span></span><br><span class="line"><span class="hljs-bullet">-</span> <span class="hljs-code">`app/routes/`</span> HTTP handlers, <span class="hljs-code">`app/services/`</span> business logic, <span class="hljs-code">`tests/`</span> mirrors <span class="hljs-code">`app/`</span>.</span><br><span class="line"> </span><br><span class="line"><span class="hljs-section">## Rules</span></span><br><span class="line"><span class="hljs-bullet">-</span> Never change request or response shapes under <span class="hljs-code">`/v1/`</span>: mobile clients depend on them.</span><br><span class="line">  Add a <span class="hljs-code">`/v2/`</span> route instead.</span><br><span class="line"><span class="hljs-bullet">-</span> Never read, print or edit <span class="hljs-code">`.env`</span>. Ask the user for any value you need.</span><br><span class="line"><span class="hljs-bullet">-</span> New code needs a test. Do not delete or skip existing tests.</span><br><span class="line"><span class="hljs-bullet">-</span> Do not add dependencies without asking first.</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+</details>
+<h2 id="Exercise-2-—-A-post-edit-hook-for-Python"><a href="#Exercise-2-—-A-post-edit-hook-for-Python" class="headerlink" title="Exercise 2 — A post-edit hook for Python"></a>Exercise 2 — A post-edit hook for Python</h2>
+<p>Write a <code>PostToolUse</code> hook that runs <code>ruff format</code> on the edited file, only for <code>.py</code> files, and does nothing if <code>ruff</code> is not installed. Register it in <code>.claude/settings.json</code>.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-comment"># .claude/hooks/format_python.py - PostToolUse hook: format each edited Python file</span></span><br><span class="line"><span class="hljs-keyword">import</span> json</span><br><span class="line"><span class="hljs-keyword">import</span> shutil</span><br><span class="line"><span class="hljs-keyword">import</span> subprocess</span><br><span class="line"><span class="hljs-keyword">import</span> sys</span><br><span class="line"> </span><br><span class="line">event = json.load(sys.stdin)</span><br><span class="line">path = event.get(<span class="hljs-string">&quot;tool_input&quot;</span>, {}).get(<span class="hljs-string">&quot;file_path&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)</span><br><span class="line"><span class="hljs-keyword">if</span> path.endswith(<span class="hljs-string">&quot;.py&quot;</span>) <span class="hljs-keyword">and</span> shutil.which(<span class="hljs-string">&quot;ruff&quot;</span>):</span><br><span class="line">    done = subprocess.run([<span class="hljs-string">&quot;ruff&quot;</span>, <span class="hljs-string">&quot;format&quot;</span>, path], capture_output=<span class="hljs-literal">True</span>, text=<span class="hljs-literal">True</span>)</span><br><span class="line">    <span class="hljs-keyword">if</span> done.returncode != <span class="hljs-number">0</span>:</span><br><span class="line">        <span class="hljs-built_in">print</span>(done.stderr <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;ruff format failed&quot;</span>, file=sys.stderr)</span><br><span class="line">        sys.exit(<span class="hljs-number">1</span>)                                   <span class="hljs-comment"># non-blocking: shown as a hook error</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-json"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span></pre></td><td class="code"><pre><code class="json"><span class="line"><span class="hljs-punctuation">{</span></span><br><span class="line">  <span class="hljs-attr">&quot;hooks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span></span><br><span class="line">    <span class="hljs-attr">&quot;PostToolUse&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span></span><br><span class="line">      <span class="hljs-punctuation">{</span></span><br><span class="line">        <span class="hljs-attr">&quot;matcher&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Edit|Write&quot;</span><span class="hljs-punctuation">,</span></span><br><span class="line">        <span class="hljs-attr">&quot;hooks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span></span><br><span class="line">          <span class="hljs-punctuation">{</span> <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;command&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;python \&quot;$CLAUDE_PROJECT_DIR\&quot;/.claude/hooks/format_python.py&quot;</span> <span class="hljs-punctuation">}</span></span><br><span class="line">        <span class="hljs-punctuation">]</span></span><br><span class="line">      <span class="hljs-punctuation">}</span></span><br><span class="line">    <span class="hljs-punctuation">]</span></span><br><span class="line">  <span class="hljs-punctuation">}</span></span><br><span class="line"><span class="hljs-punctuation">}</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>On macOS or Linux you may need <code>python3</code> instead of <code>python</code>.</p>
+</details>
+<h2 id="Exercise-3-—-Permission-rules"><a href="#Exercise-3-—-Permission-rules" class="headerlink" title="Exercise 3 — Permission rules"></a>Exercise 3 — Permission rules</h2>
+<p>Write a <code>permissions</code> block that allows <code>pytest</code> runs without asking, asks before any <code>git commit</code>, and denies <code>git push</code>, <code>rm -rf</code> and reading anything under <code>./secrets/</code>.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-json"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="json"><span class="line"><span class="hljs-punctuation">{</span></span><br><span class="line">  <span class="hljs-attr">&quot;permissions&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span></span><br><span class="line">    <span class="hljs-attr">&quot;allow&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Bash(pytest *)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Bash(uv run pytest *)&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span></span><br><span class="line">    <span class="hljs-attr">&quot;ask&quot;</span><span class="hljs-punctuation">:</span>   <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Bash(git commit *)&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span></span><br><span class="line">    <span class="hljs-attr">&quot;deny&quot;</span><span class="hljs-punctuation">:</span>  <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;Bash(git push *)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Bash(rm -rf *)&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;Read(./secrets/**)&quot;</span><span class="hljs-punctuation">]</span></span><br><span class="line">  <span class="hljs-punctuation">}</span></span><br><span class="line"><span class="hljs-punctuation">}</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Deny is checked first, then ask, then allow. Remember that rules match the command as written, so they are guard rails, not a sandbox.</p>
+</details>
+<h2 id="Exercise-4-—-One-file-for-three-tools"><a href="#Exercise-4-—-One-file-for-three-tools" class="headerlink" title="Exercise 4 — One file for three tools"></a>Exercise 4 — One file for three tools</h2>
+<p>Your team uses Claude Code, Copilot and Cursor. How do you keep one set of instructions?</p>
+<details>
+<summary>Solution</summary>
+<p>Put the shared rules in <code>AGENTS.md</code> at the repo root. Copilot and Cursor both read <code>AGENTS.md</code>. For Claude Code, add a <code>CLAUDE.md</code> containing <code>@AGENTS.md</code> plus any Claude-only notes. Claude Code can also read <code>AGENTS.md</code> directly, but only when no <code>CLAUDE.md</code> exists, and the import also works in sessions that cannot load <code>AGENTS.md</code> directly. Use the import rather than a symlink if anyone is on Windows. Path-specific extras can still go in <code>.github/instructions/*.instructions.md</code> or <code>.cursor/rules/*.mdc</code>.</p>
+</details>
+<h2 id="Exercise-5-—-Review-this-diff"><a href="#Exercise-5-—-Review-this-diff" class="headerlink" title="Exercise 5 — Review this diff"></a>Exercise 5 — Review this diff</h2>
+<p>An agent produced this change to &quot;add retries to the payment client&quot;. Find at least four problems.</p>
+<pre><code class="language-diff"><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="diff"><span class="line"><span class="hljs-addition">+import requests_retry_helper</span></span><br><span class="line"><span class="hljs-addition">+API_KEY = &quot;sk_live_51H...&quot;</span></span><br><span class="line"> def charge(amount, card):</span><br><span class="line"><span class="hljs-deletion">-    resp = requests.post(URL, json={&quot;amount&quot;: amount, &quot;card&quot;: card}, timeout=10)</span></span><br><span class="line"><span class="hljs-addition">+    resp = requests.post(URL, json={&quot;amount&quot;: amount, &quot;card&quot;: card},</span></span><br><span class="line"><span class="hljs-addition">+                         verify=False, retries=3, headers={&quot;Authorization&quot;: API_KEY})</span></span><br><span class="line">     return resp.json()</span><br><span class="line"><span class="hljs-deletion">-def test_charge_rejects_negative():</span></span><br><span class="line"><span class="hljs-deletion">-    with pytest.raises(ValueError):</span></span><br><span class="line"><span class="hljs-deletion">-        charge(-5, CARD)</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<details>
+<summary>Solution</summary>
+<ol>
+<li><strong>Hardcoded live secret</strong> (<code>API_KEY = &quot;sk_live_...&quot;</code>): remove it, rotate the key, load it from the environment.</li>
+<li><strong>Invented argument:</strong> <code>requests.post</code> has no <code>retries</code> parameter. Retries in <code>requests</code> are configured through an <code>HTTPAdapter</code> with <code>urllib3</code>'s <code>Retry</code>.</li>
+<li><strong>Unknown dependency</strong> <code>requests_retry_helper</code>: check that it exists and is trustworthy; it may be a hallucinated name.</li>
+<li><strong><code>verify=False</code></strong> turns off TLS certificate checks on a payment call.</li>
+<li><strong><code>timeout=10</code> was removed</strong>, so a hung server now blocks forever.</li>
+<li><strong>A test was deleted</strong> instead of fixed.</li>
+<li><strong>Retrying a charge</strong> without an idempotency key can charge the customer twice (see Dev Essentials 14 · API Reliability).</li>
+</ol>
+</details>
+<h2 id="Exercise-6-—-What-reaches-the-cloud"><a href="#Exercise-6-—-What-reaches-the-cloud" class="headerlink" title="Exercise 6 — What reaches the cloud?"></a>Exercise 6 — What reaches the cloud?</h2>
+<p>Your repo gitignores <code>.claude/</code>. You have a project hook in <code>.claude/settings.json</code>, a personal skill in <code>~/.claude/skills/</code>, a committed root <code>CLAUDE.md</code>, and a committed <code>.mcp.json</code>. Which of these does a single-repository cloud session see?</p>
+<details>
+<summary>Solution</summary>
+<p>Only the root <code>CLAUDE.md</code> and <code>.mcp.json</code>, because only committed files are in the clone. The project hook lives in the ignored <code>.claude/</code> folder, so it never reaches the clone. The personal skill lives on your machine. To make the hook travel, stop ignoring <code>.claude/settings.json</code> (for example, ignore only <code>.claude/settings.local.json</code> and other personal files) and commit it.</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Claude Code answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Always-on project rules</td>
+<td><code>./CLAUDE.md</code> or <code>./.claude/CLAUDE.md</code> (committed, under 200 lines)</td>
+</tr>
+<tr>
+<td>Personal rules, all projects</td>
+<td><code>~/.claude/CLAUDE.md</code> (never reaches cloud sessions)</td>
+</tr>
+<tr>
+<td>Personal rules, one project</td>
+<td><code>./CLAUDE.local.md</code> (gitignored)</td>
+</tr>
+<tr>
+<td>Import another file</td>
+<td><code>@path/to/file</code> inside <code>CLAUDE.md</code></td>
+</tr>
+<tr>
+<td>Rules for some paths only</td>
+<td><code>.claude/rules/*.md</code> with <code>paths:</code> frontmatter</td>
+</tr>
+<tr>
+<td>See what loaded</td>
+<td><code>/memory</code>, <code>/context</code></td>
+</tr>
+<tr>
+<td>Reusable workflow</td>
+<td><code>.claude/skills/&lt;name&gt;/SKILL.md</code>, run with <code>/&lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>Must happen every time</td>
+<td>Hook in <code>.claude/settings.json</code>; exit 2 blocks (<code>PreToolUse</code>)</td>
+</tr>
+<tr>
+<td>Side task, separate context</td>
+<td>Subagent in <code>.claude/agents/&lt;name&gt;.md</code></td>
+</tr>
+<tr>
+<td>Outside tools and data</td>
+<td><code>claude mcp add ... --scope project</code> writes <code>.mcp.json</code></td>
+</tr>
+<tr>
+<td>Explore safely</td>
+<td><code>claude --permission-mode plan</code> or Shift+Tab</td>
+</tr>
+<tr>
+<td>Block push / secrets</td>
+<td><code>permissions.deny</code>: <code>Bash(git push *)</code>, <code>Read(./.env)</code></td>
+</tr>
+<tr>
+<td>Cloud session sees</td>
+<td>Only what is committed in the repo</td>
+</tr>
+<tr>
+<td>Cross-tool file</td>
+<td><code>AGENTS.md</code>, plus <code>CLAUDE.md</code> containing <code>@AGENTS.md</code></td>
+</tr>
+<tr>
+<td>Copilot / Cursor</td>
+<td><code>.github/copilot-instructions.md</code> / <code>.cursor/rules/*.mdc</code></td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Whole diff, run tests, check APIs and packages, security, secrets, licensing</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Next is <strong>Dev Essentials 19 · RAG from Scratch in Python</strong>: chunk your own notes, embed them, retrieve the right pieces, and have a model answer with citations, plus a small evaluation set to prove it works. It uses the embeddings from post 17 and the &quot;treat fetched text as data&quot; rule from this post.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — How Claude remembers your project (CLAUDE.md, AGENTS.md, rules, auto memory)</a></li>
+<li><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Best practices</a></li>
+<li><a href="https://code.claude.com/docs/en/features-overview" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Extend Claude Code (features overview)</a></li>
+<li><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Skills</a></li>
+<li><a href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Hooks guide</a> and <a href="https://code.claude.com/docs/en/hooks" target="_blank" rel="noopener external nofollow noreferrer">Hooks reference</a></li>
+<li><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Subagents</a></li>
+<li><a href="https://code.claude.com/docs/en/permission-modes" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Permission modes</a> and <a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener external nofollow noreferrer">Permissions</a></li>
+<li><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — MCP</a></li>
+<li><a href="https://code.claude.com/docs/en/claude-code-on-the-web" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Cloud sessions</a> and <a href="https://code.claude.com/docs/en/cloud-environments" target="_blank" rel="noopener external nofollow noreferrer">Cloud environments</a></li>
+<li><a href="https://code.claude.com/docs/en/settings" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Settings files and precedence</a></li>
+<li><a href="https://code.claude.com/docs/en/security" target="_blank" rel="noopener external nofollow noreferrer">Claude Code — Security</a></li>
+<li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener external nofollow noreferrer">Anthropic — Tool use overview</a></li>
+<li><a href="https://agents.md/" target="_blank" rel="noopener external nofollow noreferrer">AGENTS.md</a></li>
+<li><a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions" target="_blank" rel="noopener external nofollow noreferrer">GitHub Docs — Adding repository custom instructions for Copilot</a></li>
+<li><a href="https://cursor.com/docs/context/rules" target="_blank" rel="noopener external nofollow noreferrer">Cursor Docs — Rules</a></li>
+<li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-5.1" target="_blank" rel="noopener external nofollow noreferrer">Microsoft Learn — about_Character_Encoding (Windows PowerShell 5.1)</a></li>
+<li><a href="https://arxiv.org/abs/2406.10279" target="_blank" rel="noopener external nofollow noreferrer">Spracklen et al. — We Have a Package for You! Package Hallucinations by Code Generating LLMs (USENIX Security 2025)</a></li>
+<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener external nofollow noreferrer">OWASP — LLM01:2025 Prompt Injection</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a worked Stop-hook example that runs the test suite before Claude may finish, a plugin that packages this post's skill, hook and subagent, and a comparison of sandboxing options (built-in sandbox, dev containers, VMs).</p>
+</blockquote>
+<hr>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:51\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-09-13T03:55:54.000Z","title":"Created 2026-09-13 11:55:54","children":"2026-09-13"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-09-13T03:55:54.000Z","title":"Updated 2026-09-13 11:55:54","children":"2026-09-13"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/09/13/dev_18_coding_with_ai_agents/","children":"https://invokfung.github.io/blog/2026/09/13/dev_18_coding_with_ai_agents/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","AI",{"className":"post-meta__tags","href":"/blog/tags/AI/","children":"AI"}],["$","a","Claude Code",{"className":"post-meta__tags","href":"/blog/tags/Claude-Code/","children":"Claude Code"}],["$","a","Developer Tools",{"className":"post-meta__tags","href":"/blog/tags/Developer-Tools/","children":"Developer Tools"}],["$","a","Code Review",{"className":"post-meta__tags","href":"/blog/tags/Code-Review/","children":"Code Review"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/09/15/dev_19_rag_from_scratch/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 19 · RAG from Scratch in Python</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/09/11/dev_17_how_llms_work/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 17 · How LLMs Work in Practice — Tokens, Context, Sampling and Embeddings</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_17_how_llms_work",{"children":["$","a",null,{"href":"/blog/2026/09/11/dev_17_how_llms_work/","title":"Dev Essentials — 17 · How LLMs Work in Practice — Tokens, Context, Sampling and Embeddings","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-11</div><div class=\"title\">Dev Essentials — 17 · How LLMs Work in Practice — Tokens, Context, Sampling and Embeddings</div></div>"}}]}],["$","div","dev_19_rag_from_scratch",{"children":["$","a",null,{"href":"/blog/2026/09/15/dev_19_rag_from_scratch/","title":"Dev Essentials — 19 · RAG from Scratch in Python","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-15</div><div class=\"title\">Dev Essentials — 19 · RAG from Scratch in Python</div></div>"}}]}],["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_02_dates_time_zones",{"children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-14</div><div class=\"title\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}],["$","div","dev_03_git_rescue_kit",{"children":["$","a",null,{"href":"/blog/2026/08/16/dev_03_git_rescue_kit/","title":"Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-16</div><div class=\"title\">Dev Essentials — 03 · Git Rescue Kit — Reflog, Restore, Reset, Revert, Rebase and Worktrees</div></div>"}}]}],["$","div","dev_04_line_endings",{"children":["$","a",null,{"href":"/blog/2026/08/18/dev_04_line_endings/","title":"Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-18</div><div class=\"title\">Dev Essentials — 04 · Line Endings — CRLF vs LF, autocrlf and .gitattributes</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-What-an-agent-is-model-tools-a-loop",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-What-an-agent-is-model-tools-a-loop","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — What an agent is: model + tools + a loop"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Claude-Code-project-memory-with-CLAUDEmd",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Claude-Code-project-memory-with-CLAUDEmd","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Claude Code: project memory with CLAUDE.md"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Where-CLAUDEmd-files-live",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Where-CLAUDEmd-files-live","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"Where CLAUDE.md files live"}]]}],null]}],["$","li","What-to-write",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-to-write","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"What to write"}]]}],null]}],["$","li","Rules-and-memory-Claude-writes-itself",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Rules-and-memory-Claude-writes-itself","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"Rules, and memory Claude writes itself"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Skills-hooks-and-subagents",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Skills-hooks-and-subagents","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Skills, hooks and subagents"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Skills-knowledge-and-workflows-loaded-on-demand",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Skills-knowledge-and-workflows-loaded-on-demand","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"Skills: knowledge and workflows loaded on demand"}]]}],null]}],["$","li","Hooks-things-that-must-happen-every-time",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Hooks-things-that-must-happen-every-time","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"Hooks: things that must happen every time"}]]}],null]}],["$","li","Subagents-a-separate-context-for-side-jobs",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Subagents-a-separate-context-for-side-jobs","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"Subagents: a separate context for side jobs"}]]}],null]}],["$","li","Which-one-do-I-need",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Which-one-do-I-need","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"Which one do I need?"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Permissions-MCP-and-cloud-sessions",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Permissions-MCP-and-cloud-sessions","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Permissions, MCP and cloud sessions"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Permission-modes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Permission-modes","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Permission modes"}]]}],null]}],["$","li","Permission-rules-make-the-dangerous-things-impossible",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Permission-rules-make-the-dangerous-things-impossible","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Permission rules: make the dangerous things impossible"}]]}],null]}],["$","li","MCP-servers",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#MCP-servers","children":[["$","span",null,{"className":"toc-number","children":"5.3."}]," ",["$","span",null,{"className":"toc-text","children":"MCP servers"}]]}],null]}],["$","li","Cloud-sessions-only-committed-files-travel",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Cloud-sessions-only-committed-files-travel","children":[["$","span",null,{"className":"toc-number","children":"5.4."}]," ",["$","span",null,{"className":"toc-text","children":"Cloud sessions: only committed files travel"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-One-instruction-file-for-many-tools",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-One-instruction-file-for-many-tools","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — One instruction file for many tools"}]]}],null]}],["$","li","Chapter-6-—-A-workflow-that-keeps-you-in-charge",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-A-workflow-that-keeps-you-in-charge","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — A workflow that keeps you in charge"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Plan-then-small-steps-then-verify-each-one",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Plan-then-small-steps-then-verify-each-one","children":[["$","span",null,{"className":"toc-number","children":"7.1."}]," ",["$","span",null,{"className":"toc-text","children":"Plan, then small steps, then verify each one"}]]}],null]}],["$","li","Give-context-the-way-you-would-to-a-new-colleague",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Give-context-the-way-you-would-to-a-new-colleague","children":[["$","span",null,{"className":"toc-number","children":"7.2."}]," ",["$","span",null,{"className":"toc-text","children":"Give context the way you would to a new colleague"}]]}],null]}],["$","li","Keep-the-human-in-charge-of-irreversible-actions",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Keep-the-human-in-charge-of-irreversible-actions","children":[["$","span",null,{"className":"toc-number","children":"7.3."}]," ",["$","span",null,{"className":"toc-text","children":"Keep the human in charge of irreversible actions"}]]}],null]}],["$","li","Manage-context-like-a-scarce-resource",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Manage-context-like-a-scarce-resource","children":[["$","span",null,{"className":"toc-number","children":"7.4."}]," ",["$","span",null,{"className":"toc-text","children":"Manage context like a scarce resource"}]]}],null]}]]}]]}],["$","li","Chapter-7-—-Reviewing-AI-output",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Reviewing-AI-output","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Reviewing AI output"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-checklist",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-checklist","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"The checklist"}]]}],null]}],["$","li","Common-failure-modes",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Common-failure-modes","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"Common failure modes"}]]}],null]}]]}]]}],["$","li","Chapter-8-—-Case-study-the-CLAUDEmd-behind-this-blog",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Case-study-the-CLAUDEmd-behind-this-blog","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Case study: the CLAUDE.md behind this blog"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","The-encoding-incident",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-encoding-incident","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"The encoding incident"}]]}],null]}],["$","li","Why-the-rules-live-in-the-root-CLAUDEmd",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Why-the-rules-live-in-the-root-CLAUDEmd","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Why the rules live in the root CLAUDE.md"}]]}],null]}],["$","li","A-trimmed-generic-version-you-can-adapt",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#A-trimmed-generic-version-you-can-adapt","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"A trimmed, generic version you can adapt"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-A-CLAUDEmd-for-a-small-Python-project",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-A-CLAUDEmd-for-a-small-Python-project","children":[["$","span",null,{"className":"toc-number","children":"10.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — A CLAUDE.md for a small Python project"}]]}],null]}],["$","li","Exercise-2-—-A-post-edit-hook-for-Python",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-A-post-edit-hook-for-Python","children":[["$","span",null,{"className":"toc-number","children":"10.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — A post-edit hook for Python"}]]}],null]}],["$","li","Exercise-3-—-Permission-rules",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Permission-rules","children":[["$","span",null,{"className":"toc-number","children":"10.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Permission rules"}]]}],null]}],["$","li","Exercise-4-—-One-file-for-three-tools",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-One-file-for-three-tools","children":[["$","span",null,{"className":"toc-number","children":"10.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — One file for three tools"}]]}],null]}],["$","li","Exercise-5-—-Review-this-diff",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Review-this-diff","children":[["$","span",null,{"className":"toc-number","children":"10.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Review this diff"}]]}],null]}],["$","li","Exercise-6-—-What-reaches-the-cloud",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-What-reaches-the-cloud","children":[["$","span",null,{"className":"toc-number","children":"10.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — What reaches the cloud?"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"An AI coding agent is a language model that can read your files, run commands and edit code in a loop until a task is done. Used well, it removes hour"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,AI,Claude Code,Developer Tools,Code Review"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output"}],["$","meta","7",{"property":"og:description","content":"An AI coding agent is a language model that can read your files, run commands and edit code in a loop until a task is done. Used well, it removes hour"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output"}],["$","meta","11",{"name":"twitter:description","content":"An AI coding agent is a language model that can read your files, run commands and edit code in a loop until a task is done. Used well, it removes hour"}]]
+1:null

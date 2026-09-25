@@ -1,0 +1,607 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-3807c30ebbff1ad7.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","23","d"]
+7:["slug","dev_07_https_tls","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["wE7ZsD36yRPAojhdtZS2q",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","23","d"],{"children":[["slug","dev_07_https_tls","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"23\",\"slug\":\"dev_07_https_tls\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","23","d"],{"children":[["slug","dev_07_https_tls","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:T10f9c,<p>You type <code>https://example.com</code> and press Enter. Half a second later the page is on screen. In that half second your computer found an IP address, opened a TCP connection, agreed on encryption keys with a server it has never met, and checked that server's identity against a chain of certificates. Only then did it send the first HTTP request. This post walks through each step and shows the commands that let you watch it happen, in Bash and PowerShell. It ends with a field guide to the HTTPS errors you will actually meet.</p>
+<blockquote>
+<p>Series map: 01 Text Encoding → … → 06 Regex → <strong>07 HTTPS</strong> (this post) → 08 Floating Point → … → 24 Desk Health. Part B · Everyday skills.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>List, in order, the steps between typing a URL and getting the first byte: DNS, TCP, TLS, HTTP.</li>
+<li>Trace a DNS lookup with <code>dig</code>, <code>nslookup</code> and <code>Resolve-DnsName</code>, and explain TTL.</li>
+<li>Describe the TLS 1.3 handshake message by message, and why it needs only one round trip.</li>
+<li>Read a certificate chain (leaf → intermediate → root) with <code>openssl</code> and PowerShell.</li>
+<li>Explain SNI, ALPN, HTTP/2, HTTP/3 over QUIC, HSTS and Encrypted Client Hello.</li>
+<li>Know today's certificate lifetime rules and how Let's Encrypt and ACME automate renewal.</li>
+<li>Diagnose the classic errors: expired certificate, name mismatch, missing intermediate, clock skew.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-The-big-picture"><a href="#Chapter-1-—-The-big-picture" class="headerlink" title="Chapter 1 — The big picture"></a>Chapter 1 — The big picture</h1>
+<p>The whole trip for <code>https://example.com/</code>:</p>
+<ol>
+<li><strong>Parse the URL.</strong> Scheme <code>https</code>, host <code>example.com</code>, default port <code>443</code>, path <code>/</code>.</li>
+<li><strong>HSTS check.</strong> If the browser has a Strict-Transport-Security rule for this host, it never uses plain <code>http://</code> (Chapter 7).</li>
+<li><strong>DNS.</strong> Turn <code>example.com</code> into an IP address (Chapter 2).</li>
+<li><strong>TCP.</strong> Open a reliable connection to that IP on port 443 (Chapter 3).</li>
+<li><strong>TLS.</strong> Agree on keys, check the certificate, switch to encryption (Chapters 4-5).</li>
+<li><strong>HTTP.</strong> Send <code>GET /</code> inside the encrypted channel and read the response.</li>
+</ol>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span></pre></td><td class="code"><pre><code class="text"><span class="line">client                                              server</span><br><span class="line">  |--- DNS &quot;example.com A?&quot; --&gt; resolver --&gt; 104.20.23.154 (TTL 247 s)</span><br><span class="line">  |--- TCP SYN --------------------------------------&gt;  |   1 round trip</span><br><span class="line">  |&lt;-- SYN-ACK ---------------------------------------  |</span><br><span class="line">  |--- ACK + TLS ClientHello (key share, SNI, ALPN) -&gt;  |   1 round trip</span><br><span class="line">  |&lt;-- ServerHello + cert + Finished (encrypted) -----  |</span><br><span class="line">  |--- Finished + HTTP GET / (encrypted) ------------&gt;  |</span><br><span class="line">  |&lt;-- HTTP 200 + page (encrypted) -------------------  |</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>A <strong>round trip time (RTT)</strong> is the time for a packet to reach the server and come back. Every handshake costs round trips. Round trips are what make a far-away server feel slow.</p>
+<p><code>curl</code> can print a timer for each phase, measured from the start of the request:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-comment"># Git Bash / Linux / macOS</span></span><br><span class="line">curl -s -o /dev/null -w <span class="hljs-string">&quot;dns=%{time_namelookup}s tcp=%{time_connect}s tls=%{time_appconnect}s ttfb=%{time_starttransfer}s\n&quot;</span> https://example.com/</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-comment"># Windows PowerShell 5.1: &quot;curl&quot; is an alias for Invoke-WebRequest, so call curl.exe</span></span><br><span class="line">curl.exe <span class="hljs-literal">-s</span> <span class="hljs-literal">-o</span> NUL <span class="hljs-literal">-w</span> <span class="hljs-string">&quot;dns=%{time_namelookup}s tcp=%{time_connect}s tls=%{time_appconnect}s ttfb=%{time_starttransfer}s\n&quot;</span> https://example.com/</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">dns=0.006468s tcp=0.192066s tls=1.894353s ttfb=2.098498s</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>DNS took about 6 ms (it was cached). TCP was done at 192 ms, TLS at 1.89 s, and the first response byte (TTFB, time to first byte) came at 2.10 s. To get the length of one phase, subtract the value before it.</p>
+<hr>
+<h1 id="Chapter-2-—-DNS-from-name-to-IP-address"><a href="#Chapter-2-—-DNS-from-name-to-IP-address" class="headerlink" title="Chapter 2 — DNS: from name to IP address"></a>Chapter 2 — DNS: from name to IP address</h1>
+<p>Packets are routed by IP address, not by name. DNS (RFC 1034/1035) is the distributed phone book that turns names into addresses.</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="text"><span class="line">your app ─► stub resolver (small client in the OS; cache hit? answer at once)</span><br><span class="line">               ▼</span><br><span class="line">            recursive resolver (ISP, router, 1.1.1.1, 8.8.8.8; does the walking, caches everything)</span><br><span class="line">               ├─► root server      &quot;who handles .com?&quot;         → the .com TLD servers</span><br><span class="line">               ├─► .com TLD server  &quot;who handles example.com?&quot;  → its authoritative servers</span><br><span class="line">               └─► authoritative    &quot;example.com A?&quot;            → 104.20.23.154, TTL 300</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>There are 13 named root server identities (<code>a.root-servers.net</code> to <code>m.root-servers.net</code>), each served from many sites by anycast. The <strong>authoritative</strong> server holds the real records, and is usually run by your DNS host or CDN.</p>
+<p>Every answer carries a <strong>TTL (time to live)</strong> in seconds. Caches may reuse the answer until the TTL runs out. That is why a DNS change takes time to reach everyone: old answers live until their TTL ends.</p>
+<blockquote>
+<p><strong>Trick:</strong> before you move a site to a new IP, lower the TTL (for example to 300 s) a day ahead. After the move, raise it again.</p>
+</blockquote>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-comment"># Linux / macOS (dig comes with BIND tools; Git Bash does not include it)</span></span><br><span class="line">dig example.com A +noall +answer</span><br><span class="line">dig example.com CAA +short      <span class="hljs-comment"># which CAs may issue certificates for this domain</span></span><br><span class="line">dig +trace example.com          <span class="hljs-comment"># walk root → TLD → authoritative yourself</span></span><br><span class="line">nslookup -<span class="hljs-built_in">type</span>=A example.com    <span class="hljs-comment"># works everywhere, including Git Bash on Windows</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-comment"># Windows PowerShell 5.1</span></span><br><span class="line"><span class="hljs-built_in">Resolve-DnsName</span> example.com <span class="hljs-literal">-Type</span> A</span><br><span class="line"><span class="hljs-built_in">Resolve-DnsName</span> example.com <span class="hljs-literal">-Type</span> NS                            <span class="hljs-comment"># the authoritative servers</span></span><br><span class="line">ipconfig /displaydns | <span class="hljs-built_in">Select-String</span> example.com <span class="hljs-literal">-Context</span> <span class="hljs-number">0</span>,<span class="hljs-number">5</span>   <span class="hljs-comment"># what the OS has cached</span></span><br><span class="line"><span class="hljs-built_in">Clear-DnsClientCache</span>                                            <span class="hljs-comment"># same as ipconfig /flushdns</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="text"><span class="line">Name        Type TTL Section IPAddress</span><br><span class="line">----        ---- --- ------- ---------</span><br><span class="line">example.com A    247 Answer  172.66.147.243</span><br><span class="line">example.com A    247 Answer  104.20.23.154</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Run it again a minute later and the TTL is lower: the answer came from a cache that is counting down. <code>Resolve-DnsName</code> in PowerShell 5.1 and the Windows <code>nslookup</code> do not know the <code>CAA</code> type, so use <code>dig</code> (Linux, macOS, WSL) for that one.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Holds</th>
+<th>Why it matters for HTTPS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A</code> / <code>AAAA</code></td>
+<td>IPv4 / IPv6 address</td>
+<td>Where to connect.</td>
+</tr>
+<tr>
+<td><code>CNAME</code></td>
+<td>Alias to another name</td>
+<td>Common for CDNs (<code>www</code> → <code>xyz.cdn.net</code>).</td>
+</tr>
+<tr>
+<td><code>CAA</code></td>
+<td>CAs allowed to issue for the domain (RFC 8659)</td>
+<td>A CA must check it before issuing.</td>
+</tr>
+<tr>
+<td><code>TXT</code></td>
+<td>Free text</td>
+<td>Used by the ACME <code>dns-01</code> challenge (Chapter 8).</td>
+</tr>
+<tr>
+<td><code>HTTPS</code> / <code>SVCB</code></td>
+<td>Connection hints: ALPN list, ECH keys (RFC 9460)</td>
+<td>Tells the browser about HTTP/3 and ECH before it connects.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Watch out:</strong> classic DNS is plain text, so anyone on the path can see which names you look up. DNS over HTTPS (DoH, RFC 8484) and DNS over TLS (DoT, RFC 7858) encrypt the query between you and the recursive resolver.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-TCP-the-three-way-handshake"><a href="#Chapter-3-—-TCP-the-three-way-handshake" class="headerlink" title="Chapter 3 — TCP: the three-way handshake"></a>Chapter 3 — TCP: the three-way handshake</h1>
+<p>HTTP/1.1 and HTTP/2 run over TCP, which gives an ordered, reliable byte stream. Opening it takes three packets:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="text"><span class="line">client → server   SYN       &quot;I want to talk. My starting sequence number is x.&quot;</span><br><span class="line">server → client   SYN-ACK   &quot;OK. Mine is y. I got your x.&quot;</span><br><span class="line">client → server   ACK       &quot;I got your y.&quot;   (data can follow right away)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>That is one full round trip before any data flows. To test only the TCP step:</p>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-built_in">Test-NetConnection</span> example.com <span class="hljs-literal">-Port</span> <span class="hljs-number">443</span>        <span class="hljs-comment"># look for TcpTestSucceeded : True</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="bash"><span class="line">curl -sv telnet://example.com:443 --max-time 3  <span class="hljs-comment"># telnet:// opens TCP only, no TLS</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>A <strong>timeout</strong> usually means a firewall, a wrong IP (stale DNS), or a server that is down. A fast <strong>connection refused</strong> means the host is reachable but nothing listens on that port. If TCP fails, TLS never starts.</p>
+<hr>
+<h1 id="Chapter-4-—-The-TLS-13-handshake"><a href="#Chapter-4-—-The-TLS-13-handshake" class="headerlink" title="Chapter 4 — The TLS 1.3 handshake"></a>Chapter 4 — The TLS 1.3 handshake</h1>
+<p>TLS (Transport Layer Security) gives three things: <strong>confidentiality</strong> (only the two ends can read), <strong>integrity</strong> (changes on the way are detected), and <strong>authentication</strong> (you reached the real <code>example.com</code>).</p>
+<p>TLS 1.3 was defined in RFC 8446 (August 2018). In July 2026 the IETF published <strong>RFC 9846</strong>, which obsoletes RFC 8446. It calls itself a minor update that keeps the version number 1.3 and stays backward compatible. It also obsoletes RFC 5246, the TLS 1.2 spec.</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span></pre></td><td class="code"><pre><code class="text"><span class="line">Client                                                  Server</span><br><span class="line">ClientHello</span><br><span class="line">  + supported_versions (1.3)   + key_share (ephemeral public key, e.g. X25519)</span><br><span class="line">  + server_name (SNI)          + ALPN (&quot;h2&quot;, &quot;http/1.1&quot;)   + signature_algorithms</span><br><span class="line">                         --------&gt;</span><br><span class="line">                                   ServerHello + key_share (server&#x27;s ephemeral public key)</span><br><span class="line">                                   ── everything below is encrypted ──</span><br><span class="line">                                   {EncryptedExtensions}  ALPN choice, ...</span><br><span class="line">                                   {Certificate}          leaf + intermediates</span><br><span class="line">                                   {CertificateVerify}    signature over the transcript</span><br><span class="line">                                   {Finished}             MAC over the transcript</span><br><span class="line">                         &lt;--------</span><br><span class="line">{Finished} + [HTTP request] -----&gt;</span><br><span class="line">                         &lt;--------  [HTTP response]</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<ol>
+<li><strong>ClientHello.</strong> The client guesses which key-exchange group the server accepts and sends a public key for it at once. This guess is what saves a round trip compared with TLS 1.2.</li>
+<li><strong>ServerHello.</strong> The server sends its own public key. Both sides now run <strong>ECDHE</strong> (Elliptic-Curve Diffie-Hellman, Ephemeral): each mixes its private key with the other's public key and gets the same shared secret. Someone watching the wire cannot compute it.</li>
+<li><strong>Keys are derived</strong> from that secret. Everything after ServerHello is encrypted, including the certificate.</li>
+<li><strong>CertificateVerify.</strong> The server signs a hash of all handshake messages so far with the <strong>private key</strong> of its certificate. This proves it owns the certificate, not just a copy.</li>
+<li><strong>Finished.</strong> Each side sends a MAC over the whole transcript. If an attacker changed any earlier message, the MACs do not match and the connection dies.</li>
+<li>The client sends its HTTP request together with its Finished. <strong>Total: one round trip (1-RTT).</strong></li>
+</ol>
+<p>The key pairs are <strong>ephemeral</strong>: new for each connection, then thrown away. So stealing the server's certificate key later does not decrypt recorded old sessions. This is <strong>forward secrecy</strong>.</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-comment"># Git Bash ships OpenSSL</span></span><br><span class="line">openssl s_client -connect example.com:443 -servername example.com -brief &lt; /dev/null</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="text"><span class="line">CONNECTION ESTABLISHED</span><br><span class="line">Protocol version: TLSv1.3</span><br><span class="line">Ciphersuite: TLS_AES_256_GCM_SHA384</span><br><span class="line">Peer certificate: CN=example.com</span><br><span class="line">Verification: OK</span><br><span class="line">Server Temp Key: X25519, 253 bits</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><code>TLS_AES_256_GCM_SHA384</code> means AES-256 in GCM mode (an <strong>AEAD</strong> cipher: it encrypts and checks integrity in one step) with SHA-384 for key derivation. <code>Server Temp Key</code> is the ephemeral ECDHE group. That output came from OpenSSL 3.2. From OpenSSL 3.5 on, the default key shares offer the <strong>hybrid post-quantum</strong> group <code>X25519MLKEM768</code> (classic X25519 plus ML-KEM-768) as well as X25519, so you may see that name instead.</p>
+<h2 id="Resumption-and-0-RTT"><a href="#Resumption-and-0-RTT" class="headerlink" title="Resumption and 0-RTT"></a>Resumption and 0-RTT</h2>
+<p>After a handshake the server can send a <strong>session ticket</strong>. Next time the client presents it as a <strong>pre-shared key (PSK)</strong> and may send data in its very first flight: <strong>0-RTT early data</strong>.</p>
+<blockquote>
+<p><strong>Watch out:</strong> 0-RTT data can be <strong>replayed</strong>. An attacker who records the first flight can send it again, and the server may act on it twice. RFC 8446 says 0-RTT data has no non-replay guarantee between connections, and it is not forward secret either. Allow it only for safe, idempotent requests such as <code>GET</code>. RFC 8470 defines the <code>Early-Data: 1</code> header and the <code>425 Too Early</code> status for HTTP servers that want to refuse it.</p>
+</blockquote>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key share</td>
+<td>Public key sent in a hello message for key exchange.</td>
+</tr>
+<tr>
+<td>ECDHE</td>
+<td>Key agreement: both sides derive the same secret from their key pairs.</td>
+</tr>
+<tr>
+<td>Forward secrecy</td>
+<td>Old sessions stay safe even if the long-term key leaks later.</td>
+</tr>
+<tr>
+<td>AEAD</td>
+<td>Cipher giving confidentiality and integrity together (AES-GCM, ChaCha20-Poly1305).</td>
+</tr>
+<tr>
+<td>Transcript</td>
+<td>All handshake messages so far; signed and MAC'd to stop tampering.</td>
+</tr>
+<tr>
+<td>PSK / 0-RTT</td>
+<td>Resumption key / data sent before the handshake finishes.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Chapter-5-—-Certificates-and-the-chain-of-trust"><a href="#Chapter-5-—-Certificates-and-the-chain-of-trust" class="headerlink" title="Chapter 5 — Certificates and the chain of trust"></a>Chapter 5 — Certificates and the chain of trust</h1>
+<p>Key exchange gives encryption, but encryption with whom? The <strong>certificate</strong> answers that. It is a statement, &quot;this public key belongs to <code>example.com</code>&quot;, signed by a <strong>Certificate Authority (CA)</strong>.</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">openssl s_client -connect example.com:443 -servername example.com &lt; /dev/null 2&gt;/dev/null \</span><br><span class="line">  | openssl x509 -noout -subject -issuer -dates -ext subjectAltName</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="text"><span class="line">subject=CN=example.com</span><br><span class="line">issuer=C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3</span><br><span class="line">notBefore=Jul 29 22:10:08 2026 GMT</span><br><span class="line">notAfter=Oct 27 22:17:21 2026 GMT</span><br><span class="line">X509v3 Subject Alternative Name:</span><br><span class="line">    DNS:example.com, DNS:*.example.com</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<ul>
+<li><strong>Subject Alternative Name (SAN)</strong> — the host names the certificate is valid for. Clients check the SAN, not the old Common Name.</li>
+<li><strong>notBefore / notAfter</strong> — the validity window. Outside it, the certificate is rejected.</li>
+<li><strong>Issuer</strong> — who signed it. The issuer has its own certificate, and so on up the chain.</li>
+</ul>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="text"><span class="line">[root]          SSL.com TLS ECC Root CA 2022      ← already in your OS / browser trust store</span><br><span class="line">   │ signs</span><br><span class="line">[intermediate]  SSL.com TLS Transit ECC CA R2      ← sent by the server</span><br><span class="line">   │ signs</span><br><span class="line">[intermediate]  Cloudflare TLS Issuing ECC CA 3    ← sent by the server</span><br><span class="line">   │ signs</span><br><span class="line">[leaf]          CN=example.com                     ← sent by the server</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The server sends the <strong>leaf plus the intermediates</strong>. It does not send the root: the client must already have it in its <strong>trust store</strong>. The client builds a path from the leaf to a trusted root and checks every signature, the dates, the host name against the SAN, and key-usage limits. On Windows you can build the same chain with .NET (PowerShell 5.1):</p>
+<pre><code class="language-powershell"><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span></pre></td><td class="code"><pre><code class="powershell"><span class="line"><span class="hljs-variable">$h</span>   = <span class="hljs-string">&quot;example.com&quot;</span></span><br><span class="line"><span class="hljs-variable">$tcp</span> = <span class="hljs-built_in">New-Object</span> System.Net.Sockets.TcpClient(<span class="hljs-variable">$h</span>, <span class="hljs-number">443</span>)</span><br><span class="line"><span class="hljs-variable">$ssl</span> = <span class="hljs-built_in">New-Object</span> System.Net.Security.SslStream(<span class="hljs-variable">$tcp</span>.GetStream(), <span class="hljs-variable">$false</span>)</span><br><span class="line"><span class="hljs-variable">$ssl</span>.AuthenticateAsClient(<span class="hljs-variable">$h</span>)</span><br><span class="line"><span class="hljs-variable">$cert</span>  = <span class="hljs-built_in">New-Object</span> System.Security.Cryptography.X509Certificates.X509Certificate2(<span class="hljs-variable">$ssl</span>.RemoteCertificate)</span><br><span class="line"><span class="hljs-variable">$chain</span> = <span class="hljs-built_in">New-Object</span> System.Security.Cryptography.X509Certificates.X509Chain</span><br><span class="line">[<span class="hljs-built_in">void</span>]<span class="hljs-variable">$chain</span>.Build(<span class="hljs-variable">$cert</span>)</span><br><span class="line"><span class="hljs-string">&quot;Protocol: <span class="hljs-variable">$</span>(<span class="hljs-variable">$ssl</span>.SslProtocol)  NotAfter: <span class="hljs-variable">$</span>(<span class="hljs-variable">$cert</span>.NotAfter)&quot;</span>   <span class="hljs-comment"># NotAfter is in local time</span></span><br><span class="line"><span class="hljs-variable">$chain</span>.ChainElements | <span class="hljs-built_in">ForEach-Object</span> { <span class="hljs-string">&quot;  -&gt; &quot;</span> + <span class="hljs-variable">$_</span>.Certificate.Subject }</span><br><span class="line"><span class="hljs-variable">$ssl</span>.Dispose(); <span class="hljs-variable">$tcp</span>.Dispose()</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>It prints <code>Tls13</code> and the same four names, leaf first. <strong>Trust stores differ by client:</strong> Windows and Chrome/Edge on Windows use the Windows certificate store (<code>Get-ChildItem Cert:\LocalMachine\Root</code>); macOS uses the keychain; Firefox has its own Mozilla store; Linux tools use a distro bundle; Python <code>requests</code> uses the <code>certifi</code> bundle. So one site can pass in one tool and fail in another.</p>
+<h2 id="How-long-a-certificate-may-live-—-the-rules-today"><a href="#How-long-a-certificate-may-live-—-the-rules-today" class="headerlink" title="How long a certificate may live — the rules today"></a>How long a certificate may live — the rules today</h2>
+<p>Public TLS certificates follow the CA/Browser Forum <strong>Baseline Requirements</strong>. Ballot <strong>SC-081v3</strong>, adopted on April 11, 2025, shrinks the maximum validity in steps (Baseline Requirements, section 6.3.2):</p>
+<table>
+<thead>
+<tr>
+<th>Certificate issued on or after</th>
+<th>Issued before</th>
+<th>Maximum validity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>2026-03-15</td>
+<td>398 days</td>
+</tr>
+<tr>
+<td><strong>2026-03-15</strong></td>
+<td><strong>2027-03-15</strong></td>
+<td><strong>200 days</strong> ← applies now</td>
+</tr>
+<tr>
+<td>2027-03-15</td>
+<td>2029-03-15</td>
+<td>100 days</td>
+</tr>
+<tr>
+<td>2029-03-15</td>
+<td>—</td>
+<td>47 days</td>
+</tr>
+</tbody>
+</table>
+<p>The same ballot cuts how long a CA may reuse a domain-validation result: 200 days from 2026-03-15, 100 days from 2027-03-15, 10 days from 2029-03-15. So a certificate issued today lives at most 200 days, and yearly manual renewal is already gone.</p>
+<p><strong>Revocation.</strong> If a key leaks, the CA can revoke the certificate and publish that in a <strong>CRL</strong> (signed list of revoked serial numbers) or via <strong>OCSP</strong> (ask about one certificate). Let's Encrypt turned off its OCSP service on August 6, 2025, and now publishes revocation data only through CRLs. Short lifetimes also limit damage: a leaked short-lived certificate soon stops working anyway.</p>
+<blockquote>
+<p><strong>Trick:</strong> every publicly trusted certificate is recorded in public <strong>Certificate Transparency</strong> logs. Search your domain on a CT search site such as <a href="http://crt.sh" target="_blank" rel="noopener external nofollow noreferrer">crt.sh</a> to see every certificate ever issued for it.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-6-—-SNI-ECH-ALPN-HTTP2-and-HTTP3"><a href="#Chapter-6-—-SNI-ECH-ALPN-HTTP2-and-HTTP3" class="headerlink" title="Chapter 6 — SNI, ECH, ALPN, HTTP/2 and HTTP/3"></a>Chapter 6 — SNI, ECH, ALPN, HTTP/2 and HTTP/3</h1>
+<p><strong>SNI.</strong> One IP often serves thousands of sites (think of a CDN). The server must pick a certificate before any HTTP <code>Host</code> header exists. So the client puts the host name in the ClientHello: the <strong>Server Name Indication</strong> extension (RFC 6066). That is why <code>openssl s_client</code> needs <code>-servername</code>. Without it you may get a default certificate for another name.</p>
+<p><strong>ECH.</strong> SNI is plain text, so the network can see which site you visit. <strong>Encrypted Client Hello</strong> encrypts the real ClientHello under a public key the site publishes in its <code>HTTPS</code> DNS record.</p>
+<ul>
+<li><strong>RFC 9849</strong>, <em>TLS Encrypted Client Hello</em>, was published in March 2026 (Standards Track). <strong>RFC 9848</strong>, the same month, defines how ECH settings travel in SVCB/HTTPS DNS records.</li>
+<li>Chrome Platform Status lists ECH as enabled by default since Chrome 117. Firefox 119 release notes say ECH &quot;is now available to Firefox users&quot;.</li>
+<li>OpenSSL 4.0, released April 14, 2026, added ECH support.</li>
+<li>The site's server or CDN must support it too. Where it does not, the connection falls back to normal SNI.</li>
+</ul>
+<p><strong>ALPN.</strong> Application-Layer Protocol Negotiation (RFC 7301) lets the client list protocols such as <code>h2</code> and <code>http/1.1</code> in the ClientHello. The server picks one in its reply, with no extra round trip.</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">openssl s_client -connect example.com:443 -servername example.com -alpn h2,http/1.1 &lt; /dev/null 2&gt;/dev/null | grep ALPN</span><br><span class="line"><span class="hljs-comment"># ALPN protocol: h2</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTTP/1.1</th>
+<th>HTTP/2 (RFC 9113)</th>
+<th>HTTP/3 (RFC 9114)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transport</td>
+<td>TCP + TLS</td>
+<td>TCP + TLS</td>
+<td><strong>QUIC</strong> over UDP (RFC 9000)</td>
+</tr>
+<tr>
+<td>Requests per connection</td>
+<td>One at a time</td>
+<td>Many streams</td>
+<td>Many streams</td>
+</tr>
+<tr>
+<td>One lost packet stalls</td>
+<td>That connection</td>
+<td><strong>All streams</strong> (TCP head-of-line blocking)</td>
+<td>Only its own stream</td>
+</tr>
+<tr>
+<td>Setup</td>
+<td>TCP 1 RTT + TLS 1 RTT</td>
+<td>Same</td>
+<td>Transport + TLS 1.3 together, 1 RTT</td>
+</tr>
+</tbody>
+</table>
+<p>QUIC carries TLS 1.3 inside its own handshake (RFC 9001). A browser learns that a site speaks HTTP/3 from the <code>HTTPS</code> DNS record or from an <code>Alt-Svc</code> response header. The one from <a href="http://google.com" target="_blank" rel="noopener external nofollow noreferrer">google.com</a> begins with <code>Alt-Svc: h3=&quot;:443&quot;; ma=2592000</code> (&quot;HTTP/3 on port 443, remember this for 30 days&quot;).</p>
+<blockquote>
+<p><strong>Watch out:</strong> <code>curl --http3</code> works only if your curl build has HTTP/3. Check the Features line of <code>curl -V</code> for <code>HTTP3</code>. Neither the Git Bash curl nor the Windows <code>curl.exe</code> used for this post had it.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-HSTS-never-talk-plain-HTTP-again"><a href="#Chapter-7-—-HSTS-never-talk-plain-HTTP-again" class="headerlink" title="Chapter 7 — HSTS: never talk plain HTTP again"></a>Chapter 7 — HSTS: never talk plain HTTP again</h1>
+<p>A user types <code>example.com</code> with no scheme. The browser tries <code>http://</code>, and the server redirects to <code>https://</code>. That first plain request can be intercepted. An attacker on public Wi-Fi can keep the user on HTTP (&quot;SSL stripping&quot;).</p>
+<p><strong>HTTP Strict Transport Security</strong> (RFC 6797) closes the gap. The server sends, over HTTPS:</p>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">Strict-Transport-Security: max-age=31536000; includeSubdomains; preload</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>(That exact header comes from <a href="http://github.com" target="_blank" rel="noopener external nofollow noreferrer">github.com</a>.) For <code>max-age</code> seconds (here one year) the browser turns every <code>http://</code> URL for the host into <code>https://</code> before sending anything. It also stops users from clicking through certificate errors. <code>includeSubDomains</code> applies the rule to every subdomain. <code>preload</code> agrees to be built into browsers' <strong>preload list</strong>, which also protects the very first visit. To join that list, <a href="http://hstspreload.org" target="_blank" rel="noopener external nofollow noreferrer">hstspreload.org</a> requires a valid certificate, an HTTP → HTTPS redirect, HTTPS on all subdomains, and a header with <code>max-age</code> of at least 31536000, <code>includeSubDomains</code> and <code>preload</code>.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> adding <code>includeSubDomains; preload</code> while some old subdomain (an intranet box, a printer page) only speaks HTTP. Browsers will refuse it. The preload site warns that removal takes months to reach users. Start with a short <code>max-age</code>, check every subdomain, then raise it.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-8-—-Lets-Encrypt-and-ACME"><a href="#Chapter-8-—-Lets-Encrypt-and-ACME" class="headerlink" title="Chapter 8 — Let's Encrypt and ACME"></a>Chapter 8 — Let's Encrypt and ACME</h1>
+<p><strong>Let's Encrypt</strong> is a free, automated CA. Clients talk to it with <strong>ACME</strong> (Automatic Certificate Management Environment, RFC 8555):</p>
+<ol>
+<li>The client creates an <strong>account key</strong> and places an <strong>order</strong> for names, e.g. <code>example.com</code> and <code>www.example.com</code>.</li>
+<li>For each name the CA sets a <strong>challenge</strong> to prove control:
+<ul>
+<li><code>http-01</code> — serve a token at <code>http://&lt;name&gt;/.well-known/acme-challenge/&lt;token&gt;</code>.</li>
+<li><code>dns-01</code> — publish a <code>TXT</code> record at <code>_acme-challenge.&lt;name&gt;</code>. Needed for wildcard certificates.</li>
+<li><code>tls-alpn-01</code> — answer a special TLS handshake on port 443 (RFC 8737).</li>
+</ul>
+</li>
+<li>The client <strong>finalizes</strong> with a CSR (certificate signing request) holding its public key.</li>
+<li>The CA issues the certificate; the client installs it and reloads the server.</li>
+</ol>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-built_in">sudo</span> certbot --nginx -d example.com -d www.example.com   <span class="hljs-comment"># typical Linux + nginx</span></span><br><span class="line"><span class="hljs-built_in">sudo</span> certbot renew --dry-run                             <span class="hljs-comment"># prove that auto-renewal works</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>On Windows servers, win-acme does the same job. Caddy, and hosts such as GitHub Pages, Cloudflare and AWS Certificate Manager, run ACME for you.</p>
+<p><strong>Let's Encrypt profiles today</strong> (from its profiles page):</p>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Validity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>classic</code></td>
+<td>90 days</td>
+<td>The default.</td>
+</tr>
+<tr>
+<td><code>tlsserver</code></td>
+<td>45 days</td>
+<td>For subscribers who &quot;fully embrace automation&quot;.</td>
+</tr>
+<tr>
+<td><code>shortlived</code></td>
+<td>160 hours (just over 6 days)</td>
+<td>Generally available since January 15, 2026; opt-in; required for IP-address certificates.</td>
+</tr>
+</tbody>
+</table>
+<p>The announced plan for the default: on <strong>February 10, 2027</strong>, <code>classic</code> moves to 64-day certificates with a 10-day authorization reuse period. On <strong>February 16, 2028</strong> it moves to 45 days with a 7-hour reuse period. That stays under the 47-day cap that starts March 15, 2029.</p>
+<p><strong>ACME Renewal Information (ARI)</strong>, RFC 9773 (June 2025), lets the CA tell your client when to renew, for example early during an incident. Let's Encrypt recommends ARI and renewing about two-thirds of the way through a certificate's life.</p>
+<blockquote>
+<p><strong>Trick:</strong> alert when any certificate has less than a third of its life left. Automation fails quietly: a changed firewall rule, an expired DNS API token. Exercise 3 builds a checker.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-9-—-Common-HTTPS-errors-and-how-to-diagnose-them"><a href="#Chapter-9-—-Common-HTTPS-errors-and-how-to-diagnose-them" class="headerlink" title="Chapter 9 — Common HTTPS errors and how to diagnose them"></a>Chapter 9 — Common HTTPS errors and how to diagnose them</h1>
+<table>
+<thead>
+<tr>
+<th>Symptom (Chrome)</th>
+<th><code>openssl</code> verify result</th>
+<th>Usual cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NET::ERR_CERT_DATE_INVALID</code></td>
+<td><code>10 (certificate has expired)</code></td>
+<td>Renewal did not run, or the server was not reloaded</td>
+<td>Renew, reload, find out why automation failed</td>
+</tr>
+<tr>
+<td><code>NET::ERR_CERT_COMMON_NAME_INVALID</code></td>
+<td><code>62 (hostname mismatch)</code></td>
+<td>Name not in SAN; wrong virtual host; no SNI</td>
+<td>Add the name; check <code>server_name</code> / SNI</td>
+</tr>
+<tr>
+<td>Fails in some clients only</td>
+<td><code>21 (unable to verify the first certificate)</code></td>
+<td>Server sends the leaf without intermediates</td>
+<td>Serve the full chain (<code>fullchain.pem</code>)</td>
+</tr>
+<tr>
+<td><code>NET::ERR_CERT_AUTHORITY_INVALID</code></td>
+<td><code>18 (self-signed certificate)</code> / <code>19 (self-signed certificate in certificate chain)</code></td>
+<td>Self-signed cert, private CA, TLS-inspecting proxy</td>
+<td>Public CA, or install the private root on purpose</td>
+</tr>
+<tr>
+<td><code>NET::ERR_CERT_DATE_INVALID</code> on a good site</td>
+<td><code>9 (certificate is not yet valid)</code></td>
+<td><strong>Your clock</strong> is wrong</td>
+<td>Fix the system time</td>
+</tr>
+</tbody>
+</table>
+<p>The site <strong><a href="http://badssl.com" target="_blank" rel="noopener external nofollow noreferrer">badssl.com</a></strong> hosts broken endpoints on purpose, so you can practise safely:</p>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-keyword">for</span> h <span class="hljs-keyword">in</span> expired wrong.host incomplete-chain self-signed; <span class="hljs-keyword">do</span></span><br><span class="line">  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%-18s &quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$h</span>&quot;</span></span><br><span class="line">  openssl s_client -connect <span class="hljs-variable">$h</span>.badssl.com:443 -servername <span class="hljs-variable">$h</span>.badssl.com \</span><br><span class="line">    -verify_hostname <span class="hljs-variable">$h</span>.badssl.com &lt; /dev/null 2&gt;/dev/null | grep <span class="hljs-string">&quot;Verify return code&quot;</span></span><br><span class="line"><span class="hljs-keyword">done</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span></pre></td><td class="code"><pre><code class="text"><span class="line">expired                Verify return code: 10 (certificate has expired)</span><br><span class="line">wrong.host             Verify return code: 62 (hostname mismatch)</span><br><span class="line">incomplete-chain       Verify return code: 21 (unable to verify the first certificate)</span><br><span class="line">self-signed            Verify return code: 18 (self-signed certificate)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>The same check in Python, with days left:</p>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> socket, ssl</span><br><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, timezone</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">check</span>(<span class="hljs-params">host, port=<span class="hljs-number">443</span></span>):</span><br><span class="line">    ctx = ssl.create_default_context()</span><br><span class="line">    <span class="hljs-keyword">try</span>:</span><br><span class="line">        <span class="hljs-keyword">with</span> socket.create_connection((host, port), timeout=<span class="hljs-number">5</span>) <span class="hljs-keyword">as</span> sock:</span><br><span class="line">            <span class="hljs-keyword">with</span> ctx.wrap_socket(sock, server_hostname=host) <span class="hljs-keyword">as</span> tls:</span><br><span class="line">                cert = tls.getpeercert()</span><br><span class="line">                end = datetime.fromtimestamp(ssl.cert_time_to_seconds(cert[<span class="hljs-string">&quot;notAfter&quot;</span>]), tz=timezone.utc)</span><br><span class="line">                days = (end - datetime.now(timezone.utc)).days</span><br><span class="line">                <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{host}</span>: OK  <span class="hljs-subst">{tls.version()}</span>  expires <span class="hljs-subst">{end:%Y-%m-%d}</span> (<span class="hljs-subst">{days}</span> days left)&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">except</span> ssl.SSLCertVerificationError <span class="hljs-keyword">as</span> e:</span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{host}</span>: FAIL  <span class="hljs-subst">{e.verify_message}</span>&quot;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">for</span> h <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;example.com&quot;</span>, <span class="hljs-string">&quot;expired.badssl.com&quot;</span>, <span class="hljs-string">&quot;wrong.host.badssl.com&quot;</span>,</span><br><span class="line">          <span class="hljs-string">&quot;incomplete-chain.badssl.com&quot;</span>, <span class="hljs-string">&quot;self-signed.badssl.com&quot;</span>]:</span><br><span class="line">    check(h)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span></pre></td><td class="code"><pre><code class="text"><span class="line">example.com: OK  TLSv1.3  expires 2026-10-27 (32 days left)</span><br><span class="line">expired.badssl.com: FAIL  certificate has expired</span><br><span class="line">wrong.host.badssl.com: FAIL  Hostname mismatch, certificate is not valid for &#x27;wrong.host.badssl.com&#x27;.</span><br><span class="line">incomplete-chain.badssl.com: OK  TLSv1.2  expires 2026-10-26 (31 days left)</span><br><span class="line">self-signed.badssl.com: FAIL  self-signed certificate</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p><strong>Why the missing intermediate is so confusing.</strong> <code>openssl</code> failed on <code>incomplete-chain</code>, but Python on Windows said OK, and so did the Windows <code>curl</code> (Schannel). Windows can download a missing intermediate itself, from the &quot;CA Issuers&quot; (AIA) URL inside the leaf, and it caches the result. Python on Windows loads certificates from the Windows stores, so it most likely found that cached copy. Many clients never do this: <code>openssl</code>, many Linux tools, Java, some mobile apps. So the site &quot;works on my machine&quot; and fails for others.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> testing only in your desktop browser. Always test the chain with <code>openssl s_client</code>, which does not fetch missing intermediates, or with an online SSL checker.</p>
+</blockquote>
+<p><strong>Clock skew.</strong> A certificate is valid only between <code>notBefore</code> and <code>notAfter</code>. A clock that is a year behind makes every new certificate &quot;not yet valid&quot;. A clock that is ahead makes them look expired. Suspects: dead CMOS battery, fresh VMs, devices without network time. Check with <code>w32tm /query /status</code> on Windows (<code>w32tm /resync</code> in an admin shell forces a sync) or <code>timedatectl status</code> on Linux (&quot;System clock synchronized: yes&quot;). More in Dev Essentials 02 · Dates &amp; Time Zones.</p>
+<p><strong>In the browser.</strong> In Chrome or Edge, click the icon left of the address and open the connection details to view the certificate. DevTools has a <strong>Security</strong> panel (called &quot;Privacy and security&quot; in some recent versions) with the protocol, key exchange, cipher and a <strong>View certificate</strong> button. In Firefox: padlock → <em>Connection secure</em> → <em>More information</em> → <em>View Certificate</em>.</p>
+<blockquote>
+<p><strong>Watch out:</strong> never &quot;fix&quot; an error by turning verification off: <code>curl -k</code>, <code>requests.get(url, verify=False)</code>, <code>NODE_TLS_REJECT_UNAUTHORIZED=0</code>. That removes the authentication part of TLS, and any man-in-the-middle can then read and change your traffic. Fix the certificate, or add your private CA to the trust store on purpose.</p>
+</blockquote>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Time-each-phase"><a href="#Exercise-1-—-Time-each-phase" class="headerlink" title="Exercise 1 — Time each phase"></a>Exercise 1 — Time each phase</h2>
+<p>Run <code>curl -w</code> against three sites: one near you, one far away, one behind a CDN. Work out DNS, TCP and TLS time separately. Which phases grow with distance?</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span></pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> https://example.com https://www.gov.uk https://www.cloudflare.com; <span class="hljs-keyword">do</span></span><br><span class="line">  curl -s -o /dev/null -w <span class="hljs-string">&quot;<span class="hljs-variable">$u</span> dns=%{time_namelookup} tcp=%{time_connect} tls=%{time_appconnect}\n&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$u</span>&quot;</span></span><br><span class="line"><span class="hljs-keyword">done</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>TCP time is <code>tcp - dns</code>, and TLS time is <code>tls - tcp</code>. Each costs about one RTT, so both grow with distance. DNS is often near zero after the first run because of caching. A CDN cuts TCP and TLS time because the handshake ends at an edge server near you.</p>
+</details>
+<h2 id="Exercise-2-—-Read-a-chain"><a href="#Exercise-2-—-Read-a-chain" class="headerlink" title="Exercise 2 — Read a chain"></a>Exercise 2 — Read a chain</h2>
+<p>Run <code>openssl s_client -showcerts</code> against <a href="http://github.com" target="_blank" rel="noopener external nofollow noreferrer">github.com</a>. Which certificates did the server send, and which one did it <strong>not</strong> send?</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-bash"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span></pre></td><td class="code"><pre><code class="bash"><span class="line">openssl s_client -connect github.com:443 -servername github.com -showcerts &lt; /dev/null 2&gt;/dev/null \</span><br><span class="line">  | grep -E <span class="hljs-string">&quot;^ [0-9] s:|^   i:&quot;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="text"><span class="line"> 0 s:CN=github.com</span><br><span class="line">   i:C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36</span><br><span class="line"> 1 s:C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA DV E36</span><br><span class="line">   i:C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication Root E46</span><br><span class="line"> 2 s:C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication Root E46</span><br><span class="line">   i:C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust ECC Certification Authority</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Line <code>0</code> is the leaf and line <code>1</code> the intermediate. Line <code>2</code> is the newer Sectigo E46 root <strong>cross-signed</strong> by the older USERTrust root, which helps older clients that only trust USERTrust. The top root (USERTrust) is not sent: the client must already trust it, and an untrusted root would not help.</p>
+</details>
+<h2 id="Exercise-3-—-Expiry-monitor"><a href="#Exercise-3-—-Expiry-monitor" class="headerlink" title="Exercise 3 — Expiry monitor"></a>Exercise 3 — Expiry monitor</h2>
+<p>Change the Chapter 9 checker so it reads host names from a file and exits with code 1 if any certificate fails or has fewer than 30 days left. A scheduled task or CI job can then alert on it.</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-python"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span></pre></td><td class="code"><pre><code class="python"><span class="line"><span class="hljs-keyword">import</span> socket, ssl, sys</span><br><span class="line"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, timezone</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">def</span> <span class="hljs-title function_">days_left</span>(<span class="hljs-params">host</span>):</span><br><span class="line">    ctx = ssl.create_default_context()</span><br><span class="line">    <span class="hljs-keyword">with</span> socket.create_connection((host, <span class="hljs-number">443</span>), timeout=<span class="hljs-number">5</span>) <span class="hljs-keyword">as</span> sock:</span><br><span class="line">        <span class="hljs-keyword">with</span> ctx.wrap_socket(sock, server_hostname=host) <span class="hljs-keyword">as</span> tls:</span><br><span class="line">            end = ssl.cert_time_to_seconds(tls.getpeercert()[<span class="hljs-string">&quot;notAfter&quot;</span>])</span><br><span class="line">    <span class="hljs-keyword">return</span> (datetime.fromtimestamp(end, tz=timezone.utc) - datetime.now(timezone.utc)).days</span><br><span class="line"> </span><br><span class="line">bad = <span class="hljs-literal">False</span></span><br><span class="line"><span class="hljs-keyword">for</span> host <span class="hljs-keyword">in</span> <span class="hljs-built_in">open</span>(sys.argv[<span class="hljs-number">1</span>], encoding=<span class="hljs-string">&quot;utf-8&quot;</span>).read().split():</span><br><span class="line">    <span class="hljs-keyword">try</span>:</span><br><span class="line">        d = days_left(host)</span><br><span class="line">        bad |= d &lt; <span class="hljs-number">30</span></span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-string">&#x27;WARN&#x27;</span> <span class="hljs-keyword">if</span> d &lt; <span class="hljs-number">30</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;ok&#x27;</span>:<span class="hljs-number">4</span>}</span> <span class="hljs-subst">{host:<span class="hljs-number">30</span>}</span> <span class="hljs-subst">{d}</span> days&quot;</span>)</span><br><span class="line">    <span class="hljs-keyword">except</span> (ssl.SSLError, OSError) <span class="hljs-keyword">as</span> e:</span><br><span class="line">        bad = <span class="hljs-literal">True</span></span><br><span class="line">        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;FAIL <span class="hljs-subst">{host:<span class="hljs-number">30</span>}</span> <span class="hljs-subst">{e}</span>&quot;</span>)</span><br><span class="line">sys.exit(<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> bad <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Run <code>python certwatch.py hosts.txt</code>, then check <code>$?</code> (Bash) or <code>$LASTEXITCODE</code> (PowerShell). A fixed 30 days is too long for 6-day certificates. A threshold of one-third of the lifetime scales better.</p>
+</details>
+<h2 id="Exercise-4-—-Design-an-HSTS-header"><a href="#Exercise-4-—-Design-an-HSTS-header" class="headerlink" title="Exercise 4 — Design an HSTS header"></a>Exercise 4 — Design an HSTS header</h2>
+<p><code>shop.example</code> is fully HTTPS, except <code>legacy.shop.example</code>, an HTTP-only admin box that will be retired in three months. What HSTS header should <code>shop.example</code> send today?</p>
+<details>
+<summary>Solution</summary>
+<pre><code class="language-text"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span></pre></td><td class="code"><pre><code class="text"><span class="line">Strict-Transport-Security: max-age=31536000</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Leave out <code>includeSubDomains</code> and <code>preload</code> until <code>legacy</code> is gone or on HTTPS. Otherwise browsers that visited <code>shop.example</code> would refuse plain HTTP to <code>legacy.shop.example</code>. After the retirement, add <code>includeSubDomains</code>, test, then think about <code>preload</code>.</p>
+</details>
+<h2 id="Exercise-5-—-0-RTT-risk"><a href="#Exercise-5-—-0-RTT-risk" class="headerlink" title="Exercise 5 — 0-RTT risk"></a>Exercise 5 — 0-RTT risk</h2>
+<p>A banking API accepts 0-RTT early data. Why is <code>POST /transfer?to=alice&amp;amount=100</code> in early data dangerous, and what should the server do?</p>
+<details>
+<summary>Solution</summary>
+<p>Early data can be replayed: an attacker who captured the first flight can send it again, and the transfer may run twice. The server should accept only idempotent requests (such as <code>GET</code>) as early data. For anything else it should refuse early data, for example with <code>425 Too Early</code> (RFC 8470), so the client retries after the full handshake. The request should also carry an idempotency key (see Dev Essentials 14 · API Reliability).</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Bash / Git Bash</th>
+<th>PowerShell 5.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS lookup</td>
+<td><code>nslookup -type=A host</code>, <code>dig host +short</code></td>
+<td><code>Resolve-DnsName host -Type A</code></td>
+</tr>
+<tr>
+<td>Walk the DNS tree</td>
+<td><code>dig +trace host</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Flush DNS cache</td>
+<td>(depends on OS)</td>
+<td><code>Clear-DnsClientCache</code></td>
+</tr>
+<tr>
+<td>TCP only</td>
+<td><code>curl -sv telnet://host:443</code></td>
+<td><code>Test-NetConnection host -Port 443</code></td>
+</tr>
+<tr>
+<td>Phase timings</td>
+<td><code>curl -s -o /dev/null -w &quot;...%{time_appconnect}...&quot; URL</code></td>
+<td>same with <code>curl.exe</code> and <code>-o NUL</code></td>
+</tr>
+<tr>
+<td>Handshake summary</td>
+<td><code>openssl s_client -connect host:443 -servername host -brief</code></td>
+<td>.NET <code>SslStream</code> (Chapter 5)</td>
+</tr>
+<tr>
+<td>Certificate fields</td>
+<td>pipe into <code>openssl x509 -noout -subject -issuer -dates -ext subjectAltName</code></td>
+<td><code>$cert.Subject</code>, <code>$cert.NotAfter</code></td>
+</tr>
+<tr>
+<td>Chain the server sent</td>
+<td><code>openssl s_client ... -showcerts</code></td>
+<td><code>X509Chain.Build</code></td>
+</tr>
+<tr>
+<td>ALPN result</td>
+<td><code>openssl s_client ... -alpn h2,http/1.1</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Clock status</td>
+<td><code>timedatectl status</code></td>
+<td><code>w32tm /query /status</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Fact (September 2026)</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLS 1.3 spec</td>
+<td>RFC 8446 (2018), obsoleted by RFC 9846 (July 2026); still version 1.3</td>
+</tr>
+<tr>
+<td>Max public cert lifetime</td>
+<td>200 days now; 100 days from 2027-03-15; 47 days from 2029-03-15</td>
+</tr>
+<tr>
+<td>Let's Encrypt default</td>
+<td><code>classic</code>, 90 days; OCSP off since 2025-08-06; CRLs only</td>
+</tr>
+<tr>
+<td>ECH</td>
+<td>RFC 9849 (March 2026)</td>
+</tr>
+<tr>
+<td>HTTP/3</td>
+<td>RFC 9114, over QUIC (RFC 9000)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>Post 08 · Floating Point leaves the network. It explains why <code>0.1 + 0.2</code> prints <code>0.30000000000000004</code>, how IEEE 754 doubles are laid out, how to compare floats safely, and how to store money without losing cents.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://www.rfc-editor.org/info/rfc8446/" target="_blank" rel="noopener external nofollow noreferrer">RFC 8446 — TLS 1.3 (2018)</a>; <a href="https://www.rfc-editor.org/info/rfc9846/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9846 — TLS 1.3 (July 2026, obsoletes 8446)</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc1034/" target="_blank" rel="noopener external nofollow noreferrer">RFC 1034</a> / <a href="https://www.rfc-editor.org/info/rfc1035/" target="_blank" rel="noopener external nofollow noreferrer">RFC 1035</a> — DNS; <a href="https://www.rfc-editor.org/info/rfc9460/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9460 — SVCB and HTTPS records</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc6066/" target="_blank" rel="noopener external nofollow noreferrer">RFC 6066 — TLS extensions, incl. SNI</a>; <a href="https://www.rfc-editor.org/info/rfc7301/" target="_blank" rel="noopener external nofollow noreferrer">RFC 7301 — ALPN</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc9849/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9849 — TLS Encrypted Client Hello</a>; <a href="https://www.rfc-editor.org/info/rfc9848/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9848 — ECH in DNS</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc9113/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9113 — HTTP/2</a>; <a href="https://www.rfc-editor.org/info/rfc9000/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9000 — QUIC</a>; <a href="https://www.rfc-editor.org/info/rfc9114/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9114 — HTTP/3</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc6797/" target="_blank" rel="noopener external nofollow noreferrer">RFC 6797 — HSTS</a>; <a href="https://hstspreload.org/" target="_blank" rel="noopener external nofollow noreferrer">HSTS preload list</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc8555/" target="_blank" rel="noopener external nofollow noreferrer">RFC 8555 — ACME</a>; <a href="https://www.rfc-editor.org/info/rfc9773/" target="_blank" rel="noopener external nofollow noreferrer">RFC 9773 — ACME Renewal Information</a>; <a href="https://www.rfc-editor.org/info/rfc8470/" target="_blank" rel="noopener external nofollow noreferrer">RFC 8470 — Early Data in HTTP</a></li>
+<li><a href="https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/" target="_blank" rel="noopener external nofollow noreferrer">CA/Browser Forum Ballot SC-081v3</a>; <a href="https://github.com/cabforum/servercert/blob/main/docs/BR.md" target="_blank" rel="noopener external nofollow noreferrer">Baseline Requirements source</a></li>
+<li>Let's Encrypt: <a href="https://letsencrypt.org/docs/profiles/" target="_blank" rel="noopener external nofollow noreferrer">Profiles</a> · <a href="https://letsencrypt.org/docs/cert-lifetimes/" target="_blank" rel="noopener external nofollow noreferrer">Certificate lifetimes</a> · <a href="https://letsencrypt.org/2025/12/02/from-90-to-45" target="_blank" rel="noopener external nofollow noreferrer">From 90 to 45 days</a> · <a href="https://letsencrypt.org/2025/08/06/ocsp-service-has-reached-end-of-life" target="_blank" rel="noopener external nofollow noreferrer">OCSP end of life</a> · <a href="https://letsencrypt.org/2026/01/15/6day-and-ip-general-availability" target="_blank" rel="noopener external nofollow noreferrer">6-day certificates GA</a></li>
+<li><a href="https://openssl-library.org/post/2026-04-14-openssl-40-final-release/" target="_blank" rel="noopener external nofollow noreferrer">OpenSSL 4.0 release</a>; <a href="https://chromestatus.com/feature/6196703843581952" target="_blank" rel="noopener external nofollow noreferrer">Chrome Platform Status — ECH</a></li>
+<li><a href="https://developer.chrome.com/docs/devtools/security" target="_blank" rel="noopener external nofollow noreferrer">Chrome DevTools — Security panel</a>; <a href="https://badssl.com/" target="_blank" rel="noopener external nofollow noreferrer">badssl.com</a></li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: a Wireshark walkthrough of a TLS 1.3 handshake (with <code>SSLKEYLOGFILE</code>), mutual TLS with client certificates, and a closer look at post-quantum key exchange.</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-25 07:02:49\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/img/404.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-23T07:44:21.000Z","title":"Created 2026-08-23 15:44:21","children":"2026-08-23"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-23T07:44:21.000Z","title":"Updated 2026-08-23 15:44:21","children":"2026-08-23"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Dev Essentials",{"className":"post-meta-categories","href":"/blog/categories/Dev-Essentials/","children":"Dev Essentials"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/23/dev_07_https_tls/","children":"https://invokfung.github.io/blog/2026/08/23/dev_07_https_tls/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Dev Essentials",{"className":"post-meta__tags","href":"/blog/tags/Dev-Essentials/","children":"Dev Essentials"}],["$","a","Networking",{"className":"post-meta__tags","href":"/blog/tags/Networking/","children":"Networking"}],["$","a","Security",{"className":"post-meta__tags","href":"/blog/tags/Security/","children":"Security"}],["$","a","HTTPS",{"className":"post-meta__tags","href":"/blog/tags/HTTPS/","children":"HTTPS"}],["$","a","TLS",{"className":"post-meta__tags","href":"/blog/tags/TLS/","children":"TLS"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/25/dev_08_floating_point/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/20/dev_06_regex/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/img/404.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 06 · Regex from Zero to Useful</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","dev_09_versions_dependencies",{"children":["$","a",null,{"href":"/blog/2026/08/28/dev_09_versions_dependencies/","title":"Dev Essentials — 09 · Versions and Dependencies — SemVer, Lockfiles, Safe Upgrades and Supply Chain","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-28</div><div class=\"title\">Dev Essentials — 09 · Versions and Dependencies — SemVer, Lockfiles, Safe Upgrades and Supply Chain</div></div>"}}]}],["$","div","dev_11_auth",{"children":["$","a",null,{"href":"/blog/2026/08/31/dev_11_auth/","title":"Dev Essentials — 11 · Authentication Done Right — Password Hashing, Sessions vs JWT, OAuth 2 and OIDC","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-31</div><div class=\"title\">Dev Essentials — 11 · Authentication Done Right — Password Hashing, Sessions vs JWT, OAuth 2 and OIDC</div></div>"}}]}],["$","div","dev_12_owasp_top10",{"children":["$","a",null,{"href":"/blog/2026/09/02/dev_12_owasp_top10/","title":"Dev Essentials — 12 · OWASP Top 10 with Runnable Examples","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-02</div><div class=\"title\">Dev Essentials — 12 · OWASP Top 10 with Runnable Examples</div></div>"}}]}],["$","div","dev_16_ci_cd_github_actions",{"children":["$","a",null,{"href":"/blog/2026/09/10/dev_16_ci_cd_github_actions/","title":"Dev Essentials — 16 · CI/CD with GitHub Actions — Build, Test and Deploy a Static Blog","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-10</div><div class=\"title\">Dev Essentials — 16 · CI/CD with GitHub Actions — Build, Test and Deploy a Static Blog</div></div>"}}]}],["$","div","dev_01_text_encoding",{"children":["$","a",null,{"href":"/blog/2026/08/12/dev_01_text_encoding/","title":"Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-12</div><div class=\"title\">Dev Essentials — 01 · Text Encoding — Bytes, Unicode, UTF-8, BOM and Mojibake</div></div>"}}]}],["$","div","dev_02_dates_time_zones",{"children":["$","a",null,{"href":"/blog/2026/08/14/dev_02_dates_time_zones/","title":"Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/img/404.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-14</div><div class=\"title\">Dev Essentials — 02 · Dates and Time Zones — UTC, ISO 8601, DST and Offsets</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":114}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":209}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":12}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-The-big-picture",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-The-big-picture","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — The big picture"}]]}],null]}],["$","li","Chapter-2-—-DNS-from-name-to-IP-address",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-DNS-from-name-to-IP-address","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — DNS: from name to IP address"}]]}],null]}],["$","li","Chapter-3-—-TCP-the-three-way-handshake",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-TCP-the-three-way-handshake","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — TCP: the three-way handshake"}]]}],null]}],["$","li","Chapter-4-—-The-TLS-13-handshake",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-The-TLS-13-handshake","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — The TLS 1.3 handshake"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Resumption-and-0-RTT",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Resumption-and-0-RTT","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Resumption and 0-RTT"}]]}],null]}],["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Certificates-and-the-chain-of-trust",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Certificates-and-the-chain-of-trust","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Certificates and the chain of trust"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","How-long-a-certificate-may-live-—-the-rules-today",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#How-long-a-certificate-may-live-—-the-rules-today","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"How long a certificate may live — the rules today"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-SNI-ECH-ALPN-HTTP2-and-HTTP3",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-SNI-ECH-ALPN-HTTP2-and-HTTP3","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — SNI, ECH, ALPN, HTTP/2 and HTTP/3"}]]}],null]}],["$","li","Chapter-7-—-HSTS-never-talk-plain-HTTP-again",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-HSTS-never-talk-plain-HTTP-again","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — HSTS: never talk plain HTTP again"}]]}],null]}],["$","li","Chapter-8-—-Lets-Encrypt-and-ACME",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-8-—-Lets-Encrypt-and-ACME","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 8 — Let's Encrypt and ACME"}]]}],null]}],["$","li","Chapter-9-—-Common-HTTPS-errors-and-how-to-diagnose-them",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-9-—-Common-HTTPS-errors-and-how-to-diagnose-them","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 9 — Common HTTPS errors and how to diagnose them"}]]}],null]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Time-each-phase",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Time-each-phase","children":[["$","span",null,{"className":"toc-number","children":"11.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Time each phase"}]]}],null]}],["$","li","Exercise-2-—-Read-a-chain",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Read-a-chain","children":[["$","span",null,{"className":"toc-number","children":"11.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Read a chain"}]]}],null]}],["$","li","Exercise-3-—-Expiry-monitor",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Expiry-monitor","children":[["$","span",null,{"className":"toc-number","children":"11.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Expiry monitor"}]]}],null]}],["$","li","Exercise-4-—-Design-an-HSTS-header",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Design-an-HSTS-header","children":[["$","span",null,{"className":"toc-number","children":"11.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Design an HSTS header"}]]}],null]}],["$","li","Exercise-5-—-0-RTT-risk",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-0-RTT-risk","children":[["$","span",null,{"className":"toc-number","children":"11.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — 0-RTT risk"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"14."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","dev_22_design_docs_readmes",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 22 · Design Docs and READMEs People Actually Read\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_22_design_docs_readmes/","title":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read","children":"Dev Essentials — 22 · Design Docs and READMEs People Actually Read"}],["$","time",null,{"dateTime":"2026-09-19T04:27:46.000Z","title":"Created 2026-09-19 12:27:46","children":"2026-09-19"}]]}]]}],["$","div","dev_21_estimating",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/19/dev_21_estimating/","title":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip","children":"Dev Essentials — 21 · Estimating Software Tasks — Breakdown, Ranges and Why Estimates Slip"}],["$","time",null,{"dateTime":"2026-09-19T03:31:43.000Z","title":"Created 2026-09-19 11:31:43","children":"2026-09-19"}]]}]]}],["$","div","dev_20_reading_papers",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/img/404.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/18/dev_20_reading_papers/","title":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method","children":"Dev Essentials — 20 · How to Read a Research Paper — The Three-Pass Method"}],["$","time",null,{"dateTime":"2026-09-18T12:25:21.000Z","title":"Created 2026-09-18 20:25:21","children":"2026-09-18"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"You type `https://example.com` and press Enter. Half a second later the page is on screen. In that half second your computer found an IP address, open"}],["$","meta","5",{"name":"keywords","content":"Dev Essentials,Networking,Security,HTTPS,TLS"}],["$","meta","6",{"property":"og:title","content":"Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain"}],["$","meta","7",{"property":"og:description","content":"You type `https://example.com` and press Enter. Half a second later the page is on screen. In that half second your computer found an IP address, open"}],["$","meta","8",{"property":"og:type","content":"article"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:title","content":"Dev Essentials — 07 · How HTTPS Works — DNS, TCP, TLS 1.3 and the Certificate Chain"}],["$","meta","11",{"name":"twitter:description","content":"You type `https://example.com` and press Enter. Half a second later the page is on screen. In that half second your computer found an IP address, open"}]]
+1:null
