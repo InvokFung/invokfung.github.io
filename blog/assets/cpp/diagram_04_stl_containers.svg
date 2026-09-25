@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880" width="1000" height="880" role="img" aria-label="What is inside the main STL containers: vector is a dynamic array, deque a segmented array, list a doubly linked list, map and set a balanced tree, unordered_map and unordered_set a hash table">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="880" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="878.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What is inside each STL container</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The shape of the data sets the cost. Costs are from the container table in this post.</text>
+<defs><marker id="mt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker></defs>
+<defs><marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker></defs>
+<defs><marker id="mv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker></defs>
+<defs><marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<defs><marker id="mc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#dc4c3a"/></marker></defs>
+<defs><marker id="mi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker></defs>
+<rect x="40.0" y="100.0" width="920.0" height="176.0" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="60.0" y="132.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="18" font-weight="700" fill="#0d9488" text-anchor="start">vector&lt;T&gt;</text>
+<text x="170.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#6b7280" text-anchor="start">dynamic array: the default container</text>
+<text x="60.0" y="160.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">std::vector&lt;int&gt; v{10, 20, 30};</text>
+<rect x="60.0" y="176.0" width="54.0" height="40.0" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="87.0" y="202.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">10</text>
+<rect x="114.0" y="176.0" width="54.0" height="40.0" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="141.0" y="202.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">20</text>
+<rect x="168.0" y="176.0" width="54.0" height="40.0" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="195.0" y="202.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">30</text>
+<rect x="226.0" y="180.0" width="46" height="32" rx="4" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="87.0" y1="246.0" x2="87.0" y2="221.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mt)"/>
+<text x="79.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">v.begin()</text>
+<line x1="249.0" y1="246.0" x2="249.0" y2="221.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mt)"/>
+<text x="241.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">v.end(): one past the last</text>
+<line x1="334.0" y1="196.0" x2="284.0" y2="196.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mt)"/>
+<text x="342.0" y="201.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">push_back</text>
+<text x="560.0" y="170.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(1)</text>
+<text x="620.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">random access, e.g. v[i]</text>
+<text x="560.0" y="193.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(1)</text>
+<text x="620.0" y="193.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">push_back at the end (amortised)</text>
+<text x="560.0" y="216.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(n)</text>
+<text x="620.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">insert / erase in the middle</text>
+<text x="560.0" y="250.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Same idea: array&lt;T, N&gt; (fixed size) and string (chars).</text>
+<rect x="40.0" y="294.0" width="452.0" height="230.0" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="60.0" y="324.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">deque&lt;T&gt;</text>
+<text x="60.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">segmented array · use: queue-like patterns</text>
+<text x="60.0" y="480.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(1)</text>
+<text x="120.0" y="480.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">random access</text>
+<text x="60.0" y="503.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(1)</text>
+<text x="120.0" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">insert / erase at both ends</text>
+<rect x="115.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="145.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="175.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="221.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="251.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="281.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="327.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="357.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<rect x="387.0" y="378.0" width="30.0" height="30.0" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<line x1="71.0" y1="393.0" x2="109.0" y2="393.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mb)" marker-start="url(#mb)"/>
+<line x1="423.0" y1="393.0" x2="461.0" y2="393.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mb)" marker-start="url(#mb)"/>
+<text x="90.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">front</text>
+<text x="442.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">back</text>
+<rect x="508.0" y="294.0" width="452.0" height="230.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="528.0" y="324.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">list&lt;T&gt;</text>
+<text x="528.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">doubly linked list · each node links both ways</text>
+<text x="528.0" y="480.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(n)</text>
+<text x="588.0" y="480.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">access</text>
+<text x="528.0" y="503.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(1)</text>
+<text x="588.0" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">insert / erase anywhere, if you have the iterator</text>
+<rect x="567.0" y="376.0" width="58.0" height="34.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="596.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#7c3aed" text-anchor="middle">node</text>
+<line x1="630.0" y1="393.0" x2="654.0" y2="393.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mv)" marker-start="url(#mv)"/>
+<rect x="659.0" y="376.0" width="58.0" height="34.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="688.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#7c3aed" text-anchor="middle">node</text>
+<line x1="722.0" y1="393.0" x2="746.0" y2="393.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mv)" marker-start="url(#mv)"/>
+<rect x="751.0" y="376.0" width="58.0" height="34.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="780.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#7c3aed" text-anchor="middle">node</text>
+<line x1="814.0" y1="393.0" x2="838.0" y2="393.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mv)" marker-start="url(#mv)"/>
+<rect x="843.0" y="376.0" width="58.0" height="34.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="872.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#7c3aed" text-anchor="middle">node</text>
+<text x="734.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">often slower than vector (cache effects): profile first</text>
+<rect x="40.0" y="540.0" width="452.0" height="230.0" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="60.0" y="570.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">map&lt;K, V&gt; · set&lt;T&gt;</text>
+<text x="60.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">balanced tree</text>
+<text x="60.0" y="726.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(log n)</text>
+<text x="156.0" y="726.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">access, insert, erase</text>
+<text x="60.0" y="749.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start"></text>
+<text x="156.0" y="749.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">keys kept in order</text>
+<line x1="306.0" y1="614.0" x2="230.0" y2="648.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="306.0" y1="614.0" x2="382.0" y2="648.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="230.0" y1="648.0" x2="192.0" y2="680.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="230.0" y1="648.0" x2="268.0" y2="680.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="382.0" y1="648.0" x2="344.0" y2="680.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="382.0" y1="648.0" x2="420.0" y2="680.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="306.0" cy="614.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<circle cx="230.0" cy="648.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<circle cx="382.0" cy="648.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<circle cx="192.0" cy="680.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<circle cx="268.0" cy="680.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<circle cx="344.0" cy="680.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<circle cx="420.0" cy="680.0" r="11" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<rect x="508.0" y="540.0" width="452.0" height="230.0" rx="12" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="528.0" y="570.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#dc4c3a" text-anchor="start">unordered_map&lt;K, V&gt; · unordered_set&lt;T&gt;</text>
+<text x="528.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">hash table</text>
+<text x="528.0" y="726.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">O(1)</text>
+<text x="588.0" y="726.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">average access, insert, erase</text>
+<text x="528.0" y="749.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start"></text>
+<text x="588.0" y="749.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">keys NOT ordered</text>
+<text x="534.0" y="639.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">key</text>
+<line x1="568.0" y1="634.0" x2="598.0" y2="634.0" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mc)"/>
+<rect x="602.0" y="620.0" width="60.0" height="28.0" rx="14" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="632.0" y="639.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">hash</text>
+<line x1="666.0" y1="634.0" x2="709.0" y2="634.0" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round" marker-end="url(#mc)"/>
+<rect x="714.0" y="620.0" width="34.0" height="28.0" rx="3" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<rect x="748.0" y="620.0" width="34.0" height="28.0" rx="3" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<rect x="782.0" y="620.0" width="34.0" height="28.0" rx="3" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<rect x="816.0" y="620.0" width="34.0" height="28.0" rx="3" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<rect x="850.0" y="620.0" width="34.0" height="28.0" rx="3" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="894.0" y="639.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">buckets</text>
+<line x1="765.0" y1="648.0" x2="765.0" y2="658.0" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="751.0" y="658.0" width="28.0" height="20.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.4"/>
+<line x1="765.0" y1="678.0" x2="765.0" y2="688.0" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="751.0" y="688.0" width="28.0" height="20.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.4"/>
+<line x1="833.0" y1="648.0" x2="833.0" y2="658.0" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="819.0" y="658.0" width="28.0" height="20.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.4"/>
+<text x="40.0" y="802.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Default to vector: it is the right answer about 80% of the time.</text>
+<text x="40.0" y="824.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Benchmark before picking anything else for speed. The cache wins almost every fight.</text>
+<text x="40.0" y="862.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 3, 4, 5 and 9. Shapes are simplified sketches.</text>
+</svg>

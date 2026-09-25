@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="1000" height="750" role="img" aria-label="The six parts of a prompt, marked on the post's meeting action-item prompt">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="750" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="748.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Anatomy of a prompt: the six parts</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The Chapter 9 prompt, with each part marked. The order matters less than the presence of each part.</text>
+<rect x="40.0" y="104.0" width="662.0" height="534.0" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="48.0" y="117.0" width="646.0" height="17.0" rx="6" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<rect x="48.0" y="117.0" width="4" height="17.0" rx="2" fill="#7c3aed"/>
+<rect x="48.0" y="145.0" width="646.0" height="55.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<rect x="48.0" y="145.0" width="4" height="55.0" rx="2" fill="#0d9488"/>
+<rect x="48.0" y="211.0" width="646.0" height="225.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<rect x="48.0" y="211.0" width="4" height="225.0" rx="2" fill="#d97706"/>
+<rect x="48.0" y="447.0" width="646.0" height="74.0" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<rect x="48.0" y="447.0" width="4" height="74.0" rx="2" fill="#2563eb"/>
+<rect x="48.0" y="532.0" width="646.0" height="74.0" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<rect x="48.0" y="532.0" width="4" height="74.0" rx="2" fill="#dc4c3a"/>
+<rect x="48.0" y="608.0" width="646.0" height="17.0" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<rect x="48.0" y="608.0" width="4" height="17.0" rx="2" fill="#16a34a"/>
+<text x="62.0" y="131.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">You are a meeting analyst.</text>
+<text x="62.0" y="159.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Your task: extract every action item from the transcript below. An action item</text>
+<text x="62.0" y="178.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">is a commitment a specific named person made to do a specific thing by an</text>
+<text x="62.0" y="197.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">optional deadline.</text>
+<text x="62.0" y="225.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Examples:</text>
+<text x="62.0" y="253.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Transcript:</text>
+<text x="62.0" y="272.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">  Alice: I'll send the deck to Bob by Friday.</text>
+<text x="62.0" y="291.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">  Bob: Sounds good.</text>
+<text x="62.0" y="310.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Output:</text>
+<text x="62.0" y="329.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">  [{"owner": "Alice", "task": "send the deck to Bob", "due": "Friday"}]</text>
+<text x="62.0" y="357.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Transcript:</text>
+<text x="62.0" y="376.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">  Carlos: Maybe we should think about the budget.</text>
+<text x="62.0" y="395.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">  Dana: Yeah, let's think about it.</text>
+<text x="62.0" y="414.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Output:</text>
+<text x="62.0" y="433.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">  []</text>
+<text x="62.0" y="461.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Transcript:</text>
+<text x="62.0" y="480.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">&lt;&lt;&lt;</text>
+<text x="62.0" y="499.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{transcript}</text>
+<text x="62.0" y="518.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">&gt;&gt;&gt;</text>
+<text x="62.0" y="546.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Rules:</text>
+<text x="62.0" y="565.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">1. Only include commitments with a named owner.</text>
+<text x="62.0" y="584.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">2. Vague "we should" / "maybe" / "let's think" → ignore.</text>
+<text x="62.0" y="603.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">3. If no action items, return [].</text>
+<text x="62.0" y="622.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">4. Output JSON only, no preamble.</text>
+<rect x="726.0" y="104.0" width="234.0" height="74.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="740.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Role / persona</text>
+<text x="948.0" y="127.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="end">[ROLE]</text>
+<text x="740.0" y="149.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Set a frame the model uses to</text>
+<text x="740.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">choose vocabulary, depth, formality</text>
+<path d="M694.0,125.5 L710.0,125.5 L716.0,141.0 L726.0,141.0" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="694.0" cy="125.5" r="3.5" fill="#7c3aed"/>
+<rect x="726.0" y="188.0" width="234.0" height="55.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="740.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Instruction</text>
+<text x="948.0" y="211.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="end">[TASK]</text>
+<text x="740.0" y="233.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The actual verb of the request</text>
+<path d="M694.0,172.5 L710.0,172.5 L716.0,215.5 L726.0,215.5" fill="none" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="694.0" cy="172.5" r="3.5" fill="#0d9488"/>
+<rect x="726.0" y="274.0" width="234.0" height="93.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="740.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">Examples (shots)</text>
+<text x="948.0" y="297.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="end">[EXAMPLES]</text>
+<text x="740.0" y="319.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Demonstrations of input → output.</text>
+<text x="740.0" y="338.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The 2nd one is negative: it teaches</text>
+<text x="740.0" y="357.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">refusal on vague language.</text>
+<path d="M694.0,323.5 L710.0,323.5 L716.0,320.5 L726.0,320.5" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="694.0" cy="323.5" r="3.5" fill="#d97706"/>
+<rect x="726.0" y="377.0" width="234.0" height="112.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="740.0" y="401.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">Context</text>
+<text x="948.0" y="400.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="end">[CONTEXT]</text>
+<text x="740.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Domain facts, retrieved documents,</text>
+<text x="740.0" y="441.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">prior turns</text>
+<text x="740.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Here: the transcript, fenced</text>
+<text x="740.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">by &lt;&lt;&lt; &gt;&gt;&gt; delimiters</text>
+<path d="M694.0,484.0 L710.0,484.0 L716.0,433.0 L726.0,433.0" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="694.0" cy="484.0" r="3.5" fill="#2563eb"/>
+<rect x="726.0" y="499.0" width="234.0" height="74.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="740.0" y="523.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Stop / guardrails</text>
+<text x="948.0" y="522.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="end">[STOP]</text>
+<text x="740.0" y="544.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Negative constraints,</text>
+<text x="740.0" y="563.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">refusal triggers</text>
+<path d="M694.0,569.0 L710.0,569.0 L716.0,536.0 L726.0,536.0" fill="none" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="694.0" cy="569.0" r="3.5" fill="#dc4c3a"/>
+<rect x="726.0" y="583.0" width="234.0" height="55.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<text x="740.0" y="607.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#16a34a" text-anchor="start">Format spec</text>
+<text x="948.0" y="606.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#16a34a" text-anchor="end">[FORMAT]</text>
+<text x="740.0" y="628.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Constraint on output shape</text>
+<path d="M694.0,616.5 L710.0,616.5 L716.0,610.5 L726.0,610.5" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="694.0" cy="616.5" r="3.5" fill="#16a34a"/>
+<rect x="40.0" y="656.0" width="920.0" height="44.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="500.0" y="684.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Testable (you have a golden set) · debuggable (each rule is one axis you can score) · safe (negative examples teach refusal on vague language)</text>
+<text x="40.0" y="732.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post — six parts from Chapter 2 (Anatomy of a Prompt); prompt from Chapter 9 (Putting It Together).</text>
+</svg>

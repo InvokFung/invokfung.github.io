@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 736" width="1000" height="736" role="img" aria-label="Full jitter wait ranges per retry attempt with base 0.2 s and cap 5 s, compared with no jitter">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="736" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="734.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Full jitter: how long each retry waits</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">sleep = random(0, min(cap, base * 2 ** attempt)) with the decorator's defaults: base = 0.2 s, cap = 5 s.</text>
+<rect x="40.0" y="105.0" width="26.0" height="14.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<text x="74.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Full jitter: any wait in the range is equally likely</text>
+<circle cx="420" cy="113" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="429" cy="113" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="437" cy="113" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<text x="444.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">10 sample clients (random draws)</text>
+<rect x="680.0" y="103.0" width="4.0" height="18.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="692.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">No jitter: all clients wait exactly this long</text>
+<rect x="30.0" y="164.0" width="940.0" height="214.0" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+<rect x="30.0" y="394.0" width="940.0" height="170.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="44.0" y="185.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">Exercise 2: max_attempts = 5, so there are 4 sleeps</text>
+<text x="44.0" y="415.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Only if more attempts were allowed (max_attempts = 8)</text>
+<line x1="250.0" y1="190.0" x2="250.0" y2="374.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="344.5" y1="190.0" x2="344.5" y2="374.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="439.1" y1="190.0" x2="439.1" y2="374.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="533.6" y1="190.0" x2="533.6" y2="374.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="628.2" y1="190.0" x2="628.2" y2="374.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="722.7" y1="190.0" x2="722.7" y2="374.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="250.0" y1="420.0" x2="250.0" y2="560.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="344.5" y1="420.0" x2="344.5" y2="560.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="439.1" y1="420.0" x2="439.1" y2="560.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="533.6" y1="420.0" x2="533.6" y2="560.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="628.2" y1="420.0" x2="628.2" y2="560.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="722.7" y1="420.0" x2="722.7" y2="560.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="250.0" y1="564.0" x2="250.0" y2="578.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="344.5" y1="564.0" x2="344.5" y2="578.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="439.1" y1="564.0" x2="439.1" y2="578.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="533.6" y1="564.0" x2="533.6" y2="578.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="628.2" y1="564.0" x2="628.2" y2="578.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="722.7" y1="564.0" x2="722.7" y2="578.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="250.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">0 s</text>
+<text x="344.5" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">1 s</text>
+<text x="439.1" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">2 s</text>
+<text x="533.6" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">3 s</text>
+<text x="628.2" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">4 s</text>
+<text x="722.7" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">5 s</text>
+<text x="510.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="middle">Sleep before the next call (seconds)</text>
+<line x1="722.7" y1="152.0" x2="722.7" y2="378.0" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="6 5"/>
+<line x1="722.7" y1="394.0" x2="722.7" y2="578.0" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="6 5"/>
+<text x="722.7" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">cap = 5 s</text>
+<text x="44.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 0</text>
+<text x="44.0" y="231.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 1 fails</text>
+<rect x="250.0" y="207.0" width="18.9" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="256.1" cy="219.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="252.9" cy="213.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="262.3" cy="219.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="251.4" cy="213.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="260.1" cy="219.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="256.9" cy="213.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="251.1" cy="219.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="259.6" cy="213.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="250.7" cy="219.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="258.2" cy="213.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="266.9" y="203.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 0.2 s</text>
+<text x="806.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**0 = 0.2</text>
+<text x="44.0" y="257.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 1</text>
+<text x="44.0" y="275.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 2 fails</text>
+<rect x="250.0" y="251.0" width="37.8" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="252.6" cy="263.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="253.4" cy="257.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="266.1" cy="263.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="281.3" cy="257.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="254.7" cy="263.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="258.4" cy="257.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="273.7" cy="263.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="285.8" cy="257.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="271.8" cy="263.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="265.0" cy="257.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="285.8" y="247.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="258.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 0.4 s</text>
+<text x="806.0" y="276.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**1 = 0.4</text>
+<text x="44.0" y="301.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 2</text>
+<text x="44.0" y="319.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 3 fails</text>
+<rect x="250.0" y="295.0" width="75.6" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="323.8" cy="307.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="253.5" cy="301.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="314.9" cy="307.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="271.9" cy="301.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="260.9" cy="307.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="258.9" cy="301.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="273.3" cy="307.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="311.7" cy="301.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="263.7" cy="307.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="294.0" cy="301.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="323.6" y="291.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="302.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 0.8 s</text>
+<text x="806.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**2 = 0.8</text>
+<text x="44.0" y="345.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 3</text>
+<text x="44.0" y="363.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 4 fails</text>
+<rect x="250.0" y="339.0" width="151.3" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="346.7" cy="351.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="306.3" cy="345.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="332.9" cy="351.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="259.5" cy="345.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="259.0" cy="351.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="281.2" cy="345.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="352.9" cy="351.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="314.7" cy="345.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="297.5" cy="351.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="338.6" cy="345.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="399.3" y="335.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 1.6 s</text>
+<text x="806.0" y="364.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**3 = 1.6</text>
+<text x="44.0" y="443.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 4</text>
+<text x="44.0" y="461.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 5 fails</text>
+<rect x="250.0" y="437.0" width="302.5" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="387.1" cy="449.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="340.7" cy="443.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="490.3" cy="449.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="461.5" cy="443.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="323.9" cy="449.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="423.8" cy="443.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="408.9" cy="449.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="514.8" cy="443.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="470.7" cy="449.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="337.1" cy="443.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="550.5" y="433.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 3.2 s</text>
+<text x="806.0" y="462.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**4 = 3.2</text>
+<text x="44.0" y="487.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 5</text>
+<text x="44.0" y="505.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 6 fails</text>
+<rect x="250.0" y="481.0" width="472.7" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="713.4" cy="493.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="305.8" cy="487.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="447.7" cy="493.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="607.9" cy="487.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="321.8" cy="493.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="481.1" cy="487.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="268.5" cy="493.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="565.9" cy="487.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="611.4" cy="493.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="520.9" cy="487.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="720.7" y="477.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 5 s</text>
+<text x="806.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**5 = 6.4 &gt; cap</text>
+<text x="44.0" y="531.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">attempt = 6</text>
+<text x="44.0" y="549.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sleep after call 7 fails</text>
+<rect x="250.0" y="525.0" width="472.7" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<circle cx="663.9" cy="537.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="398.3" cy="531.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="578.7" cy="537.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="531.0" cy="531.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="524.1" cy="537.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="465.7" cy="531.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="647.1" cy="537.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="696.6" cy="531.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="474.1" cy="537.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="564.0" cy="531.0" r="4" fill="#0d9488" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="720.7" y="521.0" width="4.0" height="26.0" rx="1" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="806.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0 – 5 s</text>
+<text x="806.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.2 * 2**6 = 12.8 &gt; cap</text>
+<text x="40.0" y="658.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Longest total wait in Exercise 2: 0.2 + 0.4 + 0.8 + 1.6 = 3.0 s. The average is half of that, 1.5 s.</text>
+<text x="40.0" y="680.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">If the server sends Retry-After, the decorator waits at least that long: sleep = max(sleep, hint).</text>
+<text x="40.0" y="718.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Formula from Marc Brooker, “Exponential Backoff And Jitter” (AWS Architecture Blog, 2015). Dots are random examples.</text>
+</svg>

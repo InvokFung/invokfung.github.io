@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 790" width="1000" height="790" role="img" aria-label="Three steps: four commits on main; after git reset --hard HEAD~2 main points at C2 while C3 and C4 still exist and the reflog still points at them; after git reset --hard HEAD@{1} main points at C4 again">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="790" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="788.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Undo a bad reset --hard with the reflog</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">reset --hard moves the branch pointer but deletes no commits. The reflog remembers where HEAD was.</text>
+<defs><marker id="aht" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker></defs>
+<defs><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<circle cx="52.0" cy="113.0" r="12" fill="#d97706"/>
+<text x="52.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="74" y="118" font-size="16" text-anchor="start" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"><tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" fill="#1f2937" font-weight="700">Before</tspan><tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" fill="#6b7280" font-weight="400">  —  four commits on main (the lab repo from Chapter 2)</tspan></text>
+<rect x="357.9" y="144.0" width="44.2" height="24.0" rx="12.0" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="380.0" y="161.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">main</text>
+<rect x="283.8" y="144.0" width="44.2" height="24.0" rx="12.0" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="305.8" y="161.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">HEAD</text>
+<line x1="329.9" y1="156.0" x2="353.9" y2="156.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="380.0" y1="169.0" x2="380.0" y2="188.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#aht)"/>
+<line x1="167.0" y1="212.0" x2="120.0" y2="212.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="262.0" y1="212.0" x2="215.0" y2="212.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="357.0" y1="212.0" x2="310.0" y2="212.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<circle cx="95" cy="212" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="95.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C1</text>
+<circle cx="190" cy="212" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="190.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C2</text>
+<circle cx="285" cy="212" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="285.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C3</text>
+<circle cx="380" cy="212" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="380.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C4</text>
+<text x="95.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">Add line 1</text>
+<text x="190.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">Add line 2</text>
+<text x="285.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">Add line 3</text>
+<text x="380.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">Add line 4</text>
+<text x="520.0" y="200.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#1f2937" text-anchor="start">main points at C4, and HEAD points at main.</text>
+<text x="520.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each commit points back to its parent.</text>
+<line x1="40.0" y1="272.0" x2="960.0" y2="272.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="52.0" cy="301.0" r="12" fill="#d97706"/>
+<text x="52.0" y="306.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="74" y="306" font-size="16" text-anchor="start" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" fill="#1f2937" font-weight="700">git reset --hard HEAD~2</tspan><tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" fill="#6b7280" font-weight="400">  —  two commits vanish from git log</tspan></text>
+<rect x="167.9" y="324.0" width="44.2" height="24.0" rx="12.0" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="190.0" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">main</text>
+<rect x="93.8" y="324.0" width="44.2" height="24.0" rx="12.0" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="115.8" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">HEAD</text>
+<line x1="139.9" y1="336.0" x2="163.9" y2="336.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="190.0" y1="349.0" x2="190.0" y2="368.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#aht)"/>
+<line x1="167.0" y1="392.0" x2="120.0" y2="392.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="262.0" y1="392.0" x2="215.0" y2="392.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<line x1="357.0" y1="392.0" x2="310.0" y2="392.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<circle cx="95" cy="392" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="95.0" y="397.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C1</text>
+<circle cx="190" cy="392" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="190.0" y="397.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C2</text>
+<circle cx="285" cy="392" r="20" fill="#f9fafb" stroke="#9ca3af" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="285.0" y="397.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#9ca3af" text-anchor="middle">C3</text>
+<circle cx="380" cy="392" r="20" fill="#f9fafb" stroke="#9ca3af" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="380.0" y="397.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#9ca3af" text-anchor="middle">C4</text>
+<path d="M265,366 L265,360 L400,360 L400,366" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="332.5" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="middle">no branch points here,</text>
+<text x="332.5" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="middle">but still in the repository</text>
+<rect x="152.8" y="440.0" width="74.3" height="24.0" rx="12.0" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="190.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">HEAD@{0}</text>
+<line x1="190.0" y1="439.0" x2="190.0" y2="416.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#aha)"/>
+<text x="190.0" y="484.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">3f2c1a9</text>
+<rect x="247.8" y="440.0" width="74.3" height="24.0" rx="12.0" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="285.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">HEAD@{2}</text>
+<line x1="285.0" y1="439.0" x2="285.0" y2="416.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#aha)"/>
+<text x="285.0" y="484.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">b4c3d2e</text>
+<rect x="342.8" y="440.0" width="74.3" height="24.0" rx="12.0" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="380.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">HEAD@{1}</text>
+<line x1="380.0" y1="439.0" x2="380.0" y2="416.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#aha)"/>
+<text x="380.0" y="484.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">8d7e6f5</text>
+<text x="506.0" y="342.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">git reflog</text>
+<text x="594.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sample output from the post; your hashes will differ</text>
+<rect x="506.0" y="350.0" width="448.0" height="92.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<rect x="511.0" y="383.0" width="438.0" height="24.0" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+<text x="520" y="377" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5"><tspan fill="#fcd34d">3f2c1a9 </tspan><tspan fill="#5eead4">(HEAD -&gt; main) </tspan><tspan fill="#fbbf24" font-weight="700">HEAD@{0}:</tspan><tspan fill="#e2e8f0"> reset: moving to HEAD~2</tspan></text>
+<text x="520" y="401" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5"><tspan fill="#fcd34d">8d7e6f5 </tspan><tspan fill="#5eead4"></tspan><tspan fill="#fbbf24" font-weight="700">HEAD@{1}:</tspan><tspan fill="#e2e8f0"> commit: Add line 4</tspan></text>
+<text x="520" y="425" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5"><tspan fill="#fcd34d">b4c3d2e </tspan><tspan fill="#5eead4"></tspan><tspan fill="#fbbf24" font-weight="700">HEAD@{2}:</tspan><tspan fill="#e2e8f0"> commit: Add line 3</tspan></text>
+<text x="506.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">HEAD@{1} means “where HEAD was one move ago” — that is C4.</text>
+<text x="506.0" y="490.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">The reflog is local to your clone and is never pushed.</text>
+<line x1="40.0" y1="512.0" x2="960.0" y2="512.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="52.0" cy="541.0" r="12" fill="#d97706"/>
+<text x="52.0" y="546.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="74" y="546" font-size="16" text-anchor="start" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" fill="#1f2937" font-weight="700">git reset --hard 'HEAD@{1}'</tspan><tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" fill="#6b7280" font-weight="400">  —  or use the hash: 8d7e6f5</tspan></text>
+<rect x="357.9" y="564.0" width="44.2" height="24.0" rx="12.0" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="380.0" y="581.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">main</text>
+<rect x="283.8" y="564.0" width="44.2" height="24.0" rx="12.0" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="305.8" y="581.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">HEAD</text>
+<line x1="329.9" y1="576.0" x2="353.9" y2="576.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="380.0" y1="589.0" x2="380.0" y2="608.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#aht)"/>
+<line x1="167.0" y1="632.0" x2="120.0" y2="632.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="262.0" y1="632.0" x2="215.0" y2="632.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="357.0" y1="632.0" x2="310.0" y2="632.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<circle cx="95" cy="632" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="95.0" y="637.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C1</text>
+<circle cx="190" cy="632" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="190.0" y="637.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C2</text>
+<circle cx="285" cy="632" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="285.0" y="637.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C3</text>
+<circle cx="380" cy="632" r="20" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="380.0" y="637.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">C4</text>
+<text x="520.0" y="608.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">All four commits are back.</text>
+<text x="520.0" y="632.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#1f2937" text-anchor="start">A second reset --hard moved the main pointer back</text>
+<text x="520.0" y="654.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#1f2937" text-anchor="start">to the old position that the reflog remembered.</text>
+<rect x="40.0" y="686.0" width="452.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="56.0" y="711.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">How long the reflog keeps entries</text>
+<text x="56.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">90 days by default; 30 days for commits no longer reachable.</text>
+<rect x="508.0" y="686.0" width="452.0" height="64.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="524.0" y="711.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">What the reflog cannot save</text>
+<text x="524.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Edits never committed and never staged are gone.</text>
+<text x="40.0" y="772.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 2 (lab repo) and Chapter 3 (sample reflog, Recipe 3.1). Hashes are the post's sample values.</text>
+</svg>

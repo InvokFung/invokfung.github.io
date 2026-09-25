@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 604" width="1000" height="604" role="img" aria-label="Region ap-east-1 with three availability zones, a workload spread across two of them, plus other regions and edge locations">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="604" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="602.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Regions and Availability Zones</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A region is a geographic area. Inside it, each AZ is a separate building with separate power.</text>
+<rect x="40.0" y="104.0" width="920.0" height="270.0" rx="14" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="62.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">Region: ap-east-1 (Hong Kong)</text>
+<text x="938.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">fully independent of other regions</text>
+<rect x="62.0" y="158.0" width="254.7" height="172.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="80.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">AZ ap-east-1a</text>
+<text x="80.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">data centre group A</text>
+<text x="80.0" y="234.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">own building, own power</text>
+<rect x="80.0" y="258.0" width="218.7" height="52.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="189.3" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">your app, copy 1</text>
+<text x="189.3" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">serves traffic</text>
+<rect x="372.7" y="158.0" width="254.7" height="172.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="390.7" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">AZ ap-east-1b</text>
+<text x="390.7" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">data centre group B</text>
+<text x="390.7" y="234.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">own building, own power</text>
+<rect x="390.7" y="258.0" width="218.7" height="52.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="500.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">your app, copy 2</text>
+<text x="500.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">serves traffic</text>
+<rect x="683.3" y="158.0" width="254.7" height="172.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="701.3" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">AZ ap-east-1c</text>
+<text x="701.3" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">data centre group C</text>
+<text x="701.3" y="234.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">own building, own power</text>
+<rect x="701.3" y="258.0" width="218.7" height="52" rx="8" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 5"/>
+<text x="810.7" y="289.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">(optional third copy)</text>
+<line x1="324.7" y1="244.0" x2="364.7" y2="244.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)" marker-start="url(#ahm)"/>
+<line x1="635.3" y1="244.0" x2="675.3" y2="244.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)" marker-start="url(#ahm)"/>
+<text x="500.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="middle">The AZs are joined by low-latency links. Every region has at least 3 AZs.</text>
+<rect x="40.0" y="392.0" width="920.0" height="44.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="500.0" y="420.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="middle">Production: spread across ≥ 2 AZs, so a single-AZ outage does not take the system down.</text>
+<rect x="40.0" y="454.0" width="450.0" height="100.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="56.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">Other regions, e.g. us-east-1, eu-west-1</text>
+<text x="56.0" y="508.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Each region is fully independent. Resources in</text>
+<text x="56.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">us-east-1 are not visible from eu-west-1 by default.</text>
+<rect x="510.0" y="454.0" width="450.0" height="100.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="526.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">Edge locations (hundreds worldwide)</text>
+<text x="526.0" y="508.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Smaller points of presence (PoPs), used by</text>
+<text x="526.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">CloudFront (CDN) and Route 53 (DNS).</text>
+<text x="40.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Names as used in the post: ap-east-1 (Hong Kong), us-east-1 (Northern Virginia). Source: docs.aws.amazon.com.</text>
+</svg>

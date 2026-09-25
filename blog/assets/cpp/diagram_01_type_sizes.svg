@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" role="img" aria-label="Typical sizes in bytes of the common C++ primitive types, with their ranges, and the exact-width integer types from cstdint">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="760" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="758.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Common C++ types and their typical sizes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">One square = one byte. Sizes are typical, as in the post's table; dashed squares mean it depends on the compiler.</text>
+<rect x="40.0" y="97.0" width="14.0" height="14.0" rx="3" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="61.0" y="109.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">true / false</text>
+<rect x="175.8" y="97.0" width="14.0" height="14.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="196.8" y="109.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">characters</text>
+<rect x="296.8" y="97.0" width="14.0" height="14.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="317.8" y="109.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">whole numbers</text>
+<rect x="440.0" y="97.0" width="14.0" height="14.0" rx="3" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="461.0" y="109.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">floating point</text>
+<text x="40.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Type</text>
+<text x="190.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Bytes</text>
+<text x="505.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Size (typical)</text>
+<text x="625.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Range</text>
+<line x1="40.0" y1="146.0" x2="960.0" y2="146.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="173.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">bool</text>
+<rect x="190.0" y="155.0" width="26.0" height="26.0" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="505.0" y="173.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">1 byte</text>
+<text x="625.0" y="173.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">true / false</text>
+<line x1="40.0" y1="186.0" x2="960.0" y2="186.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="40.0" y="209.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">char</text>
+<rect x="190.0" y="191.0" width="26.0" height="26.0" rx="4" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="505.0" y="209.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">1 byte</text>
+<text x="625.0" y="209.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">signed -128..127 (impl-defined)</text>
+<text x="40.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">unsigned char</text>
+<rect x="190.0" y="227.0" width="26.0" height="26.0" rx="4" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="505.0" y="245.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">1 byte</text>
+<text x="625.0" y="245.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">0..255</text>
+<line x1="40.0" y1="258.0" x2="960.0" y2="258.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="40.0" y="281.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">short</text>
+<rect x="190.0" y="263.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="221.0" y="263.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="505.0" y="281.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">2 bytes</text>
+<text x="625.0" y="281.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">-32,768..32,767</text>
+<text x="40.0" y="317.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">int</text>
+<rect x="190.0" y="299.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="221.0" y="299.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="252.0" y="299.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="283.0" y="299.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="505.0" y="317.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">4 bytes</text>
+<text x="625.0" y="317.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">±2.1 × 10⁹</text>
+<text x="40.0" y="353.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">unsigned int</text>
+<rect x="190.0" y="335.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="221.0" y="335.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="252.0" y="335.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="283.0" y="335.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="505.0" y="353.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">4 bytes</text>
+<text x="625.0" y="353.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">0..4.29 × 10⁹</text>
+<text x="40.0" y="389.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">long</text>
+<rect x="190.0" y="371.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="221.0" y="371.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="252.0" y="371.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="283.0" y="371.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="314.0" y="371.0" width="26" height="26" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.6" stroke-dasharray="4 3"/>
+<rect x="345.0" y="371.0" width="26" height="26" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.6" stroke-dasharray="4 3"/>
+<rect x="376.0" y="371.0" width="26" height="26" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.6" stroke-dasharray="4 3"/>
+<rect x="407.0" y="371.0" width="26" height="26" rx="4" fill="#ffffff" stroke="#0d9488" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="505.0" y="389.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">4 or 8 bytes</text>
+<text x="625.0" y="389.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#6b7280" text-anchor="start">impl-defined</text>
+<text x="40.0" y="425.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">long long</text>
+<rect x="190.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="221.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="252.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="283.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="314.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="345.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="376.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<rect x="407.0" y="407.0" width="26.0" height="26.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="505.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">8 bytes</text>
+<text x="625.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">±9.2 × 10¹⁸</text>
+<line x1="40.0" y1="438.0" x2="960.0" y2="438.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="40.0" y="461.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">float</text>
+<rect x="190.0" y="443.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="221.0" y="443.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="252.0" y="443.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="283.0" y="443.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="505.0" y="461.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">4 bytes</text>
+<text x="625.0" y="461.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">±3.4 × 10³⁸ (≈7 decimal digits)</text>
+<text x="40.0" y="497.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">double</text>
+<rect x="190.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="221.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="252.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="283.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="314.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="345.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="376.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="407.0" y="479.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="505.0" y="497.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">8 bytes</text>
+<text x="625.0" y="497.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">±1.8 × 10³⁰⁸ (≈15 decimal digits)</text>
+<text x="40.0" y="533.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">long double</text>
+<rect x="190.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="221.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="252.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="283.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="314.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="345.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="376.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="407.0" y="515.0" width="26.0" height="26.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<rect x="438.0" y="515.0" width="26" height="26" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="451.0" y="533.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">+</text>
+<text x="505.0" y="533.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">≥8 bytes</text>
+<text x="625.0" y="533.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#6b7280" text-anchor="start">impl-defined</text>
+<line x1="40.0" y1="546.0" x2="960.0" y2="546.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="40.0" y="572.0" width="920.0" height="138.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Need an exact size? Use &lt;cstdint&gt;</text>
+<text x="60.0" y="624.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">For code that crosses platforms (file formats, network protocols).</text>
+<rect x="60.0" y="640.0" width="204.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="74.0" y="662.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">int8_t</text>
+<text x="74.0" y="683.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">exactly 8-bit signed</text>
+<rect x="285.0" y="640.0" width="204.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="299.0" y="662.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">uint16_t</text>
+<text x="299.0" y="683.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">exactly 16-bit unsigned</text>
+<rect x="510.0" y="640.0" width="204.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="524.0" y="662.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">int32_t</text>
+<text x="524.0" y="683.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">exactly 32-bit signed</text>
+<rect x="735.0" y="640.0" width="204.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="749.0" y="662.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">int64_t</text>
+<text x="749.0" y="683.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">exactly 64-bit signed</text>
+<text x="40.0" y="742.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 1 (Common types table and &lt;cstdint&gt;).</text>
+</svg>

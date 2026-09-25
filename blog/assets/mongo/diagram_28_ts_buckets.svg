@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 664" width="1000" height="664" role="img" aria-label="MongoDB time-series collection: you insert one document per event; on disk the events are grouped into bucket documents by host and time window, stored as compressed columns, and a query reads only matching buckets">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="664" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="662.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Time-series collections: events in, buckets on disk</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">You insert one document per event. MongoDB groups them by metaField + time window, out of sight.</text>
+<rect x="40.0" y="96.0" width="920.0" height="41.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="120.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">db.createCollection("metrics", { timeseries: { timeField: "ts", metaField: "host", granularity: "seconds" } })</text>
+<text x="40.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">WHAT YOU INSERT — one document per event</text>
+<rect x="40.0" y="198.0" width="372.0" height="286.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">window A</text>
+<text x="56.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t1, host: <tspan fill="#0d9488" font-weight="700">"web-1"</tspan>, value: 0.42 }</text>
+<text x="56.0" y="273.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t2, host: <tspan fill="#d97706" font-weight="700">"web-2"</tspan>, value: 0.17 }</text>
+<text x="56.0" y="301.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t3, host: <tspan fill="#0d9488" font-weight="700">"web-1"</tspan>, value: 0.44 }</text>
+<text x="56.0" y="329.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t4, host: <tspan fill="#d97706" font-weight="700">"web-2"</tspan>, value: 0.20 }</text>
+<line x1="52.0" y1="344.0" x2="400.0" y2="344.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="56.0" y="360.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">window B</text>
+<text x="56.0" y="381.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t5, host: <tspan fill="#0d9488" font-weight="700">"web-1"</tspan>, value: 0.51 }</text>
+<text x="56.0" y="409.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t6, host: <tspan fill="#d97706" font-weight="700">"web-2"</tspan>, value: 0.18 }</text>
+<text x="56.0" y="437.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t7, host: <tspan fill="#0d9488" font-weight="700">"web-1"</tspan>, value: 0.47 }</text>
+<text x="56.0" y="465.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ ts: t8, host: <tspan fill="#d97706" font-weight="700">"web-2"</tspan>, value: 0.22 }</text>
+<defs><marker id="m1f2937" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker></defs>
+<path d="M424,334 L528,334" stroke="#1f2937" stroke-width="2.4" marker-end="url(#m1f2937)"/>
+<text x="476.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">grouped by</text>
+<text x="476.0" y="321.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">host + window</text>
+<text x="476.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">automatic</text>
+<text x="540.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">WHAT IS STORED — buckets of compressed columns</text>
+<rect x="540.0" y="198.0" width="204.0" height="104.0" rx="10" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="554.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">host web-1 · window A</text>
+<text x="554.0" y="248.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">ts:    [t1, t3]</text>
+<text x="554.0" y="270.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">value: [0.42, 0.44]</text>
+<text x="554.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">skipped</text>
+<rect x="756.0" y="198.0" width="204.0" height="104.0" rx="10" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="770.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="start">host web-2 · window A</text>
+<text x="770.0" y="248.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">ts:    [t2, t4]</text>
+<text x="770.0" y="270.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">value: [0.17, 0.20]</text>
+<text x="770.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">skipped</text>
+<rect x="540.0" y="332.0" width="204.0" height="104.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.4"/>
+<text x="554.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">host web-1 · window B</text>
+<text x="554.0" y="382.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">ts:    [t5, t7]</text>
+<text x="554.0" y="404.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">value: [0.51, 0.47]</text>
+<text x="554.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">read by the query</text>
+<rect x="756.0" y="332.0" width="204.0" height="104.0" rx="10" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="770.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="start">host web-2 · window B</text>
+<text x="770.0" y="382.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">ts:    [t6, t8]</text>
+<text x="770.0" y="404.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">value: [0.18, 0.22]</text>
+<text x="770.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">skipped</text>
+<text x="540.0" y="474.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Query: host "web-1", time range inside window B</text>
+<text x="540.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">→ reads 1 bucket of 4; the others are skipped.</text>
+<rect x="40.0" y="522.0" width="296.0" height="96.0" rx="10" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="56.0" y="547.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Append-only</text>
+<text x="56.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">No update or delete of single</text>
+<text x="56.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">events: re-create the doc or</text>
+<text x="56.0" y="603.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">delete the bucket.</text>
+<rect x="352.0" y="522.0" width="296.0" height="96.0" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="368.0" y="547.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Limited indexes</text>
+<text x="368.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Mostly timeField + metaField.</text>
+<text x="368.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Cardinality-heavy $group is</text>
+<text x="368.0" y="603.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">still bound by RAM.</text>
+<rect x="664.0" y="522.0" width="296.0" height="96.0" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="680.0" y="547.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">Ceiling (rule of thumb)</text>
+<text x="680.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">~50–100k writes/s per primary.</text>
+<text x="680.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Beyond that, sharding helps,</text>
+<text x="680.0" y="603.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">but costs grow.</text>
+<text x="40.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post, Chapters 1 and 3. Events and values are sample data; the post gives no window length.</text>
+</svg>

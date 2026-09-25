@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 748" width="1000" height="748" role="img" aria-label="How an LLM picks the next token, and how temperature reshapes the probabilities">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="748" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="746.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">From prompt to next token</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The model scores every token, turns the scores into probabilities, picks one, and repeats.</text>
+<text x="40.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">The generation loop</text>
+<rect x="40.0" y="140.0" width="164.0" height="96.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="122.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="middle">Prompt</text>
+<text x="122.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">“The cat sat on the”</text>
+<line x1="207.0" y1="188.0" x2="225.0" y2="188.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="229.0" y="140.0" width="164.0" height="96.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="311.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="middle">Tokenizer</text>
+<text x="311.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">text → token IDs</text>
+<text x="311.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">(integers)</text>
+<line x1="396.0" y1="188.0" x2="414.0" y2="188.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="418.0" y="140.0" width="164.0" height="96.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="500.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Transformer</text>
+<text x="500.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">one score (logit)</text>
+<text x="500.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">per vocabulary token</text>
+<line x1="585.0" y1="188.0" x2="603.0" y2="188.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="607.0" y="140.0" width="164.0" height="96.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="689.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="middle">Softmax with T</text>
+<text x="689.0" y="195.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">softmax(z / T)</text>
+<text x="689.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">scores → probabilities</text>
+<line x1="774.0" y1="188.0" x2="792.0" y2="188.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="796.0" y="140.0" width="164.0" height="96.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="878.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Pick one token</text>
+<text x="878.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">a random draw,</text>
+<text x="878.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">weighted by probability</text>
+<path d="M878.0,238.0 L878.0,270.0 L122.0,270.0 L122.0,242.0" fill="none" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="268.0" y="257.0" width="464.0" height="26.0" rx="4" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="500.0" y="275.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">Append the picked token to the text, then run the loop again</text>
+<text x="500.0" y="300.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">It stops at an end token, a stop sequence, or max_tokens.</text>
+<line x1="40.0" y1="328.0" x2="960.0" y2="328.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="40.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Temperature reshapes the same scores</text>
+<text x="40.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Made-up logits for the word after “The cat sat on the”, from the post’s sampling_toy.py.</text>
+<line x1="215.0" y1="416.0" x2="948.0" y2="416.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)" marker-start="url(#ahm)"/>
+<text x="215.0" y="407.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">lower T: sharper, more focused</text>
+<text x="948.0" y="407.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="end">higher T: flatter, more varied</text>
+<text x="40.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Next word</text>
+<text x="150.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle">Logit z</text>
+<text x="215.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">T = 0.2</text>
+<text x="402.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">T = 0.7</text>
+<text x="589.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">T = 1.0</text>
+<text x="647.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(plain softmax)</text>
+<text x="776.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">T = 1.5</text>
+<rect x="32.0" y="463.0" width="936.0" height="34.0" rx="6" fill="#f9fafb" stroke="#f9fafb" stroke-width="0"/>
+<text x="40.0" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">mat</text>
+<rect x="123.0" y="468.0" width="54.0" height="24.0" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="150.0" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">3.0</text>
+<rect x="215.0" y="471.0" width="115.8" height="18.0" rx="3" fill="#d97706" stroke="none" stroke-width="0"/>
+<text x="337.8" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">0.98</text>
+<rect x="402.0" y="471.0" width="78.8" height="18.0" rx="3" fill="#d97706" stroke="none" stroke-width="0"/>
+<text x="487.8" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">0.67</text>
+<rect x="589.0" y="471.0" width="64.6" height="18.0" rx="3" fill="#d97706" stroke="none" stroke-width="0"/>
+<text x="660.6" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">0.55</text>
+<rect x="776.0" y="471.0" width="51.6" height="18.0" rx="3" fill="#d97706" stroke="none" stroke-width="0"/>
+<text x="834.6" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">0.44</text>
+<text x="40.0" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">rug</text>
+<rect x="123.0" y="508.0" width="54.0" height="24.0" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="150.0" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">2.2</text>
+<rect x="215.0" y="511.0" width="2.1" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="224.1" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.02</text>
+<rect x="402.0" y="511.0" width="25.1" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="434.1" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.21</text>
+<rect x="589.0" y="511.0" width="29.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="625.0" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.25</text>
+<rect x="776.0" y="511.0" width="30.3" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="813.3" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.26</text>
+<rect x="32.0" y="543.0" width="936.0" height="34.0" rx="6" fill="#f9fafb" stroke="#f9fafb" stroke-width="0"/>
+<text x="40.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">sofa</text>
+<rect x="123.0" y="548.0" width="54.0" height="24.0" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="150.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">1.5</text>
+<rect x="215.0" y="551.0" width="2.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="224.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">&lt;0.01</text>
+<rect x="402.0" y="551.0" width="9.2" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="418.2" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.08</text>
+<rect x="589.0" y="551.0" width="14.4" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="610.4" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.12</text>
+<rect x="776.0" y="551.0" width="19.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="802.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.16</text>
+<text x="40.0" y="605.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">floor</text>
+<rect x="123.0" y="588.0" width="54.0" height="24.0" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="150.0" y="605.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">1.0</text>
+<rect x="215.0" y="591.0" width="2.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="224.0" y="605.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">&lt;0.01</text>
+<rect x="402.0" y="591.0" width="4.5" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="413.5" y="605.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.04</text>
+<rect x="589.0" y="591.0" width="8.7" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="604.7" y="605.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.07</text>
+<rect x="776.0" y="591.0" width="13.6" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="796.6" y="605.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.12</text>
+<rect x="32.0" y="623.0" width="936.0" height="34.0" rx="6" fill="#f9fafb" stroke="#f9fafb" stroke-width="0"/>
+<text x="40.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">moon</text>
+<rect x="123.0" y="628.0" width="54.0" height="24.0" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="150.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">−1.0</text>
+<rect x="215.0" y="631.0" width="2.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="224.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">&lt;0.01</text>
+<rect x="402.0" y="631.0" width="2.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="411.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">&lt;0.01</text>
+<rect x="589.0" y="631.0" width="2.0" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="598.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.01</text>
+<rect x="776.0" y="631.0" width="3.6" height="18.0" rx="3" fill="#f5b75c" stroke="none" stroke-width="0"/>
+<text x="786.6" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">0.03</text>
+<line x1="215.0" y1="460.0" x2="215.0" y2="660.0" stroke="#d1d5db" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="402.0" y1="460.0" x2="402.0" y2="660.0" stroke="#d1d5db" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="589.0" y1="460.0" x2="589.0" y2="660.0" stroke="#d1d5db" stroke-width="1.2" stroke-linecap="butt"/>
+<line x1="776.0" y1="460.0" x2="776.0" y2="660.0" stroke="#d1d5db" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="40.0" y="686.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">As T gets close to 0, sampling becomes greedy: it always picks the top token (“mat”). Even at 0, Anthropic's API is not fully deterministic.</text>
+<text x="40.0" y="730.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Logits are made up for teaching (sampling_toy.py in this post). Probabilities are softmax(z / T), rounded to 2 decimals.</text>
+</svg>

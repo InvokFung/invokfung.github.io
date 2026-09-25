@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 752" width="1000" height="752" role="img" aria-label="Three ways to make Buffer b from Buffer a: default member-wise copy shares one heap array (double free), a deep copy makes a second array, and a move hands the array to b and leaves a empty">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="752" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="750.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Copying and moving a Buffer</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">a and b are Buffer objects. The rows of cells below them are the heap arrays their data_ pointers own.</text>
+<defs><marker id="mc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#dc4c3a"/></marker></defs>
+<defs><marker id="mt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker></defs>
+<defs><marker id="mv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker></defs>
+<defs><marker id="mi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker></defs>
+<rect x="40.0" y="100.0" width="920.0" height="40.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="58.0" y="126.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#e2e8f0" text-anchor="start">Buffer a(4);</text>
+<text x="200.0" y="126.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#94a3b8" text-anchor="start">// data_ = new int[4]{}  (all zeros),  size_ = 4</text>
+<rect x="40.0" y="160.0" width="296.0" height="404.0" rx="12" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="58.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#dc4c3a" text-anchor="start">Default copy</text>
+<circle cx="308" cy="186" r="11" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M303.8,181.8 L312.2,190.2 M312.2,181.8 L303.8,190.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="58.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">member-wise: copies the pointer</text>
+<rect x="58.0" y="230.0" width="260.0" height="34.0" rx="6" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="72.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">Buffer b = a;</text>
+<text x="58.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Both point to the same array.</text>
+<text x="58.0" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">The second destructor frees it</text>
+<text x="58.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">again: double free.</text>
+<text x="54.0" y="293.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">a</text>
+<rect x="54.0" y="302.0" width="128.0" height="46.0" rx="6" fill="#ffffff" stroke="#dc4c3a" stroke-width="2"/>
+<line x1="118.0" y1="302.0" x2="118.0" y2="348.0" stroke="#dc4c3a" stroke-width="1.5" stroke-linecap="round"/>
+<text x="86.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">data_</text>
+<text x="150.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">size_</text>
+<text x="150.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<circle cx="86.0" cy="334.0" r="5" fill="#dc4c3a"/>
+<text x="194.0" y="293.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">b</text>
+<rect x="194.0" y="302.0" width="128.0" height="46.0" rx="6" fill="#ffffff" stroke="#dc4c3a" stroke-width="2"/>
+<line x1="258.0" y1="302.0" x2="258.0" y2="348.0" stroke="#dc4c3a" stroke-width="1.5" stroke-linecap="round"/>
+<text x="226.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">data_</text>
+<text x="290.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">size_</text>
+<text x="290.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<circle cx="226.0" cy="334.0" r="5" fill="#dc4c3a"/>
+<rect x="136.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="149.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="162.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="175.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="188.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="201.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="214.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="227.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<line x1="86.0" y1="340.0" x2="170.0" y2="405.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" marker-end="url(#mc)"/>
+<line x1="226.0" y1="340.0" x2="206.0" y2="405.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" marker-end="url(#mc)"/>
+<text x="188.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">one array, two owners</text>
+<rect x="352.0" y="160.0" width="296.0" height="404.0" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="370.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#0d9488" text-anchor="start">Deep copy</text>
+<circle cx="620" cy="186" r="11" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M615.0,186.0 l3.5,3.5 l6.4,-6.8" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="370.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">your copy constructor (Chapter 5)</text>
+<rect x="370.0" y="230.0" width="260.0" height="34.0" rx="6" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="384.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">Buffer b = a;</text>
+<text x="370.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">b gets its own new array and</text>
+<text x="370.0" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">std::copy copies the values.</text>
+<text x="370.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Each destructor frees its own.</text>
+<text x="366.0" y="293.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">a</text>
+<rect x="366.0" y="302.0" width="128.0" height="46.0" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<line x1="430.0" y1="302.0" x2="430.0" y2="348.0" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+<text x="398.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">data_</text>
+<text x="462.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">size_</text>
+<text x="462.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<circle cx="398.0" cy="334.0" r="5" fill="#0d9488"/>
+<text x="506.0" y="293.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">b</text>
+<rect x="506.0" y="302.0" width="128.0" height="46.0" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<line x1="570.0" y1="302.0" x2="570.0" y2="348.0" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+<text x="538.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">data_</text>
+<text x="602.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">size_</text>
+<text x="602.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<circle cx="538.0" cy="334.0" r="5" fill="#0d9488"/>
+<rect x="364.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="377.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="390.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="403.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="416.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="429.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="442.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="455.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="504.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="517.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="530.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="543.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="556.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="569.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="582.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="595.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<line x1="398.0" y1="340.0" x2="398.0" y2="405.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#mt)"/>
+<line x1="538.0" y1="340.0" x2="538.0" y2="405.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#mt)"/>
+<line x1="472.0" y1="425.0" x2="500.0" y2="425.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#mt)"/>
+<text x="486.0" y="460.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">std::copy</text>
+<rect x="664.0" y="160.0" width="296.0" height="404.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="682.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#7c3aed" text-anchor="start">Move</text>
+<circle cx="932" cy="186" r="11" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M927.0,186.0 l3.5,3.5 l6.4,-6.8" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="682.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">your move constructor (Chapter 6)</text>
+<rect x="682.0" y="230.0" width="260.0" height="34.0" rx="6" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="696.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">Buffer b = std::move(a);</text>
+<text x="682.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">No new array: b takes a's pointer.</text>
+<text x="682.0" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">a is left empty (nullptr, 0).</text>
+<text x="682.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Ownership moves; nothing is copied.</text>
+<text x="678.0" y="293.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">a</text>
+<rect x="678.0" y="302.0" width="128.0" height="46.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<line x1="742.0" y1="302.0" x2="742.0" y2="348.0" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/>
+<text x="710.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">data_</text>
+<text x="774.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">size_</text>
+<text x="774.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<text x="710.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">nullptr</text>
+<text x="818.0" y="293.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">b</text>
+<rect x="818.0" y="302.0" width="128.0" height="46.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<line x1="882.0" y1="302.0" x2="882.0" y2="348.0" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/>
+<text x="850.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">data_</text>
+<text x="914.0" y="319.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">size_</text>
+<text x="914.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<circle cx="850.0" cy="334.0" r="5" fill="#7c3aed"/>
+<rect x="816.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="829.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="842.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="855.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="868.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="881.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="894.0" y="410.0" width="26.0" height="30.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="907.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<line x1="850.0" y1="340.0" x2="850.0" y2="405.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" marker-end="url(#mv)"/>
+<text x="868.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">the array a used to own</text>
+<rect x="40.0" y="586.0" width="452.0" height="104.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="58.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Rule of Five</text>
+<text x="58.0" y="640.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Write any of: destructor, copy constructor, copy</text>
+<text x="58.0" y="660.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">assignment, move constructor, move assignment?</text>
+<text x="58.0" y="680.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Then write (or = default / = delete) all five.</text>
+<rect x="508.0" y="586.0" width="452.0" height="104.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="526.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Rule of Zero (the modern way)</text>
+<text x="526.0" y="640.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Hold a std::vector&lt;int&gt; instead of int* data_.</text>
+<text x="526.0" y="660.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">It handles its own copy, move and cleanup,</text>
+<text x="526.0" y="680.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">so you write none of the five.</text>
+<text x="40.0" y="734.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 5 (copy semantics) and Chapter 6 (move semantics). The size 4 is only an example.</text>
+</svg>

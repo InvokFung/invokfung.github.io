@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 684" width="1000" height="684" role="img" aria-label="How the middle dot and the em dash were damaged byte by byte when UTF-8 was read as CP950 and saved again as UTF-8">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="684" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="682.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How · and — were damaged, byte by byte</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Windows PowerShell 5.1 read the BOM-less UTF-8 posts as CP950 (Big5). The script then saved the text as UTF-8.</text>
+<text x="42.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Character</text>
+<text x="166.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">UTF-8 bytes</text>
+<text x="340.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Read as CP950</text>
+<text x="644.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Saved back as UTF-8</text>
+<text x="818.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Reversible?</text>
+<rect x="40.0" y="136.0" width="96.0" height="156.0" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="88.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="56" font-weight="400" fill="#1f2937" text-anchor="middle">·</text>
+<text x="88.0" y="242.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">U+00B7</text>
+<text x="88.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">middle dot</text>
+<rect x="164.0" y="136.0" width="146.0" height="156.0" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+<rect x="198.5" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="216.5" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">C2</text>
+<rect x="239.5" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="257.5" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">B7</text>
+<text x="237.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">2 bytes</text>
+<rect x="338.0" y="136.0" width="276.0" height="156.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<rect x="354.0" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="372.0" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="middle">C2</text>
+<rect x="395.0" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="413.0" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="middle">B7</text>
+<text x="372.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">lead</text>
+<text x="413.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">trail</text>
+<line x1="443.0" y1="190.0" x2="477.0" y2="190.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="519.0" y="203.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="400" fill="#1f2937" text-anchor="middle">&#x7E5A;</text>
+<text x="519.0" y="228.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">U+7E5A</text>
+<text x="354.0" y="258.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Valid lead + trail byte: one</text>
+<text x="354.0" y="277.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">real Chinese character.</text>
+<rect x="642.0" y="136.0" width="146.0" height="156.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<rect x="656.0" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="674.0" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="middle">E7</text>
+<rect x="697.0" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="715.0" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="middle">B9</text>
+<rect x="738.0" y="170.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="756.0" y="197.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="middle">9A</text>
+<text x="715.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">U+7E5A in UTF-8</text>
+<rect x="816.0" y="136.0" width="144.0" height="156.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<circle cx="846" cy="190" r="13" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<path d="M840.1,190.0 l4.2,4.2 l7.5,-8.1" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="868.0" y="197.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#0d9488" text-anchor="start">Yes</text>
+<text x="830.0" y="240.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">Case A.</text>
+<text x="830.0" y="259.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The bytes survive</text>
+<text x="830.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">inside it.</text>
+<line x1="141.0" y1="190.0" x2="158.0" y2="190.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="315.0" y1="190.0" x2="332.0" y2="190.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="619.0" y1="190.0" x2="636.0" y2="190.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="793.0" y1="190.0" x2="810.0" y2="190.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="308.0" width="96.0" height="156.0" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="88.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="56" font-weight="400" fill="#1f2937" text-anchor="middle">—</text>
+<text x="88.0" y="414.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">U+2014</text>
+<text x="88.0" y="436.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">em dash</text>
+<rect x="164.0" y="308.0" width="146.0" height="156.0" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+<rect x="178.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="196.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">E2</text>
+<rect x="219.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="237.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">80</text>
+<rect x="260.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="278.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">94</text>
+<text x="237.0" y="414.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">3 bytes</text>
+<rect x="338.0" y="308.0" width="276.0" height="156.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<rect x="354.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="372.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">E2</text>
+<rect x="395.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.5"/>
+<text x="413.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">80</text>
+<rect x="436.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<text x="454.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#9ca3af" text-anchor="middle">94</text>
+<text x="372.0" y="400.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">lead</text>
+<circle cx="413.0" cy="396" r="8" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M410.0,393.0 L416.0,399.0 M416.0,393.0 L410.0,399.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="484.0" y1="362.0" x2="510.0" y2="362.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="522.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="540.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">?</text>
+<rect x="563.0" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="581.0" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">?</text>
+<text x="354.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">80 is not a valid trail byte, so</text>
+<text x="354.0" y="449.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">the decoder puts in ? marks.</text>
+<rect x="642.0" y="308.0" width="146.0" height="156.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<rect x="676.5" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="694.5" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">3F</text>
+<rect x="717.5" y="342.0" width="36.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="735.5" y="369.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">3F</text>
+<text x="715.0" y="414.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">two ? characters</text>
+<rect x="816.0" y="308.0" width="144.0" height="156.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<circle cx="846" cy="362" r="13" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M841.1,357.1 L850.9,366.9 M850.9,357.1 L841.1,366.9" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="868.0" y="369.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#dc4c3a" text-anchor="start">No</text>
+<text x="830.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">Case B.</text>
+<text x="830.0" y="431.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The original bytes</text>
+<text x="830.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">are gone.</text>
+<line x1="141.0" y1="362.0" x2="158.0" y2="362.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="315.0" y1="362.0" x2="332.0" y2="362.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="619.0" y1="362.0" x2="636.0" y2="362.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="793.0" y1="362.0" x2="810.0" y2="362.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="40.0" y="490.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">In the PowerShell 5.1 reproduction the space after the dash was lost too: “Course — 03” became “Course ??03”.</text>
+<rect x="40.0" y="510.0" width="590.0" height="134.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="58.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Repair the · (Case A): walk the steps backwards</text>
+<rect x="58.0" y="569.0" width="84.0" height="32.0" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="100.0" y="591.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">E7 B9 9A</text>
+<text x="194.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0d9488" text-anchor="middle">decode UTF-8</text>
+<line x1="150.0" y1="586.0" x2="238.0" y2="586.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="246.0" y="569.0" width="40.0" height="32.0" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="266.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="400" fill="#1f2937" text-anchor="middle">&#x7E5A;</text>
+<text x="338.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0d9488" text-anchor="middle">encode CP950</text>
+<line x1="294.0" y1="586.0" x2="382.0" y2="586.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="569.0" width="60.0" height="32.0" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="420.0" y="591.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">C2 B7</text>
+<text x="502.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0d9488" text-anchor="middle">decode UTF-8</text>
+<line x1="458.0" y1="586.0" x2="546.0" y2="586.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="554.0" y="569.0" width="40.0" height="32.0" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="574.0" y="595.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="400" fill="#1f2937" text-anchor="middle">·</text>
+<text x="58.0" y="628.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">In Python, with s = the text read as UTF-8:</text>
+<text x="308.0" y="628.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">s.encode("cp950").decode("utf-8")</text>
+<rect x="650.0" y="510.0" width="310.0" height="134.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="668.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Repair the — (Case B): use Git</text>
+<text x="668.0" y="570.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The dashes could not be recovered.</text>
+<text x="668.0" y="589.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Each file was restored from the parent</text>
+<text x="668.0" y="608.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Git commit; then the one intended</text>
+<text x="668.0" y="627.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">frontmatter line was applied again.</text>
+<text x="40.0" y="666.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Dev Essentials 01, Chapter 10 (44 posts, about 2,700 characters). Bytes checked with Python's utf-8 and cp950 codecs.</text>
+</svg>

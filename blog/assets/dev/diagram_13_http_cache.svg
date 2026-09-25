@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 826" width="1000" height="826" role="img" aria-label="How a cache treats the four Cache-Control policies of cache_server.py as the stored copy gets older, and how a conditional request with If-None-Match gets a 304 or a 200">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="826" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="824.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<defs><marker id="m-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="m-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker><marker id="m-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">HTTP caching: freshness first, then validation</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">What a cache does as its stored copy gets older, for the four policies in cache_server.py (RFC 9111).</text>
+<circle cx="52" cy="117.0" r="11" fill="#1f2937"/>
+<text x="52.0" y="121.8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="72.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Freshness</text>
+<text x="159.4" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">May the cache use its copy without asking?</text>
+<text x="40.0" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">/static/app.3f9a2c1b.js</text>
+<text x="40.0" y="182.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">public, max-age=31536000, immutable</text>
+<path d="M408.0,144.0 L927.0,144.0 L950.0,167.0 L927.0,190.0 L408.0,190.0 Q400.0,190.0 400.0,182.0 L400.0,152.0 Q400.0,144.0 408.0,144.0 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="412.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Fresh for 31,536,000 s (365 days)</text>
+<text x="412.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">immutable: not even revalidated on reload</text>
+<text x="40.0" y="224.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">/news</text>
+<text x="40.0" y="244.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">public, max-age=60, stale-while-revalidate=30</text>
+<rect x="400.0" y="206.0" width="300.0" height="46.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="412.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Fresh</text>
+<text x="412.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">used without asking the origin</text>
+<rect x="703.0" y="206.0" width="147.0" height="46.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="715.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="start">Stale: may be used</text>
+<text x="715.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">while it refetches</text>
+<rect x="853.0" y="206.0" width="97.0" height="46.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="865.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">Check first</text>
+<text x="865.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">(section 2)</text>
+<text x="40.0" y="286.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">/</text>
+<text x="40.0" y="306.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">no-cache</text>
+<rect x="400.0" y="268.0" width="550.0" height="46.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="412.0" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">Check first, before every use</text>
+<text x="412.0" y="305.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">may be stored, but must be revalidated with the origin each time</text>
+<text x="40.0" y="348.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">/api/me</text>
+<text x="40.0" y="368.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">private, no-store</text>
+<rect x="400.0" y="330.0" width="550.0" height="46" rx="8" fill="#ffffff" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="412.0" y="349.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">Never stored</text>
+<text x="412.0" y="367.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">no cache keeps a copy; every request goes to the origin</text>
+<line x1="400.0" y1="396.0" x2="950.0" y2="396.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="400.0" y1="391.0" x2="400.0" y2="401.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+<text x="400.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">0 s</text>
+<line x1="700.0" y1="391.0" x2="700.0" y2="401.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+<text x="700.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">60 s</text>
+<line x1="850.0" y1="391.0" x2="850.0" y2="401.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+<text x="850.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">90 s</text>
+<text x="550.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">age of the stored copy →</text>
+<text x="40.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#9ca3af" text-anchor="start">Path and its Cache-Control header</text>
+<circle cx="52" cy="463.0" r="11" fill="#1f2937"/>
+<text x="52.0" y="467.8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="72.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Validation</text>
+<text x="168.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">The copy is stale; is it still good?</text>
+<line x1="200.0" y1="542.0" x2="200.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 6"/>
+<rect x="70.0" y="488.0" width="260.0" height="54.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="200.0" y="511.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="middle">A cache</text>
+<text x="200.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">browser, CDN or proxy</text>
+<line x1="800.0" y1="542.0" x2="800.0" y2="780.0" stroke="#cbd5e1" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 6"/>
+<rect x="670.0" y="488.0" width="260.0" height="54.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="800.0" y="511.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="middle">Origin server</text>
+<text x="800.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">cache_server.py</text>
+<text x="222.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Conditional request, with the ETag from the first response</text>
+<text x="222.0" y="600.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">GET /</text>
+<text x="284.0" y="600.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">If-None-Match: "b5099f092335ab78"</text>
+<line x1="200.0" y1="616.0" x2="798.0" y2="616.0" stroke="#1f2937" stroke-width="2.4" marker-end="url(#m-ink)"/>
+<text x="222.0" y="656.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">Unchanged: 304 Not Modified</text>
+<text x="222.0" y="676.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">No body. The cache reuses its copy; only headers cross the network.</text>
+<line x1="800.0" y1="692.0" x2="202.0" y2="692.0" stroke="#0d9488" stroke-width="2.4" marker-end="url(#m-teal)"/>
+<text x="222.0" y="732.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">Changed: 200 OK</text>
+<text x="222.0" y="752.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The new body, with a new ETag computed from the new bytes.</text>
+<line x1="800.0" y1="768.0" x2="202.0" y2="768.0" stroke="#d97706" stroke-width="2.4" marker-end="url(#m-amber)"/>
+<text x="40.0" y="808.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: RFC 9111 (HTTP Caching), RFC 9110 (conditional requests), RFC 5861 (stale-while-revalidate), RFC 8246 (immutable).</text>
+</svg>

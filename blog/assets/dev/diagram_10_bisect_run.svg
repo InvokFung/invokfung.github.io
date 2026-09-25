@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" role="img" aria-label="git bisect run on the 40-commit practice repo: builds 1 to 18 and 23 to 26 exit 0, 19 to 22 exit 125 and are skipped, 27 to 40 exit 1; the first bad commit is build 27">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="540" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="538.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">git bisect run on the Exercise 3 practice repo</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">check.py gives every commit an exit code. Git halves the range each time until one commit is left.</text>
+<text x="40.0" y="124.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">Exit code:</text>
+<rect x="122.0" y="108.0" width="74.3" height="24.0" rx="12.0" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="159.2" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">0 = good</text>
+<rect x="206.3" y="108.0" width="179.9" height="24.0" rx="12.0" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="296.3" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">1–127 except 125 = bad</text>
+<rect x="396.2" y="108.0" width="89.4" height="24.0" rx="12.0" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="440.9" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">125 = skip</text>
+<rect x="495.6" y="108.0" width="300.5" height="24.0" rx="12.0" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="645.9" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">other codes (for example 128+) = abort</text>
+<rect x="50.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="59.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">1</text>
+<rect x="72.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">2</text>
+<rect x="95.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="104.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">3</text>
+<rect x="117.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="127.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">4</text>
+<rect x="140.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="149.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">5</text>
+<rect x="162.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="172.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">6</text>
+<rect x="185.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="194.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">7</text>
+<rect x="207.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="217.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">8</text>
+<rect x="230.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="239.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<rect x="252.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="262.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">10</text>
+<rect x="275.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="284.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">11</text>
+<rect x="297.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="307.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">12</text>
+<rect x="320.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="329.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">13</text>
+<rect x="342.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="352.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">14</text>
+<rect x="365.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="374.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">15</text>
+<rect x="387.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="397.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">16</text>
+<rect x="410.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="419.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">17</text>
+<rect x="432.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="442.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">18</text>
+<rect x="455.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="464.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">19</text>
+<rect x="477.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="487.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">20</text>
+<rect x="500.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="509.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">21</text>
+<rect x="522.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="532.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">22</text>
+<rect x="545.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="554.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">23</text>
+<rect x="567.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="577.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">24</text>
+<rect x="590.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="599.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">25</text>
+<rect x="612.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="622.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">26</text>
+<rect x="635.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="644.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">27</text>
+<rect x="657.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="667.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">28</text>
+<rect x="680.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="689.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">29</text>
+<rect x="702.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="712.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">30</text>
+<rect x="725.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="734.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">31</text>
+<rect x="747.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="757.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">32</text>
+<rect x="770.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="779.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">33</text>
+<rect x="792.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="802.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">34</text>
+<rect x="815.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="824.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">35</text>
+<rect x="837.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="847.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">36</text>
+<rect x="860.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="869.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">37</text>
+<rect x="882.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="892.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">38</text>
+<rect x="905.0" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="914.8" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">39</text>
+<rect x="927.5" y="206.0" width="19.5" height="34.0" rx="4" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="937.2" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">40</text>
+<path d="M52.0,200 L52.0,194 L450.0,194 L450.0,200" fill="none" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="251.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">exit 0</text>
+<text x="251.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">with_tax(100) = 108.0</text>
+<path d="M457.0,200 L457.0,194 L540.0,194 L540.0,200" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="498.5" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">exit 125</text>
+<text x="498.5" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">SyntaxError</text>
+<path d="M547.0,200 L547.0,194 L630.0,194 L630.0,200" fill="none" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="588.5" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">exit 0</text>
+<text x="588.5" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">108.0</text>
+<path d="M637.0,200 L637.0,194 L945.0,194 L945.0,200" fill="none" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="791.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="middle">exit 1</text>
+<text x="791.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">with_tax(100) = 180.0</text>
+<text x="50.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">build 1: good end (HEAD~39)</text>
+<text x="947.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="end">build 40: bad end (HEAD)</text>
+<line x1="644.8" y1="284.0" x2="644.8" y2="246.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="644.8" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">first bad commit: build 27</text>
+<rect x="40.0" y="338.0" width="450.0" height="164.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="58.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">check.py as written: exit 125 on a SyntaxError</text>
+<text x="58.0" y="396.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The first test lands in the middle, on a build that does not</text>
+<text x="58.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">compile. check.py exits 125, so bisect skips it and tries a</text>
+<text x="58.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">neighbour. Git runs check.py 6 or 7 times in all.</text>
+<circle cx="68" cy="469" r="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M63.5,469.0 l3.2,3.2 l5.8,-6.2" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="88.0" y="474.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Names build 27: where 1.08 became 1.8</text>
+<rect x="510.0" y="338.0" width="450.0" height="164.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="528.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">Change sys.exit(125) to sys.exit(1)</text>
+<text x="528.0" y="396.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Now the broken builds 19–22 count as bad.</text>
+<text x="528.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Bisect blames the first build that does not compile.</text>
+<text x="528.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Wrong answer to “when did with_tax break?”</text>
+<circle cx="538" cy="469" r="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M534.2,465.2 L541.8,472.8 M541.8,465.2 L534.2,472.8" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="558.0" y="474.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Names build 19</text>
+<text x="40.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Builds from make_repo.py in Exercise 3; exit codes as in Chapter 6 (git-scm.com/docs/git-bisect).</text>
+</svg>

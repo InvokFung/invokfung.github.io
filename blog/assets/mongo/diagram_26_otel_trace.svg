@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 632" width="1000" height="632" role="img" aria-label="Trace waterfall for POST /orders: three MongoDB spans take 8, 15 and 10 ms, the payment HTTP call takes 70 ms; one trace ID links traces, slow-query log and logs">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="632" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="630.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One request, one trace: is it Mongo?</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Every Mongo command is a span on the request's timeline. Here the slow part is the payment call, not Mongo.</text>
+<line x1="360.0" y1="116.0" x2="360.0" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="360.0" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<line x1="446.7" y1="116.0" x2="446.7" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="446.7" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">20</text>
+<line x1="533.3" y1="116.0" x2="533.3" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="533.3" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">40</text>
+<line x1="620.0" y1="116.0" x2="620.0" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="620.0" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">60</text>
+<line x1="706.7" y1="116.0" x2="706.7" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="706.7" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">80</text>
+<line x1="793.3" y1="116.0" x2="793.3" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="793.3" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">100</text>
+<line x1="880.0" y1="116.0" x2="880.0" y2="362.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="880.0" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">120 ms</text>
+<text x="40.0" y="110.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">SPAN</text>
+<text x="40.0" y="147.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">POST /orders</text>
+<rect x="360.0" y="133.0" width="520.0" height="20.0" rx="4" fill="#9ca3af" stroke="#9ca3af" stroke-width="0"/>
+<text x="370.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="start">120 ms</text>
+<text x="58.0" y="187.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">placeOrder</text>
+<rect x="381.7" y="173.0" width="476.7" height="20.0" rx="4" fill="#7c3aed" stroke="#7c3aed" stroke-width="0"/>
+<text x="391.7" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="start">110 ms</text>
+<text x="76.0" y="227.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#0d9488" text-anchor="start">mongodb.findOne products</text>
+<rect x="386.0" y="213.0" width="34.7" height="20.0" rx="4" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="424.7" y="213.0" width="36.8" height="20.0" rx="3" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="428.7" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">8 ms</text>
+<text x="76.0" y="267.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#0d9488" text-anchor="start">mongodb.updateOne products</text>
+<rect x="425.0" y="253.0" width="65.0" height="20.0" rx="4" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="494.0" y="253.0" width="173.6" height="20.0" rx="3" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="498.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">15 ms · stock decrement</text>
+<text x="76.0" y="307.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#0d9488" text-anchor="start">mongodb.insertOne orders</text>
+<rect x="494.3" y="293.0" width="43.3" height="20.0" rx="4" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="541.7" y="293.0" width="44.0" height="20.0" rx="3" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="545.7" y="308.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10 ms</text>
+<text x="76.0" y="347.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#d97706" text-anchor="start">http.post payments.example.com</text>
+<rect x="546.3" y="333.0" width="303.3" height="20.0" rx="4" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="853.7" y="333.0" width="44.0" height="20.0" rx="3" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="857.7" y="348.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">70 ms</text>
+<line x1="64.0" y1="192.0" x2="64.0" y2="222.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="222.0" x2="72.0" y2="222.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="232.0" x2="64.0" y2="262.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="262.0" x2="72.0" y2="262.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="272.0" x2="64.0" y2="302.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="302.0" x2="72.0" y2="302.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="312.0" x2="64.0" y2="342.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="64.0" y1="342.0" x2="72.0" y2="342.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="662.0" y="210.0" width="290.0" height="114.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="676.0" y="231.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">A Mongo span carries (post's example):</text>
+<text x="676.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">db.system: "mongodb"</text>
+<text x="676.0" y="270.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">db.name: "shop"</text>
+<text x="676.0" y="288.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">db.mongodb.collection: "orders"</text>
+<text x="676.0" y="306.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">db.operation: "find"</text>
+<rect x="40.0" y="399.0" width="14.0" height="14.0" rx="3" fill="#7c3aed" stroke="#7c3aed" stroke-width="0"/>
+<text x="62.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">custom span</text>
+<rect x="171.2" y="399.0" width="14.0" height="14.0" rx="3" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<text x="193.2" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Mongo spans (auto): 33 ms in total</text>
+<rect x="468.0" y="399.0" width="14.0" height="14.0" rx="3" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<text x="490.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">external HTTP call: 70 ms</text>
+<text x="40.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">ONE TRACE ID LINKS THE SIGNALS</text>
+<rect x="40.0" y="462.0" width="270.0" height="118.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="56.0" y="489.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">Mongo slow-query log</text>
+<text x="56.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Each query is tagged with</text>
+<text x="56.0" y="536.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">.comment(`trace=${traceId}`)</text>
+<text x="56.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Atlas Query Insights surfaces it.</text>
+<line x1="316.0" y1="521.0" x2="359.0" y2="521.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<rect x="365.0" y="462.0" width="270.0" height="118.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="381.0" y="489.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">Trace</text>
+<text x="381.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The span tree above, stored in</text>
+<text x="381.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Tempo, Honeycomb, Datadog</text>
+<text x="381.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">or a similar backend.</text>
+<line x1="641.0" y1="521.0" x2="684.0" y2="521.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<rect x="690.0" y="462.0" width="270.0" height="118.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="706.0" y="489.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">Logs</text>
+<text x="706.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Every log line in a request has</text>
+<text x="706.0" y="536.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">trace_id, span_id</text>
+<text x="706.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Ship to Loki, Elasticsearch, Datadog.</text>
+<text x="40.0" y="614.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post, Chapters 2, 7 and 9. Durations are from the post; start times are drawn in call order.</text>
+</svg>

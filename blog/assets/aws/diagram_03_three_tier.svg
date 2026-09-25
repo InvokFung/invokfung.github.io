@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 796" width="1000" height="796" role="img" aria-label="Three-tier reference: Route 53, an ALB in public subnets, an Auto Scaling Group of EC2 in private subnets across two AZs, and RDS Multi-AZ in isolated subnets">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="796" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="794.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The textbook 3-tier shape</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each tier sits one hop further in, spread across ≥ 2 AZs. Each security group only accepts the tier above.</text>
+<rect x="250.0" y="98.0" width="180.0" height="36.0" rx="18" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+<text x="340.0" y="121.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="middle">Route 53 (DNS)</text>
+<rect x="40.0" y="156.0" width="600.0" height="434.0" rx="14" fill="#fcfcfd" stroke="#94a3b8" stroke-width="2"/>
+<text x="56.0" y="180.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">VPC</text>
+<rect x="56" y="190" width="276" height="386" rx="10" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="70.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ a</text>
+<rect x="348" y="190" width="276" height="386" rx="10" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="362.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ b</text>
+<line x1="340.0" y1="136.0" x2="340.0" y2="229.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="72.0" y="232.0" width="536.0" height="58.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="340.0" y="257.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="middle">Application Load Balancer (ALB)</text>
+<text x="340.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">in the public subnets of both AZs</text>
+<rect x="64" y="326" width="552" height="144" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="340.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">Auto Scaling Group</text>
+<text x="340.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">min 2 · desired 2 · max 10</text>
+<rect x="98.0" y="384.0" width="192.0" height="66.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="194.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">EC2 t3.micro</text>
+<text x="194.0" y="432.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">private subnet</text>
+<rect x="390.0" y="384.0" width="192.0" height="66.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="486.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">EC2 t3.micro</text>
+<text x="486.0" y="432.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">private subnet</text>
+<line x1="194.0" y1="290.0" x2="194.0" y2="381.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="486.0" y1="290.0" x2="486.0" y2="381.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="288.0" y="297.0" width="104.0" height="24.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="340.0" y="314.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">http → 8080</text>
+<rect x="72.0" y="508.0" width="536.0" height="54.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="340.0" y="531.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="middle">RDS Multi-AZ</text>
+<text x="340.0" y="551.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">in the isolated subnets of both AZs</text>
+<line x1="194.0" y1="450.0" x2="194.0" y2="505.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="486.0" y1="450.0" x2="486.0" y2="505.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="288.0" y="477.0" width="104.0" height="24.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="340.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">tcp → 5432</text>
+<rect x="660.0" y="228.0" width="300.0" height="66.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="676.0" y="253.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Public subnets</text>
+<text x="676.0" y="275.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">HTTPS 443, cert from ACM, WAF attached</text>
+<rect x="660.0" y="326.0" width="300.0" height="144.0" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="676.0" y="351.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">Private subnets · app tier</text>
+<text x="676.0" y="373.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">SG accepts 8080 only from the ALB's SG</text>
+<text x="676.0" y="393.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Health check type ELB; unhealthy</text>
+<text x="676.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">instances are replaced automatically</text>
+<text x="676.0" y="433.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Outbound via NAT, only to pull</text>
+<text x="676.0" y="453.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">packages or call external APIs</text>
+<rect x="660.0" y="504.0" width="300.0" height="62.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="676.0" y="529.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Isolated subnets · data tier</text>
+<text x="676.0" y="551.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">SG accepts 5432 only from the app SG</text>
+<text x="40.0" y="624.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">This shape survives</text>
+<rect x="40.0" y="638.0" width="219.5" height="88.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+<circle cx="64.0" cy="664" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M60.0,664.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="82.0" y="669.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">One instance fails</text>
+<text x="56.0" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The ASG replaces it.</text>
+<rect x="273.5" y="638.0" width="219.5" height="88.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+<circle cx="297.5" cy="664" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M293.4,664.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="315.5" y="669.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">One AZ fails</text>
+<text x="289.5" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The other AZ absorbs</text>
+<text x="289.5" y="713.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">the traffic.</text>
+<rect x="507.0" y="638.0" width="219.5" height="88.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+<circle cx="531.0" cy="664" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M527.0,664.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="549.0" y="669.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">A deploy with bad code</text>
+<text x="523.0" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">A canary catches it;</text>
+<text x="523.0" y="713.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">instance refresh rolls back.</text>
+<rect x="740.5" y="638.0" width="219.5" height="88.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+<circle cx="764.5" cy="664" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M760.5,664.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="782.5" y="669.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">A traffic spike</text>
+<text x="756.5" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The ASG scales out.</text>
+<text x="40.0" y="752.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A minimal version (ASG of 2 × t3.micro + ALB + RDS Multi-AZ + 1 NAT) is about USD 100 / month before traffic.</text>
+<text x="40.0" y="778.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Tiers, ports, ASG sizes and costs as given in the post (Chapters 4, 7 and 8; us-east-1 prices).</text>
+</svg>

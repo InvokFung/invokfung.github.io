@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 842" width="1000" height="842" role="img" aria-label="Four pictures of Python names pointing to list objects: b = a shares one list, a.copy() makes a new one, a shallow copy shares the inner lists, and a mutable default argument is shared by every call">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="842" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="840.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Names point to objects: where mutability bites</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A name is a label on an object. b = a adds a second label; it does not copy the list.</text>
+<rect x="30.0" y="96.0" width="940.0" height="148.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="40.0" y="120.0" width="400.0" height="100.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="144.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">a = [1, 2, 3]</text>
+<text x="54.0" y="163.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b = a            # b refers to the SAME list</text>
+<text x="54.0" y="183.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b.append(4)</text>
+<text x="54.0" y="202.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">print(a)         # [1, 2, 3, 4]   surprise!</text>
+<circle cx="488.0" cy="120.0" r="12" fill="#dc4c3a"/>
+<text x="488.0" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="510.0" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#dc4c3a" text-anchor="start">b = a: two names, one list</text>
+<text x="476.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Not a copy, just a second name for the same object.</text>
+<rect x="506.0" y="134.0" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="518.5" y="153.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">a</text>
+<rect x="506.0" y="174.0" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="518.5" y="193.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">b</text>
+<rect x="642.0" y="149.0" width="144.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="646.0" y="153.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="663.0" y="173.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="680.0" y="153.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="697.0" y="173.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<rect x="714.0" y="153.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="731.0" y="173.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3</text>
+<rect x="748.0" y="153.0" width="34.0" height="30.0" rx="3" fill="#fffbeb" stroke="#d97706" stroke-width="1.2"/>
+<text x="765.0" y="173.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<path d="M533.0,148.0 C585.5,148.0 585.5,164.0 638.0,164.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<path d="M533.0,188.0 C585.5,188.0 585.5,172.0 638.0,172.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<text x="800.0" y="173.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">one list object</text>
+<rect x="30.0" y="256.0" width="940.0" height="148.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="40.0" y="289.8" width="400.0" height="80.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="313.8" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">a = [1, 2, 3]</text>
+<text x="54.0" y="333.2" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b = a.copy()     # or a[:]  or list(a)</text>
+<text x="54.0" y="352.8" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b.append(4)</text>
+<circle cx="488.0" cy="280.0" r="12" fill="#0d9488"/>
+<text x="488.0" y="285.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="510.0" y="285.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="start">b = a.copy(): a new list</text>
+<text x="476.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Two list objects: changing b leaves a as it was.</text>
+<rect x="506.0" y="294.0" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="518.5" y="313.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">a</text>
+<rect x="506.0" y="334.0" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="518.5" y="353.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">b</text>
+<rect x="642.0" y="289.0" width="110.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="646.0" y="293.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="663.0" y="313.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="680.0" y="293.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="697.0" y="313.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<rect x="714.0" y="293.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="731.0" y="313.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3</text>
+<rect x="642.0" y="331.0" width="144.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="646.0" y="335.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="663.0" y="355.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="680.0" y="335.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="697.0" y="355.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<rect x="714.0" y="335.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="731.0" y="355.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3</text>
+<rect x="748.0" y="335.0" width="34.0" height="30.0" rx="3" fill="#fffbeb" stroke="#d97706" stroke-width="1.2"/>
+<text x="765.0" y="355.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<path d="M533.0,308.0 C585.5,308.0 585.5,308.0 638.0,308.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<path d="M533.0,350.0 C585.5,350.0 585.5,350.0 638.0,350.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<rect x="30.0" y="416.0" width="940.0" height="212.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="40.0" y="472.0" width="400.0" height="100.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="496.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">a = [[1, 2], [3, 4]]</text>
+<text x="54.0" y="515.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b = a.copy()     # shallow</text>
+<text x="54.0" y="535.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b[0].append(99)</text>
+<text x="54.0" y="554.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fcd34d" text-anchor="start">print(a)         # [[1, 2, 99], [3, 4]]</text>
+<circle cx="488.0" cy="440.0" r="12" fill="#d97706"/>
+<text x="488.0" y="445.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="510.0" y="445.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">a.copy() is shallow: inner lists are shared</text>
+<text x="476.0" y="614.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Outer list new, inner lists shared. <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace">copy.deepcopy(a)</tspan> is truly independent.</text>
+<rect x="506.0" y="457.0" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="518.5" y="476.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">a</text>
+<rect x="506.0" y="567.0" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="518.5" y="586.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">b</text>
+<rect x="582.0" y="452.0" width="76.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="586.0" y="456.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<circle cx="603.0" cy="471.0" r="4" fill="#1f2937"/>
+<rect x="620.0" y="456.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<circle cx="637.0" cy="471.0" r="4" fill="#1f2937"/>
+<rect x="582.0" y="562.0" width="76.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="586.0" y="566.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<circle cx="603.0" cy="581.0" r="4" fill="#1f2937"/>
+<rect x="620.0" y="566.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<circle cx="637.0" cy="581.0" r="4" fill="#1f2937"/>
+<path d="M533.0,471.0 C555.5,471.0 555.5,471.0 578.0,471.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<path d="M533.0,581.0 C555.5,581.0 555.5,581.0 578.0,581.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<rect x="582.0" y="507.0" width="110.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="586.0" y="511.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="603.0" y="531.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="620.0" y="511.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="637.0" y="531.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<rect x="654.0" y="511.0" width="34.0" height="30.0" rx="3" fill="#fffbeb" stroke="#d97706" stroke-width="1.2"/>
+<text x="671.0" y="531.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">99</text>
+<rect x="732.0" y="507.0" width="76.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="736.0" y="511.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="753.0" y="531.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3</text>
+<rect x="770.0" y="511.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="787.0" y="531.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<line x1="603.0" y1="475.0" x2="603.0" y2="506.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="637.0" y1="475.0" x2="747.0" y2="506.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="603.0" y1="577.0" x2="603.0" y2="546.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="637.0" y1="577.0" x2="747.0" y2="546.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="674.0" y="476.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">outer list of a</text>
+<text x="674.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">outer list of b (new)</text>
+<text x="824.0" y="531.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#d97706" text-anchor="start">inner lists: shared</text>
+<rect x="30.0" y="636.0" width="940.0" height="166.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="40.0" y="649.5" width="400.0" height="139.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="673.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">def add(item, target=[]):   # BUG!</text>
+<text x="54.0" y="693.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">    target.append(item)</text>
+<text x="54.0" y="712.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">    return target</text>
+<text x="54.0" y="732.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">add(1)   # [1]</text>
+<text x="54.0" y="751.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">add(2)   # [1, 2]   &lt;-- not [2]!</text>
+<text x="54.0" y="771.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">add(3)   # [1, 2, 3]</text>
+<circle cx="488.0" cy="660.0" r="12" fill="#dc4c3a"/>
+<text x="488.0" y="665.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="510.0" y="665.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Mutable default: one list for every call</text>
+<text x="476.0" y="788.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Created once, when <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace">def</tspan> runs. Fix: <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace">target=None</tspan>, then <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace">target = []</tspan> inside.</text>
+<rect x="722.0" y="703.0" width="110.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="726.0" y="707.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="743.0" y="727.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="760.0" y="707.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="777.0" y="727.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<rect x="794.0" y="707.0" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="811.0" y="727.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3</text>
+<rect x="506.0" y="676.0" width="70.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="541.0" y="695.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">add(1)</text>
+<path d="M578.0,690.0 C648.0,690.0 648.0,716.0 718.0,716.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<rect x="506.0" y="708.0" width="70.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="541.0" y="727.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">add(2)</text>
+<path d="M578.0,722.0 C648.0,722.0 648.0,722.0 718.0,722.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<rect x="506.0" y="740.0" width="70.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="541.0" y="759.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">add(3)</text>
+<path d="M578.0,754.0 C648.0,754.0 648.0,728.0 718.0,728.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<text x="848.0" y="727.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">one default list</text>
+<text x="40.0" y="824.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Code from the post, run as written to check every value shown.</text>
+</svg>

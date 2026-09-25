@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 624" width="1000" height="624" role="img" aria-label="Comparison table of Python list, tuple, dict and set: example, empty value, whether it can change, item access, search speed and typical use">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="624" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="622.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">list, tuple, dict, set at a glance</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The four built-in collections from this post, compared on the questions you ask when picking one.</text>
+<rect x="194.0" y="100.0" width="184.0" height="60.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="286.0" y="127.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#0d9488" text-anchor="middle">list</text>
+<text x="286.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">ordered, mutable, indexable</text>
+<rect x="386.0" y="100.0" width="184.0" height="60.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="478.0" y="127.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#d97706" text-anchor="middle">tuple</text>
+<text x="478.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">ordered, immutable</text>
+<rect x="578.0" y="100.0" width="184.0" height="60.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="670.0" y="127.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#7c3aed" text-anchor="middle">dict</text>
+<text x="670.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">key → value, ordered since 3.7</text>
+<rect x="770.0" y="100.0" width="184.0" height="60.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="862.0" y="127.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#2563eb" text-anchor="middle">set</text>
+<text x="862.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">unique, unordered</text>
+<rect x="32.0" y="172.0" width="926.0" height="58.0" rx="8" fill="#f9fafb" stroke="#f9fafb" stroke-width="0"/>
+<text x="40.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Example</text>
+<text x="206.0" y="206.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">[1, 2, 3]</text>
+<text x="398.0" y="206.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">(3, 4)</text>
+<text x="590.0" y="206.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">{"a": 1, "b": 2}</text>
+<text x="782.0" y="196.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">{1, 2, 3, 2}</text>
+<text x="782.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">→ {1, 2, 3}</text>
+<text x="40.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Empty</text>
+<text x="206.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">[]</text>
+<text x="398.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">()</text>
+<text x="590.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">{}</text>
+<text x="782.0" y="254.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">set()</text>
+<text x="782.0" y="275.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#dc4c3a" text-anchor="start">{} is an empty dict!</text>
+<rect x="32.0" y="288.0" width="926.0" height="58.0" rx="8" fill="#f9fafb" stroke="#f9fafb" stroke-width="0"/>
+<text x="40.0" y="322.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Can it change?</text>
+<text x="206.0" y="312.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Yes</text>
+<text x="206.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">append, insert, remove</text>
+<text x="398.0" y="312.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">No</text>
+<text x="398.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">can't append or remove</text>
+<text x="590.0" y="312.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Yes</text>
+<text x="590.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">d[k] = v,  del d[k]</text>
+<text x="782.0" y="312.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Yes</text>
+<text x="782.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">add, remove</text>
+<text x="40.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Get one item</text>
+<text x="206.0" y="370.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">xs[0]</text>
+<text x="206.0" y="391.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">by position</text>
+<text x="398.0" y="370.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">point[0]</text>
+<text x="398.0" y="391.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">by position</text>
+<text x="590.0" y="370.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">d["name"]</text>
+<text x="590.0" y="391.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">by key</text>
+<text x="782.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">no index access</text>
+<rect x="32.0" y="404.0" width="926.0" height="58.0" rx="8" fill="#f9fafb" stroke="#f9fafb" stroke-width="0"/>
+<text x="40.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Search: x in ...</text>
+<text x="206.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">O(n)</text>
+<text x="398.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">O(n)</text>
+<text x="590.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#16a34a" text-anchor="start">O(1) average</text>
+<text x="782.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#16a34a" text-anchor="start">O(1) average</text>
+<text x="40.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Good for</text>
+<text x="206.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">items you append to,</text>
+<text x="206.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">sort and slice</text>
+<text x="398.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">returning many values,</text>
+<text x="398.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">dict keys, records</text>
+<text x="590.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">key → value data,</text>
+<text x="590.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">counting, grouping</text>
+<text x="782.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">dedupe, fast membership,</text>
+<text x="782.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">set math</text>
+<rect x="40.0" y="536.0" width="920.0" height="44.0" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="60.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Many <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="700">in</tspan> checks on a list? Convert it to a set first. <tspan fill="#6b7280" font-weight="400">100 items: no difference. 100k items: 1000× speedup.</tspan></text>
+<text x="40.0" y="606.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">From the post: chapter titles, examples, use cases and the time-complexity table.</text>
+</svg>

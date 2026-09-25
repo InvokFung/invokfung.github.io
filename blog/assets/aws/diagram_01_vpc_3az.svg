@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 866" width="1000" height="866" role="img" aria-label="VPC 10.0.0.0/16 across three AZs with public, private and isolated subnets, NAT gateways, an internet gateway and the three route tables">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="866" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="864.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">A 3-AZ VPC: public, private and isolated subnets</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A subnet is public only because its route table sends 0.0.0.0/0 to an Internet Gateway.</text>
+<rect x="40.0" y="188.0" width="920.0" height="446.0" rx="14" fill="#fcfcfd" stroke="#94a3b8" stroke-width="2"/>
+<text x="56.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">VPC 10.0.0.0/16</text>
+<text x="56.0" y="233.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">region ap-east-1</text>
+<rect x="56" y="242" width="286" height="378" rx="10" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="70.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ ap-east-1a</text>
+<rect x="357" y="242" width="286" height="378" rx="10" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="371.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ ap-east-1b</text>
+<rect x="658" y="242" width="286" height="378" rx="10" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="672.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ ap-east-1c</text>
+<rect x="64.0" y="278.0" width="270.0" height="92.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="78.0" y="307.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Public subnet</text>
+<text x="78.0" y="329.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.1.0/24</text>
+<text x="78.0" y="351.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.0.0.0/0 → IGW</text>
+<rect x="206.0" y="296.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="267.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">NAT gateway</text>
+<text x="267.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">one per AZ</text>
+<rect x="365.0" y="278.0" width="270.0" height="92.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="379.0" y="307.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Public subnet</text>
+<text x="379.0" y="329.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.2.0/24</text>
+<text x="379.0" y="351.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.0.0.0/0 → IGW</text>
+<rect x="507.0" y="296.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="568.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">NAT gateway</text>
+<text x="568.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">one per AZ</text>
+<rect x="666.0" y="278.0" width="270.0" height="92.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="680.0" y="307.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Public subnet</text>
+<text x="680.0" y="329.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.3.0/24</text>
+<text x="680.0" y="351.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.0.0.0/0 → IGW</text>
+<rect x="808.0" y="296.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="869.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">NAT gateway</text>
+<text x="869.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">one per AZ</text>
+<rect x="64.0" y="396.0" width="270.0" height="92.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="78.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">Private subnet</text>
+<text x="78.0" y="447.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.11.0/24</text>
+<text x="78.0" y="469.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.0.0.0/0 → NAT</text>
+<rect x="206.0" y="414.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="267.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="middle">App servers</text>
+<text x="267.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">EC2, ECS tasks</text>
+<rect x="365.0" y="396.0" width="270.0" height="92.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="379.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">Private subnet</text>
+<text x="379.0" y="447.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.12.0/24</text>
+<text x="379.0" y="469.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.0.0.0/0 → NAT</text>
+<rect x="507.0" y="414.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="568.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="middle">App servers</text>
+<text x="568.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">EC2, ECS tasks</text>
+<rect x="666.0" y="396.0" width="270.0" height="92.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="680.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">Private subnet</text>
+<text x="680.0" y="447.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.13.0/24</text>
+<text x="680.0" y="469.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">0.0.0.0/0 → NAT</text>
+<rect x="808.0" y="414.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="869.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="middle">App servers</text>
+<text x="869.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">EC2, ECS tasks</text>
+<rect x="64.0" y="514.0" width="270.0" height="92.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="78.0" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Isolated subnet</text>
+<text x="78.0" y="565.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.21.0/24</text>
+<text x="78.0" y="587.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#dc4c3a" text-anchor="start">no default route</text>
+<rect x="206.0" y="532.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="267.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">RDS</text>
+<text x="267.0" y="575.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">ElastiCache</text>
+<rect x="365.0" y="514.0" width="270.0" height="92.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="379.0" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Isolated subnet</text>
+<text x="379.0" y="565.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.22.0/24</text>
+<text x="379.0" y="587.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#dc4c3a" text-anchor="start">no default route</text>
+<rect x="507.0" y="532.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="568.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">RDS</text>
+<text x="568.0" y="575.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">ElastiCache</text>
+<rect x="666.0" y="514.0" width="270.0" height="92.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="680.0" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Isolated subnet</text>
+<text x="680.0" y="565.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">10.0.23.0/24</text>
+<text x="680.0" y="587.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#dc4c3a" text-anchor="start">no default route</text>
+<rect x="808.0" y="532.0" width="122.0" height="56.0" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="869.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">RDS</text>
+<text x="869.0" y="575.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">ElastiCache</text>
+<rect x="440.0" y="94.0" width="120.0" height="32.0" rx="16" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+<text x="500.0" y="115.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">Internet</text>
+<line x1="500.0" y1="129.0" x2="500.0" y2="165.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<rect x="395.0" y="168.0" width="210.0" height="40.0" rx="8" fill="#1f2937" stroke="#1f2937" stroke-width="2"/>
+<text x="500.0" y="193.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Internet Gateway (IGW)</text>
+<line x1="267.0" y1="226.0" x2="869.0" y2="226.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+<line x1="500.0" y1="226.0" x2="500.0" y2="211.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="267.0" y1="296.0" x2="267.0" y2="226.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+<line x1="267.0" y1="414.0" x2="267.0" y2="355.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="267.0" y1="470.0" x2="267.0" y2="529.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<line x1="568.0" y1="296.0" x2="568.0" y2="226.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+<line x1="568.0" y1="414.0" x2="568.0" y2="355.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="568.0" y1="470.0" x2="568.0" y2="529.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<line x1="869.0" y1="296.0" x2="869.0" y2="226.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+<line x1="869.0" y1="414.0" x2="869.0" y2="355.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="869.0" y1="470.0" x2="869.0" y2="529.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<line x1="44.0" y1="657.0" x2="84.0" y2="657.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="94.0" y="662.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Outbound to the internet: private subnet → NAT gateway in the same AZ → IGW</text>
+<line x1="630.0" y1="657.0" x2="670.0" y2="657.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<text x="680.0" y="662.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">local: stays inside 10.0.0.0/16</text>
+<rect x="40.0" y="684.0" width="296.0" height="144.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="56.0" y="711.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Public route table</text>
+<text x="56.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">Destination</text>
+<text x="162.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">Target</text>
+<text x="56.0" y="754.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">10.0.0.0/16</text>
+<text x="162.0" y="754.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">local</text>
+<text x="56.0" y="774.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">0.0.0.0/0</text>
+<text x="162.0" y="774.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">igw-XXXXXXXX</text>
+<text x="56.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Holds: ALB, NAT gateways, bastions</text>
+<rect x="352.0" y="684.0" width="296.0" height="144.0" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="368.0" y="711.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">Private route table</text>
+<text x="368.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">Destination</text>
+<text x="474.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">Target</text>
+<text x="368.0" y="754.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">10.0.0.0/16</text>
+<text x="474.0" y="754.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">local</text>
+<text x="368.0" y="774.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">0.0.0.0/0</text>
+<text x="474.0" y="774.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">nat-XXXXXXXX</text>
+<text x="578.0" y="774.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(per AZ)</text>
+<text x="368.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Holds: EC2 app servers, ECS tasks,</text>
+<text x="368.0" y="814.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Lambda-in-VPC</text>
+<rect x="664.0" y="684.0" width="296.0" height="144.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="680.0" y="711.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Isolated route table</text>
+<text x="680.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">Destination</text>
+<text x="786.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="start">Target</text>
+<text x="680.0" y="754.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">10.0.0.0/16</text>
+<text x="786.0" y="754.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">local</text>
+<text x="680.0" y="774.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">no 0.0.0.0/0 rule → no internet</text>
+<text x="680.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Holds: RDS, ElastiCache,</text>
+<text x="680.0" y="814.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sensitive workloads</text>
+<text x="40.0" y="848.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Layout, CIDRs and route targets as given in the post. Repeat the CLI build of AZ a for AZ b and c.</text>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="NavMesh pathfinding in three steps: scene meshes, the NavMesh polygons, and the path from start to goal">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">NavMesh pathfinding, step by step</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">recast-navigation-js: Recast builds the NavMesh, Detour finds the path. Top view of an example room.</text>
+<rect x="40.0" y="100.0" width="292.0" height="348.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="127.0" r="12" fill="#0d9488"/>
+<text x="66.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="86.0" y="133.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Scene meshes</text>
+<text x="58.0" y="158.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#0d9488" text-anchor="start">userData.walkable</text>
+<rect x="60.0" y="174.0" width="252.0" height="216.0" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="150.0" y="174.0" width="18.0" height="135.0" rx="2" fill="#64748b" stroke="#64748b" stroke-width="1.2"/>
+<rect x="213.0" y="264.0" width="36.0" height="45.0" rx="2" fill="#64748b" stroke="#64748b" stroke-width="1.2"/>
+<text x="74.4" y="370.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">walkable floor</text>
+<text x="159.0" y="331.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">wall</text>
+<text x="231.0" y="331.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">box</text>
+<text x="58.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Floor and obstacles, seen from above.</text>
+<text x="58.0" y="431.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">x to the right, z down.</text>
+<line x1="334.0" y1="290.0" x2="352.0" y2="290.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="354.0" y="100.0" width="292.0" height="348.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="380.0" cy="127.0" r="12" fill="#0d9488"/>
+<text x="380.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="400.0" y="133.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Build the NavMesh</text>
+<text x="372.0" y="158.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#0d9488" text-anchor="start">threeToSoloNavMesh(...)</text>
+<rect x="374.0" y="174.0" width="252.0" height="216.0" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="464.0" y="174.0" width="18.0" height="135.0" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
+<rect x="527.0" y="264.0" width="36.0" height="45.0" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
+<path d="M384.8,184.8 L453.2,184.8 L384.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M453.2,184.8 L453.2,253.2 L384.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M384.8,253.2 L453.2,253.2 L453.2,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M384.8,253.2 L453.2,319.8 L384.8,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M384.8,319.8 L453.2,319.8 L384.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M453.2,319.8 L453.2,379.2 L384.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M453.2,319.8 L492.8,319.8 L492.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M453.2,319.8 L492.8,379.2 L453.2,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492.8,184.8 L516.2,184.8 L492.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M516.2,184.8 L516.2,253.2 L492.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492.8,253.2 L516.2,253.2 L516.2,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492.8,253.2 L516.2,319.8 L492.8,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492.8,319.8 L516.2,319.8 L492.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M516.2,319.8 L516.2,379.2 L492.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M516.2,184.8 L573.8,184.8 L573.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M516.2,184.8 L573.8,253.2 L516.2,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M516.2,319.8 L573.8,319.8 L573.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M516.2,319.8 L573.8,379.2 L516.2,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M573.8,184.8 L615.2,184.8 L573.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M615.2,184.8 L615.2,253.2 L573.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M573.8,253.2 L615.2,253.2 L615.2,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M573.8,253.2 L615.2,319.8 L573.8,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M573.8,319.8 L615.2,319.8 L573.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M615.2,319.8 L615.2,379.2 L573.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="372.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">A polygon graph of the walkable</text>
+<text x="372.0" y="431.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">surface. Built once, on level load.</text>
+<line x1="648.0" y1="290.0" x2="666.0" y2="290.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="668.0" y="100.0" width="292.0" height="348.0" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="694.0" cy="127.0" r="12" fill="#7c3aed"/>
+<text x="694.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="714.0" y="133.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Find the path</text>
+<text x="686.0" y="158.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#7c3aed" text-anchor="start">query.computePath(start, goal)</text>
+<rect x="688.0" y="174.0" width="252.0" height="216.0" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="778.0" y="174.0" width="18.0" height="135.0" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
+<rect x="841.0" y="264.0" width="36.0" height="45.0" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
+<path d="M698.8,184.8 L767.2,184.8 L698.8,253.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M767.2,184.8 L767.2,253.2 L698.8,253.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.8,253.2 L767.2,253.2 L767.2,319.8 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.8,253.2 L767.2,319.8 L698.8,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.8,319.8 L767.2,319.8 L698.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M767.2,319.8 L767.2,379.2 L698.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M767.2,319.8 L806.8,319.8 L806.8,379.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M767.2,319.8 L806.8,379.2 L767.2,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M806.8,184.8 L830.2,184.8 L806.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,184.8 L830.2,253.2 L806.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M806.8,253.2 L830.2,253.2 L830.2,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M806.8,253.2 L830.2,319.8 L806.8,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M806.8,319.8 L830.2,319.8 L806.8,379.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,319.8 L830.2,379.2 L806.8,379.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,184.8 L887.8,184.8 L887.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,184.8 L887.8,253.2 L830.2,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,319.8 L887.8,319.8 L887.8,379.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,319.8 L887.8,379.2 L830.2,379.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.8,184.8 L929.2,184.8 L887.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M929.2,184.8 L929.2,253.2 L887.8,253.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.8,253.2 L929.2,253.2 L929.2,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.8,253.2 L929.2,319.8 L887.8,319.8 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.8,319.8 L929.2,319.8 L887.8,379.2 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M929.2,319.8 L929.2,379.2 L887.8,379.2 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.8,184.8 L767.2,184.8 L698.8,253.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M767.2,184.8 L767.2,253.2 L698.8,253.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.8,253.2 L767.2,253.2 L767.2,319.8 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M767.2,319.8 L806.8,319.8 L806.8,379.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M806.8,319.8 L830.2,319.8 L806.8,379.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,319.8 L830.2,379.2 L806.8,379.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,319.8 L887.8,319.8 L887.8,379.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830.2,319.8 L887.8,379.2 L830.2,379.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887.8,319.8 L929.2,319.8 L887.8,379.2 Z" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="724.0,210.0 767.2,319.8 904.0,354.0" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="767.2" cy="319.8" r="5.5" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="724.0" cy="210.0" r="9.5" fill="#7c3aed" stroke="#ffffff" stroke-width="2"/>
+<text x="724.0" y="214.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">S</text>
+<circle cx="904.0" cy="354.0" r="9.5" fill="#7c3aed" stroke="#ffffff" stroke-width="2"/>
+<text x="904.0" y="358.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">G</text>
+<text x="759.2" y="341.8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">waypoint</text>
+<text x="686.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">S = start (0, 0, 0), G = goal (10, 0, 8).</text>
+<text x="686.0" y="431.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Amber: polygons to cross. Violet: path.</text>
+<rect x="40.0" y="468.0" width="920.0" height="118.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="66.0" cy="496.0" r="12" fill="#d97706"/>
+<text x="66.0" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="86.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Each frame: walk to the next waypoint</text>
+<circle cx="110" cy="546" r="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.2"/>
+<text x="110.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">character</text>
+<line x1="124.0" y1="546.0" x2="214.0" y2="546.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="168.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">speed × dt</text>
+<circle cx="250" cy="546" r="16" fill="none" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="250" cy="546" r="5.5" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="250.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#7c3aed" text-anchor="middle">next waypoint</text>
+<line x1="268.0" y1="546.0" x2="340.0" y2="546.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<circle cx="352" cy="546" r="5.5" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="352.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">the one after</text>
+<text x="440.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Move speed × dt toward it (speed = 3) and turn to face it.</text>
+<text x="440.0" y="552.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Closer than 0.1? Switch to the next waypoint.</text>
+<text x="440.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Many characters: Crowd moves the agents and keeps them apart.</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Example room. Start, goal, speed = 3 and the 0.1 threshold come from the post's Chapter 3 code.</text>
+</svg>

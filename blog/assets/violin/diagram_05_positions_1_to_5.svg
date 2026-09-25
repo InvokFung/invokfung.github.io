@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" role="img" aria-label="The A string in A major: the 1st finger lands on B in 1st position, C sharp in 2nd, D in 3rd, E in 4th and F sharp in 5th; 4th position plays E, F sharp, G sharp, A and 5th position plays F sharp, G sharp, A, B. Below, the silent-shift drill: open A, D, F sharp, D, B">
+<defs><marker id="mk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#222222"/></marker><marker id="mkr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#c54a2e"/></marker><marker id="mkb" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1d6a8a"/></marker></defs>
+<rect width="1000" height="760" fill="#ffffff"/>
+<text x="40.0" y="44.0" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="700" fill="#222222" text-anchor="start">Up the A string to 4th and 5th position</text>
+<text x="40.0" y="70.0" font-family="Georgia, 'Times New Roman', serif" font-size="15.5" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">A major notes. Each position starts the hand one note higher. 4th and 5th are new at Grade 5.</text>
+<line x1="40.0" y1="188.0" x2="960.0" y2="188.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40.0" y1="175.0" x2="960.0" y2="175.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40.0" y1="162.0" x2="960.0" y2="162.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40.0" y1="149.0" x2="960.0" y2="149.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="40.0" y1="136.0" x2="960.0" y2="136.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M58.13,201.62 L58.15,201.67 L58.19,201.81 L58.27,202.03 L58.37,202.31 L58.49,202.66 L58.63,203.06 L58.80,203.50 L58.99,203.97 L59.20,204.46 L59.43,204.97 L59.68,205.48 L59.94,205.99 L60.22,206.50 L60.53,206.98 L60.85,207.44 L61.21,207.87 L61.60,208.26 L62.03,208.58 L62.44,208.83 L62.86,209.04 L63.28,209.24 L63.73,209.41 L64.19,209.57 L64.66,209.71 L65.14,209.84 L65.63,209.94 L66.12,210.02 L66.63,210.09 L67.13,210.12 L67.64,210.14 L68.14,210.13 L68.64,210.08 L69.14,210.01 L69.63,209.90 L70.10,209.75 L70.58,209.56 L71.06,209.30 L71.52,209.00 L71.96,208.66 L72.37,208.29 L72.77,207.90 L73.15,207.48 L73.51,207.04 L73.86,206.58 L74.19,206.10 L74.50,205.61 L74.80,205.11 L75.08,204.60 L75.34,204.08 L75.58,203.55 L75.80,203.02 L76.00,202.50 L76.18,201.97 L76.34,201.44 L76.49,200.84 L76.60,200.23 L76.67,199.61 L76.71,199.00 L76.72,198.39 L76.71,197.78 L76.67,197.18 L76.62,196.57 L76.56,195.97 L76.48,195.36 L76.40,194.75 L76.31,194.15 L76.21,193.54 L76.12,192.92 L76.03,192.31 L75.95,191.69 L75.87,191.07 L75.81,190.43 L75.72,189.54 L75.61,188.62 L75.50,187.68 L75.37,186.72 L75.24,185.74 L75.09,184.74 L74.94,183.74 L74.79,182.72 L74.63,181.68 L74.46,180.64 L74.30,179.59 L74.13,178.54 L73.96,177.48 L73.79,176.42 L73.62,175.35 L73.45,174.29 L73.29,173.23 L73.13,172.17 L72.96,170.99 L72.78,169.80 L72.60,168.59 L72.41,167.37 L72.22,166.13 L72.03,164.89 L71.84,163.64 L71.64,162.38 L71.44,161.12 L71.24,159.87 L71.04,158.61 L70.84,157.36 L70.64,156.11 L70.43,154.88 L70.23,153.65 L70.03,152.44 L69.82,151.24 L69.62,150.06 L69.43,148.98 L69.22,147.91 L69.00,146.83 L68.78,145.76 L68.54,144.70 L68.31,143.64 L68.07,142.59 L67.83,141.54 L67.59,140.51 L67.35,139.49 L67.13,138.48 L66.90,137.49 L66.69,136.51 L66.49,135.56 L66.31,134.62 L66.14,133.70 L65.99,132.81 L65.86,131.93 L65.76,131.28 L65.66,130.65 L65.56,130.03 L65.46,129.43 L65.35,128.84 L65.25,128.27 L65.16,127.70 L65.07,127.15 L64.98,126.61 L64.90,126.07 L64.84,125.54 L64.78,125.01 L64.74,124.48 L64.71,123.95 L64.69,123.42 L64.70,122.88 L64.72,122.34 L64.76,121.79 L64.82,121.17 L64.90,120.52 L64.98,119.83 L65.08,119.13 L65.19,118.42 L65.31,117.70 L65.45,116.99 L65.60,116.28 L65.76,115.59 L65.93,114.93 L66.12,114.30 L66.32,113.71 L66.53,113.17 L66.75,112.69 L66.97,112.28 L67.19,111.94 L67.40,111.69 L67.61,111.51 L67.72,111.44 L67.88,111.37 L68.08,111.30 L68.29,111.25 L68.52,111.22 L68.76,111.21 L69.02,111.21 L69.27,111.23 L69.53,111.26 L69.78,111.31 L70.02,111.37 L70.25,111.44 L70.47,111.52 L70.66,111.60 L70.83,111.68 L70.98,111.77 L71.09,111.84 L71.16,111.89 L71.27,111.98 L71.38,112.12 L71.50,112.32 L71.63,112.57 L71.76,112.86 L71.87,113.20 L71.98,113.57 L72.08,113.97 L72.17,114.40 L72.25,114.84 L72.32,115.29 L72.37,115.76 L72.42,116.22 L72.45,116.69 L72.48,117.15 L72.49,117.59 L72.50,118.03 L72.50,118.43 L72.48,118.89 L72.43,119.35 L72.34,119.84 L72.23,120.33 L72.09,120.84 L71.93,121.35 L71.74,121.87 L71.53,122.39 L71.31,122.92 L71.07,123.45 L70.82,123.98 L70.56,124.51 L70.29,125.04 L70.01,125.56 L69.73,126.09 L69.45,126.60 L69.18,127.12 L68.91,127.61 L68.63,128.12 L68.31,128.60 L67.97,129.08 L67.60,129.55 L67.20,130.03 L66.78,130.50 L66.33,130.97 L65.87,131.44 L65.40,131.91 L64.91,132.39 L64.41,132.87 L63.91,133.36 L63.40,133.85 L62.89,134.36 L62.39,134.88 L61.88,135.41 L61.39,135.96 L60.92,136.50 L60.48,137.01 L60.04,137.49 L59.58,137.98 L59.10,138.46 L58.60,138.94 L58.09,139.43 L57.57,139.93 L57.04,140.43 L56.50,140.94 L55.96,141.47 L55.42,142.01 L54.87,142.57 L54.34,143.16 L53.81,143.76 L53.29,144.39 L52.79,145.05 L52.30,145.74 L51.85,146.44 L51.43,147.14 L51.02,147.84 L50.61,148.56 L50.21,149.30 L49.81,150.04 L49.42,150.81 L49.05,151.59 L48.68,152.38 L48.33,153.18 L47.99,153.99 L47.68,154.82 L47.38,155.66 L47.10,156.51 L46.85,157.37 L46.63,158.24 L46.43,159.12 L46.27,160.01 L46.14,160.90 L46.05,161.80 L46.00,162.71 L45.99,163.62 L46.01,164.53 L46.07,165.45 L46.16,166.36 L46.28,167.27 L46.42,168.18 L46.59,169.09 L46.78,169.98 L47.00,170.87 L47.23,171.75 L47.48,172.62 L47.74,173.47 L48.02,174.31 L48.31,175.14 L48.61,175.96 L48.92,176.76 L49.24,177.50 L49.61,178.24 L50.01,178.97 L50.44,179.69 L50.91,180.40 L51.40,181.09 L51.92,181.77 L52.46,182.43 L53.02,183.08 L53.60,183.70 L54.19,184.30 L54.80,184.88 L55.41,185.43 L56.03,185.96 L56.66,186.47 L57.29,186.95 L57.93,187.41 L58.57,187.85 L59.19,188.23 L59.84,188.58 L60.52,188.89 L61.21,189.17 L61.92,189.42 L62.64,189.64 L63.38,189.83 L64.12,189.99 L64.86,190.12 L65.61,190.22 L66.35,190.30 L67.09,190.36 L67.83,190.39 L68.56,190.40 L69.28,190.38 L69.99,190.34 L70.68,190.28 L71.36,190.20 L72.03,190.10 L72.72,189.97 L73.41,189.83 L74.11,189.66 L74.82,189.47 L75.52,189.26 L76.23,189.02 L76.94,188.76 L77.64,188.48 L78.33,188.17 L79.01,187.84 L79.67,187.47 L80.32,187.08 L80.94,186.67 L81.53,186.22 L82.09,185.74 L82.62,185.23 L83.10,184.70 L83.55,184.13 L83.98,183.55 L84.38,182.94 L84.77,182.32 L85.15,181.67 L85.50,181.01 L85.83,180.33 L86.14,179.64 L86.43,178.93 L86.69,178.21 L86.93,177.49 L87.14,176.75 L87.32,176.02 L87.47,175.28 L87.58,174.53 L87.66,173.79 L87.71,173.06 L87.71,172.33 L87.67,171.60 L87.60,170.85 L87.50,170.09 L87.36,169.33 L87.20,168.56 L87.00,167.79 L86.78,167.02 L86.53,166.26 L86.26,165.51 L85.95,164.77 L85.63,164.04 L85.27,163.33 L84.89,162.64 L84.48,161.98 L84.05,161.34 L83.58,160.73 L83.07,160.15 L82.53,159.62 L81.98,159.17 L81.41,158.78 L80.81,158.42 L80.19,158.11 L79.54,157.84 L78.88,157.60 L78.21,157.40 L77.53,157.23 L76.85,157.09 L76.16,156.98 L75.47,156.90 L74.79,156.85 L74.11,156.82 L73.44,156.82 L72.78,156.85 L72.13,156.90 L71.49,156.98 L70.86,157.09 L70.22,157.25 L69.58,157.47 L68.95,157.74 L68.34,158.05 L67.73,158.40 L67.14,158.79 L66.56,159.20 L66.00,159.64 L65.45,160.10 L64.93,160.58 L64.43,161.08 L63.95,161.58 L63.50,162.10 L63.07,162.62 L62.68,163.14 L62.32,163.67 L62.00,164.19 L61.70,164.73 L61.47,165.27 L61.31,165.86 L61.20,166.47 L61.14,167.10 L61.11,167.74 L61.11,168.38 L61.14,169.02 L61.20,169.65 L61.26,170.27 L61.34,170.85 L61.42,171.41 L61.51,171.91 L61.60,172.37 L61.67,172.76 L61.74,173.09 L61.80,173.33 L61.83,173.48 L61.85,173.54 L63.13,173.34 L63.13,173.29 L63.12,173.14 L63.11,172.90 L63.09,172.59 L63.08,172.20 L63.07,171.76 L63.07,171.27 L63.07,170.74 L63.08,170.18 L63.10,169.60 L63.14,169.02 L63.18,168.45 L63.25,167.89 L63.33,167.36 L63.43,166.87 L63.54,166.43 L63.67,166.07 L63.80,165.77 L64.01,165.41 L64.28,165.02 L64.59,164.62 L64.95,164.23 L65.35,163.83 L65.78,163.44 L66.24,163.07 L66.72,162.70 L67.21,162.36 L67.72,162.03 L68.23,161.73 L68.75,161.45 L69.26,161.19 L69.76,160.97 L70.24,160.78 L70.70,160.62 L71.14,160.50 L71.54,160.41 L71.93,160.35 L72.37,160.32 L72.83,160.33 L73.31,160.37 L73.81,160.44 L74.31,160.54 L74.82,160.66 L75.32,160.82 L75.83,160.99 L76.32,161.19 L76.79,161.40 L77.25,161.63 L77.68,161.86 L78.09,162.11 L78.46,162.36 L78.80,162.61 L79.11,162.85 L79.37,163.08 L79.65,163.35 L79.92,163.68 L80.19,164.05 L80.45,164.48 L80.71,164.95 L80.96,165.46 L81.19,166.00 L81.40,166.57 L81.60,167.16 L81.78,167.76 L81.94,168.38 L82.08,168.99 L82.20,169.61 L82.30,170.22 L82.39,170.82 L82.45,171.39 L82.49,171.95 L82.51,172.47 L82.52,172.98 L82.52,173.51 L82.50,174.06 L82.47,174.63 L82.43,175.21 L82.37,175.80 L82.29,176.40 L82.19,177.00 L82.08,177.59 L81.94,178.18 L81.79,178.76 L81.61,179.33 L81.41,179.88 L81.19,180.41 L80.95,180.91 L80.68,181.38 L80.40,181.81 L80.10,182.20 L79.77,182.59 L79.41,182.98 L79.03,183.38 L78.61,183.78 L78.17,184.19 L77.70,184.58 L77.21,184.98 L76.70,185.36 L76.17,185.73 L75.63,186.08 L75.07,186.41 L74.50,186.71 L73.92,186.99 L73.34,187.24 L72.75,187.46 L72.17,187.64 L71.60,187.78 L71.04,187.88 L70.47,187.94 L69.88,187.97 L69.27,187.96 L68.65,187.93 L68.01,187.86 L67.38,187.76 L66.74,187.64 L66.10,187.49 L65.47,187.32 L64.85,187.13 L64.23,186.92 L63.63,186.69 L63.04,186.44 L62.47,186.18 L61.93,185.91 L61.40,185.62 L60.90,185.33 L60.43,185.03 L59.96,184.68 L59.51,184.29 L59.07,183.84 L58.66,183.34 L58.26,182.81 L57.88,182.25 L57.53,181.66 L57.19,181.04 L56.87,180.41 L56.56,179.76 L56.27,179.10 L55.99,178.44 L55.73,177.77 L55.47,177.11 L55.21,176.45 L54.97,175.80 L54.72,175.16 L54.48,174.54 L54.24,173.90 L54.02,173.24 L53.83,172.55 L53.67,171.85 L53.52,171.13 L53.40,170.40 L53.30,169.66 L53.22,168.91 L53.16,168.17 L53.12,167.42 L53.10,166.68 L53.09,165.94 L53.10,165.21 L53.13,164.50 L53.17,163.79 L53.22,163.11 L53.29,162.44 L53.36,161.80 L53.45,161.19 L53.56,160.57 L53.70,159.94 L53.87,159.30 L54.06,158.65 L54.27,158.00 L54.50,157.34 L54.76,156.69 L55.03,156.02 L55.32,155.36 L55.62,154.71 L55.94,154.05 L56.27,153.40 L56.62,152.75 L56.97,152.11 L57.33,151.48 L57.69,150.86 L58.05,150.26 L58.37,149.75 L58.70,149.25 L59.05,148.75 L59.41,148.25 L59.79,147.75 L60.20,147.24 L60.61,146.73 L61.05,146.21 L61.49,145.69 L61.95,145.16 L62.42,144.63 L62.90,144.09 L63.39,143.55 L63.89,142.99 L64.39,142.43 L64.89,141.86 L65.39,141.28 L65.88,140.70 L66.32,140.17 L66.74,139.65 L67.18,139.12 L67.61,138.58 L68.05,138.03 L68.50,137.47 L68.94,136.90 L69.38,136.32 L69.82,135.74 L70.26,135.14 L70.70,134.54 L71.12,133.93 L71.54,133.31 L71.96,132.68 L72.36,132.04 L72.75,131.40 L73.13,130.74 L73.49,130.09 L73.80,129.48 L74.08,128.88 L74.35,128.26 L74.60,127.63 L74.84,126.98 L75.06,126.33 L75.27,125.68 L75.46,125.02 L75.63,124.35 L75.78,123.69 L75.92,123.02 L76.04,122.36 L76.15,121.70 L76.23,121.04 L76.30,120.39 L76.35,119.74 L76.39,119.10 L76.40,118.47 L76.39,117.93 L76.36,117.38 L76.30,116.82 L76.23,116.26 L76.13,115.70 L76.02,115.14 L75.88,114.58 L75.73,114.03 L75.56,113.48 L75.37,112.95 L75.17,112.43 L74.95,111.93 L74.70,111.45 L74.44,110.99 L74.14,110.55 L73.82,110.14 L73.46,109.75 L73.06,109.41 L72.69,109.17 L72.32,108.98 L71.94,108.84 L71.55,108.73 L71.15,108.65 L70.76,108.60 L70.35,108.57 L69.95,108.57 L69.55,108.60 L69.15,108.64 L68.76,108.71 L68.37,108.79 L67.99,108.90 L67.62,109.03 L67.26,109.18 L66.91,109.35 L66.57,109.54 L66.21,109.79 L65.79,110.18 L65.41,110.66 L65.07,111.18 L64.78,111.75 L64.53,112.36 L64.29,113.01 L64.09,113.69 L63.90,114.40 L63.73,115.12 L63.58,115.87 L63.44,116.62 L63.32,117.37 L63.21,118.12 L63.11,118.87 L63.03,119.59 L62.95,120.30 L62.88,120.97 L62.82,121.61 L62.77,122.21 L62.74,122.81 L62.72,123.40 L62.71,123.99 L62.72,124.57 L62.73,125.14 L62.76,125.71 L62.80,126.29 L62.85,126.86 L62.91,127.44 L62.97,128.01 L63.04,128.60 L63.11,129.18 L63.19,129.78 L63.28,130.38 L63.36,131.00 L63.45,131.62 L63.54,132.27 L63.67,133.16 L63.81,134.09 L63.97,135.03 L64.13,136.00 L64.30,136.98 L64.48,137.97 L64.66,138.98 L64.85,140.01 L65.04,141.04 L65.24,142.08 L65.44,143.13 L65.64,144.19 L65.84,145.25 L66.04,146.31 L66.23,147.37 L66.43,148.43 L66.62,149.49 L66.80,150.54 L67.00,151.71 L67.20,152.90 L67.39,154.11 L67.58,155.33 L67.76,156.56 L67.95,157.81 L68.13,159.05 L68.31,160.31 L68.49,161.57 L68.66,162.82 L68.84,164.08 L69.01,165.33 L69.18,166.58 L69.36,167.81 L69.53,169.04 L69.70,170.25 L69.87,171.45 L70.05,172.63 L70.21,173.69 L70.37,174.76 L70.53,175.83 L70.69,176.90 L70.85,177.96 L71.01,179.02 L71.17,180.08 L71.33,181.12 L71.48,182.16 L71.63,183.18 L71.77,184.20 L71.91,185.19 L72.04,186.17 L72.16,187.13 L72.28,188.07 L72.39,188.99 L72.48,189.89 L72.57,190.77 L72.64,191.43 L72.72,192.10 L72.80,192.75 L72.89,193.38 L72.97,194.00 L73.05,194.60 L73.13,195.19 L73.20,195.76 L73.26,196.32 L73.31,196.86 L73.34,197.38 L73.36,197.89 L73.36,198.37 L73.35,198.84 L73.31,199.29 L73.26,199.73 L73.18,200.14 L73.08,200.56 L72.96,200.95 L72.82,201.37 L72.67,201.80 L72.50,202.24 L72.32,202.67 L72.12,203.11 L71.91,203.53 L71.68,203.95 L71.45,204.35 L71.20,204.74 L70.95,205.10 L70.70,205.44 L70.44,205.75 L70.18,206.02 L69.93,206.26 L69.68,206.46 L69.45,206.62 L69.22,206.74 L69.02,206.83 L68.78,206.92 L68.50,206.99 L68.20,207.06 L67.87,207.12 L67.53,207.16 L67.17,207.18 L66.79,207.19 L66.42,207.18 L66.03,207.15 L65.66,207.11 L65.28,207.05 L64.92,206.98 L64.58,206.89 L64.25,206.78 L63.95,206.67 L63.68,206.54 L63.47,206.42 L63.30,206.29 L63.09,206.10 L62.85,205.84 L62.60,205.52 L62.34,205.15 L62.07,204.75 L61.81,204.32 L61.55,203.88 L61.31,203.44 L61.08,203.00 L60.86,202.58 L60.67,202.19 L60.50,201.83 L60.36,201.52 L60.24,201.26 L60.16,201.06 L60.10,200.94 L60.09,200.90 Z" fill="#222222" fill-rule="nonzero"/>
+<circle cx="58.9" cy="201.3" r="4.68" fill="#222222" stroke="none" stroke-width="1.5"/>
+<line x1="96.7" y1="119.8" x2="96.7" y2="154.2" stroke="#222222" stroke-width="1.43" stroke-linecap="round"/>
+<line x1="102.9" y1="117.8" x2="102.9" y2="152.2" stroke="#222222" stroke-width="1.43" stroke-linecap="round"/>
+<polygon points="93.3,133.8 106.3,130.2 106.3,126.3 93.3,129.9" fill="#222222"/>
+<polygon points="93.3,145.7 106.3,142.1 106.3,138.2 93.3,141.8" fill="#222222"/>
+<line x1="112.9" y1="139.2" x2="112.9" y2="173.7" stroke="#222222" stroke-width="1.43" stroke-linecap="round"/>
+<line x1="119.2" y1="137.3" x2="119.2" y2="171.8" stroke="#222222" stroke-width="1.43" stroke-linecap="round"/>
+<polygon points="109.5,153.3 122.5,149.7 122.5,145.8 109.5,149.4" fill="#222222"/>
+<polygon points="109.5,165.2 122.5,161.6 122.5,157.7 109.5,161.3" fill="#222222"/>
+<line x1="129.2" y1="113.2" x2="129.2" y2="147.7" stroke="#222222" stroke-width="1.43" stroke-linecap="round"/>
+<line x1="135.4" y1="111.3" x2="135.4" y2="145.8" stroke="#222222" stroke-width="1.43" stroke-linecap="round"/>
+<polygon points="125.8,127.3 138.8,123.6 138.8,119.7 125.8,123.4" fill="#222222"/>
+<polygon points="125.8,139.2 138.8,135.6 138.8,131.7 125.8,135.3" fill="#222222"/>
+<ellipse cx="238.0" cy="168.5" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 238.0 168.5)"/>
+<text x="238.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">A</text>
+<ellipse cx="354.0" cy="162.0" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 354.0 162.0)"/>
+<text x="354.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">B</text>
+<ellipse cx="446.0" cy="155.5" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 446.0 155.5)"/>
+<text x="446.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">C♯</text>
+<ellipse cx="492.0" cy="149.0" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 492.0 149.0)"/>
+<text x="492.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">D</text>
+<ellipse cx="584.0" cy="142.5" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 584.0 142.5)"/>
+<text x="584.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">E</text>
+<ellipse cx="676.0" cy="136.0" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 676.0 136.0)"/>
+<text x="676.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">F♯</text>
+<ellipse cx="768.0" cy="129.5" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 768.0 129.5)"/>
+<text x="768.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">G♯</text>
+<line x1="800.4" y1="123.0" x2="827.6" y2="123.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<ellipse cx="814.0" cy="123.0" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 814.0 123.0)"/>
+<text x="814.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">A</text>
+<line x1="892.4" y1="123.0" x2="919.6" y2="123.0" stroke="#222222" stroke-width="1.4" stroke-linecap="round"/>
+<ellipse cx="906.0" cy="116.5" rx="8.6" ry="6.1" fill="#222222" transform="rotate(-20 906.0 116.5)"/>
+<text x="906.0" y="218.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#666666" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">B</text>
+<text x="40.0" y="238.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">key: A major (F♯, C♯, G♯)</text>
+<text x="40.0" y="276.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#222222" text-anchor="start">1st position</text>
+<text x="40.0" y="296.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="400" fill="#666666" text-anchor="start">1st finger on B</text>
+<rect x="262.0" y="262.0" width="671.6" height="32.0" rx="3" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="308.0" y1="267.0" x2="308.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="354.0" y1="267.0" x2="354.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="400.0" y1="267.0" x2="400.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="446.0" y1="267.0" x2="446.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="492.0" y1="267.0" x2="492.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="538.0" y1="267.0" x2="538.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="584.0" y1="267.0" x2="584.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="630.0" y1="267.0" x2="630.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="676.0" y1="267.0" x2="676.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="722.0" y1="267.0" x2="722.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="768.0" y1="267.0" x2="768.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="814.0" y1="267.0" x2="814.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="267.0" x2="860.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="906.0" y1="267.0" x2="906.0" y2="289.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="222.0" y1="278.0" x2="933.6" y2="278.0" stroke="#bdbdb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="262.0" y1="278.0" x2="933.6" y2="278.0" stroke="#e8e8e0" stroke-width="2" stroke-linecap="round"/>
+<rect x="257.0" y="259.0" width="7.0" height="38.0" rx="2" fill="#e8d8c0" stroke="#222222" stroke-width="1"/>
+<rect x="334.0" y="255.0" width="270.0" height="46.0" rx="11" fill="none" stroke="#9a9a9a" stroke-width="1.6"/>
+<circle cx="354.0" cy="278.0" r="13" fill="#ff8a65" stroke="none" stroke-width="1.5"/>
+<text x="354.0" y="282.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<text x="354.0" y="314.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">B</text>
+<circle cx="446.0" cy="278.0" r="13" fill="#ffd966" stroke="none" stroke-width="1.5"/>
+<text x="446.0" y="282.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">2</text>
+<text x="446.0" y="314.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">C♯</text>
+<circle cx="492.0" cy="278.0" r="13" fill="#9be3c8" stroke="none" stroke-width="1.5"/>
+<text x="492.0" y="282.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">3</text>
+<text x="492.0" y="314.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">D</text>
+<circle cx="584.0" cy="278.0" r="13" fill="#7adfd0" stroke="none" stroke-width="1.5"/>
+<text x="584.0" y="282.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">4</text>
+<text x="584.0" y="314.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">E</text>
+<text x="40.0" y="342.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#222222" text-anchor="start">2nd position</text>
+<text x="40.0" y="362.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="400" fill="#666666" text-anchor="start">1st finger on C♯</text>
+<rect x="262.0" y="328.0" width="671.6" height="32.0" rx="3" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="308.0" y1="333.0" x2="308.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="354.0" y1="333.0" x2="354.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="400.0" y1="333.0" x2="400.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="446.0" y1="333.0" x2="446.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="492.0" y1="333.0" x2="492.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="538.0" y1="333.0" x2="538.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="584.0" y1="333.0" x2="584.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="630.0" y1="333.0" x2="630.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="676.0" y1="333.0" x2="676.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="722.0" y1="333.0" x2="722.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="768.0" y1="333.0" x2="768.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="814.0" y1="333.0" x2="814.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="333.0" x2="860.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="906.0" y1="333.0" x2="906.0" y2="355.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="222.0" y1="344.0" x2="933.6" y2="344.0" stroke="#bdbdb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="262.0" y1="344.0" x2="933.6" y2="344.0" stroke="#e8e8e0" stroke-width="2" stroke-linecap="round"/>
+<rect x="257.0" y="325.0" width="7.0" height="38.0" rx="2" fill="#e8d8c0" stroke="#222222" stroke-width="1"/>
+<rect x="426.0" y="321.0" width="270.0" height="46.0" rx="11" fill="none" stroke="#9a9a9a" stroke-width="1.6"/>
+<circle cx="446.0" cy="344.0" r="13" fill="#ff8a65" stroke="none" stroke-width="1.5"/>
+<text x="446.0" y="348.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<text x="446.0" y="380.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">C♯</text>
+<circle cx="492.0" cy="344.0" r="13" fill="#ffd966" stroke="none" stroke-width="1.5"/>
+<text x="492.0" y="348.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">2</text>
+<text x="492.0" y="380.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">D</text>
+<circle cx="584.0" cy="344.0" r="13" fill="#9be3c8" stroke="none" stroke-width="1.5"/>
+<text x="584.0" y="348.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">3</text>
+<text x="584.0" y="380.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">E</text>
+<circle cx="676.0" cy="344.0" r="13" fill="#7adfd0" stroke="none" stroke-width="1.5"/>
+<text x="676.0" y="348.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">4</text>
+<text x="676.0" y="380.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">F♯</text>
+<text x="40.0" y="408.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#222222" text-anchor="start">3rd position</text>
+<text x="40.0" y="428.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="400" fill="#666666" text-anchor="start">1st finger on D</text>
+<rect x="262.0" y="394.0" width="671.6" height="32.0" rx="3" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="308.0" y1="399.0" x2="308.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="354.0" y1="399.0" x2="354.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="400.0" y1="399.0" x2="400.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="446.0" y1="399.0" x2="446.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="492.0" y1="399.0" x2="492.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="538.0" y1="399.0" x2="538.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="584.0" y1="399.0" x2="584.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="630.0" y1="399.0" x2="630.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="676.0" y1="399.0" x2="676.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="722.0" y1="399.0" x2="722.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="768.0" y1="399.0" x2="768.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="814.0" y1="399.0" x2="814.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="399.0" x2="860.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="906.0" y1="399.0" x2="906.0" y2="421.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="222.0" y1="410.0" x2="933.6" y2="410.0" stroke="#bdbdb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="262.0" y1="410.0" x2="933.6" y2="410.0" stroke="#e8e8e0" stroke-width="2" stroke-linecap="round"/>
+<rect x="257.0" y="391.0" width="7.0" height="38.0" rx="2" fill="#e8d8c0" stroke="#222222" stroke-width="1"/>
+<rect x="472.0" y="387.0" width="316.0" height="46.0" rx="11" fill="none" stroke="#9a9a9a" stroke-width="1.6"/>
+<circle cx="492.0" cy="410.0" r="13" fill="#ff8a65" stroke="none" stroke-width="1.5"/>
+<text x="492.0" y="414.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<text x="492.0" y="446.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">D</text>
+<circle cx="584.0" cy="410.0" r="13" fill="#ffd966" stroke="none" stroke-width="1.5"/>
+<text x="584.0" y="414.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">2</text>
+<text x="584.0" y="446.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">E</text>
+<circle cx="676.0" cy="410.0" r="13" fill="#9be3c8" stroke="none" stroke-width="1.5"/>
+<text x="676.0" y="414.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">3</text>
+<text x="676.0" y="446.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">F♯</text>
+<circle cx="768.0" cy="410.0" r="13" fill="#7adfd0" stroke="none" stroke-width="1.5"/>
+<text x="768.0" y="414.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">4</text>
+<text x="768.0" y="446.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">G♯</text>
+<text x="40.0" y="474.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#1d6a8a" text-anchor="start">4th position</text>
+<text x="40.0" y="494.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#1d6a8a" text-anchor="start">1st finger on E</text>
+<rect x="262.0" y="460.0" width="671.6" height="32.0" rx="3" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="308.0" y1="465.0" x2="308.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="354.0" y1="465.0" x2="354.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="400.0" y1="465.0" x2="400.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="446.0" y1="465.0" x2="446.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="492.0" y1="465.0" x2="492.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="538.0" y1="465.0" x2="538.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="584.0" y1="465.0" x2="584.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="630.0" y1="465.0" x2="630.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="676.0" y1="465.0" x2="676.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="722.0" y1="465.0" x2="722.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="768.0" y1="465.0" x2="768.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="814.0" y1="465.0" x2="814.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="465.0" x2="860.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="906.0" y1="465.0" x2="906.0" y2="487.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="222.0" y1="476.0" x2="933.6" y2="476.0" stroke="#bdbdb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="262.0" y1="476.0" x2="933.6" y2="476.0" stroke="#e8e8e0" stroke-width="2" stroke-linecap="round"/>
+<rect x="257.0" y="457.0" width="7.0" height="38.0" rx="2" fill="#e8d8c0" stroke="#222222" stroke-width="1"/>
+<rect x="564.0" y="453.0" width="270.0" height="46.0" rx="11" fill="none" stroke="#1d6a8a" stroke-width="2.4"/>
+<circle cx="584.0" cy="476.0" r="13" fill="#ff8a65" stroke="none" stroke-width="1.5"/>
+<text x="584.0" y="480.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<text x="584.0" y="512.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">E</text>
+<circle cx="676.0" cy="476.0" r="13" fill="#ffd966" stroke="none" stroke-width="1.5"/>
+<text x="676.0" y="480.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">2</text>
+<text x="676.0" y="512.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">F♯</text>
+<circle cx="768.0" cy="476.0" r="13" fill="#9be3c8" stroke="none" stroke-width="1.5"/>
+<text x="768.0" y="480.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">3</text>
+<text x="768.0" y="512.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">G♯</text>
+<circle cx="814.0" cy="476.0" r="13" fill="#7adfd0" stroke="none" stroke-width="1.5"/>
+<text x="814.0" y="480.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">4</text>
+<text x="814.0" y="512.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">A</text>
+<text x="40.0" y="540.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#1d6a8a" text-anchor="start">5th position</text>
+<text x="40.0" y="560.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#1d6a8a" text-anchor="start">1st finger on F♯</text>
+<rect x="262.0" y="526.0" width="671.6" height="32.0" rx="3" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="308.0" y1="531.0" x2="308.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="354.0" y1="531.0" x2="354.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="400.0" y1="531.0" x2="400.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="446.0" y1="531.0" x2="446.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="492.0" y1="531.0" x2="492.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="538.0" y1="531.0" x2="538.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="584.0" y1="531.0" x2="584.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="630.0" y1="531.0" x2="630.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="676.0" y1="531.0" x2="676.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="722.0" y1="531.0" x2="722.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="768.0" y1="531.0" x2="768.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="814.0" y1="531.0" x2="814.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="531.0" x2="860.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="906.0" y1="531.0" x2="906.0" y2="553.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="222.0" y1="542.0" x2="933.6" y2="542.0" stroke="#bdbdb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="262.0" y1="542.0" x2="933.6" y2="542.0" stroke="#e8e8e0" stroke-width="2" stroke-linecap="round"/>
+<rect x="257.0" y="523.0" width="7.0" height="38.0" rx="2" fill="#e8d8c0" stroke="#222222" stroke-width="1"/>
+<rect x="656.0" y="519.0" width="270.0" height="46.0" rx="11" fill="none" stroke="#1d6a8a" stroke-width="2.4"/>
+<circle cx="676.0" cy="542.0" r="13" fill="#ff8a65" stroke="none" stroke-width="1.5"/>
+<text x="676.0" y="546.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<text x="676.0" y="578.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">F♯</text>
+<circle cx="768.0" cy="542.0" r="13" fill="#ffd966" stroke="none" stroke-width="1.5"/>
+<text x="768.0" y="546.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">2</text>
+<text x="768.0" y="578.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">G♯</text>
+<circle cx="814.0" cy="542.0" r="13" fill="#9be3c8" stroke="none" stroke-width="1.5"/>
+<text x="814.0" y="546.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">3</text>
+<text x="814.0" y="578.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">A</text>
+<circle cx="906.0" cy="542.0" r="13" fill="#7adfd0" stroke="none" stroke-width="1.5"/>
+<text x="906.0" y="546.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">4</text>
+<text x="906.0" y="578.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">B</text>
+<line x1="40.0" y1="596.0" x2="960.0" y2="596.0" stroke="#e6e6e6" stroke-width="1" stroke-linecap="round"/>
+<text x="40.0" y="628.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#c54a2e" text-anchor="start">Silent-shift drill</text>
+<text x="40.0" y="648.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="400" fill="#666666" text-anchor="start">bow the A string; slide</text>
+<text x="40.0" y="666.0" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="400" fill="#666666" text-anchor="start">finger 1, no glissando</text>
+<rect x="262.0" y="642.0" width="671.6" height="32.0" rx="3" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="308.0" y1="647.0" x2="308.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="354.0" y1="647.0" x2="354.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="400.0" y1="647.0" x2="400.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="446.0" y1="647.0" x2="446.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="492.0" y1="647.0" x2="492.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="538.0" y1="647.0" x2="538.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="584.0" y1="647.0" x2="584.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="630.0" y1="647.0" x2="630.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="676.0" y1="647.0" x2="676.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="722.0" y1="647.0" x2="722.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="768.0" y1="647.0" x2="768.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="814.0" y1="647.0" x2="814.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="647.0" x2="860.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="906.0" y1="647.0" x2="906.0" y2="669.0" stroke="#6a5646" stroke-width="1" stroke-linecap="round"/>
+<line x1="222.0" y1="658.0" x2="933.6" y2="658.0" stroke="#bdbdb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="262.0" y1="658.0" x2="933.6" y2="658.0" stroke="#e8e8e0" stroke-width="2" stroke-linecap="round"/>
+<rect x="257.0" y="639.0" width="7.0" height="38.0" rx="2" fill="#e8d8c0" stroke="#222222" stroke-width="1"/>
+<circle cx="238.0" cy="658.0" r="12" fill="#ffffff" stroke="#222222" stroke-width="1.5"/>
+<text x="238.0" y="662.3" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="10.8" font-weight="700" fill="#222222" text-anchor="middle">0</text>
+<circle cx="354.0" cy="658.0" r="13" fill="#ff8a65" stroke="#c54a2e" stroke-width="2.2"/>
+<text x="354.0" y="662.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<circle cx="492.0" cy="658.0" r="13" fill="#ff8a65" stroke="#c54a2e" stroke-width="2.2"/>
+<text x="492.0" y="662.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<circle cx="676.0" cy="658.0" r="13" fill="#ff8a65" stroke="#c54a2e" stroke-width="2.2"/>
+<text x="676.0" y="662.7" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="11.700000000000001" font-weight="700" fill="#222222" text-anchor="middle">1</text>
+<path d="M252.0,640.0 Q365.0,610.0 478.0,640.0" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mkr)"/>
+<path d="M506.0,640.0 Q584.0,610.0 662.0,640.0" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mkr)"/>
+<path d="M662.0,676.0 Q584.0,706.0 506.0,676.0" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mkr)"/>
+<path d="M478.0,676.0 Q423.0,706.0 368.0,676.0" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mkr)"/>
+<text x="238.0" y="694.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#222222" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">1. open A</text>
+<text x="492.0" y="616.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#c54a2e" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">2. D (3rd pos)</text>
+<text x="676.0" y="616.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#c54a2e" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">3. F♯ (5th pos)</text>
+<text x="584.0" y="708.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#c54a2e" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">4. back to D</text>
+<text x="354.0" y="708.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#c54a2e" text-anchor="middle" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">5. B (1st pos)</text>
+<text x="40.0" y="742.0" font-family="Georgia, 'Times New Roman', serif" font-size="13.5" font-weight="400" fill="#999999" text-anchor="start" font-style="italic">From Chapter 2 of this post. Positions 1-3 (posts 01 and 04) shown with A major notes for comparison. Not to scale.</text>
+</svg>

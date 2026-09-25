@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800" role="img" aria-label="Parts of the violin seen from the front, parts of the bow, and where each right-hand finger touches the bow in the bow hold">
+<defs><marker id="mk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#222222"/></marker><marker id="mkr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#c54a2e"/></marker><marker id="mkb" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1d6a8a"/></marker></defs>
+<rect width="1000" height="800" fill="#ffffff"/>
+<text x="40.0" y="44.0" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="700" fill="#222222" text-anchor="start">Parts of the violin and the bow hold</text>
+<text x="40.0" y="70.0" font-family="Georgia, 'Times New Roman', serif" font-size="15.5" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">The names teachers use, and where each finger of the right hand sits on the bow.</text>
+<text x="250.0" y="112.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#222222" text-anchor="middle">The violin (front)</text>
+<path d="M250.0,354.3 C280.4,354.3 316.5,365.7 326.0,394.2 C333.6,417.0 333.6,449.3 324.1,466.4 L329.8,475.9 C310.8,481.6 302.2,496.8 302.2,523.4 C302.2,550.0 310.8,563.3 331.7,570.9 C345.0,582.3 351.6,603.2 348.8,631.7 C345.0,667.8 308.9,692.5 250.0,692.5 C191.1,692.5 155.0,667.8 151.2,631.7 C148.4,603.2 155.0,582.3 168.3,570.9 C189.2,563.3 197.8,550.0 197.8,523.4 C197.8,496.8 189.2,481.6 170.2,475.9 L175.9,466.4 C166.4,449.3 166.4,417.0 174.0,394.2 C183.5,365.7 219.6,354.3 250.0,354.3 Z" fill="#ecd2ad" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M220.6,506.3 C221.5,534.8 205.3,546.2 207.2,574.7" fill="none" stroke="#222222" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220.6" cy="506.3" r="3.6" fill="#222222" stroke="none" stroke-width="1.5"/>
+<circle cx="207.2" cy="574.7" r="3.6" fill="#222222" stroke="none" stroke-width="1.5"/>
+<line x1="208.9" y1="540.5" x2="218.9" y2="540.5" stroke="#222222" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M279.4,506.3 C278.5,534.8 294.6,546.2 292.8,574.7" fill="none" stroke="#222222" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="279.4" cy="506.3" r="3.6" fill="#222222" stroke="none" stroke-width="1.5"/>
+<circle cx="292.8" cy="574.7" r="3.6" fill="#222222" stroke="none" stroke-width="1.5"/>
+<line x1="281.1" y1="540.5" x2="291.1" y2="540.5" stroke="#222222" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M221.5,627.9 L218.8,626.9 L215.7,626.0 L212.2,625.4 L208.6,624.9 L204.8,624.6 L201.0,624.4 L197.3,624.5 L193.7,624.8 L190.3,625.3 L187.3,626.0 L185.0,626.7 L182.7,627.6 L180.5,628.7 L178.3,629.9 L176.2,631.2 L174.3,632.6 L172.5,634.2 L170.9,635.8 L169.5,637.5 L168.3,639.3 L167.4,641.2 L166.6,643.3 L166.0,645.6 L165.6,648.0 L165.3,650.4 L165.2,652.9 L165.3,655.3 L165.5,657.7 L165.9,660.0 L166.4,662.1 L167.1,664.1 L167.9,666.0 L168.9,668.0 L170.1,669.9 L171.4,671.7 L172.8,673.5 L174.4,675.2 L176.0,676.7 L177.8,678.0 L179.7,679.2 L182.3,680.4 L185.2,681.4 L188.3,682.2 L191.7,682.9 L195.3,683.3 L198.8,683.6 L202.3,683.7 L205.8,683.6 L209.0,683.4 L212.0,683.0 L214.4,682.6 L216.8,682.1 L219.2,681.5 L221.6,680.8 L223.9,680.0 L226.1,679.0 L228.1,677.9 L229.9,676.6 L231.6,675.2 L232.9,673.5 L234.2,671.1 L235.2,668.2 L236.0,665.0 L236.5,661.4 L236.8,657.7 L236.8,654.0 L236.6,650.4 L236.2,646.9 L235.6,643.8 L234.8,641.2 L234.0,639.4 L233.1,637.8 L232.1,636.2 L230.9,634.7 L229.6,633.3 L228.2,632.0 L226.6,630.8 L225.0,629.8 L223.3,628.8 Z" fill="#4a3426" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M229.1,591.8 Q250.0,586.1 270.9,591.8 L260.4,681.1 Q250.0,686.8 239.6,681.1 Z" fill="#2a1810" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="250.0" cy="694.4" r="4" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<polygon points="238.6,230.8 261.4,230.8 269.9,487.3 230.1,487.3" fill="#2a1810" stroke="#222222" stroke-width="1.5"/>
+<rect x="229.1" y="537.6" width="41.8" height="5.7" rx="2" fill="#f3e2c4" stroke="#222222" stroke-width="1.3"/>
+<polygon points="237.7,164.3 262.4,164.3 261.4,230.8 238.6,230.8" fill="#ecd2ad" stroke="#222222" stroke-width="1.5"/>
+<polygon points="244.3,170.0 255.7,170.0 255.7,225.1 244.3,225.1" fill="#6b4a2e"/>
+<ellipse cx="250.0" cy="149.1" rx="18.1" ry="19.0" fill="#ecd2ad" stroke="#222222" stroke-width="1.5"/>
+<path d="M250.0,136.1 A13,13 0 1,1 238.0,153.1 A8,8 0 1,1 254.0,152.1" fill="none" stroke="#222222" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="237.7" y1="177.6" x2="229.7" y2="177.6" stroke="#222222" stroke-width="4" stroke-linecap="round"/>
+<rect x="208.2" y="169.6" width="21.5" height="16.0" rx="6" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="262.4" y1="187.1" x2="270.4" y2="187.1" stroke="#222222" stroke-width="4" stroke-linecap="round"/>
+<rect x="270.4" y="179.1" width="21.4" height="16.0" rx="6" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="237.7" y1="208.0" x2="229.7" y2="208.0" stroke="#222222" stroke-width="4" stroke-linecap="round"/>
+<rect x="208.2" y="200.0" width="21.5" height="16.0" rx="6" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<line x1="262.4" y1="217.5" x2="270.4" y2="217.5" stroke="#222222" stroke-width="4" stroke-linecap="round"/>
+<rect x="270.4" y="209.5" width="21.4" height="16.0" rx="6" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<rect x="238.6" y="228.9" width="22.8" height="4.0" rx="1" fill="#f2e6cf" stroke="#222222" stroke-width="1"/>
+<polyline points="245.7,211.8 242.9,230.8 234.3,537.6 238.6,593.7" fill="none" stroke="#b9b9b9" stroke-width="1.3"/>
+<polyline points="248.6,211.8 247.6,230.8 244.8,537.6 246.2,593.7" fill="none" stroke="#b9b9b9" stroke-width="1.3"/>
+<polyline points="251.4,211.8 252.4,230.8 255.2,537.6 253.8,593.7" fill="none" stroke="#b9b9b9" stroke-width="1.3"/>
+<polyline points="254.3,211.8 257.1,230.8 265.7,537.6 261.4,593.7" fill="none" stroke="#b9b9b9" stroke-width="1.3"/>
+<circle cx="261.4" cy="603.2" r="4.2" fill="#c8c8c8" stroke="#222222" stroke-width="1.1"/>
+<text x="150.0" y="143.4" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">scroll</text>
+<line x1="156.0" y1="138.4" x2="236.7" y2="147.2" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="236.7" cy="147.2" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="150.0" y="185.5" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">pegs</text>
+<text x="150.0" y="203.5" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="end">4, one per string</text>
+<line x1="156.0" y1="180.5" x2="212.0" y2="177.6" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="212.0" cy="177.6" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="358.0" y="207.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">peg box</text>
+<line x1="352.0" y1="202.3" x2="261.4" y2="202.3" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="261.4" cy="202.3" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="150.0" y="248.2" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">nut</text>
+<line x1="156.0" y1="243.2" x2="238.6" y2="230.8" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="238.6" cy="230.8" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="150.0" y="316.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">fingerboard</text>
+<text x="150.0" y="334.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="end">where you press</text>
+<line x1="156.0" y1="311.3" x2="235.8" y2="316.3" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="235.8" cy="316.3" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="150.0" y="411.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">upper bout</text>
+<line x1="156.0" y1="406.3" x2="172.1" y2="411.3" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="172.1" cy="411.3" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="150.0" y="525.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">f-hole</text>
+<text x="150.0" y="543.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="end">lets sound out</text>
+<line x1="156.0" y1="520.3" x2="213.9" y2="534.8" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="213.9" cy="534.8" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="150.0" y="649.8" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">chinrest</text>
+<line x1="156.0" y1="644.8" x2="191.1" y2="656.4" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="191.1" cy="656.4" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="358.0" y="297.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">strings</text>
+<text x="358.0" y="315.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">G D A E, left to right</text>
+<text x="358.0" y="333.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">(low to high)</text>
+<line x1="352.0" y1="292.3" x2="254.3" y2="297.3" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="254.3" cy="297.3" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="358.0" y="506.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">bridge</text>
+<text x="358.0" y="524.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">holds the strings</text>
+<text x="358.0" y="542.3" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">off the body</text>
+<line x1="352.0" y1="501.3" x2="269.9" y2="540.5" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="269.9" cy="540.5" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="358.0" y="591.8" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">fine tuner</text>
+<text x="358.0" y="609.8" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">E string</text>
+<line x1="352.0" y1="586.8" x2="263.3" y2="603.2" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="263.3" cy="603.2" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="358.0" y="647.3" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">tailpiece</text>
+<line x1="352.0" y1="642.3" x2="257.6" y2="644.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="257.6" cy="644.0" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="358.0" y="689.2" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">lower bout</text>
+<line x1="352.0" y1="684.2" x2="343.1" y2="650.7" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<circle cx="343.1" cy="650.7" r="2.6" fill="#777777" stroke="none" stroke-width="1.5"/>
+<text x="240.0" y="742.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle" font-style="italic">Inside, not visible: soundpost and bass bar (don't touch).</text>
+<text x="240.0" y="760.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle" font-style="italic">The shoulder rest clips onto the back.</text>
+<line x1="505.0" y1="100.0" x2="505.0" y2="770.0" stroke="#e6e6e6" stroke-width="1.2" stroke-linecap="round"/>
+<text x="745.0" y="112.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#222222" text-anchor="middle">The bow</text>
+<rect x="612.0" y="196.0" width="332.0" height="6.0" rx="2" fill="#efe9da" stroke="#b8ae95" stroke-width="1"/>
+<path d="M546,172 Q748,194 945,170" fill="none" stroke="#8a4b1f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="939,167 955,164 955,202 945,202" fill="#f4f1ea" stroke="#222222" stroke-width="1.2"/>
+<rect x="536.0" y="166.0" width="12.0" height="12.0" rx="2" fill="#d0d0d0" stroke="#222222" stroke-width="1"/>
+<rect x="612.0" y="167.5" width="12.0" height="9.0" rx="2" fill="#5a3a22" stroke="none" stroke-width="0"/>
+<rect x="624.0" y="168.5" width="50.0" height="8.0" rx="2" fill="#cfcfcf" stroke="#8d8d8d" stroke-width="0.8"/>
+<rect x="566.0" y="174.0" width="46.0" height="30.0" rx="5" fill="#2a1810" stroke="#222222" stroke-width="1.2"/>
+<circle cx="586.0" cy="189.0" r="4.5" fill="#f2efe6" stroke="none" stroke-width="1.5"/>
+<line x1="747.5" y1="184.5" x2="747.5" y2="195.0" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="741.5" y1="184.5" x2="753.5" y2="184.5" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="741.5" y1="195.0" x2="753.5" y2="195.0" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round"/>
+<text x="538.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">screw</text>
+<text x="538.0" y="134.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start"></text>
+<line x1="542.0" y1="154.0" x2="542.0" y2="164.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="640.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="start">grip / wrap</text>
+<line x1="650.0" y1="154.0" x2="650.0" y2="166.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="800.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="middle">stick</text>
+<line x1="800.0" y1="154.0" x2="800.0" y2="178.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="955.0" y="150.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="end">tip (point)</text>
+<line x1="949.0" y1="154.0" x2="949.0" y2="162.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="589.0" y="234.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="middle">frog</text>
+<line x1="589.0" y1="219.0" x2="589.0" y2="206.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="680.0" y="234.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#222222" text-anchor="middle">hair (rosined)</text>
+<line x1="680.0" y1="219.0" x2="680.0" y2="203.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="868.0" y="234.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#c54a2e" text-anchor="middle">pencil-width gap</text>
+<text x="868.0" y="252.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#c54a2e" text-anchor="middle">at the midpoint, hair tight</text>
+<line x1="820.0" y1="222.0" x2="749.5" y2="196.0" stroke="#c54a2e" stroke-width="1.1" stroke-linecap="round"/>
+<text x="745.0" y="318.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="700" fill="#222222" text-anchor="middle">Bow hold: close-up of the frog end</text>
+<rect x="742.0" y="468.0" width="213.0" height="14.0" rx="3" fill="#efe9da" stroke="#b8ae95" stroke-width="1.2"/>
+<rect x="548.0" y="401.0" width="407.0" height="18.0" rx="4" fill="#8a4b1f" stroke="none" stroke-width="0"/>
+<rect x="532.0" y="399.0" width="26.0" height="22.0" rx="4" fill="#d0d0d0" stroke="#222222" stroke-width="1.2"/>
+<line x1="538.0" y1="401.0" x2="538.0" y2="419.0" stroke="#8d8d8d" stroke-width="1" stroke-linecap="round"/>
+<line x1="544.0" y1="401.0" x2="544.0" y2="419.0" stroke="#8d8d8d" stroke-width="1" stroke-linecap="round"/>
+<line x1="550.0" y1="401.0" x2="550.0" y2="419.0" stroke="#8d8d8d" stroke-width="1" stroke-linecap="round"/>
+<rect x="742.0" y="400.0" width="30.0" height="20.0" rx="3" fill="#5a3a22" stroke="none" stroke-width="0"/>
+<rect x="772.0" y="401.0" width="120.0" height="18.0" rx="3" fill="#d6d6d6" stroke="#8d8d8d" stroke-width="1"/>
+<line x1="778.0" y1="402.0" x2="775.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="785.0" y1="402.0" x2="782.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="792.0" y1="402.0" x2="789.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="799.0" y1="402.0" x2="796.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="806.0" y1="402.0" x2="803.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="813.0" y1="402.0" x2="810.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="820.0" y1="402.0" x2="817.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="827.0" y1="402.0" x2="824.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="834.0" y1="402.0" x2="831.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="841.0" y1="402.0" x2="838.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="848.0" y1="402.0" x2="845.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="855.0" y1="402.0" x2="852.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="862.0" y1="402.0" x2="859.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="869.0" y1="402.0" x2="866.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="876.0" y1="402.0" x2="873.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<line x1="883.0" y1="402.0" x2="880.0" y2="418.0" stroke="#a9a9a9" stroke-width="1" stroke-linecap="round"/>
+<path d="M572,419 L742,419 L742,482 L612,482 Q572,482 572,450 Z" fill="#2a1810" stroke="#222222" stroke-width="1.4"/>
+<circle cx="650.0" cy="450.0" r="10" fill="#f2efe6" stroke="none" stroke-width="1.5"/>
+<rect x="730.0" y="454.0" width="12.0" height="28.0" rx="2" fill="#cfcfcf" stroke="#222222" stroke-width="1"/>
+<circle cx="592.0" cy="390.0" r="9" fill="#c54a2e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="696.0" cy="442.0" r="9" fill="#c54a2e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="740.0" cy="390.0" r="9" fill="#c54a2e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="752.0" cy="427.0" r="9" fill="#c54a2e" stroke="#ffffff" stroke-width="2"/>
+<circle cx="848.0" cy="390.0" r="9" fill="#c54a2e" stroke="#ffffff" stroke-width="2"/>
+<text x="532.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="start">Pinky</text>
+<text x="532.0" y="356.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">curved, on top,</text>
+<text x="532.0" y="374.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">near the screw</text>
+<line x1="592.0" y1="380.0" x2="592.0" y2="380.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="662.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="start">Middle</text>
+<text x="662.0" y="356.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">opposite the thumb,</text>
+<text x="662.0" y="374.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">at the ferrule</text>
+<line x1="740.0" y1="380.0" x2="740.0" y2="380.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="820.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="start">Index</text>
+<text x="820.0" y="356.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">a little further</text>
+<text x="820.0" y="374.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="start">toward the tip</text>
+<line x1="848.0" y1="380.0" x2="848.0" y2="380.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="640.0" y="522.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">Ring</text>
+<text x="640.0" y="540.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">on the side of the frog</text>
+<line x1="655.0" y1="504.0" x2="696.0" y2="452.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<text x="846.0" y="522.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">Thumb (bent)</text>
+<text x="846.0" y="540.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">in the notch between</text>
+<text x="846.0" y="558.0" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#666666" text-anchor="middle">the frog and the wrap</text>
+<line x1="830.0" y1="504.0" x2="756.0" y2="436.0" stroke="#777777" stroke-width="1.1" stroke-linecap="round"/>
+<rect x="532.0" y="614.0" width="424.0" height="112.0" rx="8" fill="#fbfaf7" stroke="#e3ddd0" stroke-width="1.2"/>
+<text x="548.0" y="640.0" font-family="Georgia, 'Times New Roman', serif" font-size="15.5" font-weight="700" fill="#222222" text-anchor="start">Hold it lightly.</text>
+<text x="548.0" y="662.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#222222" text-anchor="start">All fingers curved, never locked straight.</text>
+<text x="548.0" y="684.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#222222" text-anchor="start">Practise the hold on a pencil first.</text>
+<text x="548.0" y="706.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#222222" text-anchor="start">Loosen the hair after every session.</text>
+<text x="40.0" y="782.0" font-family="Georgia, 'Times New Roman', serif" font-size="13.5" font-weight="400" fill="#999999" text-anchor="start" font-style="italic">Based on Chapters 3 and 5 of this post. Drawing not to scale.</text>
+</svg>

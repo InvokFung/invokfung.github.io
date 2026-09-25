@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img" aria-label="Test run timeline with one shared MongoDB test container, compared with a container per test, and three ways to isolate tests">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="700" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="698.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One container per test run, a clean state per test</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Testcontainers starts a real mongo:8 once, every test uses it, and data is reset between tests.</text>
+<circle cx="50" cy="109" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M46.0,109.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="68.0" y="114.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">RECOMMENDED — one container for the whole run (scope: session)</text>
+<rect x="40.0" y="132.0" width="150.0" height="40.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="115.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">start mongo:8</text>
+<rect x="198.0" y="132.0" width="84.0" height="40.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="240.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">test 1</text>
+<rect x="288.0" y="132.0" width="62.0" height="40.0" rx="7" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.8"/>
+<text x="319.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">reset</text>
+<rect x="356.0" y="132.0" width="84.0" height="40.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="398.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">test 2</text>
+<rect x="446.0" y="132.0" width="62.0" height="40.0" rx="7" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.8"/>
+<text x="477.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">reset</text>
+<rect x="514.0" y="132.0" width="84.0" height="40.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="556.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">test 3</text>
+<rect x="604.0" y="132.0" width="62.0" height="40.0" rx="7" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.8"/>
+<text x="635.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">reset</text>
+<text x="686.0" y="158.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#6b7280" text-anchor="middle">…</text>
+<rect x="706.0" y="132.0" width="116.0" height="40.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="764.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">stop</text>
+<text x="115.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">globalSetup</text>
+<text x="764.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">globalTeardown</text>
+<text x="448.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">afterEach: reset the data</text>
+<rect x="40" y="212" width="782" height="10" rx="5" fill="#99f6e4"/>
+<text x="834.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="start">container lifetime</text>
+<text x="40.0" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Start-up: 5–15 s the first time (image pull), then 2–5 s per restart — paid once per run.</text>
+<circle cx="50" cy="291" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M46.6,287.6 L53.4,294.4 M53.4,287.6 L46.6,294.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="68.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">AVOID — a new container for every test</text>
+<rect x="40.0" y="314.0" width="70.0" height="36.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="75.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">start</text>
+<rect x="116.0" y="314.0" width="84.0" height="36.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="158.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">test 1</text>
+<rect x="206.0" y="314.0" width="56.0" height="36.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="234.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">stop</text>
+<rect x="270.0" y="314.0" width="70.0" height="36.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="305.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">start</text>
+<rect x="346.0" y="314.0" width="84.0" height="36.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="388.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">test 2</text>
+<rect x="436.0" y="314.0" width="56.0" height="36.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="464.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">stop</text>
+<rect x="500.0" y="314.0" width="70.0" height="36.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="535.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">start</text>
+<rect x="576.0" y="314.0" width="84.0" height="36.0" rx="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="618.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">test 3</text>
+<rect x="666.0" y="314.0" width="56.0" height="36.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="694.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">stop</text>
+<text x="746.0" y="338.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#6b7280" text-anchor="middle">…</text>
+<text x="40.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Each test pays the 2–5 s start-up again, so the suite gets too slow.</text>
+<text x="40.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">RESETTING BETWEEN TESTS — 3 STRATEGIES (CHAPTER 5)</text>
+<rect x="40.0" y="434.0" width="296.0" height="164.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="56.0" y="462.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">A · Empty every collection</text>
+<text x="56.0" y="490.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">deleteMany({}) per collection</text>
+<text x="56.0" y="524.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Simple.</text>
+<text x="56.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Slow on big setups.</text>
+<text x="56.0" y="566.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Best for small suites.</text>
+<rect x="352.0" y="434.0" width="296.0" height="164.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="368.0" y="462.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">B · New database per test</text>
+<text x="368.0" y="490.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">db(`test-${randomUUID()}`)</text>
+<text x="368.0" y="510.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">dropDatabase() after</text>
+<text x="368.0" y="544.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Each test owns its database,</text>
+<text x="368.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">so tests can run in parallel.</text>
+<text x="368.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Adds ~50 ms per test.</text>
+<rect x="664.0" y="434.0" width="296.0" height="164.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="680.0" y="462.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">C · Transaction per test</text>
+<text x="680.0" y="490.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">abortTransaction() after</text>
+<text x="680.0" y="524.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Fast: no actual writes.</text>
+<text x="680.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Every call must pass { session }.</text>
+<text x="680.0" y="566.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Can't test code that uses transactions.</text>
+<rect x="40.0" y="616.0" width="920.0" height="40.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">The post's pick: A for small suites; B with parallel runners for medium to large suites.</text>
+<text x="40.0" y="682.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post, Chapter 2 (Testcontainers, Performance) and Chapter 5. Blocks are not to scale.</text>
+</svg>

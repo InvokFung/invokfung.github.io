@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 632" width="1000" height="632" role="img" aria-label="One zone-less frontmatter date read by four readers becomes two different instants, 8 hours apart">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="632" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="630.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Same text, different instants</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The frontmatter has no zone. The author means 15:00 Hong Kong time. Four readers turn it into an instant.</text>
+<text x="40.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">In every post</text>
+<rect x="40.0" y="229.0" width="232.0" height="43.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="253.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#e2e8f0" text-anchor="start">date: 2026-05-21 15:00:00</text>
+<text x="40.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">No zone is written.</text>
+<rect x="334.0" y="116.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<rect x="334" y="116.0" width="6" height="58" rx="3" fill="#0d9488"/>
+<text x="354.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Port loader (the Next.js port)</text>
+<text x="354.0" y="161.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Wall clock read as HKT (+8)</text>
+<path d="M278,250.0 C302.0,250.0 302.0,145.0 326,145.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<line x1="672.0" y1="145.0" x2="718.0" y2="145.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+<path d="M710,139.0 L719,145.0 L710,151.0" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="334.0" y="186.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<rect x="334" y="186.0" width="6" height="58" rx="3" fill="#0d9488"/>
+<text x="354.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Hexo 6, laptop in Hong Kong</text>
+<text x="354.0" y="231.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Wall clock in the machine's zone</text>
+<path d="M278,250.0 C302.0,250.0 302.0,215.0 326,215.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<line x1="672.0" y1="215.0" x2="718.0" y2="215.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+<path d="M710,209.0 L719,215.0 L710,221.0" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="334.0" y="256.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<rect x="334" y="256.0" width="6" height="58" rx="3" fill="#dc4c3a"/>
+<text x="354.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">js-yaml alone (via gray-matter)</text>
+<text x="354.0" y="301.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">YAML 1.1: no zone means UTC</text>
+<path d="M278,250.0 C302.0,250.0 302.0,285.0 326,285.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<line x1="672.0" y1="285.0" x2="718.0" y2="285.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round"/>
+<path d="M710,279.0 L719,285.0 L710,291.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="334.0" y="326.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<rect x="334" y="326.0" width="6" height="58" rx="3" fill="#dc4c3a"/>
+<text x="354.0" y="350.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Hexo 6, GitHub runner in UTC</text>
+<text x="354.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Wall clock in the machine's zone</text>
+<path d="M278,250.0 C302.0,250.0 302.0,355.0 326,355.0" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<line x1="672.0" y1="355.0" x2="718.0" y2="355.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round"/>
+<path d="M710,349.0 L719,355.0 L710,361.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="726.0" y="116.0" width="234.0" height="128.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="742.0" y="146.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">2026-05-21T07:00:00Z</text>
+<text x="742.0" y="186.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="700" fill="#0d9488" text-anchor="start">15:00</text>
+<text x="822.0" y="186.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">in Hong Kong</text>
+<text x="742.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">the time the author meant</text>
+<rect x="726.0" y="256.0" width="234.0" height="128.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="742.0" y="286.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">2026-05-21T15:00:00Z</text>
+<text x="742.0" y="326.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="700" fill="#dc4c3a" text-anchor="start">23:00</text>
+<text x="822.0" y="326.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">in Hong Kong</text>
+<text x="742.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">8 hours later than meant</text>
+<line x1="40.0" y1="402.0" x2="960.0" y2="402.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">On one timeline (21 May 2026)</text>
+<line x1="214.0" y1="478.0" x2="940.0" y2="478.0" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+<line x1="250.3" y1="473.0" x2="250.3" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="250.3" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">06:00</text>
+<text x="250.3" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">14:00</text>
+<line x1="322.9" y1="473.0" x2="322.9" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="395.5" y1="473.0" x2="395.5" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="395.5" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">08:00</text>
+<text x="395.5" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">16:00</text>
+<line x1="468.1" y1="473.0" x2="468.1" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="540.7" y1="473.0" x2="540.7" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="540.7" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">10:00</text>
+<text x="540.7" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">18:00</text>
+<line x1="613.3" y1="473.0" x2="613.3" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="685.9" y1="473.0" x2="685.9" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="685.9" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">12:00</text>
+<text x="685.9" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">20:00</text>
+<line x1="758.5" y1="473.0" x2="758.5" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="831.1" y1="473.0" x2="831.1" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="831.1" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">14:00</text>
+<text x="831.1" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">22:00</text>
+<line x1="903.7" y1="473.0" x2="903.7" y2="483.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="40.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">UTC</text>
+<text x="40.0" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">Hong Kong (+8)</text>
+<circle cx="322.9" cy="478" r="7" fill="#0d9488" stroke="#ffffff" stroke-width="2"/>
+<text x="322.9" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">07:00Z</text>
+<text x="322.9" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">15:00 HKT</text>
+<circle cx="903.7" cy="478" r="7" fill="#dc4c3a" stroke="#ffffff" stroke-width="2"/>
+<text x="903.7" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">15:00Z</text>
+<text x="903.7" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">23:00 HKT</text>
+<line x1="332.9" y1="540.0" x2="893.7" y2="540.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<rect x="573.3" y="529" width="80" height="22" rx="11" fill="#ffffff"/>
+<text x="613.3" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">8 hours</text>
+<text x="40.0" y="582.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">All four keep the written calendar date, so the post URL is /2026/05/21/ every time. Only the instant moves.</text>
+<text x="40.0" y="614.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Dev Essentials 02, Chapter 9 (gray-matter 4.0.3 with js-yaml 3.14; Hexo 6 with timezone: '').</text>
+</svg>

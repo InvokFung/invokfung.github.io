@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 668" width="1000" height="668" role="img" aria-label="Sharded cluster: a query with the shard key goes to one shard; a query without it goes to every shard">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="668" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="666.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Sharding: targeted query vs scatter-gather</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">mongos routes each query by the shard key. Shard key here: { user_id: 1 } on shop.orders (Chapter 8 example).</text>
+<defs><marker id="ahT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker><marker id="ahC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#dc4c3a"/></marker></defs>
+<text x="40.0" y="120.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Targeted: filter has the shard key</text>
+<rect x="40.0" y="134.0" width="440.0" height="42.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="158.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">db.orders.find({ user_id: 1, status: "paid" })</text>
+<rect x="80.0" y="206.0" width="160.0" height="52.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="160.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">mongos</text>
+<text x="160.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">router</text>
+<line x1="160.0" y1="178.0" x2="160.0" y2="202.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="302.0" y="206.0" width="178.0" height="52.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="391.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">config servers</text>
+<text x="391.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">hold the chunk map</text>
+<line x1="244.0" y1="232.0" x2="298.0" y2="232.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 4"/>
+<g>
+<rect x="40.0" y="330.0" width="130.0" height="108.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="52.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Shard 1</text>
+<circle cx="130" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="142" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="154" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="52.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">replica set</text>
+<rect x="52.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="77.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">chunk</text>
+<rect x="108.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="133.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+</g>
+<g opacity="0.38">
+<rect x="195.0" y="330.0" width="130.0" height="108.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="207.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Shard 2</text>
+<circle cx="285" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="297" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="309" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="207.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">replica set</text>
+<rect x="207.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="232.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+<rect x="263.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="288.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+</g>
+<g opacity="0.38">
+<rect x="350.0" y="330.0" width="130.0" height="108.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="362.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Shard N</text>
+<circle cx="440" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="452" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="464" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="362.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">replica set</text>
+<rect x="362.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="387.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+<rect x="418.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="443.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+</g>
+<line x1="160.0" y1="262.0" x2="105.0" y2="326.0" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ahT)" marker-start="url(#ahT)"/>
+<text x="172.0" y="300.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">only the shard whose chunk</text>
+<text x="172.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">holds user_id 1</text>
+<circle cx="50" cy="470" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M46.0,470.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="66.0" y="475.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">1 shard visited.</text>
+<text x="66.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Hot-path queries should look like this.</text>
+<text x="520.0" y="120.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">Scatter-gather: no shard key in the filter</text>
+<rect x="520.0" y="134.0" width="440.0" height="42.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="534.0" y="158.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">db.orders.find({ status: "paid" })</text>
+<rect x="560.0" y="206.0" width="160.0" height="52.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="640.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">mongos</text>
+<text x="640.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">router</text>
+<line x1="640.0" y1="178.0" x2="640.0" y2="202.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="782.0" y="206.0" width="178.0" height="52.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="871.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">config servers</text>
+<text x="871.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">hold the chunk map</text>
+<line x1="724.0" y1="232.0" x2="778.0" y2="232.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 4"/>
+<g>
+<rect x="520.0" y="330.0" width="130.0" height="108.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="532.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Shard 1</text>
+<circle cx="610" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="622" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="634" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="532.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">replica set</text>
+<rect x="532.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="557.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+<rect x="588.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="613.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+</g>
+<g>
+<rect x="675.0" y="330.0" width="130.0" height="108.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="687.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Shard 2</text>
+<circle cx="765" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="777" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="789" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="687.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">replica set</text>
+<rect x="687.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="712.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+<rect x="743.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="768.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+</g>
+<g>
+<rect x="830.0" y="330.0" width="130.0" height="108.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="842.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Shard N</text>
+<circle cx="920" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="932" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<circle cx="944" cy="349" r="4.5" fill="#ffffff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="842.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">replica set</text>
+<rect x="842.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="867.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+<rect x="898.0" y="388.0" width="50.0" height="36.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+<text x="923.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">chunk</text>
+</g>
+<line x1="640.0" y1="262.0" x2="585.0" y2="326.0" stroke="#dc4c3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ahC)" marker-start="url(#ahC)"/>
+<line x1="640.0" y1="262.0" x2="740.0" y2="326.0" stroke="#dc4c3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ahC)" marker-start="url(#ahC)"/>
+<line x1="640.0" y1="262.0" x2="895.0" y2="326.0" stroke="#dc4c3a" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ahC)" marker-start="url(#ahC)"/>
+<text x="520.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">scatter</text>
+<text x="520.0" y="303.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">+ gather</text>
+<circle cx="530" cy="470" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M526.6,466.6 L533.4,473.4 M533.4,466.6 L526.6,473.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="546.0" y="475.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Every shard visited; mongos merges the results.</text>
+<text x="546.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Adding a shard makes this slower, not faster.</text>
+<line x1="500.0" y1="112.0" x2="500.0" y2="500.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="40.0" y="526.0" width="296.0" height="96.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="56.0" y="554.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">Shard key</text>
+<text x="56.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">{ user_id: 1 }: its value decides</text>
+<text x="56.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">which shard a document lives on.</text>
+<rect x="352.0" y="526.0" width="296.0" height="96.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="368.0" y="554.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">Chunk</text>
+<text x="368.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A range of shard-key values.</text>
+<text x="368.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">128 MB by default; on one shard.</text>
+<rect x="664.0" y="526.0" width="296.0" height="96.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="680.0" y="554.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">Balancer</text>
+<text x="680.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Moves chunks between shards</text>
+<text x="680.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">to keep them roughly even.</text>
+<text x="40.0" y="650.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 1, 5 and 8. Chunk contents are illustrative; only the routing rule is shown.</text>
+</svg>

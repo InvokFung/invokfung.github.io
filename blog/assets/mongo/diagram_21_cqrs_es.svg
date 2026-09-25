@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 694" width="1000" height="694" role="img" aria-label="CQRS plus event sourcing on MongoDB: a command service appends versioned events, projection workers update read views, and a query service reads only the views">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="694" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="692.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">CQRS + Event Sourcing on MongoDB</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Commands append events. Workers turn events into read views. Queries read only the views.</text>
+<text x="40.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">WRITE SIDE</text>
+<text x="320.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">EVENT STORE · SOURCE OF TRUTH</text>
+<text x="700.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="start">READ SIDE</text>
+<rect x="40.0" y="140.0" width="240.0" height="396.0" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="56.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#0d9488" text-anchor="start">Command service</text>
+<text x="56.0" y="191.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">POST /commands</text>
+<circle cx="68.0" cy="231.0" r="12" fill="#0d9488"/>
+<text x="68.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="88.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Load the order's events,</text>
+<text x="88.0" y="255.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">sorted by version</text>
+<circle cx="68.0" cy="297.0" r="12" fill="#0d9488"/>
+<text x="68.0" y="302.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="88.0" y="302.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Fold them with apply()</text>
+<text x="88.0" y="321.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">→ current state</text>
+<circle cx="68.0" cy="363.0" r="12" fill="#0d9488"/>
+<text x="68.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="88.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Validate the command:</text>
+<text x="88.0" y="387.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">status must be 'paid'</text>
+<circle cx="68.0" cy="429.0" r="12" fill="#0d9488"/>
+<text x="68.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="88.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Append the next version</text>
+<text x="88.0" y="453.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">(last version + 1 = v8)</text>
+<text x="56.0" y="516.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">e.g. shipOrder(orderId, cmd)</text>
+<rect x="320.0" y="140.0" width="320.0" height="396.0" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="336.0" y="170.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16.5" font-weight="700" fill="#d97706" text-anchor="start">events</text>
+<text x="404.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">append-only</text>
+<text x="336.0" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">one order (o123), oldest first</text>
+<text x="336.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">VERSION · EVENT_TYPE</text>
+<text x="624.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="end">STATE AFTER apply()</text>
+<rect x="334.0" y="228.0" width="292.0" height="38.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+<rect x="342.0" y="236.0" width="34.0" height="22.0" rx="11" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="359.0" y="251.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">v1</text>
+<text x="386.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">order.created</text>
+<rect x="547.6" y="236.0" width="68.4" height="22.0" rx="11" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+<text x="581.8" y="251.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">pending</text>
+<rect x="334.0" y="276.0" width="292.0" height="38.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+<rect x="342.0" y="284.0" width="34.0" height="22.0" rx="11" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="359.0" y="299.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">v2</text>
+<text x="386.0" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">order.paid</text>
+<rect x="569.2" y="284.0" width="46.8" height="22.0" rx="11" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+<text x="592.6" y="299.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">paid</text>
+<text x="360.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#6b7280" text-anchor="middle">⋮</text>
+<rect x="334.0" y="346.0" width="292.0" height="38.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.3"/>
+<rect x="342.0" y="354.0" width="34.0" height="22.0" rx="11" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="359.0" y="369.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">v7</text>
+<text x="386.0" y="370.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">order.shipped</text>
+<rect x="547.6" y="354.0" width="68.4" height="22.0" rx="11" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+<text x="581.8" y="369.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">shipped</text>
+<rect x="334.0" y="400.0" width="292.0" height="122.0" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="348.0" y="426.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">unique index</text>
+<text x="348.0" y="448.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">(aggregate, aggregate_id, version)</text>
+<text x="348.0" y="474.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Two handlers append v8: one wins,</text>
+<text x="348.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the other gets E11000, reloads</text>
+<text x="348.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the aggregate and retries.</text>
+<rect x="700.0" y="140.0" width="260.0" height="118.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="716.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#7c3aed" text-anchor="start">Projection workers</text>
+<text x="716.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Each one tails the change</text>
+<text x="716.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">stream and updates one view.</text>
+<text x="716.0" y="241.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Reads are eventually consistent.</text>
+<line x1="830.0" y1="262.0" x2="830.0" y2="282.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="700.0" y="286.0" width="260.0" height="144.0" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="716.0" y="314.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#7c3aed" text-anchor="start">Read views</text>
+<text x="716.0" y="342.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">orders_view</text>
+<text x="716.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">e.g. o123: shipped, ABC123</text>
+<text x="716.0" y="388.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">user_orders_view</text>
+<text x="716.0" y="412.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">daily_revenue</text>
+<line x1="830.0" y1="452.0" x2="830.0" y2="434.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="700.0" y="456.0" width="260.0" height="80.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="716.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Query service</text>
+<text x="716.0" y="504.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">GET /queries</text>
+<text x="716.0" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">reads the views, never the log</text>
+<line x1="284.0" y1="430.0" x2="316.0" y2="430.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="300.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">insert</text>
+<line x1="644.0" y1="200.0" x2="696.0" y2="200.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="670.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">change</text>
+<text x="670.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">stream</text>
+<rect x="40.0" y="556.0" width="450.0" height="92.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">Snapshots</text>
+<text x="58.0" y="608.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Every N events (e.g. 50), save the state.</text>
+<text x="58.0" y="628.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Load = snapshot + events with version &gt; snapshot.version.</text>
+<rect x="510.0" y="556.0" width="450.0" height="92.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="528.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Rebuild a view</text>
+<text x="528.0" y="608.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Drop the view and replay every event from the start.</text>
+<text x="528.0" y="628.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Never mutate old events: the log is the source of truth.</text>
+<text x="40.0" y="676.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Chapters 4–10 of this post. Versions v1 and v2 of o123 are an example; the post shows order.shipped at v7.</text>
+</svg>

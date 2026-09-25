@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 664" width="1000" height="664" role="img" aria-label="How data flows through a vertex shader and a fragment shader, and three ways to write shader code in Three.js">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="664" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="662.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How data flows through a shader</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The vertex shader runs once per vertex, the fragment shader once per pixel. Names from the post's ShaderMaterial example.</text>
+<rect x="40.0" y="118.0" width="158.0" height="150.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="119.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="middle">Attributes</text>
+<text x="119.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">per vertex,</text>
+<text x="119.0" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">from BufferGeometry</text>
+<text x="119.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">position</text>
+<text x="119.0" y="241.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">uv</text>
+<rect x="230.0" y="118.0" width="178.0" height="150.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.2"/>
+<text x="319.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="middle">Vertex shader</text>
+<text x="319.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">runs once</text>
+<text x="319.0" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">per vertex</text>
+<text x="319.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">out: gl_Position</text>
+<text x="319.0" y="241.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">(clip space)</text>
+<rect x="440.0" y="118.0" width="158.0" height="150.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="519.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="middle">Varyings</text>
+<text x="519.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">interpolated</text>
+<text x="519.0" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">to each fragment</text>
+<text x="519.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">vUv</text>
+<rect x="630.0" y="118.0" width="178.0" height="150.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.2"/>
+<text x="719.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="middle">Fragment shader</text>
+<text x="719.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">runs once</text>
+<text x="719.0" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">per pixel</text>
+<text x="719.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">out: gl_FragColor</text>
+<rect x="840.0" y="118.0" width="120.0" height="150.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="1.6"/>
+<text x="900.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">Pixel colour</text>
+<text x="900.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">the result</text>
+<line x1="202.0" y1="193.0" x2="226.0" y2="193.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="412.0" y1="193.0" x2="436.0" y2="193.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="602.0" y1="193.0" x2="626.0" y2="193.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="812.0" y1="193.0" x2="836.0" y2="193.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="230.0" y="320.0" width="578.0" height="92.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="248.0" y="347.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Uniforms</text>
+<text x="338.0" y="347.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">per draw call, read by both shaders</text>
+<text x="248.0" y="372.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">uTime, uColor</text>
+<text x="520.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">yours, set from JavaScript</text>
+<text x="248.0" y="394.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">projectionMatrix, modelViewMatrix</text>
+<text x="520.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">added by ShaderMaterial</text>
+<line x1="319.0" y1="316.0" x2="319.0" y2="274.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="719.0" y1="316.0" x2="719.0" y2="274.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="867.0" y="202.0" width="15.0" height="15.0" rx="2" fill="#bfdbfe" stroke="#bfdbfe" stroke-width="0.5"/>
+<rect x="884.0" y="202.0" width="15.0" height="15.0" rx="2" fill="#93c5fd" stroke="#93c5fd" stroke-width="0.5"/>
+<rect x="901.0" y="202.0" width="15.0" height="15.0" rx="2" fill="#60a5fa" stroke="#60a5fa" stroke-width="0.5"/>
+<rect x="918.0" y="202.0" width="15.0" height="15.0" rx="2" fill="#3b82f6" stroke="#3b82f6" stroke-width="0.5"/>
+<rect x="867.0" y="219.0" width="15.0" height="15.0" rx="2" fill="#93c5fd" stroke="#93c5fd" stroke-width="0.5"/>
+<rect x="884.0" y="219.0" width="15.0" height="15.0" rx="2" fill="#60a5fa" stroke="#60a5fa" stroke-width="0.5"/>
+<rect x="901.0" y="219.0" width="15.0" height="15.0" rx="2" fill="#3b82f6" stroke="#3b82f6" stroke-width="0.5"/>
+<rect x="918.0" y="219.0" width="15.0" height="15.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0.5"/>
+<rect x="867.0" y="236.0" width="15.0" height="15.0" rx="2" fill="#60a5fa" stroke="#60a5fa" stroke-width="0.5"/>
+<rect x="884.0" y="236.0" width="15.0" height="15.0" rx="2" fill="#3b82f6" stroke="#3b82f6" stroke-width="0.5"/>
+<rect x="901.0" y="236.0" width="15.0" height="15.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0.5"/>
+<rect x="918.0" y="236.0" width="15.0" height="15.0" rx="2" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="0.5"/>
+<text x="40.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Three ways to write the shader code</text>
+<rect x="40.0" y="462.0" width="293.3" height="150.0" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.6"/>
+<rect x="40.0" y="462" width="5" height="150" rx="2.5" fill="#2563eb"/>
+<text x="60.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">ShaderMaterial</text>
+<text x="60.0" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">GLSL you write by hand</text>
+<text x="60.0" y="542.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Three.js adds the camera matrices</text>
+<text x="60.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">and position, normal, uv for you.</text>
+<text x="60.0" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="start">Pick when: porting existing GLSL</text>
+<rect x="353.3" y="462.0" width="293.3" height="150.0" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.6"/>
+<rect x="353.3" y="462" width="5" height="150" rx="2.5" fill="#7c3aed"/>
+<text x="373.3" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">onBeforeCompile</text>
+<text x="373.3" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">patch a built-in material</text>
+<text x="373.3" y="542.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Insert GLSL at an #include point.</text>
+<text x="373.3" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Keeps PBR, shadows, env maps.</text>
+<text x="373.3" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="start">Pick when: one tweak, keep PBR</text>
+<rect x="666.7" y="462.0" width="293.3" height="150.0" rx="10" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<rect x="666.7" y="462" width="5" height="150" rx="2.5" fill="#0d9488"/>
+<text x="686.7" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">TSL NodeMaterial</text>
+<text x="686.7" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">nodes composed in JavaScript</text>
+<text x="686.7" y="542.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Compiles to GLSL for WebGL2</text>
+<text x="686.7" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">or to WGSL for WebGPU.</text>
+<text x="686.7" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="start">Pick when: new projects, compute</text>
+<text x="40.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Data flow from the post's Chapter 1; recommendations from its Chapter 9 table (GLSL vs TSL).</text>
+</svg>

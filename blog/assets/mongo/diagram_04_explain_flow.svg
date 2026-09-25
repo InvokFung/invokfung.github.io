@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 862" width="1000" height="862" role="img" aria-label="Diagnostic flow for a slow MongoDB query: reproduce, explain with executionStats, check for COLLSCAN, the docs-examined to returned ratio, a SORT stage and the time budget, then confirm in production">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="862" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="860.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Why is this query slow? The explain() flow</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A slow-query investigation rarely takes more than 10 minutes once you know the flow.</text>
+<rect x="40.0" y="108.0" width="380.0" height="50.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="66.0" cy="133.0" r="12" fill="#1f2937"/>
+<text x="66.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="90.0" y="129.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Reproduce</text>
+<text x="90.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Run the exact query in mongosh.</text>
+<line x1="66.0" y1="160.0" x2="66.0" y2="182.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="186.0" width="380.0" height="50.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="66.0" cy="211.0" r="12" fill="#1f2937"/>
+<text x="66.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="90.0" y="207.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Explain</text>
+<text x="90.0" y="226.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">.explain("executionStats")</text>
+<line x1="66.0" y1="238.0" x2="66.0" y2="260.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="264.0" width="380.0" height="50.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="66.0" cy="289.0" r="12" fill="#2563eb"/>
+<text x="66.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="90.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Which winningPlan.stage?</text>
+<line x1="66.0" y1="316.0" x2="66.0" y2="338.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="82.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="start">IXSCAN</text>
+<line x1="422.0" y1="289.0" x2="536.0" y2="289.0" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M528,284.0 L537,289.0 L528,294.0 Z" fill="#dc4c3a"/>
+<rect x="440.6" y="277.0" width="78.8" height="24.0" rx="12" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.4"/>
+<text x="480.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">COLLSCAN</text>
+<rect x="540.0" y="264.0" width="420.0" height="50.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="556.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">No index helped. Add one. Stop.</text>
+<rect x="40.0" y="342.0" width="380.0" height="50.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="66.0" cy="367.0" r="12" fill="#2563eb"/>
+<text x="66.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="90.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">totalDocsExamined / nReturned?</text>
+<line x1="66.0" y1="394.0" x2="66.0" y2="416.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="82.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="start">≈ 1: the index is well-shaped</text>
+<line x1="422.0" y1="367.0" x2="536.0" y2="367.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M528,362.0 L537,367.0 L528,372.0 Z" fill="#d97706"/>
+<rect x="455.8" y="355.0" width="48.4" height="24.0" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="1.4"/>
+<text x="480.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">&gt;&gt; 1</text>
+<rect x="540.0" y="342.0" width="420.0" height="50.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="556.0" y="363.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Index not selective enough: use a wider</text>
+<text x="556.0" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">compound index or a more selective field.</text>
+<rect x="40.0" y="420.0" width="380.0" height="50.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="66.0" cy="445.0" r="12" fill="#2563eb"/>
+<text x="66.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="90.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Is there a SORT stage?</text>
+<line x1="66.0" y1="472.0" x2="66.0" y2="494.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="82.0" y="490.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="start">no</text>
+<line x1="422.0" y1="445.0" x2="536.0" y2="445.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M528,440.0 L537,445.0 L528,450.0 Z" fill="#d97706"/>
+<rect x="459.6" y="433.0" width="40.8" height="24.0" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="1.4"/>
+<text x="480.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">yes</text>
+<rect x="540.0" y="420.0" width="420.0" height="50.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="556.0" y="441.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">The index doesn't deliver the order.</text>
+<text x="556.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Build one that does.</text>
+<rect x="40.0" y="498.0" width="380.0" height="50.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<circle cx="66.0" cy="523.0" r="12" fill="#2563eb"/>
+<text x="66.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="90.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">executionTimeMillis vs your budget?</text>
+<line x1="66.0" y1="550.0" x2="66.0" y2="572.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="82.0" y="568.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="start">under budget: done, then confirm</text>
+<line x1="422.0" y1="523.0" x2="536.0" y2="523.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M528,518.0 L537,523.0 L528,528.0 Z" fill="#d97706"/>
+<rect x="455.8" y="511.0" width="48.4" height="24.0" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="1.4"/>
+<text x="480.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">over</text>
+<rect x="540.0" y="498.0" width="420.0" height="50.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="556.0" y="519.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Try .hint() with alternative indexes;</text>
+<text x="556.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">build them if needed.</text>
+<rect x="40.0" y="576.0" width="380.0" height="50.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="66.0" cy="601.0" r="12" fill="#1f2937"/>
+<text x="66.0" y="606.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<text x="90.0" y="597.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Confirm in production</text>
+<text x="90.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Profiler or Atlas Performance Advisor.</text>
+<line x1="40.0" y1="656.0" x2="960.0" y2="656.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="682.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Step 4 in numbers: docs examined per doc returned</text>
+<text x="40.0" y="702.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Both totalKeysExamined / nReturned and totalDocsExamined / nReturned should be close to 1.</text>
+<rect x="40.0" y="718.0" width="296.0" height="96.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="56.0" y="752.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#0d9488" text-anchor="start">1×</text>
+<text x="96.0" y="742.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">50 examined</text>
+<text x="96.0" y="760.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">50 returned</text>
+<text x="56.0" y="786.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">perfect</text>
+<rect x="352.0" y="718.0" width="296.0" height="96.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="368.0" y="752.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#d97706" text-anchor="start">100×</text>
+<text x="436.0" y="742.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">5,000 examined</text>
+<text x="436.0" y="760.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">50 returned</text>
+<text x="368.0" y="786.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">too many candidates: wider compound</text>
+<text x="368.0" y="804.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">index needed</text>
+<rect x="664.0" y="718.0" width="296.0" height="96.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.4"/>
+<text x="680.0" y="752.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#dc4c3a" text-anchor="start">2,000×</text>
+<text x="776.0" y="742.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">100,000 examined</text>
+<text x="776.0" y="760.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">50 returned</text>
+<text x="680.0" y="786.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">near a collection scan: missing index</text>
+<text x="40.0" y="844.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: MongoDB Course 04, Chapter 9 (flow) and Chapter 2 (ratio examples).</text>
+</svg>

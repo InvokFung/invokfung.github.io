@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 614" width="1000" height="614" role="img" aria-label="Kubernetes operator: one MongoDBCommunity YAML applied with kubectl; the operator creates the StatefulSet, volumes, services, users and runs rs.initiate for a three-member replica set">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="614" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="612.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One YAML in, a running replica set out</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">You describe the replica set once. The operator creates and runs everything else in the namespace.</text>
+<text x="40.0" y="104.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">1 · YOU WRITE</text>
+<rect x="40.0" y="116.0" width="318.0" height="295.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="140.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fcd34d" text-anchor="start">kind: MongoDBCommunity</text>
+<text x="54.0" y="159.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#93c5fd" text-anchor="start">metadata:</text>
+<text x="54.0" y="179.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  name: shop-rs</text>
+<text x="54.0" y="198.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  namespace: mongodb</text>
+<text x="54.0" y="218.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#93c5fd" text-anchor="start">spec:</text>
+<text x="54.0" y="237.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fcd34d" text-anchor="start">  members: 3</text>
+<text x="54.0" y="257.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  type: ReplicaSet</text>
+<text x="54.0" y="276.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  version: "8.0.0"</text>
+<text x="54.0" y="296.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  security:</text>
+<text x="54.0" y="315.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">    authentication:</text>
+<text x="54.0" y="335.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">      modes: ["SCRAM"]</text>
+<text x="54.0" y="354.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  users:</text>
+<text x="54.0" y="374.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">    - name: shopuser</text>
+<text x="54.0" y="393.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  statefulSet: { … }</text>
+<rect x="40.0" y="427.0" width="318.0" height="34.0" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="50.0" y="449.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">kubectl apply -f mongodb-replicaset.yaml</text>
+<text x="400.0" y="104.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">2 · IT WATCHES</text>
+<rect x="400.0" y="196.0" width="164.0" height="176.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="482.0" y="226.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">MongoDB</text>
+<text x="482.0" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">Controllers for</text>
+<text x="482.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">Kubernetes</text>
+<text x="482.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">Operator</text>
+<text x="482.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">installed with Helm;</text>
+<text x="482.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">adds the CRDs, e.g.</text>
+<text x="482.0" y="358.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDBCommunity</text>
+<defs><marker id="m1f2937" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker></defs>
+<path d="M364,284.0 L394,284.0" stroke="#1f2937" stroke-width="2.4" marker-end="url(#m1f2937)"/>
+<text x="604.0" y="104.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">3 · IT CREATES AND RUNS</text>
+<rect x="604" y="116" width="356" height="386" rx="12" fill="#ffffff" stroke="#0d9488" stroke-width="1.8" stroke-dasharray="7 5"/>
+<text x="620.0" y="142.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">namespace: mongodb</text>
+<path d="M570,284.0 L598,284.0" stroke="#1f2937" stroke-width="2.4" marker-end="url(#m1f2937)"/>
+<rect x="618.0" y="158.0" width="328.0" height="214.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="632.0" y="182.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">StatefulSet — 3 members</text>
+<rect x="632.0" y="196.0" width="92.0" height="44.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="678.0" y="216.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">mongod</text>
+<text x="678.0" y="233.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">8.0.0</text>
+<line x1="678.0" y1="240.0" x2="678.0" y2="256.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M648.0,262 L648.0,290 A30,6 0 0 0 708.0,290 L708.0,262" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<ellipse cx="678.0" cy="262" rx="30" ry="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="678.0" y="284.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">50Gi</text>
+<rect x="735.0" y="196.0" width="92.0" height="44.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="781.0" y="216.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">mongod</text>
+<text x="781.0" y="233.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">8.0.0</text>
+<line x1="781.0" y1="240.0" x2="781.0" y2="256.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M751.0,262 L751.0,290 A30,6 0 0 0 811.0,290 L811.0,262" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<ellipse cx="781.0" cy="262" rx="30" ry="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="781.0" y="284.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">50Gi</text>
+<rect x="838.0" y="196.0" width="92.0" height="44.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="884.0" y="216.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">mongod</text>
+<text x="884.0" y="233.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">8.0.0</text>
+<line x1="884.0" y1="240.0" x2="884.0" y2="256.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M854.0,262 L854.0,290 A30,6 0 0 0 914.0,290 L914.0,262" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<ellipse cx="884.0" cy="262" rx="30" ry="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="884.0" y="284.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">50Gi</text>
+<text x="632.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">One volume (PVC) per member: 50Gi,</text>
+<text x="632.0" y="338.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">storage class ssd, ReadWriteOnce.</text>
+<text x="632.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">CPU 500m–2, memory 4Gi–8Gi (request–limit).</text>
+<rect x="618.0" y="386.0" width="328.0" height="28.0" rx="7" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="634" cy="400" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M630.9,400.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="650.0" y="405.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Services</text>
+<rect x="618.0" y="422.0" width="328.0" height="28.0" rx="7" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="634" cy="436" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M630.9,436.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="650.0" y="441.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Users: shopuser (SCRAM)</text>
+<rect x="618.0" y="458.0" width="328.0" height="28.0" rx="7" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="634" cy="472" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M630.9,472.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="650.0" y="477.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Runs rs.initiate()</text>
+<text x="40.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">PRODUCTION CHECKLIST (CHAPTER 4)</text>
+<rect x="40.0" y="538.0" width="166.9" height="28.0" rx="14" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="123.5" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">SSD, ≥ 3× working set</text>
+<rect x="216.9" y="538.0" width="187.6" height="28.0" rx="14" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="310.7" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Spread pods across zones</text>
+<rect x="414.5" y="538.0" width="160.0" height="28.0" rx="14" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="494.5" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">TLS via cert-manager</text>
+<rect x="584.5" y="538.0" width="139.3" height="28.0" rx="14" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="654.1" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">PBM backups to S3</text>
+<rect x="733.8" y="538.0" width="194.5" height="28.0" rx="14" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="831.0" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Roll one member at a time</text>
+<text x="40.0" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post, Part 1 (Chapters 2–4). YAML abridged from the post's mongodb-replicaset.yaml.</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" role="img" aria-label="Social feed timelines: fan-out on read versus fan-out on write, and the hybrid of the two">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="670" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="668.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Social feed: fan-out on read vs on write</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Where the work happens: when an author posts, or when a follower opens their timeline.</text>
+<rect x="40.0" y="100.0" width="450.0" height="448.0" rx="14" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="60.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#0d9488" text-anchor="start">A · Fan-out on read</text>
+<text x="60.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Store each post once; build the timeline when it is read.</text>
+<text x="60.0" y="186.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHEN AN AUTHOR POSTS</text>
+<text x="60.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHEN I OPEN MY TIMELINE</text>
+<rect x="510.0" y="100.0" width="450.0" height="448.0" rx="14" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="530.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#7c3aed" text-anchor="start">B · Fan-out on write</text>
+<text x="530.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Copy each post into every follower's inbox when it is written.</text>
+<text x="530.0" y="186.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHEN AN AUTHOR POSTS</text>
+<text x="530.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHEN I OPEN MY TIMELINE</text>
+<circle cx="102" cy="250" r="27" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="102.0" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">author</text>
+<line x1="132.0" y1="250.0" x2="216.0" y2="250.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="174.0" y="240.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">1 insert</text>
+<rect x="220.0" y="214.0" width="250.0" height="72.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<text x="234.0" y="236.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">posts</text>
+<text x="234.0" y="256.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">index { author: 1, at: -1 }</text>
+<text x="234.0" y="276.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">immutable; each post stored once</text>
+<circle cx="102" cy="420" r="27" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="102.0" y="424.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">me</text>
+<path d="M126,408 C160,380 180,378 216,378" fill="none" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M126,432 C160,452 180,456 216,456" fill="none" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="220.0" y="352.0" width="250.0" height="52.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<text x="234.0" y="374.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">follows</text>
+<text x="234.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">1. who do I follow?</text>
+<rect x="220.0" y="418.0" width="250.0" height="70.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<text x="234.0" y="440.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">posts</text>
+<text x="234.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">2. author $in following,</text>
+<text x="234.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">sort at -1, limit 20</text>
+<circle cx="70" cy="516" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M66.0,516.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="86.0" y="521.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Writes: cheap</text>
+<circle cx="230" cy="516" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M226.6,512.6 L233.4,519.4 M233.4,512.6 L226.6,519.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="246.0" y="521.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Reads: expensive</text>
+<text x="246.0" y="539.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">when you follow thousands</text>
+<circle cx="572" cy="250" r="27" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="572.0" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">author</text>
+<text x="690.0" y="207.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">timeline_inbox</text>
+<rect x="690.0" y="216.0" width="250.0" height="22.0" rx="5" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.3"/>
+<text x="702.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">row for follower 1</text>
+<line x1="600.0" y1="244.2" x2="686.0" y2="227.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="690.0" y="242.0" width="250.0" height="22.0" rx="5" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.3"/>
+<text x="702.0" y="258.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">row for follower 2</text>
+<line x1="600.0" y1="250.8" x2="686.0" y2="253.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="690.0" y="268.0" width="250.0" height="22.0" rx="5" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.3"/>
+<text x="702.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">row for follower 3</text>
+<line x1="600.0" y1="257.2" x2="686.0" y2="279.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="702.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">… one row per follower</text>
+<line x1="600.0" y1="263.8" x2="686.0" y2="305.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<circle cx="572" cy="420" r="27" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="572.0" y="424.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">me</text>
+<line x1="602.0" y1="420.0" x2="686.0" y2="420.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="644.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">1 query</text>
+<rect x="690.0" y="376.0" width="250.0" height="88.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.6"/>
+<text x="704.0" y="398.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">timeline_inbox</text>
+<text x="704.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">user_id = me,</text>
+<text x="704.0" y="436.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">sort at desc</text>
+<text x="704.0" y="455.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">only my own rows</text>
+<circle cx="540" cy="516" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M536.0,516.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="556.0" y="521.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Reads: cheap</text>
+<circle cx="700" cy="516" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M696.6,512.6 L703.4,519.4 M703.4,512.6 L696.6,519.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="716.0" y="521.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Writes: expensive</text>
+<text x="716.0" y="539.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">a celebrity post = millions of rows</text>
+<rect x="40.0" y="566.0" width="920.0" height="64.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">Hybrid</text>
+<text x="126.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">fan-out on write for normal users; fan-out on read for celebrities</text>
+<text x="126.0" y="614.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">(marked with is_high_fanout: true, queried separately). Read fan-out suits small networks; write fan-out suits read-heavy feeds.</text>
+<text x="40.0" y="652.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Chapter 12 of this post (Case study D: social feed). There is no one-size-fits-all answer.</text>
+</svg>

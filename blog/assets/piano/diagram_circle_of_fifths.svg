@@ -1,48 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Circle of fifths major and relative minor keys">
-  <rect width="600" height="600" fill="#ffffff"/>
-  <g transform="translate(300 300)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" role="img" aria-label="Circle of fifths major and relative minor keys">
+  <rect width="600" height="620" fill="#ffffff"/>
+  <g transform="translate(300 320)">
     <circle r="240" fill="none" stroke="#222" stroke-width="2"/>
     <circle r="170" fill="none" stroke="#888" stroke-width="1.5"/>
-    <!-- 12 spokes -->
+    <!-- 12 sectors: dividers halfway between neighbouring keys -->
     <g stroke="#ddd" stroke-width="1">
-      <line x1="0" y1="-240" x2="0" y2="240"/>
-      <line x1="-240" y1="0" x2="240" y2="0"/>
-      <line x1="-170" y1="-170" x2="170" y2="170"/>
-      <line x1="170"  y1="-170" x2="-170" y2="170"/>
-      <line x1="-208" y1="-120" x2="208" y2="120"/>
-      <line x1="208"  y1="-120" x2="-208" y2="120"/>
-      <line x1="-120" y1="-208" x2="120" y2="208"/>
-      <line x1="120"  y1="-208" x2="-120" y2="208"/>
+      <line x1="231.8" y1="-62.1" x2="-231.8" y2="62.1"/>
+      <line x1="169.7" y1="-169.7" x2="-169.7" y2="169.7"/>
+      <line x1="62.1" y1="-231.8" x2="-62.1" y2="231.8"/>
+      <line x1="-62.1" y1="-231.8" x2="62.1" y2="231.8"/>
+      <line x1="-169.7" y1="-169.7" x2="169.7" y2="169.7"/>
+      <line x1="-231.8" y1="-62.1" x2="231.8" y2="62.1"/>
     </g>
     <!-- majors (outer) -->
     <g font-family="Georgia, serif" font-size="26" font-weight="700" text-anchor="middle" fill="#1d6a8a">
-      <text x="0"    y="-205">C</text>
-      <text x="125"  y="-170">G</text>
-      <text x="208"  y="-105">D</text>
-      <text x="232"  y="0">A</text>
-      <text x="208"  y="115">E</text>
-      <text x="125"  y="178">B</text>
-      <text x="0"    y="210">F♯/G♭</text>
-      <text x="-125" y="178">D♭</text>
-      <text x="-208" y="115">A♭</text>
-      <text x="-232" y="0">E♭</text>
-      <text x="-208" y="-105">B♭</text>
-      <text x="-125" y="-170">F</text>
+      <text x="0" y="-196">C</text>
+      <text x="103" y="-169">G</text>
+      <text x="178" y="-93">D</text>
+      <text x="205" y="9">A</text>
+      <text x="178" y="111">E</text>
+      <text x="103" y="187">B</text>
+      <text x="0" y="214">F♯/G♭</text>
+      <text x="-102" y="187">D♭</text>
+      <text x="-178" y="111">A♭</text>
+      <text x="-205" y="9">E♭</text>
+      <text x="-178" y="-94">B♭</text>
+      <text x="-103" y="-169">F</text>
     </g>
     <!-- minors (inner) -->
     <g font-family="Georgia, serif" font-size="18" font-style="italic" text-anchor="middle" fill="#c54a2e">
-      <text x="0"    y="-140">a</text>
-      <text x="80"   y="-115">e</text>
-      <text x="135"  y="-65">b</text>
-      <text x="155"  y="0">f♯</text>
-      <text x="135"  y="65">c♯</text>
-      <text x="80"   y="120">g♯</text>
-      <text x="0"    y="145">e♭</text>
-      <text x="-80"  y="120">b♭</text>
-      <text x="-135" y="65">f</text>
-      <text x="-155" y="0">c</text>
-      <text x="-135" y="-65">g</text>
-      <text x="-80"  y="-115">d</text>
+      <text x="0" y="-132">a</text>
+      <text x="69" y="-114">e</text>
+      <text x="120" y="-63">b</text>
+      <text x="138" y="6">f♯</text>
+      <text x="120" y="75">c♯</text>
+      <text x="69" y="126">g♯</text>
+      <text x="0" y="144">e♭</text>
+      <text x="-69" y="126">b♭</text>
+      <text x="-120" y="75">f</text>
+      <text x="-138" y="6">c</text>
+      <text x="-120" y="-63">g</text>
+      <text x="-69" y="-114">d</text>
     </g>
     <!-- sharp/flat counts -->
     <g font-family="Georgia, serif" font-size="14" fill="#888" text-anchor="middle">

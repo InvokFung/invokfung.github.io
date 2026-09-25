@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 616" width="1000" height="616" role="img" aria-label="Flowchart of try, except, else and finally, with the post's example traced for the inputs 5, abc and 0">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="616" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="614.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">try / except / else / finally: which blocks run</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">else runs only if try finished without an exception. finally runs every time.</text>
+<rect x="55.0" y="103.0" width="190.0" height="50.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="150.0" y="126.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#2563eb" text-anchor="middle">try:</text>
+<text x="150.0" y="145.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">code that might fail</text>
+<polygon points="150,182 258,222 150,262 42,222" fill="#f9fafb" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="150.0" y="227.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">Exception raised?</text>
+<path d="M150.0,153.0 L150.0,180.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="335.0" y="197.0" width="170.0" height="50.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="420.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">else:</text>
+<text x="420.0" y="239.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">only if no exception</text>
+<path d="M258.0,222.0 L333.0,222.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="296.5" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">no</text>
+<polygon points="150,286 258,326 150,366 42,326" fill="#f9fafb" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="150.0" y="331.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">Matching except?</text>
+<path d="M150.0,262.0 L150.0,284.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="160.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">yes</text>
+<rect x="335.0" y="301.0" width="170.0" height="50.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="420.0" y="324.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">except X:</text>
+<text x="420.0" y="343.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">handle that error</text>
+<path d="M258.0,326.0 L333.0,326.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="296.5" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="335.0" y="405.0" width="170.0" height="50.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="420.0" y="428.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">finally:</text>
+<text x="420.0" y="447.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">always runs (cleanup)</text>
+<path d="M420.0,351.0 L420.0,403.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M505.0,222.0 L530.0,222.0 L530.0,430.0 L507.0,430.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M150.0,366.0 L150.0,430.0 L333.0,430.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="160.0" y="392.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">no</text>
+<path d="M380.0,455.0 L380.0,494.0" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="370.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">carry on after</text>
+<text x="370.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">the try statement</text>
+<text x="370.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">(no error, or handled)</text>
+<path d="M460.0,455.0 L460.0,494.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="470.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">error goes up</text>
+<text x="470.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">the call stack</text>
+<text x="470.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(nothing matched)</text>
+<text x="590.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">THE POST'S EXAMPLE, THREE INPUTS</text>
+<rect x="590.0" y="134.0" width="370.0" height="126.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="606.0" y="160.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Number:</text>
+<text x="674.0" y="160.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">5</text>
+<text x="720.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">100 / 5 works</text>
+<rect x="606.0" y="176.5" width="35.8" height="23.5" rx="11.75" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="623.9" y="193.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">try</text>
+<text x="650.8" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<rect x="659.8" y="176.5" width="43.0" height="23.5" rx="11.75" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="681.2" y="193.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">else</text>
+<text x="711.8" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<rect x="720.8" y="176.5" width="64.8" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="753.1" y="193.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">finally</text>
+<text x="606.0" y="224.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Result: 20.0</text>
+<text x="606.0" y="244.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">done</text>
+<rect x="590.0" y="274.0" width="370.0" height="126.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="606.0" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Number:</text>
+<text x="674.0" y="300.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">abc</text>
+<text x="720.0" y="300.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">int("abc") raises ValueError</text>
+<rect x="606.0" y="316.5" width="35.8" height="23.5" rx="11.75" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="623.9" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">try</text>
+<text x="650.8" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<rect x="659.8" y="316.5" width="137.2" height="23.5" rx="11.75" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="728.4" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">except ValueError</text>
+<text x="806.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<rect x="815.0" y="316.5" width="64.8" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="847.4" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">finally</text>
+<text x="606.0" y="364.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Not a valid integer</text>
+<text x="606.0" y="384.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">done</text>
+<rect x="590.0" y="414.0" width="370.0" height="126.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="606.0" y="440.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Number:</text>
+<text x="674.0" y="440.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">0</text>
+<text x="720.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">100 / 0 raises ZeroDivisionError</text>
+<rect x="606.0" y="456.5" width="35.8" height="23.5" rx="11.75" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="623.9" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">try</text>
+<text x="650.8" y="472.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<rect x="659.8" y="456.5" width="188.0" height="23.5" rx="11.75" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="753.8" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">except ZeroDivisionError</text>
+<text x="856.8" y="472.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<rect x="865.8" y="456.5" width="64.8" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="898.1" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">finally</text>
+<text x="606.0" y="504.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Can't divide by zero</text>
+<text x="606.0" y="524.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">done</text>
+<text x="40.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Traces from running the post's Chapter 6 example as written.</text>
+</svg>

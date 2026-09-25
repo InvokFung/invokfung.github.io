@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 732" width="1000" height="732" role="img" aria-label="Terraform workflow: init, fmt and validate, plan, review, apply, with remote state in S3 and a DynamoDB lock">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="732" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="730.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Terraform: plan, review, apply</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Every change is saved in a plan and reviewed before it touches AWS. State lives in S3 with a DynamoDB lock.</text>
+<rect x="330.0" y="100.0" width="310.0" height="62.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="2"/>
+<text x="346.0" y="127.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Code in git</text>
+<text x="346.0" y="149.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">modules/ + envs/dev, staging, prod</text>
+<rect x="330.0" y="186.0" width="310.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="370.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">terraform init · fmt · validate</text>
+<text x="370.0" y="235.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">download providers, format, syntax check</text>
+<circle cx="350.0" cy="208.0" r="12" fill="#2563eb"/>
+<text x="350.0" y="213.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="330.0" y="272.0" width="310.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="370.0" y="299.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">terraform plan -out plan.tfplan</text>
+<text x="370.0" y="321.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">shows what would change</text>
+<circle cx="350.0" cy="294.0" r="12" fill="#2563eb"/>
+<text x="350.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="330.0" y="358.0" width="310.0" height="62.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="370.0" y="385.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Review the plan</text>
+<text x="370.0" y="407.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">every change is shown: read all of it</text>
+<circle cx="350.0" cy="380.0" r="12" fill="#d97706"/>
+<text x="350.0" y="385.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<rect x="330.0" y="444.0" width="310.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="370.0" y="471.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">terraform apply plan.tfplan</text>
+<text x="370.0" y="493.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">makes it happen</text>
+<circle cx="350.0" cy="466.0" r="12" fill="#2563eb"/>
+<text x="350.0" y="471.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<rect x="330.0" y="530.0" width="310.0" height="62.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="346.0" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">AWS resources</text>
+<text x="346.0" y="579.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">VPC · ALB · Auto Scaling group · RDS</text>
+<line x1="485.0" y1="162.0" x2="485.0" y2="186.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="485.0" y1="248.0" x2="485.0" y2="272.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="485.0" y1="334.0" x2="485.0" y2="358.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="485.0" y1="420.0" x2="485.0" y2="444.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="485.0" y1="506.0" x2="485.0" y2="530.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="315.0" width="250.0" height="148.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="54.0" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Stop if the plan says</text>
+<text x="54.0" y="362.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start"># forces replacement</text>
+<text x="54.0" y="383.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">for a resource you want to keep</text>
+<text x="54.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(RDS, EBS volume with data).</text>
+<text x="54.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Fix the change, use</text>
+<text x="54.0" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">create_before_destroy, or migrate.</text>
+<line x1="330.0" y1="389.0" x2="292.0" y2="389.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="530.0" width="250.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="54.0" y="556.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">prevent_destroy = true</text>
+<text x="54.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">on RDS, S3 buckets with data</text>
+<line x1="290.0" y1="561.0" x2="330.0" y2="561.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="700.0" y="272.0" width="260.0" height="234.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="716.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Remote state</text>
+<rect x="714.0" y="314.0" width="232.0" height="94.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="728.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">S3 bucket</text>
+<text x="728.0" y="357.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">encrypted; one state file</text>
+<text x="728.0" y="375.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">per env, never dev + prod</text>
+<text x="728.0" y="395.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">holds every value, secrets too</text>
+<rect x="714.0" y="420.0" width="232.0" height="70.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="728.0" y="443.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">DynamoDB lock table</text>
+<text x="728.0" y="463.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">two people cannot apply</text>
+<text x="728.0" y="481.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">at the same time</text>
+<line x1="700.0" y1="303.0" x2="642.0" y2="303.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="670.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">reads</text>
+<line x1="640.0" y1="475.0" x2="698.0" y2="475.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="670.0" y="467.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">updates</text>
+<rect x="700.0" y="530.0" width="260.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="714.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Drift: changed in the console</text>
+<text x="714.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">plan often; import to reconcile</text>
+<line x1="640.0" y1="561.0" x2="700.0" y2="561.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="40.0" y="618.0" width="920.0" height="70.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">In CI/CD</text>
+<text x="144.0" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Every PR runs fmt -check, validate and plan, and the plan is posted as a PR comment.</text>
+<text x="144.0" y="668.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Merge to main runs apply. For high-stakes envs, gate apply behind a manual approval.</text>
+<text x="40.0" y="714.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Commands and rules as given in the post (Chapters 3, 6, 8, 10 and 11).</text>
+</svg>

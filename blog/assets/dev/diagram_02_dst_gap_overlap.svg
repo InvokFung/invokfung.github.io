@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 584" width="1000" height="584" role="img" aria-label="DST in New York in 2026: on 8 March local 02:00 to 02:59 never happens; on 1 November local 01:00 to 01:59 happens twice">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="584" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="582.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">DST in New York: a gap in March, an overlap in November</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">America/New_York, 2026. Top line: UTC. Boxes: what a wall clock in New York shows. EST = UTC−5, EDT = UTC−4.</text>
+<text x="40.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Sun 2026-03-08: clocks jump forward, 02:00 EST → 03:00 EDT</text>
+<text x="40.0" y="167.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">UTC</text>
+<text x="40.0" y="202.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">New York clock</text>
+<line x1="190.0" y1="162.0" x2="950.0" y2="162.0" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+<line x1="190.0" y1="157.0" x2="190.0" y2="167.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="190.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">05:00Z</text>
+<line x1="380.0" y1="157.0" x2="380.0" y2="167.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="380.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">06:00Z</text>
+<line x1="570.0" y1="157.0" x2="570.0" y2="167.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="570.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">07:00Z</text>
+<line x1="760.0" y1="157.0" x2="760.0" y2="167.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="760.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">08:00Z</text>
+<line x1="950.0" y1="157.0" x2="950.0" y2="167.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="950.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">09:00Z</text>
+<rect x="193.0" y="174.0" width="184.0" height="46.0" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="285.0" y="203.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">00:00–00:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#2563eb">EST</tspan></text>
+<rect x="383.0" y="174.0" width="184.0" height="46.0" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="475.0" y="203.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">01:00–01:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#2563eb">EST</tspan></text>
+<rect x="573.0" y="174.0" width="184.0" height="46.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="665.0" y="203.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">03:00–03:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#d97706">EDT</tspan></text>
+<rect x="763.0" y="174.0" width="184.0" height="46.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="855.0" y="203.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">04:00–04:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#d97706">EDT</tspan></text>
+<line x1="570.0" y1="166.0" x2="570.0" y2="228.0" stroke="#dc4c3a" stroke-width="3" stroke-linecap="round"/>
+<text x="570.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="middle">Gap: 02:00–02:59 never happens</text>
+<circle cx="665.0" cy="162" r="6" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+<text x="665.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">07:30Z</text>
+<text x="570.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">02:30 does not exist. Moved forward</text>
+<text x="570.0" y="290.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">by the gap: 03:30-04:00 = 07:30Z</text>
+<text x="40.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Sun 2026-11-01: clocks fall back, 02:00 EDT → 01:00 EST</text>
+<text x="40.0" y="389.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">UTC</text>
+<text x="40.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">New York clock</text>
+<line x1="190.0" y1="384.0" x2="950.0" y2="384.0" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+<line x1="190.0" y1="379.0" x2="190.0" y2="389.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="190.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">04:00Z</text>
+<line x1="380.0" y1="379.0" x2="380.0" y2="389.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="380.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">05:00Z</text>
+<line x1="570.0" y1="379.0" x2="570.0" y2="389.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="570.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">06:00Z</text>
+<line x1="760.0" y1="379.0" x2="760.0" y2="389.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="760.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">07:00Z</text>
+<line x1="950.0" y1="379.0" x2="950.0" y2="389.0" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="950.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">08:00Z</text>
+<rect x="193.0" y="396.0" width="184.0" height="46.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="285.0" y="425.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">00:00–00:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#d97706">EDT</tspan></text>
+<rect x="383.0" y="396.0" width="184.0" height="46.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="475.0" y="425.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">01:00–01:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#d97706">EDT</tspan></text>
+<rect x="573.0" y="396.0" width="184.0" height="46.0" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="665.0" y="425.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">01:00–01:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#2563eb">EST</tspan></text>
+<rect x="763.0" y="396.0" width="184.0" height="46.0" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="855.0" y="425.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">02:00–02:59 <tspan font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#2563eb">EST</tspan></text>
+<rect x="381.0" y="394.0" width="378.0" height="50.0" rx="10" fill="none" stroke="#7c3aed" stroke-width="2.2"/>
+<text x="570.0" y="470.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">Overlap: 01:00–01:59 happens twice</text>
+<circle cx="475.0" cy="384" r="6" fill="#7c3aed" stroke="#ffffff" stroke-width="2"/>
+<text x="475.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">05:30Z</text>
+<text x="475.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">fold=0, the earlier 01:30</text>
+<text x="475.0" y="512.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">01:30-04:00 = 05:30Z</text>
+<circle cx="665.0" cy="384" r="6" fill="#7c3aed" stroke="#ffffff" stroke-width="2"/>
+<text x="665.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">06:30Z</text>
+<text x="665.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">fold=1, the later 01:30</text>
+<text x="665.0" y="512.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">01:30-05:00 = 06:30Z</text>
+<text x="40.0" y="566.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Dev Essentials 02, Chapter 3 (outputs from Python zoneinfo, Java ZonedDateTime and Temporal).</text>
+</svg>

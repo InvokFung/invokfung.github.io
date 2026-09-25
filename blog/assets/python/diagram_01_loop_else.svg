@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="Flowchart of a Python loop: continue goes to the next round, break leaves and skips else, and else runs only when the loop runs out">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How a loop ends: break, continue, else</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The else after a for or while loop runs only if the loop finished without break.</text>
+<rect x="110.0" y="104.0" width="280.0" height="46.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="250.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle"><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace">for x in seq:</tspan>  <tspan fill="#6b7280">or</tspan>  <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace">while cond:</tspan></text>
+<path d="M250.0,150.0 L250.0,164.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<polygon points="250,166 372,212 250,258 128,212" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="250.0" y="209.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="middle">Another item?</text>
+<text x="250.0" y="229.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">(while: condition true?)</text>
+<rect x="160.0" y="298.0" width="180.0" height="48.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="250.0" y="328.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">Run the loop body</text>
+<path d="M250.0,258.0 L250.0,296.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="260.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">yes</text>
+<path d="M160.0,322.0 L70.0,322.0 L70.0,212.0 L126.0,212.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="115.0" y="314.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">continue</text>
+<text x="115.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">or body ends</text>
+<text x="78.0" y="202.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">next round</text>
+<rect x="404.0" y="180.0" width="156.0" height="64.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="482.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">else: block runs</text>
+<text x="482.0" y="227.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">the loop ran out</text>
+<path d="M372.0,212.0 L402.0,212.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="388.0" y="204.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">no</text>
+<rect x="330.0" y="440.0" width="230.0" height="48.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="445.0" y="470.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Code after the loop</text>
+<path d="M500.0,244.0 L500.0,438.0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M340.0,322.0 L400.0,322.0 L400.0,438.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="366.0" y="314.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">break</text>
+<text x="392.0" y="350.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#dc4c3a" text-anchor="end">else is</text>
+<text x="392.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#dc4c3a" text-anchor="end">skipped</text>
+<text x="40.0" y="526.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">break</text>
+<text x="130.0" y="526.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">exit the innermost loop</text>
+<text x="40.0" y="552.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">continue</text>
+<text x="130.0" y="552.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">skip to the next iteration</text>
+<text x="40.0" y="578.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">else</text>
+<text x="130.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">runs only if the loop finished without break</text>
+<text x="596.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">EXAMPLE FROM THE POST</text>
+<rect x="596.0" y="132.0" width="364.0" height="158.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="610.0" y="156.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">for n in range(2, 20):</text>
+<text x="610.0" y="175.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">    for d in range(2, n):</text>
+<text x="610.0" y="195.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">        if n % d == 0:</text>
+<text x="610.0" y="214.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">            print(f"{n} = {d} * {n // d}")</text>
+<text x="610.0" y="234.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">            break</text>
+<text x="610.0" y="253.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fcd34d" text-anchor="start">    else:</text>
+<text x="610.0" y="273.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fcd34d" text-anchor="start">        print(f"{n} is prime")</text>
+<text x="596.0" y="324.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">n = 9</text>
+<text x="596.0" y="348.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">d = 2: <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="400">9 % 2</tspan> is 1, so go on</text>
+<text x="596.0" y="370.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">d = 3: <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="400">9 % 3</tspan> is 0, so it prints <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="700">9 = 3 * 3</tspan></text>
+<text x="596.0" y="392.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#dc4c3a" text-anchor="start"><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="700" fill="#dc4c3a">break</tspan> → else is skipped</text>
+<text x="596.0" y="436.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">n = 7</text>
+<text x="596.0" y="460.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">d = 2, 3, 4, 5, 6: none divides 7</text>
+<text x="596.0" y="482.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The inner loop runs out with no break</text>
+<text x="596.0" y="504.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#d97706" text-anchor="start"><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="700" fill="#d97706">else</tspan> → prints <tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-weight="700" fill="#1f2937">7 is prime</tspan></text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Code and printed lines from the post's prime example, run as written.</text>
+</svg>

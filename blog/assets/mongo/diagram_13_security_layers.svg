@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img" aria-label="MongoDB security layers from the application to the disk, with what each layer protects">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="620" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="618.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Security in layers: from the app to the disk</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each layer covers a different risk. Open-to-the-internet cases skip three: private bind, auth and a firewall.</text>
+<text x="196.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">LAYER</text>
+<text x="424.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">HOW</text>
+<text x="700.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHAT IT GIVES YOU</text>
+<rect x="66.0" y="135.0" width="112.0" height="52.0" rx="9" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.3"/>
+<text x="122.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">In your app</text>
+<rect x="188.0" y="135.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="135.0" width="5" height="52" rx="2" fill="#7c3aed"/>
+<text x="208.0" y="158.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Field-level encryption</text>
+<text x="208.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">CSFLE or Queryable Encryption</text>
+<text x="424.0" y="158.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the driver encrypts sensitive fields</text>
+<text x="424.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">before they leave the app</text>
+<text x="700.0" y="158.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">server, admins, backups, replicas</text>
+<text x="700.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">see only ciphertext</text>
+<rect x="66.0" y="203.0" width="112.0" height="110.0" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.3"/>
+<text x="122.0" y="263.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="middle">On the wire</text>
+<rect x="188.0" y="203.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="203.0" width="5" height="52" rx="2" fill="#2563eb"/>
+<text x="208.0" y="235.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Network isolation</text>
+<text x="424.0" y="226.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">private endpoint &gt; VPC peering &gt;</text>
+<text x="424.0" y="245.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">IP allowlist; bindIp private; firewall</text>
+<text x="700.0" y="226.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">only app subnets reach port 27017;</text>
+<text x="700.0" y="245.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">no public IP</text>
+<rect x="188.0" y="261.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="261.0" width="5" height="52" rx="2" fill="#2563eb"/>
+<text x="208.0" y="293.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">TLS in transit</text>
+<text x="424.0" y="284.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">net.tls.mode: requireTLS</text>
+<text x="424.0" y="303.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">(mandatory in Atlas)</text>
+<text x="700.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">no plaintext between app and DB,</text>
+<text x="700.0" y="303.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">even on localhost</text>
+<rect x="66.0" y="329.0" width="112.0" height="168.0" rx="9" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.3"/>
+<text x="122.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">At the server</text>
+<rect x="188.0" y="329.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="329.0" width="5" height="52" rx="2" fill="#0d9488"/>
+<text x="208.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Authentication</text>
+<text x="208.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">who are you?</text>
+<text x="424.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">SCRAM (default), x.509, LDAP,</text>
+<text x="424.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Kerberos, AWS IAM, OIDC</text>
+<text x="700.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">every connection must</text>
+<text x="700.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">authenticate</text>
+<rect x="188.0" y="387.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="387.0" width="5" height="52" rx="2" fill="#0d9488"/>
+<text x="208.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Authorization (RBAC)</text>
+<text x="208.0" y="429.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">what may you do?</text>
+<text x="424.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">a custom role per service with</text>
+<text x="424.0" y="429.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">only what it needs; never root</text>
+<text x="700.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">the app user reaches only its</text>
+<text x="700.0" y="429.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">own collections and actions</text>
+<rect x="188.0" y="445.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="445.0" width="5" height="52" rx="2" fill="#0d9488"/>
+<text x="208.0" y="477.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Audit log</text>
+<text x="424.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">records authentication,</text>
+<text x="424.0" y="487.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">authorization and operations</text>
+<text x="700.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">a trail of privileged ops and</text>
+<text x="700.0" y="487.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">failed logins, shipped to a SIEM</text>
+<rect x="66.0" y="513.0" width="112.0" height="52.0" rx="9" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.3"/>
+<text x="122.0" y="544.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">On disk</text>
+<rect x="188.0" y="513.0" width="772.0" height="52.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<rect x="188" y="513.0" width="5" height="52" rx="2" fill="#d97706"/>
+<text x="208.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Encryption at rest</text>
+<text x="424.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">WiredTiger AES-256, keys from a KMS</text>
+<text x="424.0" y="555.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">(on by default in Atlas)</text>
+<text x="700.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">protects against disk theft;</text>
+<text x="700.0" y="555.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">not against a logged-in attacker</text>
+<line x1="48.0" y1="138.0" x2="48.0" y2="562.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text transform="translate(40,350.0) rotate(-90)" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">request path</text>
+<text x="40.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 1–9. Order follows the path a request takes; Atlas notes as stated in the post.</text>
+</svg>

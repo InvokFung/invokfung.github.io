@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" role="img" aria-label="E-commerce schema map: users with an embedded address book, orders with embedded items that reference products and copy a product snapshot, products referencing a category tree, reviews referencing products, plus carts and an audit log in their own collections">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="720" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="718.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">An e-commerce schema: what to embed, what to reference</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Data read together lives together. Shared, unbounded or independently read data gets its own collection.</text>
+<defs><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker></defs>
+<rect x="40.0" y="108.0" width="262.0" height="196.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="56.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Users</text>
+<text x="111.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own collection</text>
+<text x="56.0" y="164.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">_id</text>
+<text x="56.0" y="186.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">name</text>
+<rect x="52.0" y="200.0" width="238.0" height="90.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="66.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">address book</text>
+<text x="66.0" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">embedded, bounded (≤ ~5)</text>
+<text x="66.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">always read with the user</text>
+<rect x="40.0" y="326.0" width="262.0" height="92.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="56.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Carts</text>
+<text x="111.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own collection</text>
+<text x="56.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Live, may be huge for window</text>
+<text x="56.0" y="399.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">shoppers. Or embed in the user if small.</text>
+<rect x="40.0" y="440.0" width="262.0" height="92.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="56.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Audit log</text>
+<text x="148.6" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own collection</text>
+<text x="56.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">High volume, time-bounded:</text>
+<text x="56.0" y="513.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">a TTL index deletes old entries.</text>
+<rect x="332.0" y="108.0" width="300.0" height="300.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="348.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Orders</text>
+<text x="412.4" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own collection</text>
+<text x="348.0" y="164.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">_id</text>
+<text x="348.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">user_id</text>
+<text x="422.8" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">reference to a user</text>
+<rect x="344.0" y="200.0" width="276.0" height="30.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+<rect x="344" y="200" width="276" height="30" rx="7" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="356.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">user_name</text>
+<text x="438.9" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">copied from the user</text>
+<rect x="344.0" y="244.0" width="276.0" height="150.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="358.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">items</text>
+<text x="402.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">embedded, bounded (≤ ~50)</text>
+<rect x="356.0" y="282.0" width="252.0" height="36.0" rx="6" fill="#ffffff" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="368.0" y="305.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">qty</text>
+<rect x="412" y="288" width="150" height="24" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="487.0" y="305.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">product snapshot</text>
+<text x="584.0" y="305.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">p</text>
+<rect x="356.0" y="326.0" width="252.0" height="36.0" rx="6" fill="#ffffff" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="368.0" y="349.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">qty</text>
+<rect x="412" y="332" width="150" height="24" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="487.0" y="349.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">product snapshot</text>
+<text x="584.0" y="349.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">p</text>
+<text x="358.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">always read with the order</text>
+<rect x="332.0" y="430.0" width="300.0" height="92.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="348.0" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Reviews</text>
+<text x="421.8" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own collection</text>
+<text x="348.0" y="486.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">product_id</text>
+<text x="348.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">many per product</text>
+<rect x="690.0" y="196.0" width="270.0" height="156.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="706.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Products</text>
+<text x="789.2" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own collection</text>
+<text x="706.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">_id</text>
+<text x="706.0" y="274.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">title</text>
+<text x="706.0" y="296.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">price</text>
+<text x="706.0" y="318.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">category</text>
+<text x="706.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">shared by many orders</text>
+<rect x="690.0" y="418.0" width="270.0" height="104.0" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="706.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Categories</text>
+<text x="808.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">a tree</text>
+<text x="706.0" y="472.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">parent</text>
+<text x="776.0" y="472.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">ancestors: [...]</text>
+<text x="706.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Parent ref + ancestors: "find all</text>
+<text x="706.0" y="512.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">products in a subtree" is common.</text>
+<rect x="690.0" y="108.0" width="30.0" height="18.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<text x="730.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">embedded in the document</text>
+<line x1="690.0" y1="146.0" x2="718.0" y2="146.0" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+<path d="M712,141 L721,146 L712,151 Z" fill="#2563eb"/>
+<text x="730.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">reference by _id</text>
+<rect x="690" y="163" width="30" height="18" rx="4" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="730.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">extended reference (copied)</text>
+<path d="M340.0,183.0 L306.0,183.0" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" marker-end="url(#ahb)"/>
+<path d="M598.0,300.0 L670.0,300.0 L670.0,306.0 L687.0,306.0" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" marker-end="url(#ahb)"/>
+<path d="M636.0,481.0 L652.0,481.0 L652.0,332.0 L687.0,332.0" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" marker-end="url(#ahb)"/>
+<path d="M790.0,314.0 L890.0,314.0 L890.0,415.0" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" marker-end="url(#ahb)"/>
+<rect x="40.0" y="560.0" width="452.0" height="116.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="58.0" y="590.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Embed when</text>
+<text x="58.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the data is always read together,</text>
+<text x="58.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the parent has few items (&lt; ~100),</text>
+<text x="58.0" y="656.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">and the items rarely change once written.</text>
+<rect x="508.0" y="560.0" width="452.0" height="116.0" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="526.0" y="590.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">Reference when</text>
+<text x="526.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">it is read on its own or shared by many parents,</text>
+<text x="526.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">there are many items (&gt; 1000),</text>
+<text x="526.0" y="656.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">or it grows unbounded or is updated often on its own.</text>
+<text x="40.0" y="702.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: MongoDB Course 07, Chapter 14 (map), Chapter 2 (embed vs reference), Chapters 4, 7 and 9 (fields).</text>
+</svg>

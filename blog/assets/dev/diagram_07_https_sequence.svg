@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 886" width="1000" height="886" role="img" aria-label="Sequence of an HTTPS request to example.com: DNS lookup, TCP handshake, TLS 1.3 handshake and the HTTP request, with the certificate chain the server sends">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="886" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="884.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">From URL to first byte: https://example.com/</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">DNS, then TCP (1 round trip), then TLS 1.3 (1 round trip), then HTTP. Violet {…} messages are encrypted.</text>
+<defs><marker id="ahv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker></defs>
+<rect x="40.0" y="154.0" width="604.0" height="102.0" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+<text x="54.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">DNS</text>
+<text x="54.0" y="194.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">name → IP</text>
+<rect x="40.0" y="260.0" width="604.0" height="120.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1"/>
+<text x="54.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">TCP</text>
+<text x="54.0" y="300.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">1 round trip</text>
+<rect x="40.0" y="384.0" width="604.0" height="308.0" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+<text x="54.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">TLS 1.3</text>
+<text x="54.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">1 round trip</text>
+<rect x="40.0" y="696.0" width="604.0" height="116.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+<text x="54.0" y="718.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">HTTP</text>
+<text x="54.0" y="736.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">inside TLS</text>
+<rect x="145.0" y="98.0" width="140.0" height="46.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="215.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Client</text>
+<text x="215.0" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">browser or curl</text>
+<rect x="325.0" y="98.0" width="140.0" height="46.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="395.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">DNS resolver</text>
+<text x="395.0" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">recursive, caching</text>
+<rect x="505.0" y="98.0" width="140.0" height="46.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="575.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Server</text>
+<text x="575.0" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">example.com:443</text>
+<line x1="215.0" y1="146.0" x2="215.0" y2="810.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/>
+<line x1="575.0" y1="146.0" x2="575.0" y2="810.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/>
+<line x1="395.0" y1="146.0" x2="395.0" y2="230.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/>
+<line x1="387.0" y1="230.0" x2="403.0" y2="230.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="215" y1="182" x2="392" y2="196" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)"/>
+<text x="227.0" y="174.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start"><tspan font-weight="700" fill="#1f2937">example.com A?</tspan></text>
+<line x1="395" y1="212" x2="218" y2="226" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)"/>
+<text x="305.0" y="245.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle"><tspan font-weight="700" fill="#1f2937">104.20.23.154 · TTL 247 s</tspan></text>
+<rect x="105.4" y="215.0" width="97.6" height="22.0" rx="11" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="154.2" y="230.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">dns 0.006 s</text>
+<line x1="215" y1="288" x2="572" y2="308" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)"/>
+<text x="227.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start"><tspan font-weight="700" fill="#1f2937">SYN</tspan></text>
+<line x1="575" y1="338" x2="218" y2="358" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)"/>
+<text x="563.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="end"><tspan font-weight="700" fill="#1f2937">SYN-ACK</tspan></text>
+<rect x="105.4" y="347.0" width="97.6" height="22.0" rx="11" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="154.2" y="362.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">tcp 0.192 s</text>
+<line x1="215" y1="412" x2="572" y2="432" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)"/>
+<text x="227.0" y="404.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start"><tspan font-weight="700" fill="#1f2937">ACK + ClientHello</tspan><tspan dx="8" fill="#6b7280" font-weight="400">key share, SNI, ALPN</tspan></text>
+<line x1="575" y1="460" x2="218" y2="480" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)"/>
+<text x="563.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="end"><tspan font-weight="700" fill="#1f2937">ServerHello + key share</tspan></text>
+<text x="54.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="start">encrypted from here</text>
+<line x1="194.0" y1="498.0" x2="589.0" y2="498.0" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="575" y1="524" x2="218" y2="544" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahv)"/>
+<text x="563.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="end"><tspan font-weight="700" fill="#7c3aed">{EncryptedExtensions}</tspan><tspan dx="8" fill="#6b7280" font-weight="400">ALPN choice</tspan></text>
+<line x1="575" y1="566" x2="218" y2="586" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahv)"/>
+<text x="563.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="end"><tspan font-weight="700" fill="#7c3aed">{Certificate}</tspan><tspan dx="8" fill="#6b7280" font-weight="400">leaf + intermediates</tspan></text>
+<line x1="575" y1="608" x2="218" y2="628" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahv)"/>
+<text x="563.0" y="600.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="end"><tspan font-weight="700" fill="#7c3aed">{CertificateVerify}</tspan><tspan dx="8" fill="#6b7280" font-weight="400">signature over the transcript</tspan></text>
+<line x1="575" y1="650" x2="218" y2="670" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahv)"/>
+<text x="563.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="end"><tspan font-weight="700" fill="#7c3aed">{Finished}</tspan><tspan dx="8" fill="#6b7280" font-weight="400">MAC over the transcript</tspan></text>
+<rect x="105.4" y="659.0" width="97.6" height="22.0" rx="11" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="154.2" y="674.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">tls 1.894 s</text>
+<line x1="215" y1="724" x2="572" y2="744" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahv)"/>
+<text x="227.0" y="716.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start"><tspan font-weight="700" fill="#7c3aed">{Finished} + GET /</tspan><tspan dx="8" fill="#6b7280" font-weight="400">HTTP request</tspan></text>
+<line x1="575" y1="770" x2="218" y2="790" stroke="#7c3aed" stroke-width="2" marker-end="url(#ahv)"/>
+<text x="563.0" y="762.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="end"><tspan font-weight="700" fill="#7c3aed">{HTTP 200 + page}</tspan></text>
+<rect x="97.8" y="779.0" width="105.2" height="22.0" rx="11" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="150.4" y="794.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">ttfb 2.098 s</text>
+<rect x="652.0" y="98.0" width="308.0" height="716.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="672.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">The certificate chain</text>
+<text x="672.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">what the {Certificate} message holds</text>
+<rect x="672" y="176" width="268" height="78" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="686.0" y="198.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">ROOT</text>
+<rect x="814.5" y="184.0" width="115.5" height="20.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="872.2" y="198.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">in trust store</text>
+<text x="686.0" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">SSL.com TLS ECC Root CA 2022</text>
+<line x1="712.0" y1="256.0" x2="712.0" y2="291.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="724.0" y="279.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">signs</text>
+<rect x="672" y="294" width="268" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="686.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="start">INTERMEDIATE</text>
+<rect x="814.5" y="302.0" width="115.5" height="20.0" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="872.2" y="316.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">sent by server</text>
+<text x="686.0" y="338.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">SSL.com TLS Transit ECC CA R2</text>
+<line x1="712.0" y1="356.0" x2="712.0" y2="391.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="724.0" y="379.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">signs</text>
+<rect x="672" y="394" width="268" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="686.0" y="416.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="start">INTERMEDIATE</text>
+<rect x="814.5" y="402.0" width="115.5" height="20.0" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="872.2" y="416.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">sent by server</text>
+<text x="686.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Cloudflare TLS Issuing ECC CA 3</text>
+<line x1="712.0" y1="456.0" x2="712.0" y2="491.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="724.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">signs</text>
+<rect x="672" y="494" width="268" height="104" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="686.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">LEAF</text>
+<rect x="814.5" y="502.0" width="115.5" height="20.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="872.2" y="516.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">sent by server</text>
+<text x="686.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">CN=example.com</text>
+<text x="686.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">not sent: the client already has it</text>
+<text x="686.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">SAN: example.com, *.example.com</text>
+<text x="686.0" y="583.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">valid Jul 29 – Oct 27, 2026 (GMT)</text>
+<text x="672.0" y="648.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">The client checks</text>
+<circle cx="681" cy="673" r="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M677.4,673.0 l2.6,2.6 l4.6,-5.0" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="698.0" y="678.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">every signature, up to the root</text>
+<circle cx="681" cy="703" r="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M677.4,703.0 l2.6,2.6 l4.6,-5.0" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="698.0" y="708.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the dates (notBefore, notAfter)</text>
+<circle cx="681" cy="733" r="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M677.4,733.0 l2.6,2.6 l4.6,-5.0" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="698.0" y="738.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the host name against the SAN</text>
+<circle cx="681" cy="763" r="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M677.4,763.0 l2.6,2.6 l4.6,-5.0" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="698.0" y="768.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">key-usage limits</text>
+<text x="40.0" y="842.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Timers: one curl -w run from the post, counted from the start of the request. Arrow slopes are not to scale.</text>
+<text x="40.0" y="868.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Messages: RFC 8446 (TLS 1.3). Names and numbers: the post's own curl, Resolve-DnsName and openssl runs for example.com.</text>
+</svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="Four ways to draw many objects in Three.js and how many draw calls each one costs">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Four ways to draw many objects</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Every Mesh is usually one draw call. The CPU pays per draw call, not per triangle.</text>
+<clipPath id="cc0"><rect x="40.0" y="104" width="218.0" height="424" rx="12"/></clipPath>
+<rect x="40.0" y="104.0" width="218.0" height="424.0" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.8"/>
+<rect x="40.0" y="104" width="218.0" height="6" fill="#dc4c3a" clip-path="url(#cc0)"/>
+<text x="56.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#dc4c3a" text-anchor="start">Plain meshes</text>
+<text x="56.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">one Mesh per object</text>
+<rect x="88.0" y="183.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 101.0 196.0)"/>
+<rect x="136.0" y="183.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 149.0 196.0)"/>
+<rect x="184.0" y="183.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 197.0 196.0)"/>
+<rect x="88.0" y="231.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 101.0 244.0)"/>
+<rect x="136.0" y="231.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 149.0 244.0)"/>
+<rect x="184.0" y="231.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 197.0 244.0)"/>
+<rect x="88.0" y="279.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 101.0 292.0)"/>
+<rect x="136.0" y="279.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 149.0 292.0)"/>
+<rect x="184.0" y="279.0" width="26.0" height="26.0" rx="3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" transform="rotate(0 197.0 292.0)"/>
+<text x="56.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHAT THE GPU GETS</text>
+<text x="56.0" y="361.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">geometry + material</text>
+<text x="56.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">set up again for each Mesh</text>
+<text x="56.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="700" fill="#dc4c3a" text-anchor="start">5,000</text>
+<text x="56.0" y="456.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">draw calls for 5,000 boxes</text>
+<line x1="52.0" y1="468.0" x2="246.0" y2="468.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="65.0" cy="488" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M61.0,488.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="82.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">Move one object later?</text>
+<text x="82.0" y="508.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">yes, each Mesh is separate</text>
+<clipPath id="cc1"><rect x="274.0" y="104" width="218.0" height="424" rx="12"/></clipPath>
+<rect x="274.0" y="104.0" width="218.0" height="424.0" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.8"/>
+<rect x="274.0" y="104" width="218.0" height="6" fill="#0d9488" clip-path="url(#cc1)"/>
+<text x="290.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#0d9488" text-anchor="start">InstancedMesh</text>
+<text x="290.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">one geometry, many copies</text>
+<rect x="324.0" y="185.0" width="22.0" height="22.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(0 335.0 196.0)"/>
+<rect x="369.0" y="182.0" width="28.0" height="28.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(15 383.0 196.0)"/>
+<rect x="422.0" y="187.0" width="18.0" height="18.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(30 431.0 196.0)"/>
+<rect x="322.0" y="231.0" width="26.0" height="26.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(10 335.0 244.0)"/>
+<rect x="373.0" y="234.0" width="20.0" height="20.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(25 383.0 244.0)"/>
+<rect x="417.0" y="230.0" width="28.0" height="28.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(5 431.0 244.0)"/>
+<rect x="323.0" y="280.0" width="24.0" height="24.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(20 335.0 292.0)"/>
+<rect x="374.0" y="283.0" width="18.0" height="18.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(35 383.0 292.0)"/>
+<rect x="418.0" y="279.0" width="26.0" height="26.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="2" transform="rotate(12 431.0 292.0)"/>
+<text x="290.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHAT THE GPU GETS</text>
+<text x="290.0" y="361.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">1 geometry + 1 material</text>
+<text x="290.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">+ one 4×4 matrix per copy</text>
+<text x="290.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="700" fill="#0d9488" text-anchor="start">1</text>
+<text x="290.0" y="456.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">draw call for 5,000 boxes</text>
+<line x1="286.0" y1="468.0" x2="480.0" y2="468.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="299.0" cy="488" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M294.9,488.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="316.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">Move one object later?</text>
+<text x="316.0" y="508.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">setMatrixAt(i, m)</text>
+<clipPath id="cc2"><rect x="508.0" y="104" width="218.0" height="424" rx="12"/></clipPath>
+<rect x="508.0" y="104.0" width="218.0" height="424.0" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.8"/>
+<rect x="508.0" y="104" width="218.0" height="6" fill="#7c3aed" clip-path="url(#cc2)"/>
+<text x="524.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#7c3aed" text-anchor="start">BatchedMesh</text>
+<text x="524.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">many geometries, one material</text>
+<rect x="556.0" y="183.0" width="26.0" height="26.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" transform="rotate(0 569.0 196.0)"/>
+<path d="M617.0,183.7 L630.0,208.3 L604.0,208.3 Z" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="665.0" cy="196.0" r="12.0" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<circle cx="665.0" cy="196.0" r="5.2" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="556.0" y="231.0" width="26.0" height="26.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" transform="rotate(0 569.0 244.0)"/>
+<path d="M617.0,231.7 L630.0,256.4 L604.0,256.4 Z" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="665.0" cy="244.0" r="12.0" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<circle cx="665.0" cy="244.0" r="5.2" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="556.0" y="279.0" width="26.0" height="26.0" rx="3" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" transform="rotate(0 569.0 292.0)"/>
+<path d="M617.0,279.6 L630.0,304.4 L604.0,304.4 Z" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="665.0" cy="292.0" r="12.0" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<circle cx="665.0" cy="292.0" r="5.2" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="524.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHAT THE GPU GETS</text>
+<text x="524.0" y="361.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">cube + cone + torus in</text>
+<text x="524.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">one buffer + 1 material</text>
+<text x="524.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="700" fill="#7c3aed" text-anchor="start">1</text>
+<text x="524.0" y="456.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">draw call for 200 objects</text>
+<line x1="520.0" y1="468.0" x2="714.0" y2="468.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="533.0" cy="488" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M529.0,488.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="550.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">Move one object later?</text>
+<text x="550.0" y="508.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">setMatrixAt(id, m)</text>
+<clipPath id="cc3"><rect x="742.0" y="104" width="218.0" height="424" rx="12"/></clipPath>
+<rect x="742.0" y="104.0" width="218.0" height="424.0" rx="12" fill="#ffffff" stroke="#fcd34d" stroke-width="1.8"/>
+<rect x="742.0" y="104" width="218.0" height="6" fill="#d97706" clip-path="url(#cc3)"/>
+<text x="758.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706" text-anchor="start">Merged geometry</text>
+<text x="758.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">static pieces baked together</text>
+<rect x="787.0" y="180.0" width="128.0" height="128.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<rect x="790.0" y="183.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="838.0" y="183.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="886.0" y="183.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="790.0" y="231.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="838.0" y="231.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="886.0" y="231.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="790.0" y="279.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="838.0" y="279.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<rect x="886.0" y="279.0" width="26" height="26" rx="3" fill="#ffffff" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="758.0" y="340.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">WHAT THE GPU GETS</text>
+<text x="758.0" y="361.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">1 big geometry</text>
+<text x="758.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">+ 1 material</text>
+<text x="758.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="700" fill="#d97706" text-anchor="start">1</text>
+<text x="758.0" y="456.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">draw call for 100 boxes</text>
+<line x1="754.0" y1="468.0" x2="948.0" y2="468.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="767.0" cy="488" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M763.6,484.6 L770.4,491.4 M770.4,484.6 L763.6,491.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="784.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">Move one object later?</text>
+<text x="784.0" y="508.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">no per-object animation</text>
+<rect x="40.0" y="546.0" width="920.0" height="54.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="58.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Rough 60 fps draw-call budgets</text>
+<text x="58.0" y="589.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">measure: renderer.info.render.calls</text>
+<text x="378.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Desktop / high-end laptop</text>
+<text x="378.0" y="589.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">≤ 1,000</text>
+<text x="578.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Mid-range mobile</text>
+<text x="578.0" y="589.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">≤ 100-200</text>
+<text x="778.0" y="569.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Low-end mobile</text>
+<text x="778.0" y="589.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">≤ 50-100</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Counts from the post's examples: 5,000 boxes (InstancedMesh), 200 cube/cone/torus objects (BatchedMesh), 100 merged boxes.</text>
+</svg>

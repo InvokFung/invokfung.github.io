@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 724" width="1000" height="724" role="img" aria-label="Why $elemMatch matters: without it, each condition on an array can be met by a different element, so student B wrongly matches; with $elemMatch one element must meet both conditions, so only A matches">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="724" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="722.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The $elemMatch trap</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">“Find students with a math grade of 70 or more.” Must both conditions hold for the same array element?</text>
+<text x="40.0" y="112.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">Wrong: dotted paths, each condition checked on its own</text>
+<rect x="40.0" y="124.0" width="920.0" height="34.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="56.0" y="146.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">db.students.find({ "scores.subject": "math", "scores.grade": { $gte: 70 } })</text>
+<rect x="40.0" y="172.0" width="440.0" height="176.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="200.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Student A</text>
+<rect x="386.9" y="184.0" width="77.1" height="24.0" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<text x="425.4" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">matches</text>
+<text x="322.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">subject</text>
+<text x="322.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">is math</text>
+<text x="382.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">grade</text>
+<text x="382.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">≥ 70</text>
+<text x="56.0" y="243.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">scores</text>
+<text x="56.0" y="272.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "math", grade: 80 }</text>
+<circle cx="322" cy="267" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M318.2,267.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="382" cy="267" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M378.2,267.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56.0" y="302.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "eng", grade: 60 }</text>
+<circle cx="322" cy="297" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M318.8,293.8 L325.2,300.2 M325.2,293.8 L318.8,300.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="382" cy="297" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M378.8,293.8 L385.2,300.2 M385.2,293.8 L378.8,300.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="52.0" y1="312.0" x2="468.0" y2="312.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="56.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">any element passes?</text>
+<circle cx="322" cy="329" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M318.2,329.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="382" cy="329" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M378.2,329.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="520.0" y="172.0" width="440.0" height="176.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="536.0" y="200.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Student B</text>
+<rect x="793.9" y="184.0" width="150.1" height="24.0" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="869.0" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">matches (wrongly)</text>
+<text x="802.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">subject</text>
+<text x="802.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">is math</text>
+<text x="862.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">grade</text>
+<text x="862.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">≥ 70</text>
+<text x="536.0" y="243.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">scores</text>
+<text x="536.0" y="272.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "math", grade: 50 }</text>
+<circle cx="802" cy="267" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M798.2,267.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="862" cy="267" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M858.8,263.8 L865.2,270.2 M865.2,263.8 L858.8,270.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="536.0" y="302.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "eng", grade: 90 }</text>
+<circle cx="802" cy="297" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M798.8,293.8 L805.2,300.2 M805.2,293.8 L798.8,300.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="862" cy="297" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M858.2,297.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="532.0" y1="312.0" x2="948.0" y2="312.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="536.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">any element passes?</text>
+<circle cx="802" cy="329" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M798.2,329.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="862" cy="329" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M858.2,329.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">B matches too: “math” comes from its first element and the 90 from its second (eng).</text>
+<text x="40.0" y="414.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#16a34a" text-anchor="start">Right: $elemMatch, both conditions on the same element</text>
+<rect x="40.0" y="426.0" width="920.0" height="34.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="56.0" y="448.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">db.students.find({ scores: { $elemMatch: { subject: "math", grade: { $gte: 70 } } } })</text>
+<rect x="40.0" y="474.0" width="440.0" height="176.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Student A</text>
+<rect x="386.9" y="486.0" width="77.1" height="24.0" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<text x="425.4" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">matches</text>
+<text x="322.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">subject</text>
+<text x="322.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">is math</text>
+<text x="382.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">grade</text>
+<text x="382.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">≥ 70</text>
+<text x="442.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">same</text>
+<text x="442.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">element</text>
+<text x="56.0" y="545.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">scores</text>
+<rect x="48.0" y="554.0" width="424.0" height="28.0" rx="6" fill="#f0fdf4" stroke="none" stroke-width="0"/>
+<text x="56.0" y="574.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "math", grade: 80 }</text>
+<circle cx="322" cy="569" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M318.2,569.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="382" cy="569" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M378.2,569.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="442" cy="569" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M438.2,569.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56.0" y="604.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "eng", grade: 60 }</text>
+<circle cx="322" cy="599" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M318.8,595.8 L325.2,602.2 M325.2,595.8 L318.8,602.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="382" cy="599" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M378.8,595.8 L385.2,602.2 M385.2,595.8 L378.8,602.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="442" cy="599" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M438.8,595.8 L445.2,602.2 M445.2,595.8 L438.8,602.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="52.0" y1="614.0" x2="468.0" y2="614.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="56.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">one element passes both?</text>
+<circle cx="442" cy="631" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M438.2,631.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="520.0" y="474.0" width="440.0" height="176.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="536.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Student B</text>
+<rect x="859.6" y="486.0" width="84.4" height="24.0" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="901.8" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">no match</text>
+<text x="802.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">subject</text>
+<text x="802.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">is math</text>
+<text x="862.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">grade</text>
+<text x="862.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">≥ 70</text>
+<text x="922.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">same</text>
+<text x="922.0" y="545.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">element</text>
+<text x="536.0" y="545.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">scores</text>
+<text x="536.0" y="574.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "math", grade: 50 }</text>
+<circle cx="802" cy="569" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M798.2,569.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="862" cy="569" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M858.8,565.8 L865.2,572.2 M865.2,565.8 L858.8,572.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="922" cy="569" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M918.8,565.8 L925.2,572.2 M925.2,565.8 L918.8,572.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="536.0" y="604.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">{ subject: "eng", grade: 90 }</text>
+<circle cx="802" cy="599" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M798.8,595.8 L805.2,602.2 M805.2,595.8 L798.8,602.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="862" cy="599" r="8.5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M858.2,599.0 l2.7,2.7 l4.9,-5.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="922" cy="599" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M918.8,595.8 L925.2,602.2 M925.2,595.8 L918.8,602.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="532.0" y1="614.0" x2="948.0" y2="614.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="536.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">one element passes both?</text>
+<circle cx="922" cy="631" r="8.5" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M918.8,627.8 L925.2,634.2 M925.2,627.8 L918.8,634.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40.0" y="674.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Only A has one element that passes both. Use $elemMatch whenever several conditions must hit the same element.</text>
+<text x="40.0" y="706.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: MongoDB Course 02, Chapter 4. Data and queries copied from the post.</text>
+</svg>

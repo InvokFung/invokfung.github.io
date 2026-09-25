@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 796" width="1000" height="796" role="img" aria-label="The OWASP Top 10:2025 categories in order, what changed from the 2021 list, and a one-line fix for each">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="796" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="794.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">OWASP Top 10:2025 at a glance</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The ten categories in order, what changed from the 2021 list, and the one-line fix for each.</text>
+<text x="56.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">CATEGORY  ·  CHANGE SINCE 2021</text>
+<text x="590.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#9ca3af" text-anchor="start">ONE-LINE FIX</text>
+<rect x="40.0" y="138.0" width="920.0" height="56.0" rx="10" fill="#f9fafb" stroke="#f9fafb" stroke-width="1"/>
+<rect x="54.0" y="152.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="171.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A01</text>
+<text x="126.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Broken Access Control</text>
+<rect x="126.0" y="169.5" width="72.8" height="20.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="162.4" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">Still #1</text>
+<text x="206.8" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">now also holds SSRF (2021's A10)</text>
+<text x="590.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Deny by default; check ownership in the query;</tspan></text>
+<text x="590.0" y="182.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>block internal IPs for any URL fetch</tspan></text>
+<rect x="54.0" y="212.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="231.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A02</text>
+<text x="126.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Security Misconfiguration</text>
+<rect x="126.0" y="229.5" width="87.0" height="20.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<text x="169.5" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#16a34a" text-anchor="middle">Up from #5</text>
+<text x="590.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Safe defaults, debug off, docs hidden,</tspan></text>
+<text x="590.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>security headers, exact CORS origins</tspan></text>
+<rect x="40.0" y="258.0" width="920.0" height="56.0" rx="10" fill="#f9fafb" stroke="#f9fafb" stroke-width="1"/>
+<rect x="54.0" y="272.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A03</text>
+<text x="126.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Software Supply Chain Failures</text>
+<rect x="126.0" y="289.5" width="37.3" height="20.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="144.7" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">New</text>
+<text x="171.3" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">grows out of 2021's “Vulnerable and Outdated Components”</text>
+<text x="590.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Lockfile + hashes, </tspan><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" fill="#7c3aed">pip-audit</tspan><tspan> / </tspan><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" fill="#7c3aed">npm audit</tspan><tspan>,</tspan></text>
+<text x="590.0" y="302.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>trusted sources, SBOM</tspan></text>
+<rect x="54.0" y="332.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="351.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A04</text>
+<text x="126.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Cryptographic Failures</text>
+<rect x="126.0" y="349.5" width="101.2" height="20.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="176.6" y="364.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">Down from #2</text>
+<text x="590.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>TLS, Argon2id, </tspan><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" fill="#7c3aed">secrets</tspan><tspan>, vetted libraries,</tspan></text>
+<text x="590.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>keys out of Git</tspan></text>
+<rect x="40.0" y="378.0" width="920.0" height="56.0" rx="10" fill="#f9fafb" stroke="#f9fafb" stroke-width="1"/>
+<rect x="54.0" y="392.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="411.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A05</text>
+<text x="126.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Injection</text>
+<rect x="126.0" y="409.5" width="101.2" height="20.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="176.6" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">Down from #3</text>
+<text x="235.2" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">still includes XSS</text>
+<text x="590.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Parameters (</tspan><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" fill="#7c3aed">?</tspan><tspan>), typed input, escape output, CSP</tspan></text>
+<rect x="54.0" y="452.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="471.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A06</text>
+<text x="126.0" y="462.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Insecure Design</text>
+<rect x="126.0" y="469.5" width="101.2" height="20.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="176.6" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">Down from #4</text>
+<text x="590.0" y="472.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Threat model; server owns prices and limits</tspan></text>
+<rect x="40.0" y="498.0" width="920.0" height="56.0" rx="10" fill="#f9fafb" stroke="#f9fafb" stroke-width="1"/>
+<rect x="54.0" y="512.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="531.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A07</text>
+<text x="126.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Authentication Failures</text>
+<rect x="126.0" y="529.5" width="65.7" height="20.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="158.8" y="544.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Renamed</text>
+<text x="199.7" y="544.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">from “Identification and Authentication Failures”</text>
+<text x="590.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Dev Essentials 11: hashing, rate limits, MFA,</tspan></text>
+<text x="590.0" y="542.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>session rotation</tspan></text>
+<rect x="54.0" y="572.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="591.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A08</text>
+<text x="126.0" y="582.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Software or Data Integrity Failures</text>
+<rect x="126.0" y="589.5" width="87.0" height="20.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="169.5" y="604.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">Same place</text>
+<text x="590.0" y="582.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>No </tspan><tspan font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" fill="#7c3aed">pickle</tspan><tspan> on untrusted data; HMAC-sign;</tspan></text>
+<text x="590.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>SRI for CDN scripts</tspan></text>
+<rect x="40.0" y="618.0" width="920.0" height="56.0" rx="10" fill="#f9fafb" stroke="#f9fafb" stroke-width="1"/>
+<rect x="54.0" y="632.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="651.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A09</text>
+<text x="126.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Security Logging &amp; Alerting Failures</text>
+<rect x="126.0" y="649.5" width="65.7" height="20.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="158.8" y="664.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Renamed</text>
+<text x="199.7" y="664.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">from “…Logging and Monitoring Failures”</text>
+<text x="590.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Log security events as JSON, never secrets,</tspan></text>
+<text x="590.0" y="662.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>alert a human</tspan></text>
+<rect x="54.0" y="692.0" width="56.0" height="28.0" rx="7" fill="#1f2937" stroke="#1f2937" stroke-width="1"/>
+<text x="82.0" y="711.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">A10</text>
+<text x="126.0" y="702.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Mishandling of Exceptional Conditions</text>
+<rect x="126.0" y="709.5" width="37.3" height="20.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="144.7" y="724.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">New</text>
+<text x="590.0" y="712.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" fill="#1f2937"><tspan>Fail closed, global handler, generic errors with an id</tspan></text>
+<line x1="572.0" y1="146.0" x2="572.0" y2="726.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="778.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: OWASP Top 10:2025 (owasp.org/Top10/2025). An awareness list, not a full standard; for a testable checklist, see the OWASP ASVS.</text>
+</svg>

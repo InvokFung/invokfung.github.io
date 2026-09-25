@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 788" width="1000" height="788" role="img" aria-label="Three writes on the same user document: updateOne with $set changes only named fields, replaceOne swaps the whole document except _id, and an upsert inserts a new document when nothing matches">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="788" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="786.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One document, three kinds of write</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">updateOne changes only the fields you name. replaceOne swaps the whole document. Upsert inserts on no match.</text>
+<text x="40.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Start</text>
+<text x="90.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">seed user 1 from Post 00 (each write below starts from this)</text>
+<rect x="40.0" y="132.0" width="66.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="50.0" y="151.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">_id: 1</text>
+<rect x="114.8" y="132.0" width="105.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="124.8" y="151.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">name: "Ada"</text>
+<rect x="228.6" y="132.0" width="129.2" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="238.6" y="151.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">email: "ada@x"</text>
+<rect x="365.8" y="132.0" width="74.6" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="375.8" y="151.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">age: 30</text>
+<rect x="448.4" y="132.0" width="183.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="458.4" y="151.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">tags: ["math", "eng"]</text>
+<text x="40.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">1 · updateOne + $set</text>
+<rect x="40.0" y="208.0" width="430.0" height="122.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="234.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">db.users.updateOne(</text>
+<text x="69.1" y="254.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ name: "Ada" },</text>
+<text x="69.1" y="274.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ $set: { age: 31,</text>
+<text x="144.5" y="294.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">"address.city": "Cambridge" } }</text>
+<text x="54.0" y="314.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">)</text>
+<line x1="478.0" y1="269.0" x2="502.0" y2="269.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="512.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">Result</text>
+<rect x="512.0" y="208.0" width="66.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="522.0" y="227.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">_id: 1</text>
+<rect x="586.8" y="208.0" width="105.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="596.8" y="227.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">name: "Ada"</text>
+<rect x="700.6" y="208.0" width="129.2" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="710.6" y="227.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">email: "ada@x"</text>
+<rect x="837.8" y="208.0" width="74.6" height="28.0" rx="7" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="847.8" y="227.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#92400e" text-anchor="start">age: 31</text>
+<rect x="512.0" y="244.0" width="183.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="522.0" y="263.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">tags: ["math", "eng"]</text>
+<rect x="703.8" y="244.0" width="254.0" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="713.8" y="263.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#0f766e" text-anchor="start">address: { city: "Cambridge" }</text>
+<text x="512.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Only the named fields change. Dot notation</text>
+<text x="512.0" y="313.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">creates the missing address sub-document.</text>
+<line x1="40.0" y1="346.0" x2="960.0" y2="346.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="366.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">2 · replaceOne</text>
+<rect x="40.0" y="378.0" width="430.0" height="102.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="404.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">db.users.replaceOne(</text>
+<text x="69.1" y="424.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ name: "Ada" },</text>
+<text x="69.1" y="444.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ name: "Ada Lovelace", email: "ada@x", age: 31 }</text>
+<text x="54.0" y="464.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">)</text>
+<line x1="478.0" y1="429.0" x2="502.0" y2="429.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="512.0" y="366.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">Result</text>
+<rect x="512.0" y="378.0" width="66.8" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="522.0" y="397.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">_id: 1</text>
+<rect x="586.8" y="378.0" width="176.0" height="28.0" rx="7" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="596.8" y="397.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#92400e" text-anchor="start">name: "Ada Lovelace"</text>
+<rect x="770.8" y="378.0" width="129.2" height="28.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="780.8" y="397.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">email: "ada@x"</text>
+<rect x="512.0" y="414.0" width="74.6" height="28.0" rx="7" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="522.0" y="433.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#92400e" text-anchor="start">age: 31</text>
+<rect x="594.6" y="414.0" width="183.8" height="28.0" rx="7" fill="#fef2f2" stroke="#fecaca" stroke-width="1.4"/>
+<text x="604.6" y="433.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#dc4c3a" text-anchor="start">tags: ["math", "eng"]</text>
+<line x1="602.6" y1="428.5" x2="770.4" y2="428.5" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round"/>
+<text x="512.0" y="464.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The whole document is replaced (except _id).</text>
+<text x="512.0" y="483.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">tags was not in the new document, so it is gone.</text>
+<line x1="40.0" y1="510.0" x2="960.0" y2="510.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">3 · updateOne with upsert: true</text>
+<rect x="40.0" y="542.0" width="430.0" height="142.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="568.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">db.users.updateOne(</text>
+<text x="69.1" y="588.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ email: "new@x" },</text>
+<text x="69.1" y="608.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ $set: { name: "New User",</text>
+<text x="144.5" y="628.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">created_at: new Date() } },</text>
+<text x="69.1" y="648.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">{ upsert: true }</text>
+<text x="54.0" y="668.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">)</text>
+<line x1="478.0" y1="613.0" x2="502.0" y2="613.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="512.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">Result</text>
+<rect x="512.0" y="542.0" width="160.4" height="28.0" rx="7" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="522.0" y="561.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">_id: ObjectId(...)</text>
+<rect x="680.4" y="542.0" width="129.2" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="690.4" y="561.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#0f766e" text-anchor="start">email: "new@x"</text>
+<rect x="512.0" y="600.0" width="144.8" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="522.0" y="619.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#0f766e" text-anchor="start">name: "New User"</text>
+<rect x="664.8" y="600.0" width="207.2" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="674.8" y="619.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#0f766e" text-anchor="start">created_at: ISODate(...)</text>
+<text x="592.2" y="587.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">auto</text>
+<text x="745.0" y="587.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#7c3aed" text-anchor="middle">from filter</text>
+<text x="584.4" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0d9488" text-anchor="middle">from $set</text>
+<text x="768.4" y="645.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#0d9488" text-anchor="middle">from $set</text>
+<text x="512.0" y="672.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">No document has email "new@x", so it inserts</text>
+<text x="512.0" y="691.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">one: the filter fields + the update fields.</text>
+<line x1="40.0" y1="706.0" x2="960.0" y2="706.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="40.0" y="719.0" width="18.0" height="18.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="66.0" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">kept</text>
+<rect x="121.6" y="719.0" width="18.0" height="18.0" rx="4" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="147.6" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">changed</text>
+<rect x="225.4" y="719.0" width="18.0" height="18.0" rx="4" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="251.4" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">added</text>
+<rect x="314.4" y="719.0" width="18.0" height="18.0" rx="4" fill="#fef2f2" stroke="#fecaca" stroke-width="1.4"/>
+<line x1="317.4" y1="728.0" x2="329.4" y2="728.0" stroke="#dc4c3a" stroke-width="1.4" stroke-linecap="round"/>
+<text x="340.4" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">removed</text>
+<rect x="418.2" y="719.0" width="18.0" height="18.0" rx="4" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="444.2" y="733.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">auto-generated _id</text>
+<text x="40.0" y="770.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: MongoDB Course 01, Chapters 3, 5 and 6. Start document: Post 00, Exercise 3.</text>
+</svg>

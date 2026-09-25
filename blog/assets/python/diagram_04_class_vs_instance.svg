@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" role="img" aria-label="Class Dog holds the shared class attribute species; instances a and b each hold their own name. A mutable class attribute list is shared by every instance unless it is created in __init__">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="630" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="628.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Class attributes vs instance attributes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A class attribute lives once, on the class, shared by all instances. self.name lives on each instance.</text>
+<text x="40.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">SHARED VS PER-INSTANCE</text>
+<rect x="40.0" y="130.0" width="460.0" height="100.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="56.0" y="157.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">class Dog</text>
+<text x="56.0" y="186.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">species = "Canis familiaris"</text>
+<text x="56.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">class attribute: one copy, shared by all dogs</text>
+<rect x="40.0" y="300.0" width="210.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="54.0" y="325.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">a = Dog("Rex")</text>
+<text x="54.0" y="350.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">name = "Rex"</text>
+<rect x="290.0" y="300.0" width="210.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="304.0" y="325.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">b = Dog("Buddy")</text>
+<text x="304.0" y="350.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">name = "Buddy"</text>
+<text x="54.0" y="386.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">instance attribute (self.name)</text>
+<line x1="145.0" y1="296.0" x2="145.0" y2="234.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<line x1="395.0" y1="296.0" x2="395.0" y2="234.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<text x="270.0" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle">made from</text>
+<text x="40.0" y="450.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">a.species</text>
+<text x="136.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">→</text>
+<text x="158.0" y="450.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">"Canis familiaris"</text>
+<text x="340.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">class attribute</text>
+<text x="40.0" y="478.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">a.name</text>
+<text x="136.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">→</text>
+<text x="158.0" y="478.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">"Rex"</text>
+<text x="340.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">instance attribute</text>
+<rect x="40.0" y="496.0" width="460.0" height="58.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="54.0" y="520.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">Dog.species = "Canis lupus familiaris"</text>
+<text x="54.0" y="542.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">changes it once, so a.species and b.species both update</text>
+<line x1="534.0" y1="108.0" x2="534.0" y2="584.0" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="round"/>
+<text x="556.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">TRAP: A MUTABLE CLASS ATTRIBUTE</text>
+<rect x="556.0" y="130.0" width="412.0" height="158.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="570.0" y="154.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">class Bad:</text>
+<text x="570.0" y="173.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">    items = []    # SHARED across all instances!</text>
+<text x="570.0" y="193.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">    def add(self, x):</text>
+<text x="570.0" y="212.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">        self.items.append(x)</text>
+<text x="570.0" y="232.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">a = Bad(); a.add(1)</text>
+<text x="570.0" y="251.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">b = Bad(); b.add(2)</text>
+<text x="570.0" y="271.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">print(a.items, b.items)   # [1, 2] [1, 2]  surprise!</text>
+<rect x="698.0" y="308.5" width="270.0" height="76.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="712.0" y="332.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">class Bad</text>
+<text x="712.0" y="364.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">items</text>
+<rect x="774.0" y="340.5" width="76.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="778.0" y="344.5" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="795.0" y="364.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="812.0" y="344.5" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="829.0" y="364.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="862.0" y="364.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">one list</text>
+<rect x="578.0" y="314.5" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="590.5" y="333.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">a</text>
+<line x1="607.0" y1="328.5" x2="694.0" y2="338.5" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="578.0" y="350.5" width="25.0" height="28.0" rx="14" fill="#ffffff" stroke="#1f2937" stroke-width="1.8"/>
+<text x="590.5" y="369.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">b</text>
+<line x1="607.0" y1="364.5" x2="694.0" y2="354.5" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="578.0" y="404.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">a.items and b.items are this same shared list.</text>
+<rect x="556.0" y="420.5" width="412.0" height="150.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<circle cx="578" cy="442.5" r="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<path d="M574.0,442.5 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="596.0" y="447.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Fix: initialise in __init__</text>
+<text x="574.0" y="476.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">def __init__(self):</text>
+<text x="574.0" y="498.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">    self.items = []</text>
+<text x="574.0" y="535.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">a.items</text>
+<rect x="646.0" y="511.5" width="42.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="650.0" y="515.5" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="667.0" y="535.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="744.0" y="535.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">b.items</text>
+<rect x="816.0" y="511.5" width="42.0" height="38.0" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="820.0" y="515.5" width="34.0" height="30.0" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="837.0" y="535.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="574.0" y="560.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="start">Each instance gets its own list.</text>
+<text x="40.0" y="612.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Code from Chapter 2 of the post, run as written; the fix follows the post's own advice.</text>
+</svg>

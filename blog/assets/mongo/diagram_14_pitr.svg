@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-label="Timeline comparing a snapshot-only restore with point-in-time recovery after an accidental collection drop">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="660" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="658.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Point-in-time recovery vs a snapshot alone</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Example from the post: a collection was dropped by accident 22 minutes ago. Timeline not to scale.</text>
+<defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fef2f2"/><line x1="0" y1="0" x2="0" y2="8" stroke="#dc4c3a" stroke-width="2.5" opacity="0.55"/></pattern><marker id="ahT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker></defs>
+<path d="M290.0,142 L290.0,134 L940.0,134 L940.0,142" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="615.0" y="124.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">retention window: restore to any second in here (typical: 7–30 days continuous)</text>
+<rect x="290.0" y="226.0" width="650.0" height="14.0" rx="4" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="300.0" y="258.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">continuous oplog archive</text>
+<line x1="230.0" y1="214.0" x2="948.0" y2="214.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="222.0" y="219.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="end">time</text>
+<text x="940.0" y="198.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">now</text>
+<line x1="940.0" y1="206.0" x2="940.0" y2="222.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+<rect x="281.0" y="205.0" width="18.0" height="18.0" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="290.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">base snapshot</text>
+<rect x="501.0" y="205.0" width="18.0" height="18.0" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="510.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">base snapshot</text>
+<rect x="721.0" y="205.0" width="18.0" height="18.0" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="730.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">base snapshot</text>
+<line x1="868.0" y1="152.0" x2="868.0" y2="440.0" stroke="#dc4c3a" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<circle cx="868" cy="214" r="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M864.2,210.2 L871.8,217.8 M871.8,210.2 L864.2,217.8" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="856.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="end">collection dropped, 22 minutes ago</text>
+<text x="40.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Snapshot only</text>
+<text x="40.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">back to the last snapshot</text>
+<line x1="230.0" y1="302.0" x2="940.0" y2="302.0" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="round"/>
+<text x="40.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">PITR</text>
+<text x="40.0" y="400.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">snapshot + oplog replay</text>
+<line x1="230.0" y1="386.0" x2="940.0" y2="386.0" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="730.0" y="292" width="138.0" height="20" rx="3" fill="url(#hatch)" stroke="#dc4c3a" stroke-width="1.2"/>
+<rect x="721.0" y="293.0" width="18.0" height="18.0" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="714.0" y="307.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="end">restored state</text>
+<text x="856.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="end">writes after the snapshot are lost</text>
+<rect x="721.0" y="377.0" width="18.0" height="18.0" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<line x1="741" y1="386" x2="858" y2="386" stroke="#0d9488" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ahT)"/>
+<text x="714.0" y="391.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="end">start from it</text>
+<text x="856.0" y="418.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">replay the oplog to the second before</text>
+<circle cx="894" cy="386" r="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M889.5,386.0 l3.2,3.2 l5.8,-6.2" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="40.0" y1="458.0" x2="960.0" y2="458.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="40.0" y="478.0" width="360.0" height="140.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.3"/>
+<text x="56.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Measure it in drills</text>
+<text x="56.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">RPO</text>
+<text x="100.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">how much data you would lose</text>
+<text x="100.0" y="554.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">(backup frequency + oplog window)</text>
+<text x="56.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">RTO</text>
+<text x="100.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">how long the restore takes</text>
+<rect x="420.0" y="478.0" width="540.0" height="140.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.3"/>
+<text x="436.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">Restore drill schedule</text>
+<text x="436.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Monthly</text>
+<text x="528.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">restore a random recent backup; check a query; record RTO</text>
+<text x="436.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Quarterly</text>
+<text x="528.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">full PITR drill: restore to a specific past second</text>
+<text x="436.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Annually</text>
+<text x="528.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">tabletop disaster (region down); walk the runbook</text>
+<text x="40.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 4–5. PITR tools named there: Atlas continuous backup; Percona Backup for MongoDB or Cloud Manager self-hosted.</text>
+</svg>

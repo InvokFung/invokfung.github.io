@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" role="img" aria-label="Java exception hierarchy: Throwable, Error, Exception, checked exceptions and RuntimeException">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="670" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="668.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Java exceptions: the family tree</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A solid line means “extends” (the child sits below its parent). Checked exceptions must be declared or handled.</text>
+<rect x="307.5" y="104.0" width="220.0" height="60.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="2"/>
+<text x="417.5" y="131.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Throwable</text>
+<text x="417.5" y="153.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">the root</text>
+<rect x="40.0" y="214.0" width="280.0" height="62.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="180.0" y="241.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="middle">Error</text>
+<text x="180.0" y="263.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">JVM-level; usually don't catch</text>
+<rect x="535.0" y="214.0" width="240.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="655.0" y="241.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#2563eb" text-anchor="middle">Exception</text>
+<text x="655.0" y="263.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">recoverable</text>
+<path d="M417.5,164 L417.5,189 M180.0,214 L180.0,189 L655.0,189 L655.0,214" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="180.0" y1="276.0" x2="180.0" y2="330.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 5"/>
+<text x="190.0" y="308.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start" font-style="italic">e.g.</text>
+<rect x="70.0" y="330.0" width="220.0" height="36.0" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1.6"/>
+<text x="84.0" y="353.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">OutOfMemoryError</text>
+<rect x="40.0" y="410.0" width="280.0" height="158.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Trick from the post</text>
+<text x="56.0" y="464.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Prefer unchecked exceptions for</text>
+<text x="56.0" y="485.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">programming errors (bad arg,</text>
+<text x="56.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">missing key). Reserve checked</text>
+<text x="56.0" y="527.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">exceptions for genuinely</text>
+<text x="56.0" y="548.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">recoverable I/O.</text>
+<path d="M655.0,276 L655.0,302 M495.0,330 L495.0,302 L815.0,302 L815.0,330" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="350.0" y="330.0" width="290.0" height="262" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="495.0" y="357.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="middle">Checked exceptions</text>
+<text x="495.0" y="379.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">must be declared (throws)</text>
+<text x="495.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">or handled (catch)</text>
+<rect x="372.0" y="416.0" width="246.0" height="36.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.6"/>
+<text x="386.0" y="439.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">IOException</text>
+<rect x="372.0" y="462.0" width="246.0" height="36.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.6"/>
+<text x="386.0" y="485.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">SQLException</text>
+<rect x="372.0" y="508.0" width="246.0" height="36.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.6"/>
+<text x="386.0" y="531.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">InterruptedException</text>
+<text x="386.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">… and more</text>
+<rect x="670.0" y="330.0" width="290.0" height="62.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="815.0" y="357.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#0d9488" text-anchor="middle">RuntimeException</text>
+<text x="815.0" y="379.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">unchecked</text>
+<rect x="710.0" y="410.0" width="250.0" height="36.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<text x="724.0" y="433.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">NullPointerException</text>
+<line x1="692.0" y1="428.0" x2="710.0" y2="428.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="710.0" y="456.0" width="250.0" height="36.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<text x="724.0" y="479.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">IllegalArgumentException</text>
+<line x1="692.0" y1="474.0" x2="710.0" y2="474.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="710.0" y="502.0" width="250.0" height="36.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<text x="724.0" y="525.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">IllegalStateException</text>
+<line x1="692.0" y1="520.0" x2="710.0" y2="520.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
+<text x="724.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">… and more, plus your own:</text>
+<rect x="710.0" y="572.0" width="250.0" height="36.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="724.0" y="595.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">InsufficientFundsException</text>
+<line x1="692.0" y1="590.0" x2="710.0" y2="590.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="692.0" y1="392.0" x2="692.0" y2="590.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
+<text x="40.0" y="652.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post, Chapter 6 (Exception handling). InsufficientFundsException is the post's custom-exception example.</text>
+</svg>

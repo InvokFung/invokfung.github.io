@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 590" width="1000" height="590" role="img" aria-label="Pixel ratio: a 400 by 800 canvas renders 4 times the pixels at ratio 2 and 9 times at ratio 3">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="590" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="588.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Pixel ratio: why the cap at 2 matters</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The same 400 × 800 logical canvas on a phone. Pixels to shade grow with the square of the ratio.</text>
+<rect x="64.0" y="348.0" width="52.0" height="104.0" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<line x1="77.0" y1="350.0" x2="77.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="90.0" y1="350.0" x2="90.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="103.0" y1="350.0" x2="103.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="361.0" x2="114.0" y2="361.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="374.0" x2="114.0" y2="374.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="387.0" x2="114.0" y2="387.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="400.0" x2="114.0" y2="400.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="413.0" x2="114.0" y2="413.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="426.0" x2="114.0" y2="426.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="66.0" y1="439.0" x2="114.0" y2="439.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<rect x="64.0" y="348.0" width="52.0" height="104.0" rx="6" fill="none" stroke="#d97706" stroke-width="2"/>
+<text x="90.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">DPR 1</text>
+<text x="90.0" y="498.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">400 × 800</text>
+<text x="90.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">0.32 MP</text>
+<text x="90.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#d97706" text-anchor="middle">1×</text>
+<rect x="154.0" y="296.0" width="78.0" height="156.0" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<line x1="167.0" y1="298.0" x2="167.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="180.0" y1="298.0" x2="180.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="193.0" y1="298.0" x2="193.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="206.0" y1="298.0" x2="206.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="219.0" y1="298.0" x2="219.0" y2="450.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="309.0" x2="230.0" y2="309.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="322.0" x2="230.0" y2="322.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="335.0" x2="230.0" y2="335.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="348.0" x2="230.0" y2="348.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="361.0" x2="230.0" y2="361.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="374.0" x2="230.0" y2="374.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="387.0" x2="230.0" y2="387.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="400.0" x2="230.0" y2="400.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="413.0" x2="230.0" y2="413.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="426.0" x2="230.0" y2="426.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<line x1="156.0" y1="439.0" x2="230.0" y2="439.0" stroke="#fcd34d" stroke-width="1" stroke-linecap="butt"/>
+<rect x="154.0" y="296.0" width="78.0" height="156.0" rx="6" fill="none" stroke="#d97706" stroke-width="2"/>
+<text x="193.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">DPR 1.5</text>
+<text x="193.0" y="498.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">600 × 1200</text>
+<text x="193.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">0.72 MP</text>
+<text x="193.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#d97706" text-anchor="middle">2.25×</text>
+<rect x="270.0" y="244.0" width="104.0" height="208.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<line x1="283.0" y1="246.0" x2="283.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="296.0" y1="246.0" x2="296.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="309.0" y1="246.0" x2="309.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="322.0" y1="246.0" x2="322.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="335.0" y1="246.0" x2="335.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="348.0" y1="246.0" x2="348.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="361.0" y1="246.0" x2="361.0" y2="450.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="257.0" x2="372.0" y2="257.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="270.0" x2="372.0" y2="270.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="283.0" x2="372.0" y2="283.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="296.0" x2="372.0" y2="296.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="309.0" x2="372.0" y2="309.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="322.0" x2="372.0" y2="322.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="335.0" x2="372.0" y2="335.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="348.0" x2="372.0" y2="348.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="361.0" x2="372.0" y2="361.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="374.0" x2="372.0" y2="374.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="387.0" x2="372.0" y2="387.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="400.0" x2="372.0" y2="400.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="413.0" x2="372.0" y2="413.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="426.0" x2="372.0" y2="426.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<line x1="272.0" y1="439.0" x2="372.0" y2="439.0" stroke="#99f6e4" stroke-width="1" stroke-linecap="butt"/>
+<rect x="270.0" y="244.0" width="104.0" height="208.0" rx="6" fill="none" stroke="#0d9488" stroke-width="2"/>
+<text x="322.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">DPR 2</text>
+<text x="322.0" y="498.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">800 × 1600</text>
+<text x="322.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">1.28 MP</text>
+<text x="322.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#0d9488" text-anchor="middle">4×</text>
+<rect x="412.0" y="140.0" width="156.0" height="312.0" rx="6" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<line x1="425.0" y1="142.0" x2="425.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="438.0" y1="142.0" x2="438.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="451.0" y1="142.0" x2="451.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="464.0" y1="142.0" x2="464.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="477.0" y1="142.0" x2="477.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="490.0" y1="142.0" x2="490.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="503.0" y1="142.0" x2="503.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="516.0" y1="142.0" x2="516.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="529.0" y1="142.0" x2="529.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="542.0" y1="142.0" x2="542.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="555.0" y1="142.0" x2="555.0" y2="450.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="153.0" x2="566.0" y2="153.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="166.0" x2="566.0" y2="166.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="179.0" x2="566.0" y2="179.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="192.0" x2="566.0" y2="192.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="205.0" x2="566.0" y2="205.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="218.0" x2="566.0" y2="218.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="231.0" x2="566.0" y2="231.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="244.0" x2="566.0" y2="244.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="257.0" x2="566.0" y2="257.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="270.0" x2="566.0" y2="270.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="283.0" x2="566.0" y2="283.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="296.0" x2="566.0" y2="296.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="309.0" x2="566.0" y2="309.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="322.0" x2="566.0" y2="322.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="335.0" x2="566.0" y2="335.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="348.0" x2="566.0" y2="348.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="361.0" x2="566.0" y2="361.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="374.0" x2="566.0" y2="374.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="387.0" x2="566.0" y2="387.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="400.0" x2="566.0" y2="400.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="413.0" x2="566.0" y2="413.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="426.0" x2="566.0" y2="426.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<line x1="414.0" y1="439.0" x2="566.0" y2="439.0" stroke="#fecaca" stroke-width="1" stroke-linecap="butt"/>
+<rect x="412.0" y="140.0" width="156.0" height="312.0" rx="6" fill="none" stroke="#dc4c3a" stroke-width="2"/>
+<text x="490.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">DPR 3</text>
+<text x="490.0" y="498.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">1200 × 2400</text>
+<text x="490.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">2.88 MP</text>
+<text x="490.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#dc4c3a" text-anchor="middle">9×</text>
+<text x="64.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">One grid cell = 100 × 100 real pixels.</text>
+<text x="148.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#d97706" text-anchor="middle">low-end options</text>
+<text x="322.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="middle">the standard cap</text>
+<text x="490.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="middle">what a phone may report</text>
+<text x="590.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Cap it in one line</text>
+<rect x="590.0" y="142.0" width="370.0" height="83.5" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="604.0" y="166.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">renderer.setPixelRatio(</text>
+<text x="604.0" y="186.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">  Math.min(window.devicePixelRatio, 2)</text>
+<text x="604.0" y="207.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">);</text>
+<rect x="590" y="246" width="4" height="82" rx="2" fill="#0d9488"/>
+<text x="606.0" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Standard: cap at 2</text>
+<text x="606.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">1.28 MP instead of 2.88 MP:</text>
+<text x="606.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">2.25× fewer pixels than DPR 3.</text>
+<text x="606.0" y="324.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Visual difference: essentially invisible.</text>
+<rect x="590" y="356" width="4" height="42" rx="2" fill="#d97706"/>
+<text x="606.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">Low-end devices: cap at 1.5 or 1</text>
+<text x="606.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Combine it with a quality slider.</text>
+<rect x="590" y="426" width="4" height="62" rx="2" fill="#dc4c3a"/>
+<text x="606.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Post-processing pays it again</text>
+<text x="606.0" y="464.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Each pass is another full-screen render:</text>
+<text x="606.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">1.28 MP per pass at DPR 2.</text>
+<text x="40.0" y="572.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">MP = million pixels. Pixels = (400 × ratio) × (800 × ratio). Numbers from the post's Chapter 1 and Chapter 8.</text>
+</svg>

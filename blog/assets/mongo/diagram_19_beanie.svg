@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-label="FastAPI plus Beanie: lifespan setup once per process, then one POST /users request passing through UserCreate, User and UserOut">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="600" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="598.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One request through FastAPI + Beanie</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Three Pydantic models keep the request body, the stored document and the response body apart.</text>
+<rect x="40.0" y="96.0" width="920.0" height="104.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">Once per process:</text>
+<text x="196.0" y="122.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">lifespan(app)</text>
+<rect x="58.0" y="136.0" width="203.0" height="50.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="70.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Startup</text>
+<text x="70.0" y="176.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">AsyncIOMotorClient(...)</text>
+<line x1="264.0" y1="161.0" x2="282.0" y2="161.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="285.0" y="136.0" width="203.0" height="50.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="297.0" y="156.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">init_beanie(...)</text>
+<text x="297.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">registers models + indexes</text>
+<line x1="491.0" y1="161.0" x2="509.0" y2="161.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="512.0" y="136.0" width="203.0" height="50.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="524.0" y="156.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">yield</text>
+<text x="524.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">the app serves requests</text>
+<line x1="718.0" y1="161.0" x2="736.0" y2="161.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="739.0" y="136.0" width="203.0" height="50.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="751.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Shutdown</text>
+<text x="751.0" y="176.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">client.close()</text>
+<rect x="40.0" y="236.0" width="220.0" height="192.0" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="56.0" y="266.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16.5" font-weight="700" fill="#d97706" text-anchor="start">UserCreate</text>
+<text x="56.0" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">REQUEST BODY</text>
+<text x="56.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">name: str</text>
+<text x="56.0" y="336.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">email: EmailStr</text>
+<text x="56.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Pydantic validates it</text>
+<text x="56.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">on construction</text>
+<rect x="390.0" y="236.0" width="220.0" height="192.0" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="406.0" y="266.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16.5" font-weight="700" fill="#0d9488" text-anchor="start">User</text>
+<text x="406.0" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">DATABASE DOCUMENT</text>
+<text x="406.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">name: str</text>
+<text x="406.0" y="336.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">email: EmailStr</text>
+<text x="406.0" y="356.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">created_at: datetime</text>
+<text x="406.0" y="394.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">@before_event(Insert)</text>
+<text x="406.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">hook: lower-cases the email</text>
+<rect x="740.0" y="236.0" width="220.0" height="192.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="756.0" y="266.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16.5" font-weight="700" fill="#7c3aed" text-anchor="start">UserOut</text>
+<text x="756.0" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">RESPONSE BODY</text>
+<text x="756.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">id: str</text>
+<text x="756.0" y="336.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">name: str</text>
+<text x="756.0" y="356.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">email: str</text>
+<text x="756.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">no internal fields</text>
+<text x="756.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">(e.g. __v, internal_flag)</text>
+<text x="466.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#0d9488" text-anchor="start">(Document)</text>
+<line x1="266.0" y1="306.0" x2="384.0" y2="306.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="325.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">build the doc</text>
+<text x="325.0" y="328.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">model_dump()</text>
+<line x1="616.0" y1="306.0" x2="734.0" y2="306.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="675.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">safe fields</text>
+<text x="675.0" y="328.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">from_doc(u)</text>
+<rect x="40.0" y="480.0" width="220.0" height="56.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Client</text>
+<text x="110.0" y="503.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">POST /users</text>
+<text x="56.0" y="524.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">JSON { name, email }</text>
+<line x1="150.0" y1="476.0" x2="150.0" y2="434.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="480.0" width="220.0" height="56.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="406.0" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">MongoDB · users</text>
+<text x="406.0" y="524.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">via Motor (async driver)</text>
+<line x1="450.0" y1="432.0" x2="450.0" y2="474.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="462.0" y="458.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">await u.insert()</text>
+<rect x="740.0" y="480.0" width="220.0" height="56.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="756.0" y="503.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">201 Created</text>
+<text x="756.0" y="524.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">UserOut as JSON to the client</text>
+<line x1="850.0" y1="432.0" x2="850.0" y2="474.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="40.0" y="582.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Chapters 1, 2 and 11 of this post (create_user endpoint, response_model=UserOut, status_code=201).</text>
+</svg>

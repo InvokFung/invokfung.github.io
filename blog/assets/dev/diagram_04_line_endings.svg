@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-label="Line endings: the bytes of CRLF and LF, and what core.autocrlf and .gitattributes do on commit and on checkout">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="660" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="658.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Line endings: the bytes, and what Git does with them</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Git can convert line endings when it moves a file between your working tree and the repository.</text>
+<text x="40.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">The bytes of</text>
+<text x="131.0" y="116.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">printf 'a\r\nb\n'</text>
+<rect x="40.0" y="132.0" width="54.0" height="40.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="67.0" y="159.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">61</text>
+<text x="67.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">a</text>
+<rect x="106.0" y="132.0" width="54.0" height="40.0" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.6"/>
+<text x="133.0" y="159.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="middle">0D</text>
+<text x="133.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">\r  CR</text>
+<rect x="172.0" y="132.0" width="54.0" height="40.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="199.0" y="159.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#0d9488" text-anchor="middle">0A</text>
+<text x="199.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">\n  LF</text>
+<rect x="238.0" y="132.0" width="54.0" height="40.0" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="265.0" y="159.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">62</text>
+<text x="265.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">b</text>
+<rect x="304.0" y="132.0" width="54.0" height="40.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="331.0" y="159.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#0d9488" text-anchor="middle">0A</text>
+<text x="331.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">\n  LF</text>
+<path d="M42,202 L42,208 L224,208 L224,202" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="133.0" y="227.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">CRLF line (Windows)</text>
+<path d="M240,202 L240,208 L356,208 L356,202" fill="none" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="298.0" y="227.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">LF line (Linux, macOS)</text>
+<rect x="404.0" y="100.0" width="556.0" height="122.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="418.0" y="124.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">$ cat -A mixed.txt   (^M = CR, $ = end of line)</text>
+<text x="418.0" y="144.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">a^M$</text>
+<text x="418.0" y="164.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">b$</text>
+<text x="418.0" y="184.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">$ file mixed.txt</text>
+<text x="418.0" y="204.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">mixed.txt: ASCII text, with CRLF, LF line terminators</text>
+<line x1="40.0" y1="246.0" x2="960.0" y2="246.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">What Git does with a file you saved with CRLF</text>
+<text x="336.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle">Working tree</text>
+<text x="470.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle">on commit</text>
+<text x="612.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle">Repository</text>
+<text x="754.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle">on checkout</text>
+<text x="888.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="middle">Working tree</text>
+<text x="40.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Setting</text>
+<text x="40.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="start">Per machine: core.autocrlf lives in each person's own git config</text>
+<rect x="40.0" y="346.0" width="920.0" height="46.0" rx="8" fill="#f9fafb" stroke="#eef0f3" stroke-width="1"/>
+<text x="54.0" y="366.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">core.autocrlf = true</text>
+<text x="54.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Windows (GitHub's advice)</text>
+<rect x="294.0" y="353.0" width="84.0" height="32.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="336.0" y="374.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">CRLF</text>
+<line x1="386.0" y1="369.0" x2="554.0" y2="369.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="470.0" y="360.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">CRLF → LF</text>
+<rect x="570.0" y="353.0" width="84.0" height="32.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="612.0" y="374.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">LF</text>
+<line x1="670.0" y1="369.0" x2="838.0" y2="369.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="754.0" y="360.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">LF → CRLF</text>
+<rect x="846.0" y="353.0" width="84.0" height="32.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="888.0" y="374.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">CRLF</text>
+<rect x="40.0" y="400.0" width="920.0" height="46.0" rx="8" fill="#f9fafb" stroke="#eef0f3" stroke-width="1"/>
+<text x="54.0" y="420.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">core.autocrlf = input</text>
+<text x="54.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">macOS / Linux (GitHub's advice)</text>
+<rect x="294.0" y="407.0" width="84.0" height="32.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="336.0" y="428.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">CRLF</text>
+<line x1="386.0" y1="423.0" x2="554.0" y2="423.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="470.0" y="414.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">CRLF → LF</text>
+<rect x="570.0" y="407.0" width="84.0" height="32.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="612.0" y="428.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">LF</text>
+<line x1="670.0" y1="423.0" x2="838.0" y2="423.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<text x="754.0" y="414.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">no change</text>
+<rect x="846.0" y="407.0" width="84.0" height="32.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="888.0" y="428.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">LF</text>
+<rect x="40.0" y="454.0" width="920.0" height="46.0" rx="8" fill="#f9fafb" stroke="#eef0f3" stroke-width="1"/>
+<text x="54.0" y="474.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">core.autocrlf = false</text>
+<text x="54.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">You manage endings yourself</text>
+<rect x="294.0" y="461.0" width="84.0" height="32.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="336.0" y="482.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">CRLF</text>
+<line x1="386.0" y1="477.0" x2="554.0" y2="477.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<text x="470.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">no change</text>
+<rect x="570.0" y="461.0" width="84.0" height="32.0" rx="8" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="612.0" y="482.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">CRLF</text>
+<line x1="670.0" y1="477.0" x2="838.0" y2="477.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<text x="754.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">no change</text>
+<rect x="846.0" y="461.0" width="84.0" height="32.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="888.0" y="482.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">CRLF</text>
+<text x="40.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="start">In the repository: .gitattributes is committed, so every clone follows it</text>
+<rect x="40.0" y="534.0" width="920.0" height="46.0" rx="8" fill="#f9fafb" stroke="#eef0f3" stroke-width="1"/>
+<text x="54.0" y="554.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">* text=auto eol=lf</text>
+<text x="54.0" y="572.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">In .gitattributes: overrides autocrlf</text>
+<rect x="294.0" y="541.0" width="84.0" height="32.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="336.0" y="562.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">CRLF</text>
+<line x1="386.0" y1="557.0" x2="554.0" y2="557.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="470.0" y="548.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">CRLF → LF</text>
+<rect x="570.0" y="541.0" width="84.0" height="32.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="612.0" y="562.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">LF</text>
+<line x1="670.0" y1="557.0" x2="838.0" y2="557.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<text x="754.0" y="548.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">eol=lf → LF</text>
+<rect x="846.0" y="541.0" width="84.0" height="32.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="888.0" y="562.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">LF</text>
+<text x="40.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">With false, a CRLF file goes into the repository as CRLF. If that file was LF before, Git sees a change on every line.</text>
+<text x="40.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Dev Essentials 04, Chapters 1, 2, 4 and 5 (git-config and gitattributes docs; GitHub Docs).</text>
+</svg>

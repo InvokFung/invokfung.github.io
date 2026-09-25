@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 818" width="960" height="818" role="img" aria-label="Major scale pattern W W H W W W H shown on a piano keyboard for C major, G major and F major">
+<rect width="960" height="818" fill="#ffffff"/>
+<text x="40.0" y="46.0" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700" fill="#222222" text-anchor="start">One pattern, three major scales</text>
+<text x="40.0" y="74.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">W = whole step (2 semitones), H = half step (1 semitone). The pattern W W H W W W H never changes.</text>
+<text x="40.0" y="198.0" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="700" fill="#1d6a8a" text-anchor="start">C major</text>
+<text x="40.0" y="226.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="400" fill="#222222" text-anchor="start">no sharps or flats</text>
+<text x="40.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">all white keys</text>
+<rect x="250.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="275.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">C</text>
+<rect x="300.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="325.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">D</text>
+<rect x="350.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="375.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">E</text>
+<rect x="400.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="425.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">F</text>
+<rect x="450.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="475.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">G</text>
+<rect x="500.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="525.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">A</text>
+<rect x="550.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="575.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">B</text>
+<rect x="600.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="625.0" y="250.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">C</text>
+<rect x="650.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="700.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="750.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="800.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="850.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="900.0" y="150.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="285.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="335.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="435.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="485.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="535.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="635.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="685.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="785.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="835.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="885.0" y="150.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<path d="M278.0,146 Q300.0,114 322.0,146" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="300.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M328.0,146 Q350.0,114 372.0,146" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="350.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M378.0,146 Q400.0,114 422.0,146" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="400.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">H</text>
+<path d="M428.0,146 Q450.0,114 472.0,146" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M478.0,146 Q500.0,114 522.0,146" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M528.0,146 Q550.0,114 572.0,146" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="550.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M578.0,146 Q600.0,114 622.0,146" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="600.0" y="124.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">H</text>
+<circle cx="275.0" cy="281.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="275.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="275.0" y="310.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">I</text>
+<text x="325.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">2</text>
+<text x="375.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">3</text>
+<circle cx="425.0" cy="281.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="425.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="425.0" y="310.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">IV</text>
+<circle cx="475.0" cy="281.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="475.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="475.0" y="310.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">V</text>
+<text x="525.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">6</text>
+<text x="575.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">7</text>
+<text x="625.0" y="286.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">8</text>
+<text x="40.0" y="412.0" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="700" fill="#1d6a8a" text-anchor="start">G major</text>
+<text x="40.0" y="440.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="400" fill="#222222" text-anchor="start">1 sharp: F♯</text>
+<text x="40.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">F♯ is the 7th note</text>
+<rect x="250.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="300.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="350.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="400.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="450.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="475.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">G</text>
+<rect x="500.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="525.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">A</text>
+<rect x="550.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="575.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">B</text>
+<rect x="600.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="625.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">C</text>
+<rect x="650.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="675.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">D</text>
+<rect x="700.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="725.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">E</text>
+<rect x="750.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="800.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="825.0" y="464.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">G</text>
+<rect x="850.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="900.0" y="364.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="285.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="335.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="435.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="485.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="535.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="635.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="685.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="785.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#c54a2e" stroke="#222222" stroke-width="1.2"/>
+<text x="800.0" y="424.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">F♯</text>
+<rect x="835.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="885.0" y="364.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<path d="M478.0,360 Q500.0,328 522.0,360" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M528.0,360 Q550.0,328 572.0,360" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="550.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M578.0,360 Q600.0,328 622.0,360" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="600.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">H</text>
+<path d="M628.0,360 Q650.0,328 672.0,360" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="650.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M678.0,360 Q700.0,328 722.0,360" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="700.0" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M728.0,360 Q762.5,328 797.0,360" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="762.5" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M803.0,360 Q812.5,328 822.0,360" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="812.5" y="338.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">H</text>
+<circle cx="475.0" cy="495.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="475.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="475.0" y="524.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">I</text>
+<text x="525.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">2</text>
+<text x="575.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">3</text>
+<circle cx="625.0" cy="495.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="625.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="625.0" y="524.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">IV</text>
+<circle cx="675.0" cy="495.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="675.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="675.0" y="524.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">V</text>
+<text x="725.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">6</text>
+<text x="800.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">7</text>
+<text x="825.0" y="500.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">8</text>
+<text x="40.0" y="626.0" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-weight="700" fill="#1d6a8a" text-anchor="start">F major</text>
+<text x="40.0" y="654.0" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="400" fill="#222222" text-anchor="start">1 flat: B♭</text>
+<text x="40.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">B♭ is the 4th note</text>
+<rect x="250.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="300.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="350.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="400.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="425.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">F</text>
+<rect x="450.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="475.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">G</text>
+<rect x="500.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="525.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">A</text>
+<rect x="550.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="600.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="625.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">C</text>
+<rect x="650.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="675.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">D</text>
+<rect x="700.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="725.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">E</text>
+<rect x="750.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#d3e6ee" stroke="#222222" stroke-width="1.4"/>
+<text x="775.0" y="678.0" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#222222" text-anchor="middle">F</text>
+<rect x="800.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="850.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="900.0" y="578.0" width="50.0" height="112.0" rx="3" fill="#ffffff" stroke="#222222" stroke-width="1.4"/>
+<rect x="285.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="335.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="435.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="485.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="535.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#c54a2e" stroke="#222222" stroke-width="1.2"/>
+<text x="550.0" y="638.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">B♭</text>
+<rect x="635.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="685.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="785.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="835.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<rect x="885.0" y="578.0" width="30.0" height="70.0" rx="2" fill="#222222" stroke="#222222" stroke-width="1.2"/>
+<path d="M428.0,574 Q450.0,542 472.0,574" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="450.0" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M478.0,574 Q500.0,542 522.0,574" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500.0" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M528.0,574 Q537.5,542 547.0,574" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="537.5" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">H</text>
+<path d="M553.0,574 Q587.5,542 622.0,574" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="587.5" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M628.0,574 Q650.0,542 672.0,574" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="650.0" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M678.0,574 Q700.0,542 722.0,574" fill="none" stroke="#1d6a8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="700.0" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1d6a8a" text-anchor="middle">W</text>
+<path d="M728.0,574 Q750.0,542 772.0,574" fill="none" stroke="#c54a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="750.0" y="552.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#c54a2e" text-anchor="middle">H</text>
+<circle cx="425.0" cy="709.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="425.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="425.0" y="738.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">I</text>
+<text x="475.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">2</text>
+<text x="525.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">3</text>
+<circle cx="550.0" cy="709.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="550.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="550.0" y="738.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">IV</text>
+<circle cx="625.0" cy="709.0" r="12.0" fill="#a85a14" stroke="none" stroke-width="0"/>
+<text x="625.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="625.0" y="738.0" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#a85a14" text-anchor="middle">V</text>
+<text x="675.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">6</text>
+<text x="725.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">7</text>
+<text x="775.0" y="714.5" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="400" fill="#666666" text-anchor="middle">8</text>
+<text x="40.0" y="766.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#222222" text-anchor="start">Numbers under the keys are scale degrees: 1 = tonic (I), 4 = subdominant (IV), 5 = dominant (V).</text>
+<text x="40.0" y="792.0" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#666666" text-anchor="start" font-style="italic">Red = the black key the pattern lands on (F♯ in G major, B♭ in F major). Arcs show each step.</text>
+</svg>

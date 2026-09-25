@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 616" width="1000" height="616" role="img" aria-label="Two projects, each with its own .venv folder and its own version of requests, next to the five venv commands from the post">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="616" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="614.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One project, one virtual environment</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A venv gives each project its own package list, so pip install never touches the system Python.</text>
+<text x="40.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">WHAT A VENV ISOLATES</text>
+<rect x="40.0" y="132.0" width="500.0" height="62.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="60.0" y="159.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">System Python</text>
+<text x="60.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">the Python 3.12+ you installed</text>
+<text x="520.0" y="159.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">pip install in a venv</text>
+<text x="520.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">never lands here</text>
+<line x1="160.0" y1="196.0" x2="160.0" y2="252.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="256.0" width="240.0" height="214.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="56.0" y="282.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">project-a/</text>
+<rect x="54.0" y="296.0" width="212.0" height="92.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="68.0" y="320.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">.venv/</text>
+<text x="68.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">its own package list:</text>
+<text x="68.0" y="368.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">requests==2.20</text>
+<circle cx="244" cy="318" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M239.9,318.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56.0" y="414.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">hello.py</text>
+<text x="56.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">requirements.txt</text>
+<text x="56.0" y="458.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">→ requests==2.20</text>
+<line x1="420.0" y1="196.0" x2="420.0" y2="252.0" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="300.0" y="256.0" width="240.0" height="214.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="316.0" y="282.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">project-b/</text>
+<rect x="314.0" y="296.0" width="212.0" height="92.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="328.0" y="320.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">.venv/</text>
+<text x="328.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">its own package list:</text>
+<text x="328.0" y="368.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">requests==2.28</text>
+<circle cx="504" cy="318" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M499.9,318.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="316.0" y="414.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">hello.py</text>
+<text x="316.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">requirements.txt</text>
+<text x="316.0" y="458.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">→ requests==2.28</text>
+<text x="290.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">python -m venv .venv</text>
+<text x="290.0" y="241.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">run once in each project</text>
+<rect x="40.0" y="490.0" width="500.0" height="76.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<circle cx="64" cy="516" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M60.6,512.6 L67.4,519.4 M67.4,512.6 L60.6,519.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="84.0" y="521.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Without venvs: one shared list</text>
+<text x="84.0" y="544.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">One project needed requests 2.20, another 2.28.</text>
+<text x="84.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Mass-upgrading broke the older project.</text>
+<text x="590.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">THE ROUTINE</text>
+<circle cx="602.0" cy="145.0" r="12" fill="#0d9488"/>
+<text x="602.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="624.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Create it (once per project)</text>
+<rect x="624.0" y="165.0" width="172.0" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">python -m venv .venv</text>
+<circle cx="602.0" cy="215.0" r="12" fill="#0d9488"/>
+<text x="602.0" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="624.0" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Activate it</text>
+<rect x="624.0" y="235.0" width="218.8" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="251.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">.venv\Scripts\Activate.ps1</text>
+<text x="852.8" y="250.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Windows</text>
+<rect x="624.0" y="265.0" width="211.0" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="281.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">source .venv/bin/activate</text>
+<text x="845.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">macOS / Linux</text>
+<text x="624.0" y="308.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="start">Your prompt usually starts with (.venv).</text>
+<circle cx="602.0" cy="337.0" r="12" fill="#0d9488"/>
+<text x="602.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="624.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Install packages</text>
+<rect x="624.0" y="357.0" width="172.0" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="373.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">pip install requests</text>
+<text x="806.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="start">only into this venv</text>
+<circle cx="602.0" cy="407.0" r="12" fill="#0d9488"/>
+<text x="602.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="624.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Pin versions</text>
+<rect x="624.0" y="427.0" width="242.2" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="443.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">pip freeze &gt; requirements.txt</text>
+<text x="624.0" y="470.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">then, on another machine:</text>
+<rect x="624.0" y="477.0" width="257.8" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="493.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">pip install -r requirements.txt</text>
+<circle cx="602.0" cy="527.0" r="12" fill="#0d9488"/>
+<text x="602.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="624.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Leave it when done</text>
+<rect x="624.0" y="547.0" width="94.0" height="23.0" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="632.0" y="563.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">deactivate</text>
+<text x="40.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Commands as given in the post. The Windows line is for PowerShell; in cmd use .venv\Scripts\activate.bat.</text>
+</svg>

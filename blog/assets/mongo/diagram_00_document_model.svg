@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" role="img" aria-label="The MongoDB document model: a database holds collections, a collection holds documents, and one example user document with an _id, fields, an array and a nested sub-document">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="650" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="648.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The document model</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A database holds collections. A collection holds documents. A document holds fields.</text>
+<rect x="40.0" y="108.0" width="238.0" height="372.0" rx="12" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="56.0" y="136.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">shop</text>
+<text x="106.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">database</text>
+<rect x="54.0" y="152.0" width="210.0" height="196.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="68.0" y="178.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">users</text>
+<text x="122.0" y="178.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">collection</text>
+<rect x="80.0" y="210.0" width="170.0" height="96.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<rect x="74.0" y="203.0" width="170.0" height="96.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<rect x="68.0" y="196.0" width="170.0" height="96.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="80.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">{ document }</text>
+<text x="80.0" y="242.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">_id, name, email,</text>
+<text x="80.0" y="262.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">tags, address, ...</text>
+<text x="68.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">no enforced schema by default</text>
+<rect x="54.0" y="362.0" width="210.0" height="40.0" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="68.0" y="388.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">products</text>
+<text x="149.2" y="388.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">collection</text>
+<rect x="54.0" y="414.0" width="210.0" height="40.0" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="68.0" y="440.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">orders</text>
+<text x="131.4" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">collection</text>
+<rect x="300.0" y="108.0" width="426.0" height="346.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="308.0" y="146.0" width="410.0" height="28.0" rx="6" fill="#fffbeb" stroke="none" stroke-width="0"/>
+<rect x="308.0" y="176.0" width="410.0" height="58.0" rx="6" fill="#eff6ff" stroke="none" stroke-width="0"/>
+<rect x="308.0" y="236.0" width="410.0" height="28.0" rx="6" fill="#f5f3ff" stroke="none" stroke-width="0"/>
+<rect x="308.0" y="266.0" width="410.0" height="118.0" rx="6" fill="#f0fdfa" stroke="none" stroke-width="0"/>
+<rect x="308.0" y="386.0" width="410.0" height="28.0" rx="6" fill="#fef2f2" stroke="none" stroke-width="0"/>
+<text x="316.0" y="136.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">{</text>
+<text x="331.7" y="166.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"_id": ObjectId("65e1c1e7f3b6a1b2c3d4e5f6"),</text>
+<text x="331.7" y="196.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"name": "Ada Lovelace",</text>
+<text x="331.7" y="226.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"email": "ada@example.com",</text>
+<text x="331.7" y="256.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"tags": ["mathematician", "engineer"],</text>
+<text x="331.7" y="286.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"address": {</text>
+<text x="347.3" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"city": "London",</text>
+<text x="347.3" y="346.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"country": "UK"</text>
+<text x="331.7" y="376.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">},</text>
+<text x="331.7" y="406.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">"created_at": ISODate("2026-05-24T09:00:00Z")</text>
+<text x="316.0" y="436.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">}</text>
+<line x1="244.0" y1="244.0" x2="294.0" y2="244.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<path d="M732.0,148.0 h6 V174.0 h-6" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="738.0" y1="161.0" x2="750.0" y2="157.0" stroke="#d97706" stroke-width="1.4" stroke-linecap="round"/>
+<text x="756.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">_id: the primary key</text>
+<text x="756.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Auto ObjectId unless you set one.</text>
+<path d="M732.0,178.0 h6 V234.0 h-6" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="738.0" y1="206.0" x2="750.0" y2="205.0" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/>
+<text x="756.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">Fields</text>
+<text x="756.0" y="229.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Key-value pairs, kept in order.</text>
+<path d="M732.0,238.0 h6 V264.0 h-6" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="738.0" y1="251.0" x2="750.0" y2="257.0" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
+<text x="756.0" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Array</text>
+<text x="756.0" y="281.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">A list inside the document.</text>
+<path d="M732.0,268.0 h6 V384.0 h-6" fill="none" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="738.0" y1="326.0" x2="750.0" y2="311.0" stroke="#0d9488" stroke-width="1.4" stroke-linecap="round"/>
+<text x="756.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Sub-document</text>
+<text x="756.0" y="335.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">A nested object. No separate</text>
+<text x="756.0" y="353.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">table, no join.</text>
+<path d="M732.0,388.0 h6 V414.0 h-6" fill="none" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="738.0" y1="401.0" x2="750.0" y2="403.0" stroke="#dc4c3a" stroke-width="1.4" stroke-linecap="round"/>
+<text x="756.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Date</text>
+<text x="756.0" y="427.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">A BSON type JSON lacks. So are</text>
+<text x="756.0" y="445.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">ObjectId, Binary, Decimal128.</text>
+<text x="40.0" y="510.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Coming from SQL</text>
+<text x="40.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">SQL</text>
+<text x="40.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">MongoDB</text>
+<rect x="132.0" y="526.0" width="154.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="209.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">Table</text>
+<text x="209.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">Collection</text>
+<rect x="298.0" y="526.0" width="154.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="375.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">Row</text>
+<text x="375.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">Document</text>
+<rect x="464.0" y="526.0" width="154.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="541.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">Column</text>
+<text x="541.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">Field</text>
+<rect x="630.0" y="526.0" width="154.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="707.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">Primary key</text>
+<text x="707.0" y="576.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">_id</text>
+<rect x="796.0" y="526.0" width="154.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="873.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">Join</text>
+<text x="873.0" y="576.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">$lookup</text>
+<text x="40.0" y="632.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: MongoDB Course 00, Chapters 1-2. Example document copied from the post.</text>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1008" width="1000" height="1008" role="img" aria-label="Keshav's three-pass method for reading a research paper: what to read and what you get from each pass">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="1008" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="1006.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How to read a paper in three passes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">S. Keshav's method: each pass has its own goal, and you can stop after any pass.</text>
+<text x="270.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">WHAT YOU READ AND DO</text>
+<text x="590.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">WHAT YOU COME OUT WITH</text>
+<rect x="40.0" y="128.0" width="920.0" height="302.0" rx="12" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<rect x="40.0" y="128.0" width="206.0" height="302.0" rx="12" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="58.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#0d9488" text-anchor="start">Pass 1</text>
+<text x="58.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Bird's-eye view</text>
+<rect x="58.0" y="205.5" width="76.6" height="24.5" rx="12.25" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="96.3" y="223.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">5-10 min</text>
+<circle cx="274.0" cy="155.5" r="2.6" fill="#0d9488"/>
+<text x="286.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Title, abstract and introduction, carefully</text>
+<circle cx="274.0" cy="181.5" r="2.6" fill="#0d9488"/>
+<text x="286.0" y="186.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Section and sub-section headings only</text>
+<circle cx="274.0" cy="207.5" r="2.6" fill="#0d9488"/>
+<text x="286.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A glance at the math</text>
+<circle cx="274.0" cy="233.5" r="2.6" fill="#0d9488"/>
+<text x="286.0" y="238.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The conclusions</text>
+<circle cx="274.0" cy="259.5" r="2.6" fill="#0d9488"/>
+<text x="286.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A glance at the references; tick off the</text>
+<text x="286.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">ones you have read</text>
+<text x="590.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">The five Cs:</text>
+<text x="590.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Category</text>
+<text x="694.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">What type of paper is this? A</text>
+<text x="694.0" y="208.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">measurement paper? An analysis of an</text>
+<text x="694.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">existing system? A description of a</text>
+<text x="694.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">research prototype?</text>
+<text x="590.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Context</text>
+<text x="694.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Which other papers is it related to?</text>
+<text x="694.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">What theory does it use?</text>
+<text x="590.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Correctness</text>
+<text x="694.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Do the assumptions seem valid?</text>
+<text x="590.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Contributions</text>
+<text x="694.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">What are the main contributions?</text>
+<text x="590.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">Clarity</text>
+<text x="694.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Is it well written?</text>
+<text x="590.0" y="404.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Then a go / no-go decision.</text>
+<line x1="143.0" y1="430.0" x2="143.0" y2="529.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="270.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Stop or go on?</text>
+<text x="390.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Stopping here is fine: the paper does not interest you, you lack the background,</text>
+<text x="390.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">or the assumptions look wrong. Pass 1 is enough for papers outside your area</text>
+<text x="390.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">that may matter some day.</text>
+<rect x="40.0" y="532.0" width="920.0" height="178.0" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<rect x="40.0" y="532.0" width="206.0" height="178.0" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="58.0" y="570.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#d97706" text-anchor="start">Pass 2</text>
+<text x="58.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">The content</text>
+<rect x="58.0" y="609.5" width="115.8" height="24.5" rx="12.25" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="115.9" y="627.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">Up to ~1 hour</text>
+<text x="58.0" y="652.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">for an experienced reader</text>
+<circle cx="274.0" cy="559.5" r="2.6" fill="#d97706"/>
+<text x="286.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The whole paper, but skip details such as</text>
+<text x="286.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">proofs</text>
+<circle cx="274.0" cy="605.5" r="2.6" fill="#d97706"/>
+<text x="286.0" y="610.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Look hard at figures, diagrams and graphs:</text>
+<text x="286.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">axes labelled? error bars?</text>
+<circle cx="274.0" cy="651.5" r="2.6" fill="#d97706"/>
+<text x="286.0" y="656.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Key points and questions in the margin</text>
+<circle cx="274.0" cy="677.5" r="2.6" fill="#d97706"/>
+<text x="286.0" y="682.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Mark relevant references you have not read</text>
+<circle cx="594.0" cy="559.5" r="2.6" fill="#d97706"/>
+<text x="606.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Summarise the main idea, with evidence, to someone</text>
+<text x="606.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">else</text>
+<circle cx="594.0" cy="605.5" r="2.6" fill="#d97706"/>
+<text x="606.0" y="610.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A list of unread references for background</text>
+<line x1="143.0" y1="710.0" x2="143.0" y2="769.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="270.0" y="746.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Still lost?</text>
+<text x="390.0" y="746.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(a) Put it aside, (b) read background material and come back, or (c) push on to pass 3.</text>
+<rect x="40.0" y="772.0" width="920.0" height="184.0" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<rect x="40.0" y="772.0" width="206.0" height="184.0" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="58.0" y="810.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#7c3aed" text-anchor="start">Pass 3</text>
+<text x="58.0" y="834.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Virtual re-implementation</text>
+<rect x="58.0" y="849.5" width="53.1" height="24.5" rx="12.25" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="84.6" y="867.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Hours</text>
+<text x="58.0" y="892.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">2007 version: ~4-5 h for</text>
+<text x="58.0" y="910.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">beginners, ~1 h if experienced.</text>
+<text x="58.0" y="928.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">2016 version: longer.</text>
+<circle cx="274.0" cy="799.5" r="2.6" fill="#7c3aed"/>
+<text x="286.0" y="804.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Everything, in depth</text>
+<circle cx="274.0" cy="825.5" r="2.6" fill="#7c3aed"/>
+<text x="286.0" y="830.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Make the authors' assumptions, re-create</text>
+<text x="286.0" y="850.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the work, compare with theirs</text>
+<circle cx="274.0" cy="871.5" r="2.6" fill="#7c3aed"/>
+<text x="286.0" y="876.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Challenge every assumption in every</text>
+<text x="286.0" y="896.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">statement</text>
+<circle cx="274.0" cy="917.5" r="2.6" fill="#7c3aed"/>
+<text x="286.0" y="922.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Ask how you would present each idea</text>
+<circle cx="594.0" cy="799.5" r="2.6" fill="#7c3aed"/>
+<text x="606.0" y="804.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Rebuild the paper's structure from memory</text>
+<circle cx="594.0" cy="825.5" r="2.6" fill="#7c3aed"/>
+<text x="606.0" y="830.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Point out implicit assumptions, missing citations,</text>
+<text x="606.0" y="850.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">problems with experiments or analysis</text>
+<circle cx="594.0" cy="871.5" r="2.6" fill="#7c3aed"/>
+<text x="606.0" y="876.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The new ideas and the hidden weak points: the gaps</text>
+<text x="606.0" y="896.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">between your version and theirs</text>
+<circle cx="594.0" cy="917.5" r="2.6" fill="#7c3aed"/>
+<text x="606.0" y="922.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Ideas for future work</text>
+<text x="40.0" y="990.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: S. Keshav, “How to Read a Paper”, ACM SIGCOMM CCR 37(3), July 2007 (updated 2016).</text>
+</svg>

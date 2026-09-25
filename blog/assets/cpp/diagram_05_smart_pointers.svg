@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 856" width="1000" height="856" role="img" aria-label="Ownership with smart pointers: unique_ptr has one owner and moves, shared_ptr counts its owners, weak_ptr only watches; the owner frees the object when it goes out of scope">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="856" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="854.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Who owns the memory? unique_ptr, shared_ptr, weak_ptr</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">An owner frees its object for you when it goes out of scope. No delete in your code.</text>
+<defs><marker id="mt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker></defs>
+<defs><marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<defs><marker id="mv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker></defs>
+<defs><marker id="mf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#9ca3af"/></marker></defs>
+<rect x="40.0" y="100.0" width="920.0" height="170.0" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="60.0" y="131.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#0d9488" text-anchor="start">unique_ptr: exactly one owner</text>
+<text x="940.0" y="131.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">move-only · no runtime cost vs a raw pointer</text>
+<rect x="60.0" y="148.0" width="450.0" height="83.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="76.0" y="173.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">auto a = std::make_unique&lt;int&gt;(5);</tspan></text>
+<text x="76.0" y="194.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">auto b = a;             </tspan><tspan fill="#94a3b8">// ERROR: can't copy</tspan></text>
+<text x="76.0" y="215.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">auto c = std::move(a);  </tspan><tspan fill="#94a3b8">// OK: a is now nullptr</tspan></text>
+<text x="524.0" y="183.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">before</text>
+<rect x="612.0" y="162.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="624.0" y="183.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">a</text>
+<circle cx="690.0" cy="178.0" r="4.5" fill="#0d9488"/>
+<line x1="696.0" y1="178.0" x2="758.0" y2="178.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#mt)"/>
+<rect x="762.0" y="160.0" width="52.0" height="36.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="788.0" y="184.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">5</text>
+<text x="524.0" y="237.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="start">after move</text>
+<rect x="612.0" y="216.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="624.0" y="237.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">a</text>
+<text x="694.0" y="237.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="end">nullptr</text>
+<rect x="720.0" y="216.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="732.0" y="237.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">c</text>
+<circle cx="798.0" cy="232.0" r="4.5" fill="#0d9488"/>
+<line x1="804.0" y1="232.0" x2="866.0" y2="232.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#mt)"/>
+<rect x="870.0" y="214.0" width="52.0" height="36.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="896.0" y="238.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">5</text>
+<rect x="40.0" y="284.0" width="920.0" height="150.0" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="60.0" y="315.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#d97706" text-anchor="start">shared_ptr: shared owners, counted</text>
+<text x="940.0" y="315.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">has reference-counting overhead</text>
+<rect x="60.0" y="332.0" width="450.0" height="62.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="76.0" y="357.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">auto p1 = std::make_shared&lt;int&gt;(100);</tspan></text>
+<text x="76.0" y="378.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">auto p2 = p1;  </tspan><tspan fill="#94a3b8">// both own; count = 2</tspan></text>
+<text x="60.0" y="416.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Use it only when there really are several owners.</text>
+<rect x="560.0" y="336.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="572.0" y="357.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">p1</text>
+<circle cx="638.0" cy="352.0" r="4.5" fill="#d97706"/>
+<rect x="560.0" y="380.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="572.0" y="401.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">p2</text>
+<circle cx="638.0" cy="396.0" r="4.5" fill="#d97706"/>
+<line x1="644.0" y1="352.0" x2="708.0" y2="366.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ma)"/>
+<line x1="644.0" y1="396.0" x2="708.0" y2="382.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ma)"/>
+<rect x="712.0" y="356.0" width="60.0" height="36.0" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="742.0" y="380.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">100</text>
+<rect x="788.0" y="354.0" width="81.9" height="24.0" rx="12.0" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="828.9" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">count = 2</text>
+<text x="788.0" y="396.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">freed when the last owner</text>
+<text x="788.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">goes out of scope</text>
+<rect x="40.0" y="448.0" width="920.0" height="178.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="60.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#7c3aed" text-anchor="start">weak_ptr: watches, does not own</text>
+<text x="940.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">use it to break shared_ptr cycles</text>
+<rect x="60.0" y="496.0" width="450.0" height="104.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="76.0" y="521.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">auto sp = std::make_shared&lt;int&gt;(5);</tspan></text>
+<text x="76.0" y="542.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">std::weak_ptr&lt;int&gt; wp = sp; </tspan><tspan fill="#94a3b8">// doesn't extend lifetime</tspan></text>
+<text x="76.0" y="563.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">if (auto locked = wp.lock()) {</tspan></text>
+<text x="76.0" y="584.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">    std::cout &lt;&lt; *locked;  }</tspan></text>
+<rect x="590.0" y="504.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="602.0" y="525.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">sp</text>
+<circle cx="668.0" cy="520.0" r="4.5" fill="#7c3aed"/>
+<line x1="674.0" y1="520.0" x2="756.0" y2="520.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" marker-end="url(#mv)"/>
+<rect x="590.0" y="560.0" width="92.0" height="32.0" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="602.0" y="581.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">wp</text>
+<circle cx="668.0" cy="576.0" r="4.5" fill="#7c3aed"/>
+<line x1="674.0" y1="576.0" x2="786.0" y2="542.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#mv)"/>
+<rect x="760.0" y="502.0" width="52.0" height="36.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="786.0" y="526.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">5</text>
+<text x="830.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">owned by sp only</text>
+<text x="830.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">wp does not extend</text>
+<text x="830.0" y="555.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">its lifetime</text>
+<text x="590.0" y="614.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#7c3aed" text-anchor="start">wp.lock() tries to upgrade to a shared_ptr</text>
+<rect x="40.0" y="640.0" width="920.0" height="168.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="671.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">RAII: the owner's scope is the object's lifetime</text>
+<text x="940.0" y="671.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">Widget prints in its constructor and destructor</text>
+<rect x="60.0" y="686.0" width="470.0" height="104.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="76.0" y="711.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">void use() {</tspan></text>
+<text x="76.0" y="732.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">    auto w = std::make_unique&lt;Widget&gt;(7);</tspan></text>
+<text x="76.0" y="753.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">    std::cout &lt;&lt; w-&gt;x &lt;&lt; "\n";</tspan></text>
+<text x="76.0" y="774.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13"><tspan fill="#e2e8f0">}  </tspan><tspan fill="#94a3b8">// w goes out of scope</tspan></text>
+<rect x="640.0" y="686.0" width="300.0" height="104.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="656.0" y="711.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#94a3b8" text-anchor="start">output</text>
+<line x1="538.0" y1="727.0" x2="632.0" y2="727.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4" marker-end="url(#mf)"/>
+<text x="656.0" y="732.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">construct</text>
+<line x1="538.0" y1="748.0" x2="632.0" y2="748.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4" marker-end="url(#mf)"/>
+<text x="656.0" y="753.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">7</text>
+<line x1="538.0" y1="769.0" x2="632.0" y2="769.0" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4" marker-end="url(#mf)"/>
+<text x="656.0" y="774.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#fcd34d" text-anchor="start">destroy   (automatic)</text>
+<text x="40.0" y="838.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 1 (smart pointers). Never write new or delete in new code.</text>
+</svg>

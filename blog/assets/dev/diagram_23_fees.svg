@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" role="img" aria-label="Investment balance over 30 years with a 0.1% fee versus a 1.0% fee">
+<rect width="1000" height="580" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="578.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What a 1% fee costs over 30 years</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#6b7280" text-anchor="start">Start 10,000 · add 500 a month · 6.0% a year before fees · fee charged monthly · no taxes or inflation. Illustration only.</text>
+<line x1="100.0" y1="490.0" x2="800.0" y2="490.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">0</text>
+<line x1="100.0" y1="428.3" x2="800.0" y2="428.3" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="433.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">100k</text>
+<line x1="100.0" y1="366.7" x2="800.0" y2="366.7" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="371.7" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">200k</text>
+<line x1="100.0" y1="305.0" x2="800.0" y2="305.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">300k</text>
+<line x1="100.0" y1="243.3" x2="800.0" y2="243.3" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="248.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">400k</text>
+<line x1="100.0" y1="181.7" x2="800.0" y2="181.7" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="186.7" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">500k</text>
+<line x1="100.0" y1="120.0" x2="800.0" y2="120.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="88.0" y="125.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">600k</text>
+<line x1="100.0" y1="490.0" x2="100.0" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="100.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<line x1="216.7" y1="490.0" x2="216.7" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="216.7" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">5</text>
+<line x1="333.3" y1="490.0" x2="333.3" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="333.3" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">10</text>
+<line x1="450.0" y1="490.0" x2="450.0" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="450.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">15</text>
+<line x1="566.7" y1="490.0" x2="566.7" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="566.7" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">20</text>
+<line x1="683.3" y1="490.0" x2="683.3" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="683.3" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">25</text>
+<line x1="800.0" y1="490.0" x2="800.0" y2="496.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<text x="800.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">30</text>
+<text x="450.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6b7280" text-anchor="middle">Years</text>
+<polygon points="100.0,483.8 123.3,479.7 146.7,475.2 170.0,470.5 193.3,465.6 216.7,460.3 240.0,454.7 263.3,448.7 286.7,442.4 310.0,435.7 333.3,428.6 356.7,421.1 380.0,413.1 403.3,404.7 426.7,395.7 450.0,386.2 473.3,376.1 496.7,365.4 520.0,354.0 543.3,342.0 566.7,329.2 590.0,315.7 613.3,301.3 636.7,286.1 660.0,269.9 683.3,252.7 706.7,234.6 730.0,215.3 753.3,194.8 776.7,173.1 800.0,150.1 800.0,206.1 776.7,223.5 753.3,240.1 730.0,255.8 706.7,270.8 683.3,285.1 660.0,298.6 636.7,311.6 613.3,323.8 590.0,335.5 566.7,346.6 543.3,357.2 520.0,367.3 496.7,376.8 473.3,385.9 450.0,394.6 426.7,402.8 403.3,410.7 380.0,418.1 356.7,425.2 333.3,432.0 310.0,438.4 286.7,444.5 263.3,450.3 240.0,455.9 216.7,461.1 193.3,466.1 170.0,470.9 146.7,475.4 123.3,479.7 100.0,483.8" fill="#d97706" opacity="0.16"/>
+<polyline points="100.0,483.8 123.3,480.1 146.7,476.4 170.0,472.7 193.3,469.0 216.7,465.3 240.0,461.6 263.3,457.9 286.7,454.2 310.0,450.5 333.3,446.8 356.7,443.1 380.0,439.4 403.3,435.7 426.7,432.0 450.0,428.3 473.3,424.6 496.7,420.9 520.0,417.2 543.3,413.5 566.7,409.8 590.0,406.1 613.3,402.4 636.7,398.7 660.0,395.0 683.3,391.3 706.7,387.6 730.0,383.9 753.3,380.2 776.7,376.5 800.0,372.8" fill="none" stroke="#9ca3af" stroke-width="2.5" stroke-dasharray="7 6"/>
+<polyline points="100.0,483.8 123.3,479.7 146.7,475.4 170.0,470.9 193.3,466.1 216.7,461.1 240.0,455.9 263.3,450.3 286.7,444.5 310.0,438.4 333.3,432.0 356.7,425.2 380.0,418.1 403.3,410.7 426.7,402.8 450.0,394.6 473.3,385.9 496.7,376.8 520.0,367.3 543.3,357.2 566.7,346.6 590.0,335.5 613.3,323.8 636.7,311.6 660.0,298.6 683.3,285.1 706.7,270.8 730.0,255.8 753.3,240.1 776.7,223.5 800.0,206.1" fill="none" stroke="#d97706" stroke-width="3.5" stroke-linejoin="round"/>
+<polyline points="100.0,483.8 123.3,479.7 146.7,475.2 170.0,470.5 193.3,465.6 216.7,460.3 240.0,454.7 263.3,448.7 286.7,442.4 310.0,435.7 333.3,428.6 356.7,421.1 380.0,413.1 403.3,404.7 426.7,395.7 450.0,386.2 473.3,376.1 496.7,365.4 520.0,354.0 543.3,342.0 566.7,329.2 590.0,315.7 613.3,301.3 636.7,286.1 660.0,269.9 683.3,252.7 706.7,234.6 730.0,215.3 753.3,194.8 776.7,173.1 800.0,150.1" fill="none" stroke="#0d9488" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="800.0" cy="150.1" r="5" fill="#0d9488"/>
+<circle cx="800.0" cy="206.1" r="5" fill="#d97706"/>
+<circle cx="800.0" cy="372.8" r="5" fill="#9ca3af"/>
+<text x="814.0" y="155.1" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">0.1% fee: 551,156</text>
+<text x="814.0" y="211.1" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">1.0% fee: 460,356</text>
+<text x="814.0" y="377.8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#6b7280" text-anchor="start">You put in: 190,000</text>
+<path d="M790.0,154.1 q-10,0 -10,10 L780.0,172.1 l-8,6 l8,6 L780.0,192.1 q0,10 10,10" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="735.0" y1="140.0" x2="768.0" y2="178.1" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round"/>
+<rect x="545" y="118" width="190" height="46" rx="8" fill="#fffbeb" stroke="#fcd34d"/>
+<text x="640.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Gap 90,800</text>
+<text x="640.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">16.5% of the low-fee result</text>
+<text x="40.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Fees paid: 54,396 at 1.0% vs 6,152 at 0.1%. The rest of the gap is growth the fees would have earned.</text>
+</svg>

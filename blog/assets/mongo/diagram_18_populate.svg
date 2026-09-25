@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" role="img" aria-label="Round trips to load 100 posts with their authors: populate in a loop, populate, and aggregation lookup">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="650" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="648.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How many round trips does the join cost?</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Loading 100 posts with their author in Mongoose, three ways (the setup from Exercise 2).</text>
+<rect x="40.0" y="100.0" width="290.0" height="440.0" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="58.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="start">populate inside a loop</text>
+<text x="58.0" y="155.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Each iteration is a fresh round trip.</text>
+<rect x="67.6" y="172.0" width="40.8" height="24.0" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+<text x="88.0" y="189.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">App</text>
+<line x1="88.0" y1="206.0" x2="88.0" y2="420.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 4"/>
+<rect x="246.4" y="172.0" width="71.2" height="24.0" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+<text x="282.0" y="189.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDB</text>
+<line x1="282.0" y1="206.0" x2="282.0" y2="420.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="91.0" y1="232.0" x2="279.0" y2="232.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="279.0" y1="244.0" x2="91.0" y2="244.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="193.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">find posts → 100 posts</text>
+<circle cx="66.0" cy="238.0" r="11" fill="#dc4c3a"/>
+<text x="66.0" y="242.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<line x1="91.0" y1="280.0" x2="279.0" y2="280.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="279.0" y1="292.0" x2="91.0" y2="292.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="193.0" y="273.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">author of post 1</text>
+<circle cx="66.0" cy="286.0" r="11" fill="#dc4c3a"/>
+<text x="66.0" y="290.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<line x1="91.0" y1="328.0" x2="279.0" y2="328.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="279.0" y1="340.0" x2="91.0" y2="340.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="193.0" y="321.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">author of post 2</text>
+<circle cx="66.0" cy="334.0" r="11" fill="#dc4c3a"/>
+<text x="66.0" y="338.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="185.0" y="364.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#6b7280" text-anchor="middle">⋮</text>
+<line x1="91.0" y1="390.0" x2="279.0" y2="390.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="279.0" y1="402.0" x2="91.0" y2="402.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="193.0" y="383.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">author of post 100</text>
+<circle cx="66.0" cy="396.0" r="11" fill="#dc4c3a"/>
+<text x="66.0" y="400.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">101</text>
+<text x="58.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="700" fill="#dc4c3a" text-anchor="start">101</text>
+<text x="131.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">round trips</text>
+<text x="58.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">The N + 1 query problem.</text>
+<rect x="355.0" y="100.0" width="290.0" height="440.0" rx="14" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="373.0" y="132.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#d97706" text-anchor="start">populate('author')</text>
+<text x="373.0" y="155.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Gathers the IDs, then one $in query.</text>
+<rect x="382.6" y="172.0" width="40.8" height="24.0" rx="12" fill="#ffffff" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="403.0" y="189.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">App</text>
+<line x1="403.0" y1="206.0" x2="403.0" y2="420.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 4"/>
+<rect x="561.4" y="172.0" width="71.2" height="24.0" rx="12" fill="#ffffff" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="597.0" y="189.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDB</text>
+<line x1="597.0" y1="206.0" x2="597.0" y2="420.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="406.0" y1="232.0" x2="594.0" y2="232.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="594.0" y1="244.0" x2="406.0" y2="244.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="508.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">find posts → 100 posts</text>
+<circle cx="381.0" cy="238.0" r="11" fill="#d97706"/>
+<text x="381.0" y="242.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<line x1="406.0" y1="280.0" x2="594.0" y2="280.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="594.0" y1="292.0" x2="406.0" y2="292.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="508.0" y="273.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">users: _id $in [ids]</text>
+<circle cx="381.0" cy="286.0" r="11" fill="#d97706"/>
+<text x="381.0" y="290.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="367.0" y="326.0" width="132.0" height="44.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+<text x="433.0" y="345.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">join in the app</text>
+<text x="433.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">(client side)</text>
+<text x="373.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="700" fill="#d97706" text-anchor="start">2</text>
+<text x="404.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">round trips</text>
+<text x="373.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">One extra query per referenced collection.</text>
+<rect x="670.0" y="100.0" width="290.0" height="440.0" rx="14" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="688.0" y="132.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="17" font-weight="700" fill="#0d9488" text-anchor="start">aggregate + $lookup</text>
+<text x="688.0" y="155.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">One pipeline; the server does the join.</text>
+<rect x="697.6" y="172.0" width="40.8" height="24.0" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="718.0" y="189.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">App</text>
+<line x1="718.0" y1="206.0" x2="718.0" y2="420.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 4"/>
+<rect x="876.4" y="172.0" width="71.2" height="24.0" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="912.0" y="189.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDB</text>
+<line x1="912.0" y1="206.0" x2="912.0" y2="420.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="721.0" y1="232.0" x2="909.0" y2="232.0" stroke="#1f2937" stroke-width="1.7" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="909.0" y1="306.0" x2="721.0" y2="306.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="823.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">$match → $lookup</text>
+<circle cx="696.0" cy="238.0" r="11" fill="#0d9488"/>
+<text x="696.0" y="242.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="828.0" y="244.0" width="124.0" height="44.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="890.0" y="263.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">join on the server</text>
+<text x="890.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">(server side)</text>
+<text x="688.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="700" fill="#0d9488" text-anchor="start">1</text>
+<text x="719.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">round trip</text>
+<text x="688.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Single round trip.</text>
+<rect x="40.0" y="558.0" width="920.0" height="48.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">Trick:</text>
+<text x="110.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">never populate inside a loop. Gather the IDs first, run one</text>
+<text x="470.0" y="588.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">User.find({ _id: { $in: ids } })</text>
+<text x="727.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">, then map.</text>
+<text x="40.0" y="632.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Chapter 7 of this post (Populate, Cost). Counts are round trips, not measured latency.</text>
+</svg>

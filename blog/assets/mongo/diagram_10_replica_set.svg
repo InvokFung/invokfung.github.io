@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 712" width="1000" height="712" role="img" aria-label="Replica set with three members: writes replicate through the oplog, and a majority elects a new primary on failover">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="712" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="710.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Replica set: the oplog and elections</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Three data-bearing members. Writes go to one primary; secondaries copy its oplog; a majority elects a new primary.</text>
+<text x="40.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">1 · Normal: every write flows through the primary's oplog</text>
+<rect x="40.0" y="214.0" width="80.0" height="60.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="80.0" y="240.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">App</text>
+<text x="80.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">driver</text>
+<rect x="165.0" y="200.0" width="180.0" height="88.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="177.0" y="226.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">PRIMARY</text>
+<text x="333.0" y="226.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="end">oplog</text>
+<rect x="175.0" y="242.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="208.0" y="242.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="241.0" y="242.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="274.0" y="242.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="307.0" y="242.0" width="28.0" height="28.0" rx="4" fill="#0d9488" stroke="#0d9488" stroke-width="1.2"/>
+<rect x="410.0" y="140.0" width="180.0" height="88.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="422.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">SECONDARY A</text>
+<text x="578.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="end">oplog</text>
+<rect x="420.0" y="182.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="453.0" y="182.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="486.0" y="182.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="519.0" y="182.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="552.0" y="182.0" width="28.0" height="28.0" rx="4" fill="#0d9488" stroke="#0d9488" stroke-width="1.2"/>
+<rect x="410.0" y="262.0" width="180.0" height="88.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="422.0" y="288.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">SECONDARY B</text>
+<text x="578.0" y="288.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="end">oplog</text>
+<rect x="420.0" y="304.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="453.0" y="304.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="486.0" y="304.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="519.0" y="304.0" width="28.0" height="28.0" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="552" y="304" width="28" height="28" rx="4" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="124.0" y1="244.0" x2="159.0" y2="244.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<circle cx="142.0" cy="210.0" r="12" fill="#d97706"/>
+<text x="142.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<circle cx="255.0" cy="308.0" r="12" fill="#d97706"/>
+<text x="255.0" y="313.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<line x1="349.0" y1="230.0" x2="404.0" y2="190.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="349.0" y1="258.0" x2="404.0" y2="300.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<circle cx="379.0" cy="244.0" r="12" fill="#d97706"/>
+<text x="379.0" y="249.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="598.0" y="324.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">lag</text>
+<circle cx="614.0" cy="196.0" r="12" fill="#d97706"/>
+<text x="614.0" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<circle cx="662.0" cy="141.0" r="12" fill="#d97706"/>
+<text x="662.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="684.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">The app writes to the PRIMARY.</text>
+<circle cx="662.0" cy="173.0" r="12" fill="#d97706"/>
+<text x="662.0" y="178.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="684.0" y="178.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">The PRIMARY records the write in its</text>
+<text x="684.0" y="198.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">oplog (local.oplog.rs) and applies it.</text>
+<circle cx="662.0" cy="225.0" r="12" fill="#d97706"/>
+<text x="662.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="684.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Each SECONDARY tails that oplog and</text>
+<text x="684.0" y="250.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">applies the entries in order.</text>
+<circle cx="662.0" cy="277.0" r="12" fill="#d97706"/>
+<text x="662.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="684.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">2 of 3 voters hold the new entry: a</text>
+<text x="684.0" y="302.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">majority, so it is majority committed.</text>
+<text x="684.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#dc4c3a" text-anchor="start">B is one entry behind: that gap is</text>
+<text x="684.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#dc4c3a" text-anchor="start">replication lag.</text>
+<rect x="165.0" y="322.0" width="14.0" height="14.0" rx="3" fill="#0d9488" stroke="#0d9488" stroke-width="1"/>
+<text x="185.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">newest write</text>
+<rect x="165" y="344" width="14" height="14" rx="3" fill="#fff" stroke="#dc4c3a" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="185.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">not copied yet</text>
+<line x1="40.0" y1="384.0" x2="960.0" y2="384.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="416.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">2 · Failover: the members elect a new primary</text>
+<text x="40.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Primary stops answering</text>
+<rect x="132.0" y="464.0" width="108" height="36" rx="8" fill="#f3f4f6" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="5 4"/>
+<text x="186.0" y="487.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="middle">PRIMARY</text>
+<circle cx="254" cy="470" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M250.6,466.6 L257.4,473.4 M257.4,466.6 L250.6,473.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="44.0" y="542.0" width="108.0" height="36.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="98.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">SECONDARY</text>
+<rect x="220.0" y="542.0" width="108.0" height="36.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="274.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">SECONDARY</text>
+<line x1="112.0" y1="540.0" x2="156.0" y2="502.0" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="260.0" y1="540.0" x2="216.0" y2="502.0" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="186.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">no heartbeat</text>
+<text x="40.0" y="624.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">No heartbeat for electionTimeoutMillis</text>
+<text x="40.0" y="643.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(default 10 s), so a secondary starts</text>
+<text x="40.0" y="662.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">an election.</text>
+<line x1="334.0" y1="522.0" x2="350.0" y2="522.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="350.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">A secondary calls an election</text>
+<rect x="442.0" y="464.0" width="108" height="36" rx="8" fill="#f3f4f6" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="5 4"/>
+<text x="496.0" y="487.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="middle">PRIMARY</text>
+<rect x="354.0" y="542.0" width="108.0" height="36.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="408.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">CANDIDATE</text>
+<rect x="530.0" y="542.0" width="108.0" height="36.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="584.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">SECONDARY</text>
+<line x1="526.0" y1="560.0" x2="468.0" y2="560.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="496.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">vote yes</text>
+<text x="350.0" y="624.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The others vote yes if the candidate's</text>
+<text x="350.0" y="643.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">oplog is up to date enough.</text>
+<text x="350.0" y="662.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">2 of 3 votes = a majority.</text>
+<line x1="644.0" y1="522.0" x2="660.0" y2="522.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="660.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">A new primary takes over</text>
+<rect x="752.0" y="464.0" width="108" height="36" rx="8" fill="#f3f4f6" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="5 4"/>
+<text x="806.0" y="487.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="middle">old primary</text>
+<rect x="664.0" y="542.0" width="108.0" height="36.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="718.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">PRIMARY</text>
+<rect x="840.0" y="542.0" width="108.0" height="36.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="894.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">SECONDARY</text>
+<line x1="686.0" y1="512.0" x2="706.0" y2="538.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="664.0" y="504.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">writes</text>
+<text x="660.0" y="624.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Drivers see the change via heartbeats;</text>
+<text x="660.0" y="643.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">writes go to the new primary. Typical</text>
+<text x="660.0" y="662.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">failover: 10–20 s.</text>
+<text x="40.0" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 5–8 and 11. Protocol Version 1 (PV1), 3 data-bearing voters, w: "majority". Retryable writes hide most of the pause.</text>
+</svg>

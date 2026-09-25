@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 688" width="1000" height="688" role="img" aria-label="The coding agent loop in Claude Code, and where CLAUDE.md, skills, hooks, permission rules, MCP servers and subagents plug in">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="688" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="686.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Where each piece plugs into the agent loop</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Model + tools + a loop. The harness (Claude Code) runs the tools, the checks and the context.</text>
+<rect x="40.0" y="150.0" width="222.0" height="367.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="56.0" y="180.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Context</text>
+<text x="56.0" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">what the model reads each turn</text>
+<text x="56.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">CLAUDE.md files</text>
+<text x="56.0" y="251.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">loaded at launch from the folder</text>
+<text x="56.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">and every folder above it;</text>
+<text x="56.0" y="289.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">joined, the nearest read last</text>
+<text x="56.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Auto memory</text>
+<text x="56.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">first 200 lines or 25KB</text>
+<text x="56.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Skills</text>
+<text x="56.0" y="389.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">descriptions: always</text>
+<text x="56.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">full SKILL.md: on /name, or</text>
+<text x="56.0" y="427.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">when the task matches it</text>
+<text x="56.0" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">History</text>
+<text x="56.0" y="477.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">your prompts, the replies</text>
+<text x="56.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">and every tool result</text>
+<rect x="322.0" y="150.0" width="160.0" height="112.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="402.0" y="180.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="middle">Model</text>
+<text x="402.0" y="211.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">reads the context,</text>
+<text x="402.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">replies with text</text>
+<text x="402.0" y="249.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">or a tool call</text>
+<rect x="542.0" y="150.0" width="222.0" height="198.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="558.0" y="180.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Before a tool runs</text>
+<text x="558.0" y="211.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">PreToolUse hook</text>
+<text x="558.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">exit code 2 blocks the call</text>
+<text x="558.0" y="261.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Permission rules</text>
+<text x="558.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">deny, then ask, then allow</text>
+<text x="558.0" y="311.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Permission mode</text>
+<text x="558.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">sets what runs without asking</text>
+<rect x="800.0" y="150.0" width="160.0" height="198.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="816.0" y="180.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">You</text>
+<text x="816.0" y="211.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">approve or refuse</text>
+<text x="816.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">“ask” actions</text>
+<text x="816.0" y="261.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">One-way doors</text>
+<text x="816.0" y="280.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">push, deploy, delete</text>
+<text x="816.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">data. The agent</text>
+<text x="816.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">prepares them.</text>
+<text x="816.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">You do them.</text>
+<rect x="542.0" y="408.0" width="222.0" height="109.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="558.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Tool runs</text>
+<text x="558.0" y="469.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">run by the harness, not the</text>
+<text x="558.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">model: read, edit, run</text>
+<text x="558.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">commands in your project</text>
+<rect x="800.0" y="408.0" width="160.0" height="109.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="816.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">MCP servers</text>
+<text x="816.0" y="469.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">add outside tools:</text>
+<text x="816.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">issue tracker,</text>
+<text x="816.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">database, browser</text>
+<rect x="322.0" y="408.0" width="160.0" height="109.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="402.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="middle">After it runs</text>
+<text x="402.0" y="469.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">PostToolUse hook</text>
+<text x="402.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">cannot block (it</text>
+<text x="402.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">already ran)</text>
+<rect x="243.0" y="101.0" width="318.0" height="28.0" rx="14" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="402.0" y="120.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">No tool call: task done, the Stop hook fires</text>
+<line x1="402.0" y1="148.0" x2="402.0" y2="132.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="265.0" y1="200.0" x2="318.0" y2="200.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="485.0" y1="200.0" x2="538.0" y2="200.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="512.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">tool call</text>
+<line x1="653.0" y1="350.0" x2="653.0" y2="404.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="663.0" y="383.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">allowed</text>
+<line x1="767.0" y1="200.0" x2="796.0" y2="200.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="782.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">ask</text>
+<line x1="797.0" y1="463.0" x2="768.0" y2="463.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="539.0" y1="463.0" x2="486.0" y2="463.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="512.0" y="453.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">result</text>
+<line x1="319.0" y1="463.0" x2="266.0" y2="463.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="560.0" width="442.0" height="76.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="56.0" y="589.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Subagent</text>
+<text x="56.0" y="613.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Its own context window for a noisy side job (search, logs,</text>
+<text x="56.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">review). Only its summary comes back into yours.</text>
+<line x1="190.0" y1="557.0" x2="190.0" y2="519.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="200.0" y="548.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">summary only</text>
+<rect x="542.0" y="560.0" width="418.0" height="76.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="558.0" y="589.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">CLAUDE.md is context, not configuration</text>
+<text x="558.0" y="613.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">To block an action no matter what the model decides,</text>
+<text x="558.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">use a hook or a permission rule.</text>
+<text x="40.0" y="670.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Claude Code docs as summarised in this post (September 2026). Details change often; check the docs.</text>
+</svg>

@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 606" width="1000" height="606" role="img" aria-label="The 64 bits of the double nearest to 0.1: sign 0, exponent 01111111011, and a 52-bit fraction of repeating 1001 groups that ends in 1010 because it was rounded up">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="606" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="604.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How 0.1 is stored: IEEE 754 binary64</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">64 bits: 1 sign bit, 11 exponent bits, 52 fraction bits. These are the real bits Python prints for 0.1.</text>
+<text x="62.5" y="110.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">sign</text>
+<text x="62.5" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">1 bit</text>
+<path d="M56.0,146 L56.0,139 L69.0,139 L69.0,146" fill="none" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150.5" y="110.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">exponent</text>
+<text x="150.5" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">11 bits</text>
+<path d="M79.0,146 L79.0,139 L222.0,139 L222.0,146" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="588.0" y="110.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">fraction</text>
+<text x="588.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">52 bits (the leading 1. is implied, not stored)</text>
+<path d="M232.0,146 L232.0,139 L944.0,139 L944.0,146" fill="none" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="62.5" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">63</text>
+<text x="79.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">62</text>
+<text x="222.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">52</text>
+<text x="232.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">51</text>
+<text x="944.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">0</text>
+<rect x="56.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1"/>
+<text x="62.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="79.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#fffbeb" stroke="#d97706" stroke-width="1"/>
+<text x="85.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="92.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="98.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="105.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="111.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="118.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="124.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="131.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="137.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="144.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="150.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="157.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="163.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="170.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="176.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="183.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#fffbeb" stroke="#d97706" stroke-width="1"/>
+<text x="189.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="196.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="202.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="209.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#d97706" stroke="#ffffff" stroke-width="1"/>
+<text x="215.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="232.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="238.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="245.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="251.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="258.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="264.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="271.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="277.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="287.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="293.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="300.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="306.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="313.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="319.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="326.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="332.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="342.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="348.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="355.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="361.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="368.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="374.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="381.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="387.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="397.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="403.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="410.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="416.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="423.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="429.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="436.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="442.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="452.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="458.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="465.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="471.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="478.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="484.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="491.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="497.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="507.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="513.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="520.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="526.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="533.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="539.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="546.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="552.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="562.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="568.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="575.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="581.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="588.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="594.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="601.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="607.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="617.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="623.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="630.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="636.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="643.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="649.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="656.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="662.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="672.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="678.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="685.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="691.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="698.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="704.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="711.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="717.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="727.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="733.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="740.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="746.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="753.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="759.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="766.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="772.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="782.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="788.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="795.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="801.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="808.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="814.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="821.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="827.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="837.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="843.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="850.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="856.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="863.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="869.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="876.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="882.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="892.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="898.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="905.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="911.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="918.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#0d9488" stroke="#ffffff" stroke-width="1"/>
+<text x="924.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="931.0" y="170.0" width="13.0" height="30.0" rx="2" fill="#f0fdfa" stroke="#0d9488" stroke-width="1"/>
+<text x="937.5" y="190.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<text x="62.5" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">+</text>
+<text x="150.5" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">= 1019</text>
+<text x="258.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="313.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="368.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="423.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="478.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="533.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="588.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="643.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="698.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="753.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="808.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="863.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">9</text>
+<text x="918.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">a</text>
+<rect x="888.0" y="166.0" width="60.0" height="64.0" rx="6" fill="none" stroke="#7c3aed" stroke-width="2"/>
+<text x="948.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="end">…1010: rounded up</text>
+<text x="232.0" y="248.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">One hex digit per 4 bits, as in (0.1).hex() = 0x1.999999999999ap-4</text>
+<rect x="40.0" y="272.0" width="920.0" height="38.0" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="58.0" y="297.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">sign</text>
+<text x="160.0" y="297.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">0</text>
+<text x="392.0" y="297.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start"><tspan>0 means positive: (−1)</tspan><tspan dy="-6.1" font-size="12.5">0</tspan><tspan dy="6.1"> = +1</tspan></text>
+<rect x="40.0" y="314.0" width="920.0" height="38.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="58.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">exponent</text>
+<text x="160.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">01111111011</text>
+<text x="392.0" y="339.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start"><tspan>1019 in decimal. Minus the bias 1023: 1019 − 1023 = −4, so × 2</tspan><tspan dy="-6.1" font-size="12.5">−4</tspan></text>
+<rect x="40.0" y="356.0" width="920.0" height="58.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="58.0" y="381.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">fraction</text>
+<text x="160.0" y="381.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">1001 1001 … 1001 1010</text>
+<text x="392.0" y="381.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">“1001” repeats forever (0.1 has no exact binary form),</text>
+<text x="392.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">so it is cut off after 52 bits. The last bits …1010 show it was rounded up.</text>
+<rect x="40.0" y="436.0" width="920.0" height="58.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="500.0" y="472.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="400" fill="#1f2937" text-anchor="middle"><tspan font-weight="700">x = (−1)</tspan><tspan dy="-8.0" font-size="13.7">s</tspan><tspan dy="8.0" font-weight="700"> × 1.f × 2</tspan><tspan dy="-8.0" font-size="13.7">e − 1023</tspan><tspan dy="8.0">   =</tspan><tspan>   +1 × about 1.6 × 2</tspan><tspan dy="-8.0" font-size="13.7">−4</tspan><tspan dy="8.0">   ≈ 0.1</tspan></text>
+<text x="40.0" y="526.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Decimal(0.1)</text>
+<text x="158.0" y="526.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">=</text>
+<text x="178.0" y="526.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">0.1000000000000000055511151231257827021181583404541015625</text>
+<text x="40.0" y="553.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Fraction(0.1)</text>
+<text x="158.0" y="553.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">=</text>
+<text x="178.0" y="553.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start"><tspan>3602879701896397 / 2</tspan><tspan dy="-6.3" font-size="12.5">55</tspan><tspan dy="6.3" fill="#6b7280" font-weight="400">   So 0.1 is stored a little high.</tspan></text>
+<text x="40.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Bits from struct.pack('&gt;d', 0.1), exactly as in the post's bits64(). IEEE 754-2019 binary64.</text>
+</svg>

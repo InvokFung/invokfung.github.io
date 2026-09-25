@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-label="Diataxis map of the four kinds of documentation">
+<rect width="1000" height="660" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="658.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Diátaxis: four kinds of docs</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each page serves one need. Mixing them is the most common mistake.</text>
+<rect x="158.0" y="158.0" width="334.0" height="194.0" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="182.0" y="198.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#0d9488" text-anchor="start">Tutorial</text>
+<text x="182.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Oriented to learning</text>
+<text x="182.0" y="256.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Reader is new, following along</text>
+<text x="182.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#9ca3af" text-anchor="start">Example for a CSV tool:</text>
+<text x="182.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start" font-style="italic">“Clean your first CSV in 5 minutes”</text>
+<rect x="508.0" y="158.0" width="334.0" height="194.0" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="532.0" y="198.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#d97706" text-anchor="start">How-to guide</text>
+<text x="532.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Oriented to a task</text>
+<text x="532.0" y="256.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Reader is working, has a goal</text>
+<text x="532.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#9ca3af" text-anchor="start">Example for a CSV tool:</text>
+<text x="532.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start" font-style="italic">“How to clean every file in a folder”</text>
+<rect x="158.0" y="368.0" width="334.0" height="194.0" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="182.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#2563eb" text-anchor="start">Explanation</text>
+<text x="182.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Oriented to understanding</text>
+<text x="182.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Reader is thinking, wants the why</text>
+<text x="182.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#9ca3af" text-anchor="start">Example for a CSV tool:</text>
+<text x="182.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start" font-style="italic">“Why encoding is detected before parsing”</text>
+<rect x="508.0" y="368.0" width="334.0" height="194.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="532.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#7c3aed" text-anchor="start">Reference</text>
+<text x="532.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">Oriented to information</text>
+<text x="532.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Reader is looking something up</text>
+<text x="532.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#9ca3af" text-anchor="start">Example for a CSV tool:</text>
+<text x="532.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start" font-style="italic">“All command-line options”</text>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker></defs>
+<line x1="150" y1="124" x2="850" y2="124" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="150.0" y="114.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">LEARNING (study)</text>
+<text x="850.0" y="114.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="end">DOING (work)</text>
+<line x1="110" y1="150" x2="110" y2="570" stroke="#1f2937" stroke-width="2" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text transform="translate(98,150) rotate(-90)" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="end">ACTION (practical steps)</text>
+<text transform="translate(98,570) rotate(-90)" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">COGNITION (theory)</text>
+<rect x="150" y="590" width="700" height="44" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+<text x="500.0" y="618.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">A good README = a small tutorial (the quickstart) + links to the other three.</text>
+<text x="960.0" y="650.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="end">Diátaxis by Daniele Procida · diataxis.fr</text>
+</svg>

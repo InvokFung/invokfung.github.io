@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 684" width="1000" height="684" role="img" aria-label="Left: the 8 ways (a+)+ can split four a's, each failing at the final b. Right: the post's timings for n = 18, 20, 22, 24 a's: 0.012, 0.055, 0.221 and 0.802 seconds.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="684" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="682.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Catastrophic backtracking: (a+)+$ on aaa…ab</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Nested quantifiers give the engine many ways to split the a's. On text that almost matches, it tries them all.</text>
+<text x="40.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Why: (a+)+ can split aaaa in 8 ways</text>
+<text x="40.0" y="144.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Every way reaches the b, and $ fails there.</text>
+<text x="52.0" y="182.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">1</text>
+<rect x="67.0" y="163.0" width="108.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="108.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="134.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="160.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="163.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="176.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,172.6 L255.4,179.4 M255.4,172.6 L248.6,179.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">2</text>
+<rect x="67.0" y="195.0" width="82.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="108.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="134.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="153.0" y="195.0" width="30.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="168.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="195.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="213.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="208.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,204.6 L255.4,211.4 M255.4,204.6 L248.6,211.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="213.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">3</text>
+<rect x="67.0" y="227.0" width="56.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="108.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="127.0" y="227.0" width="56.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="142.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="168.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="227.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="240.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,236.6 L255.4,243.4 M255.4,236.6 L248.6,243.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="245.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">4</text>
+<rect x="67.0" y="259.0" width="56.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="277.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="108.0" y="277.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="127.0" y="259.0" width="30.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="142.0" y="277.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="161.0" y="259.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="176.0" y="277.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="259.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="277.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="272.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,268.6 L255.4,275.4 M255.4,268.6 L248.6,275.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="277.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">5</text>
+<rect x="67.0" y="291.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="101.0" y="291.0" width="82.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="116.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="142.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="168.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="291.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="304.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,300.6 L255.4,307.4 M255.4,300.6 L248.6,307.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="309.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">6</text>
+<rect x="67.0" y="323.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="341.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="101.0" y="323.0" width="56.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="116.0" y="341.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="142.0" y="341.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="161.0" y="323.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="176.0" y="341.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="323.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="341.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="336.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,332.6 L255.4,339.4 M255.4,332.6 L248.6,339.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">7</text>
+<rect x="67.0" y="355.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="373.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="101.0" y="355.0" width="30.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="116.0" y="373.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="135.0" y="355.0" width="56.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="150.0" y="373.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<text x="176.0" y="373.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="355.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="373.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="368.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,364.6 L255.4,371.4 M255.4,364.6 L248.6,371.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="373.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="52.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#9ca3af" text-anchor="end">8</text>
+<rect x="67.0" y="387.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="82.0" y="405.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="101.0" y="387.0" width="30.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="116.0" y="405.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="135.0" y="387.0" width="30.0" height="26.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="150.0" y="405.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="169.0" y="387.0" width="30.0" height="26.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="184.0" y="405.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a</text>
+<rect x="206.0" y="387.0" width="24.0" height="26.0" rx="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="218.0" y="405.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle" textLength="9.0" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">b</text>
+<circle cx="252" cy="400.0" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M248.6,396.6 L255.4,403.4 M255.4,396.6 L248.6,403.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="270.0" y="405.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc4c3a" text-anchor="start">$ fails</text>
+<text x="40.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Each extra a doubles the number of ways:</text>
+<text x="40.0" y="462.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">n a's give about 2ⁿ ways to try.</text>
+<text x="500.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">How long it took</text>
+<text x="500.0" y="144.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start" textLength="265.2" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">re.match(r"(a+)+$", "a" * n + "b")</text>
+<text x="500.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">One run each, Windows 11 laptop, Python 3.11.9: an informal</text>
+<text x="500.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">measurement, not a benchmark. Your numbers will differ.</text>
+<text x="550.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="end">Time</text>
+<line x1="560.0" y1="424.0" x2="950.0" y2="424.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="550.0" y="428.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">0</text>
+<line x1="560.0" y1="379.1" x2="950.0" y2="379.1" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="550.0" y="383.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">0.2 s</text>
+<line x1="560.0" y1="334.2" x2="950.0" y2="334.2" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="550.0" y="338.7" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">0.4 s</text>
+<line x1="560.0" y1="289.3" x2="950.0" y2="289.3" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="550.0" y="293.8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">0.6 s</text>
+<line x1="560.0" y1="244.4" x2="950.0" y2="244.4" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="550.0" y="248.9" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">0.8 s</text>
+<rect x="580.8" y="421.3" width="56.0" height="2.7" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="608.8" y="412.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0.012 s</text>
+<text x="608.8" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">18</text>
+<rect x="678.2" y="411.7" width="56.0" height="12.3" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="706.2" y="402.7" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0.055 s</text>
+<text x="706.2" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">20</text>
+<rect x="775.8" y="374.4" width="56.0" height="49.6" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="803.8" y="365.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0.221 s</text>
+<text x="803.8" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">22</text>
+<rect x="873.2" y="244.0" width="56.0" height="180.0" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="0"/>
+<text x="901.2" y="235.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="middle">0.802 s</text>
+<text x="901.2" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">24</text>
+<line x1="560.0" y1="424.0" x2="950.0" y2="424.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="755.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="middle">n (number of a's)</text>
+<text x="500.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Every 2 extra characters cost about 4 times more.</text>
+<text x="500.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Extrapolating, 40 characters would take more than ten hours.</text>
+<text x="40.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Fixes, from best to last resort</text>
+<rect x="40.0" y="572.0" width="296.0" height="74.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="54.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">1  Rewrite the pattern</text>
+<text x="54.0" y="616.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start" textLength="48.6" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">(a+)+$</text>
+<text x="116.6" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="middle">→</text>
+<text x="130.6" y="616.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start" textLength="24.3" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">a+$</text>
+<text x="54.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">the nesting added nothing</text>
+<rect x="352.0" y="572.0" width="296.0" height="74.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="366.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">2  Atomic group</text>
+<text x="366.0" y="616.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start" textLength="64.8" lengthAdjust="spacing" xml:space="preserve" style="white-space:pre">(?&gt;a+)+$</text>
+<text x="366.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">returns None at once (Python 3.11+)</text>
+<rect x="664.0" y="572.0" width="296.0" height="74.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="678.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">3  Linear-time engine</text>
+<text x="678.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">RE2 · Go regexp · Rust regex</text>
+<text x="678.0" y="636.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">no backreferences or lookarounds</text>
+<text x="40.0" y="666.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 13 (timing table and fixes). Timings are copied exactly from the post.</text>
+</svg>

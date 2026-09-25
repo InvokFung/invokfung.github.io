@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 638" width="1000" height="638" role="img" aria-label="An EC2 instance with instance store and an EBS volume in one AZ, an S3 bucket and EBS snapshots at region level, and a snapshot restored into a second AZ">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="638" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="636.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">EC2, EBS and S3: where the data lives</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Instance store lives on the host, EBS in one AZ, S3 in the region. Snapshot + restore moves EBS data to another AZ.</text>
+<rect x="40.0" y="100.0" width="920.0" height="466.0" rx="14" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="60.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Region ap-east-1</text>
+<rect x="60" y="144" width="410" height="228" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="76.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ ap-east-1a</text>
+<rect x="530" y="144" width="410" height="228" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="546.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">AZ ap-east-1b</text>
+<rect x="80.0" y="184.0" width="184.0" height="172.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="96.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">EC2 instance</text>
+<text x="96.0" y="234.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">virtual machine</text>
+<rect x="92.0" y="250.0" width="160.0" height="94.0" rx="8" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="104.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">Instance store</text>
+<text x="104.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">NVMe SSD on the host</text>
+<text x="104.0" y="315.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">lost on stop or</text>
+<text x="104.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">terminate</text>
+<rect x="300.0" y="204.0" width="156.0" height="132.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="314.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">EBS volume</text>
+<text x="314.0" y="255.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">gp3 (the default)</text>
+<text x="314.0" y="276.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">network-attached</text>
+<text x="314.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">block device</text>
+<text x="314.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="start">stays in this AZ</text>
+<line x1="264.0" y1="270.0" x2="300.0" y2="270.0" stroke="#1f2937" stroke-width="3" stroke-linecap="butt"/>
+<circle cx="264" cy="270.0" r="4" fill="#1f2937"/>
+<circle cx="300" cy="270.0" r="4" fill="#1f2937"/>
+<rect x="730.0" y="204.0" width="194.0" height="132.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="744.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">New EBS volume</text>
+<text x="744.0" y="255.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">gp3, restored from</text>
+<text x="744.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">the snapshot</text>
+<text x="744.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">same data, now in</text>
+<text x="744.0" y="317.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">another AZ</text>
+<line x1="462.0" y1="240.0" x2="722.0" y2="240.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<circle cx="630" cy="240" r="11" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M625.8,235.8 L634.2,244.2 M634.2,235.8 L625.8,244.2" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="630.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">no direct move:</text>
+<text x="630.0" y="292.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">EBS is AZ-local</text>
+<rect x="60.0" y="432.0" width="270.0" height="114.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="76.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="start">S3 bucket (regional)</text>
+<text x="76.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Objects in buckets, over HTTPS</text>
+<text x="76.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">11 nines durability, ≥ 3 AZs</text>
+<text x="76.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">99.99% availability (Standard)</text>
+<rect x="360.0" y="432.0" width="580.0" height="114.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="376.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">EBS snapshots (region-scoped)</text>
+<text x="376.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Incremental backups of a volume, stored in S3 (AWS-managed).</text>
+<text x="376.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">≈ USD 0.05 per GB-month. Schedule them with Data Lifecycle Manager (DLM).</text>
+<text x="376.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Restore one into a new volume in another AZ to move the data.</text>
+<line x1="172.0" y1="359.0" x2="172.0" y2="429.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="182.0" y="406.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">aws s3 cp (HTTPS)</text>
+<line x1="378.0" y1="336.0" x2="378.0" y2="429.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="388.0" y="406.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">create-snapshot</text>
+<line x1="827.0" y1="432.0" x2="827.0" y2="339.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="817.0" y="406.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="end">create-volume --availability-zone</text>
+<text x="40.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">EBS outlives its instance unless “Delete on termination” is on (default for the root volume, off for extra volumes).</text>
+<text x="40.0" y="620.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Facts and commands as given in the post (EC2, EBS and S3 chapters and Exercise 2).</text>
+</svg>

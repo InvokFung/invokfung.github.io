@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 712" width="1000" height="712" role="img" aria-label="Window functions with $setWindowFields: every sales row is kept and gets a running total and a 3-row moving average computed within its region; $group would collapse the rows to one per region">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="712" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="710.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Window functions keep every row</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">$setWindowFields adds values computed over nearby rows of the same partition. $group collapses them.</text>
+<rect x="40.0" y="100.0" width="920.0" height="153.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1"/>
+<text x="56.0" y="124.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">{ $setWindowFields: {</text>
+<text x="85.0" y="143.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">partitionBy: "$region",                     // separate window per region</text>
+<text x="85.0" y="162.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">sortBy: { day: 1 },</text>
+<text x="85.0" y="181.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">output: {</text>
+<text x="99.5" y="200.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#5eead4" text-anchor="start">running_total: { $sum: "$revenue", window: { documents: ["unbounded", "current"] } },</text>
+<text x="99.5" y="219.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#fcd34d" text-anchor="start">moving_avg_3d: { $avg: "$revenue", window: { documents: [-2, 0] } },</text>
+<text x="99.5" y="238.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#94a3b8" text-anchor="start">...</text>
+<text x="56.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">day</text>
+<text x="180.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">region</text>
+<text x="310.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#6b7280" text-anchor="end">revenue</text>
+<text x="450.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#0d9488" text-anchor="end">running_total</text>
+<text x="584.0" y="309.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#d97706" text-anchor="end">moving_avg_3d</text>
+<text x="56.0" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Output: all 5 rows are kept</text>
+<rect x="40.0" y="321.0" width="560.0" height="104.0" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="612.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">partition</text>
+<text x="612.0" y="388.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">APAC</text>
+<rect x="40.0" y="437.0" width="560.0" height="72.0" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="612.0" y="471.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">partition</text>
+<text x="612.0" y="488.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">EMEA</text>
+<text x="56.0" y="346.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">2026-05-01</text>
+<text x="180.0" y="346.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">APAC</text>
+<text x="310.0" y="346.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="end">100</text>
+<text x="450.0" y="346.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">100</text>
+<text x="584.0" y="346.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="end">100</text>
+<text x="56.0" y="378.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">2026-05-02</text>
+<text x="180.0" y="378.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">APAC</text>
+<text x="310.0" y="378.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="end">120</text>
+<text x="450.0" y="378.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">220</text>
+<text x="584.0" y="378.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="end">110</text>
+<rect x="46.0" y="391.0" width="548.0" height="28.0" rx="6" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="56.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">2026-05-03</text>
+<text x="180.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">APAC</text>
+<text x="310.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="end">150</text>
+<text x="450.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">370</text>
+<text x="584.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="end">123.3</text>
+<text x="56.0" y="462.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">2026-05-01</text>
+<text x="180.0" y="462.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">EMEA</text>
+<text x="310.0" y="462.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="end">80</text>
+<text x="450.0" y="462.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">80</text>
+<text x="584.0" y="462.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="end">80</text>
+<text x="56.0" y="494.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">2026-05-02</text>
+<text x="180.0" y="494.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">EMEA</text>
+<text x="310.0" y="494.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="end">90</text>
+<text x="450.0" y="494.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="end">170</text>
+<text x="584.0" y="494.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="end">85</text>
+<text x="40.0" y="531.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">moving_avg_3d rounded to 1 decimal. Near the start of a partition the window holds fewer rows.</text>
+<text x="690.0" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">How the bold row is computed</text>
+<rect x="690.0" y="301.0" width="270.0" height="92.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="704.0" y="325.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">running_total</text>
+<text x="704.0" y="345.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">every row so far in APAC</text>
+<text x="704.0" y="371.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">100 + 120 + 150 = 370</text>
+<rect x="690.0" y="405.0" width="270.0" height="92.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="704.0" y="429.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="start">moving_avg_3d</text>
+<text x="704.0" y="449.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">2 rows before + this row</text>
+<text x="704.0" y="475.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">(100 + 120 + 150) / 3 = 123.3</text>
+<text x="690.0" y="523.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">EMEA rows never count toward APAC:</text>
+<text x="690.0" y="541.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">each partition has its own window.</text>
+<line x1="40.0" y1="590.0" x2="960.0" y2="590.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="612.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Compare: grouping by region collapses the rows</text>
+<rect x="40.0" y="626.0" width="256.9" height="32.0" rx="8" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="51.0" y="647.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">{ _id: "APAC", revenue: 370 }</text>
+<rect x="308.9" y="626.0" width="256.9" height="32.0" rx="8" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="319.9" y="647.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">{ _id: "EMEA", revenue: 170 }</text>
+<text x="585.8" y="647.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">2 rows: the daily detail is gone.</text>
+<text x="40.0" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: MongoDB Course 06, Chapter 5. Data and windows copied from the post; outputs computed from them.</text>
+</svg>

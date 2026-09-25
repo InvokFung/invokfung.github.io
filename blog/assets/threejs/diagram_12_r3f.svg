@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" role="img" aria-label="React Three Fiber: JSX tags map to Three.js objects; useFrame runs every frame while React renders only on changes">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="760" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="758.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">React Three Fiber: JSX becomes Three.js objects</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Lowercase tags create Three.js classes. Capitalised ones are components, such as the drei helpers.</text>
+<text x="40.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#9ca3af" text-anchor="start">JSX you write</text>
+<rect x="40.0" y="132.0" width="430.0" height="336.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="56.0" y="161.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">&lt;Canvas camera={...} shadows&gt;</text>
+<text x="56.0" y="193.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">  &lt;ambientLight intensity={0.3} /&gt;</text>
+<text x="56.0" y="225.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">  &lt;directionalLight castShadow /&gt;</text>
+<text x="56.0" y="257.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">  &lt;mesh position={[0, 1, 0]}&gt;</text>
+<text x="56.0" y="289.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">    &lt;boxGeometry args={[1, 1, 1]} /&gt;</text>
+<text x="56.0" y="321.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">    &lt;meshStandardMaterial color="orange" /&gt;</text>
+<text x="56.0" y="353.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">  &lt;/mesh&gt;</text>
+<text x="56.0" y="385.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#c4b5fd" text-anchor="start">  &lt;Environment preset="city" /&gt;</text>
+<text x="56.0" y="417.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#c4b5fd" text-anchor="start">  &lt;OrbitControls /&gt;</text>
+<text x="56.0" y="449.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#5eead4" text-anchor="start">&lt;/Canvas&gt;</text>
+<text x="540.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#9ca3af" text-anchor="start">What Three.js gets</text>
+<rect x="540.0" y="142.0" width="420.0" height="28.0" rx="7" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.3"/>
+<text x="552.0" y="161.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">renderer (gl) + scene + camera</text>
+<text x="948.0" y="161.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">useThree()</text>
+<line x1="478.0" y1="156.0" x2="532.0" y2="156.0" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="534.0" cy="156.0" r="3" fill="#2563eb"/>
+<rect x="564.0" y="174.0" width="396.0" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.3"/>
+<text x="576.0" y="193.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">THREE.AmbientLight</text>
+<text x="948.0" y="193.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">intensity 0.3</text>
+<line x1="478.0" y1="188.0" x2="556.0" y2="188.0" stroke="#0d9488" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="558.0" cy="188.0" r="3" fill="#0d9488"/>
+<rect x="564.0" y="206.0" width="396.0" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.3"/>
+<text x="576.0" y="225.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">THREE.DirectionalLight</text>
+<text x="948.0" y="225.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">castShadow</text>
+<line x1="478.0" y1="220.0" x2="556.0" y2="220.0" stroke="#0d9488" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="558.0" cy="220.0" r="3" fill="#0d9488"/>
+<rect x="564.0" y="238.0" width="396.0" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.3"/>
+<text x="576.0" y="257.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">THREE.Mesh</text>
+<text x="948.0" y="257.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">position (0, 1, 0)</text>
+<line x1="478.0" y1="252.0" x2="556.0" y2="252.0" stroke="#0d9488" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="558.0" cy="252.0" r="3" fill="#0d9488"/>
+<rect x="588.0" y="270.0" width="372.0" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.3"/>
+<text x="600.0" y="289.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">THREE.BoxGeometry(1, 1, 1)</text>
+<text x="948.0" y="289.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">from args</text>
+<line x1="478.0" y1="284.0" x2="580.0" y2="284.0" stroke="#0d9488" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="582.0" cy="284.0" r="3" fill="#0d9488"/>
+<rect x="588.0" y="302.0" width="372.0" height="28.0" rx="7" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.3"/>
+<text x="600.0" y="321.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">THREE.MeshStandardMaterial</text>
+<text x="948.0" y="321.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">orange</text>
+<line x1="478.0" y1="316.0" x2="580.0" y2="316.0" stroke="#0d9488" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="582.0" cy="316.0" r="3" fill="#0d9488"/>
+<rect x="564.0" y="366.0" width="396.0" height="28.0" rx="7" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.3"/>
+<text x="576.0" y="385.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">drei Environment</text>
+<text x="948.0" y="385.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">IBL, built-in HDR</text>
+<line x1="478.0" y1="380.0" x2="556.0" y2="380.0" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="558.0" cy="380.0" r="3" fill="#7c3aed"/>
+<rect x="564.0" y="398.0" width="396.0" height="28.0" rx="7" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.3"/>
+<text x="576.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">drei OrbitControls</text>
+<text x="948.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">camera controls</text>
+<line x1="478.0" y1="412.0" x2="556.0" y2="412.0" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/>
+<circle cx="558.0" cy="412.0" r="3" fill="#7c3aed"/>
+<line x1="550.0" y1="170.0" x2="550.0" y2="412.0" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="butt"/>
+<line x1="574.0" y1="266.0" x2="574.0" y2="316.0" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="butt"/>
+<text x="40.0" y="510.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Two different clocks</text>
+<text x="218.0" y="510.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">The Canvas draws every frame (unless frameloop="demand").</text>
+<text x="40.0" y="552.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">useFrame((state, dt) =&gt; …)</text>
+<text x="40.0" y="571.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">every frame, inside the render loop</text>
+<line x1="320.0" y1="551.0" x2="960.0" y2="551.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<rect x="326.5" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="355.6" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="384.7" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="413.8" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="442.9" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="472.0" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="501.1" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="530.2" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="559.3" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="588.4" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="617.5" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="646.5" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="675.6" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="704.7" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="733.8" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="762.9" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="792.0" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="821.1" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="850.2" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="879.3" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="908.4" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<rect x="937.5" y="540.0" width="16.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.4"/>
+<text x="40.0" y="604.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">React render</text>
+<text x="40.0" y="623.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">only when props or state change</text>
+<line x1="320.0" y1="603.0" x2="960.0" y2="603.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<rect x="472.0" y="592.0" width="16.0" height="22.0" rx="4" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="480.0" y="634.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#7c3aed" text-anchor="middle">state changed</text>
+<rect x="792.0" y="592.0" width="16.0" height="22.0" rx="4" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="800.0" y="634.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#7c3aed" text-anchor="middle">state changed</text>
+<rect x="40.0" y="656.0" width="450.0" height="60.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.3"/>
+<circle cx="64" cy="686" r="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M59.5,686.0 l3.2,3.2 l5.8,-6.2" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="86.0" y="681.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">In useFrame: mutate refs</text>
+<text x="86.0" y="701.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">ref.current.rotation.y += dt * 0.5</text>
+<rect x="510.0" y="656.0" width="450.0" height="60.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.3"/>
+<circle cx="534" cy="686" r="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M530.2,682.2 L537.8,689.8 M537.8,682.2 L530.2,689.8" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="556.0" y="681.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Never setState in useFrame</text>
+<text x="556.0" y="701.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">it causes a React re-render every frame</text>
+<text x="40.0" y="742.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">From the post: App skeleton (trimmed) and JSX naming (Chapter 2), useFrame (Chapter 3), performance trap 1 (Chapter 8).</text>
+</svg>

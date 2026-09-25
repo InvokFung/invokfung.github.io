@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 712" width="1000" height="712" role="img" aria-label="Shadow map setup for a DirectionalLight: the light's orthographic shadow camera renders a depth texture; three switches turn shadows on">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="712" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="710.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How a shadow map is made</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A shadow-casting light renders the scene from its own camera into a depth texture: the shadow map.</text>
+<defs><marker id="amb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<defs><marker id="vio" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7c3aed"/></marker></defs>
+<polygon points="96.5,279.6 242.1,157.4 460.6,417.9 315.1,540.0" fill="#7c3aed" fill-opacity="0.07" stroke="#7c3aed" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="60.0" y="440.0" width="500.0" height="14.0" rx="3" fill="#e5e7eb" stroke="none" stroke-width="0"/>
+<line x1="60.0" y1="440.0" x2="560.0" y2="440.0" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+<rect x="300.0" y="440.0" width="110.3" height="7.0" rx="2" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="418.3" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="start">shadow</text>
+<rect x="300.0" y="380.0" width="60.0" height="60.0" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="2.2"/>
+<circle cx="137.2" cy="180.2" r="19" fill="#fde68a" stroke="#d97706" stroke-width="2.2"/>
+<line x1="161.2" y1="180.2" x2="168.2" y2="180.2" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="154.1" y1="197.2" x2="159.1" y2="202.1" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="137.2" y1="204.2" x2="137.2" y2="211.2" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="120.2" y1="197.2" x2="115.2" y2="202.1" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="113.2" y1="180.2" x2="106.2" y2="180.2" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="120.2" y1="163.2" x2="115.2" y2="158.3" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="137.2" y1="156.2" x2="137.2" y2="149.2" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<line x1="154.1" y1="163.2" x2="159.1" y2="158.3" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<text x="137.2" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">DirectionalLight (sun)</text>
+<path d="M203.6,265.1 L298.1,377.7" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#amb)" stroke-dasharray="6 5"/>
+<path d="M262.5,263.8 L408.4,437.7" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#amb)" stroke-dasharray="6 5"/>
+<path d="M121.4,286.8 L248.1,437.7" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#amb)" stroke-dasharray="6 5"/>
+<text x="172.0" y="404.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="end">sun.shadow.camera</text>
+<text x="172.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">an orthographic box</text>
+<rect x="440.0" y="112.0" width="104.0" height="104.0" rx="4" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="476.0" y="142.0" width="34.0" height="34.0" rx="2" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="492.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">shadow map</text>
+<text x="492.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">depth as the light sees it</text>
+<path d="M257.0,170.0 L434.0,170.0" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#vio)"/>
+<text x="348.5" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">renders depth</text>
+<circle cx="438.0" cy="114.0" r="12" fill="#d97706"/>
+<text x="438.0" y="119.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<circle cx="101.2" cy="198.2" r="12" fill="#d97706"/>
+<text x="101.2" y="203.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="372.0" cy="376.0" r="12" fill="#d97706"/>
+<text x="372.0" y="381.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<circle cx="96.0" cy="472.0" r="12" fill="#d97706"/>
+<text x="96.0" y="477.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="114.0" y="477.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">floor</text>
+<circle cx="426.5" cy="395.6" r="12" fill="#d97706"/>
+<text x="426.5" y="400.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<circle cx="582.0" cy="119.0" r="12" fill="#d97706"/>
+<text x="582.0" y="124.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="598.0" y="124.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Renderer: switch shadows on</text>
+<text x="598.0" y="146.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">renderer.shadowMap.enabled = true</text>
+<text x="598.0" y="165.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">renderer.shadowMap.type = THREE.PCFSoftShadowMap</text>
+<circle cx="582.0" cy="205.0" r="12" fill="#d97706"/>
+<text x="582.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="598.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Light: cast shadows</text>
+<text x="598.0" y="232.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">sun.castShadow = true</text>
+<text x="598.0" y="251.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">sun.shadow.mapSize.set(2048, 2048)</text>
+<circle cx="582.0" cy="291.0" r="12" fill="#d97706"/>
+<text x="582.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="598.0" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Meshes: cast and receive</text>
+<text x="598.0" y="318.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">mesh.castShadow = true</text>
+<text x="598.0" y="337.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">floor.receiveShadow = true</text>
+<rect x="568.0" y="358.0" width="392.0" height="34.0" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.3"/>
+<text x="582.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Skip any one of steps 1–3 and you see no shadows.</text>
+<circle cx="582.0" cy="421.0" r="12" fill="#d97706"/>
+<text x="582.0" y="426.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="598.0" y="426.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Shadow camera: fit it tight</text>
+<text x="598.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Enclose every caster, as small as possible.</text>
+<text x="598.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Too large: wasted precision, blocky shadows.</text>
+<text x="598.0" y="488.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Too small: shadows fade out where it ends.</text>
+<rect x="40.0" y="580.0" width="920.0" height="84.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="606.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">When it looks wrong</text>
+<text x="60.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Stripes on lit surfaces (acne)</text>
+<text x="60.0" y="650.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">bias = -0.0005 (more negative)</text>
+<text x="360.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Shadow detached from the object</text>
+<text x="360.0" y="650.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">normalBias = 0.02 (increase)</text>
+<text x="660.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Very pixelated edges</text>
+<text x="660.0" y="650.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">bigger mapSize (1024 / 2048 / 4096)</text>
+<text x="40.0" y="694.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 2, 4 and 5 (the three steps, the shadow camera, bias and mapSize). Schematic, not to scale.</text>
+</svg>

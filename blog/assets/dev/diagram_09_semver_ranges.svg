@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img" aria-label="SemVer anatomy, and which versions the npm ranges ~1.2.3, ^1.2.3, ^0.2.3 and ~0.2.3 accept">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="700" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="698.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">SemVer, and what npm ranges let in</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">MAJOR.MINOR.PATCH, then which versions ^ and ~ accept. Rules of node-semver (npm 10.8.2), as in the post.</text>
+<rect x="40.0" y="100.0" width="186.0" height="130.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="56.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">MAJOR</text>
+<text x="56.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">incompatible change</text>
+<text x="56.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">to the public API</text>
+<text x="56.0" y="210.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16" font-weight="400" fill="#1f2937" text-anchor="start">2.4.1 <tspan fill="#6b7280">→</tspan> <tspan fill="#dc4c3a" font-weight="700">3</tspan>.0.0</text>
+<rect x="238.0" y="100.0" width="186.0" height="130.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="254.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">MINOR</text>
+<text x="254.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">new functionality,</text>
+<text x="254.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">backward compatible</text>
+<text x="254.0" y="210.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16" font-weight="400" fill="#1f2937" text-anchor="start">2.4.1 <tspan fill="#6b7280">→</tspan> 2.<tspan fill="#d97706" font-weight="700">5</tspan>.0</text>
+<rect x="436.0" y="100.0" width="186.0" height="130.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="452.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">PATCH</text>
+<text x="452.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">backward-compatible</text>
+<text x="452.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">bug fixes</text>
+<text x="452.0" y="210.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="16" font-weight="400" fill="#1f2937" text-anchor="start">2.4.1 <tspan fill="#6b7280">→</tspan> 2.4.<tspan fill="#0d9488" font-weight="700">2</tspan></text>
+<rect x="640.0" y="100.0" width="320.0" height="130.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="658.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Optional extras</text>
+<text x="658.0" y="154.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">1.0.0-rc.2</text>
+<text x="768.0" y="154.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">pre-release</text>
+<text x="768.0" y="173.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">sorts before 1.0.0</text>
+<text x="658.0" y="204.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">1.0.0+build.5</text>
+<text x="788.0" y="204.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">build metadata</text>
+<text x="788.0" y="223.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">ignored when comparing</text>
+<text x="40.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">What each range accepts</text>
+<text x="470.0" y="284.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start"><tspan fill="#2563eb" font-weight="700" text-decoration="underline">1.2</tspan></text>
+<text x="502.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">must stay the same</text>
+<circle cx="640" cy="279" r="5" fill="#1f2937"/>
+<text x="651.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">lowest allowed</text>
+<circle cx="762" cy="279" r="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M758.4,279.0 l2.6,2.6 l4.6,-5.0" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="775.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">matches</text>
+<circle cx="848" cy="279" r="8" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M845.0,276.0 L851.0,282.0 M851.0,276.0 L845.0,282.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="861.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">no match</text>
+<text x="330.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#9ca3af" text-anchor="middle">0.2.3</text>
+<text x="395.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">0.2.9</text>
+<text x="460.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">0.3.0</text>
+<text x="560.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#9ca3af" text-anchor="middle">1.2.3</text>
+<text x="625.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1.2.9</text>
+<text x="690.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1.3.0</text>
+<text x="755.0" y="316.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2.0.0</text>
+<line x1="310.0" y1="328.0" x2="808.0" y2="328.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="816.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">newer</text>
+<rect x="503" y="320" width="14" height="16" fill="#ffffff"/>
+<line x1="502.0" y1="335.0" x2="508.0" y2="321.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="512.0" y1="335.0" x2="518.0" y2="321.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="395.0" y1="338.0" x2="395.0" y2="552.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="460.0" y1="338.0" x2="460.0" y2="552.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="625.0" y1="338.0" x2="625.0" y2="552.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="690.0" y1="338.0" x2="690.0" y2="552.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="755.0" y1="338.0" x2="755.0" y2="552.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="367.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#1f2937" text-anchor="start"><tspan fill="#6b7280">~</tspan><tspan fill="#2563eb" font-weight="700" text-decoration="underline">1.2</tspan><tspan fill="#1f2937">.3</tspan></text>
+<text x="40.0" y="386.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">&gt;=1.2.3 &lt;1.3.0-0</text>
+<rect x="551.0" y="359.0" width="123.0" height="14.0" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<circle cx="560" cy="366" r="4.5" fill="#2563eb"/>
+<circle cx="395" cy="366" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M391.6,362.6 L398.4,369.4 M398.4,362.6 L391.6,369.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="460" cy="366" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M456.6,362.6 L463.4,369.4 M463.4,362.6 L456.6,369.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="625" cy="366" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M621.0,366.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="690" cy="366" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M686.6,362.6 L693.4,369.4 M693.4,362.6 L686.6,369.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="755" cy="366" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M751.6,362.6 L758.4,369.4 M758.4,362.6 L751.6,369.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="start">patch updates</text>
+<line x1="40.0" y1="393.0" x2="960.0" y2="393.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="40.0" y="421.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#1f2937" text-anchor="start"><tspan fill="#6b7280">^</tspan><tspan fill="#7c3aed" font-weight="700" text-decoration="underline">1</tspan><tspan fill="#1f2937">.2.3</tspan></text>
+<text x="40.0" y="440.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">&gt;=1.2.3 &lt;2.0.0-0</text>
+<rect x="551.0" y="413.0" width="188.0" height="14.0" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+<circle cx="560" cy="420" r="4.5" fill="#7c3aed"/>
+<circle cx="395" cy="420" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M391.6,416.6 L398.4,423.4 M398.4,416.6 L391.6,423.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="460" cy="420" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M456.6,416.6 L463.4,423.4 M463.4,416.6 L456.6,423.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="625" cy="420" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M621.0,420.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="690" cy="420" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M686.0,420.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="755" cy="420" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M751.6,416.6 L758.4,423.4 M758.4,416.6 L751.6,423.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="start">minor + patch</text>
+<line x1="40.0" y1="447.0" x2="960.0" y2="447.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="40.0" y="475.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#1f2937" text-anchor="start"><tspan fill="#6b7280">^</tspan><tspan fill="#d97706" font-weight="700" text-decoration="underline">0.2</tspan><tspan fill="#1f2937">.3</tspan></text>
+<text x="40.0" y="494.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">&gt;=0.2.3 &lt;0.3.0-0</text>
+<rect x="321.0" y="467.0" width="123.0" height="14.0" rx="7" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="330" cy="474" r="4.5" fill="#d97706"/>
+<circle cx="395" cy="474" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M390.9,474.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="460" cy="474" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M456.6,470.6 L463.4,477.4 M463.4,470.6 L456.6,477.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="625" cy="474" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M621.6,470.6 L628.4,477.4 M628.4,470.6 L621.6,477.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="690" cy="474" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M686.6,470.6 L693.4,477.4 M693.4,470.6 L686.6,477.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="755" cy="474" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M751.6,470.6 L758.4,477.4 M758.4,470.6 L751.6,477.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">stricter under 0.x</text>
+<line x1="40.0" y1="501.0" x2="960.0" y2="501.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="40.0" y="529.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="19" font-weight="700" fill="#1f2937" text-anchor="start"><tspan fill="#6b7280">~</tspan><tspan fill="#d97706" font-weight="700" text-decoration="underline">0.2</tspan><tspan fill="#1f2937">.3</tspan></text>
+<text x="40.0" y="548.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">&gt;=0.2.3 &lt;0.3.0-0</text>
+<rect x="321.0" y="521.0" width="123.0" height="14.0" rx="7" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<circle cx="330" cy="528" r="4.5" fill="#d97706"/>
+<circle cx="395" cy="528" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M390.9,528.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="460" cy="528" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M456.6,524.6 L463.4,531.4 M463.4,524.6 L456.6,531.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="625" cy="528" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M621.6,524.6 L628.4,531.4 M628.4,524.6 L621.6,531.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="690" cy="528" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M686.6,524.6 L693.4,531.4 M693.4,524.6 L686.6,531.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="755" cy="528" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M751.6,524.6 L758.4,531.4 M758.4,524.6 L751.6,531.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="820.0" y="533.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">same as ^0.2.3 here</text>
+<rect x="40.0" y="572.0" width="920.0" height="86.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="599.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Caret rule: ^ allows changes that do not modify the left-most non-zero number.</text>
+<text x="58.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">So ^1.2.3 keeps the 1 and ^0.2.3 keeps 0.2. ^0.0.3 matches only 0.0.3 (and its pre-releases).</text>
+<text x="58.0" y="643.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Treat every 0.x minor bump like a major one. The -0 on each upper bound keeps pre-releases of the next version out.</text>
+<text x="40.0" y="682.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Check it yourself: npx semver -r "^0.2.3" 0.2.9 0.3.0 1.2.9 1.3.0   ·   Sources: semver.org 2.0.0, node-semver README.</text>
+</svg>

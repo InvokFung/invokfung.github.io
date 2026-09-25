@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img" aria-label="Kafka Connect architecture: MongoDB source and sink connectors, and Debezium Postgres to MongoDB, around one Kafka cluster">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="700" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="698.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Three connectors, two directions, one Kafka cluster</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Top: MongoDB → Kafka → MongoDB with the official connectors. Bottom: Postgres → Kafka → MongoDB with Debezium.</text>
+<text x="40.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">MONGODB → MONGODB</text>
+<text x="40.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">POSTGRES → MONGODB</text>
+<path d="M69.0,165.0 L69.0,215.0 A35.0,9 0 0 0 139.0,215.0 L139.0,165.0" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<ellipse cx="104" cy="165.0" rx="35.0" ry="9" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="104.0" y="240.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDB</text>
+<text x="104.0" y="260.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">shop.orders</text>
+<path d="M69.0,383.0 L69.0,433.0 A35.0,9 0 0 0 139.0,433.0 L139.0,383.0" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<ellipse cx="104" cy="383.0" rx="35.0" ry="9" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="104.0" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Postgres</text>
+<text x="104.0" y="478.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">public.orders</text>
+<text x="104.0" y="496.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">public.users</text>
+<path d="M861.0,165.0 L861.0,215.0 A35.0,9 0 0 0 931.0,215.0 L931.0,165.0" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<ellipse cx="896" cy="165.0" rx="35.0" ry="9" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="896.0" y="240.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDB</text>
+<text x="896.0" y="260.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">shop.orders_view</text>
+<path d="M861.0,383.0 L861.0,433.0 A35.0,9 0 0 0 931.0,433.0 L931.0,383.0" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<ellipse cx="896" cy="383.0" rx="35.0" ry="9" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="896.0" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">MongoDB</text>
+<text x="896.0" y="478.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">shop_synced.orders</text>
+<rect x="188.0" y="148.0" width="184.0" height="116.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="280.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="middle">MongoDB Kafka</text>
+<text x="280.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="middle">Source Connector</text>
+<text x="280.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">reads the change stream</text>
+<text x="280.0" y="235.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">topic.prefix: shop</text>
+<rect x="188.0" y="366.0" width="184.0" height="116.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="280.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">Debezium Postgres</text>
+<text x="280.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">Source Connector</text>
+<text x="280.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">reads the WAL (pgoutput)</text>
+<text x="280.0" y="453.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">topic.prefix: pg.shop</text>
+<rect x="628.0" y="148.0" width="184.0" height="116.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="720.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="middle">MongoDB Kafka</text>
+<text x="720.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="middle">Sink Connector</text>
+<text x="720.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">upsert by key (replay-safe)</text>
+<text x="720.0" y="235.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">bad messages → DLQ</text>
+<rect x="628.0" y="366.0" width="184.0" height="116.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="720.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">Debezium</text>
+<text x="720.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="middle">MongoDB Sink</text>
+<text x="720.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">reads Debezium events</text>
+<text x="720.0" y="453.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">op "d" → delete</text>
+<rect x="400.0" y="108.0" width="200.0" height="420.0" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="500.0" y="134.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="middle">Kafka cluster</text>
+<rect x="412.0" y="158.0" width="176.0" height="96.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="500.0" y="180.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">shop.shop.orders</text>
+<text x="424.0" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">P0</text>
+<rect x="450.0" y="192.0" width="126.0" height="11.0" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="454.0" y="194.0" width="12.0" height="7.0" rx="2" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="470.0" y="194.0" width="12.0" height="7.0" rx="2" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="486.0" y="194.0" width="12.0" height="7.0" rx="2" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<text x="424.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">P1</text>
+<rect x="450.0" y="207.0" width="126.0" height="11.0" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="454.0" y="209.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="470.0" y="209.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="486.0" y="209.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="502.0" y="209.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<text x="424.0" y="231.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">P2</text>
+<rect x="450.0" y="222.0" width="126.0" height="11.0" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="454.0" y="224.0" width="12.0" height="7.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<rect x="470.0" y="224.0" width="12.0" height="7.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<rect x="486.0" y="224.0" width="12.0" height="7.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<text x="500.0" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">same key → same partition</text>
+<rect x="412.0" y="282.0" width="176.0" height="34.0" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+<text x="500.0" y="304.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">shop.orders.dlq</text>
+<rect x="412.0" y="376.0" width="176.0" height="96.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="500.0" y="398.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">pg.shop.public.orders</text>
+<text x="424.0" y="419.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">P0</text>
+<rect x="450.0" y="410.0" width="126.0" height="11.0" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="454.0" y="412.0" width="12.0" height="7.0" rx="2" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="470.0" y="412.0" width="12.0" height="7.0" rx="2" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<rect x="486.0" y="412.0" width="12.0" height="7.0" rx="2" fill="#0d9488" stroke="#0d9488" stroke-width="0"/>
+<text x="424.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">P1</text>
+<rect x="450.0" y="425.0" width="126.0" height="11.0" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="454.0" y="427.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="470.0" y="427.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="486.0" y="427.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<rect x="502.0" y="427.0" width="12.0" height="7.0" rx="2" fill="#d97706" stroke="#d97706" stroke-width="0"/>
+<text x="424.0" y="449.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="start">P2</text>
+<rect x="450.0" y="440.0" width="126.0" height="11.0" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<rect x="454.0" y="442.0" width="12.0" height="7.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<rect x="470.0" y="442.0" width="12.0" height="7.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<rect x="486.0" y="442.0" width="12.0" height="7.0" rx="2" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<text x="500.0" y="464.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">same key → same partition</text>
+<rect x="412.0" y="482.0" width="176.0" height="30.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="500.0" y="502.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">pg.shop.public.users</text>
+<defs><marker id="m0d9488" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/></marker></defs>
+<path d="M148,190 L182,190" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m0d9488)"/>
+<path d="M374,190 L406,190" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m0d9488)"/>
+<path d="M594,190 L622,190" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m0d9488)"/>
+<path d="M814,190 L852,190" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m0d9488)"/>
+<defs><marker id="md97706" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<path d="M148,408 L182,408" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#md97706)"/>
+<path d="M374,408 L406,408" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#md97706)"/>
+<path d="M594,408 L622,408" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#md97706)"/>
+<path d="M814,408 L852,408" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#md97706)"/>
+<defs><marker id="mdc4c3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#dc4c3a"/></marker></defs>
+<path d="M658,264.0 L658,299 L592,299" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#mdc4c3a)"/>
+<rect x="40.0" y="552.0" width="296.0" height="104.0" rx="10" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="56.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Order per document</text>
+<text x="56.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Key = _id (Mongo) or primary key</text>
+<text x="56.0" y="621.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(Postgres). Same key, same partition,</text>
+<text x="56.0" y="640.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">so one document's events stay in order.</text>
+<rect x="352.0" y="552.0" width="296.0" height="104.0" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="368.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">At-least-once delivery</text>
+<text x="368.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Kafka can deliver an event twice.</text>
+<text x="368.0" y="621.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Sinks upsert by business key,</text>
+<text x="368.0" y="640.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">so a replay is safe.</text>
+<rect x="664.0" y="552.0" width="296.0" height="104.0" rx="10" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="680.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">Postgres → MongoDB</text>
+<text x="680.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Prefer the Debezium MongoDB sink.</text>
+<text x="680.0" y="621.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The older MongoDB Kafka Sink needs a</text>
+<text x="680.0" y="640.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">CDC handler for Debezium updates.</text>
+<text x="40.0" y="682.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's connector configs (Chapters 3, 4, 6) and ordering rules (Chapters 7, 9).</text>
+</svg>
