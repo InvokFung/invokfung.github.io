@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="Timelines for the four promise combinators on the same inputs: B rejects at 20 ms, A fulfils at 30 ms, C fulfils at 80 ms. Promise.all rejects at 20 ms, Promise.allSettled fulfils at 80 ms, Promise.any fulfils at 30 ms with a, Promise.race rejects at 20 ms. The inputs keep running in every case.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Same three inputs, four combinators</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">When each combinator settles. None of them cancels the inputs that are still running.</text>
+<line x1="260.0" y1="118.0" x2="940.0" y2="118.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="260.0" y1="113.0" x2="260.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="260.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<line x1="328.0" y1="113.0" x2="328.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="328.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">10</text>
+<line x1="396.0" y1="113.0" x2="396.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="396.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">20</text>
+<line x1="464.0" y1="113.0" x2="464.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="464.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">30</text>
+<line x1="532.0" y1="113.0" x2="532.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="532.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">40</text>
+<line x1="600.0" y1="113.0" x2="600.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="600.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">50</text>
+<line x1="668.0" y1="113.0" x2="668.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="668.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">60</text>
+<line x1="736.0" y1="113.0" x2="736.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="736.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">70</text>
+<line x1="804.0" y1="113.0" x2="804.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="804.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">80</text>
+<line x1="872.0" y1="113.0" x2="872.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="872.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">90</text>
+<line x1="940.0" y1="113.0" x2="940.0" y2="123.0" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round"/>
+<text x="940.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">100</text>
+<text x="940.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">time (ms)</text>
+<line x1="396.0" y1="126.0" x2="396.0" y2="548.0" stroke="#dc4c3a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<line x1="464.0" y1="126.0" x2="464.0" y2="548.0" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<line x1="804.0" y1="126.0" x2="804.0" y2="548.0" stroke="#16a34a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<text x="40.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Inputs</text>
+<text x="240.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">input B</text>
+<rect x="260.0" y="164.0" width="136.0" height="16.0" rx="5" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<circle cx="396.0" cy="172" r="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M392.6,168.6 L399.4,175.4 M399.4,168.6 L392.6,175.4" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="412.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">rejects at 20 ms</text>
+<text x="240.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">input A</text>
+<rect x="260.0" y="202.0" width="204.0" height="16.0" rx="5" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<circle cx="464.0" cy="210" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M459.9,210.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="480.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="start" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">fulfils 'a' at 30 ms</text>
+<text x="240.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">input C</text>
+<rect x="260.0" y="240.0" width="544.0" height="16.0" rx="5" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<circle cx="804.0" cy="248" r="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M800.0,248.0 l2.9,2.9 l5.2,-5.6" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="788.0" y="253.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="end" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">fulfils 'c' at 80 ms</text>
+<text x="40.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Combinators</text>
+<rect x="40" y="300" width="920" height="50" rx="10" fill="#fbfbfc" fill-opacity="0.6" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="240.0" y="331.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="end">Promise.all</text>
+<rect x="260.0" y="317.0" width="136.0" height="16.0" rx="5" fill="#e5e7eb" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="396.0" cy="325" r="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M392.2,321.2 L399.8,328.8 M399.8,321.2 L392.2,328.8" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="414.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">rejects with Error('b') at 20 ms</text>
+<rect x="40" y="362" width="920" height="50" rx="10" fill="#fbfbfc" fill-opacity="0.6" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="240.0" y="393.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="end">Promise.allSettled</text>
+<rect x="260.0" y="379.0" width="544.0" height="16.0" rx="5" fill="#e5e7eb" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="804.0" cy="387" r="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M799.5,387.0 l3.2,3.2 l5.8,-6.2" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="786.0" y="392.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#16a34a" text-anchor="end" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">fulfils with 3 records at 80 ms</text>
+<rect x="40" y="424" width="920" height="50" rx="10" fill="#fbfbfc" fill-opacity="0.6" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="240.0" y="455.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="end">Promise.any</text>
+<rect x="260.0" y="441.0" width="204.0" height="16.0" rx="5" fill="#e5e7eb" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="464.0" cy="449" r="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M459.5,449.0 l3.2,3.2 l5.8,-6.2" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="482.0" y="454.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#16a34a" text-anchor="start" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">fulfils with 'a' at 30 ms</text>
+<rect x="40" y="486" width="920" height="50" rx="10" fill="#fbfbfc" fill-opacity="0.6" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="240.0" y="517.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="end">Promise.race</text>
+<rect x="260.0" y="503.0" width="136.0" height="16.0" rx="5" fill="#e5e7eb" stroke="#cbd5e1" stroke-width="1"/>
+<circle cx="396.0" cy="511" r="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M392.2,507.2 L399.8,514.8 M399.8,507.2 L392.2,514.8" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="414.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" paint-order="stroke">rejects with Error('b') at 20 ms</text>
+<text x="40.0" y="572.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Promise.all and Promise.race stop waiting at 20 ms, but A and C keep running and their results are thrown away.</text>
+<text x="40.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">To stop them, pass one AbortSignal to every input and abort it when the combinator settles (Chapter 4).</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: JavaScript Deep Dive 03, Chapter 1 (the four combinators, worked example).</text>
+</svg>

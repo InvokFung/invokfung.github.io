@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 590" width="1000" height="590" role="img" aria-label="V8 pipeline: source is parsed to bytecode, runs in Ignition, tiers up through Sparkplug and Maglev to TurboFan, and deoptimizes back to bytecode when a guard fails">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="590" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="588.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How V8 runs a function</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Start cheap, collect feedback, compile harder as the function gets hotter, fall back when a guess is wrong.</text>
+<rect x="40.0" y="112.0" width="250.0" height="116.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="2"/>
+<text x="56.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Source</text>
+<text x="56.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">bundle.js</text>
+<text x="56.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">most functions in a large</text>
+<text x="56.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">bundle never run</text>
+<rect x="330.0" y="112.0" width="280.0" height="116.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="346.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Parser</text>
+<text x="346.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">pre-parse inner functions</text>
+<text x="346.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">full parse + bytecode</text>
+<text x="346.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">on the first call (lazy)</text>
+<rect x="650.0" y="112.0" width="310.0" height="116.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="666.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Ignition  (interpreter)</text>
+<text x="666.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">runs bytecode</text>
+<text x="666.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">register machine + accumulator</text>
+<text x="666.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">records the feedback vector</text>
+<line x1="292.0" y1="170.0" x2="326.0" y2="170.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="612.0" y1="170.0" x2="646.0" y2="170.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="690.0" y="330.0" width="270.0" height="116.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="706.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Sparkplug  (baseline)</text>
+<text x="706.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Chrome 91</text>
+<text x="706.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">bytecode to machine code</text>
+<text x="706.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">one linear pass, no IR</text>
+<rect x="365.0" y="330.0" width="270.0" height="116.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="381.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Maglev  (mid-tier)</text>
+<text x="381.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Chrome 117</text>
+<text x="381.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">SSA / CFG IR + feedback</text>
+<text x="381.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">good code, compiled quickly</text>
+<rect x="40.0" y="330.0" width="270.0" height="116.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="56.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">TurboFan  (top tier)</text>
+<text x="56.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">V8 5.9, with Ignition</text>
+<text x="56.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">speculative, peak speed</text>
+<text x="56.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">backend: Turboshaft IR</text>
+<line x1="688.0" y1="388.0" x2="639.0" y2="388.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="662.5" y="378.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">hotter</text>
+<line x1="363.0" y1="388.0" x2="314.0" y2="388.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="337.5" y="378.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">hotter</text>
+<line x1="900.0" y1="230.0" x2="900.0" y2="326.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="888.0" y="292.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="end">tier up when hot</text>
+<path d="M180,328 L180,300 L700,300 L700,234" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<path d="M500,328 L500,300" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<text x="196.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">deoptimize: a guard failed (e.g. wrong map), continue in bytecode</text>
+<line x1="40.0" y1="470.0" x2="960.0" y2="470.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="40.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Trade-off</text>
+<text x="140.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">each tier costs more compile time and produces faster code.</text>
+<text x="40.0" y="520.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Maglev compiles about 10x slower than Sparkplug and about 10x faster than TurboFan (V8 team's figure).</text>
+<text x="40.0" y="542.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">The optimisers speculate from feedback, guard each guess, and deoptimize when a guard fails.</text>
+<text x="40.0" y="572.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: v8.dev blog (Ignition and TurboFan, Sparkplug, Maglev, Leaving the Sea of Nodes). Tier-up thresholds are internal heuristics.</text>
+</svg>

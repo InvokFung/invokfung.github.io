@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img" aria-label="The three steps of a React update: trigger, a pure and interruptible render phase that builds the workInProgress tree, a synchronous commit phase, browser paint, then passive effects">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="620" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="618.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One update: trigger, render, commit</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Render only calculates and can be thrown away. Commit applies everything in one synchronous pass.</text>
+<rect x="40.0" y="112.0" width="190.0" height="226.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="56.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">1  Trigger</text>
+<text x="56.0" y="172.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">root.render(&lt;App /&gt;)</text>
+<text x="56.0" y="196.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">setState / dispatch</text>
+<text x="56.0" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">external store change</text>
+<text x="56.0" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(useSyncExternalStore)</text>
+<line x1="233.0" y1="225.0" x2="253.0" y2="225.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="258.0" y="112.0" width="226.0" height="226.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="274.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">2  Render phase</text>
+<text x="274.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">calls your components</text>
+<text x="274.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">reconciles old vs new</text>
+<text x="274.0" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">builds workInProgress</text>
+<text x="274.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">pure: no side effects</text>
+<text x="274.0" y="292.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">can be paused,</text>
+<text x="274.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">restarted or thrown away</text>
+<line x1="487.0" y1="225.0" x2="507.0" y2="225.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="512.0" y="112.0" width="250.0" height="226.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="528.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">3  Commit phase</text>
+<text x="528.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">not interruptible:</text>
+<text x="528.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">one synchronous pass</text>
+<text x="528.0" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Mutation: DOM inserted,</text>
+<text x="528.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">updated, removed</text>
+<text x="528.0" y="292.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Layout: refs attached,</text>
+<text x="528.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">useLayoutEffect setups</text>
+<line x1="765.0" y1="225.0" x2="785.0" y2="225.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="790.0" y="112.0" width="170.0" height="226.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="806.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">4  After paint</text>
+<text x="806.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">browser paints</text>
+<text x="806.0" y="220.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Passive:</text>
+<text x="806.0" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">useEffect cleanups</text>
+<text x="806.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">then setups</text>
+<path d="M448,344 C448,378 308,378 308,348" fill="none" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="318.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#0d9488" text-anchor="start">urgent update arrives: restart</text>
+<text x="40.0" y="420.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Chapter 3: two fiber trees (double buffering)</text>
+<rect x="40.0" y="434.0" width="330.0" height="132.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="56.0" y="460.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">current</text>
+<text x="56.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">matches what is on screen</text>
+<line x1="270.0" y1="470.0" x2="230.0" y2="512.0" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="270.0" y1="470.0" x2="310.0" y2="512.0" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="230.0" y1="512.0" x2="210.0" y2="546.0" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="230.0" y1="512.0" x2="250.0" y2="546.0" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="270" cy="470" r="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<circle cx="230" cy="512" r="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<circle cx="310" cy="512" r="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<circle cx="210" cy="546" r="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<circle cx="250" cy="546" r="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<rect x="560.0" y="434.0" width="330.0" height="132.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="576.0" y="460.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">workInProgress</text>
+<text x="576.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">being built during render</text>
+<line x1="790.0" y1="470.0" x2="750.0" y2="512.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="790.0" y1="470.0" x2="830.0" y2="512.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="750.0" y1="512.0" x2="730.0" y2="546.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="750.0" y1="512.0" x2="770.0" y2="546.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="790" cy="470" r="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<circle cx="750" cy="512" r="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<circle cx="830" cy="512" r="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<circle cx="730" cy="546" r="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<circle cx="770" cy="546" r="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<line x1="378.0" y1="490.0" x2="552.0" y2="490.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="465.0" y="480.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">alternate</text>
+<text x="465.0" y="520.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">swapped during</text>
+<text x="465.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">the commit</text>
+<text x="40.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapters 2 and 3. Fiber internals are not public API and may change.</text>
+</svg>

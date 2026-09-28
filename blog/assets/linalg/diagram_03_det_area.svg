@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 570" width="1000" height="570" role="img" aria-label="The unit square under four 2 by 2 matrices: the identity keeps area 1; A with columns (2,1) and (1,2) gives a parallelogram of area 3 with orientation kept, det 3; B with the columns swapped gives the same parallelogram with orientation reversed, det -3; C with columns (2,2) and (1,1) flattens the square onto the line y = x, det 0.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="570" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="568.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The determinant scales area and records orientation</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each matrix sends e1 and e2 to its two columns, so the unit square goes to the parallelogram they span.</text>
+<rect x="40.0" y="100.0" width="218.0" height="385.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="64.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">I =</text>
+<path d="M110.0,116.0 L104.0,116.0 L104.0,168.0 L110.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<path d="M174.0,116.0 L180.0,116.0 L180.0,168.0 L174.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="127.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="157.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<text x="127.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<text x="157.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="192.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">det 1</text>
+<line x1="88.0" y1="366.4" x2="88.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="68.8" y1="352.0" x2="241.6" y2="352.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="136.0" y1="366.4" x2="136.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="68.8" y1="304.0" x2="241.6" y2="304.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="184.0" y1="366.4" x2="184.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="68.8" y1="256.0" x2="241.6" y2="256.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="232.0" y1="366.4" x2="232.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="68.8" y1="208.0" x2="241.6" y2="208.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="68.8" y1="352.0" x2="246.4" y2="352.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="88.0" y1="366.4" x2="88.0" y2="186.4" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M88.0,352.0 L136.0,352.0 L136.0,304.0 L88.0,304.0 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="172.0" y="334.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">area 1</text>
+<line x1="88.0" y1="352.0" x2="124.0" y2="352.0" stroke="#2563eb" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M136.0,352.0 L124.0,346.0 L124.0,358.0 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="88.0" y1="352.0" x2="88.0" y2="316.0" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M88.0,304.0 L82.0,316.0 L94.0,316.0 Z" fill="#7c3aed" stroke="#7c3aed" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="136.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">e1</text>
+<text x="70.0" y="308.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">e2</text>
+<path d="M114.0,352.0 A26,26 0 0 0 88.0,326.0" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M87.0,326.0 L96.0,330.5 L96.0,321.5 Z" fill="#1f2937" stroke="#1f2937" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="149.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">Identity</text>
+<text x="149.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">the unit square, area 1</text>
+<text x="149.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">det 1</text>
+<rect x="274.0" y="100.0" width="218.0" height="385.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="298.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">A =</text>
+<path d="M344.0,116.0 L338.0,116.0 L338.0,168.0 L344.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<path d="M408.0,116.0 L414.0,116.0 L414.0,168.0 L408.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="361.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="391.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="361.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="391.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="426.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">det 3</text>
+<line x1="322.0" y1="366.4" x2="322.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="302.8" y1="352.0" x2="475.6" y2="352.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="370.0" y1="366.4" x2="370.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="302.8" y1="304.0" x2="475.6" y2="304.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="418.0" y1="366.4" x2="418.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="302.8" y1="256.0" x2="475.6" y2="256.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="466.0" y1="366.4" x2="466.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="302.8" y1="208.0" x2="475.6" y2="208.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="302.8" y1="352.0" x2="480.4" y2="352.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="322.0" y1="366.4" x2="322.0" y2="186.4" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M322.0,352.0 L370.0,352.0 L370.0,304.0 L322.0,304.0 Z" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M322.0,352.0 L418.0,304.0 L466.0,208.0 L370.0,256.0 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="394.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">area 3</text>
+<line x1="322.0" y1="352.0" x2="407.3" y2="309.4" stroke="#2563eb" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M418.0,304.0 L404.6,304.0 L410.0,314.7 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="322.0" y1="352.0" x2="364.6" y2="266.7" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M370.0,256.0 L359.3,264.0 L370.0,269.4 Z" fill="#7c3aed" stroke="#7c3aed" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="442.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">(2,1)</text>
+<text x="344.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">(1,2)</text>
+<path d="M352.4,336.8 A34,34 0 0 0 337.2,321.6" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M336.3,321.1 L342.3,329.2 L346.4,321.1 Z" fill="#1f2937" stroke="#1f2937" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="383.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">Area 3, orientation kept</text>
+<text x="383.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">col 1 to col 2: counter-clockwise</text>
+<text x="383.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">det 3 = 2·2 − 1·1</text>
+<rect x="508.0" y="100.0" width="218.0" height="385.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="532.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">B =</text>
+<path d="M578.0,116.0 L572.0,116.0 L572.0,168.0 L578.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<path d="M642.0,116.0 L648.0,116.0 L648.0,168.0 L642.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="595.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="625.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="595.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="625.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="660.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">det −3</text>
+<line x1="556.0" y1="366.4" x2="556.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="536.8" y1="352.0" x2="709.6" y2="352.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="604.0" y1="366.4" x2="604.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="536.8" y1="304.0" x2="709.6" y2="304.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="652.0" y1="366.4" x2="652.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="536.8" y1="256.0" x2="709.6" y2="256.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="700.0" y1="366.4" x2="700.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="536.8" y1="208.0" x2="709.6" y2="208.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="536.8" y1="352.0" x2="714.4" y2="352.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="556.0" y1="366.4" x2="556.0" y2="186.4" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M556.0,352.0 L604.0,352.0 L604.0,304.0 L556.0,304.0 Z" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M556.0,352.0 L604.0,256.0 L700.0,208.0 L652.0,304.0 Z" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="628.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">area 3</text>
+<line x1="556.0" y1="352.0" x2="598.6" y2="266.7" stroke="#2563eb" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M604.0,256.0 L593.3,264.0 L604.0,269.4 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="556.0" y1="352.0" x2="641.3" y2="309.4" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M652.0,304.0 L638.6,304.0 L644.0,314.7 Z" fill="#7c3aed" stroke="#7c3aed" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="578.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">(1,2)</text>
+<text x="676.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">(2,1)</text>
+<path d="M571.2,321.6 A34,34 0 0 1 586.4,336.8" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M586.9,337.7 L586.9,327.6 L578.8,331.7 Z" fill="#1f2937" stroke="#1f2937" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="617.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Area 3, orientation reversed</text>
+<text x="617.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">col 1 to col 2: clockwise</text>
+<text x="617.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">det −3 = 1·1 − 2·2</text>
+<rect x="742.0" y="100.0" width="218.0" height="385.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="766.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">C =</text>
+<path d="M812.0,116.0 L806.0,116.0 L806.0,168.0 L812.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<path d="M876.0,116.0 L882.0,116.0 L882.0,168.0 L876.0,168.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="829.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="859.0" y="136.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="829.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="859.0" y="158.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="894.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">det 0</text>
+<line x1="790.0" y1="366.4" x2="790.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="770.8" y1="352.0" x2="943.6" y2="352.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="838.0" y1="366.4" x2="838.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="770.8" y1="304.0" x2="943.6" y2="304.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="886.0" y1="366.4" x2="886.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="770.8" y1="256.0" x2="943.6" y2="256.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="934.0" y1="366.4" x2="934.0" y2="188.8" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="770.8" y1="208.0" x2="943.6" y2="208.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="770.8" y1="352.0" x2="948.4" y2="352.0" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="790.0" y1="366.4" x2="790.0" y2="186.4" stroke="#9ca3af" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M790.0,352.0 L838.0,352.0 L838.0,304.0 L790.0,304.0 Z" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<line x1="790.0" y1="352.0" x2="934.0" y2="208.0" stroke="#d97706" stroke-width="7" stroke-linecap="round"/>
+<text x="890.8" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">area 0</text>
+<line x1="790.0" y1="352.0" x2="877.5" y2="264.5" stroke="#2563eb" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M886.0,256.0 L873.3,260.2 L881.8,268.7 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="790.0" y1="352.0" x2="829.5" y2="312.5" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M838.0,304.0 L825.3,308.2 L833.8,316.7 Z" fill="#7c3aed" stroke="#7c3aed" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="912.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">(2,2)</text>
+<text x="862.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">(1,1)</text>
+<text x="851.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">Flattened onto the line y = x</text>
+<text x="851.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">columns lie on one line</text>
+<text x="851.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">det 0 = 2·1 − 1·2</text>
+<text x="40.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">|det| = area of the image of the unit square (dashed).  Sign of det = orientation: swapping two columns flips it.</text>
+<text x="40.0" y="552.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Linear Algebra 03, Chapter 6 (determinant as signed volume).</text>
+</svg>

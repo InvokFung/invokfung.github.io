@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 644" width="1000" height="644" role="img" aria-label="React performance workflow: reproduce, record, classify, fix, profile again; and a table mapping each symptom in the profile to its cause and fix">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="644" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="642.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Measure, classify, then fix one thing</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A fix that does not move the number in the profile is reverted.</text>
+<rect x="40.0" y="108.0" width="160.0" height="48.0" rx="24" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<circle cx="64.0" cy="132.0" r="12" fill="#0d9488"/>
+<text x="64.0" y="137.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="84.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Reproduce</text>
+<line x1="203.0" y1="132.0" x2="226.0" y2="132.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="230.0" y="108.0" width="160.0" height="48.0" rx="24" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<circle cx="254.0" cy="132.0" r="12" fill="#0d9488"/>
+<text x="254.0" y="137.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="274.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Record</text>
+<line x1="393.0" y1="132.0" x2="416.0" y2="132.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="420.0" y="108.0" width="160.0" height="48.0" rx="24" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<circle cx="444.0" cy="132.0" r="12" fill="#dc4c3a"/>
+<text x="444.0" y="137.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="464.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Classify</text>
+<line x1="583.0" y1="132.0" x2="606.0" y2="132.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="610.0" y="108.0" width="160.0" height="48.0" rx="24" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<circle cx="634.0" cy="132.0" r="12" fill="#0d9488"/>
+<text x="634.0" y="137.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="654.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Fix</text>
+<line x1="773.0" y1="132.0" x2="796.0" y2="132.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="800.0" y="108.0" width="160.0" height="48.0" rx="24" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<circle cx="824.0" cy="132.0" r="12" fill="#0d9488"/>
+<text x="824.0" y="137.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="844.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Profile again</text>
+<path d="M880.0,158 C880.0,200 690.0,200 690.0,162" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="40.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">production-like build, realistic data</text>
+<text x="230.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start"></text>
+<text x="40.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">Symptom in the profile</text>
+<text x="390.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">Cause</text>
+<text x="600.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">Fix</text>
+<rect x="40.0" y="250.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="54.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Many components render with the same output</text>
+<line x1="372.0" y1="279.0" x2="386.0" y2="279.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="250.0" width="180.0" height="58.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="480.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">Too many renders</text>
+<line x1="572.0" y1="279.0" x2="596.0" y2="279.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="250.0" width="360.0" height="58.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="612.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Move state down, pass children, split context, memoise</text>
+<rect x="40.0" y="320.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="54.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">One component renders slowly on every change</text>
+<line x1="372.0" y1="349.0" x2="386.0" y2="349.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="320.0" width="180.0" height="58.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="480.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">Expensive render</text>
+<line x1="572.0" y1="349.0" x2="596.0" y2="349.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="320.0" width="360.0" height="58.0" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<text x="612.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">useMemo the calculation, useDeferredValue / Transition</text>
+<rect x="40.0" y="390.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="54.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Commit is long, huge DOM</text>
+<line x1="372.0" y1="419.0" x2="386.0" y2="419.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="390.0" width="180.0" height="58.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="480.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">Too much rendered</text>
+<line x1="572.0" y1="419.0" x2="596.0" y2="419.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="390.0" width="360.0" height="58.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="612.0" y="424.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Virtualise, paginate, content-visibility</text>
+<rect x="40.0" y="460.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="54.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Long "Evaluate script" before first interaction</text>
+<line x1="372.0" y1="489.0" x2="386.0" y2="489.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="460.0" width="180.0" height="58.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="480.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">Too much JavaScript</text>
+<line x1="572.0" y1="489.0" x2="596.0" y2="489.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="460.0" width="360.0" height="58.0" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="612.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Code splitting, lighter dependencies, Server Components</text>
+<rect x="40.0" y="530.0" width="330.0" height="58.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="54.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Long tasks from non-React code</text>
+<line x1="372.0" y1="559.0" x2="386.0" y2="559.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="390.0" y="530.0" width="180.0" height="58.0" rx="10" fill="#f9fafb" stroke="#9ca3af" stroke-width="2"/>
+<text x="480.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="middle">Third-party scripts</text>
+<line x1="572.0" y1="559.0" x2="596.0" y2="559.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="530.0" width="360.0" height="58.0" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5"/>
+<text x="612.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Out of React's scope: fix in the Performance panel</text>
+<text x="40.0" y="626.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 1 ("The workflow" and its table).</text>
+</svg>

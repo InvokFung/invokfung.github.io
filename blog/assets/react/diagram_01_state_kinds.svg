@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 626" width="1000" height="626" role="img" aria-label="Sorting state by where its truth lives: six questions asked in order, each yes answer mapped to a kind of state and the tool that should own it">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="626" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="624.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Where should this state live? Ask in order.</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The first yes wins. Most pain comes from keeping server state in a client store.</text>
+<text x="40.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">Question</text>
+<text x="560.0" y="106.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#6b7280" text-anchor="start">If yes: kind of state and owner</text>
+<rect x="40.0" y="120.0" width="470.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="151.0" r="12" fill="#6b7280"/>
+<text x="66.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="90.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Can it be computed from other state?</text>
+<line x1="512.0" y1="151.0" x2="552.0" y2="151.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="530.0" y="143.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="558.0" y="120.0" width="402.0" height="62.0" rx="10" fill="#f9fafb" stroke="#9ca3af" stroke-width="2"/>
+<text x="576.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Derived state</text>
+<text x="576.0" y="167.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Compute it during render. Never store it.</text>
+<line x1="275.0" y1="184.0" x2="275.0" y2="194.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="196.0" width="470.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="227.0" r="12" fill="#0d9488"/>
+<text x="66.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="90.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Is the truth on a server?</text>
+<line x1="512.0" y1="227.0" x2="552.0" y2="227.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="530.0" y="219.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="558.0" y="196.0" width="402.0" height="62.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="576.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Server state</text>
+<text x="576.0" y="243.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Query cache: TanStack Query, or framework loaders</text>
+<line x1="275.0" y1="260.0" x2="275.0" y2="270.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="272.0" width="470.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="303.0" r="12" fill="#2563eb"/>
+<text x="66.0" y="308.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="90.0" y="308.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Should a copied link or the back button restore it?</text>
+<line x1="512.0" y1="303.0" x2="552.0" y2="303.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="530.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="558.0" y="272.0" width="402.0" height="62.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="576.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">URL state</text>
+<text x="576.0" y="319.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Router search params: useSearchParams, nuqs</text>
+<line x1="275.0" y1="336.0" x2="275.0" y2="346.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="348.0" width="470.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="379.0" r="12" fill="#d97706"/>
+<text x="66.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="90.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Is it user input before submit?</text>
+<line x1="512.0" y1="379.0" x2="552.0" y2="379.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="530.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="558.0" y="348.0" width="402.0" height="62.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="576.0" y="374.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">Form state</text>
+<text x="576.0" y="395.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Uncontrolled inputs, a form library, useActionState</text>
+<line x1="275.0" y1="412.0" x2="275.0" y2="422.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="424.0" width="470.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="455.0" r="12" fill="#7c3aed"/>
+<text x="66.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="90.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Is it used by one component or a small subtree?</text>
+<line x1="512.0" y1="455.0" x2="552.0" y2="455.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="530.0" y="447.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="558.0" y="424.0" width="402.0" height="62.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="576.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Client state</text>
+<text x="576.0" y="471.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">useState / useReducer, placed as low as possible</text>
+<line x1="275.0" y1="488.0" x2="275.0" y2="498.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="500.0" width="470.0" height="62.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="66.0" cy="531.0" r="12" fill="#dc4c3a"/>
+<text x="66.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="90.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#1f2937" text-anchor="start">Is it shared across distant parts and changes often?</text>
+<line x1="512.0" y1="531.0" x2="552.0" y2="531.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="530.0" y="523.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">yes</text>
+<rect x="558.0" y="500.0" width="402.0" height="62.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="576.0" y="526.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Shared client state</text>
+<text x="576.0" y="547.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A client store: Zustand or Redux Toolkit</text>
+<text x="40.0" y="608.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: this post, Chapter 5 ("A practical sort for each piece of state"), Chapters 6 and 7.</text>
+</svg>

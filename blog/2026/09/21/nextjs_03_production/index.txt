@@ -1,0 +1,764 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9050005ba93da581.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9050005ba93da581.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9050005ba93da581.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9050005ba93da581.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9050005ba93da581.js"],"default"]
+4:["year","2026","d"]
+5:["month","09","d"]
+6:["day","21","d"]
+7:["slug","nextjs_03_production","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["CubiBJDWOQx9PPeh5ZriF",[[["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","21","d"],{"children":[["slug","nextjs_03_production","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"09\",\"day\":\"21\",\"slug\":\"nextjs_03_production\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","09","d"],{"children":[["day","21","d"],{"children":[["slug","nextjs_03_production","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-09-28 05:52:43\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":174}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":355}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":22}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+11:Te3bc,<p>Shipping a Next.js app is easy; running one for years is a different skill. Between March 2025 and August 2026 the framework and its React Server Components layer produced an authorisation bypass that ignored middleware entirely, a CVSS 10.0 unauthenticated remote code execution in the RSC protocol, a run of follow-up denial-of-service and source-exposure bugs, and critical fixes in the image optimiser's native dependencies. Teams that had layered defences, a patch process, and observability shrugged; teams whose only auth check lived in middleware, or who ran a year-old minor, did not. This post covers authentication patterns that survive a bypass, the incidents themselves and what each teaches, <code>next/image</code> and <code>next/font</code> in production, bundle analysis, self-hosting with <code>output: 'standalone'</code> and Docker versus a managed platform, <code>instrumentation.ts</code> with OpenTelemetry, and environment-variable leaks. It ends with the planned extensions of this series.</p>
+<blockquote>
+<p>Series map: 00 App Router Mental Model → 01 Data Fetching, Caching &amp; Server Actions → 02 Rendering Strategies &amp; Runtimes → <strong>03 Production Next.js</strong> (this post) (future: see the extensions table below).</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Design authentication in layers (Proxy, Data Access Layer, per-page and per-action checks) so that no single bypass exposes data.</li>
+<li>Explain CVE-2025-29927 and CVE-2025-55182 (React2Shell): mechanism, affected versions, fixed versions, and the lessons.</li>
+<li>Run a patch process that matches the Next.js LTS policy.</li>
+<li>Configure <code>next/image</code> safely for Next.js 16, and use <code>next/font</code> without layout shift or third-party requests.</li>
+<li>Find client-bundle bloat with the bundle analyzer and fix it at the server/client boundary.</li>
+<li>Self-host with <code>output: 'standalone'</code> in Docker, including shared caching, the Server Actions key, version skew and graceful shutdown.</li>
+<li>Instrument the server with <code>instrumentation.ts</code>, <code>onRequestError</code> and OpenTelemetry.</li>
+<li>Prevent secret leaks through <code>NEXT_PUBLIC_</code>, <code>next.config</code> <code>env</code>, props and action return values.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-Authentication-in-layers"><a href="#Chapter-1-—-Authentication-in-layers" class="headerlink" title="Chapter 1 — Authentication in layers"></a>Chapter 1 — Authentication in layers</h1>
+<h2 id="Terminology"><a href="#Terminology" class="headerlink" title="Terminology"></a>Terminology</h2>
+<ul>
+<li><strong>Authentication</strong> — who is the caller? (a valid session)</li>
+<li><strong>Authorisation</strong> — may this caller do this to this resource? (ownership, role)</li>
+<li><strong>Optimistic check</strong> — a cheap check on the presence of a session cookie, without a database or full verification; good for redirects, never enough for data.</li>
+<li><strong>Secure check</strong> — full session verification plus an authorisation decision, next to the data access.</li>
+<li><strong>IDOR</strong> — Insecure Direct Object Reference: the caller changes an id and gets someone else's record because only authentication was checked.</li>
+</ul>
+<h2 id="Where-each-check-belongs"><a href="#Where-each-check-belongs" class="headerlink" title="Where each check belongs"></a>Where each check belongs</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Check</th>
+<th>Purpose</th>
+<th>Enough on its own?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy.ts</code></td>
+<td>Optimistic (cookie present?)</td>
+<td>Redirect logged-out users early; cheap</td>
+<td><strong>No</strong>: bypassable, and skips any path its matcher excludes</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>Avoid auth logic here</td>
+<td>A shared layout is not re-rendered on navigation between its children (partial rendering)</td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>Page / Server Component</td>
+<td>Secure, via the DAL</td>
+<td>Decide what UI to render</td>
+<td>For that page's reads</td>
+</tr>
+<tr>
+<td>Server Action</td>
+<td>Secure, inside the action</td>
+<td>Actions are public POST endpoints</td>
+<td>For that mutation</td>
+</tr>
+<tr>
+<td>Route Handler</td>
+<td>Secure, inside the handler</td>
+<td>Public HTTP endpoint</td>
+<td>For that endpoint</td>
+</tr>
+<tr>
+<td>Data Access Layer</td>
+<td>Secure + authorisation per query</td>
+<td>The one place data is read or written</td>
+<td><strong>The real boundary</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The DAL from Post 01, extended with a verified session that is memoised per request:</p>
+<pre><code class="language-ts"><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span></pre></td><td class="code"><pre><code class="ts"><span class="line"><span class="hljs-comment">// data/session.ts</span></span><br><span class="line"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;server-only&#x27;</span></span><br><span class="line"><span class="hljs-keyword">import</span> { cache } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span></span><br><span class="line"><span class="hljs-keyword">import</span> { cookies } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/headers&#x27;</span></span><br><span class="line"><span class="hljs-keyword">import</span> { redirect } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/navigation&#x27;</span></span><br><span class="line"><span class="hljs-keyword">import</span> { decrypt } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/lib/session-crypto&#x27;</span>   <span class="hljs-comment">// verifies signature and expiry</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> verifySession = <span class="hljs-title function_">cache</span>(<span class="hljs-title function_">async</span> () =&gt; {</span><br><span class="line">  <span class="hljs-keyword">const</span> token = (<span class="hljs-keyword">await</span> <span class="hljs-title function_">cookies</span>()).<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;session&#x27;</span>)?.<span class="hljs-property">value</span></span><br><span class="line">  <span class="hljs-keyword">const</span> payload = token ? <span class="hljs-keyword">await</span> <span class="hljs-title function_">decrypt</span>(token) : <span class="hljs-literal">null</span></span><br><span class="line">  <span class="hljs-keyword">if</span> (!payload?.<span class="hljs-property">userId</span>) <span class="hljs-title function_">redirect</span>(<span class="hljs-string">&#x27;/login&#x27;</span>)</span><br><span class="line">  <span class="hljs-keyword">return</span> { <span class="hljs-attr">userId</span>: <span class="hljs-title class_">String</span>(payload.<span class="hljs-property">userId</span>), <span class="hljs-attr">role</span>: <span class="hljs-title class_">String</span>(payload.<span class="hljs-property">role</span>) }</span><br><span class="line">})</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Every DAL function starts with <code>await verifySession()</code> and scopes its query to the caller (<code>where: { id, ownerId: userId }</code>). A page, an action and a Route Handler then get the same guarantees without remembering to write them.</p>
+<h2 id="Sessions"><a href="#Sessions" class="headerlink" title="Sessions"></a>Sessions</h2>
+<ul>
+<li><strong>Stateless</strong> (a signed and encrypted token in a cookie): no session store, but revocation before expiry needs extra machinery (short lifetimes, a deny-list).</li>
+<li><strong>Database sessions</strong> (an opaque id in the cookie, state server-side): revocable instantly, one lookup per request (cheap with <code>React.cache</code>).</li>
+<li>Either way the cookie is <code>HttpOnly</code>, <code>Secure</code>, <code>SameSite=Lax</code> (or <code>Strict</code>), with a sensible <code>Max-Age</code>, and is set or deleted only in Server Actions or Route Handlers: setting cookies during render is not allowed.</li>
+</ul>
+<p>Prefer a maintained auth library over hand-rolled crypto; the layering above applies whichever library you choose.</p>
+<h2 id="Auth-with-Cache-Components"><a href="#Auth-with-Cache-Components" class="headerlink" title="Auth with Cache Components"></a>Auth with Cache Components</h2>
+<p>Under <code>cacheComponents</code> (Post 02), per-user data must never sit in a <code>'use cache'</code> scope keyed only by public inputs. Read the session outside the cached scope and pass the user id in as an argument, so it becomes part of the key; or keep per-user parts as uncached dynamic holes inside Suspense. Since 15.1, <code>forbidden()</code> and <code>unauthorized()</code> (behind <code>experimental.authInterrupts</code>, still experimental as of 16.3) render <code>forbidden.tsx</code> / <code>unauthorized.tsx</code> with 403 / 401 status, as long as they run before streaming starts.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> &quot;the dashboard layout checks the session, so all dashboard pages are safe.&quot; The layout's check runs on the first load; on soft navigation between child pages the layout is not re-rendered, and the child pages' actions are separate endpoints. Check in the DAL.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-The-incidents-and-what-they-teach"><a href="#Chapter-2-—-The-incidents-and-what-they-teach" class="headerlink" title="Chapter 2 — The incidents, and what they teach"></a>Chapter 2 — The incidents, and what they teach</h1>
+<h2 id="CVE-2025-29927-middleware-bypass-March-2025"><a href="#CVE-2025-29927-middleware-bypass-March-2025" class="headerlink" title="CVE-2025-29927: middleware bypass (March 2025)"></a>CVE-2025-29927: middleware bypass (March 2025)</h2>
+<p>Next.js used an internal header, <code>x-middleware-subrequest</code>, to stop middleware from recursing into itself. The server trusted that header on incoming requests, so an attacker who sent it with the right value made the server <strong>skip middleware entirely</strong>: authentication redirects, authorisation checks, security headers, everything.</p>
+<ul>
+<li><strong>Severity:</strong> critical, CVSS 9.1.</li>
+<li><strong>Affected:</strong> self-hosted apps using <code>next start</code> (including <code>output: 'standalone'</code>). Vercel, Netlify, Cloudflare Workers and static exports were not affected (Vercel's routing is decoupled from the Next.js server; exports have no server).</li>
+<li><strong>Fixed in:</strong> 15.2.3, 14.2.25, and backports 13.5.9 and 12.3.5.</li>
+<li><strong>Timeline:</strong> reported late February 2025, patched March 17–18, disclosed March 21.</li>
+<li><strong>Workaround:</strong> strip <code>x-middleware-subrequest</code> at the load balancer or reverse proxy before it reaches Next.js.</li>
+</ul>
+<p><strong>Lesson:</strong> an app whose only authorisation lived in middleware had none. Apps that re-checked in the DAL lost a redirect, not their data.</p>
+<h2 id="CVE-2025-55182-React2Shell-RSC-remote-code-execution-December-2025"><a href="#CVE-2025-55182-React2Shell-RSC-remote-code-execution-December-2025" class="headerlink" title="CVE-2025-55182 &quot;React2Shell&quot;: RSC remote code execution (December 2025)"></a>CVE-2025-55182 &quot;React2Shell&quot;: RSC remote code execution (December 2025)</h2>
+<p>A deserialisation flaw in how React decodes payloads sent to <strong>Server Function endpoints</strong> let a crafted HTTP request execute code on the server, without authentication.</p>
+<ul>
+<li><strong>Severity:</strong> critical, <strong>CVSS 10.0</strong>. Reported November 29, disclosed December 3, 2025 (reporter: Lachlan Davidson).</li>
+<li><strong>Affected React packages:</strong> <code>react-server-dom-webpack</code>, <code>react-server-dom-parcel</code>, <code>react-server-dom-turbopack</code> at 19.0, 19.1.0, 19.1.1 and 19.2.0; fixed in 19.0.1, 19.1.2 and 19.2.1. Frameworks affected included Next.js, React Router, Waku, <code>@parcel/rsc</code>, <code>@vitejs/plugin-rsc</code> and rwsdk.</li>
+<li><strong>Not only apps with actions:</strong> React's advisory states that an app <strong>without</strong> any Server Functions of its own may still be vulnerable if it supports React Server Components.</li>
+<li><strong>Next.js impact</strong> (tracked as CVE-2025-66478): App Router apps on <strong>15.x, 16.x, and 14.3.0-canary.77 or later canaries</strong>. Next.js 13.x, <strong>14.x stable</strong>, the Pages Router and the Edge runtime were not affected.</li>
+<li><strong>Next.js fixed versions:</strong> 15.0.5, 15.1.9, 15.2.6, 15.3.6, 15.4.8, 15.5.7, 16.0.7. No workaround; upgrade was required. <code>npx fix-react2shell-next</code> performed the version bumps.</li>
+<li><strong>Exploitation:</strong> exploited in the wild within days; AWS reported China-nexus threat groups using it.</li>
+<li><strong>Secrets:</strong> Vercel advised that any app online and unpatched as of December 4, 2025, 1:00 PM PT should <strong>rotate its secrets</strong>, most critical first.</li>
+</ul>
+<h2 id="The-follow-ups-December-2025-–-January-2026"><a href="#The-follow-ups-December-2025-–-January-2026" class="headerlink" title="The follow-ups (December 2025 – January 2026)"></a>The follow-ups (December 2025 – January 2026)</h2>
+<p>Fixing a deserialiser invites a closer look at it:</p>
+<table>
+<thead>
+<tr>
+<th>CVE</th>
+<th>Type</th>
+<th>CVSS</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CVE-2025-55184</td>
+<td>Denial of service (infinite loop on a crafted request to a Server Function endpoint)</td>
+<td>7.5</td>
+<td>Disclosed Dec 11, 2025</td>
+</tr>
+<tr>
+<td>CVE-2025-55183</td>
+<td>Source code exposure of Server Functions that stringify their arguments</td>
+<td>5.3</td>
+<td>Hardcoded secrets in source could leak; runtime <code>process.env</code> values were not affected</td>
+</tr>
+<tr>
+<td>CVE-2025-67779</td>
+<td>Denial of service</td>
+<td>7.5</td>
+<td>The first DoS fix was incomplete</td>
+</tr>
+<tr>
+<td>CVE-2026-23864</td>
+<td>Denial of service (crashes, out-of-memory, CPU)</td>
+<td>7.5</td>
+<td>Disclosed Jan 26, 2026</td>
+</tr>
+</tbody>
+</table>
+<p>Only <strong>19.0.4, 19.1.5 and 19.2.4</strong> (and later) of the <code>react-server-dom-*</code> packages are safe from all of them. None of these enabled remote code execution.</p>
+<h2 id="2026-a-monthly-rhythm"><a href="#2026-a-monthly-rhythm" class="headerlink" title="2026: a monthly rhythm"></a>2026: a monthly rhythm</h2>
+<p>Next.js security releases became regular events in 2026, on both supported lines (16.x Active LTS, 15.5.x Maintenance LTS). The <strong>July 2026</strong> release (16.2.11 / 15.5.21) fixed 4 high and 5 medium issues. The <strong>August 2026</strong> release (16.3.3 / 15.5.24, August 25) fixed two critical ones: unauthenticated remote code execution in the Image Optimization API through the <code>libheif</code> library used by <code>sharp</code> when optimising an attacker-controlled AVIF image (the patch disables AVIF optimisation until the upstream fix propagates), and an unauthenticated remote code execution on <strong>Windows-hosted</strong> servers running both routers without Cache Components (CVE-2026-75604).</p>
+<p>The timeline, with fixed versions:</p>
+<p><img src="/blog/assets/nextjs/diagram_03_security_timeline.svg" alt="Timeline of Next.js and React Server Components security incidents from March 2025 to August 2026 with severity and the first fixed versions for each"></p>
+<h2 id="Lessons-that-transfer"><a href="#Lessons-that-transfer" class="headerlink" title="Lessons that transfer"></a>Lessons that transfer</h2>
+<table>
+<thead>
+<tr>
+<th>Lesson</th>
+<th>Practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Defence in depth</td>
+<td>Auth in the DAL; Proxy only as an optimisation</td>
+</tr>
+<tr>
+<td>Patch speed is a security control</td>
+<td>Track the release line; automated dependency PRs; a documented &quot;patch within 24 h&quot; path for critical advisories</td>
+</tr>
+<tr>
+<td>Know the support window</td>
+<td>Next.js LTS: the current major is <strong>Active LTS</strong> until the next major; the previous major gets <strong>Maintenance LTS</strong> (critical and security fixes) for 2 years from its release. As of 2026: 16.x Active, 15.x Maintenance. 14.x is outside the policy.</td>
+</tr>
+<tr>
+<td>Rotate after exposure</td>
+<td>A remote code execution window means every secret the process could read is suspect</td>
+</tr>
+<tr>
+<td>Shrink the attack surface</td>
+<td>Disable features you do not use: <code>images.unoptimized</code> if you do not need the optimiser, no unused Route Handlers, no <code>'use server'</code> exports nobody calls</td>
+</tr>
+<tr>
+<td>A WAF rule is a stopgap</td>
+<td>Vendors shipped rules within hours for React2Shell; the fix was still the upgrade</td>
+</tr>
+<tr>
+<td>Keep secrets out of source</td>
+<td>CVE-2025-55183 exposed function source, not <code>process.env</code></td>
+</tr>
+</tbody>
+</table>
+<p>This blog runs Next.js 14.2 as a static export: no server process, so none of the server-side issues above apply. It still sits outside the LTS window, which matters the day it gains a server.</p>
+<hr>
+<h1 id="Chapter-3-—-nextimage-and-nextfont"><a href="#Chapter-3-—-nextimage-and-nextfont" class="headerlink" title="Chapter 3 — next/image and next/font"></a>Chapter 3 — <code>next/image</code> and <code>next/font</code></h1>
+<h2 id="nextimage"><a href="#nextimage" class="headerlink" title="next/image"></a><code>next/image</code></h2>
+<p><code>&lt;Image&gt;</code> wraps <code>&lt;img&gt;</code> with: lazy loading by default, a <code>srcset</code> generated from width lists, format negotiation through the <code>Accept</code> header (<code>formats</code>, default <code>['image/webp']</code>; add <code>'image/avif'</code> to prefer AVIF), and required <code>width</code>/<code>height</code> (or <code>fill</code>) so the browser reserves space and avoids layout shift.</p>
+<pre><code class="language-tsx"><figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span></pre></td><td class="code"><pre><code class="tsx"><span class="line">&lt;<span class="hljs-title class_">Image</span></span><br><span class="line">  src={hero}                       <span class="hljs-comment">// static import: hashed, cached forever (immutable)</span></span><br><span class="line">  alt=<span class="hljs-string">&quot;Dashboard overview&quot;</span></span><br><span class="line">  sizes=<span class="hljs-string">&quot;(max-width: 768px) 100vw, 50vw&quot;</span>   <span class="hljs-comment">// without sizes the srcset only offers 1x/2x</span></span><br><span class="line">  preload                          <span class="hljs-comment">// 16: replaces the deprecated `priority`</span></span><br><span class="line">/&gt;</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Default width lists: <code>deviceSizes</code> <code>[640, 750, 828, 1080, 1200, 1920, 2048, 3840]</code> and <code>imageSizes</code> <code>[32, 48, 64, 96, 128, 256, 384]</code>.</p>
+<p>Next.js 16 changed several defaults, mostly for security:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Before 16</th>
+<th>16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qualities</code></td>
+<td>Any 1–100</td>
+<td><strong><code>[75]</code></strong>; other <code>quality</code> values are coerced to the nearest allowed value</td>
+</tr>
+<tr>
+<td><code>minimumCacheTTL</code></td>
+<td>60 s</td>
+<td><strong>14,400 s (4 h)</strong></td>
+</tr>
+<tr>
+<td><code>imageSizes</code></td>
+<td>included <code>16</code></td>
+<td><code>16</code> removed</td>
+</tr>
+<tr>
+<td><code>priority</code> prop</td>
+<td>Supported</td>
+<td>Deprecated in favour of <code>preload</code></td>
+</tr>
+<tr>
+<td>Local <code>src</code> with a query string</td>
+<td>Allowed</td>
+<td>Requires <code>images.localPatterns</code> (prevents enumeration)</td>
+</tr>
+<tr>
+<td>Optimising images from local IPs</td>
+<td>Allowed</td>
+<td>Blocked unless <code>dangerouslyAllowLocalIP</code></td>
+</tr>
+<tr>
+<td>Redirects when fetching remote images</td>
+<td>Unlimited</td>
+<td><code>maximumRedirects</code> 3</td>
+</tr>
+<tr>
+<td><code>images.domains</code></td>
+<td>Supported</td>
+<td>Deprecated: use <code>remotePatterns</code></td>
+</tr>
+</tbody>
+</table>
+<p>Production notes:</p>
+<ul>
+<li>The optimiser is a server endpoint that fetches and decodes untrusted images: it is SSRF, CPU and native-library attack surface (the August 2026 AVIF issue). Restrict <code>remotePatterns</code> to exact hosts and paths.</li>
+<li><code>dangerouslyAllowSVG</code> serves SVG through the optimiser; pair it with a <code>contentSecurityPolicy</code> for images. Since 15, <code>contentDispositionType</code> defaults to <code>attachment</code>.</li>
+<li>There is no API to invalidate optimised images; they live under <code>&lt;distDir&gt;/cache/images</code> until the TTL runs out. Change the <code>src</code> to bust them.</li>
+<li>On glibc Linux, <code>sharp</code> may need allocator tuning to avoid excessive memory; Next.js 15+ uses <code>sharp</code> automatically with <code>next start</code> and standalone output.</li>
+<li>A static export has no optimiser: set <code>images.unoptimized</code> (this blog does) or supply a custom <code>loader</code> that points at an image CDN.</li>
+</ul>
+<h2 id="nextfont"><a href="#nextfont" class="headerlink" title="next/font"></a><code>next/font</code></h2>
+<p><code>next/font</code> downloads Google Font files (or uses your local files) <strong>at build time</strong> and serves them with your static assets, so the browser never contacts Google. It generates a fallback <code>@font-face</code> with adjusted metrics (<code>adjustFontFallback</code>, default <code>true</code> for Google fonts and <code>'Arial'</code> for local fonts) to reduce layout shift while the real font loads, uses <code>display: 'swap'</code> by default, and preloads the font on the routes that use it (<code>preload</code> default <code>true</code>; the subsets you list are what gets preloaded).</p>
+<pre><code class="language-tsx"><figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span></pre></td><td class="code"><pre><code class="tsx"><span class="line"><span class="hljs-comment">// app/fonts.ts</span></span><br><span class="line"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Inter</span>, <span class="hljs-title class_">JetBrains</span>_Mono } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;next/font/google&#x27;</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> inter = <span class="hljs-title class_">Inter</span>({ <span class="hljs-attr">subsets</span>: [<span class="hljs-string">&#x27;latin&#x27;</span>], <span class="hljs-attr">variable</span>: <span class="hljs-string">&#x27;--font-inter&#x27;</span> })</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> mono = <span class="hljs-title class_">JetBrains</span>_Mono({ <span class="hljs-attr">subsets</span>: [<span class="hljs-string">&#x27;latin&#x27;</span>], <span class="hljs-attr">variable</span>: <span class="hljs-string">&#x27;--font-mono&#x27;</span> })</span><br><span class="line"> </span><br><span class="line"><span class="hljs-comment">// app/layout.tsx</span></span><br><span class="line"><span class="hljs-comment">// &lt;html lang=&quot;en&quot; className={`${inter.variable} ${mono.variable}`}&gt;</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Call each font loader <strong>once</strong> in a definitions module and import the object where needed; every call creates a separate hosted instance. A font used in a page is preloaded only on that route, one used in the root layout on all routes.</p>
+<hr>
+<h1 id="Chapter-4-—-Bundle-analysis"><a href="#Chapter-4-—-Bundle-analysis" class="headerlink" title="Chapter 4 — Bundle analysis"></a>Chapter 4 — Bundle analysis</h1>
+<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2>
+<ul>
+<li><strong><code>next build</code> output</strong> lists every route with its size, the first-load JS, and the rendering mode symbol (Post 02).</li>
+<li><strong>Next.js Bundle Analyzer</strong> (experimental since 16.1, Turbopack): <code>next experimental-analyze</code> opens an interactive view of client <strong>and server</strong> bundles, filterable by route, showing the full import chain for any module, including across the server-to-client boundary and dynamic imports.</li>
+<li><strong><code>@next/bundle-analyzer</code></strong>: the webpack-era plugin, still useful for projects building with <code>--webpack</code>.</li>
+</ul>
+<h2 id="What-to-look-for"><a href="#What-to-look-for" class="headerlink" title="What to look for"></a>What to look for</h2>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Usual cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A large library in first-load JS</td>
+<td>Imported from a <code>'use client'</code> file for one small use</td>
+<td>Do the work in a Server Component; pass the result as a prop</td>
+</tr>
+<tr>
+<td>The same library in many route chunks</td>
+<td>Barrel file (<code>index.ts</code> re-exporting everything)</td>
+<td>Import from the specific module; <code>experimental.optimizePackageImports</code> for known packages</td>
+</tr>
+<tr>
+<td>A heavy widget nobody sees above the fold</td>
+<td>Eager import</td>
+<td><code>next/dynamic</code> / <code>import()</code> behind interaction or visibility</td>
+</tr>
+<tr>
+<td>A server-only package in the client graph</td>
+<td>Accidental import through shared utils</td>
+<td><code>import 'server-only'</code> in the module; split the file</td>
+</tr>
+<tr>
+<td>Huge RSC payload rather than JS</td>
+<td>Large props to Client Components</td>
+<td>Pass DTOs, not rows (Post 00)</td>
+</tr>
+<tr>
+<td>Slow server cold starts</td>
+<td>Enormous server bundle</td>
+<td>Check the server view of the analyzer; <code>serverExternalPackages</code> for packages that should stay unbundled</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Trick:</strong> measure before and after with the route table from <code>next build</code>, not with dev-mode network numbers. Development bundles are unminified and compiled on demand.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-5-—-Self-hosting-vs-a-managed-platform"><a href="#Chapter-5-—-Self-hosting-vs-a-managed-platform" class="headerlink" title="Chapter 5 — Self-hosting vs a managed platform"></a>Chapter 5 — Self-hosting vs a managed platform</h1>
+<h2 id="Standalone-output"><a href="#Standalone-output" class="headerlink" title="Standalone output"></a>Standalone output</h2>
+<p><code>output: 'standalone'</code> uses output file tracing (<code>@vercel/nft</code>) to copy only the files each route needs, including the needed parts of <code>node_modules</code>, into <code>.next/standalone</code>, with a minimal <code>server.js</code> that replaces <code>next start</code>. It does <strong>not</strong> copy <code>public/</code> or <code>.next/static</code>, which are expected to go to a CDN; copy them in if the server should serve them. <code>PORT</code> and <code>HOSTNAME</code> set the listen address. In a monorepo, set <code>outputFileTracingRoot</code> so files outside the app folder are traced.</p>
+<pre><code class="language-dockerfile"><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span></pre></td><td class="code"><pre><code class="dockerfile"><span class="line"><span class="hljs-comment"># Dockerfile (multi-stage)</span></span><br><span class="line"><span class="hljs-keyword">FROM</span> node:<span class="hljs-number">22</span>-alpine AS deps</span><br><span class="line"><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="language-bash"> package.json package-lock.json ./</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="language-bash"> npm ci</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">FROM</span> node:<span class="hljs-number">22</span>-alpine AS build</span><br><span class="line"><span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="language-bash"> --from=deps /app/node_modules ./node_modules</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"><span class="hljs-comment"># NEXT_PUBLIC_* values are inlined here, at build time</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="language-bash"> npm run build</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">FROM</span> node:<span class="hljs-number">22</span>-alpine AS <span class="hljs-keyword">run</span><span class="language-bash"></span><br><span class="line">WORKDIR /app</span></span><br><span class="line"><span class="hljs-keyword">ENV</span> NODE_ENV=production PORT=<span class="hljs-number">3000</span> HOSTNAME=<span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="language-bash"> addgroup -S app &amp;&amp; adduser -S app -G app</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="language-bash"> --from=build --<span class="hljs-built_in">chown</span>=app:app /app/.next/standalone ./</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="language-bash"> --from=build --<span class="hljs-built_in">chown</span>=app:app /app/.next/static ./.next/static</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="language-bash"> --from=build --<span class="hljs-built_in">chown</span>=app:app /app/public ./public</span></span><br><span class="line"><span class="hljs-keyword">USER</span> app</span><br><span class="line"><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">3000</span></span><br><span class="line"><span class="hljs-keyword">CMD</span><span class="language-bash"> [<span class="hljs-string">&quot;node&quot;</span>, <span class="hljs-string">&quot;server.js&quot;</span>]</span></span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Next.js 16 needs Node.js <strong>20.9 or later</strong>; any current LTS base image satisfies that.</p>
+<h2 id="The-multi-instance-checklist"><a href="#The-multi-instance-checklist" class="headerlink" title="The multi-instance checklist"></a>The multi-instance checklist</h2>
+<p>One container works out of the box. Two or more need all of these:</p>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Default</th>
+<th>Multi-instance fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISR / <code>fetch</code> cache</td>
+<td>Per-instance disk + 50 MB memory</td>
+<td><code>cacheHandler</code> pointing at shared storage; <code>cacheMaxMemorySize: 0</code></td>
+</tr>
+<tr>
+<td><code>'use cache'</code> entries</td>
+<td>Per-instance memory LRU</td>
+<td><code>cacheHandlers</code> (for <code>'use cache: remote'</code>) backed by shared storage</td>
+</tr>
+<tr>
+<td>Tag invalidation</td>
+<td>Only on the instance that called it</td>
+<td>Implement <code>refreshTags()</code> in the handler to sync tag state before each request</td>
+</tr>
+<tr>
+<td>Server Actions closures</td>
+<td>New key per build</td>
+<td>Same <code>NEXT_SERVER_ACTIONS_ENCRYPTION_KEY</code> everywhere</td>
+</tr>
+<tr>
+<td>Build identity</td>
+<td>Random build ID</td>
+<td>One image for all environments, or <code>generateBuildId</code></td>
+</tr>
+<tr>
+<td>Version skew in rolling deploys</td>
+<td>Old clients hit new servers</td>
+<td><code>deploymentId</code>: assets get <code>?dpl=</code>, navigations send <code>x-deployment-id</code>, a mismatch forces a hard reload</td>
+</tr>
+<tr>
+<td>Streaming</td>
+<td>Buffered by Nginx</td>
+<td><code>X-Accel-Buffering: no</code>; check the load balancer</td>
+</tr>
+<tr>
+<td><code>after()</code> work</td>
+<td>Lost on abrupt kill</td>
+<td>Send <code>SIGTERM</code>/<code>SIGINT</code> and allow a 10–30 s drain</td>
+</tr>
+<tr>
+<td>Bad clients</td>
+<td>Hit Node.js directly</td>
+<td>A reverse proxy for slow connections, payload limits, rate limits</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vercel-adapters-or-your-own"><a href="#Vercel-adapters-or-your-own" class="headerlink" title="Vercel, adapters, or your own"></a>Vercel, adapters, or your own</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Managed (Vercel)</th>
+<th>Self-hosted Node.js / Docker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISR, tag invalidation, <code>'use cache: remote'</code></td>
+<td>Built in</td>
+<td>Your cache handler</td>
+</tr>
+<tr>
+<td>Skew protection</td>
+<td>Built in</td>
+<td><code>deploymentId</code> + your deploy strategy</td>
+</tr>
+<tr>
+<td>Image optimisation</td>
+<td>Platform service</td>
+<td><code>sharp</code> in your container</td>
+</tr>
+<tr>
+<td>Proxy bypass (CVE-2025-29927)</td>
+<td>Not affected</td>
+<td>Affected until patched</td>
+</tr>
+<tr>
+<td>React2Shell (CVE-2025-55182)</td>
+<td>Platform WAF rules plus upgrade</td>
+<td>Upgrade was the only fix</td>
+</tr>
+<tr>
+<td>Cost model</td>
+<td>Per request / usage</td>
+<td>Per instance</td>
+</tr>
+<tr>
+<td>Control and data residency</td>
+<td>Platform's</td>
+<td>Yours</td>
+</tr>
+</tbody>
+</table>
+<p>Next.js 16.2 made the <strong>Adapters API</strong> stable: a supported way for other platforms to hook into the build and consume its output, replacing reverse-engineered build output for providers such as OpenNext-based deployments.</p>
+<hr>
+<h1 id="Chapter-6-—-instrumentationts-and-OpenTelemetry"><a href="#Chapter-6-—-instrumentationts-and-OpenTelemetry" class="headerlink" title="Chapter 6 — instrumentation.ts and OpenTelemetry"></a>Chapter 6 — <code>instrumentation.ts</code> and OpenTelemetry</h1>
+<p><code>instrumentation.ts</code> in the project root (or in <code>src/</code>) is stable since Next.js 15. Its <code>register()</code> runs once when a new server instance starts, before your code. Its <code>onRequestError()</code> (added in 15) receives every error thrown on the server with context: which router, and whether it came from a Server Component, Server Action, Route Handler or Proxy.</p>
+<pre><code class="language-ts"><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span></pre></td><td class="code"><pre><code class="ts"><span class="line"><span class="hljs-comment">// instrumentation.ts</span></span><br><span class="line"><span class="hljs-keyword">import</span> { registerOTel } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@vercel/otel&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">register</span>(<span class="hljs-params"></span>) {</span><br><span class="line">  <span class="hljs-title function_">registerOTel</span>({ <span class="hljs-attr">serviceName</span>: <span class="hljs-string">&#x27;shop-web&#x27;</span> })</span><br><span class="line">}</span><br><span class="line"> </span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">onRequestError</span>(<span class="hljs-params"></span><br><span class="line">  <span class="hljs-attr">err</span>: <span class="hljs-built_in">unknown</span>,</span><br><span class="line">  <span class="hljs-attr">request</span>: { path: <span class="hljs-built_in">string</span>; method: <span class="hljs-built_in">string</span>; headers: Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[] | <span class="hljs-literal">undefined</span>&gt; },</span><br><span class="line">  <span class="hljs-attr">context</span>: { routerKind: <span class="hljs-built_in">string</span>; routePath: <span class="hljs-built_in">string</span>; routeType: <span class="hljs-built_in">string</span> },</span><br><span class="line"></span>) {</span><br><span class="line">  <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(process.<span class="hljs-property">env</span>.<span class="hljs-property">ERROR_SINK_URL</span>!, {</span><br><span class="line">    <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;POST&#x27;</span>,</span><br><span class="line">    <span class="hljs-attr">headers</span>: { <span class="hljs-string">&#x27;content-type&#x27;</span>: <span class="hljs-string">&#x27;application/json&#x27;</span> },</span><br><span class="line">    <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ <span class="hljs-attr">message</span>: <span class="hljs-title class_">String</span>(err), <span class="hljs-attr">path</span>: request.<span class="hljs-property">path</span>, <span class="hljs-attr">method</span>: request.<span class="hljs-property">method</span>, ...context }),</span><br><span class="line">  })</span><br><span class="line">}</span><br><span class="line"> </span></code></pre></td></tr></table></figure></code></pre>
+<p>Next.js is instrumented out of the box. The spans it emits by default include the root request span (<code>next.span_type</code> <code>BaseServer.handleRequest</code>), App Router rendering (<code>AppRender.getBodyResult</code>), each <code>fetch</code> (<code>AppRender.fetch</code>, disabled with <code>NEXT_OTEL_FETCH_DISABLED=1</code>), Route Handler execution (<code>AppRouteRouteHandlers.runHandler</code>), <code>generateMetadata</code>, and a zero-length <code>start response</code> span at first byte. Attributes include <code>next.route</code> (the route pattern, such as <code>/[param]/user</code>) and <code>next.rsc</code> (whether the request was an RSC request such as a prefetch). <code>NEXT_OTEL_VERBOSE=1</code> emits more spans.</p>
+<p>For a manual <code>NodeSDK</code> setup instead of <code>@vercel/otel</code>, import it only when <code>process.env.NEXT_RUNTIME === 'nodejs'</code>, from a separate <code>instrumentation.node.ts</code>.</p>
+<p>What to put on dashboards: p95 of <code>start response</code> (time to first byte) per <code>next.route</code>, error counts from <code>onRequestError</code> by <code>routeType</code>, <code>fetch</code> span durations per upstream host, and prefetch (<code>next.rsc</code>) volume after a navigation change.</p>
+<blockquote>
+<p><strong>Watch out:</strong> error payloads are a leak vector too. Do not ship full request headers (cookies, <code>authorization</code>) to a third-party sink; pick the fields you need, as above.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-7-—-Environment-variables-and-NEXT_PUBLIC_-leaks"><a href="#Chapter-7-—-Environment-variables-and-NEXT_PUBLIC_-leaks" class="headerlink" title="Chapter 7 — Environment variables and NEXT_PUBLIC_ leaks"></a>Chapter 7 — Environment variables and <code>NEXT_PUBLIC_</code> leaks</h1>
+<h2 id="How-loading-works"><a href="#How-loading-works" class="headerlink" title="How loading works"></a>How loading works</h2>
+<p>Lookup order, stopping at the first hit: <code>process.env</code>, <code>.env.$(NODE_ENV).local</code>, <code>.env.local</code> (skipped when <code>NODE_ENV</code> is <code>test</code>), <code>.env.$(NODE_ENV)</code>, <code>.env</code>. Variables can reference others with <code>$VAR</code>. Outside Next.js (an ORM config, a test runner), <code>loadEnvConfig</code> from <code>@next/env</code> loads them the same way.</p>
+<h2 id="The-inlining-rule"><a href="#The-inlining-rule" class="headerlink" title="The inlining rule"></a>The inlining rule</h2>
+<p>Only variables prefixed <code>NEXT_PUBLIC_</code> reach the browser, and they are <strong>inlined as literals at <code>next build</code></strong>. Consequences:</p>
+<ul>
+<li>One Docker image promoted from staging to production keeps <strong>staging's</strong> <code>NEXT_PUBLIC_</code> values. Runtime values must be read on the server during dynamic rendering (<code>await connection()</code> first) or served by an endpoint.</li>
+<li>Only direct references are replaced: <code>process.env[name]</code> or <code>const env = process.env; env.NEXT_PUBLIC_X</code> are <strong>not</strong> inlined.</li>
+<li>The <code>env</code> key in <code>next.config</code> inlines values into the bundle the same way. This blog uses it for <code>NEXT_PUBLIC_BASE_PATH</code>, which is public by nature.</li>
+</ul>
+<h2 id="How-secrets-actually-leak"><a href="#How-secrets-actually-leak" class="headerlink" title="How secrets actually leak"></a>How secrets actually leak</h2>
+<table>
+<thead>
+<tr>
+<th>Leak</th>
+<th>Example</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong prefix</td>
+<td><code>NEXT_PUBLIC_STRIPE_SECRET_KEY</code></td>
+<td>Code review rule and a CI grep: no <code>SECRET</code>, <code>TOKEN</code>, <code>KEY</code> after <code>NEXT_PUBLIC_</code> unless explicitly public</td>
+</tr>
+<tr>
+<td><code>next.config</code> <code>env</code></td>
+<td><code>env: { DB_URL: process.env.DB_URL }</code></td>
+<td>Never put secrets in <code>env</code></td>
+</tr>
+<tr>
+<td>Props to a Client Component</td>
+<td><code>&lt;Map apiKey={process.env.MAPS_SERVER_KEY} /&gt;</code></td>
+<td>Props are in the RSC payload: pass results, not keys</td>
+</tr>
+<tr>
+<td>Action return values</td>
+<td>Returning a full user row or config object</td>
+<td>Return minimal objects (Post 01)</td>
+</tr>
+<tr>
+<td>Hardcoded in source</td>
+<td><code>db.connect('postgres://user:pw@…')</code> inside a Server Function</td>
+<td>Environment variables only; CVE-2025-55183 exposed function source</td>
+</tr>
+<tr>
+<td>Logs and error sinks</td>
+<td>Logging <code>process.env</code> or request headers</td>
+<td>Allow-list fields</td>
+</tr>
+<tr>
+<td>Build artefacts</td>
+<td><code>.env</code> copied into a Docker image</td>
+<td><code>.dockerignore</code>; secrets at runtime, not build time</td>
+</tr>
+</tbody>
+</table>
+<p>Structural defences: read <code>process.env</code> only inside the server-only DAL, mark those modules with <code>import 'server-only'</code>, and enable <code>experimental.taint</code> so <code>experimental_taintUniqueValue</code> can block a specific secret string from ever being passed to the client.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> &quot;it is only used on the server&quot; is not the same as &quot;it is not in the client bundle&quot;. A <code>NEXT_PUBLIC_</code> reference in any module that a client module imports ships the literal, even if the code path never runs in the browser.</p>
+</blockquote>
+<hr>
+<h1 id="Practice-Exercises"><a href="#Practice-Exercises" class="headerlink" title="Practice Exercises"></a>Practice Exercises</h1>
+<h2 id="Exercise-1-—-Survive-a-Proxy-bypass"><a href="#Exercise-1-—-Survive-a-Proxy-bypass" class="headerlink" title="Exercise 1 — Survive a Proxy bypass"></a>Exercise 1 — Survive a Proxy bypass</h2>
+<p>An app's only protection for <code>/admin</code> is a <code>proxy.ts</code> redirect when the <code>role</code> cookie is not <code>admin</code>. Describe an attack even without a framework CVE, and redesign the checks.</p>
+<details>
+<summary>Solution</summary>
+<p>The cookie is client-controlled: set <code>role=admin</code> and the redirect passes. Even with a signed cookie, any bypass or matcher gap exposes everything. Redesign: Proxy only checks that a session cookie exists; <code>verifySession()</code> in the DAL decrypts and verifies the session and loads the role from the session store; every admin DAL function checks <code>role === 'admin'</code>; every admin Server Action calls those DAL functions.</p>
+</details>
+<h2 id="Exercise-2-—-Triage-an-advisory"><a href="#Exercise-2-—-Triage-an-advisory" class="headerlink" title="Exercise 2 — Triage an advisory"></a>Exercise 2 — Triage an advisory</h2>
+<p>A new critical advisory lists &quot;Next.js 15.x and 16.x App Router, fixed in 15.5.x and 16.3.x&quot;. You run 15.2.4 self-hosted and a static-export marketing site on 14.2. What do you do for each?</p>
+<details>
+<summary>Solution</summary>
+<p>15.2.4 is inside the affected range and on an old minor: upgrade to the latest 15.5.x patch (the Maintenance LTS line), deploy, and if the advisory is remote code execution and you were exposed, rotate secrets. Then plan the move to 16.x. The static export has no Next.js server, so server-side advisories do not apply; note that 14.x is outside the LTS policy and schedule an upgrade.</p>
+</details>
+<h2 id="Exercise-3-—-Fix-the-image-config"><a href="#Exercise-3-—-Fix-the-image-config" class="headerlink" title="Exercise 3 — Fix the image config"></a>Exercise 3 — Fix the image config</h2>
+<p>A Next.js 16 upgrade makes every product image look slightly different and a designer complains <code>quality={90}</code> is ignored. Explain and fix.</p>
+<details>
+<summary>Solution</summary>
+<p>In 16, <code>images.qualities</code> defaults to <code>[75]</code> and <code>quality</code> is coerced to the nearest allowed value, so 90 becomes 75. Add the needed values: <code>images: { qualities: [75, 90] }</code>. Keep the list short: each allowed quality is another variant attackers can request and the server must cache.</p>
+</details>
+<h2 id="Exercise-4-—-Two-pods-stale-pages"><a href="#Exercise-4-—-Two-pods-stale-pages" class="headerlink" title="Exercise 4 — Two pods, stale pages"></a>Exercise 4 — Two pods, stale pages</h2>
+<p>After scaling from one to two pods, users see a product page flip between old and new prices for minutes after an edit. List the causes and fixes.</p>
+<details>
+<summary>Solution</summary>
+<p>Each pod has its own ISR and data cache on local disk and memory, and <code>revalidateTag</code> / <code>updateTag</code> on one pod does not reach the other. Configure a shared <code>cacheHandler</code> (and <code>cacheHandlers</code> for <code>'use cache: remote'</code>), set <code>cacheMaxMemorySize: 0</code>, and implement <code>refreshTags()</code> so each pod syncs tag invalidations before serving. Also make sure both pods run the same build and share <code>NEXT_SERVER_ACTIONS_ENCRYPTION_KEY</code>.</p>
+</details>
+<h2 id="Exercise-5-—-Find-the-leak"><a href="#Exercise-5-—-Find-the-leak" class="headerlink" title="Exercise 5 — Find the leak"></a>Exercise 5 — Find the leak</h2>
+<p>A Server Component renders <code>&lt;Checkout config={config} /&gt;</code> where <code>config = { currency: 'EUR', stripeSecret: process.env.STRIPE_SECRET_KEY, publishableKey: process.env.NEXT_PUBLIC_STRIPE_KEY }</code>. What leaks, how would you detect it, and how do you prevent it structurally?</p>
+<details>
+<summary>Solution</summary>
+<p><code>stripeSecret</code> is serialised into the RSC payload and visible in page source, even if <code>Checkout</code> never renders it. Detect it by searching the HTML and <code>_rsc</code> responses for the key prefix, or with <code>experimental_taintUniqueValue</code> on the secret, which makes React throw when it is passed to the client. Prevent it by reading the secret only in the DAL, giving <code>Checkout</code> a narrow props type (<code>{ currency, publishableKey }</code>), and marking the config module <code>server-only</code>.</p>
+</details>
+<h2 id="Exercise-6-—-Instrument-a-slow-route"><a href="#Exercise-6-—-Instrument-a-slow-route" class="headerlink" title="Exercise 6 — Instrument a slow route"></a>Exercise 6 — Instrument a slow route</h2>
+<p>Users report slow <code>/products/[id]</code> pages. Using only the default Next.js spans, how do you find whether the time goes to rendering, to upstream <code>fetch</code> calls, or before the first byte?</p>
+<details>
+<summary>Solution</summary>
+<p>Filter traces by <code>next.route = /products/[id]</code>. Compare the root <code>BaseServer.handleRequest</code> duration with the <code>start response</code> span (time to first byte), the <code>AppRender.getBodyResult</code> render span, and the child <code>AppRender.fetch</code> spans grouped by host. Long fetch spans in sequence point to a waterfall (Post 01); a late <code>start response</code> with short fetches points to blocking work outside Suspense (Post 02).</p>
+</details>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Real auth boundary</td>
+<td>The server-only DAL, called by every page, action and handler</td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td>Optimistic checks only</td>
+</tr>
+<tr>
+<td>Layout auth</td>
+<td>Not re-run on child navigation; do not rely on it</td>
+</tr>
+<tr>
+<td>CVE-2025-29927</td>
+<td><code>x-middleware-subrequest</code> bypass; fixed 15.2.3 / 14.2.25 / 13.5.9 / 12.3.5</td>
+</tr>
+<tr>
+<td>CVE-2025-55182</td>
+<td>CVSS 10.0 RSC RCE; React 19.0.1 / 19.1.2 / 19.2.1; Next.js 15.0.5 … 16.0.7</td>
+</tr>
+<tr>
+<td>Safe from all follow-ups</td>
+<td><code>react-server-dom-*</code> 19.0.4 / 19.1.5 / 19.2.4 or later</td>
+</tr>
+<tr>
+<td>LTS</td>
+<td>Current major Active; previous major Maintenance for 2 years from release</td>
+</tr>
+<tr>
+<td><code>next/image</code> in 16</td>
+<td><code>qualities</code> <code>[75]</code>, <code>minimumCacheTTL</code> 4 h, <code>preload</code> replaces <code>priority</code></td>
+</tr>
+<tr>
+<td><code>next/font</code></td>
+<td>Build-time self-hosting, <code>display: 'swap'</code>, metric-adjusted fallback</td>
+</tr>
+<tr>
+<td>Bundle analyzer</td>
+<td><code>next experimental-analyze</code> (16.1+, Turbopack)</td>
+</tr>
+<tr>
+<td>Standalone</td>
+<td><code>.next/standalone/server.js</code>; copy <code>public</code> and <code>.next/static</code></td>
+</tr>
+<tr>
+<td>Multi-instance</td>
+<td>Shared cache handler, <code>refreshTags()</code>, encryption key, <code>deploymentId</code></td>
+</tr>
+<tr>
+<td>Observability</td>
+<td><code>register()</code> + <code>onRequestError()</code>; <code>@vercel/otel</code> <code>registerOTel</code></td>
+</tr>
+<tr>
+<td><code>NEXT_PUBLIC_</code></td>
+<td>Inlined at build; frozen per image; only direct references</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p>This is the last planned post of the core series. The table below lists the extensions. For the underlying layers, the <strong>JavaScript Deep Dive</strong> series covers the event loop, promises and module semantics that streaming and Server Functions rely on; <strong>React Deep Dive</strong> covers Suspense, transitions, <code>useActionState</code> and the React Compiler that Next.js 16 supports as a stable option; <strong>Vue Deep Dive</strong> covers the Nuxt side of the same problems (server rendering, hybrid route rules, Nitro deployment) for teams choosing between the two.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li><a href="https://nextjs.org/docs/app/guides/authentication" target="_blank" rel="noopener external nofollow noreferrer">Next.js Docs — Authentication</a> and <a href="https://nextjs.org/docs/app/guides/data-security" target="_blank" rel="noopener external nofollow noreferrer">Data Security</a></li>
+<li><a href="https://vercel.com/blog/postmortem-on-next-js-middleware-bypass" target="_blank" rel="noopener external nofollow noreferrer">Vercel — Postmortem on the Next.js middleware bypass (CVE-2025-29927)</a></li>
+<li><a href="https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components" target="_blank" rel="noopener external nofollow noreferrer">React — Critical security vulnerability in React Server Components (CVE-2025-55182)</a></li>
+<li><a href="https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components" target="_blank" rel="noopener external nofollow noreferrer">React — Denial of service and source code exposure in React Server Components</a></li>
+<li><a href="https://nextjs.org/blog/CVE-2025-66478" target="_blank" rel="noopener external nofollow noreferrer">Next.js — Security advisory CVE-2025-66478</a> and <a href="https://nextjs.org/blog/august-2026-security-release" target="_blank" rel="noopener external nofollow noreferrer">August 2026 security release</a></li>
+<li><a href="https://nextjs.org/support-policy" target="_blank" rel="noopener external nofollow noreferrer">Next.js — Support policy (LTS)</a></li>
+<li><a href="https://nextjs.org/docs/app/api-reference/components/image" target="_blank" rel="noopener external nofollow noreferrer">Next.js Docs — Image component</a> and <a href="https://nextjs.org/docs/app/api-reference/components/font" target="_blank" rel="noopener external nofollow noreferrer">Font module</a></li>
+<li><a href="https://nextjs.org/docs/app/guides/self-hosting" target="_blank" rel="noopener external nofollow noreferrer">Next.js Docs — Self-hosting</a> and <a href="https://nextjs.org/docs/app/api-reference/config/next-config-js/output" target="_blank" rel="noopener external nofollow noreferrer"><code>output</code></a></li>
+<li><a href="https://nextjs.org/docs/app/guides/open-telemetry" target="_blank" rel="noopener external nofollow noreferrer">Next.js Docs — OpenTelemetry</a> and <a href="https://nextjs.org/docs/app/guides/environment-variables" target="_blank" rel="noopener external nofollow noreferrer">Environment variables</a></li>
+<li><a href="https://nextjs.org/blog/next-16-1" target="_blank" rel="noopener external nofollow noreferrer">Next.js 16.1 (bundle analyzer)</a> and <a href="https://nextjs.org/blog/next-16-2" target="_blank" rel="noopener external nofollow noreferrer">16.2 (Adapters stable)</a></li>
+</ul>
+<hr>
+<h1 id="Planned-future-extensions"><a href="#Planned-future-extensions" class="headerlink" title="Planned future extensions"></a>Planned future extensions</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>04</td>
+<td>Testing Next.js</td>
+<td>Unit-testing Server Components and actions, Proxy matcher tests, Playwright and the 16.3 <code>instant()</code> navigation helper</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Internationalisation</td>
+<td>Locale routing with root params (<code>next/root-params</code>, 16.3), <code>generateStaticParams</code> per locale, caching per locale</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Multi-tenant SaaS</td>
+<td>Tenant resolution in Proxy, per-tenant cache keys, isolation in the DAL, custom domains</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Real-time features</td>
+<td>Streaming responses from Route Handlers, Server-Sent Events, WebSockets beside Next.js</td>
+</tr>
+<tr>
+<td>08</td>
+<td>Migrating from the Pages Router</td>
+<td>Incremental adoption, <code>getServerSideProps</code> to Server Components, data-fetching parity</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Deep dive: cache handlers</td>
+<td>Writing a Redis <code>cacheHandler</code> and <code>cacheHandlers</code>, <code>refreshTags()</code>, eviction and failure modes</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Performance lab</td>
+<td>Core Web Vitals on a real app: LCP images, INP and hydration cost, partial prefetching trade-offs</td>
+</tr>
+<tr>
+<td>11</td>
+<td>AI features in Next.js</td>
+<td>Streaming model output through Server Functions and Route Handlers, timeouts, <code>after()</code> for logging</td>
+</tr>
+</tbody>
+</table>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Next.js Deep Dive — 03 · Production Next.js\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-09-28 05:52:43\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":174}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":355}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":22}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/nextjs/cover_03_production.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Next.js Deep Dive — 03 · Production Next.js"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-09-21T15:26:41.000Z","title":"Created 2026-09-21 23:26:41","children":"2026-09-21"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-09-21T15:26:41.000Z","title":"Updated 2026-09-21 23:26:41","children":"2026-09-21"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Programming",{"className":"post-meta-categories","href":"/blog/categories/Programming/","children":"Programming"}]],[["$","span","sep-Web",{"children":" > "}],["$","a","Web",{"className":"post-meta-categories","href":"/blog/categories/Web/","children":"Web"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Next.js Deep Dive — 03 · Production Next.js","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/09/21/nextjs_03_production/","children":"https://invokfung.github.io/blog/2026/09/21/nextjs_03_production/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Next.js",{"className":"post-meta__tags","href":"/blog/tags/Next-js/","children":"Next.js"}],["$","a","Security",{"className":"post-meta__tags","href":"/blog/tags/Security/","children":"Security"}],["$","a","Self-hosting",{"className":"post-meta__tags","href":"/blog/tags/Self-hosting/","children":"Self-hosting"}],["$","a","Observability",{"className":"post-meta__tags","href":"/blog/tags/Observability/","children":"Observability"}],["$","a","Web",{"className":"post-meta__tags","href":"/blog/tags/Web/","children":"Web"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/09/22/dev_23_money_basics/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/dev/cover_23_money_basics.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/09/19/dev_22_design_docs_readmes/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/dev/cover_22_design_docs_readmes.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 22 · Design Docs and READMEs People Actually Read</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","nextjs_00_app_router_mental_model",{"children":["$","a",null,{"href":"/blog/2026/09/03/nextjs_00_app_router_mental_model/","title":"Next.js Deep Dive — 00 · App Router Mental Model","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/nextjs/cover_00_app_router_mental_model.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-03</div><div class=\"title\">Next.js Deep Dive — 00 · App Router Mental Model</div></div>"}}]}],["$","div","nextjs_01_data_caching_server_actions",{"children":["$","a",null,{"href":"/blog/2026/09/09/nextjs_01_data_caching_server_actions/","title":"Next.js Deep Dive — 01 · Data Fetching, Caching & Server Actions","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/nextjs/cover_01_data_caching_server_actions.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-09</div><div class=\"title\">Next.js Deep Dive — 01 · Data Fetching, Caching &amp; Server Actions</div></div>"}}]}],["$","div","nextjs_02_rendering_runtimes",{"children":["$","a",null,{"href":"/blog/2026/09/15/nextjs_02_rendering_runtimes/","title":"Next.js Deep Dive — 02 · Rendering Strategies & Runtimes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/nextjs/cover_02_rendering_runtimes.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-09-15</div><div class=\"title\">Next.js Deep Dive — 02 · Rendering Strategies &amp; Runtimes</div></div>"}}]}],["$","div","docker_k8s_07_ingress_observability_gitops",{"children":["$","a",null,{"href":"/blog/2026/08/13/docker_k8s_07_ingress_observability_gitops/","title":"Containers Course — 07 · Ingress, Observability, RBAC and GitOps","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/docker_k8s/cover_07_ingress_observability_gitops.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-13</div><div class=\"title\">Containers Course — 07 · Ingress, Observability, RBAC and GitOps</div></div>"}}]}],["$","div","mongo_13_security",{"children":["$","a",null,{"href":"/blog/2026/06/28/mongo_13_security/","title":"MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/mongo/cover_13_security.png\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-06-28</div><div class=\"title\">MongoDB Course — 13 · Security — Auth, RBAC, TLS, KMS, CSFLE, Queryable Encryption</div></div>"}}]}],["$","div","pg_07_operations_backup_replication",{"children":["$","a",null,{"href":"/blog/2026/07/08/pg_07_operations_backup_replication/","title":"PostgreSQL Course — 07 · Operations, Backup, Replication and Security","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/pg/cover_07_operations_backup_replication.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-08</div><div class=\"title\">PostgreSQL Course — 07 · Operations, Backup, Replication and Security</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":174}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":355}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":22}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-Authentication-in-layers",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-Authentication-in-layers","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — Authentication in layers"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Terminology",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Terminology","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"Terminology"}]]}],null]}],["$","li","Where-each-check-belongs",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Where-each-check-belongs","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"Where each check belongs"}]]}],null]}],["$","li","Sessions",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Sessions","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"Sessions"}]]}],null]}],["$","li","Auth-with-Cache-Components",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Auth-with-Cache-Components","children":[["$","span",null,{"className":"toc-number","children":"2.4."}]," ",["$","span",null,{"className":"toc-text","children":"Auth with Cache Components"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-The-incidents-and-what-they-teach",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-The-incidents-and-what-they-teach","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — The incidents, and what they teach"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","CVE-2025-29927-middleware-bypass-March-2025",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#CVE-2025-29927-middleware-bypass-March-2025","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"CVE-2025-29927: middleware bypass (March 2025)"}]]}],null]}],["$","li","CVE-2025-55182-React2Shell-RSC-remote-code-execution-December-2025",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#CVE-2025-55182-React2Shell-RSC-remote-code-execution-December-2025","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"CVE-2025-55182 \"React2Shell\": RSC remote code execution (December 2025)"}]]}],null]}],["$","li","The-follow-ups-December-2025-–-January-2026",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-follow-ups-December-2025-–-January-2026","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"The follow-ups (December 2025 – January 2026)"}]]}],null]}],["$","li","2026-a-monthly-rhythm",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#2026-a-monthly-rhythm","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"2026: a monthly rhythm"}]]}],null]}],["$","li","Lessons-that-transfer",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Lessons-that-transfer","children":[["$","span",null,{"className":"toc-number","children":"3.5."}]," ",["$","span",null,{"className":"toc-text","children":"Lessons that transfer"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-nextimage-and-nextfont",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-nextimage-and-nextfont","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — next/image and next/font"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","nextimage",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#nextimage","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"next/image"}]]}],null]}],["$","li","nextfont",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#nextfont","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"next/font"}]]}],null]}]]}]]}],["$","li","Chapter-4-—-Bundle-analysis",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-4-—-Bundle-analysis","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 4 — Bundle analysis"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Tools",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Tools","children":[["$","span",null,{"className":"toc-number","children":"5.1."}]," ",["$","span",null,{"className":"toc-text","children":"Tools"}]]}],null]}],["$","li","What-to-look-for",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#What-to-look-for","children":[["$","span",null,{"className":"toc-number","children":"5.2."}]," ",["$","span",null,{"className":"toc-text","children":"What to look for"}]]}],null]}]]}]]}],["$","li","Chapter-5-—-Self-hosting-vs-a-managed-platform",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-5-—-Self-hosting-vs-a-managed-platform","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 5 — Self-hosting vs a managed platform"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Standalone-output",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Standalone-output","children":[["$","span",null,{"className":"toc-number","children":"6.1."}]," ",["$","span",null,{"className":"toc-text","children":"Standalone output"}]]}],null]}],["$","li","The-multi-instance-checklist",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-multi-instance-checklist","children":[["$","span",null,{"className":"toc-number","children":"6.2."}]," ",["$","span",null,{"className":"toc-text","children":"The multi-instance checklist"}]]}],null]}],["$","li","Vercel-adapters-or-your-own",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Vercel-adapters-or-your-own","children":[["$","span",null,{"className":"toc-number","children":"6.3."}]," ",["$","span",null,{"className":"toc-text","children":"Vercel, adapters, or your own"}]]}],null]}]]}]]}],["$","li","Chapter-6-—-instrumentationts-and-OpenTelemetry",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-6-—-instrumentationts-and-OpenTelemetry","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 6 — instrumentation.ts and OpenTelemetry"}]]}],null]}],["$","li","Chapter-7-—-Environment-variables-and-NEXT_PUBLIC_-leaks",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-7-—-Environment-variables-and-NEXT_PUBLIC_-leaks","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 7 — Environment variables and NEXT_PUBLIC_ leaks"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","How-loading-works",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#How-loading-works","children":[["$","span",null,{"className":"toc-number","children":"8.1."}]," ",["$","span",null,{"className":"toc-text","children":"How loading works"}]]}],null]}],["$","li","The-inlining-rule",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#The-inlining-rule","children":[["$","span",null,{"className":"toc-number","children":"8.2."}]," ",["$","span",null,{"className":"toc-text","children":"The inlining rule"}]]}],null]}],["$","li","How-secrets-actually-leak",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#How-secrets-actually-leak","children":[["$","span",null,{"className":"toc-number","children":"8.3."}]," ",["$","span",null,{"className":"toc-text","children":"How secrets actually leak"}]]}],null]}]]}]]}],["$","li","Practice-Exercises",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Practice-Exercises","children":[["$","span",null,{"className":"toc-number","children":"9."}]," ",["$","span",null,{"className":"toc-text","children":"Practice Exercises"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","Exercise-1-—-Survive-a-Proxy-bypass",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-1-—-Survive-a-Proxy-bypass","children":[["$","span",null,{"className":"toc-number","children":"9.1."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 1 — Survive a Proxy bypass"}]]}],null]}],["$","li","Exercise-2-—-Triage-an-advisory",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-2-—-Triage-an-advisory","children":[["$","span",null,{"className":"toc-number","children":"9.2."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 2 — Triage an advisory"}]]}],null]}],["$","li","Exercise-3-—-Fix-the-image-config",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-3-—-Fix-the-image-config","children":[["$","span",null,{"className":"toc-number","children":"9.3."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 3 — Fix the image config"}]]}],null]}],["$","li","Exercise-4-—-Two-pods-stale-pages",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-4-—-Two-pods-stale-pages","children":[["$","span",null,{"className":"toc-number","children":"9.4."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 4 — Two pods, stale pages"}]]}],null]}],["$","li","Exercise-5-—-Find-the-leak",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-5-—-Find-the-leak","children":[["$","span",null,{"className":"toc-number","children":"9.5."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 5 — Find the leak"}]]}],null]}],["$","li","Exercise-6-—-Instrument-a-slow-route",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#Exercise-6-—-Instrument-a-slow-route","children":[["$","span",null,{"className":"toc-number","children":"9.6."}]," ",["$","span",null,{"className":"toc-text","children":"Exercise 6 — Instrument a slow route"}]]}],null]}]]}]]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"10."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"11."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"12."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}],["$","li","Planned-future-extensions",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Planned-future-extensions","children":[["$","span",null,{"className":"toc-number","children":"13."}]," ",["$","span",null,{"className":"toc-text","children":"Planned future extensions"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","vue_03_ecosystem_production",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/25/vue_03_ecosystem_production/","title":"Vue Deep Dive — 03 · Ecosystem & Production (Pinia, Router, Nuxt)","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/vue/cover_03_ecosystem_production.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Vue Deep Dive — 03 · Ecosystem &amp; Production (Pinia, Router, Nuxt)\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/25/vue_03_ecosystem_production/","title":"Vue Deep Dive — 03 · Ecosystem & Production (Pinia, Router, Nuxt)","children":"Vue Deep Dive — 03 · Ecosystem & Production (Pinia, Router, Nuxt)"}],["$","time",null,{"dateTime":"2026-09-25T15:07:35.000Z","title":"Created 2026-09-25 23:07:35","children":"2026-09-25"}]]}]]}],["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_24_desk_health.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-24T15:30:11.000Z","title":"Created 2026-09-24 23:30:11","children":"2026-09-24"}]]}]]}],["$","div","print3d_07_strength_functional_parts",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/print3d/cover_07_strength_functional_parts.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/23/print3d_07_strength_functional_parts/","title":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts","children":"3D Printing Course — 07 · Strength, Failure Modes and Functional Parts"}],["$","time",null,{"dateTime":"2026-09-23T14:38:34.000Z","title":"Created 2026-09-23 22:38:34","children":"2026-09-23"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_23_money_basics.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T12:30:42.000Z","title":"Created 2026-09-22 20:30:42","children":"2026-09-22"}]]}]]}],["$","div","nextjs_03_production",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/21/nextjs_03_production/","title":"Next.js Deep Dive — 03 · Production Next.js","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/nextjs/cover_03_production.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Next.js Deep Dive — 03 · Production Next.js\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/21/nextjs_03_production/","title":"Next.js Deep Dive — 03 · Production Next.js","children":"Next.js Deep Dive — 03 · Production Next.js"}],["$","time",null,{"dateTime":"2026-09-21T15:26:41.000Z","title":"Created 2026-09-21 23:26:41","children":"2026-09-21"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Next.js Deep Dive — 03 · Production Next.js | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Shipping a Next.js app is easy; running one for years is a different skill. Between March 2025 and August 2026 the framework and its React Server Comp"}],["$","meta","5",{"name":"keywords","content":"Next.js,Security,Self-hosting,Observability,Web"}],["$","meta","6",{"property":"og:title","content":"Next.js Deep Dive — 03 · Production Next.js"}],["$","meta","7",{"property":"og:description","content":"Shipping a Next.js app is easy; running one for years is a different skill. Between March 2025 and August 2026 the framework and its React Server Comp"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/nextjs/cover_03_production.jpg"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Next.js Deep Dive — 03 · Production Next.js"}],["$","meta","12",{"name":"twitter:description","content":"Shipping a Next.js app is easy; running one for years is a different skill. Between March 2025 and August 2026 the framework and its React Server Comp"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/nextjs/cover_03_production.jpg"}]]
+1:null

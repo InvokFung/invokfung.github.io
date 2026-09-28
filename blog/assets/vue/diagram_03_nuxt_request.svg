@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 752" width="1000" height="752" role="img" aria-label="A Nuxt request: routeRules choose prerender, swr, isr, ssr false or universal SSR; on the server Vue renders while an awaited useFetch runs the Nitro handler in-process; HTML ships with the serialised payload; the browser shows HTML, loads JavaScript and hydrates, reusing the payload instead of fetching again and checking the DOM matches; later client navigations fetch from the browser">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="752" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="750.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One Nuxt request, from URL to interactive</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">useFetch fetches once on the server; hydration reuses the payload instead of fetching again.</text>
+<rect x="40.0" y="100.0" width="920.0" height="250.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="58.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">SERVER · Nitro</text>
+<rect x="40.0" y="372.0" width="920.0" height="216.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="58.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">BROWSER · first load</text>
+<rect x="40.0" y="604.0" width="920.0" height="96.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="58.0" y="630.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">BROWSER · later navigation</text>
+<rect x="64.0" y="142.0" width="190.0" height="186.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="80.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">routeRules</text>
+<text x="80.0" y="198.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">prerender</text>
+<text x="80.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">HTML at build</text>
+<text x="80.0" y="230.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">swr / isr</text>
+<text x="80.0" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">cached HTML</text>
+<text x="80.0" y="262.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">ssr: false</text>
+<text x="80.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">empty shell</text>
+<text x="80.0" y="294.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">default</text>
+<text x="80.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">universal SSR</text>
+<line x1="256.0" y1="292.0" x2="290.0" y2="292.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="294.0" y="142.0" width="330.0" height="186.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="310.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Vue renders the page (SSR)</text>
+<text x="310.0" y="194.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">await useFetch('/api/products/p1')</text>
+<text x="310.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Suspense waits for the data</text>
+<rect x="310.0" y="232.0" width="298.0" height="48.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.4"/>
+<text x="324.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">server/api/products/[id].get.ts</text>
+<text x="324.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">called in-process, no HTTP round trip</text>
+<text x="310.0" y="306.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="start">result stored in the payload</text>
+<line x1="626.0" y1="235.0" x2="660.0" y2="235.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="664.0" y="142.0" width="272.0" height="186.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="680.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Response</text>
+<rect x="680.0" y="184.0" width="240.0" height="52.0" rx="8" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="694.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">HTML</text>
+<text x="694.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">the rendered page</text>
+<rect x="680.0" y="246.0" width="240.0" height="66.0" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="694.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">+ payload</text>
+<text x="694.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">serialised useFetch data</text>
+<text x="694.0" y="303.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(keep it small: pick, transform)</text>
+<path d="M800,332 L800,388" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<rect x="64.0" y="414.0" width="164.0" height="104.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="76.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">1 · HTML shown</text>
+<text x="76.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">visible, not yet</text>
+<text x="76.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">interactive</text>
+<line x1="230.0" y1="466.0" x2="240.0" y2="466.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="242.0" y="414.0" width="164.0" height="104.0" rx="10" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="254.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">2 · JS loads</text>
+<text x="254.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">the same app</text>
+<text x="254.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">runs in the browser</text>
+<line x1="408.0" y1="466.0" x2="418.0" y2="466.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="420.0" y="414.0" width="164.0" height="104.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="432.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">3 · Hydration</text>
+<text x="432.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">useFetch reads the</text>
+<text x="432.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">payload: no 2nd fetch</text>
+<line x1="586.0" y1="466.0" x2="596.0" y2="466.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="598.0" y="414.0" width="164.0" height="104.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="610.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">4 · DOM check</text>
+<text x="610.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">server DOM = client</text>
+<text x="610.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">render? else mismatch</text>
+<line x1="764.0" y1="466.0" x2="774.0" y2="466.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="776.0" y="414.0" width="164.0" height="104.0" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<text x="788.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#16a34a" text-anchor="start">5 · Interactive</text>
+<text x="788.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">listeners attached;</text>
+<text x="788.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">now clicks work</text>
+<text x="64.0" y="550.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Before step 5 a button is visible but has no listener: e2e tests must wait for hydration.</text>
+<text x="64.0" y="572.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Mismatch causes: Date.now(), Math.random(), time zones, window checks in render, invalid HTML nesting.</text>
+<text x="64.0" y="660.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Client-side route change:</text>
+<text x="250.0" y="660.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">useFetch runs in the browser and calls /api/products/:id over HTTP;</text>
+<text x="250.0" y="680.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">await blocks the navigation until data arrives, lazy: true navigates at once.</text>
+<text x="40.0" y="734.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Vue Deep Dive 03, Chapters 3 and 4 (Nuxt 4.5). routeRules modes and useFetch behaviour as described in the post.</text>
+</svg>

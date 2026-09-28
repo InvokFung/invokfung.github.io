@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 790" width="1000" height="790" role="img" aria-label="A ref feeds a computed and several effects through track and trigger; after a write, a sync watcher runs inside the write, and one microtask flush then runs pre watchers and component updates sorted by id, patches the DOM, runs post watchers and hooks, and resolves nextTick">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="790" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="788.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">From a write to the DOM</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Reads link effects to deps (track). A write notifies them (trigger). The scheduler batches the work.</text>
+<text x="40.0" y="112.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">1 · The dependency graph</text>
+<rect x="40.0" y="134.0" width="190.0" height="84.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="56.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">count = ref(0)</text>
+<text x="56.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">a dep: .value</text>
+<rect x="290.0" y="134.0" width="210.0" height="84.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="306.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">double = computed()</text>
+<text x="306.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">lazy: re-runs when read</text>
+<text x="306.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">after count changed</text>
+<line x1="232.0" y1="176.0" x2="286.0" y2="176.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="116.0" width="250.0" height="50.0" rx="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="614.0" y="137.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">component render</text>
+<text x="614.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">queued job</text>
+<line x1="502.0" y1="176.0" x2="596.0" y2="141.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="174.0" width="250.0" height="50.0" rx="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="614.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">watch · flush 'pre'</text>
+<text x="614.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">queued job</text>
+<line x1="502.0" y1="176.0" x2="596.0" y2="199.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="232.0" width="250.0" height="50.0" rx="9" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="614.0" y="253.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">watch · flush 'post'</text>
+<text x="614.0" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">post-flush callback</text>
+<path d="M232,200 C292,282 480,257.0 596,257.0" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="600.0" y="290.0" width="250.0" height="50.0" rx="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="614.0" y="311.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">watch · flush 'sync'</text>
+<text x="614.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">runs inside the write</text>
+<path d="M232,200 C292,282 480,315.0 596,315.0" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="870.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">effects</text>
+<text x="870.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(subscribers)</text>
+<line x1="40.0" y1="362.0" x2="80.0" y2="362.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="90.0" y="367.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">trigger: a write notifies the subscribers linked to that dep</text>
+<text x="40.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Each arrow was created by track(): the effect read the dep during its last run. A branch not taken creates no link.</text>
+<line x1="40.0" y1="410.0" x2="960.0" y2="410.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="40.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">2 · One tick after count.value++</text>
+<text x="40.0" y="456.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Checked log order on Vue 3.5:  sync, after set, pre, post</text>
+<text x="40.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">your sync code</text>
+<text x="40.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(same task)</text>
+<text x="40.0" y="652.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">microtask:</text>
+<text x="40.0" y="670.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">flushJobs()</text>
+<rect x="180.0" y="488.0" width="220.0" height="64.0" rx="9" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="194.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">count.value++</text>
+<text x="194.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">trigger() runs</text>
+<line x1="404.0" y1="520.0" x2="434.0" y2="520.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="440.0" y="488.0" width="220.0" height="64.0" rx="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="454.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">sync watcher</text>
+<text x="454.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">inside the write</text>
+<line x1="664.0" y1="520.0" x2="694.0" y2="520.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="700.0" y="488.0" width="220.0" height="64.0" rx="9" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="714.0" y="514.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">log: 'after set'</text>
+<text x="714.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">rest of your code</text>
+<path d="M290,554 L290,616" fill="none" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" marker-end="url(#ahm)"/>
+<text x="300.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">queued once, flushed after the current task</text>
+<rect x="180.0" y="622.0" width="170.0" height="84.0" rx="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="192.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">pre watchers +</text>
+<text x="192.0" y="666.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">component updates</text>
+<text x="192.0" y="688.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sorted by component id</text>
+<line x1="354.0" y1="664.0" x2="376.0" y2="664.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="380.0" y="622.0" width="170.0" height="84.0" rx="9" fill="#f9fafb" stroke="#cbd5e1" stroke-width="1.8"/>
+<text x="392.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">DOM patched</text>
+<text x="392.0" y="688.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">parents before children</text>
+<line x1="554.0" y1="664.0" x2="576.0" y2="664.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="580.0" y="622.0" width="170.0" height="84.0" rx="9" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="592.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">post-flush</text>
+<text x="592.0" y="666.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">post watchers</text>
+<text x="592.0" y="688.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">hooks, template refs</text>
+<line x1="754.0" y1="664.0" x2="776.0" y2="664.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="780.0" y="622.0" width="170.0" height="84.0" rx="9" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="792.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">nextTick()</text>
+<text x="792.0" y="666.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">resolves</text>
+<text x="792.0" y="688.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">the flush promise</text>
+<text x="40.0" y="772.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Vue Deep Dive 00, Chapters 1 and 6. Vue 3.5 scheduler; flush modes 'sync', 'pre' (default), 'post'.</text>
+</svg>

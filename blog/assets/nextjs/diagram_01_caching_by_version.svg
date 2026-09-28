@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 706" width="1000" height="706" role="img" aria-label="How Next.js caching defaults changed from version 14 to 15 to 16: fetch default, GET route handlers, client router cache for pages, the caching primitive and the invalidation APIs">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="706" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="704.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Caching defaults, one version at a time</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">14 cached by default, 15 stopped caching by default, 16 makes caching explicit with 'use cache'.</text>
+<rect x="248.0" y="98.0" width="236.0" height="50.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="262.0" y="119.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Next.js 14</text>
+<text x="262.0" y="139.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">cached by default</text>
+<rect x="486.0" y="98.0" width="236.0" height="50.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="500.0" y="119.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Next.js 15</text>
+<text x="500.0" y="139.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">uncached unless you ask</text>
+<rect x="724.0" y="98.0" width="236.0" height="50.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="738.0" y="119.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Next.js 16</text>
+<text x="738.0" y="139.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">cacheComponents: true</text>
+<rect x="40.0" y="158.0" width="196.0" height="80.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="54.0" y="203.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">fetch() default</text>
+<rect x="248.0" y="158.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="262.0" y="193.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">force-cache</text>
+<text x="262.0" y="212.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">stored in the Data Cache</text>
+<rect x="486.0" y="158.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="500.0" y="184.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">auto no cache</text>
+<text x="500.0" y="203.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">not stored, but a static</text>
+<text x="500.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">route still bakes it in</text>
+<rect x="724.0" y="158.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="738.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">dynamic by default</text>
+<text x="738.0" y="203.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">cached only inside</text>
+<text x="738.0" y="222.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">'use cache'</text>
+<rect x="40.0" y="246.0" width="196.0" height="80.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="54.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">GET Route Handlers</text>
+<rect x="248.0" y="246.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="262.0" y="281.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Cached (static)</text>
+<text x="262.0" y="300.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">by default</text>
+<rect x="486.0" y="246.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="500.0" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Not cached by default;</text>
+<text x="500.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">opt in with</text>
+<text x="500.0" y="310.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">dynamic = 'force-static'</text>
+<rect x="724.0" y="246.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="738.0" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Prerendered when they</text>
+<text x="738.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">touch no uncached or</text>
+<text x="738.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">runtime data</text>
+<rect x="40.0" y="334.0" width="196.0" height="80.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="54.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Router cache,</text>
+<text x="54.0" y="388.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">page segments</text>
+<rect x="248.0" y="334.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="262.0" y="369.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">30 s (dynamic)</text>
+<text x="262.0" y="388.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">5 min (static)</text>
+<rect x="486.0" y="334.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="500.0" y="360.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">staleTime 0</text>
+<text x="500.0" y="379.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">layouts, back/forward and</text>
+<text x="500.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">loading.js still cached</text>
+<rect x="724.0" y="334.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="738.0" y="360.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">stale time from cacheLife</text>
+<text x="738.0" y="379.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">(default 5 min,</text>
+<text x="738.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">minimum 30 s)</text>
+<rect x="40.0" y="422.0" width="196.0" height="80.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="54.0" y="467.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Caching primitive</text>
+<rect x="248.0" y="422.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="262.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">fetch Data Cache</text>
+<text x="262.0" y="467.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">unstable_cache for</text>
+<text x="262.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">non-fetch data</text>
+<rect x="486.0" y="422.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="500.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">same, but opt-in:</text>
+<text x="500.0" y="467.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">cache: 'force-cache'</text>
+<text x="500.0" y="486.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">unstable_cache</text>
+<rect x="724.0" y="422.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="738.0" y="457.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">'use cache'</text>
+<text x="738.0" y="476.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">+ cacheLife + cacheTag</text>
+<rect x="40.0" y="510.0" width="196.0" height="80.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.2"/>
+<text x="54.0" y="555.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Invalidation</text>
+<rect x="248.0" y="510.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="262.0" y="545.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">revalidateTag(tag)</text>
+<text x="262.0" y="564.5" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">revalidatePath(path)</text>
+<rect x="486.0" y="510.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+<text x="500.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">same APIs;</text>
+<text x="500.0" y="555.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">calling them during</text>
+<text x="500.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">render throws</text>
+<rect x="724.0" y="510.0" width="236.0" height="80.0" rx="8" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="738.0" y="536.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">updateTag(tag)</text>
+<text x="738.0" y="555.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">revalidateTag(tag, 'max')</text>
+<text x="738.0" y="574.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">refresh(), revalidatePath</text>
+<rect x="40.0" y="604.0" width="920.0" height="58.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="60.0" y="628.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">Across a deploy:</text>
+<text x="186.0" y="628.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the fetch Data Cache and unstable_cache persist; 'use cache' entries do not,</text>
+<text x="186.0" y="648.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">because the build ID is part of their cache key.</text>
+<text x="40.0" y="688.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's version tables (Chapters 2 and 3), Cache Components (Chapter 4), revalidation APIs (Chapter 5).</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img" aria-label="How four consumers resolve the same exports map: the resolver walks the keys in the order written and takes the first one in its active conditions. TypeScript picks types, a Vite client build picks browser, Node import picks import, Node require picks require. Loading index.js and index.cjs in one process is the dual-package hazard.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="660" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="658.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One exports map, four consumers</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The resolver walks the keys in the order written and takes the first key it has a condition for.</text>
+<rect x="40.0" y="112.0" width="330.0" height="74.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="56.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">TypeScript (nodenext / bundler)</text>
+<text x="56.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">types, plus import or require</text>
+<rect x="40.0" y="208.0" width="330.0" height="74.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="56.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">Vite 8, client build</text>
+<text x="56.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">module, browser, development|production, import</text>
+<rect x="40.0" y="304.0" width="330.0" height="74.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="56.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="start">Node, import</text>
+<text x="56.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">node, import, module-sync, default</text>
+<rect x="40.0" y="400.0" width="330.0" height="74.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="56.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">Node, require()</text>
+<text x="56.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">node, require, module-sync, default</text>
+<rect x="520.0" y="104.0" width="440.0" height="300.0" rx="10" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="538.0" y="136.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#e2e8f0" text-anchor="start">"exports": { ".": {</text>
+<text x="944.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#94a3b8" text-anchor="end">key order = priority</text>
+<rect x="550.0" y="160.0" width="380.0" height="36.0" rx="7" fill="#1e293b" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="564.0" y="183.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">"types":</text>
+<text x="670.0" y="183.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">"./dist/index.d.ts"</text>
+<text x="918.0" y="183.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="end">1</text>
+<rect x="550.0" y="212.0" width="380.0" height="36.0" rx="7" fill="#1e293b" stroke="#d97706" stroke-width="1.8"/>
+<text x="564.0" y="235.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">"browser":</text>
+<text x="670.0" y="235.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">"./dist/index.browser.js"</text>
+<text x="918.0" y="235.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="end">2</text>
+<rect x="550.0" y="264.0" width="380.0" height="36.0" rx="7" fill="#1e293b" stroke="#0d9488" stroke-width="1.8"/>
+<text x="564.0" y="287.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">"import":</text>
+<text x="670.0" y="287.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">"./dist/index.js"</text>
+<text x="918.0" y="287.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="end">3</text>
+<rect x="550.0" y="316.0" width="380.0" height="36.0" rx="7" fill="#1e293b" stroke="#2563eb" stroke-width="1.8"/>
+<text x="564.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">"require":</text>
+<text x="670.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#e2e8f0" text-anchor="start">"./dist/index.cjs"</text>
+<text x="918.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="end">4</text>
+<text x="538.0" y="388.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#e2e8f0" text-anchor="start">} }</text>
+<line x1="374.0" y1="149.0" x2="546.0" y2="178.0" stroke="#7c3aed" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="374.0" y1="245.0" x2="546.0" y2="230.0" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="374.0" y1="341.0" x2="546.0" y2="282.0" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="374.0" y1="437.0" x2="546.0" y2="334.0" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="520.0" y="432.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Vite also has import active, but browser</text>
+<text x="520.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">comes first in the map, so browser wins.</text>
+<text x="520.0" y="480.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">default must come last; types must come first.</text>
+<rect x="40.0" y="534.0" width="920.0" height="86.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.4"/>
+<text x="60.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Dual-package hazard</text>
+<text x="60.0" y="584.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">If one part of an app imports @acme/sdk and another requires it, Node loads index.js AND index.cjs:</text>
+<text x="60.0" y="604.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">two module instances, two copies of every singleton, and instanceof fails across them.</text>
+<text x="40.0" y="642.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: JavaScript Deep Dive 04, Chapter 3 (exports map and consumer table) and Chapter 4 (dual packages).</text>
+</svg>

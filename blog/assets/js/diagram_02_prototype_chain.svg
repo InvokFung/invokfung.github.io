@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 752" width="1000" height="752" role="img" aria-label="Prototype chain for a class hierarchy: instance to User.prototype to Base.prototype to Object.prototype to null, and the constructor chain User to Base to Function.prototype">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="752" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="750.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What class User extends Base builds</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Two chains. Instances inherit methods through the left one; static methods are inherited through the right one.</text>
+<rect x="40.0" y="100.0" width="920.0" height="82.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54.0" y="124.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">class Base { constructor(id) { this.id = id; }  describe() { … }  static create(id) { return new this(id); } }</text>
+<text x="54.0" y="144.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">class User extends Base { constructor(id, name) { super(id); this.name = name; }  describe() { … } }</text>
+<text x="54.0" y="164.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#fcd34d" text-anchor="start">const u = new User(7, 'Ada');</text>
+<text x="60.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">INSTANCE SIDE</text>
+<text x="610.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">CONSTRUCTOR SIDE</text>
+<rect x="60.0" y="218.0" width="330.0" height="64.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="76.0" y="245.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">u</text>
+<text x="76.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">own: id = 7, name = 'Ada'</text>
+<rect x="60.0" y="322.0" width="330.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="76.0" y="349.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="start">User.prototype</text>
+<text x="76.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">describe()   (non-enumerable)</text>
+<rect x="60.0" y="426.0" width="330.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="76.0" y="453.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="start">Base.prototype</text>
+<text x="76.0" y="476.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">describe()</text>
+<rect x="60.0" y="530.0" width="330.0" height="64.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="2"/>
+<text x="76.0" y="557.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Object.prototype</text>
+<text x="76.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">end of every ordinary chain</text>
+<rect x="610.0" y="322.0" width="330.0" height="64.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="626.0" y="349.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">User</text>
+<text x="626.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">the constructor function</text>
+<rect x="610.0" y="426.0" width="330.0" height="64.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="626.0" y="453.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">Base</text>
+<text x="626.0" y="476.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">static create(id)</text>
+<rect x="610.0" y="530.0" width="330.0" height="64.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="2"/>
+<text x="626.0" y="557.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Function.prototype</text>
+<text x="626.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">shared by all functions</text>
+<line x1="100.0" y1="283.0" x2="100.0" y2="319.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="110.0" y="307.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="start">[[Prototype]]</text>
+<line x1="100.0" y1="387.0" x2="100.0" y2="423.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="110.0" y="411.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="start">[[Prototype]]</text>
+<line x1="100.0" y1="491.0" x2="100.0" y2="527.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="110.0" y="515.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="start">[[Prototype]]</text>
+<line x1="650.0" y1="387.0" x2="650.0" y2="423.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="660.0" y="411.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="start">[[Prototype]]</text>
+<line x1="650.0" y1="491.0" x2="650.0" y2="527.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="660.0" y="515.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="start">[[Prototype]]</text>
+<line x1="100.0" y1="595.0" x2="100.0" y2="618.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="100.0" y="636.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#6b7280" text-anchor="middle">null</text>
+<line x1="609.0" y1="562.0" x2="393.0" y2="562.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="500.0" y="553.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="middle">[[Prototype]]</text>
+<line x1="608.0" y1="344.0" x2="394.0" y2="344.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="500.0" y="337.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">.prototype</text>
+<line x1="392.0" y1="366.0" x2="606.0" y2="366.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="500.0" y="382.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">.constructor</text>
+<line x1="608.0" y1="448.0" x2="394.0" y2="448.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="500.0" y="441.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">.prototype</text>
+<line x1="392.0" y1="470.0" x2="606.0" y2="470.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="500.0" y="486.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="600" fill="#6b7280" text-anchor="middle">.constructor</text>
+<line x1="40.0" y1="664.0" x2="960.0" y2="664.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="40.0" y="686.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">u.describe()</text>
+<text x="150.0" y="686.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">finds User.prototype.describe first; super.describe() reaches Base.prototype via the home object.</text>
+<text x="40.0" y="710.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">User.create(1)</text>
+<text x="166.0" y="710.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">works because Object.getPrototypeOf(User) === Base.</text>
+<text x="40.0" y="734.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Solid arrows: [[Prototype]] links used by property lookup. Dashed: ordinary properties. Source: ECMAScript spec; MDN.</text>
+</svg>

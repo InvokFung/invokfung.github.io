@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="The matrix A = [[4,1],[2,3]] applied to unit vectors: the eigenvectors along (1,1) and (1,-2) stay on their own lines and are stretched by 5 and by 2, while e1 and e2 are turned; the unit circle becomes an ellipse.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Eigen-directions keep their line; other vectors turn</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A = [[4, 1], [2, 3]] acting on unit vectors u (dashed circle). The images Au form the solid ellipse.</text>
+<rect x="40.0" y="96.0" width="540.0" height="496.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<line x1="80.0" y1="110.0" x2="80.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="580.0" x2="560.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="124.0" y1="110.0" x2="124.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="536.0" x2="560.0" y2="536.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="168.0" y1="110.0" x2="168.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="492.0" x2="560.0" y2="492.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="212.0" y1="110.0" x2="212.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="448.0" x2="560.0" y2="448.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="256.0" y1="110.0" x2="256.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="404.0" x2="560.0" y2="404.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="300.0" y1="110.0" x2="300.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="360.0" x2="560.0" y2="360.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="344.0" y1="110.0" x2="344.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="316.0" x2="560.0" y2="316.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="388.0" y1="110.0" x2="388.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="272.0" x2="560.0" y2="272.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="432.0" y1="110.0" x2="432.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="228.0" x2="560.0" y2="228.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="476.0" y1="110.0" x2="476.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="184.0" x2="560.0" y2="184.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="520.0" y1="110.0" x2="520.0" y2="580.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="140.0" x2="560.0" y2="140.0" stroke="#eef0f3" stroke-width="1" stroke-linecap="butt"/>
+<line x1="60.0" y1="360.0" x2="560.0" y2="360.0" stroke="#9ca3af" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="300.0" y1="110.0" x2="300.0" y2="580.0" stroke="#9ca3af" stroke-width="1.3" stroke-linecap="round"/>
+<line x1="80.0" y1="580.0" x2="550.0" y2="110.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="175.0" y1="110.0" x2="410.0" y2="580.0" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="7 6"/>
+<circle cx="300" cy="360" r="44" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4 4"/>
+<path d="M476.0,272.0 L478.1,265.2 L479.6,258.7 L480.7,252.4 L481.3,246.5 L481.4,240.8 L481.0,235.5 L480.1,230.5 L478.7,225.9 L476.8,221.7 L474.4,217.8 L471.6,214.3 L468.2,211.2 L464.5,208.5 L460.2,206.3 L455.6,204.4 L450.5,203.0 L445.0,202.0 L439.0,201.5 L432.8,201.4 L426.1,201.7 L419.1,202.4 L411.8,203.6 L404.2,205.2 L396.2,207.3 L388.1,209.7 L379.6,212.6 L371.0,215.9 L362.2,219.5 L353.2,223.6 L344.0,228.0 L334.7,232.8 L325.4,237.9 L315.9,243.4 L306.4,249.2 L296.9,255.3 L287.5,261.7 L278.0,268.3 L268.6,275.2 L259.3,282.3 L250.1,289.7 L241.0,297.2 L232.1,304.9 L223.4,312.8 L214.9,320.8 L206.7,328.9 L198.6,337.1 L190.9,345.3 L183.5,353.6 L176.4,361.9 L169.6,370.2 L163.2,378.5 L157.1,386.7 L151.5,394.9 L146.2,402.9 L141.4,410.8 L137.0,418.6 L133.0,426.3 L129.6,433.7 L126.5,441.0 L124.0,448.0 L121.9,454.8 L120.4,461.3 L119.3,467.6 L118.7,473.5 L118.6,479.2 L119.0,484.5 L119.9,489.5 L121.3,494.1 L123.2,498.3 L125.6,502.2 L128.4,505.7 L131.8,508.8 L135.5,511.5 L139.8,513.7 L144.4,515.6 L149.5,517.0 L155.0,518.0 L161.0,518.5 L167.2,518.6 L173.9,518.3 L180.9,517.6 L188.2,516.4 L195.8,514.8 L203.8,512.7 L211.9,510.3 L220.4,507.4 L229.0,504.1 L237.8,500.5 L246.8,496.4 L256.0,492.0 L265.3,487.2 L274.6,482.1 L284.1,476.6 L293.6,470.8 L303.1,464.7 L312.5,458.3 L322.0,451.7 L331.4,444.8 L340.7,437.7 L349.9,430.3 L359.0,422.8 L367.9,415.1 L376.6,407.2 L385.1,399.2 L393.3,391.1 L401.4,382.9 L409.1,374.7 L416.5,366.4 L423.6,358.1 L430.4,349.8 L436.8,341.5 L442.9,333.3 L448.5,325.1 L453.8,317.1 L458.6,309.2 L463.0,301.4 L467.0,293.7 L470.4,286.3 L473.5,279.0 L476.0,272.0 Z" fill="none" stroke="#475569" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="445.7" y2="214.3" stroke="#0d9488" stroke-width="3.6" stroke-linecap="round"/>
+<path d="M455.6,204.4 L440.7,209.4 L450.6,219.3 Z" fill="#0d9488" stroke="#0d9488" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="333.1" y2="426.2" stroke="#d97706" stroke-width="3.6" stroke-linecap="round"/>
+<path d="M339.4,438.7 L339.4,423.1 L326.8,429.3 Z" fill="#d97706" stroke="#d97706" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="465.3" y2="277.4" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M476.0,272.0 L462.6,272.0 L468.0,282.7 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="340.2" y2="239.4" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M344.0,228.0 L334.5,237.5 L345.9,241.3 Z" fill="#7c3aed" stroke="#7c3aed" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="324.7" y2="335.3" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+<path d="M331.1,328.9 L321.6,332.1 L327.9,338.4 Z" fill="#0d9488" stroke="#0d9488" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="315.7" y2="391.3" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+<path d="M319.7,399.4 L319.7,389.3 L311.6,393.3 Z" fill="#d97706" stroke="#d97706" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="335.0" y2="360.0" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+<path d="M344.0,360.0 L335.0,355.5 L335.0,364.5 Z" fill="#2563eb" stroke="#2563eb" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="300.0" y1="360.0" x2="300.0" y2="325.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"/>
+<path d="M300.0,316.0 L295.5,325.0 L304.5,325.0 Z" fill="#7c3aed" stroke="#7c3aed" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="439.6" y="192.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="end">A u = 5u</text>
+<text x="351.4" y="454.7" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">A u = 2u</text>
+<text x="486.0" y="277.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="start">(4, 2)</text>
+<text x="352.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="start">(1, 3)</text>
+<text x="348.0" y="378.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="start">e1</text>
+<text x="280.0" y="312.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="start">e2</text>
+<text x="68.0" y="570.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">dashed lines: the eigen-directions</text>
+<text x="610.0" y="142.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937" text-anchor="start">A =</text>
+<path d="M660.0,108.0 L654.0,108.0 L654.0,164.0 L660.0,164.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<path d="M728.0,108.0 L734.0,108.0 L734.0,164.0 L728.0,164.0" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="678.0" y="129.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">4</text>
+<text x="710.0" y="129.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">1</text>
+<text x="678.0" y="153.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="710.0" y="153.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">3</text>
+<text x="750.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">p(λ) = λ² − 7λ + 10</text>
+<text x="750.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">= (λ − 5)(λ − 2)</text>
+<rect x="610.0" y="182.0" width="350.0" height="84.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="626.0" y="208.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">λ = 5, eigenvector (1, 1)</text>
+<text x="626.0" y="230.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A(1, 1) = (5, 5) = 5(1, 1)</text>
+<text x="626.0" y="250.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">stays on its line, stretched by 5</text>
+<rect x="610.0" y="278.0" width="350.0" height="84.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="626.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">λ = 2, eigenvector (1, −2)</text>
+<text x="626.0" y="326.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A(1, −2) = (2, −4) = 2(1, −2)</text>
+<text x="626.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">stays on its line, stretched by 2</text>
+<rect x="610.0" y="374.0" width="350.0" height="84.0" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="626.0" y="400.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">e1 = (1, 0) goes to (4, 2)</text>
+<text x="626.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">not an eigenvector</text>
+<text x="626.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">turns about 26.6° counter-clockwise</text>
+<rect x="610.0" y="470.0" width="350.0" height="84.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.4"/>
+<text x="626.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">e2 = (0, 1) goes to (1, 3)</text>
+<text x="626.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">not an eigenvector</text>
+<text x="626.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">turns about 18.4° clockwise</text>
+<text x="610.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Checks: trace 7 = 5 + 2,  det 10 = 5 · 2</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Linear Algebra 04, Chapters 1-2 (running example). Drawn to scale: 1 unit = 44 px.</text>
+</svg>

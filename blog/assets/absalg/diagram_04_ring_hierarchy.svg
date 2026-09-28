@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="Nested classes of commutative rings: fields inside Euclidean domains inside principal ideal domains inside unique factorisation domains inside integral domains inside commutative rings, with an example in each band that is not in the next class inside">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Each class of rings sits inside the next</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Every band shows a ring that belongs to it but not to the class inside it, so every inclusion is strict.</text>
+<rect x="40.0" y="100.0" width="920.0" height="504.0" rx="14" fill="#ffffff" stroke="#9ca3af" stroke-width="1.8"/>
+<text x="58.0" y="127.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Commutative rings (with 1)</text>
+<text x="58.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">ℤ/12ℤ</text>
+<text x="130.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">2 · 6 = 0: zero divisors, so not an integral domain</text>
+<rect x="74.0" y="172.0" width="852.0" height="420.0" rx="14" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="92.0" y="199.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Integral domains</text>
+<text x="92.0" y="223.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">ℤ[√−5]</text>
+<text x="168.0" y="223.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">6 = 2 · 3 = (1 + √−5)(1 − √−5): factorisation not unique</text>
+<rect x="108.0" y="244.0" width="784.0" height="336.0" rx="14" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="126.0" y="271.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#d97706" text-anchor="start">Unique factorisation domains (UFDs)</text>
+<text x="126.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">ℤ[x],  F[x, y]</text>
+<text x="240.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">the ideal (2, x) is not principal, so not a PID</text>
+<rect x="142.0" y="316.0" width="716.0" height="252.0" rx="14" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="160.0" y="343.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#7c3aed" text-anchor="start">Principal ideal domains (PIDs)</text>
+<text x="160.0" y="367.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">ℤ[(1 + √−19)/2]</text>
+<text x="306.0" y="367.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">a PID with no Euclidean function (stated; Dummit &amp; Foote §8.1–8.2)</text>
+<rect x="176.0" y="388.0" width="648.0" height="168.0" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="194.0" y="415.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#2563eb" text-anchor="start">Euclidean domains</text>
+<text x="194.0" y="439.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">ℤ,  F[x],  ℤ[i]</text>
+<text x="316.0" y="439.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">divide with remainder by |n|, degree, norm; 2 has no inverse in ℤ</text>
+<rect x="210.0" y="460.0" width="580.0" height="84.0" rx="14" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="228.0" y="487.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#0d9488" text-anchor="start">Fields</text>
+<text x="228.0" y="511.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">ℚ,  ℝ,  ℂ,  𝔽<tspan dy="4" font-size="12.5">p</tspan><tspan dy="-4">,  </tspan>𝔽<tspan dy="4" font-size="12.5">4</tspan><tspan dy="-4">,  </tspan>𝔽<tspan dy="4" font-size="12.5">8</tspan><tspan dy="-4"></tspan></text>
+<text x="396.0" y="511.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">every nonzero element is a unit</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Abstract Algebra 04, Chapters 1 and 5 (the hierarchy and its separating examples).</text>
+</svg>

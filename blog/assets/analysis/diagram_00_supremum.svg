@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 606" width="1000" height="606" role="img" aria-label="Two number lines. Top: the set of numbers 1 minus 1 over n with supremum 1, which is not in the set; every number 1 or larger is an upper bound, and the window from 0.85 to 1 contains 6/7, so 0.85 is not an upper bound. Bottom: rationals whose square is below 2 and rational upper bounds close in on a gap at the square root of 2.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="606" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="604.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The supremum: the least upper bound</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Nothing in A lies to the right of s, and every window (s − ε, s] contains a point of A.</text>
+<rect x="24.0" y="96.0" width="952.0" height="236.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="44.0" y="124.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">A = { 1 − 1/n : n = 1, 2, 3, … }</text>
+<text x="44.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">sup A = 1, but 1 is not in A (no maximum)</text>
+<rect x="733.3" y="170.0" width="186.7" height="30.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="826.7" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">upper bounds: every b ≥ 1</text>
+<rect x="640.0" y="170.0" width="93.3" height="30.0" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="686.7" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">window</text>
+<line x1="60.0" y1="214.0" x2="930.0" y2="214.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="111.1" y1="208.0" x2="111.1" y2="220.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="422.2" y1="208.0" x2="422.2" y2="220.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="733.3" y1="208.0" x2="733.3" y2="220.0" stroke="#1f2937" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="111.1" cy="214" r="4.5" fill="#0d9488"/>
+<circle cx="422.2" cy="214" r="4.5" fill="#0d9488"/>
+<circle cx="525.9" cy="214" r="4.5" fill="#0d9488"/>
+<circle cx="577.8" cy="214" r="4.5" fill="#0d9488"/>
+<circle cx="608.9" cy="214" r="4.5" fill="#0d9488"/>
+<circle cx="629.6" cy="214" r="4.5" fill="#0d9488"/>
+<circle cx="644.4" cy="214" r="5.5" fill="#7c3aed"/>
+<circle cx="655.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="664.2" cy="214" r="3" fill="#0d9488"/>
+<circle cx="671.1" cy="214" r="3" fill="#0d9488"/>
+<circle cx="676.8" cy="214" r="3" fill="#0d9488"/>
+<circle cx="681.5" cy="214" r="3" fill="#0d9488"/>
+<circle cx="685.5" cy="214" r="3" fill="#0d9488"/>
+<circle cx="688.9" cy="214" r="3" fill="#0d9488"/>
+<circle cx="691.9" cy="214" r="3" fill="#0d9488"/>
+<circle cx="694.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="696.7" cy="214" r="3" fill="#0d9488"/>
+<circle cx="698.8" cy="214" r="3" fill="#0d9488"/>
+<circle cx="700.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="702.2" cy="214" r="3" fill="#0d9488"/>
+<circle cx="703.7" cy="214" r="3" fill="#0d9488"/>
+<circle cx="705.1" cy="214" r="3" fill="#0d9488"/>
+<circle cx="706.3" cy="214" r="3" fill="#0d9488"/>
+<circle cx="707.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="708.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="709.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="710.3" cy="214" r="3" fill="#0d9488"/>
+<circle cx="711.1" cy="214" r="3" fill="#0d9488"/>
+<circle cx="711.9" cy="214" r="3" fill="#0d9488"/>
+<circle cx="712.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="713.3" cy="214" r="3" fill="#0d9488"/>
+<circle cx="713.9" cy="214" r="3" fill="#0d9488"/>
+<circle cx="714.5" cy="214" r="3" fill="#0d9488"/>
+<circle cx="715.0" cy="214" r="3" fill="#0d9488"/>
+<circle cx="715.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="716.0" cy="214" r="3" fill="#0d9488"/>
+<circle cx="716.5" cy="214" r="3" fill="#0d9488"/>
+<circle cx="717.0" cy="214" r="3" fill="#0d9488"/>
+<circle cx="717.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="717.8" cy="214" r="3" fill="#0d9488"/>
+<circle cx="718.2" cy="214" r="3" fill="#0d9488"/>
+<circle cx="718.5" cy="214" r="3" fill="#0d9488"/>
+<circle cx="718.9" cy="214" r="3" fill="#0d9488"/>
+<circle cx="719.2" cy="214" r="3" fill="#0d9488"/>
+<circle cx="719.5" cy="214" r="3" fill="#0d9488"/>
+<circle cx="719.8" cy="214" r="3" fill="#0d9488"/>
+<circle cx="720.1" cy="214" r="3" fill="#0d9488"/>
+<circle cx="720.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="720.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="720.9" cy="214" r="3" fill="#0d9488"/>
+<circle cx="721.1" cy="214" r="3" fill="#0d9488"/>
+<circle cx="721.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="721.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="721.8" cy="214" r="3" fill="#0d9488"/>
+<circle cx="722.0" cy="214" r="3" fill="#0d9488"/>
+<circle cx="722.2" cy="214" r="3" fill="#0d9488"/>
+<circle cx="722.4" cy="214" r="3" fill="#0d9488"/>
+<circle cx="722.6" cy="214" r="3" fill="#0d9488"/>
+<circle cx="722.8" cy="214" r="3" fill="#0d9488"/>
+<circle cx="733.3" cy="214" r="6.5" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="111.1" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">a₁ = 0</text>
+<text x="422.2" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">a₂ = 1/2</text>
+<text x="525.9" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">a₃ = 2/3</text>
+<text x="640.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="end">s − ε = 0.85</text>
+<line x1="640.0" y1="200.0" x2="640.0" y2="226.0" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="737.3" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">s = sup A = 1</text>
+<line x1="644.4" y1="252.0" x2="644.4" y2="262.0" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round"/>
+<text x="604.4" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">a₇ = 6/7 ≈ 0.857 &gt; 0.85, so 0.85 is not an upper bound</text>
+<text x="44.0" y="312.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">ε-test: s is the sup exactly when s is an upper bound and, for every ε &gt; 0, some a in A has a &gt; s − ε.</text>
+<rect x="24.0" y="350.0" width="952.0" height="206.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="44.0" y="378.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">In ℚ: S = { r ∈ ℚ : r² &lt; 2 } has no least upper bound</text>
+<text x="44.0" y="400.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">positions are not to scale: both lists close in on the same point from the two sides</text>
+<line x1="60.0" y1="468.0" x2="940.0" y2="468.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="120" cy="468" r="5.5" fill="#0d9488"/>
+<text x="120.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">1</text>
+<circle cx="300" cy="468" r="5.5" fill="#0d9488"/>
+<text x="300.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">1.4</text>
+<circle cx="420" cy="468" r="5.5" fill="#0d9488"/>
+<text x="420.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">1.41</text>
+<circle cx="490" cy="468" r="5.5" fill="#0d9488"/>
+<text x="490.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">1.414</text>
+<circle cx="820" cy="468" r="5.5" fill="#d97706"/>
+<text x="820.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">1.5</text>
+<circle cx="700" cy="468" r="5.5" fill="#d97706"/>
+<text x="700.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">1.42</text>
+<circle cx="636" cy="468" r="5.5" fill="#d97706"/>
+<text x="636.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">1.415</text>
+<text x="525.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">…</text>
+<text x="596.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">…</text>
+<circle cx="560" cy="468" r="8" fill="#ffffff" stroke="#dc4c3a" stroke-width="2.4"/>
+<text x="560.0" y="498.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="middle">√2 ∉ ℚ: a gap</text>
+<line x1="140.0" y1="490.0" x2="470.0" y2="490.0" stroke="#0d9488" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="300.0" y="510.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">in S (square below 2), e.g. 1.414² = 1.999396</text>
+<line x1="830.0" y1="490.0" x2="650.0" y2="490.0" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="790.0" y="510.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">upper bounds, e.g. 1.415² = 2.002225</text>
+<text x="44.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Every rational upper bound can be improved. In ℝ the Axiom of Completeness fills the gap: sup S = √2.</text>
+<text x="40.0" y="588.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Real Analysis 00, Chapter 3 (examples, ε-characterization, why ℚ fails the Axiom of Completeness).</text>
+</svg>

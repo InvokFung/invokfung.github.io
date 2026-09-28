@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img" aria-label="Galois correspondence for the splitting field of x cubed minus 2: on the left the subfields Q, Q(alpha), Q(alpha omega), Q(alpha omega squared), Q(omega) and Q(alpha, omega); on the right the subgroups of S3 drawn upside down, trivial group at the top and S3 at the bottom, each in the position of its fixed field">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="620" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="618.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The Galois correspondence for x³ − 2</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Splitting field ℚ(α, ω) with α = ∛2, ω = e^(2πi/3); Galois group S₃. Subgroups are drawn upside down.</text>
+<rect x="40.0" y="100.0" width="430.0" height="440.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="60.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Intermediate fields</text>
+<line x1="255.0" y1="190.0" x2="102.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="178.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="178.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<line x1="102.0" y1="350.0" x2="255.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="178.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="178.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="255.0" y1="190.0" x2="204.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="229.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="229.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<line x1="204.0" y1="350.0" x2="255.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="229.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="229.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="255.0" y1="190.0" x2="306.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="280.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="280.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<line x1="306.0" y1="350.0" x2="255.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="280.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="280.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="255.0" y1="190.0" x2="408.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="331.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="331.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="408.0" y1="350.0" x2="255.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="331.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="331.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<rect x="200.0" y="150.0" width="110.0" height="40.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="255.0" y="175.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">ℚ(α, ω)</text>
+<rect x="200.0" y="470.0" width="110.0" height="40.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="255.0" y="495.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">ℚ</text>
+<rect x="54.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="102.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">ℚ(α)</text>
+<rect x="156.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="204.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">ℚ(αω)</text>
+<rect x="258.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.6"/>
+<text x="306.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">ℚ(αω²)</text>
+<rect x="360.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2.4"/>
+<text x="408.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">ℚ(ω)</text>
+<text x="60.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">degree 6</text>
+<text x="60.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">degree 1</text>
+<rect x="530.0" y="100.0" width="430.0" height="440.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="550.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Subgroups of S₃ (upside down)</text>
+<line x1="745.0" y1="190.0" x2="592.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="668.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="668.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<line x1="592.0" y1="350.0" x2="745.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="668.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="668.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="745.0" y1="190.0" x2="694.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="719.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="719.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<line x1="694.0" y1="350.0" x2="745.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="719.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="719.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="745.0" y1="190.0" x2="796.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="770.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="770.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<line x1="796.0" y1="350.0" x2="745.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="770.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="770.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="745.0" y1="190.0" x2="898.0" y2="310.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="821.5" cy="250.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="821.5" y="254.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">3</text>
+<line x1="898.0" y1="350.0" x2="745.0" y2="470.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="821.5" cy="410.0" r="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+<text x="821.5" y="414.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">2</text>
+<rect x="690.0" y="150.0" width="110.0" height="40.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="745.0" y="175.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">{id}</text>
+<rect x="690.0" y="470.0" width="110.0" height="40.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="745.0" y="495.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">S₃</text>
+<rect x="544.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="592.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">⟨τ⟩</text>
+<rect x="646.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="694.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">⟨σ²τ⟩</text>
+<rect x="748.0" y="310.0" width="96.0" height="40.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="796.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">⟨στ⟩</text>
+<rect x="849.0" y="310.0" width="98.0" height="40.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.4"/>
+<text x="898.0" y="335.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">⟨σ⟩ = A₃</text>
+<text x="940.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">order 1</text>
+<text x="940.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">order 6</text>
+<line x1="482.0" y1="330.0" x2="518.0" y2="330.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="500.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">fixed</text>
+<text x="500.0" y="314.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">field</text>
+<text x="500.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">Gal(E/K)</text>
+<text x="60.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Edge numbers are degrees. Highlighted: ℚ(ω) is Galois over ℚ.</text>
+<text x="550.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Edge numbers are indices. Highlighted: A₃ is normal.</text>
+<text x="40.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Same position = matching pair: bigger subgroup, smaller fixed field. ⟨τ⟩ fixes ℚ(α); ⟨στ⟩ fixes ℚ(αω²); ⟨σ²τ⟩ fixes ℚ(αω); ⟨σ⟩ fixes ℚ(ω).</text>
+<text x="40.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Abstract Algebra 05, Chapter 6 (worked example 2). σ: α ↦ αω, ω ↦ ω; τ: α ↦ α, ω ↦ ω² (complex conjugation).</text>
+</svg>

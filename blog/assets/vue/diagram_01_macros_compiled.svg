@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 835" width="1000" height="835" role="img" aria-label="What the script setup macros compile to in Vue 3.5: destructured props become __props reads with runtime prop options, passing a destructured prop to watch is a compile error, defineEmits becomes the emits option, defineModel becomes a model prop, a modifiers prop, an update event and a useModel call">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="835" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="833.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What the &lt;script setup&gt; macros compile to</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Macros exist only at compile time. Right: the matching parts of @vue/compiler-sfc 3.5 output.</text>
+<text x="40.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start">You write</text>
+<text x="490.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start">The compiler emits</text>
+<rect x="40.0" y="150.0" width="400.0" height="102.0" rx="8" fill="#f8fafc" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="54.0" y="170.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">defineProps + destructure (3.5)</text>
+<text x="54.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">const { count = 0, label } =</text>
+<text x="54.0" y="211.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">  defineProps&lt;{ count?: number; label: string }&gt;()</text>
+<rect x="490.0" y="150.0" width="470.0" height="102.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.4"/>
+<text x="504.0" y="176.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">props: {</text>
+<text x="504.0" y="195.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  count: { type: Number, required: false,</text>
+<text x="504.0" y="214.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">           default: 0 },</text>
+<text x="504.0" y="233.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">  label: { type: String, required: true } }</text>
+<line x1="448.0" y1="201.0" x2="482.0" y2="201.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="268.0" width="400.0" height="80.0" rx="8" fill="#f8fafc" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="54.0" y="288.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">a destructured name in reactive code</text>
+<text x="54.0" y="310.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">const double = computed(() =&gt; count * 2)</text>
+<text x="54.0" y="329.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">watch(() =&gt; count, cb)</text>
+<rect x="490.0" y="268.0" width="470.0" height="80.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.4"/>
+<text x="504.0" y="294.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">computed(() =&gt; __props.count * 2)</text>
+<text x="504.0" y="313.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">watch(() =&gt; __props.count, cb)</text>
+<line x1="448.0" y1="308.0" x2="482.0" y2="308.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="364.0" width="400.0" height="83.0" rx="8" fill="#f8fafc" stroke="#fecaca" stroke-width="1.4"/>
+<text x="54.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">passing the name itself</text>
+<text x="54.0" y="406.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">watch(count, cb)</text>
+<rect x="490.0" y="364.0" width="470.0" height="83.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.4"/>
+<text x="504.0" y="390.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">compile error: "count" is a destructured prop and</text>
+<text x="504.0" y="409.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">should not be passed directly to watch().</text>
+<text x="504.0" y="428.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#fca5a5" text-anchor="start">Pass a getter () =&gt; count instead.</text>
+<line x1="448.0" y1="405.5" x2="482.0" y2="405.5" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="463.0" width="400.0" height="80.0" rx="8" fill="#f8fafc" stroke="#ddd6fe" stroke-width="1.4"/>
+<text x="54.0" y="483.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="start">defineEmits</text>
+<text x="54.0" y="505.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">defineEmits&lt;{ select: [item: Row]</text>
+<text x="54.0" y="524.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">              'update:page': [page: number] }&gt;()</text>
+<rect x="490.0" y="463.0" width="470.0" height="80.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.4"/>
+<text x="504.0" y="489.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">emits: ["select", "update:page"]</text>
+<line x1="448.0" y1="503.0" x2="482.0" y2="503.0" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="559.0" width="400.0" height="121.0" rx="8" fill="#f8fafc" stroke="#fcd34d" stroke-width="1.4"/>
+<text x="54.0" y="579.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">defineModel (3.4+)</text>
+<text x="54.0" y="601.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">const model =</text>
+<text x="54.0" y="620.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">  defineModel&lt;string&gt;({ required: true })</text>
+<rect x="490.0" y="559.0" width="470.0" height="121.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.4"/>
+<text x="504.0" y="585.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">props: modelValue { type: String,</text>
+<text x="504.0" y="604.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">                    required: true },</text>
+<text x="504.0" y="623.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">       modelModifiers: {}</text>
+<text x="504.0" y="642.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">emits: ["update:modelValue"]</text>
+<text x="504.0" y="661.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">const model = _useModel(__props, "modelValue")</text>
+<line x1="448.0" y1="619.5" x2="482.0" y2="619.5" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="696.0" width="400.0" height="83.0" rx="8" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.4"/>
+<text x="54.0" y="716.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="start">defineExpose / defineOptions</text>
+<text x="54.0" y="738.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">defineExpose({ focus, reset })</text>
+<text x="54.0" y="757.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">defineOptions({ inheritAttrs: false })</text>
+<rect x="490.0" y="696.0" width="470.0" height="83.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.4"/>
+<text x="504.0" y="722.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">__expose({ focus, reset })   // in setup()</text>
+<text x="504.0" y="741.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">...{ inheritAttrs: false }   // spread into</text>
+<text x="504.0" y="760.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#e2e8f0" text-anchor="start">                             // the component</text>
+<line x1="448.0" y1="737.5" x2="482.0" y2="737.5" stroke="#2563eb" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="40.0" y="817.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Vue Deep Dive 01, Chapter 5. Output from @vue/compiler-sfc 3.5 (shortened; model prop shown without the spread).</text>
+</svg>

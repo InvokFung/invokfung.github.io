@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 616" width="1000" height="616" role="img" aria-label="A component tree split into server and client parts at a 'use client' import, with a Server Component passed through a client slot, and the lists of prop types that can and cannot cross the boundary">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="616" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="614.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">'use client' marks a module import, not a component</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The import is the boundary. Server output can still pass through a Client Component as a slot.</text>
+<rect x="40.0" y="100.0" width="560.0" height="130.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="56.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Server graph: runs only on the server</text>
+<rect x="60.0" y="136.0" width="160.0" height="76.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="72.0" y="160.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">page.tsx</text>
+<text x="72.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">products/[id]</text>
+<text x="72.0" y="199.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">getProduct(id)</text>
+<rect x="240.0" y="136.0" width="160.0" height="76.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="252.0" y="160.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">layout.tsx</text>
+<text x="252.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">app/dashboard</text>
+<text x="252.0" y="199.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">no directive</text>
+<rect x="420.0" y="136.0" width="160.0" height="76.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="432.0" y="160.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">UsageStats</text>
+<text x="432.0" y="181.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">async Server</text>
+<text x="432.0" y="199.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Component</text>
+<line x1="40.0" y1="252.0" x2="600.0" y2="252.0" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+<rect x="190.0" y="240.0" width="260.0" height="24.0" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+<text x="320.0" y="257.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">'use client' boundary = the import</text>
+<rect x="40.0" y="272.0" width="560.0" height="300.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="56.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Client graph: rendered to HTML on the server, then hydrated</text>
+<rect x="60.0" y="294.0" width="160.0" height="120.0" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="72.0" y="318.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">AddToCart</text>
+<text x="72.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">'use client'</text>
+<text x="72.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">useState, onClick</text>
+<text x="72.0" y="377.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">props: productId,</text>
+<text x="72.0" y="395.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">price</text>
+<rect x="240.0" y="294.0" width="340.0" height="120.0" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="252.0" y="318.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Sidebar</text>
+<text x="252.0" y="339.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">'use client'</text>
+<text x="252.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">open / Toggle state</text>
+<text x="252.0" y="377.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">{children}</text>
+<rect x="420.0" y="324.0" width="150.0" height="80.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<rect x="420" y="324" width="150" height="80" rx="8" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="432.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">stats slot</text>
+<text x="432.0" y="366.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">already-rendered</text>
+<text x="432.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">server output</text>
+<line x1="140.0" y1="214.0" x2="140.0" y2="290.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="148.0" y="238.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">import</text>
+<line x1="320.0" y1="214.0" x2="320.0" y2="290.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="328.0" y="238.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">import</text>
+<line x1="495.0" y1="214.0" x2="495.0" y2="320.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="503.0" y="238.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#0d9488" text-anchor="start">rendered first</text>
+<rect x="60.0" y="430.0" width="520.0" height="40.0" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="74.0" y="455.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Every transitive import of these files (react, utils, libraries) is client code too.</text>
+<circle cx="76" cy="500" r="8" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M73.0,497.0 L79.0,503.0 M79.0,497.0 L73.0,503.0" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92.0" y="505.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">Sidebar cannot import UsageStats: it would run as client code.</text>
+<rect x="630.0" y="100.0" width="330.0" height="472.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="648.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Props that may cross</text>
+<circle cx="658" cy="147" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,147.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">string, number, bigint, boolean,</text>
+<text x="674.0" y="173.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">undefined, null</text>
+<circle cx="658" cy="189" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,189.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="194.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Symbol.for('x') symbols</text>
+<circle cx="658" cy="210" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,210.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Array, Map, Set, TypedArray,</text>
+<text x="674.0" y="236.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">ArrayBuffer</text>
+<circle cx="658" cy="252" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,252.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="257.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Date</text>
+<circle cx="658" cy="273" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,273.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Plain objects</text>
+<circle cx="658" cy="294" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,294.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Server Functions ('use server')</text>
+<circle cx="658" cy="315" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,315.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">JSX elements (Server or Client)</text>
+<circle cx="658" cy="336" r="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+<path d="M654.9,336.0 l2.2,2.2 l4.1,-4.3" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Promises</text>
+<text x="648.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Props that may not</text>
+<circle cx="658" cy="391" r="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M655.3,388.3 L660.7,393.7 M660.7,388.3 L655.3,393.7" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="396.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Plain functions (handlers, callbacks)</text>
+<circle cx="658" cy="412" r="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M655.3,409.3 L660.7,414.7 M660.7,409.3 L655.3,414.7" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Symbol('x') (not registered)</text>
+<circle cx="658" cy="433" r="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M655.3,430.3 L660.7,435.7 M660.7,430.3 L655.3,435.7" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Classes and class instances</text>
+<circle cx="658" cy="454" r="7" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M655.3,451.3 L660.7,456.7 M660.7,451.3 L655.3,456.7" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674.0" y="459.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Objects with a null prototype</text>
+<line x1="648.0" y1="484.0" x2="942.0" y2="484.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="648.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The payload is not JSON: a Date</text>
+<text x="648.0" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">arrives as a Date, a Map as a Map.</text>
+<text x="40.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's AddToCart and Sidebar examples (Chapter 2) and the react.dev serialisation table (Chapter 3).</text>
+</svg>

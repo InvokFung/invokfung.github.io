@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="One turn of the event loop: a task, then all microtasks, then optional rendering; and Node's six libuv phases with nextTick and microtasks drained between callbacks">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One turn of the event loop</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Browser: task, then every microtask, then maybe a frame. Node: six phases, with two queues drained between callbacks.</text>
+<text x="40.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Browser  (HTML event loop)</text>
+<rect x="76.0" y="140.0" width="420.0" height="64.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="92.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">1   Run one task to completion</text>
+<text x="92.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">timer, input event, network response, postMessage</text>
+<line x1="286.0" y1="206.0" x2="286.0" y2="228.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="76.0" y="232.0" width="420.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="92.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">2   Microtask checkpoint</text>
+<text x="92.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">run microtasks until the queue is empty</text>
+<line x1="286.0" y1="298.0" x2="286.0" y2="330.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="298.0" y="319.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">rendering opportunity?</text>
+<rect x="76.0" y="334.0" width="420.0" height="212.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="92.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">3   Update the rendering (if needed)</text>
+<circle cx="110.0" cy="387.0" r="12" fill="#d97706"/>
+<text x="110.0" y="392.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="132.0" y="392.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">resize and scroll events</text>
+<circle cx="110.0" cy="412.0" r="12" fill="#d97706"/>
+<text x="110.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="132.0" y="417.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">requestAnimationFrame callbacks</text>
+<circle cx="110.0" cy="437.0" r="12" fill="#d97706"/>
+<text x="110.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="132.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">style + layout</text>
+<circle cx="110.0" cy="462.0" r="12" fill="#d97706"/>
+<text x="110.0" y="467.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="132.0" y="467.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">ResizeObserver callbacks</text>
+<circle cx="110.0" cy="487.0" r="12" fill="#d97706"/>
+<text x="110.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="132.0" y="492.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">IntersectionObserver updates</text>
+<circle cx="110.0" cy="512.0" r="12" fill="#d97706"/>
+<text x="110.0" y="517.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="132.0" y="517.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">paint</text>
+<path d="M76,522 L52,522 L52,172 L72,172" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<text x="40.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Microtasks also run whenever the JS stack empties:</text>
+<text x="40.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">after each event listener and after each rAF callback.</text>
+<line x1="530.0" y1="110.0" x2="530.0" y2="600.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="560.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Node.js  (libuv phases)</text>
+<rect x="560.0" y="140.0" width="360.0" height="40.0" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="574.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">timers</text>
+<text x="730.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">setTimeout, setInterval</text>
+<line x1="650.0" y1="181.0" x2="650.0" y2="189.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="560.0" y="191.0" width="360.0" height="40.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.6"/>
+<text x="574.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">pending callbacks</text>
+<text x="730.0" y="217.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">deferred I/O callbacks</text>
+<line x1="650.0" y1="232.0" x2="650.0" y2="240.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="560.0" y="242.0" width="360.0" height="40.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.6"/>
+<text x="574.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">idle, prepare</text>
+<text x="730.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">internal only</text>
+<line x1="650.0" y1="283.0" x2="650.0" y2="291.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="560.0" y="293.0" width="360.0" height="40.0" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="574.0" y="319.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">poll</text>
+<text x="730.0" y="319.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">new I/O events; may block here</text>
+<line x1="650.0" y1="334.0" x2="650.0" y2="342.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="560.0" y="344.0" width="360.0" height="40.0" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="574.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">check</text>
+<text x="730.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">setImmediate</text>
+<line x1="650.0" y1="385.0" x2="650.0" y2="393.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="560.0" y="395.0" width="360.0" height="40.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.6"/>
+<text x="574.0" y="421.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">close callbacks</text>
+<text x="730.0" y="421.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">'close' events</text>
+<path d="M920,415.0 L942,415.0 L942,160 L924,160" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ahm)"/>
+<rect x="560.0" y="457.0" width="382.0" height="66.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="576.0" y="483.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">Between every callback</text>
+<text x="576.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">drain process.nextTick queue, then microtasks</text>
+<text x="560.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">libuv 1.45 (Node 20+): timers run after poll</text>
+<text x="560.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">in each iteration; earlier versions ran them before.</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Sources: HTML Standard (event loops, update the rendering); Node.js docs (event loop, timers and process.nextTick).</text>
+</svg>

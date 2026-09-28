@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" role="img" aria-label="The four fundamental subspaces of A = (1 2 2 2; 2 4 6 8; 3 6 8 10), m = 3, n = 4, rank r = 2. In R^4: row space of dimension 2 with basis (1, 2, 0, -2), (0, 0, 1, 2), and null space of dimension 2 with basis (-2, 1, 0, 0), (2, 0, -2, 1); they are orthogonal. In R^3: column space of dimension 2 with basis (1, 2, 3), (2, 6, 8), and left null space of dimension 1 with basis (-1, -1, 1); they are orthogonal. A maps the row space onto the column space and the null space to 0.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="650" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="648.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The four fundamental subspaces of one matrix</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">A is 3 × 4 with rank r = 2: dimensions r, n − r in R⁴ and r, m − r in R³.</text>
+<text x="40.0" y="112.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">A =</text>
+<text x="80.0" y="112.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">(1 2 2 2; 2 4 6 8; 3 6 8 10)</text>
+<text x="400.0" y="112.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">R = rref(A) = (1 2 0 −2; 0 0 1 2; 0 0 0 0)</text>
+<text x="40.0" y="134.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">pivot columns 1 and 3, free variables x2 and x4</text>
+<rect x="40.0" y="160.0" width="400.0" height="420.0" rx="14" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="58.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">Rⁿ = R⁴</text>
+<text x="58.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">inputs x</text>
+<rect x="60.0" y="230.0" width="360.0" height="136.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="76.0" y="258.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Row space</text>
+<text x="404.0" y="258.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#2563eb" text-anchor="end">C(Aᵀ)</text>
+<text x="76.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">dim r = 2</text>
+<text x="76.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">basis:</text>
+<text x="130.0" y="310.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(1, 2, 0, −2)</text>
+<text x="130.0" y="330.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(0, 0, 1, 2)</text>
+<rect x="60.0" y="422.0" width="360.0" height="136.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="76.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Null space</text>
+<text x="404.0" y="450.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="end">N(A)</text>
+<text x="76.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">dim n − r = 4 − 2 = 2</text>
+<text x="76.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">basis:</text>
+<text x="130.0" y="502.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(−2, 1, 0, 0)</text>
+<text x="130.0" y="522.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(2, 0, −2, 1)</text>
+<rect x="230" y="374" width="16" height="16" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="256.0" y="388.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">orthogonal</text>
+<circle cx="230" cy="390" r="4" fill="#1f2937"/>
+<text x="230.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<rect x="560.0" y="160.0" width="400.0" height="420.0" rx="14" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="578.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2937" text-anchor="start">Rᵐ = R³</text>
+<text x="578.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">outputs Ax</text>
+<rect x="580.0" y="230.0" width="360.0" height="136.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="596.0" y="258.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Column space</text>
+<text x="924.0" y="258.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="end">C(A)</text>
+<text x="596.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">dim r = 2</text>
+<text x="596.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">basis:</text>
+<text x="650.0" y="310.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(1, 2, 3)</text>
+<text x="650.0" y="330.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(2, 6, 8)</text>
+<rect x="580.0" y="422.0" width="360.0" height="136.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="596.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Left null space</text>
+<text x="924.0" y="450.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="end">N(Aᵀ)</text>
+<text x="596.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">dim m − r = 3 − 2 = 1</text>
+<text x="596.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">basis:</text>
+<text x="650.0" y="502.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">(−1, −1, 1)</text>
+<rect x="750" y="374" width="16" height="16" fill="none" stroke="#1f2937" stroke-width="1.6"/>
+<text x="776.0" y="388.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">orthogonal</text>
+<circle cx="750" cy="390" r="4" fill="#1f2937"/>
+<text x="750.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">0</text>
+<line x1="424.0" y1="298.0" x2="574.0" y2="298.0" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="500.0" y="286.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">A xr = b</text>
+<text x="500.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">onto C(A)</text>
+<path d="M424,490 C500,490 550,390 743,390" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="488.0" y="510.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">A xn = 0</text>
+<text x="40.0" y="610.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Rank–nullity: 2 + 2 = 4 = n.  For Aᵀ: 2 + 1 = 3 = m.</text>
+<text x="40.0" y="632.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Linear Algebra 02, Chapters 6–7 (worked example; the matrix is from Linear Algebra 00, Chapter 6).</text>
+</svg>

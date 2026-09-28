@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="Core Web Vitals thresholds at the 75th percentile: LCP good up to 2.5 s, poor above 4.0 s; INP good up to 200 ms, poor above 500 ms; CLS good up to 0.1, poor above 0.25. LCP splits into time to first byte, resource load delay, resource load duration and element render delay. INP splits into input delay, processing duration and presentation delay.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Core Web Vitals: thresholds and where the time goes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Judged on field data at the 75th percentile (p75), separately for mobile and desktop.</text>
+<text x="40.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937" text-anchor="start">LCP</text>
+<text x="40.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Largest Contentful Paint</text>
+<rect x="250.0" y="116.0" width="291.7" height="28.0" rx="5" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<text x="395.8" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">good</text>
+<rect x="541.7" y="116.0" width="175.0" height="28.0" rx="5" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="629.2" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">needs improvement</text>
+<rect x="716.7" y="116.0" width="233.3" height="28.0" rx="5" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="833.3" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">poor</text>
+<line x1="541.7" y1="112.0" x2="541.7" y2="150.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<text x="541.7" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">2.5 s</text>
+<line x1="716.7" y1="112.0" x2="716.7" y2="150.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<text x="716.7" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">4.0 s</text>
+<text x="250.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<text x="40.0" y="208.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937" text-anchor="start">INP</text>
+<text x="40.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Interaction to Next Paint</text>
+<rect x="250.0" y="192.0" width="200.0" height="28.0" rx="5" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<text x="350.0" y="211.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">good</text>
+<rect x="450.0" y="192.0" width="300.0" height="28.0" rx="5" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="600.0" y="211.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">needs improvement</text>
+<rect x="750.0" y="192.0" width="200.0" height="28.0" rx="5" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="850.0" y="211.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">poor</text>
+<line x1="450.0" y1="188.0" x2="450.0" y2="226.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<text x="450.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">200 ms</text>
+<line x1="750.0" y1="188.0" x2="750.0" y2="226.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<text x="750.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">500 ms</text>
+<text x="250.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<text x="40.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937" text-anchor="start">CLS</text>
+<text x="40.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Cumulative Layout Shift</text>
+<rect x="250.0" y="268.0" width="175.0" height="28.0" rx="5" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+<text x="337.5" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">good</text>
+<rect x="425.0" y="268.0" width="262.5" height="28.0" rx="5" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="556.2" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">needs improvement</text>
+<rect x="687.5" y="268.0" width="262.5" height="28.0" rx="5" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="818.8" y="287.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">poor</text>
+<line x1="425.0" y1="264.0" x2="425.0" y2="302.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<text x="425.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">0.1</text>
+<line x1="687.5" y1="264.0" x2="687.5" y2="302.0" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+<text x="687.5" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="middle">0.25</text>
+<text x="250.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<text x="40.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">LCP = four sub-parts</text>
+<text x="40.0" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Each part has different fixes: server, discoverability, bytes, rendering.</text>
+<rect x="42.0" y="396.0" width="219.5" height="44.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="60.0" cy="418.0" r="12" fill="#2563eb"/>
+<text x="60.0" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="80.0" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Time to first byte</text>
+<line x1="261.5" y1="418.0" x2="269.5" y2="418.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="269.5" y="396.0" width="219.5" height="44.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="287.5" cy="418.0" r="12" fill="#2563eb"/>
+<text x="287.5" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="307.5" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Resource load delay</text>
+<line x1="489.0" y1="418.0" x2="497.0" y2="418.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="497.0" y="396.0" width="219.5" height="44.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="515.0" cy="418.0" r="12" fill="#2563eb"/>
+<text x="515.0" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="535.0" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Resource load duration</text>
+<line x1="716.5" y1="418.0" x2="724.5" y2="418.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="724.5" y="396.0" width="219.5" height="44.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="742.5" cy="418.0" r="12" fill="#2563eb"/>
+<text x="742.5" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="762.5" y="423.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Element render delay</text>
+<text x="40.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">INP = three phases of the worst interaction</text>
+<text x="40.0" y="502.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Input delay is other main-thread work (long tasks); processing is your handlers; presentation is the next frame.</text>
+<rect x="42.0" y="516.0" width="295.3" height="44.0" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<circle cx="60.0" cy="538.0" r="12" fill="#7c3aed"/>
+<text x="60.0" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="80.0" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Input delay</text>
+<line x1="337.3" y1="538.0" x2="345.3" y2="538.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="345.3" y="516.0" width="295.3" height="44.0" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<circle cx="363.3" cy="538.0" r="12" fill="#7c3aed"/>
+<text x="363.3" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="383.3" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Processing duration</text>
+<line x1="640.7" y1="538.0" x2="648.7" y2="538.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="648.7" y="516.0" width="295.3" height="44.0" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<circle cx="666.7" cy="538.0" r="12" fill="#7c3aed"/>
+<text x="666.7" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="686.7" y="543.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Presentation delay</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: JavaScript Deep Dive 05, Chapter 1 (thresholds table, where the time goes). Bars are to scale per metric.</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="1000" height="650" role="img" aria-label="Two pictures of the same system 2x - y = 1, x + y = 5. Row picture: the lines y = 2x - 1 and y = 5 - x cross at the point (2, 3). Column picture: 2 times the column (2, 1) plus 3 times the column (-1, 1) equals b = (1, 5).">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="650" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="648.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One system, two pictures</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">2x − y = 1 and x + y = 5: the same numbers x = 2, y = 3 are a crossing point on the left and weights on the right.</text>
+<rect x="40.0" y="104.0" width="450.0" height="470.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<rect x="510.0" y="104.0" width="450.0" height="470.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64.0" cy="130.0" r="12" fill="#2563eb"/>
+<text x="64.0" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="86.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Row picture</text>
+<text x="86.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">each equation is a line; solve = where they cross</text>
+<circle cx="534.0" cy="130.0" r="12" fill="#0d9488"/>
+<text x="534.0" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="556.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Column picture</text>
+<text x="556.0" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">combine the columns to reach b</text>
+<line x1="99.0" y1="536.0" x2="99.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="145.0" y1="536.0" x2="145.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="191.0" y1="536.0" x2="191.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="237.0" y1="536.0" x2="237.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="283.0" y1="536.0" x2="283.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="329.0" y1="536.0" x2="329.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="375.0" y1="536.0" x2="375.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="536.0" x2="375.0" y2="536.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="490.0" x2="375.0" y2="490.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="444.0" x2="375.0" y2="444.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="398.0" x2="375.0" y2="398.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="352.0" x2="375.0" y2="352.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="306.0" x2="375.0" y2="306.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="260.0" x2="375.0" y2="260.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="214.0" x2="375.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="99.0" y1="490.0" x2="389.0" y2="490.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="145.0" y1="536.0" x2="145.0" y2="200.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="99.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">−1</text>
+<text x="191.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">1</text>
+<text x="237.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">2</text>
+<text x="283.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">3</text>
+<text x="329.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">4</text>
+<text x="375.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">5</text>
+<text x="137.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">−1</text>
+<text x="137.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">1</text>
+<text x="137.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">2</text>
+<text x="137.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">3</text>
+<text x="137.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">4</text>
+<text x="137.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">5</text>
+<text x="137.0" y="218.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">6</text>
+<text x="393.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">x</text>
+<text x="145.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">y</text>
+<line x1="145.0" y1="536.0" x2="306.0" y2="214.0" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<line x1="99.0" y1="214.0" x2="375.0" y2="490.0" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+<text x="314.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">2x − y = 1</text>
+<text x="344.8" y="445.8" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">x + y = 5</text>
+<circle cx="237.0" cy="352.0" r="7" fill="#dc4c3a" stroke="#fff" stroke-width="2"/>
+<text x="251.0" y="357.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">(2, 3)</text>
+<line x1="595.0" y1="536.0" x2="595.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="641.0" y1="536.0" x2="641.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="687.0" y1="536.0" x2="687.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="733.0" y1="536.0" x2="733.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="779.0" y1="536.0" x2="779.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="825.0" y1="536.0" x2="825.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="871.0" y1="536.0" x2="871.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="917.0" y1="536.0" x2="917.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="536.0" x2="917.0" y2="536.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="490.0" x2="917.0" y2="490.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="444.0" x2="917.0" y2="444.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="398.0" x2="917.0" y2="398.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="352.0" x2="917.0" y2="352.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="306.0" x2="917.0" y2="306.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="260.0" x2="917.0" y2="260.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="214.0" x2="917.0" y2="214.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="595.0" y1="490.0" x2="931.0" y2="490.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="687.0" y1="536.0" x2="687.0" y2="200.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ahm)"/>
+<text x="595.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">−2</text>
+<text x="641.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">−1</text>
+<text x="733.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">1</text>
+<text x="779.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">2</text>
+<text x="825.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">3</text>
+<text x="871.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">4</text>
+<text x="917.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">5</text>
+<text x="679.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">−1</text>
+<text x="679.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">1</text>
+<text x="679.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">2</text>
+<text x="679.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">3</text>
+<text x="679.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">4</text>
+<text x="679.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">5</text>
+<text x="679.0" y="218.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="end">6</text>
+<text x="935.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start"></text>
+<text x="687.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle"></text>
+<line x1="687.0" y1="490.0" x2="871.0" y2="398.0" stroke="#0d9488" stroke-width="4" stroke-linecap="round"/>
+<path d="M871.0,398.0 L857.6,398.0 L863.0,408.7 Z" fill="#0d9488"/>
+<line x1="871.0" y1="398.0" x2="733.0" y2="260.0" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+<path d="M733.0,260.0 L737.2,272.7 L745.7,264.2 Z" fill="#d97706"/>
+<line x1="687.0" y1="490.0" x2="733.0" y2="260.0" stroke="#dc4c3a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="7 5"/>
+<path d="M733.0,260.0 L724.8,270.6 L736.5,272.9 Z" fill="#dc4c3a"/>
+<line x1="687.0" y1="490.0" x2="779.0" y2="444.0" stroke="#134e4a" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M779.0,444.0 L765.6,444.0 L771.0,454.7 Z" fill="#134e4a"/>
+<line x1="687.0" y1="490.0" x2="641.0" y2="444.0" stroke="#d97706" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M641.0,444.0 L645.2,456.7 L653.7,448.2 Z" fill="#d97706"/>
+<text x="775.0" y="432.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#134e4a" text-anchor="end">(2, 1)</text>
+<text x="635.0" y="436.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="end">(−1, 1)</text>
+<text x="817.0" y="457.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">2 × column 1</text>
+<text x="816.0" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">3 × column 2</text>
+<circle cx="733.0" cy="260.0" r="6" fill="#dc4c3a" stroke="#fff" stroke-width="2"/>
+<text x="745.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">b = (1, 5)</text>
+<text x="500.0" y="606.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">2·(2, 1) + 3·(−1, 1) = (4 − 3, 2 + 3) = (1, 5)     ·     solution x = 2, y = 3 in both pictures</text>
+<text x="40.0" y="632.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: Linear Algebra 00, Chapter 4 (row picture and column picture).</text>
+</svg>

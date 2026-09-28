@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 626" width="1000" height="626" role="img" aria-label="Anatomy of a Cache Components page: a prerendered static shell containing the layout and cached content, dynamic holes behind Suspense boundaries for cookie-based and uncached data, and the order in which they reach the browser">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="626" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="624.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One page, a static shell with dynamic holes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">With cacheComponents: true, the shell is prerendered and the holes stream into the same response.</text>
+<rect x="40.0" y="100.0" width="480.0" height="440.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="40.0" y="100.0" width="480.0" height="34.0" rx="10" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="41.0" y="120.0" width="478.0" height="14.0" rx="0" fill="#f3f4f6" stroke="#f3f4f6" stroke-width="0"/>
+<text x="56.0" y="122.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">app/product/[id]/page.tsx</text>
+<rect x="322.0" y="111.0" width="22.0" height="14.0" rx="3" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="350.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">shell</text>
+<rect x="400.0" y="111.0" width="22.0" height="14.0" rx="3" fill="#f5f3ff" stroke="none" stroke-width="0"/>
+<rect x="400" y="111" width="22" height="14" rx="3" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="428.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">hole</text>
+<rect x="56.0" y="150.0" width="448.0" height="50.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="72.0" y="174.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">layout.tsx</text>
+<text x="180.0" y="174.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">static: part of the shell</text>
+<rect x="56.0" y="214.0" width="448.0" height="104.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="72.0" y="238.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">&lt;ProductInfo&gt;</text>
+<text x="72.0" y="259.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">getProduct(): 'use cache', cacheLife('hours')</text>
+<text x="72.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">In the shell for known ids from</text>
+<text x="72.0" y="297.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">generateStaticParams: [{ id: 'p-100' }]</text>
+<rect x="56.0" y="332.0" width="448.0" height="86.0" rx="8" fill="#f5f3ff" stroke="none" stroke-width="0"/>
+<rect x="56" y="332" width="448" height="86" rx="8" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="72.0" y="356.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">&lt;CartBadge&gt;</text>
+<text x="72.0" y="377.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Reads cookies(): request data</text>
+<text x="72.0" y="396.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Shell holds the Suspense fallback</text>
+<rect x="324.0" y="343.0" width="125.4" height="23.0" rx="11.5" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="386.7" y="359.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">&lt;CartSkeleton /&gt;</text>
+<rect x="56.0" y="432.0" width="448.0" height="86.0" rx="8" fill="#f5f3ff" stroke="none" stroke-width="0"/>
+<rect x="56" y="432" width="448" height="86" rx="8" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="72.0" y="456.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">&lt;LiveStock&gt;</text>
+<text x="72.0" y="477.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Uncached database query</text>
+<text x="72.0" y="496.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Shell holds the Suspense fallback</text>
+<rect x="324.0" y="443.0" width="132.3" height="23.0" rx="11.5" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="390.2" y="459.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">&lt;StockSkeleton /&gt;</text>
+<text x="552.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">What happens, in order</text>
+<rect x="552.0" y="140.0" width="408.0" height="91.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<circle cx="574.0" cy="162.0" r="12" fill="#0d9488"/>
+<text x="574.0" y="167.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="596.0" y="167.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">next build</text>
+<text x="596.0" y="188.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Renders the route as far as it can.</text>
+<text x="596.0" y="207.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Static + cached parts + fallbacks</text>
+<text x="596.0" y="226.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">= the static shell.</text>
+<rect x="552.0" y="243.0" width="408.0" height="72.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<circle cx="574.0" cy="265.0" r="12" fill="#0d9488"/>
+<text x="574.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="596.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Request arrives</text>
+<text x="596.0" y="291.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">The shell is sent immediately.</text>
+<text x="596.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">It can come from a CDN.</text>
+<rect x="552.0" y="327.0" width="408.0" height="72.0" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="574.0" cy="349.0" r="12" fill="#7c3aed"/>
+<text x="574.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="596.0" y="354.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Holes render</text>
+<text x="596.0" y="375.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">CartBadge and LiveStock run on the</text>
+<text x="596.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">server with this request's data.</text>
+<rect x="552.0" y="411.0" width="408.0" height="72.0" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="574.0" cy="433.0" r="12" fill="#7c3aed"/>
+<text x="574.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="596.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#7c3aed" text-anchor="start">Streamed in</text>
+<text x="596.0" y="459.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Into the same response. Each one</text>
+<text x="596.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">replaces its fallback in place.</text>
+<text x="40.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Build rule: every piece of data is</text>
+<rect x="288.0" y="558.5" width="159.0" height="23.5" rx="11.75" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="367.5" y="575.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">cached ('use cache')</text>
+<rect x="455.0" y="558.5" width="202.5" height="23.5" rx="11.75" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="556.2" y="575.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">inside a Suspense boundary</text>
+<rect x="665.5" y="558.5" width="57.5" height="23.5" rx="11.75" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="694.2" y="575.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">static</text>
+<text x="733.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">or the build errors.</text>
+<text x="40.0" y="608.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's Chapter 4 example (ProductInfo, CartBadge, LiveStock) and its description of the shell.</text>
+</svg>
