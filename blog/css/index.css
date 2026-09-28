@@ -6012,3 +6012,48 @@ blockquote.pullquote.right {
 #local-search .search-dialog .local-search__hit-item .search-keyword { color: #F47466; font-weight: bold; }
 #local-search .search-dialog .search-result-list { overflow-y: auto; max-height: calc(80vh - 130px); }
 @media screen and (max-width: 768px) { #local-search .search-dialog .search-result-list { padding-bottom: 40px; max-height: 75vh !important; } }
+
+/* ===== Compact pagination + capped sidebar lists (2026-09-28) ===== */
+.layout > .recent-posts .pagination {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.layout > .recent-posts .pagination > * {
+  margin: 0;
+  min-width: 2.5em;
+  width: auto;
+  padding: 0 4px;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+#pagination .pagination > .page-number.current {
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 196, 182, 0.35);
+}
+.layout > .recent-posts .pagination > .space {
+  min-width: 1.2em;
+  padding: 0;
+  color: var(--font-color);
+  opacity: 0.6;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 500px) {
+  .layout > .recent-posts .pagination { gap: 4px; }
+  .layout > .recent-posts .pagination > * { min-width: 2.2em; height: 2.2em; line-height: 2.2em; padding: 0 2px; }
+  .layout > .recent-posts .pagination > .space { min-width: 0.9em; }
+}
+#aside-content .card-tag-cloud { line-height: 1.8; }
+#aside-content .card-tag-more {
+  display: block;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--hr-border, #e3e8f7);
+  color: var(--font-color);
+  font-size: 0.9em;
+  text-align: center;
+}
+#aside-content .card-tag-more:hover { color: #49b1f5; }
