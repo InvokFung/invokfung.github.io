@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" role="img" aria-label="The L-bracket from post 03 in three print orientations: A flat on its back, B with the L profile flat on the plate, and C standing on its corner, with layer direction, tension at the corner, support and strength for each">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="720" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="718.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One bracket, three orientations</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Legs 60 mm and 40 mm, 4 mm thick, 30 mm wide. Bolted by the short leg; the load hangs from the long leg.</text>
+<defs><marker id="mc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#dc4c3a"/></marker><marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/></marker><marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#d97706"/></marker></defs>
+<rect x="40.0" y="100.0" width="294.0" height="530.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="353.0" y="100.0" width="294.0" height="530.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="666.0" y="100.0" width="294.0" height="530.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">A — flat on its back</text>
+<text x="58.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">side view · layers horizontal</text>
+<line x1="54.0" y1="352.0" x2="320.0" y2="352.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+<clipPath id="cp1"><polygon points="150.0,352.0 250.0,352.0 250.0,332.0 170.0,332.0 170.0,202.0 150.0,202.0"/></clipPath>
+<polygon points="150.0,352.0 250.0,352.0 250.0,332.0 170.0,332.0 170.0,202.0 150.0,202.0" fill="#fed7aa"/>
+<line x1="150.0" y1="346.0" x2="250.0" y2="346.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="340.0" x2="250.0" y2="340.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="334.0" x2="250.0" y2="334.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="328.0" x2="250.0" y2="328.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="322.0" x2="250.0" y2="322.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="316.0" x2="250.0" y2="316.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="310.0" x2="250.0" y2="310.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="304.0" x2="250.0" y2="304.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="298.0" x2="250.0" y2="298.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="292.0" x2="250.0" y2="292.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="286.0" x2="250.0" y2="286.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="280.0" x2="250.0" y2="280.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="274.0" x2="250.0" y2="274.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="268.0" x2="250.0" y2="268.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="262.0" x2="250.0" y2="262.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="256.0" x2="250.0" y2="256.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="250.0" x2="250.0" y2="250.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="244.0" x2="250.0" y2="244.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="238.0" x2="250.0" y2="238.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="232.0" x2="250.0" y2="232.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="226.0" x2="250.0" y2="226.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="220.0" x2="250.0" y2="220.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="214.0" x2="250.0" y2="214.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<line x1="150.0" y1="208.0" x2="250.0" y2="208.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp1)"/>
+<polygon points="150.0,352.0 250.0,352.0 250.0,332.0 170.0,332.0 170.0,202.0 150.0,202.0" fill="none" stroke="#c2410c" stroke-width="1.8" stroke-linejoin="round"/>
+<line x1="134.0" y1="322.0" x2="134.0" y2="268.0" stroke="#dc4c3a" stroke-width="2.6" stroke-linecap="round" marker-end="url(#mc)" marker-start="url(#mc)"/>
+<text x="126.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="end">tension</text>
+<path d="M146,329 l6,-4 l6,4 l6,-4 l6,4 l6,-4 l6,4" fill="none" stroke="#dc4c3a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">clean break here</text>
+<text x="178.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">long leg (60)</text>
+<text x="256.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">short leg (40)</text>
+<text x="371.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">B — L-profile flat</text>
+<text x="371.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">view from above · each layer is the whole L</text>
+<polygon points="445.0,344.0 595.0,344.0 595.0,324.0 465.0,324.0 465.0,244.0 445.0,244.0" fill="#fed7aa" stroke="#c2410c" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="451.5,337.5 588.5,337.5 588.5,330.5 458.5,330.5 458.5,250.5 451.5,250.5" fill="none" stroke="#c2410c" stroke-opacity="0.6" stroke-width="1.3" stroke-linejoin="round"/>
+<polygon points="458.5,330.5 581.5,330.5 581.5,337.5 451.5,337.5 451.5,257.5 458.5,257.5" fill="none" stroke="#c2410c" stroke-opacity="0.6" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M431,274 L431,340 Q431,358 449,358 L515,358" fill="none" stroke="#16a34a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#mg)"/>
+<text x="423.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">tension</text>
+<text x="523.0" y="363.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#16a34a" text-anchor="start">runs along the roads</text>
+<text x="371.0" y="392.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The 30 mm width becomes the build height.</text>
+<text x="684.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">C — on the corner</text>
+<text x="684.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">side view · layers horizontal</text>
+<line x1="680.0" y1="352.0" x2="946.0" y2="352.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+<polygon points="806,352 912.1,245.9 912.1,352" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="815.0" y1="351.0" x2="815.0" y2="346.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="824.0" y1="351.0" x2="824.0" y2="337.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="833.0" y1="351.0" x2="833.0" y2="328.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="842.0" y1="351.0" x2="842.0" y2="319.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="851.0" y1="351.0" x2="851.0" y2="310.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="860.0" y1="351.0" x2="860.0" y2="301.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="869.0" y1="351.0" x2="869.0" y2="292.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="878.0" y1="351.0" x2="878.0" y2="283.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="887.0" y1="351.0" x2="887.0" y2="274.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="896.0" y1="351.0" x2="896.0" y2="265.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="905.0" y1="351.0" x2="905.0" y2="256.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<polygon points="806,352 735.3,281.3 735.3,352" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="744.3" y1="351.0" x2="744.3" y2="293.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="753.3" y1="351.0" x2="753.3" y2="302.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="762.3" y1="351.0" x2="762.3" y2="311.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="771.3" y1="351.0" x2="771.3" y2="320.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="780.3" y1="351.0" x2="780.3" y2="329.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="789.3" y1="351.0" x2="789.3" y2="338.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="798.3" y1="351.0" x2="798.3" y2="347.3" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<clipPath id="cp2"><polygon points="806.0,352.0 912.1,245.9 897.9,231.8 806.0,323.7 749.4,267.1 735.3,281.3"/></clipPath>
+<polygon points="806.0,352.0 912.1,245.9 897.9,231.8 806.0,323.7 749.4,267.1 735.3,281.3" fill="#fed7aa"/>
+<line x1="735.3" y1="346.0" x2="912.1" y2="346.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="340.0" x2="912.1" y2="340.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="334.0" x2="912.1" y2="334.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="328.0" x2="912.1" y2="328.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="322.0" x2="912.1" y2="322.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="316.0" x2="912.1" y2="316.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="310.0" x2="912.1" y2="310.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="304.0" x2="912.1" y2="304.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="298.0" x2="912.1" y2="298.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="292.0" x2="912.1" y2="292.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="286.0" x2="912.1" y2="286.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="280.0" x2="912.1" y2="280.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="274.0" x2="912.1" y2="274.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="268.0" x2="912.1" y2="268.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="262.0" x2="912.1" y2="262.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="256.0" x2="912.1" y2="256.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="250.0" x2="912.1" y2="250.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="244.0" x2="912.1" y2="244.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="238.0" x2="912.1" y2="238.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<line x1="735.3" y1="232.0" x2="912.1" y2="232.0" stroke="#c2410c" stroke-opacity="0.45" stroke-width="1" clip-path="url(#cp2)"/>
+<polygon points="806.0,352.0 912.1,245.9 897.9,231.8 806.0,323.7 749.4,267.1 735.3,281.3" fill="none" stroke="#c2410c" stroke-width="1.8" stroke-linejoin="round"/>
+<line x1="829.3" y1="344.2" x2="874.6" y2="299.0" stroke="#d97706" stroke-width="2.6" stroke-linecap="round" marker-end="url(#ma)" marker-start="url(#ma)"/>
+<text x="772.0" y="202.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">tension at the outer corner</text>
+<text x="772.0" y="219.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">is about 45° to the layers</text>
+<text x="850.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">support</text>
+<line x1="58.0" y1="396.0" x2="316.0" y2="396.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="58.0" y="420.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Stress at the corner</text>
+<text x="58.0" y="439.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">runs across the layers</text>
+<text x="58.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Strength under the load</text>
+<text x="58.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">worst</text>
+<text x="58.0" y="500.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Support needed</text>
+<text x="58.0" y="519.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">none</text>
+<text x="58.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Hole axis</text>
+<text x="58.0" y="559.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">one vertical, one horizontal</text>
+<text x="58.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Bed footprint</text>
+<text x="58.0" y="599.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">small</text>
+<line x1="371.0" y1="396.0" x2="629.0" y2="396.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="371.0" y="420.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Stress at the corner</text>
+<text x="371.0" y="439.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">runs along continuous roads</text>
+<text x="371.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Strength under the load</text>
+<text x="371.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#16a34a" text-anchor="start">best</text>
+<text x="371.0" y="500.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Support needed</text>
+<text x="371.0" y="519.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">none</text>
+<text x="371.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Hole axis</text>
+<text x="371.0" y="559.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">horizontal in both legs</text>
+<text x="371.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Bed footprint</text>
+<text x="371.0" y="599.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">large</text>
+<line x1="684.0" y1="396.0" x2="942.0" y2="396.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="684.0" y="420.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Stress at the corner</text>
+<text x="684.0" y="439.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">about 45° to the layers</text>
+<text x="684.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Strength under the load</text>
+<text x="684.0" y="479.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">intermediate</text>
+<text x="684.0" y="500.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Support needed</text>
+<text x="684.0" y="519.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">yes, under the corner and legs</text>
+<text x="684.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Hole axis</text>
+<text x="684.0" y="559.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">diagonal in both legs</text>
+<text x="684.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Bed footprint</text>
+<text x="684.0" y="599.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">small</text>
+<rect x="40.0" y="644.0" width="920.0" height="40.0" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.4"/>
+<text x="56.0" y="669.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Load-bearing bracket: choose B, and chamfer or drill the holes afterwards. Display-only: A is faster.</text>
+<text x="40.0" y="702.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 03, Chapters 1 and 2. Leg lengths to scale; leg thickness exaggerated to show layers.</text>
+</svg>

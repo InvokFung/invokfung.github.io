@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 672" width="1000" height="672" role="img" aria-label="Gateway API objects: GatewayClass envoy, Gateway edge in namespace infra, HTTPRoute shop in namespace shop; an HTTPS request to shop.example.com/api is split 90 to 10 between api and api-canary">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="672" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="670.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Gateway API: one object per role</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The class, the listener and the routes are separate objects, owned by different people, joined by references.</text>
+<text x="40.0" y="114.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">owned by the infrastructure provider</text>
+<text x="330.0" y="114.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="start">owned by the platform / cluster operator</text>
+<text x="670.0" y="114.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">owned by the application team</text>
+<rect x="40.0" y="124.0" width="250.0" height="96.0" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="56.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">GatewayClass envoy</text>
+<text x="56.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">cluster-scoped</text>
+<text x="56.0" y="197.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">which implementation</text>
+<rect x="330.0" y="124.0" width="300.0" height="180.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="346.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Gateway edge</text>
+<text x="346.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">namespace infra</text>
+<text x="346.0" y="197.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">listener https · HTTPS · 443</text>
+<text x="346.0" y="218.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">TLS: Terminate with shop-tls</text>
+<text x="346.0" y="239.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">routes allowed only from</text>
+<text x="346.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">namespaces labelled</text>
+<text x="346.0" y="281.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#1f2937" text-anchor="start">gateway-access: "true"</text>
+<rect x="670.0" y="124.0" width="290.0" height="180.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="686.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">HTTPRoute shop</text>
+<text x="686.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">namespace shop · parentRefs: edge</text>
+<text x="686.0" y="197.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">hostnames: shop.example.com</text>
+<text x="686.0" y="218.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">match: PathPrefix /api</text>
+<text x="686.0" y="239.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">filter: set header X-Env: prod</text>
+<text x="686.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">api: port 80, weight 90</text>
+<text x="686.0" y="281.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">api-canary: port 80, weight 10</text>
+<line x1="330" y1="172" x2="293" y2="172" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="40.0" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Gateway picks it by</text>
+<text x="40.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">gatewayClassName: envoy</text>
+<line x1="670" y1="172" x2="633" y2="172" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ahm)"/>
+<text x="40.0" y="288.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Dashed arrows point at the</text>
+<text x="40.0" y="306.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">object referenced by name.</text>
+<text x="40.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">One request</text>
+<text x="150.0" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">HTTPS to shop.example.com/api</text>
+<rect x="40.0" y="380.0" width="180.0" height="64.0" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="130.0" y="407.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">Client</text>
+<text x="130.0" y="427.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">shop.example.com/api</text>
+<rect x="270.0" y="380.0" width="200.0" height="64.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="370.0" y="407.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="middle">Gateway edge :443</text>
+<text x="370.0" y="427.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">TLS ends here (shop-tls)</text>
+<rect x="520.0" y="380.0" width="200.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="620.0" y="407.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="middle">HTTPRoute rule</text>
+<text x="620.0" y="427.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">/api · adds X-Env: prod</text>
+<line x1="220.0" y1="412.0" x2="267.0" y2="412.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="470.0" y1="412.0" x2="517.0" y2="412.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="770.0" y="370.0" width="190.0" height="38.0" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.8"/>
+<text x="782.0" y="394.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">api :80</text>
+<text x="948.0" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="end">90 %</text>
+<line x1="720.0" y1="412.0" x2="767.0" y2="389.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="770.0" y="418.0" width="190.0" height="38.0" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="1.8"/>
+<text x="782.0" y="442.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">api-canary :80</text>
+<text x="948.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="end">10 %</text>
+<line x1="720.0" y1="412.0" x2="767.0" y2="437.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="40.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">weights 90 : 10</text>
+<rect x="190.0" y="468.0" width="585.0" height="22.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<rect x="775.0" y="468.0" width="65.0" height="22.0" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+<text x="482.5" y="484.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">api</text>
+<text x="850.0" y="484.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">api-canary</text>
+<rect x="40.0" y="536.0" width="920.0" height="88.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="564.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">In the API, not in annotations.</text>
+<text x="58.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Header changes, weighted backends and cross-namespace route attachment are HTTPRoute fields;</text>
+<text x="58.0" y="606.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">with Ingress each one needs a controller-specific annotation, so Ingress manifests are not portable.</text>
+<text x="40.0" y="654.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's Gateway API table, the edge Gateway and shop HTTPRoute YAML, and Exercise 1 (Chapter 1).</text>
+</svg>

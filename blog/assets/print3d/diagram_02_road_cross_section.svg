@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" role="img" aria-label="Cross-section of one printed road, 0.45 mm wide and 0.20 mm tall, under the rectangle model and the stadium model, and the filament length E each model gives for a 15.20 mm move">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="580" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="578.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How the slicer turns a road into an E value</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Two slicers can assume two different road shapes. The same settings then feed different amounts of filament.</text>
+<rect x="40.0" y="100.0" width="480.0" height="390.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">One road, two cross-section models</text>
+<text x="60.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Drawn to scale: 0.45 mm × 0.20 mm</text>
+<rect x="122.5" y="196" width="315.0" height="140.0" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M192.5,196 H367.5 A70.0,70.0 0 0 1 367.5,336.0 H192.5 A70.0,70.0 0 0 1 192.5,196 Z" fill="#ccfbf1" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="122.5" y1="362.0" x2="437.5" y2="362.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<line x1="122.5" y1="342.0" x2="122.5" y2="370.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="437.5" y1="342.0" x2="437.5" y2="370.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<text x="280.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">w = 0.45 mm</text>
+<line x1="96.5" y1="196.0" x2="96.5" y2="336.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<line x1="88.5" y1="196.0" x2="118.5" y2="196.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<line x1="88.5" y1="336.0" x2="118.5" y2="336.0" stroke="#9ca3af" stroke-width="1" stroke-linecap="round"/>
+<text x="86.5" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">h =</text>
+<text x="86.5" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">0.20 mm</text>
+<rect x="60.0" y="399.0" width="22.0" height="14.0" rx="2" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6"/>
+<text x="92.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Rectangle model:  A = w × h = 0.0900 mm²</text>
+<rect x="60.0" y="425.0" width="22.0" height="14.0" rx="7" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.6"/>
+<text x="92.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Stadium model:  A = (w − h) × h + π × (h/2)² = 0.0814 mm²</text>
+<text x="60.0" y="468.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">The coral corners are the difference: about 10 % of the rectangle.</text>
+<rect x="540.0" y="100.0" width="420.0" height="390.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="560.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">From road area to filament fed</text>
+<text x="560.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Exercise 1: a 15.20 mm move, 1.75 mm filament, flow 1.00</text>
+<rect x="560.0" y="168.0" width="380.0" height="82.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="574.0" y="192.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#e2e8f0" text-anchor="start">E = length × area × flow / filament area</text>
+<text x="574.0" y="212.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">filament area = π × (1.75/2)²</text>
+<text x="574.0" y="232.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#5eead4" text-anchor="start">              = 2.4053 mm²</text>
+<text x="560.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Model</text>
+<text x="690.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Road area</text>
+<text x="820.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">E (mm)</text>
+<line x1="560.0" y1="304.0" x2="940.0" y2="304.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="560.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Rectangle</text>
+<text x="690.0" y="332.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">0.0900 mm²</text>
+<text x="820.0" y="332.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">0.5687</text>
+<text x="560.0" y="366.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Stadium</text>
+<text x="690.0" y="366.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">0.0814 mm²</text>
+<text x="820.0" y="366.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">0.5145</text>
+<line x1="560.0" y1="386.0" x2="940.0" y2="386.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="560.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Difference: (0.5687 − 0.5145) / 0.5687 = 9.5 %</text>
+<text x="560.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Flow calibration absorbs this, but only in the</text>
+<text x="560.0" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">slicer you calibrated in.</text>
+<text x="40.0" y="526.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">So: calibrate flow in the slicer you actually use, and re-measure before carrying a flow value to another slicer.</text>
+<text x="40.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 02, Chapter 1 and Exercise 1. Every number recomputed from the post's formulas.</text>
+</svg>

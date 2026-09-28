@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" role="img" aria-label="FDM hotend from cold to hot, with the filament acting as a plunger, and a stack of printed layers showing that loads along the roads are strong while loads across the layers are weak">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="720" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="718.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">FDM in one picture: a plunger, a melt zone, and welds</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Solid filament pushes molten polymer out of the nozzle. Layers hold together only where chains cross each weld.</text>
+<rect x="40.0" y="100.0" width="460.0" height="480.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">The hotend, cold to hot</text>
+<defs><linearGradient id="melt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cbd5e1"/><stop offset="0.35" stop-color="#fcd34d"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs>
+<rect x="98.0" y="228.0" width="104.0" height="72.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<line x1="104.0" y1="238.0" x2="196.0" y2="238.0" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+<line x1="104.0" y1="249.0" x2="196.0" y2="249.0" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+<line x1="104.0" y1="260.0" x2="196.0" y2="260.0" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+<line x1="104.0" y1="271.0" x2="196.0" y2="271.0" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+<line x1="104.0" y1="282.0" x2="196.0" y2="282.0" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+<line x1="104.0" y1="293.0" x2="196.0" y2="293.0" stroke="#bfdbfe" stroke-width="2" stroke-linecap="round"/>
+<rect x="135.0" y="300.0" width="30.0" height="28.0" rx="3" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.4"/>
+<rect x="96.0" y="328.0" width="108.0" height="76.0" rx="6" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<circle cx="184" cy="350" r="9" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.8"/>
+<circle cx="116" cy="386" r="5" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.6"/>
+<path d="M118,404 L182,404 L156,440 L144,440 Z" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="142.0" y="146.0" width="16.0" height="186.0" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
+<rect x="142.0" y="328" width="16" height="110" fill="url(#melt)" stroke="none"/>
+<circle cx="123.0" cy="180" r="18" fill="#e5e7eb" stroke="#1f2937" stroke-width="1.6" stroke-dasharray="4 3"/>
+<circle cx="123.0" cy="180" r="4" fill="#1f2937"/>
+<circle cx="177.0" cy="180" r="18" fill="#e5e7eb" stroke="#1f2937" stroke-width="1.6" stroke-dasharray="4 3"/>
+<circle cx="177.0" cy="180" r="4" fill="#1f2937"/>
+<line x1="150.0" y1="150.0" x2="150.0" y2="166.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="60.0" y="446.0" width="90.0" height="12.0" rx="6" fill="#f97316" stroke="#c2410c" stroke-width="1"/>
+<rect x="60.0" y="459.0" width="176.0" height="12.0" rx="6" fill="#fdba74" stroke="#fb923c" stroke-width="1"/>
+<rect x="60.0" y="472.0" width="176.0" height="12.0" rx="6" fill="#fdba74" stroke="#fb923c" stroke-width="1"/>
+<line x1="202.0" y1="171.0" x2="254.0" y2="171.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="202" cy="171" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="176.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Extruder gears</text>
+<text x="262.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">push a set length of filament</text>
+<line x1="162.0" y1="213.0" x2="254.0" y2="213.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="162" cy="213" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="218.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Solid filament = the plunger</text>
+<text x="262.0" y="237.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">flow is set by distance, not pressure</text>
+<line x1="206.0" y1="261.0" x2="254.0" y2="261.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="206" cy="261" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#2563eb" text-anchor="start">Heatsink + fan</text>
+<text x="262.0" y="285.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">cold side; fan never off while hot</text>
+<line x1="169.0" y1="313.0" x2="254.0" y2="313.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="169" cy="313" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Heatbreak</text>
+<text x="262.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">keeps the melt zone short</text>
+<line x1="208.0" y1="357.0" x2="254.0" y2="357.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="208" cy="357" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Heater block</text>
+<text x="262.0" y="381.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">cartridge heater + thermistor</text>
+<line x1="162.0" y1="397.0" x2="254.0" y2="397.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="162" cy="397" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">Melt zone</text>
+<text x="262.0" y="421.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">polymer is a viscous fluid here</text>
+<line x1="174.0" y1="437.0" x2="254.0" y2="437.0" stroke="#9ca3af" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="174" cy="437" r="2.5" fill="#9ca3af"/>
+<text x="262.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">Nozzle</text>
+<text x="262.0" y="461.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">0.4 mm is the default</text>
+<text x="60.0" y="506.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">new road, laid as the nozzle moves right</text>
+<rect x="56.0" y="520.0" width="428.0" height="46.0" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+<text x="70.0" y="539.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Heat creep: the melt zone moves up past the heatbreak,</text>
+<text x="70.0" y="557.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">softens filament in the cold section, and jams it.</text>
+<rect x="520.0" y="100.0" width="440.0" height="480.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="540.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">Why Z is the weak direction</text>
+<text x="540.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Side view of printed layers (each strip is one road).</text>
+<rect x="610.0" y="196.0" width="200.0" height="16.0" rx="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<rect x="610.0" y="213.0" width="200.0" height="16.0" rx="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<rect x="610.0" y="230.0" width="200.0" height="16.0" rx="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<rect x="610.0" y="247.0" width="200.0" height="16.0" rx="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<rect x="610.0" y="264.0" width="200.0" height="16.0" rx="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<line x1="604.0" y1="238.5" x2="560.0" y2="238.5" stroke="#0d9488" stroke-width="3" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="816.0" y1="238.5" x2="860.0" y2="238.5" stroke="#0d9488" stroke-width="3" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="710.0" y1="190.0" x2="710.0" y2="156.0" stroke="#dc4c3a" stroke-width="3" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="710.0" y1="285.0" x2="710.0" y2="319.0" stroke="#dc4c3a" stroke-width="3" stroke-linecap="round" marker-end="url(#ah)"/>
+<circle cx="780" cy="230" r="11" fill="none" stroke="#7c3aed" stroke-width="1.8"/>
+<line x1="790.0" y1="224.0" x2="862.0" y2="214.0" stroke="#7c3aed" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 3"/>
+<rect x="862.0" y="168.0" width="84.0" height="96.0" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="870.0" y="180.0" width="68.0" height="34.0" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<rect x="870.0" y="218.0" width="68.0" height="34.0" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+<path d="M880,204 q5,6 0,12 q-5,6 0,12" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M897,204 q5,6 0,12 q-5,6 0,12" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M914,204 q5,6 0,12 q-5,6 0,12" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M931,204 q5,6 0,12 q-5,6 0,12" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="904.0" y="282.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">the weld</text>
+<text x="540.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Along the roads: strong</text>
+<text x="540.0" y="350.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Continuous polymer chains run through each road.</text>
+<text x="540.0" y="369.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Failure is ductile yielding.</text>
+<text x="540.0" y="408.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Across the layers: weak</text>
+<text x="540.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Only chains that diffused across each weld carry load.</text>
+<text x="540.0" y="447.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Failure is a clean, brittle-looking split on one layer line.</text>
+<line x1="540.0" y1="470.0" x2="940.0" y2="470.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<text x="540.0" y="494.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">Weld strength follows interface temperature and time above it:</text>
+<text x="548.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">+</text>
+<text x="562.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">hotter nozzle: stronger layer bond</text>
+<text x="548.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">+</text>
+<text x="562.0" y="538.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">enclosure: slower cooling at the interface</text>
+<text x="548.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="middle">−</text>
+<text x="562.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">more part cooling: weaker bond, better overhangs</text>
+<rect x="40.0" y="598.0" width="920.0" height="76.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4"/>
+<text x="60.0" y="624.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">The real speed limit is volumetric flow:</text>
+<text x="356.0" y="624.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">width × layer height × speed</text>
+<text x="60.0" y="650.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">0.42 mm × 0.20 mm × 150 mm/s ≈ 12.6 mm³/s</text>
+<text x="470.0" y="650.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">If the hotend cannot melt that much, the print under-extrudes.</text>
+<text x="40.0" y="702.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 00, Chapters 3 and 4. Labels and numbers from the post; drawing not to scale.</text>
+</svg>

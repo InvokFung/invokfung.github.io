@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="A circle approximated by an inscribed 16-sided polygon, with the sagitta error r times one minus cos of pi over n, and the file formats that come out of a BREP master: STEP, 3MF, STL and glTF">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What leaves CAD, and what it loses</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The BREP solid is exact. Every mesh made from it is an approximation fixed at export.</text>
+<rect x="40.0" y="100.0" width="440.0" height="480.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">A hole becomes an inscribed polygon</text>
+<text x="60.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Vertices sit on the true circle; the flat edges cut inside it.</text>
+<circle cx="160" cy="268" r="94" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon points="252.2,249.7 238.2,215.8 212.2,189.8 178.3,175.8 141.7,175.8 107.8,189.8 81.8,215.8 67.8,249.7 67.8,286.3 81.8,320.2 107.8,346.2 141.7,360.2 178.3,360.2 212.2,346.2 238.2,320.2 252.2,286.3" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<circle cx="252.2" cy="249.7" r="2.6" fill="#dc4c3a"/>
+<circle cx="238.2" cy="215.8" r="2.6" fill="#dc4c3a"/>
+<circle cx="212.2" cy="189.8" r="2.6" fill="#dc4c3a"/>
+<circle cx="178.3" cy="175.8" r="2.6" fill="#dc4c3a"/>
+<circle cx="141.7" cy="175.8" r="2.6" fill="#dc4c3a"/>
+<circle cx="107.8" cy="189.8" r="2.6" fill="#dc4c3a"/>
+<circle cx="81.8" cy="215.8" r="2.6" fill="#dc4c3a"/>
+<circle cx="67.8" cy="249.7" r="2.6" fill="#dc4c3a"/>
+<circle cx="67.8" cy="286.3" r="2.6" fill="#dc4c3a"/>
+<circle cx="81.8" cy="320.2" r="2.6" fill="#dc4c3a"/>
+<circle cx="107.8" cy="346.2" r="2.6" fill="#dc4c3a"/>
+<circle cx="141.7" cy="360.2" r="2.6" fill="#dc4c3a"/>
+<circle cx="178.3" cy="360.2" r="2.6" fill="#dc4c3a"/>
+<circle cx="212.2" cy="346.2" r="2.6" fill="#dc4c3a"/>
+<circle cx="238.2" cy="320.2" r="2.6" fill="#dc4c3a"/>
+<circle cx="252.2" cy="286.3" r="2.6" fill="#dc4c3a"/>
+<line x1="160.0" y1="268.0" x2="254.0" y2="268.0" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="3 3"/>
+<text x="207.0" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="middle" font-style="italic">r</text>
+<text x="160.0" y="386.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">n = 16 facets</text>
+<circle cx="254" cy="268" r="12" fill="none" stroke="#7c3aed" stroke-width="1.6"/>
+<line x1="266.0" y1="264.0" x2="300.0" y2="240.0" stroke="#7c3aed" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="4 3"/>
+<rect x="300.0" y="176.0" width="162.0" height="170.0" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="381.0" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">one facet, magnified</text>
+<line x1="344.0" y1="216.0" x2="344.0" y2="326.0" stroke="#dc4c3a" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M344,216 Q408,271.0 344,326" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
+<circle cx="344" cy="216" r="3" fill="#dc4c3a"/>
+<circle cx="344" cy="326" r="3" fill="#dc4c3a"/>
+<line x1="347.0" y1="271.0" x2="374.0" y2="271.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="382.0" y="267.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start" font-style="italic">s</text>
+<text x="382.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sagitta</text>
+<text x="336.0" y="322.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="end">edge</text>
+<text x="370.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">true arc</text>
+<text x="60.0" y="430.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">s = r × (1 − cos(π / n))</text>
+<text x="60.0" y="458.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">5 mm hole (r = 2.5 mm):</text>
+<text x="76.0" y="480.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">n = 16</text>
+<text x="170.0" y="480.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">s ≈ 0.048 mm on the radius</text>
+<text x="76.0" y="501.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">n = 64</text>
+<text x="170.0" y="501.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">s ≈ 0.003 mm on the radius</text>
+<text x="60.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">Inscribed, so holes always come out small (Cause A).</text>
+<text x="60.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">A tight chord tolerance at export removes it.</text>
+<rect x="500.0" y="100.0" width="460.0" height="480.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="520.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">Keep the BREP as the master</text>
+<text x="520.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Export meshes as build artefacts, like a compiler's output.</text>
+<rect x="520.0" y="166.0" width="420.0" height="62.0" rx="10" fill="#f9fafb" stroke="#1f2937" stroke-width="2"/>
+<text x="536.0" y="194.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">CAD model (BREP)</text>
+<text x="536.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">exact surfaces, feature tree, parameters</text>
+<rect x="596.0" y="262.0" width="344.0" height="58.0" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="610.0" y="285.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">STEP</text>
+<text x="700.0" y="285.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">exact BREP solids + units</text>
+<text x="700.0" y="306.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">exchange, archive, let others modify</text>
+<line x1="556.0" y1="291.0" x2="593.0" y2="291.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="596.0" y="332.0" width="344.0" height="58.0" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="610.0" y="355.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">3MF</text>
+<text x="700.0" y="355.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">mesh + units, colour, settings</text>
+<text x="700.0" y="376.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">send to the printer or share to print</text>
+<line x1="556.0" y1="361.0" x2="593.0" y2="361.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="596.0" y="402.0" width="344.0" height="58.0" rx="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="2"/>
+<text x="610.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc4c3a" text-anchor="start">STL</text>
+<text x="700.0" y="425.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">triangles only — no units</text>
+<text x="700.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">only if nothing else is accepted</text>
+<line x1="556.0" y1="431.0" x2="593.0" y2="431.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="596.0" y="472.0" width="344.0" height="58.0" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+<text x="610.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">glTF / GLB</text>
+<text x="700.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">mesh + materials</text>
+<text x="700.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">view on the web; coarser export</text>
+<line x1="556.0" y1="501.0" x2="593.0" y2="501.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="556.0" y1="228.0" x2="556.0" y2="501.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M540,336 h-8 V526 h8" fill="none" stroke="#dc4c3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="524" y="431.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle" transform="rotate(-90 524 431.0)">tessellated: curves become facets</text>
+<text x="520.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Chord tolerance ~10× tighter than the accuracy you need:</text>
+<text x="520.0" y="576.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">chasing 0.05 mm → export at 0.005 mm or tighter.</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 06, Chapters 2 and 4, and Exercise 2. Sagitta values recomputed from the post's formula.</text>
+</svg>

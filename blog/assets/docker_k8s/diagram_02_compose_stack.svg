@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 664" width="1000" height="664" role="img" aria-label="The shopdemo Compose stack: web publishes port 8000 and reaches db and cache by service name on the project network; db and cache publish no ports and keep data in named volumes">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="664" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="662.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The worked Compose stack: who can reach what</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Services find each other by service name on the project network. Only web and adminer publish ports.</text>
+<rect x="40.0" y="100.0" width="920.0" height="62.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="126.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Your machine</text>
+<text x="58.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">the host</text>
+<rect x="200.0" y="114.0" width="330.0" height="34.0" rx="17" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="365.0" y="136.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#2563eb" text-anchor="middle">localhost:8000  →  web:8000</text>
+<rect x="552.0" y="114.0" width="390.0" height="34.0" rx="17" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="552" y="114" width="390" height="34" rx="17" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="747.0" y="136.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">127.0.0.1:8081  →  adminer:8080</text>
+<rect x="40" y="190" width="712" height="290" rx="12" fill="#fbfbfc" stroke="#0d9488" stroke-width="1.8" stroke-dasharray="7 5"/>
+<text x="58.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0d9488" text-anchor="start">Project network shopdemo_default</text>
+<rect x="64" y="250" width="276" height="134" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="78.0" y="276.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">web</text>
+<text x="78.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">build: .  (FastAPI app)</text>
+<text x="78.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">port 8000, published</text>
+<text x="78.0" y="338.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">health: /healthz every 10s</text>
+<text x="78.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">waits for db + cache healthy</text>
+<rect x="64" y="402" width="276" height="60" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="78.0" y="428.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">adminer</text>
+<text x="78.0" y="450.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">adminer:4 · only with --profile debug</text>
+<rect x="452" y="226" width="276" height="116" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<text x="466.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">db</text>
+<text x="466.0" y="274.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">postgres:16-alpine</text>
+<text x="466.0" y="294.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">no ports: reachable as db:5432</text>
+<text x="466.0" y="314.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">health: pg_isready, every 5s</text>
+<rect x="452" y="354" width="276" height="116" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="466.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">cache</text>
+<text x="466.0" y="402.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">redis:7-alpine</text>
+<text x="466.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">no ports: reachable as cache:6379</text>
+<text x="466.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">health: redis-cli ping, every 5s</text>
+<line x1="340.0" y1="296.0" x2="449.0" y2="272.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="392.0" y="266.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">db:5432</text>
+<line x1="340.0" y1="340.0" x2="449.0" y2="400.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="388.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">cache:6379</text>
+<line x1="328.0" y1="148.0" x2="328.0" y2="247.0" stroke="#2563eb" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M747,148 L747,176 L52,176 L52,432 L61,432" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<path d="M800,249 L800,315 A80.0,9 0 0 0 960,315 L960,249" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+<ellipse cx="880.0" cy="249" rx="80.0" ry="9" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="880.0" y="282.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#0d9488" text-anchor="middle">pgdata</text>
+<text x="880.0" y="302.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">named volume</text>
+<path d="M800,377 L800,443 A80.0,9 0 0 0 960,443 L960,377" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<ellipse cx="880.0" cy="377" rx="80.0" ry="9" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+<text x="880.0" y="410.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="15" font-weight="700" fill="#d97706" text-anchor="middle">redisdata</text>
+<text x="880.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">named volume</text>
+<line x1="728.0" y1="284.0" x2="797.0" y2="284.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="728.0" y1="412.0" x2="797.0" y2="412.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="880.0" y="342.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">/var/lib/postgresql/data</text>
+<text x="880.0" y="470.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">/data</text>
+<rect x="40.0" y="504.0" width="920.0" height="118.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="532.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">localhost inside web</text>
+<text x="282.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">means web itself. Peers are addressed by service name and their own port.</text>
+<text x="60.0" y="556.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">docker compose down</text>
+<text x="282.0" y="556.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">removes the containers and the project network; pgdata and redisdata are kept.</text>
+<text x="60.0" y="580.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">docker compose down -v</text>
+<text x="282.0" y="580.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">also removes the named volumes: the command that wipes the database.</text>
+<text x="60.0" y="604.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">service_healthy</text>
+<text x="282.0" y="604.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">web starts only after db and cache report healthy, so the first request works.</text>
+<text x="40.0" y="646.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's compose.yaml and the notes under it (Chapter 4).</text>
+</svg>

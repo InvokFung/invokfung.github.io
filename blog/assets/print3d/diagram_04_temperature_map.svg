@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img" aria-label="Chart of typical temperature ranges for PLA, PETG, ABS, ASA and PC: drying range, glass transition Tg, and nozzle range, with the service limits from the post's decision tree">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="700" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="698.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Three temperatures per material</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Dry below Tg. Use below Tg. Print far above it. Typical published ranges; the spool's datasheet wins.</text>
+<rect x="40.0" y="105.0" width="26.0" height="12.0" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="74.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Drying</text>
+<rect x="143.8" y="105.0" width="26.0" height="12.0" rx="3" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1"/>
+<text x="177.8" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Tg range</text>
+<rect x="262.2" y="105.0" width="26.0" height="12.0" rx="3" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="296.2" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Nozzle</text>
+<rect x="366.0" y="105.0" width="26.0" height="12.0" rx="3" fill="#7c3aed" stroke="#7c3aed" stroke-width="1"/>
+<text x="400.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">PLA annealing</text>
+<path d="M533.9000000000001,103 l7,7 l-7,7 l-7,-7 Z" fill="#0d9488"/>
+<text x="554.9" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Service limit (decision tree)</text>
+<line x1="210.0" y1="154.0" x2="210.0" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="210.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">0</text>
+<line x1="325.6" y1="154.0" x2="325.6" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="325.6" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">50</text>
+<line x1="441.2" y1="154.0" x2="441.2" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="441.2" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">100</text>
+<line x1="556.9" y1="154.0" x2="556.9" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="556.9" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">150</text>
+<line x1="672.5" y1="154.0" x2="672.5" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="672.5" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">200</text>
+<line x1="788.1" y1="154.0" x2="788.1" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="788.1" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">250</text>
+<line x1="903.8" y1="154.0" x2="903.8" y2="556.0" stroke="#e5e7eb" stroke-width="1" stroke-linecap="round"/>
+<text x="903.8" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="middle">300</text>
+<text x="580.0" y="602.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">temperature (°C)</text>
+<line x1="210.0" y1="190.0" x2="950.0" y2="190.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<text x="40.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">PLA</text>
+<text x="40.0" y="215.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">hot use only if annealed</text>
+<rect x="302.5" y="182.0" width="23.1" height="16.0" rx="4" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="314.1" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">dry 40–50</text>
+<rect x="337.2" y="182.0" width="23.1" height="16.0" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1"/>
+<text x="348.8" y="175.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Tg 55–65</text>
+<rect x="649.4" y="182.0" width="69.4" height="16.0" rx="4" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="684.1" y="175.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">nozzle 190–220</text>
+<rect x="395.0" y="182.0" width="69.4" height="16.0" rx="4" fill="#7c3aed" stroke="#7c3aed" stroke-width="1"/>
+<text x="429.7" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">anneal 80–110</text>
+<line x1="210.0" y1="270.0" x2="950.0" y2="270.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<text x="40.0" y="275.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">PETG</text>
+<text x="40.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#0d9488" text-anchor="start">hot use up to ~70 °C</text>
+<rect x="348.8" y="262.0" width="23.1" height="16.0" rx="4" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="360.3" y="296.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">dry 60–70</text>
+<rect x="383.4" y="262.0" width="23.1" height="16.0" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1"/>
+<text x="395.0" y="255.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Tg 75–85</text>
+<rect x="741.9" y="262.0" width="46.2" height="16.0" rx="4" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="765.0" y="255.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">nozzle 230–250</text>
+<path d="M371.9,258 l8,12 l-8,12 l-8,-12 Z" fill="#0d9488" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="210.0" y1="350.0" x2="950.0" y2="350.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<text x="40.0" y="355.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">ABS</text>
+<text x="40.0" y="375.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#0d9488" text-anchor="start">hot use up to ~95 °C</text>
+<rect x="360.3" y="342.0" width="34.7" height="16.0" rx="4" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="377.7" y="376.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">dry 65–80</text>
+<rect x="441.2" y="342.0" width="23.1" height="16.0" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1"/>
+<text x="452.8" y="335.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Tg 100–110</text>
+<rect x="753.4" y="342.0" width="57.8" height="16.0" rx="4" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="782.3" y="335.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">nozzle 235–260</text>
+<path d="M429.7,338 l8,12 l-8,12 l-8,-12 Z" fill="#0d9488" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="210.0" y1="430.0" x2="950.0" y2="430.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<text x="40.0" y="435.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">ASA</text>
+<text x="40.0" y="455.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#0d9488" text-anchor="start">hot use up to ~95 °C</text>
+<rect x="360.3" y="422.0" width="34.7" height="16.0" rx="4" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="377.7" y="456.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">dry 65–80</text>
+<rect x="441.2" y="422.0" width="23.1" height="16.0" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1"/>
+<text x="452.8" y="415.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Tg 100–110</text>
+<rect x="765.0" y="422.0" width="57.8" height="16.0" rx="4" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="793.9" y="415.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">nozzle 240–265</text>
+<path d="M429.7,418 l8,12 l-8,12 l-8,-12 Z" fill="#0d9488" stroke="#ffffff" stroke-width="1.5"/>
+<line x1="210.0" y1="510.0" x2="950.0" y2="510.0" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+<text x="40.0" y="515.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">PC</text>
+<text x="40.0" y="535.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">for hot use above ~95 °C</text>
+<rect x="395.0" y="502.0" width="46.2" height="16.0" rx="4" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+<text x="418.1" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">dry 80–100</text>
+<rect x="545.3" y="502.0" width="11.6" height="16.0" rx="4" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1"/>
+<text x="551.1" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">Tg 145–150</text>
+<rect x="811.2" y="502.0" width="115.6" height="16.0" rx="4" fill="#d97706" stroke="#d97706" stroke-width="1"/>
+<text x="869.1" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">nozzle 260–310</text>
+<text x="40.0" y="634.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Tg, not the melting point, is the real service ceiling: above it the part sags and creeps.</text>
+<text x="40.0" y="656.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Tg values vary by 10–20 °C between sources. Read them as a ranking: PLA &lt; PETG &lt; ABS/ASA &lt; PC.</text>
+<text x="40.0" y="682.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 04 — Process window, Character and Drying tables; Chapter 6 and 7 for annealing and service limits.</text>
+</svg>

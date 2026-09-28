@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 656" width="1000" height="656" role="img" aria-label="Cross-section of a printed beam in bending with perimeters at the top and bottom where stress is highest and infill near the neutral axis where stress is near zero, beside the six strength levers in order">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="656" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="654.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Where strength comes from in a printed part</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">In bending, the outer walls do the work. And the order you tune things in matters more than any one setting.</text>
+<rect x="40.0" y="100.0" width="470.0" height="480.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">A printed beam under bending</text>
+<text x="60.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Cross-section, and the stress across its depth</text>
+<rect x="64.0" y="196.0" width="180.0" height="220.0" rx="6" fill="#fdba74" stroke="#c2410c" stroke-width="2"/>
+<rect x="86.0" y="218.0" width="136.0" height="176.0" rx="3" fill="#fff7ed" stroke="#fb923c" stroke-width="1.2"/>
+<rect x="71.3" y="203.3" width="165.3" height="205.3" rx="5" fill="none" stroke="#c2410c" stroke-width="0.8"/>
+<rect x="78.7" y="210.7" width="150.7" height="190.7" rx="5" fill="none" stroke="#c2410c" stroke-width="0.8"/>
+<path d="M92,232 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,250 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,268 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,286 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,304 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,322 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,340 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,358 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92,376 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0 q8,7 16,0 q8,-7 16,0" fill="none" stroke="#fb923c" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="54.0" y1="306.0" x2="490.0" y2="306.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="316.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">neutral axis: zero stress</text>
+<line x1="290.0" y1="196.0" x2="290.0" y2="416.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M290,306.0 L390,196 L290,196 Z" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M290,306.0 L390.0,416 L290,416 Z" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="292.0" y1="223.5" x2="361.0" y2="223.5" stroke="#dc4c3a" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="292.0" y1="333.5" x2="311.0" y2="333.5" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="292.0" y1="251.0" x2="336.0" y2="251.0" stroke="#dc4c3a" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="292.0" y1="361.0" x2="336.0" y2="361.0" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="292.0" y1="278.5" x2="311.0" y2="278.5" stroke="#dc4c3a" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="292.0" y1="388.5" x2="361.0" y2="388.5" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/>
+<text x="396.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">tension,</text>
+<text x="396.0" y="227.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="start">max stress</text>
+<text x="396.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="start">compression,</text>
+<text x="396.0" y="415.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563eb" text-anchor="start">max stress</text>
+<text x="60.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#c2410c" text-anchor="start">Perimeters sit exactly where the stress is highest.</text>
+<text x="60.0" y="470.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Infill sits near the neutral axis, where it is lowest.</text>
+<text x="60.0" y="500.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Bending stiffness weights material by the square of its</text>
+<text x="60.0" y="519.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">distance from the neutral axis, so walls beat infill.</text>
+<text x="60.0" y="552.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start" font-style="italic">Infill still supports top surfaces and braces the walls.</text>
+<rect x="530.0" y="100.0" width="430.0" height="480.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="550.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1f2937" text-anchor="start">What controls strength, in order</text>
+<text x="550.0" y="151.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Beginners tune this list in roughly reverse order.</text>
+<rect x="550.0" y="172.0" width="390.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="574" cy="199" r="14" fill="#0d9488"/>
+<text x="574.0" y="204.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="598.0" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Orientation</text>
+<text x="598.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">by a wide margin; keep tension in the layer plane</text>
+<rect x="550.0" y="236.0" width="390.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="574" cy="263" r="14" fill="#0d9488"/>
+<text x="574.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="598.0" y="259.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Perimeter (wall) count</text>
+<text x="598.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">4–6 for functional parts; much larger than infill</text>
+<rect x="550.0" y="300.0" width="390.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="574" cy="327" r="14" fill="#2563eb"/>
+<text x="574.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="598.0" y="323.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Material</text>
+<text x="598.0" y="342.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">Post 04's decision tree</text>
+<rect x="550.0" y="364.0" width="390.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="574" cy="391" r="14" fill="#2563eb"/>
+<text x="574.0" y="396.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="598.0" y="387.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Temperature and cooling</text>
+<text x="598.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">hotter nozzle, less fan: stronger layer bonds</text>
+<rect x="550.0" y="428.0" width="390.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="574" cy="455" r="14" fill="#6b7280"/>
+<text x="574.0" y="460.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="598.0" y="451.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Infill density and pattern</text>
+<text x="598.0" y="470.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">20–30 %, gyroid default; returns flatten past ~40–50 %</text>
+<rect x="550.0" y="492.0" width="390.0" height="54.0" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.2"/>
+<circle cx="574" cy="519" r="14" fill="#6b7280"/>
+<text x="574.0" y="524.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="598.0" y="515.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">Layer height</text>
+<text x="598.0" y="534.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">real but small next to the levers above</text>
+<text x="40.0" y="610.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Exercise 3 expects 6 perimeters / 15 % infill to beat 2 perimeters / 50 % infill in bending — with less material and time.</text>
+<text x="40.0" y="638.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 07, Chapter 3 and Exercise 3. Stress profile drawn as the post states it: linear, zero at the axis.</text>
+</svg>

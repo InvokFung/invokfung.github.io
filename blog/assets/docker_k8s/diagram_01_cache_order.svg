@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 652" width="1000" height="652" role="img" aria-label="Two Dockerfiles rebuilt after touching one source file: with COPY . . first, npm ci reruns; with the lockfiles copied first, npm ci stays cached">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="652" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="650.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Build cache after editing one source file</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Same app, same edit (touch src/index.js). Only the instruction order differs.</text>
+<text x="40.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#dc4c3a" text-anchor="start">Before</text>
+<text x="40.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">every code edit reinstalls every dependency</text>
+<rect x="40.0" y="154.0" width="440.0" height="36.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="54.0" y="177.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">FROM node:22-alpine</text>
+<rect x="407.5" y="163.0" width="60.5" height="20.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="437.8" y="177.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">CACHED</text>
+<rect x="40.0" y="198.0" width="440.0" height="36.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="54.0" y="221.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">WORKDIR /app</text>
+<rect x="407.5" y="207.0" width="60.5" height="20.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="437.8" y="221.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">CACHED</text>
+<rect x="40.0" y="242.0" width="440.0" height="50.0" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="54.0" y="265.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">COPY . .</text>
+<text x="54.0" y="283.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">any file change invalidates here</text>
+<rect x="376.5" y="251.0" width="91.5" height="20.0" rx="10" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.5"/>
+<text x="422.2" y="265.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">cache miss</text>
+<rect x="40.0" y="300.0" width="440.0" height="50.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="54.0" y="323.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">RUN npm ci</text>
+<text x="54.0" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">every dependency reinstalled</text>
+<rect x="399.8" y="309.0" width="68.2" height="20.0" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<text x="433.9" y="323.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">rebuilt</text>
+<rect x="40.0" y="358.0" width="440.0" height="36.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="54.0" y="381.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">CMD ["node", "server.js"]</text>
+<rect x="399.8" y="367.0" width="68.2" height="20.0" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<text x="433.9" y="381.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">rebuilt</text>
+<text x="520.0" y="116.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="17" font-weight="700" fill="#0d9488" text-anchor="start">After</text>
+<text x="520.0" y="138.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">code edits reuse the install layer</text>
+<rect x="520.0" y="154.0" width="440.0" height="36.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="534.0" y="177.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">FROM node:22-alpine</text>
+<rect x="887.5" y="163.0" width="60.5" height="20.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="917.8" y="177.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">CACHED</text>
+<rect x="520.0" y="198.0" width="440.0" height="36.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="534.0" y="221.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">WORKDIR /app</text>
+<rect x="887.5" y="207.0" width="60.5" height="20.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="917.8" y="221.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">CACHED</text>
+<rect x="520.0" y="242.0" width="440.0" height="50.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="534.0" y="265.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">COPY package.json package-lock.json ./</text>
+<text x="534.0" y="283.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">changes only when deps change</text>
+<rect x="887.5" y="251.0" width="60.5" height="20.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="917.8" y="265.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">CACHED</text>
+<rect x="520.0" y="300.0" width="440.0" height="50.0" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="534.0" y="323.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">RUN npm ci</text>
+<text x="534.0" y="341.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">install layer reused</text>
+<rect x="887.5" y="309.0" width="60.5" height="20.0" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+<text x="917.8" y="323.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">CACHED</text>
+<rect x="520.0" y="358.0" width="440.0" height="50.0" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="534.0" y="381.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">COPY . .</text>
+<text x="534.0" y="399.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">code changes land here, cheaply</text>
+<rect x="856.5" y="367.0" width="91.5" height="20.0" rx="10" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.5"/>
+<text x="902.2" y="381.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">cache miss</text>
+<rect x="520.0" y="416.0" width="440.0" height="36.0" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="534.0" y="439.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">CMD ["node", "server.js"]</text>
+<rect x="879.8" y="425.0" width="68.2" height="20.0" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<text x="913.9" y="439.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">rebuilt</text>
+<text x="40.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#dc4c3a" text-anchor="start">One miss, and every step below it rebuilds.</text>
+<text x="520.0" y="480.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="start">The miss now lands below the install step.</text>
+<rect x="40.0" y="500.0" width="920.0" height="106.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="60.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">How each step's cache key is computed</text>
+<text x="60.0" y="554.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">RUN</text>
+<text x="250.0" y="554.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the command string (plus the parent layer)</text>
+<text x="60.0" y="574.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">COPY / ADD</text>
+<text x="250.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">a checksum of the copied files' contents and metadata</text>
+<text x="60.0" y="594.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">metadata instructions</text>
+<text x="250.0" y="594.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the instruction text</text>
+<text x="40.0" y="634.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's Before / After Dockerfiles and "How the cache decides" (Chapter 3).</text>
+</svg>

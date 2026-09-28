@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 814" width="1000" height="814" role="img" aria-label="MVCC in PostgreSQL: an UPDATE leaves the old tuple with xmax set and writes a new tuple at a new ctid; a snapshot decides which version a reader sees; READ COMMITTED takes a new snapshot per statement while REPEATABLE READ keeps one for the whole transaction">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="814" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="812.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">MVCC: an UPDATE writes a new row version</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each tuple records xmin (the transaction that created it) and xmax (the one that superseded it).</text>
+<circle cx="52.0" cy="112.0" r="12" fill="#1f2937"/>
+<text x="52.0" y="117.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="74.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">One logical row, two physical tuples</text>
+<rect x="40.0" y="136.0" width="350.0" height="114.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="56.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">heap page 0, after INSERT</text>
+<text x="78.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">ctid</text>
+<text x="152.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">xmin</text>
+<text x="220.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">xmax</text>
+<text x="288.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">id</text>
+<text x="332.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">v</text>
+<rect x="60.0" y="198.0" width="310.0" height="34.0" rx="7" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="78.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">(0,1)</text>
+<text x="152.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">812</text>
+<text x="220.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">0</text>
+<text x="288.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">1</text>
+<text x="332.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">'a'</text>
+<text x="56.0" y="266.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">one live tuple</text>
+<rect x="610.0" y="136.0" width="350.0" height="158.0" rx="10" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="626.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">heap page 0, after UPDATE</text>
+<text x="648.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">ctid</text>
+<text x="722.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">xmin</text>
+<text x="790.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">xmax</text>
+<text x="858.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">id</text>
+<text x="902.0" y="188.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="start">v</text>
+<rect x="630.0" y="198.0" width="310.0" height="34.0" rx="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="648.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">(0,1)</text>
+<text x="722.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">812</text>
+<text x="790.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">813</text>
+<text x="858.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">1</text>
+<text x="902.0" y="220.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">'a'</text>
+<rect x="630.0" y="242.0" width="310.0" height="34.0" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="648.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">(0,2)</text>
+<text x="722.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">813</text>
+<text x="790.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">0</text>
+<text x="858.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">1</text>
+<text x="902.0" y="264.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">'b'</text>
+<text x="626.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start"></text>
+<text x="626.0" y="310.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">old tuple stays, invisible to new snapshots,</text>
+<text x="626.0" y="328.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">until vacuum reclaims it</text>
+<line x1="400.0" y1="200.0" x2="596.0" y2="200.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="498.0" y="186.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="middle">UPDATE t SET v = 'b'</text>
+<text x="498.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">transaction 813</text>
+<text x="498.0" y="242.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">1. write the new version</text>
+<text x="498.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="middle">2. set old xmax = 813</text>
+<line x1="40.0" y1="342.0" x2="960.0" y2="342.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="52.0" cy="366.0" r="12" fill="#1f2937"/>
+<text x="52.0" y="371.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="74.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Which version a reader sees</text>
+<text x="40.0" y="398.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Visible if xmin committed before the snapshot, and xmax is 0 or had not committed at snapshot time.</text>
+<line x1="60.0" y1="456.0" x2="940.0" y2="456.0" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="940.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">time</text>
+<line x1="500.0" y1="430.0" x2="500.0" y2="482.0" stroke="#dc4c3a" stroke-width="2.2" stroke-linecap="round"/>
+<text x="500.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">transaction 813 commits</text>
+<circle cx="250" cy="456" r="7" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="250.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">snapshot taken before</text>
+<rect x="140.0" y="474.0" width="220.0" height="34.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.6"/>
+<text x="250.0" y="496.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">sees (0,1)  v = 'a'</text>
+<circle cx="750" cy="456" r="7" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="750.0" y="440.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">snapshot taken after</text>
+<rect x="640.0" y="474.0" width="220.0" height="34.0" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="750.0" y="496.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">sees (0,2)  v = 'b'</text>
+<line x1="40.0" y1="522.0" x2="960.0" y2="522.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<circle cx="52.0" cy="546.0" r="12" fill="#1f2937"/>
+<text x="52.0" y="551.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="74.0" y="552.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">When the snapshot is taken: the post's Exercise 2</text>
+<rect x="40.0" y="570.0" width="450.0" height="190.0" rx="10" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="56.0" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">READ COMMITTED (default)</text>
+<text x="56.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">a new snapshot at the start of each statement</text>
+<rect x="56.0" y="632.0" width="26.0" height="22.0" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+<text x="69.0" y="648.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">A</text>
+<text x="94.0" y="648.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">SELECT balance</text>
+<text x="470.0" y="648.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">→ 1000</text>
+<rect x="56.0" y="662.0" width="26.0" height="22.0" rx="5" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<text x="69.0" y="678.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">B</text>
+<text x="94.0" y="678.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">UPDATE … = 900; COMMIT</text>
+<text x="470.0" y="678.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#6b7280" text-anchor="end"></text>
+<rect x="56.0" y="692.0" width="26.0" height="22.0" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+<text x="69.0" y="708.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">A</text>
+<text x="94.0" y="708.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">SELECT balance</text>
+<text x="470.0" y="708.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#d97706" text-anchor="end">→ 900</text>
+<text x="56.0" y="744.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="start">Non-repeatable read: the second SELECT changed.</text>
+<rect x="510.0" y="570.0" width="450.0" height="190.0" rx="10" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="526.0" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">REPEATABLE READ</text>
+<text x="526.0" y="616.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">one snapshot at the first statement, kept to the end</text>
+<rect x="526.0" y="632.0" width="26.0" height="22.0" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+<text x="539.0" y="648.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">A</text>
+<text x="564.0" y="648.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">SELECT balance</text>
+<text x="940.0" y="648.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#1f2937" text-anchor="end">→ 900</text>
+<rect x="526.0" y="662.0" width="26.0" height="22.0" rx="5" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+<text x="539.0" y="678.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">B</text>
+<text x="564.0" y="678.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">UPDATE … = 800; COMMIT</text>
+<text x="940.0" y="678.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#6b7280" text-anchor="end"></text>
+<rect x="526.0" y="692.0" width="26.0" height="22.0" rx="5" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+<text x="539.0" y="708.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">A</text>
+<text x="564.0" y="708.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">SELECT balance</text>
+<text x="940.0" y="708.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="end">→ 900</text>
+<text x="526.0" y="744.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="start">Stable: still 900, B's 800 is not visible.</text>
+<text x="40.0" y="796.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: PostgreSQL Course 05, Chapter 2 (ctid / xmin / xmax output, visibility rule) and Exercise 2.</text>
+</svg>

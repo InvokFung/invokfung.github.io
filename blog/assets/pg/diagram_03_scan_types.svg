@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 816" width="1000" height="816" role="img" aria-label="Three ways PostgreSQL reads a table: an index scan fetches matching heap rows one by one in index order, a bitmap heap scan sorts the matching pages and reads each once in physical order, and a sequential scan reads every page; the choice depends on how many rows match">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="816" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="814.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Three ways to read a table</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Which scan is cheapest depends mostly on how many rows the predicate matches (its selectivity).</text>
+<rect x="40.0" y="100.0" width="920.0" height="196.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64.0" cy="126.0" r="12" fill="#0d9488"/>
+<text x="64.0" y="131.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="86.0" y="132.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Index Scan</text>
+<text x="86.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Walk the index, fetch each matching heap row. Chosen when few rows match.</text>
+<rect x="330.0" y="170.0" width="96.0" height="30.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="378.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">key → TID</text>
+<circle cx="328.0" cy="172.0" r="12" fill="#0d9488"/>
+<text x="328.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="436.0" y="170.0" width="96.0" height="30.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="484.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">key → TID</text>
+<circle cx="434.0" cy="172.0" r="12" fill="#0d9488"/>
+<text x="434.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="542.0" y="170.0" width="96.0" height="30.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="590.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">key → TID</text>
+<circle cx="540.0" cy="172.0" r="12" fill="#0d9488"/>
+<text x="540.0" y="177.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="656.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="start">index entries, in index order</text>
+<text x="656.0" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">fetches may jump around the heap</text>
+<rect x="330.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="352.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<rect x="382.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="404.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">1</text>
+<rect x="434.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="456.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">2</text>
+<rect x="486.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="508.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">3</text>
+<rect x="538.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="560.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">4</text>
+<rect x="590.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="612.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">5</text>
+<rect x="642.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="664.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">6</text>
+<rect x="694.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="716.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">7</text>
+<rect x="746.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="768.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">8</text>
+<rect x="798.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="820.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">9</text>
+<rect x="850.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="872.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="middle">10</text>
+<rect x="902.0" y="240.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="924.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">11</text>
+<text x="318.0" y="265.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">heap pages</text>
+<line x1="378.0" y1="202.0" x2="716.0" y2="236.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="484.0" y1="202.0" x2="456.0" y2="236.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="590.0" y1="202.0" x2="872.0" y2="236.0" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="40.0" y="312.0" width="920.0" height="206.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64.0" cy="338.0" r="12" fill="#7c3aed"/>
+<text x="64.0" y="343.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="86.0" y="344.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Bitmap Index Scan → Bitmap Heap Scan</text>
+<text x="86.0" y="364.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Collect matching TIDs in a bitmap, sort by page, read each heap page once. Middle-sized results.</text>
+<rect x="330.0" y="382.0" width="308.0" height="30.0" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="484.0" y="402.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">index entries</text>
+<line x1="644.0" y1="397.0" x2="680.0" y2="397.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="688.0" y="395.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="start">bitmap: one bit per heap page</text>
+<text x="688.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">then pages are read in physical order</text>
+<text x="352.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="404.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="456.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">1</text>
+<text x="508.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="560.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="612.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="664.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="716.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">1</text>
+<text x="768.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="820.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<text x="872.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">1</text>
+<text x="924.0" y="438.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<rect x="330.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="352.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">0</text>
+<rect x="382.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="404.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">1</text>
+<rect x="434.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="456.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">2</text>
+<rect x="486.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="508.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">3</text>
+<rect x="538.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="560.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">4</text>
+<rect x="590.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="612.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">5</text>
+<rect x="642.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="664.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">6</text>
+<rect x="694.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="716.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">7</text>
+<rect x="746.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="768.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">8</text>
+<rect x="798.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="820.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">9</text>
+<rect x="850.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="872.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">10</text>
+<rect x="902.0" y="448.0" width="44.0" height="40.0" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="924.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="middle">11</text>
+<text x="318.0" y="473.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">heap pages</text>
+<line x1="342.0" y1="502.0" x2="934.0" y2="502.0" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="318.0" y="507.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">read order</text>
+<circle cx="456.0" cy="502" r="4.5" fill="#7c3aed"/>
+<circle cx="716.0" cy="502" r="4.5" fill="#7c3aed"/>
+<circle cx="872.0" cy="502" r="4.5" fill="#7c3aed"/>
+<rect x="40.0" y="534.0" width="920.0" height="132.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64.0" cy="560.0" r="12" fill="#d97706"/>
+<text x="64.0" y="565.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="86.0" y="566.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Seq Scan</text>
+<text x="86.0" y="586.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Read every heap page in order. Chosen when the predicate matches a large fraction, or the table is tiny.</text>
+<rect x="330.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="352.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">0</text>
+<rect x="382.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="404.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">1</text>
+<rect x="434.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="456.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">2</text>
+<rect x="486.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="508.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">3</text>
+<rect x="538.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="560.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">4</text>
+<rect x="590.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="612.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">5</text>
+<rect x="642.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="664.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">6</text>
+<rect x="694.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="716.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">7</text>
+<rect x="746.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="768.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">8</text>
+<rect x="798.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="820.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">9</text>
+<rect x="850.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="872.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">10</text>
+<rect x="902.0" y="604.0" width="44.0" height="40.0" rx="5" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+<text x="924.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">11</text>
+<text x="318.0" y="629.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">heap pages</text>
+<line x1="342.0" y1="656.0" x2="934.0" y2="656.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="318.0" y="661.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="end">read order</text>
+<text x="40.0" y="704.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">Fraction of the table the predicate matches (not to scale)</text>
+<rect x="41.0" y="718.0" width="274.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="178.0" y="738.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">few rows: Index Scan</text>
+<rect x="317.0" y="718.0" width="292.4" height="30.0" rx="6" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+<text x="463.2" y="738.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">middle-sized: Bitmap Heap Scan</text>
+<rect x="611.4" y="718.0" width="347.6" height="30.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="785.2" y="738.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">beyond roughly 5–10%: Seq Scan</text>
+<text x="40.0" y="770.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">The exact crossover depends on random_page_cost and physical correlation.</text>
+<text x="40.0" y="798.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: PostgreSQL Course 03, Chapter 6 (scan-node table, when a sequential scan is correct). Page numbers are an example.</text>
+</svg>

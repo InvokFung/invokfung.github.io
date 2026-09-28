@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 686" width="1000" height="686" role="img" aria-label="Keyless signing with cosign: the CI job's OIDC identity gets a short-lived Fulcio certificate, the signature goes to the Rekor log, and verification must assert the expected identity and issuer">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="686" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="684.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Keyless signing: no long-lived key to lose</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The CI job's identity is what gets certified. Verification is only useful if it checks that identity.</text>
+<text x="40.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Sign, inside the CI job</text>
+<rect x="40.0" y="134.0" width="164.0" height="150.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="62.0" cy="158.0" r="12" fill="#7c3aed"/>
+<text x="62.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="80.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">OIDC token</text>
+<text x="54.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The CI job</text>
+<text x="54.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">authenticates with</text>
+<text x="54.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">an OIDC token.</text>
+<text x="54.0" y="252.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">(id-token: write)</text>
+<line x1="207.0" y1="209.0" x2="225.0" y2="209.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="229.0" y="134.0" width="164.0" height="150.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="251.0" cy="158.0" r="12" fill="#7c3aed"/>
+<text x="251.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="269.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Fulcio</text>
+<text x="243.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Issues a short-lived</text>
+<text x="243.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">certificate bound</text>
+<text x="243.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">to that identity.</text>
+<line x1="396.0" y1="209.0" x2="414.0" y2="209.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="418.0" y="134.0" width="164.0" height="150.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="440.0" cy="158.0" r="12" fill="#7c3aed"/>
+<text x="440.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="458.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">cosign sign</text>
+<text x="432.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Signs the digest,</text>
+<text x="432.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">never the tag: a tag</text>
+<text x="432.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">can move after</text>
+<text x="432.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">signing.</text>
+<line x1="585.0" y1="209.0" x2="603.0" y2="209.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="607.0" y="134.0" width="164.0" height="150.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="629.0" cy="158.0" r="12" fill="#7c3aed"/>
+<text x="629.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="647.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Rekor</text>
+<text x="621.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The signature is</text>
+<text x="621.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">recorded in the</text>
+<text x="621.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">transparency log.</text>
+<line x1="774.0" y1="209.0" x2="792.0" y2="209.0" stroke="#1f2937" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="796.0" y="134.0" width="164.0" height="150.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<circle cx="818.0" cy="158.0" r="12" fill="#7c3aed"/>
+<text x="818.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="836.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Expiry</text>
+<text x="810.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The certificate</text>
+<text x="810.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">expires minutes</text>
+<text x="810.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">later. No long-lived</text>
+<text x="810.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">key exists.</text>
+<text x="40.0" y="318.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Verify, before you trust or run it</text>
+<rect x="40.0" y="332.0" width="640.0" height="142.0" rx="8" fill="#0f172a" stroke="#0f172a" stroke-width="1.2"/>
+<text x="54" y="356.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" fill="#e2e8f0" xml:space="preserve">cosign verify \</text>
+<text x="54" y="376.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" fill="#5eead4" xml:space="preserve">  --certificate-identity-regexp \</text>
+<text x="54" y="396.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" fill="#5eead4" xml:space="preserve">      '^https://github.com/acme/api/\.github/workflows/.+' \</text>
+<text x="54" y="416.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" fill="#fcd34d" xml:space="preserve">  --certificate-oidc-issuer \</text>
+<text x="54" y="436.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" fill="#fcd34d" xml:space="preserve">      https://token.actions.githubusercontent.com \</text>
+<text x="54" y="456.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" fill="#e2e8f0" xml:space="preserve">  ghcr.io/acme/api@sha256:9f2e...</text>
+<rect x="700.0" y="332.0" width="260.0" height="142.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="718.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">What the flags assert</text>
+<rect x="718.0" y="382.0" width="12.0" height="12.0" rx="3" fill="#5eead4" stroke="#5eead4" stroke-width="0"/>
+<text x="738.0" y="393.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">WHO signed it: workflows</text>
+<text x="738.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">in github.com/acme/api</text>
+<rect x="718.0" y="432.0" width="12.0" height="12.0" rx="3" fill="#fcd34d" stroke="#fcd34d" stroke-width="0"/>
+<text x="738.0" y="443.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">via WHICH OIDC issuer</text>
+<rect x="40.0" y="492.0" width="920.0" height="64.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<circle cx="66" cy="524" r="10" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<path d="M62.2,520.2 L69.8,527.8 M69.8,520.2 L62.2,527.8" fill="none" stroke="#dc4c3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="88.0" y="519.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">cosign verify with no identity flags checks only that a signature exists.</text>
+<text x="88.0" y="540.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A verification step that accepts any signer is theatre.</text>
+<rect x="40.0" y="574.0" width="920.0" height="64.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<circle cx="66" cy="606" r="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<path d="M61.5,606.0 l3.2,3.2 l5.8,-6.2" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="88.0" y="601.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">Enforce it at admission time in the cluster (Post 07).</text>
+<text x="88.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Kyverno, Sigstore Policy Controller or Gatekeeper reject Pods whose images are unsigned.</text>
+<text x="40.0" y="668.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's keyless-signing description, cosign commands and Watch out note (Chapter 5).</text>
+</svg>

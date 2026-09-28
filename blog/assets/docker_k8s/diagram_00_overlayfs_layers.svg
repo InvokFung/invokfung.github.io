@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 730" width="1000" height="730" role="img" aria-label="overlayfs layer stack: two containers share the read-only image layers and each has a private writable upperdir; panels show what reading, writing, deleting and docker rm do">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="730" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="728.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">overlayfs: shared image layers, one private writable layer</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The container sees one merged tree. Only the top layer can change, and it belongs to that container alone.</text>
+<rect x="40.0" y="104.0" width="290.0" height="40.0" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="54.0" y="129.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">merged/</text>
+<text x="316.0" y="129.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">Container A sees this as /</text>
+<rect x="40.0" y="154.0" width="290.0" height="40.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="54.0" y="179.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">upperdir/</text>
+<text x="316.0" y="179.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="end">writable, this container only</text>
+<line x1="185.0" y1="154.0" x2="185.0" y2="146.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="350.0" y="104.0" width="290.0" height="40.0" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="364.0" y="129.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#1f2937" text-anchor="start">merged/</text>
+<text x="626.0" y="129.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">Container B sees this as /</text>
+<rect x="350.0" y="154.0" width="290.0" height="40.0" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+<text x="364.0" y="179.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14.5" font-weight="700" fill="#d97706" text-anchor="start">upperdir/</text>
+<text x="626.0" y="179.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="end">writable, this container only</text>
+<line x1="495.0" y1="154.0" x2="495.0" y2="146.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="40.0" y="208.0" width="600.0" height="38.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="54.0" y="232.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">lowerdir/  image layer N</text>
+<text x="626.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="end">read-only, shared</text>
+<rect x="40.0" y="254.0" width="600.0" height="38.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="54.0" y="278.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">lowerdir/  image layer N-1</text>
+<text x="626.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="end">read-only, shared</text>
+<rect x="40.0" y="300.0" width="600.0" height="38.0" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="54.0" y="324.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">lowerdir/  image layer 0</text>
+<text x="626.0" y="324.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="end">read-only, shared</text>
+<line x1="185.0" y1="208.0" x2="185.0" y2="196.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<line x1="495.0" y1="208.0" x2="495.0" y2="196.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="670.0" y="104.0" width="290.0" height="242.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="688.0" y="134.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">One image, many containers</text>
+<text x="688.0" y="164.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The read-only layers exist once on</text>
+<text x="688.0" y="184.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">disk and once in page cache.</text>
+<text x="688.0" y="204.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start"></text>
+<text x="688.0" y="224.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Only each container's thin writable</text>
+<text x="688.0" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">layer is private.</text>
+<text x="688.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start"></text>
+<text x="688.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">That is the density story, and it is a</text>
+<text x="688.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">filesystem property, not a</text>
+<text x="688.0" y="324.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">virtualisation one.</text>
+<rect x="40.0" y="372.0" width="218.0" height="292.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="64.0" cy="398.0" r="12" fill="#2563eb"/>
+<text x="64.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="82.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">Read a file</text>
+<rect x="56.0" y="426.0" width="186.0" height="30.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="66.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">upperdir</text>
+<rect x="56.0" y="464.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="66.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer N</text>
+<rect x="56.0" y="502.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="66.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer 0</text>
+<rect x="171.0" y="469.0" width="63.0" height="20" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="202.5" y="483.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">file v2</text>
+<rect x="171.0" y="507.0" width="63.0" height="20" rx="5" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<text x="202.5" y="521.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">file v1</text>
+<line x1="202.5" y1="468.0" x2="202.5" y2="423.0" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="56.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Finds the topmost layer that</text>
+<text x="56.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">contains the file. Lower</text>
+<text x="56.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">copies are hidden.</text>
+<rect x="274.0" y="372.0" width="218.0" height="292.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="298.0" cy="398.0" r="12" fill="#d97706"/>
+<text x="298.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="316.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">Write an existing file</text>
+<rect x="290.0" y="426.0" width="186.0" height="30.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="300.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">upperdir</text>
+<rect x="290.0" y="464.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="300.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer N</text>
+<rect x="290.0" y="502.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="300.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer 0</text>
+<rect x="391.0" y="431.0" width="77.0" height="20" rx="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<text x="429.5" y="445.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">file copy</text>
+<rect x="426.0" y="507.0" width="42.0" height="20" rx="5" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<text x="447.0" y="521.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">file</text>
+<line x1="429.5" y1="506.0" x2="429.5" y2="453.0" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="290.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Copy-up: the whole file is</text>
+<text x="290.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">copied into upperdir first.</text>
+<text x="290.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">One byte edited in a 2 GB</text>
+<text x="290.0" y="618.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">file copies 2 GB.</text>
+<rect x="508.0" y="372.0" width="218.0" height="292.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="532.0" cy="398.0" r="12" fill="#7c3aed"/>
+<text x="532.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="550.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="start">Delete a lower-layer file</text>
+<rect x="524.0" y="426.0" width="186.0" height="30.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="534.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">upperdir</text>
+<rect x="524.0" y="464.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="534.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer N</text>
+<rect x="524.0" y="502.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="534.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer 0</text>
+<rect x="632.0" y="431.0" width="70.0" height="20" rx="5" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="667.0" y="445.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">whiteout</text>
+<rect x="646.0" y="507.0" width="56.0" height="20" rx="5" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<text x="674.0" y="521.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#6b7280" text-anchor="middle">secret</text>
+<text x="524.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">A whiteout entry hides it.</text>
+<text x="524.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">The bytes remain in the</text>
+<text x="524.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">image layer, which is why a</text>
+<text x="524.0" y="618.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">rm'd secret is still in</text>
+<text x="524.0" y="638.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">the image.</text>
+<rect x="742.0" y="372.0" width="218.0" height="292.0" rx="12" fill="#fbfbfc" stroke="#e5e7eb" stroke-width="1.5"/>
+<circle cx="766.0" cy="398.0" r="12" fill="#dc4c3a"/>
+<text x="766.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="784.0" y="403.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">docker rm</text>
+<rect x="758.0" y="426.0" width="186.0" height="30.0" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="768.0" y="446.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="start">upperdir</text>
+<rect x="758.0" y="464.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="768.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer N</text>
+<rect x="758.0" y="502.0" width="186.0" height="30.0" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<text x="768.0" y="522.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" text-anchor="start">image layer 0</text>
+<rect x="852.0" y="431.0" width="84.0" height="20" rx="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+<text x="894.0" y="445.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">all writes</text>
+<line x1="754.0" y1="422.0" x2="948.0" y2="460.0" stroke="#dc4c3a" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="754.0" y1="460.0" x2="948.0" y2="422.0" stroke="#dc4c3a" stroke-width="2.5" stroke-linecap="round"/>
+<text x="758.0" y="558.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Deletes upperdir. All</text>
+<text x="758.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">container-local writes</text>
+<text x="758.0" y="598.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">vanish. Image layers stay</text>
+<text x="758.0" y="618.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">as they were.</text>
+<text x="40.0" y="684.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">Only a mounted volume keeps data past docker rm (Post 02).</text>
+<text x="40.0" y="712.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: the post's overlayfs layer diagram and its four rules (Chapter 2).</text>
+</svg>

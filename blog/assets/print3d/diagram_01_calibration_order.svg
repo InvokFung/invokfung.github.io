@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 978" width="1000" height="978" role="img" aria-label="The calibration sequence from post 01: seven steps done in order, each with what it fixes, how the result is applied, and whether the number belongs to the printer or to the spool">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="978" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="976.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The calibration sequence, in order</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each step produces a number you write down. Each one depends on every step above it.</text>
+<text x="86.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Step</text>
+<text x="356.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">What it fixes</text>
+<text x="624.0" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">Measure, then apply</text>
+<line x1="40.0" y1="128.0" x2="960.0" y2="128.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="40.0" y="138.0" width="920.0" height="40.0" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.4"/>
+<text x="56.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start">4.0</text>
+<text x="92.0" y="163.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Before you start: mechanical checks, a trammed bed, a clean plate, dry filament, a known-good vendor profile.</text>
+<rect x="40.0" y="190.0" width="920.0" height="89.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="214" r="16" fill="#2563eb"/>
+<text x="64.0" y="219.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.1</text>
+<text x="90.0" y="219.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Rotation distance / e-steps</text>
+<rect x="90.0" y="232.5" width="93.8" height="23.5" rx="11.75" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="136.9" y="249.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">per printer</text>
+<text x="356.0" y="219.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The machine feeds a different length</text>
+<text x="356.0" y="240.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">of filament than it was asked for.</text>
+<text x="624.0" y="219.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">actual = 120 − remaining</text>
+<text x="624.0" y="240.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Klipper: new = old × actual / 100</text>
+<text x="624.0" y="261.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Marlin:  new = old × 100 / actual</text>
+<line x1="64.0" y1="279.0" x2="64.0" y2="293.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="40.0" y="287.0" width="920.0" height="89.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="311" r="16" fill="#d97706"/>
+<text x="64.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.2</text>
+<text x="90.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Temperature tower</text>
+<rect x="90.0" y="329.5" width="101.0" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="140.5" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per material</text>
+<rect x="199.0" y="329.5" width="79.2" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="238.6" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per spool</text>
+<text x="356.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Picks the nozzle temperature by</text>
+<text x="356.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">evidence, not the number on the spool.</text>
+<text x="624.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Blocks step by 5 °C.</text>
+<text x="624.0" y="337.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Functional part: hottest block that does</text>
+<text x="624.0" y="358.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">not string, droop or degrade.</text>
+<line x1="64.0" y1="376.0" x2="64.0" y2="390.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="40.0" y="384.0" width="920.0" height="74.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="408" r="16" fill="#d97706"/>
+<text x="64.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.3</text>
+<text x="90.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Flow / extrusion multiplier</text>
+<rect x="90.0" y="426.5" width="79.2" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="129.6" y="443.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per spool</text>
+<text x="356.0" y="413.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Volume the slicer thinks it laid</text>
+<text x="356.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">vs the volume actually laid.</text>
+<text x="624.0" y="413.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">new = old × target / measured width</text>
+<text x="624.0" y="434.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">1.00 × 0.42 / 0.44 = 0.955</text>
+<line x1="64.0" y1="458.0" x2="64.0" y2="472.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="40.0" y="466.0" width="920.0" height="89.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="490" r="16" fill="#d97706"/>
+<text x="64.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.4</text>
+<text x="90.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Retraction</text>
+<rect x="90.0" y="508.5" width="101.0" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="140.5" y="525.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per material</text>
+<text x="356.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Oozing during travel moves:</text>
+<text x="356.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">strings, blobs and zits.</text>
+<text x="624.0" y="495.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Tune distance first, then speed.</text>
+<text x="624.0" y="516.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Keep the shortest distance that</text>
+<text x="624.0" y="537.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">removes the strings.</text>
+<line x1="64.0" y1="555.0" x2="64.0" y2="569.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="40.0" y="563.0" width="920.0" height="89.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="587" r="16" fill="#d97706"/>
+<text x="64.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.5</text>
+<text x="90.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Pressure advance</text>
+<rect x="90.0" y="605.5" width="101.0" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="140.5" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per material</text>
+<text x="356.0" y="592.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Pressure lag in the melt zone: bulges</text>
+<text x="356.0" y="613.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">and thin lines at corners.</text>
+<text x="624.0" y="592.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">PA = height × FACTOR</text>
+<text x="624.0" y="613.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">8 mm × 0.005 = 0.04</text>
+<text x="624.0" y="634.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Marlin calls it linear advance (K).</text>
+<line x1="64.0" y1="652.0" x2="64.0" y2="666.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="40.0" y="660.0" width="920.0" height="100.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="684" r="16" fill="#d97706"/>
+<text x="64.0" y="689.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.6</text>
+<text x="90.0" y="689.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Maximum volumetric flow</text>
+<rect x="90.0" y="702.5" width="101.0" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="140.5" y="719.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per material</text>
+<rect x="199.0" y="702.5" width="86.5" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="242.2" y="719.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per hotend</text>
+<rect x="90.0" y="728.5" width="86.5" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="133.2" y="745.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per nozzle</text>
+<text x="356.0" y="689.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">The ceiling on print speed; above it</text>
+<text x="356.0" y="710.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">the print under-extrudes.</text>
+<text x="624.0" y="689.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Ramp test, starting around 5 mm³/s.</text>
+<text x="624.0" y="710.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Set the limit 10–20 % below</text>
+<text x="624.0" y="731.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">the failure point.</text>
+<line x1="64.0" y1="760.0" x2="64.0" y2="774.0" stroke="#9ca3af" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="40.0" y="768.0" width="920.0" height="74.0" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.4"/>
+<circle cx="64" cy="792" r="16" fill="#d97706"/>
+<text x="64.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">4.7</text>
+<text x="90.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1f2937" text-anchor="start">Cooling</text>
+<rect x="90.0" y="810.5" width="101.0" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="140.5" y="827.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per material</text>
+<text x="356.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Overhangs, bridging, small detail —</text>
+<text x="356.0" y="818.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">traded against layer adhesion.</text>
+<text x="624.0" y="797.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">Fan test at several settings,</text>
+<text x="624.0" y="818.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">plus minimum layer time.</text>
+<rect x="40.0" y="862.5" width="93.8" height="23.5" rx="11.75" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="86.9" y="879.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2563eb" text-anchor="middle">per printer</text>
+<text x="140.0" y="879.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">set once for the machine</text>
+<rect x="360.0" y="862.5" width="159.0" height="23.5" rx="11.75" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="439.5" y="879.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#d97706" text-anchor="middle">per material / spool</text>
+<text x="530.0" y="879.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">re-check on every new spool of filament</text>
+<text x="40.0" y="914.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Change one variable at a time, and write every number down — date, printer, spool, old value, new value.</text>
+<text x="40.0" y="960.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: 3D Printing Course 01, Chapters 4 and 5. Formulas and example numbers as given in the post.</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 748" width="1000" height="748" role="img" aria-label="The write-ahead log and what reads it: every change goes to WAL before the data page; crash recovery replays it, the archiver copies segments for point-in-time recovery, standbys stream and replay it, and logical replication decodes it into row changes">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="748" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="746.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One write-ahead log, four jobs</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Every change is written to WAL before the data page. Recovery, backups and both replication types all read it.</text>
+<rect x="40.0" y="100.0" width="318.0" height="548.0" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="58.0" y="128.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Primary</text>
+<text x="58.0" y="148.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">write-ahead rule: log first, page later</text>
+<rect x="58.0" y="168.0" width="282.0" height="54.0" rx="9" fill="#f9fafb" stroke="#1f2937" stroke-width="1.8"/>
+<text x="72.0" y="192.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">a change (INSERT / UPDATE …)</text>
+<text x="72.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">described in a WAL record</text>
+<line x1="199.0" y1="224.0" x2="199.0" y2="246.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<rect x="58.0" y="248.0" width="282.0" height="54.0" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="72.0" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">WAL buffers</text>
+<text x="72.0" y="292.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">in shared memory</text>
+<line x1="199.0" y1="304.0" x2="199.0" y2="326.0" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="209.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">flush</text>
+<rect x="58.0" y="328.0" width="282.0" height="72.0" rx="9" fill="#fef2f2" stroke="#dc4c3a" stroke-width="1.8"/>
+<text x="72.0" y="352.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="start">pg_wal/</text>
+<text x="72.0" y="372.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">WAL segments, 16 MB each</text>
+<text x="72.0" y="392.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">LSN = byte position in the stream</text>
+<text x="58.0" y="416.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1f2937" text-anchor="start">COMMIT returns once its record is flushed.</text>
+<line x1="58.0" y1="428.0" x2="340.0" y2="428.0" stroke="#e5e7eb" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="58.0" y="440.0" width="282.0" height="54.0" rx="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+<text x="72.0" y="464.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="start">shared buffers → data files</text>
+<text x="72.0" y="484.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">at each checkpoint</text>
+<text x="58.0" y="518.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">A checkpoint flushes all dirty buffers, so</text>
+<text x="58.0" y="536.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">WAL before it can be recycled.</text>
+<text x="58.0" y="560.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">The first change to a page after a checkpoint</text>
+<text x="58.0" y="578.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1f2937" text-anchor="start">writes the whole 8 KB page into WAL</text>
+<text x="58.0" y="596.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">(full_page_writes = on, the default).</text>
+<text x="58.0" y="626.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc4c3a" text-anchor="start">fsync = off is a data-loss setting.</text>
+<rect x="400.0" y="100.0" width="560.0" height="96.0" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.6"/>
+<circle cx="424.0" cy="124.0" r="12" fill="#0d9488"/>
+<text x="424.0" y="129.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="446.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">Crash recovery</text>
+<path d="M340,364 C380,364 370,124 396,124" fill="none" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="400.0" y="208.0" width="560.0" height="150.0" rx="12" fill="#ffffff" stroke="#fcd34d" stroke-width="1.6"/>
+<circle cx="424.0" cy="232.0" r="12" fill="#d97706"/>
+<text x="424.0" y="237.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="446.0" y="238.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#d97706" text-anchor="start">Continuous archiving → point-in-time recovery</text>
+<path d="M340,364 C380,364 370,232 396,232" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="400.0" y="370.0" width="560.0" height="150.0" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.6"/>
+<circle cx="424.0" cy="394.0" r="12" fill="#2563eb"/>
+<text x="424.0" y="399.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="446.0" y="400.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">Streaming replication (physical)</text>
+<path d="M340,364 C380,364 370,394 396,394" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="400.0" y="532.0" width="560.0" height="116.0" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.6"/>
+<circle cx="424.0" cy="556.0" r="12" fill="#7c3aed"/>
+<text x="424.0" y="561.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="446.0" y="562.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="start">Logical replication</text>
+<path d="M340,364 C380,364 370,556 396,556" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text x="420.0" y="158.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">After a crash, replay WAL from the last checkpoint forward,</text>
+<text x="420.0" y="178.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">rebuilding every committed change.</text>
+<rect x="420.0" y="254.0" width="73.4" height="28.0" rx="6" fill="#ffffff" stroke="#dc4c3a" stroke-width="1.4"/>
+<text x="456.7" y="273.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#dc4c3a" text-anchor="middle">pg_wal/</text>
+<line x1="496.4" y1="268.0" x2="516.4" y2="268.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="519.4" y="254.0" width="139.0" height="28.0" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.4"/>
+<text x="588.9" y="273.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">archive_command</text>
+<line x1="661.4" y1="268.0" x2="681.4" y2="268.0" stroke="#6b7280" stroke-width="1.6" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="684.4" y="254.0" width="106.2" height="28.0" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.4"/>
+<text x="737.5" y="273.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#d97706" text-anchor="middle">WAL archive</text>
+<text x="420.0" y="304.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Restore a base backup, replay the archive to recovery_target_time,</text>
+<text x="420.0" y="324.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">pause, verify, then pg_wal_replay_resume().</text>
+<text x="420.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#dc4c3a" text-anchor="start">Hazard: a failing archive_command piles WAL up in pg_wal until the disk fills.</text>
+<text x="420.0" y="432.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">LSN stages:</text>
+<rect x="516.0" y="414.0" width="80.0" height="28.0" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="556.0" y="433.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">sent</text>
+<line x1="598.0" y1="428.0" x2="614.0" y2="428.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="616.0" y="414.0" width="80.0" height="28.0" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="656.0" y="433.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">write</text>
+<line x1="698.0" y1="428.0" x2="714.0" y2="428.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="716.0" y="414.0" width="80.0" height="28.0" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="756.0" y="433.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">flush</text>
+<line x1="798.0" y1="428.0" x2="814.0" y2="428.0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ahm)"/>
+<rect x="816.0" y="414.0" width="80.0" height="28.0" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+<text x="856.0" y="433.0" font-family="Cascadia Mono, Consolas, Menlo, monospace" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">replay</text>
+<text x="420.0" y="466.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">Alert on replay lag in bytes (pg_stat_replication).</text>
+<text x="420.0" y="486.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">A replication slot keeps WAL until the standby has confirmed it.</text>
+<text x="420.0" y="508.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#dc4c3a" text-anchor="start">Hazard: a forgotten slot fills pg_wal. Cap it: max_slot_wal_keep_size (PG 13+).</text>
+<text x="420.0" y="590.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">wal_level = logical. WAL is decoded into row changes:</text>
+<text x="420.0" y="610.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2937" text-anchor="start">PUBLICATION on the source, SUBSCRIPTION on the target.</text>
+<text x="420.0" y="632.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#dc4c3a" text-anchor="start">Not replicated: DDL, sequence values, large objects.</text>
+<text x="40.0" y="676.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">Streaming replication copies bytes of the whole cluster. Logical replication is selective and works across major versions,</text>
+<text x="40.0" y="696.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">which is why it can cut a major-version upgrade's downtime to the seconds of the cutover.</text>
+<text x="40.0" y="730.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Source: PostgreSQL Course 07, Chapters 1-4 (WAL, checkpoints, archiving and PITR, streaming and logical replication).</text>
+</svg>
