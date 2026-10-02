@@ -39,6 +39,18 @@ window.PORTFOLIO = {
    */
   projects: [
     {
+      id: "atlas",
+      name: "StudyLog Atlas",
+      year: 2026,
+      kind: "Search + 3D visualisation",
+      status: "live",
+      featured: true,
+      summary: "Every StudyLog post as a 3D galaxy of 5,551 passages placed by meaning. Ask a question and the matching stars light up, with the exact section linked. All computed at build time: no model, API key or server.",
+      highlights: ["Hybrid keyword + semantic search (85% hit@1 on a 60-question eval)", "TF-IDF → hand-written randomized SVD → UMAP layout", "One-draw-call point cloud with a custom GLSL shader"],
+      stack: ["TypeScript", "React Three Fiber", "GLSL", "BM25", "UMAP"],
+      links: { live: "/atlas/" }
+    },
+    {
       id: "studylog",
       name: "StudyLog",
       year: 2022,
@@ -114,6 +126,7 @@ window.PORTFOLIO = {
    */
   history: [
     { date: "2026-10", branch: "main", title: "Rebuild invokfung.github.io as a live, editable program", tag: "HEAD" },
+    { date: "2026-10", branch: "main", title: "Ship StudyLog Atlas: a 3D, searchable map of every note" },
     { date: "2026-09", branch: "study", title: "Finish the 24-part Dev Essentials series" },
     { date: "2026-09", branch: "study", title: "Next.js Deep Dive: production builds" },
     { date: "2026-08", branch: "study", title: "3D Printing course: strength, failure modes, functional parts" },
