@@ -1,0 +1,370 @@
+[
+ {
+  "q": "why does 0.1 plus 0.2 not equal 0.3",
+  "expect": [
+   "dev_08_floating_point"
+  ]
+ },
+ {
+  "q": "how should I store prices so rounding errors don't lose cents",
+  "expect": [
+   "dev_08_floating_point"
+  ]
+ },
+ {
+  "q": "my file shows weird characters like Ã© after opening it",
+  "expect": [
+   "dev_01_text_encoding"
+  ]
+ },
+ {
+  "q": "undo a commit I already pushed without rewriting history",
+  "expect": [
+   "dev_03_git_rescue_kit"
+  ]
+ },
+ {
+  "q": "recover a branch I deleted by accident",
+  "expect": [
+   "dev_03_git_rescue_kit"
+  ]
+ },
+ {
+  "q": "what happens during the handshake when a browser opens a secure site",
+  "expect": [
+   "dev_07_https_tls"
+  ]
+ },
+ {
+  "q": "store user passwords safely",
+  "expect": [
+   "dev_11_auth"
+  ]
+ },
+ {
+  "q": "make retries safe so a payment is not charged twice",
+  "expect": [
+   "dev_14_api_reliability"
+  ]
+ },
+ {
+  "q": "break a large task into an estimate with a range",
+  "expect": [
+   "dev_21_estimating"
+  ]
+ },
+ {
+  "q": "the 20-20-20 rule for tired eyes",
+  "expect": [
+   "dev_24_desk_health"
+  ]
+ },
+ {
+  "q": "how many months of expenses should an emergency fund hold",
+  "expect": [
+   "dev_23_money_basics"
+  ]
+ },
+ {
+  "q": "does a promise callback run before or after setTimeout",
+  "expect": [
+   "js_01_event_loop_concurrency"
+  ]
+ },
+ {
+  "q": "find a memory leak in a Node service in production",
+  "expect": [
+   "js_05_performance_memory_debugging"
+  ]
+ },
+ {
+  "q": "why does my component re-render when the parent updates",
+  "expect": [
+   "react_00_rendering_model",
+   "react_03_performance_testing_scale"
+  ]
+ },
+ {
+  "q": "keep the UI responsive during a slow state update with useTransition",
+  "expect": [
+   "react_02_concurrent_react_19"
+  ]
+ },
+ {
+  "q": "how does Vue track which properties a component depends on",
+  "expect": [
+   "vue_00_reactivity_internals"
+  ]
+ },
+ {
+  "q": "server components versus client components in the app router",
+  "expect": [
+   "nextjs_00_app_router_mental_model",
+   "nextjs_02_rendering_runtimes"
+  ]
+ },
+ {
+  "q": "draw thousands of trees in a 3D scene with one draw call",
+  "expect": [
+   "threejs_07_instancing_batching"
+  ]
+ },
+ {
+  "q": "soft shadows from the sun over a large terrain",
+  "expect": [
+   "threejs_03_lighting_shadows"
+  ]
+ },
+ {
+  "q": "compress textures for the GPU so the scene loads faster",
+  "expect": [
+   "threejs_04_textures_pbr",
+   "threejs_05_asset_pipeline"
+  ]
+ },
+ {
+  "q": "write a fragment shader that changes colour over time",
+  "expect": [
+   "threejs_09_shaders_glsl_tsl"
+  ]
+ },
+ {
+  "q": "pathfinding for characters walking around a level",
+  "expect": [
+   "threejs_13_ai_navmesh_procedural"
+  ]
+ },
+ {
+  "q": "should comments live inside the blog post document or in their own collection",
+  "expect": [
+   "mongo_07_schema_design"
+  ]
+ },
+ {
+  "q": "why is my query scanning the whole collection and how to read explain output",
+  "expect": [
+   "mongo_04_query_optimization",
+   "mongo_03_indexes"
+  ]
+ },
+ {
+  "q": "get notified in real time when documents change and resume after a crash",
+  "expect": [
+   "mongo_12_change_streams"
+  ]
+ },
+ {
+  "q": "choose a shard key that avoids hot spots",
+  "expect": [
+   "mongo_11_sharding"
+  ]
+ },
+ {
+  "q": "publish an event only if the database write commits",
+  "expect": [
+   "mongo_20_outbox_pattern"
+  ]
+ },
+ {
+  "q": "keep a read model updated from a log of events",
+  "expect": [
+   "mongo_21_cqrs_event_sourcing"
+  ]
+ },
+ {
+  "q": "find all restaurants within 2 km of a point",
+  "expect": [
+   "mongo_27_geospatial_deep"
+  ]
+ },
+ {
+  "q": "running total and moving average over rows ordered by date in SQL",
+  "expect": [
+   "pg_02_joins_aggregation_windows"
+  ]
+ },
+ {
+  "q": "two transactions update the same row, which isolation level prevents lost updates",
+  "expect": [
+   "pg_05_transactions_mvcc_locking"
+  ]
+ },
+ {
+  "q": "when to use a jsonb column instead of extra tables",
+  "expect": [
+   "pg_06_schema_design_jsonb"
+  ]
+ },
+ {
+  "q": "set up point-in-time recovery for postgres",
+  "expect": [
+   "pg_07_operations_backup_replication"
+  ]
+ },
+ {
+  "q": "instances in a private subnet need internet access for updates",
+  "expect": [
+   "aws_01_network_first_vpc"
+  ]
+ },
+ {
+  "q": "run code on a schedule without managing servers",
+  "expect": [
+   "aws_05_serverless_events"
+  ]
+ },
+ {
+  "q": "manage cloud resources as code with remote state and locking",
+  "expect": [
+   "aws_08_terraform_iac"
+  ]
+ },
+ {
+  "q": "what namespaces and cgroups actually do for a container",
+  "expect": [
+   "docker_k8s_00_containers_first_principles"
+  ]
+ },
+ {
+  "q": "make a docker image smaller with multi-stage builds",
+  "expect": [
+   "docker_k8s_01_images_dockerfiles"
+  ]
+ },
+ {
+  "q": "pod keeps restarting because the liveness check fails",
+  "expect": [
+   "docker_k8s_06_scheduling_resources_rollouts"
+  ]
+ },
+ {
+  "q": "sign images and scan them for vulnerabilities before deploying",
+  "expect": [
+   "docker_k8s_03_registries_supply_chain"
+  ]
+ },
+ {
+  "q": "retrieve relevant chunks with vector search to ground an LLM answer",
+  "expect": [
+   "dev_19_rag_from_scratch",
+   "mongo_22_rag_production_build",
+   "mongo_16_atlas_search_vector_triggers"
+  ]
+ },
+ {
+  "q": "what temperature and top-p do when sampling tokens",
+  "expect": [
+   "dev_17_how_llms_work"
+  ]
+ },
+ {
+  "q": "first layer not sticking to the bed",
+  "expect": [
+   "print3d_01_first_print_calibration"
+  ]
+ },
+ {
+  "q": "holes come out smaller than designed on printed parts",
+  "expect": [
+   "print3d_05_accuracy_tolerances"
+  ]
+ },
+ {
+  "q": "which filament for parts that sit in a hot car",
+  "expect": [
+   "print3d_04_materials"
+  ]
+ },
+ {
+  "q": "every subgroup of a cyclic group is cyclic",
+  "expect": [
+   "absalg_01_groups_subgroups"
+  ]
+ },
+ {
+  "q": "the order of a subgroup divides the order of the group",
+  "expect": [
+   "absalg_02_cosets_lagrange_quotients"
+  ]
+ },
+ {
+  "q": "when can a matrix be written as P D P inverse",
+  "expect": [
+   "linalg_04_eigenvalues_diagonalization"
+  ]
+ },
+ {
+  "q": "best fit line with least squares",
+  "expect": [
+   "linalg_05_inner_products_svd"
+  ]
+ },
+ {
+  "q": "every bounded monotone sequence converges",
+  "expect": [
+   "analysis_01_sequences_series",
+   "analysis_00_real_numbers_completeness"
+  ]
+ },
+ {
+  "q": "can I swap a limit and an integral for a sequence of functions",
+  "expect": [
+   "analysis_05_uniform_convergence"
+  ]
+ },
+ {
+  "q": "how to play vibrato on the violin",
+  "expect": [
+   "violin_05_grade5_theory"
+  ]
+ },
+ {
+  "q": "spiccato bowing technique",
+  "expect": [
+   "violin_04_grade4_theory"
+  ]
+ },
+ {
+  "q": "build a half adder from logic gates",
+  "expect": [
+   "logic_circuit_design"
+  ]
+ },
+ {
+  "q": "split a /24 network into smaller subnets",
+  "expect": [
+   "data_com_n_networking",
+   "aws_01_network_first_vpc"
+  ]
+ },
+ {
+  "q": "give clear instructions and examples to get better answers from a chatbot",
+  "expect": [
+   "ai_prompting_foundations"
+  ]
+ },
+ {
+  "q": "difference between list, tuple and dict in python",
+  "expect": [
+   "py_02_data_structures"
+  ]
+ },
+ {
+  "q": "unique_ptr versus shared_ptr",
+  "expect": [
+   "cpp_05_modern"
+  ]
+ },
+ {
+  "q": "read an academic paper efficiently",
+  "expect": [
+   "dev_20_reading_papers"
+  ]
+ },
+ {
+  "q": "filter a collection with streams and lambdas in Java",
+  "expect": [
+   "java_development_p2"
+  ]
+ }
+]
