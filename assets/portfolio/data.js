@@ -30,11 +30,11 @@ window.PORTFOLIO = {
   // The whoami() statement. Each {token} is interactive and shows the evidence behind it.
   statement: "I'm Alan, a software engineer. I {ship full-stack products}, {measure what I build}, {learn the theory underneath} and {write it all down}. Off the keyboard, I {play the violin}.",
   traits: [
-    { k: "ship full-stack products", n: "7", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine that runs in the browser, a memory game, a focus timer and more. Three bigger builds are in progress.", link: "#work", linkText: "see the work ↓" },
-    { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query.", link: "/atlas/", linkText: "try Atlas →" },
+    { k: "ship full-stack products", n: "8", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine and a real-time pitch detector that run in the browser, a memory game, a focus timer and more. Two bigger builds are in progress.", link: "#work", linkText: "see the work ↓" },
+    { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query. Intonation Studio's pitch detector is swept across the whole violin range: on clean, harmonic-rich tones its worst error is 0.17 cents.", link: "/atlas/", linkText: "try Atlas →" },
     { k: "learn the theory underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. It pays off: Atlas runs on a randomized SVD and an eigensolver I wrote myself." },
     { k: "write it all down", n: "174", unit: "technical notes", text: "A 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs: every deep dive becomes a long-form post on StudyLog, my public engineering notebook.", link: "/blog/", linkText: "open StudyLog →" },
-    { k: "play the violin", n: "19", unit: "music notes", text: "Violin notes, and I'm teaching myself the piano. Intonation Studio, a practice room that listens to you play, grows out of this." }
+    { k: "play the violin", n: "19", unit: "music notes", text: "Violin notes, and I'm teaching myself the piano. So I built Intonation Studio, a practice room that hears a scale and scores every note to the cent.", link: "/studio/", linkText: "try Studio →" }
   ],
 
   /*
@@ -52,7 +52,7 @@ window.PORTFOLIO = {
       ["Vue", 2026, "4-part Vue series on StudyLog: reactivity internals, compiler, production"],
       ["Three.js", 2025, "14-part Three.js course on StudyLog: PBR, instancing, shaders, physics"],
       ["GLSL", 2025, "Shaders and post-processing chapters of the Three.js course"],
-      ["WebAssembly", 2026]
+      ["WebAssembly", 2026], ["Web Audio", 2026]
     ] },
     { group: "Backend & data", items: [
       ["Node.js", 2024],
@@ -68,7 +68,7 @@ window.PORTFOLIO = {
       ["Networking", 2022, "Data communications and networking notes (2022), VPC design on AWS"]
     ] },
     { group: "Maths & making", items: [
-      ["Linear algebra", 2025],
+      ["Linear algebra", 2025], ["Signal processing", 2026],
       ["3D printing", 2026, "8-part 3D printing course on StudyLog: slicing, tolerances, functional parts"]
     ] }
   ],
@@ -116,15 +116,15 @@ window.PORTFOLIO = {
     },
     {
       id: "2026", label: "2026", title: "Building in the open", role: "Software engineer",
-      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then StudyLog Atlas: a search engine with a WebAssembly SIMD kernel, measured at 85% hit@1.",
-      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval"], projects: ["atlas"],
-      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Rebuild this site as a program"]]
+      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then two flagships: StudyLog Atlas, a search engine measured at 85% hit@1, and Intonation Studio, a pitch detector written from scratch that is within 0.17 cents on clean tones.",
+      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing"], projects: ["atlas", "intonation"],
+      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Rebuild this site as a program"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Building flagships",
-      text: "Three flagship builds are under way: a practice room that hears my violin, my card game as real-time multiplayer on Kubernetes, and a 3D-printing slicer in C++ compiled to WebAssembly.",
-      picked: ["Web Audio", "WebSockets", "Emscripten"], projects: ["intonation", "arena", "layerline"],
-      events: [["soon", "Intonation Studio: tuner prototype"], ["soon", "TripleFind Arena: multiplayer rooms"], ["soon", "Layerline: C++ slicing core"]]
+      text: "Two flagship builds are under way: my card game as real-time multiplayer on Kubernetes, and a 3D-printing slicer in C++ compiled to WebAssembly.",
+      picked: ["WebSockets", "Emscripten", "Web Workers"], projects: ["arena", "layerline"],
+      events: [["soon", "TripleFind Arena: multiplayer rooms"], ["soon", "Layerline: C++ slicing core"]]
     }
   ],
 
@@ -154,19 +154,20 @@ window.PORTFOLIO = {
       links: { live: "/atlas/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/atlas-src" }
     },
     {
-      id: "intonation", tier: "flagship", motif: "pitch", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "wip",
-      pitch: "A browser practice room that hears my violin or piano and shows pitch, rhythm and progress in real time.",
-      why: "It joins engineering with something I actually practise. Tuners tell you one note at a time; this scores whole scales and tracks how your intonation improves.",
+      id: "intonation", tier: "flagship", motif: "pitch", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "live",
+      pitch: "A practice room in the browser that listens to a violin or a piano and scores a whole scale, note by note, to the cent. A synthesized violinist can play the drill, so you can judge it without an instrument.",
+      why: "It joins engineering with something I actually practise. A tuner shows one note at a time; this scores scales and arpeggios by grade and tracks how each note improves.",
       how: [
-        "Pitch detection (YIN / McLeod) inside an AudioWorklet, targeting under 30 ms latency.",
-        "Scale and arpeggio drills by grade: it plays a target, you play it back, it scores each note in cents.",
-        "Practice history with a per-note intonation heatmap across the fingerboard or keyboard.",
-        "A live visualiser with a custom shader that responds to pitch accuracy and dynamics."
+        "A McLeod pitch detector written from scratch in an AudioWorklet: the autocorrelation comes from one half-size real FFT, and a cosine fit gives the sub-sample lag (parabolic interpolation was off by up to 0.95 cents).",
+        "Notes are segmented with hysteresis and scored on their vibrato-free centre: the contour is smoothed over exactly one vibrato cycle before steadiness is judged.",
+        "Pitch frames never touch React state. The worklet fills a ring buffer that the gauge, strobe and a React Three Fiber stage with custom GLSL each read on their own animation frame.",
+        "Measured, not claimed: accuracy sweeps against YIN, 47 unit tests and 13 headless-browser checks, including a fake microphone playing a rendered violin."
       ],
-      milestones: [["Tuner prototype in an AudioWorklet", false], ["Drill engine + per-note scoring", false], ["Practice history + heatmap", false], ["Visualiser + mobile polish", false], ["Write-up: pitch detection from scratch", false]],
-      stack: ["TypeScript", "Web Audio", "AudioWorklet", "DSP", "Three.js", "PostgreSQL"],
-      uses: ["GLSL"],
-      links: {}
+      metrics: [["0.17¢", "max error, clean"], ["0 / 182", "octave errors, noisy"], ["72 µs", "per frame"], ["29 / 29", "notes recovered"]],
+      milestones: [["McLeod detector in an AudioWorklet", true], ["Drill engine + per-note scoring", true], ["Practice history + heatmap", true], ["GLSL live stage + demo violin", true], ["Write-up: pitch detection from scratch", false]],
+      stack: ["TypeScript", "React", "Web Audio", "AudioWorklet", "Three.js", "GLSL", "Vite"],
+      uses: ["Signal processing"],
+      links: { live: "/studio/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/studio-src" }
     },
     {
       id: "arena", tier: "flagship", motif: "cards", name: "TripleFind Arena", year: 2026, kind: "Distributed systems", status: "wip",

@@ -65,6 +65,7 @@
   const eraYear = (e) => parseInt(e.id, 10) || NOW + 1;
   const shipped = PROJ.filter((p) => p.status !== "wip");
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
+  const spell = (n) => ["no", "one", "two", "three", "four", "five", "six"][n] || String(n);
   const SK = D.skills.flatMap((g) => g.items.map(([name, since, proof]) => ({ name, since, proof, group: g.group })));
   const proves = (p, s) => (p.stack || []).includes(s.name) || (p.uses || []).includes(s.name);
   const usedBy = (s) => PROJ.filter((p) => proves(p, s));
@@ -111,7 +112,7 @@
   }
 
   const ORDER_ALL = () => [...FLAG, ...EXP];
-  const metrics = (p, cls) => (p.metrics ? `<span class="${cls}">${p.metrics.map(([v, l]) => `<span><b>${esc(v)}</b>${esc(l)}</span>`).join("")}</span>` : "");
+  const metrics = (p, cls) => (p.metrics ? `<span class="${cls}">${p.metrics.map(([v, l]) => `<span><b>${esc(v)}</b><i>${esc(l)}</i></span>`).join("")}</span>` : "");
 
   function fcard(p) {
     return `<button type="button" class="fcard rv" data-case="${p.id}" data-ref="p:${p.id}" aria-label="Open the ${esc(p.name)} case study">
@@ -192,8 +193,8 @@
       <div class="fork" id="fork">
         <svg class="lanes" id="lanes" aria-hidden="true"></svg>
         ${node("fork(projects)", "03", "work")}
-        <h2 class="title split">${split("Four <em>flagships</em>, and the experiments that led here")}</h2>
-        <p class="lede rv">The main thread forks into the builds I care most about: one live, three in progress. Open any card for the case study.</p>
+        <h2 class="title split">${split(`${spell(FLAG.length)[0].toUpperCase() + spell(FLAG.length).slice(1)} <em>flagships</em>, and the experiments that led here`)}</h2>
+        <p class="lede rv">The main thread forks into the builds I care most about: ${spell(FLAG.filter((p) => p.status !== "wip").length)} live, ${spell(FLAG.filter((p) => p.status === "wip").length)} in progress. Open any card for the case study.</p>
         <div class="flagships" id="flagships">${FLAG.map(fcard).join("")}</div>
       </div>
       <div class="subhead rv"><b>Experiments</b><span>${EXP.length} smaller things, ${P.firstCommit + 3}–2024</span></div>
