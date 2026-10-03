@@ -81,7 +81,7 @@
   const fill = (t) => String(t || "").replace(/\{(\w+)\}/g, (m, k) => (FILL[k] ? FILL[k]() : m));
   const secTitle = (k, dflt) => split(fill((SEC[k] && SEC[k].title) || dflt));
   const secLede = (k, dflt) => esc(fill((SEC[k] && SEC[k].lede) || dflt));
-  const XH = SEC.experiments || ["Experiments", "smaller things"];
+  const XH = SEC.experiments || ["Experiments", "smaller builds"];
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
   const spell = (n) => ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] || String(n);
   const cap = (w) => String(w).charAt(0).toUpperCase() + String(w).slice(1);
@@ -184,7 +184,7 @@
       </div>
       <div class="hero-stats rv">
         <div><b>${esc(P.metric[0])}</b><span>${esc(P.metric[1])}</span></div>
-        <div><b>${shipped.length}</b><span>projects shipped</span></div>
+        <div><b>${FLAG.length - WIP.length}</b><span>flagships, live and measured</span></div>
         <div><b>${SK.length}</b><span>skills, each with a receipt</span></div>
         <div><b>${P.firstCommit}</b><span>first commit</span></div>
       </div>
@@ -228,7 +228,7 @@
         <p class="lede rv">${secLede("work", "{answers} Open any card for the case study.")}</p>
         <div class="flagships" id="flagships">${FLAG.map(fcard).join("")}</div>
       </div>
-      <div class="subhead rv"><b>${esc(XH[0])}</b><span>${EXP.length} ${esc(XH[1])}, ${Math.min(...EXP.map((p) => p.year))}–${Math.max(...EXP.map((p) => p.year))}</span></div>
+      <div class="subhead rv"><b>${esc(XH[0])}</b><span>${esc(XH[1])} · <a href="${esc(P.github)}?tab=repositories" target="_blank" rel="noopener">older experiments on GitHub ↗</a></span></div>
       <div class="experiments">${EXP.map(xcard).join("")}</div>
     </section>
 
@@ -282,7 +282,7 @@
   }
   function decompile(ch) {
     if (!ch || ch.classList.contains("hex")) return;
-    ch.dataset.hex = "0x" + ch.dataset.c.codePointAt(0).toString(16).toUpperCase();
+    ch.dataset.hex = ch.dataset.c.codePointAt(0).toString(16).toUpperCase();
     ch.classList.add("hex");
     setTimeout(() => ch.classList.remove("hex"), 750);
   }
@@ -437,7 +437,7 @@
         g.beginPath(); g.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + p * TAU); g.stroke();
       }
     },
-    // a wireframe mesh, for the 3D reconstruction work
+    // a wireframe mesh
     mesh(g, w, h, r, t) {
       const nx = h < 80 ? 26 : 22, ny = h < 80 ? 4 : 12, cw = w / (nx - 1), ch = h / (ny - 1);
       const P = (i, j) => [i * cw, j * ch + Math.sin(i * 0.5 + t) * ch * 0.35 * Math.cos(j * 0.4 - t * 0.6)];

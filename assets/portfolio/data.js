@@ -33,7 +33,7 @@ window.PORTFOLIO = {
   statement: "I'm Alan, a Forward Deployed Engineer. I {go where the problem lives}, {ship the whole stack} and {put a number on everything}. Off the clock I {learn the maths underneath}, {write it all down} and {pick up the violin}, which is how a pitch detector ended up on this page.",
   traits: [
     { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "Web developer in 2023, full-stack engineer in 2024, software engineer in 2025, Forward Deployed Engineer since 2026. The job now is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
-    { k: "ship the whole stack", n: "10", unit: "shipped", text: "From a three-tier 3D reconstruction system (web client, Node API, Python backend) to a search engine, a pitch detector and a 3D-printing slicer that run entirely in your browser, plus a multiplayer server load-tested to 1,000 clients.", link: "#work", linkText: "see the work ↓" },
+    { k: "ship the whole stack", n: "4", unit: "flagships", text: "A search engine, a pitch detector and a 3D-printing slicer that run entirely in your browser, and a multiplayer game server load-tested to 1,000 clients. Each one is live, the source is public, and the numbers are on the card.", link: "#work", linkText: "see the work ↓" },
     { k: "put a number on everything", n: "85%", unit: "hit@1", text: "Every flagship ships with its benchmark. Atlas puts the right post first 85% of the time across 60 real questions. Studio's pitch detector is off by at most 0.17 cents on clean tones. Layerline's C++ core runs a median 8× faster than the same algorithm in TypeScript, and its output matches the native build byte for byte.", link: "/atlas/", linkText: "try Atlas →" },
     { k: "learn the maths underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. Not for show: Atlas runs on a randomized SVD and an eigensolver I wrote myself, and Layerline does its geometry on exact integers." },
     { k: "write it all down", n: "174", unit: "public notes", text: "Every deep dive becomes a long-form post on StudyLog, my public engineering notebook: a 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs.", link: "/blog/", linkText: "open StudyLog →" },
@@ -55,7 +55,8 @@ window.PORTFOLIO = {
       title: "{Flagships} questions I couldn't <em>leave alone</em>",
       lede: "{questions} {answers} Open a card for the whole story."
     },
-    experiments: ["Before the flagships", "smaller builds"],
+    // [heading, line beside it]; the link to older experiments on GitHub is added after the line
+    experiments: ["Alongside", "the notebook every project starts in"],
     history: {
       title: "How a Java group project became a <em>career</em>",
       lede: "{chapters} chapters, from my first commit to what's next. Keep scrolling and the page turns sideways through the years; the rail and the ← → keys jump straight to one."
@@ -72,7 +73,7 @@ window.PORTFOLIO = {
    */
   skills: [
     { group: "Languages", items: [
-      ["TypeScript", 2025], ["JavaScript", 2020], ["Python", 2024],
+      ["TypeScript", 2025], ["JavaScript", 2020, "Web developer since 2023; earlier games and tools are on GitHub"], ["Python", 2024],
       ["C++", 2022, "Data structures in C++ (2022), then a 6-part modern C++ series on StudyLog"],
       ["Java", 2018, "My first repository: a Java group project"]
     ] },
@@ -115,9 +116,9 @@ window.PORTFOLIO = {
     },
     {
       id: "2020", label: "2020", title: "Taking things apart", role: "Tinkerer",
-      text: "Curiosity with a keyboard: serverless databases with FaunaDB, a chess board, and small web toys built to find out how things tick.",
-      picked: ["JavaScript", "Serverless DBs", "HTML/CSS"], projects: ["genius"],
-      events: [["2020-09", "Experiments with serverless databases (FaunaDB)"], ["2020-11", "A chess board"], ["2021-07", "genius, a fun web experiment"]]
+      text: "Curiosity with a keyboard: serverless databases with FaunaDB, a chess board, and small experiments built to find out how things tick.",
+      picked: ["JavaScript", "Serverless DBs", "HTML/CSS"],
+      events: [["2020-09", "Experiments with serverless databases (FaunaDB)"], ["2020-11", "A chess board"]]
     },
     {
       id: "2022", label: "2022", title: "Foundations", role: "Computer science student",
@@ -127,14 +128,14 @@ window.PORTFOLIO = {
     },
     {
       id: "2023", label: "2023", title: "Shipping small things", role: "Web developer",
-      text: "My first title: web developer. Ideas started turning into things other people could click: a memory game that pays you for speed, a focus timer, a calculator that reads shapes from their coordinates.",
-      picked: ["DOM", "Game logic", "Responsive UI"], projects: ["triplefind", "chilltimer", "shapecalc"],
-      events: [["2023", "Start as a web developer"], ["2023-02", "TripleFind goes live"], ["2023-03", "First version of ChillTimer"], ["2023-06", "Shape Calculator"]]
+      text: "My first title: web developer. Building interfaces for other people every day, and shipping TripleFind on the side: a timed memory game I would later rebuild as a multiplayer server.",
+      picked: ["DOM", "Game logic", "Responsive UI"], projects: ["arena"],
+      events: [["2023", "Start as a web developer"], ["2023-02", "TripleFind goes live"]]
     },
     {
       id: "2024", label: "2024", title: "Full stack, for real", role: "Full-stack engineer",
       text: "My final year project was a three-tier 3D reconstruction system: web client, Node API, Python backend. The day job went the same way, from the browser down to the server: full-stack engineer.",
-      picked: ["Python", "Node.js", "REST APIs"], projects: ["reconstruction"],
+      picked: ["Python", "Node.js", "REST APIs"],
       events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024", "Become a full-stack engineer"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
     },
     {
@@ -239,34 +240,6 @@ window.PORTFOLIO = {
       pitch: "Where every deep dive ends up: 174 long-form notes on databases, cloud, C++, graphics and maths, with diagrams, maths typesetting and full-text search.",
       how: ["Custom build pipeline with static export", "Diagrams, KaTeX and local full-text search"],
       stack: ["Next.js", "Markdown", "KaTeX", "Python"], links: { live: "/blog/" }
-    },
-    {
-      id: "chilltimer", tier: "experiment", motif: "rings", name: "ChillTimer", year: 2023, kind: "Focus tool", status: "live",
-      pitch: "A Pomodoro timer you would actually leave open: lofi music, an ambient sound mixer, video scenes and weekly focus stats.",
-      how: ["Music and ambient mixer", "Scene backgrounds", "Weekly and all-time stats in localStorage"],
-      stack: ["JavaScript", "CSS", "HTML5 media"], links: { live: "/ptimer/" }
-    },
-    {
-      id: "triplefind", tier: "experiment", motif: "cards", name: "TripleFind", year: 2023, kind: "Game", status: "live",
-      pitch: "Find the triples against the clock. Quick finds score more, and flipping a card you have already seen costs you. Later rebuilt as TripleFind Arena.",
-      how: ["Card count adapts to screen size", "Time-proportional scoring", "Scene transitions and result analysis"],
-      stack: ["JavaScript", "DOM", "CSS"], links: { live: "/triplefind/" }
-    },
-    {
-      id: "reconstruction", tier: "experiment", motif: "mesh", name: "3D Reconstruction", year: 2024, kind: "Final year project", status: "source",
-      pitch: "My final year project: images in, 3D model out, across a web client, a Node API and a Python processing backend.",
-      how: ["Web client", "Node.js API", "Python processing backend"],
-      stack: ["JavaScript", "Node.js", "Python"], links: { source: "https://github.com/InvokFung/3dreconstruction" }
-    },
-    {
-      id: "shapecalc", tier: "experiment", motif: "geo", name: "Shape Calculator", year: 2023, kind: "Utility", status: "source",
-      pitch: "Give it the coordinates, get the shape's properties back.",
-      stack: ["JavaScript"], links: { source: "https://github.com/InvokFung/ShapeCalculator" }
-    },
-    {
-      id: "genius", tier: "experiment", motif: "dots", name: "genius", year: 2021, kind: "Experiment", status: "source",
-      pitch: "One of my first web experiments, from back when the browser was a toy box.",
-      stack: ["HTML", "CSS", "JavaScript"], links: { source: "https://github.com/InvokFung/genius" }
     }
   ],
 
