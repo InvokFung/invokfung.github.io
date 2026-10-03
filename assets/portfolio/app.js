@@ -262,8 +262,13 @@
     evOn = i;
   }
   function hideEv() { ev.classList.remove("on"); $$(".tok.on", statement).forEach((x) => x.classList.remove("on")); evOn = -1; }
-  statement.addEventListener("pointerover", (e) => { const t = e.target.closest(".tok"); if (t && !isMobile()) showEv(t); });
-  statement.addEventListener("pointerout", (e) => { const t = e.target.closest(".tok"); if (t && !t.contains(e.relatedTarget) && !isMobile()) hideEv(); });
+  // a short grace period lets the pointer cross the gap into the card (it can hold a link)
+  let evT = 0;
+  const hideSoon = () => { clearTimeout(evT); evT = setTimeout(hideEv, 180); };
+  statement.addEventListener("pointerover", (e) => { const t = e.target.closest(".tok"); if (t && !isMobile()) { clearTimeout(evT); showEv(t); } });
+  statement.addEventListener("pointerout", (e) => { const t = e.target.closest(".tok"); if (t && !t.contains(e.relatedTarget) && !isMobile()) hideSoon(); });
+  ev.addEventListener("pointerenter", () => clearTimeout(evT));
+  ev.addEventListener("pointerleave", () => { if (!isMobile()) hideSoon(); });
   statement.addEventListener("click", (e) => { const t = e.target.closest(".tok"); if (!t) return; if (evOn === +t.dataset.t && isMobile()) hideEv(); else showEv(t); });
   // keyboard focus only: a tap focuses too, and the click that follows would toggle it shut again
   statement.addEventListener("focusin", (e) => { const t = e.target.closest(".tok"); if (t && t.matches(":focus-visible")) showEv(t); });
