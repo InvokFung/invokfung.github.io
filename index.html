@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Alan Fung · Software Engineer</title>
-<meta name="description" content="Alan Fung (InvokFung), software engineer. A portfolio that is also its own source code: scroll to step through it, edit the live values to recompile it." />
-<meta name="theme-color" content="#0b0d12" />
+<meta name="description" content="Alan Fung (InvokFung), software engineer. A portfolio drawn as the control flow of a program: walk through my history year by year, fork into the projects, and view the page's own source." />
+<meta name="theme-color" content="#09090b" />
 <meta property="og:title" content="Alan Fung · Software Engineer" />
-<meta property="og:description" content="A portfolio you can step through and recompile." />
+<meta property="og:description" content="A portfolio drawn as the control flow of a program." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://invokfung.github.io/" />
 <link rel="icon" href="/blog/assets/icon.png" />
@@ -16,49 +16,72 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/portfolio/style.css" />
 <script>
-  // Apply the saved theme before first paint so there is no flash.
+  // Apply saved settings before first paint so there is no flash.
   try {
     var s = JSON.parse(localStorage.getItem("alan.fung/config") || "null");
     var light = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches;
     document.documentElement.dataset.theme = (s && s.theme) || (light ? "paper" : "midnight");
     if (s && s.accent) document.documentElement.style.setProperty("--acc", s.accent);
   } catch (e) {}
+  document.documentElement.classList.add("js");
 </script>
 </head>
 <body>
-  <div class="field" aria-hidden="true"></div>
+  <a class="skip" href="#whoami">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><i></i><b></b><span></span></div>
 
-  <div class="app">
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-in">
+      <div class="boot-log" id="boot-log"></div>
+      <div class="boot-bar"><i id="boot-bar"></i></div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Alan Fung, back to top"><span class="mono-mark">af</span><span class="brand-t">alan.fung</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#whoami" data-sec="whoami"><i>01</i>whoami()</a>
+      <a href="#history" data-sec="history"><i>02</i>history()</a>
+      <a href="#work" data-sec="work"><i>03</i>work()</a>
+      <a href="#contact" data-sec="contact"><i>04</i>hire()</a>
+    </nav>
+    <div class="nav-r">
+      <span class="head" id="head" title="Where you are in my history">HEAD → <b>main</b></span>
+      <button type="button" class="pill-btn" id="btn-src" aria-pressed="false" title="View this page's live source">&lt;/&gt;<span> source</span></button>
+      <button type="button" class="pill-btn" id="btn-term" title="Open a terminal (press `)">›_</button>
+    </div>
+  </header>
+
+  <nav class="minimap" id="minimap" aria-label="Progress"></nav>
+
+  <div class="app" id="top">
     <aside class="editor" id="editor" aria-label="The source code of this page">
       <div class="ed-bar">
         <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
         <div class="tab" id="tab"><span class="glyph">ƒ</span>alan.fung<span class="dirty" title="edited"></span></div>
         <div class="ed-actions">
           <button type="button" id="btn-reset" title="Reset live values">⟲ reset</button>
-          <button type="button" id="btn-term" title="Open terminal (press `)">›_ term</button>
-          <button type="button" id="btn-close" class="only-mobile" title="Close source">✕</button>
+          <button type="button" id="btn-close" title="Close source">✕</button>
         </div>
       </div>
       <div class="code" id="code" tabindex="-1"></div>
-      <div class="ed-watch" id="watch" aria-hidden="true"></div>
       <div class="ed-status" id="status"></div>
     </aside>
 
     <main class="out" id="out">
+      <svg class="thread" id="thread" aria-hidden="true"></svg>
       <noscript>
         <section class="sec">
-          <h2 class="title">Alan Fung</h2>
-          <p class="lede">Software engineer, dedicated to programming. This page is an interactive program and needs JavaScript. Meanwhile: <a href="/blog/">StudyLog</a> · <a href="/ptimer/">ChillTimer</a> · <a href="/triplefind/">TripleFind</a> · <a href="https://github.com/InvokFung">GitHub</a></p>
+          <h1 class="title">Alan Fung</h1>
+          <p class="lede">Software engineer, dedicated to programming. This page is interactive and needs JavaScript. Meanwhile: <a href="/blog/">StudyLog</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/ptimer/">ChillTimer</a> · <a href="/triplefind/">TripleFind</a> · <a href="https://github.com/InvokFung">GitHub</a></p>
         </section>
       </noscript>
     </main>
   </div>
 
-  <div class="strip" id="strip">
-    <span class="at" id="strip-at">▶ 1</span>
-    <code id="strip-line"></code>
-    <button type="button" id="strip-term" aria-label="Open terminal">›_</button>
-    <button type="button" id="strip-src" aria-expanded="false" aria-controls="editor">{ } source</button>
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
+    <div class="case-scroll" id="case-scroll"></div>
   </div>
 
   <div class="term" id="term" role="dialog" aria-label="Terminal" hidden>
