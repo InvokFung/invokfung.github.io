@@ -141,15 +141,20 @@
 
   out.insertAdjacentHTML("beforeend", `
     <section class="sec hero" id="hero" data-block="main" aria-label="Intro">
+      <svg class="strings" id="strings" aria-hidden="true"></svg>
+      <div class="str-labs" id="str-labs"></div>
       <div class="eyebrow rv"><span class="avail"><span class="dot" aria-hidden="true"></span>${esc(P.status)}</span><span>writing code since ${P.firstCommit}</span><span>@${esc(P.handle)}</span></div>
       <h1 class="hero-name" id="hero-name"></h1>
       <p class="err" id="hero-err" hidden>TypeError: alan.name is undefined. Type a name in the source.</p>
       <div class="hero-row">
         <div class="rv"><div class="hero-role">// ${esc(P.role.toLowerCase())}, dedicated to programming</div><p class="hero-tag">${esc(P.tagline)}</p></div>
-        <div class="cta rv">
-          <a class="btn" href="#work" data-go="work" data-magnetic>See the work <span class="arr">→</span></a>
-          <a class="btn ghost" href="#skills" data-go="skills" data-magnetic>Skills, with proof</a>
-          <a class="btn ghost" href="#contact" data-go="contact" data-magnetic>Say hi</a>
+        <div class="play rv" id="play">
+          <p class="play-hint">${root.classList.contains("fine") ? "<b>Run your cursor across the strings</b> to play them." : "<b>Swipe across the strings</b> to play them."} Each one opens a section: ${root.classList.contains("fine") ? "click" : "tap"} its name.</p>
+          <div class="play-ctl">
+            <button type="button" id="snd" data-sound aria-pressed="false"><span class="ic" aria-hidden="true">♪</span><span class="t">sound off</span></button>
+            <button type="button" id="mic" aria-pressed="false"><span class="ic dot" aria-hidden="true"></span><span class="t">listen</span></button>
+          </div>
+          <p class="tuner" id="tuner" aria-live="polite"></p>
         </div>
       </div>
       <div class="hero-stats rv">
@@ -178,7 +183,7 @@
     <section class="sec skills" id="skills" data-block="skills" aria-label="Skills">
       ${node("skills()", "02", "skills")}
       <h2 class="title split">${split("What I can do, <em>wired</em> to the proof")}</h2>
-      <p class="lede rv">${SK.length} skills, each traced to the projects that use it. Hover or tap a skill to light up its projects, or a project to see what it's built with. Solid wires are shipped work, dashed ones are in progress.</p>
+      <p class="lede rv">${SK.length} skills, each traced to the projects that use it. Point at a skill to light up its projects, or at a project to see what it's built with${root.classList.contains("fine") ? ", or strum across the wires" : ""}. Solid wires are shipped work, dashed ones are in progress.</p>
       <div class="graph rv" id="graph">
         <svg class="wires" id="wires" aria-hidden="true"></svg>
         <div class="g-skills">${D.skills.map((g) => `<div class="g-group"><div class="g-h">// ${esc(g.group.toLowerCase())}</div>${g.items.map(([n]) => { const i = SK.findIndex((x) => x.name === n); const sk = SK[i]; const live = usedBy(sk).filter((p) => p.status !== "wip").length; return `<button type="button" class="g-skill" data-s="${i}" data-ref="s:${i}"><span class="nm">${esc(n)}</span><span class="since">${sk.since}</span><span class="cnt${live ? "" : " none"}">${usedBy(sk).length || "·"}</span></button>`; }).join("")}</div>`).join("")}</div>
@@ -531,6 +536,7 @@
     tLit.style.strokeDasharray = `${tLen} ${tLen}`;
     tSamples = [];
     for (let l = 0; l <= tLen; l += 6) { const p = tLit.getPointAtLength(l); tSamples.push([l, p.x, p.y]); }
+    strThread();
   }
 
   function lenAtY(y) {
@@ -589,6 +595,7 @@
     lLit.style.strokeDasharray = `${lLen} ${lLen}`;
     lSamples = [];
     for (let l = 0; l <= lLen; l += 8) { const p = lLit.getPointAtLength(l); lSamples.push([l, p.x, p.y]); }
+    strLoop();
   }
 
   const setNum = (el, v) => { if (el.textContent !== String(v)) el.textContent = v; };
@@ -612,6 +619,8 @@
       setNum($("#c-ship"), shipped.filter((p) => p.year <= eraYear(e)).length);
       setNum($("#c-years"), Math.min(eraYear(e), NOW) - P.firstCommit);
       $("#loop-year").textContent = `// ${e.label}: ${e.title}`;
+      plinkYear(a);
+      if (inLoop) S.Sound.pluck(penta(4 + a), 0.35, 0, { gain: 0.5 });
     }
     $("#rail-fill").style.width = ((a + 0.5) / railBtns.length) * 100 + "%";
     // lit up to the playhead
@@ -636,6 +645,7 @@
   let laneEls = [];
   function layoutLanes() {
     lanes.innerHTML = "";
+    dropStr("lane:");
     laneEls = [];
     const fr = fork.getBoundingClientRect();
     lanes.setAttribute("width", fr.width); lanes.setAttribute("height", fr.height);
@@ -652,12 +662,13 @@
         const ty = c.y - 46;
         d = `M ${ox} ${oy} C ${ox} ${ty}, ${ox + 20} ${ty}, ${Math.min(ox + 60, cx)} ${ty} L ${cx - 30} ${ty} Q ${cx} ${ty} ${cx} ${ty + 30} L ${cx} ${c.y}`;
       }
-      mk("path", { class: "base", d }, lanes);
+      const base = mk("path", { class: "base", d }, lanes);
       const lit = mk("path", { class: "lit", d }, lanes);
       const L = lit.getTotalLength();
       lit.style.strokeDasharray = `${L} ${L}`;
       lit.style.strokeDashoffset = L;
       laneEls.push([lit, L, above ? 1 : 0]);
+      strLane(base, lit, i);
     });
   }
   function updateLanes() {
@@ -680,6 +691,7 @@
 
   function layoutGraph() {
     wires.innerHTML = "";
+    dropStr("wire:");
     wireEls = [];
     graph.classList.toggle("narrow", !isMobile() && graph.clientWidth < 1040);
     if (isMobile()) return;
@@ -695,6 +707,7 @@
       const base = mk("path", { class: "wire" + cls, d }, wires);
       const flow = mk("path", { class: "wflow" + cls, d }, wires);
       wireEls.push({ i, p: p.id, base, flow });
+      strWire(wireEls[wireEls.length - 1], wireEls.length);
     });
     if (gCur) light(gCur);
   }
@@ -766,6 +779,392 @@
     new IntersectionObserver((en) => { gSeen = en[0].isIntersecting; gSeen ? startIdle() : stopIdle(); }, { threshold: 0.35 }).observe(graph);
   }
   light(null);
+
+  /* -------------------------------------------------------------- strings */
+  // Every line on the page is a string. Moving the pointer across one plucks it: the wave
+  // equation in strings.js moves it, and with sound on, Karplus-Strong makes it ring at a pitch
+  // of its own. The four open strings of a violin, across the hero, are the way into the page.
+
+  const S = window.Strings;
+  const strs = new Map(); // name → string
+  const PENTA = [0, 2, 4, 7, 9]; // D major pentatonic: any run of these notes sounds like music
+  const penta = (n) => 146.83 * Math.pow(2, (12 * Math.floor(n / 5) + PENTA[((n % 5) + 5) % 5]) / 12);
+  const OPEN = [
+    { n: "G", f: 196.0, pc: 7, go: "whoami", lab: "whoami()", w: 3.1, wound: true },
+    { n: "D", f: 293.66, pc: 2, go: "skills", lab: "skills()", w: 2.4, wound: true },
+    { n: "A", f: 440.0, pc: 9, go: "work", lab: "work()", w: 1.8 },
+    { n: "E", f: 659.26, pc: 4, go: "contact", lab: "hire()", w: 1.3 }
+  ];
+  let sRaf = 0;
+  const wake = () => { if (!sRaf) sRaf = requestAnimationFrame(tickStrings); };
+
+  // points: [[x, y], …] along the line in the host's coordinates; a jump starts a new segment
+  function addStr(name, host, paths, points, o) {
+    const runs = [[]], step = o.step || 8;
+    points.forEach((p, i) => {
+      const q = points[i - 1];
+      if (q && Math.hypot(p[0] - q[0], p[1] - q[1]) > step * 3) runs.push([]);
+      runs[runs.length - 1].push(p);
+    });
+    const segs = runs.filter((r) => r.length > 3).map((r) => {
+      const n = r.length, pts = new Float32Array(n * 2), nrm = new Float32Array(n * 2), bb = [Infinity, Infinity, -Infinity, -Infinity];
+      for (let i = 0; i < n; i++) {
+        const [x, y] = r[i], a = r[Math.max(0, i - 1)], b = r[Math.min(n - 1, i + 1)];
+        const dx = b[0] - a[0], dy = b[1] - a[1], l = Math.hypot(dx, dy) || 1;
+        pts[2 * i] = x; pts[2 * i + 1] = y; nrm[2 * i] = -dy / l; nrm[2 * i + 1] = dx / l;
+        bb[0] = Math.min(bb[0], x); bb[1] = Math.min(bb[1], y); bb[2] = Math.max(bb[2], x); bb[3] = Math.max(bb[3], y);
+      }
+      return { n, pts, nrm, bb, w: new S.Wave(n, o.wave) };
+    });
+    const s = Object.assign({ name, host, paths, segs, d0: paths.map((p) => p.getAttribute("d")), last: 0, e: 0, busy: false, drive: 0, driveTo: 0, min: 3, max: 14 }, o);
+    strs.set(name, s);
+    return s;
+  }
+  const dropStr = (prefix) => { [...strs.keys()].forEach((k) => { if (k.startsWith(prefix)) strs.delete(k); }); };
+
+  function strPath(s, t) {
+    let d = "";
+    const dr = s.drive * (s.driveAmp || 0), ph = dr ? Math.sin(t * (s.driveHz || 0.05)) : 0;
+    for (const g of s.segs) {
+      const { n, pts, nrm } = g, u = g.w.u;
+      for (let i = 0; i < n; i++) {
+        const k = u[i] + (dr ? dr * ph * Math.sin((Math.PI * i) / (n - 1)) : 0);
+        d += (i ? "L" : "M") + (pts[2 * i] + nrm[2 * i] * k).toFixed(1) + " " + (pts[2 * i + 1] + nrm[2 * i + 1] * k).toFixed(1);
+      }
+    }
+    return d;
+  }
+
+  function tickStrings(t) {
+    sRaf = 0;
+    let again = false;
+    strs.forEach((s) => {
+      let e = 0, moving = false;
+      for (const g of s.segs) {
+        if (g.w.held) { moving = true; e = Math.max(e, Math.abs(g.w.held.d)); if (t - g.w.held.t0 > 650) release(s, g); }
+        else if (g.w.awake) { e = Math.max(e, g.w.step()); moving = true; }
+      }
+      s.drive += (s.driveTo - s.drive) * 0.14;
+      if (s.drive < 0.01 && !s.driveTo) s.drive = 0;
+      if (s.drive) moving = true;
+      if (moving || s.busy) {
+        const d = moving ? strPath(s, t) : null;
+        s.paths.forEach((p, i) => p.setAttribute("d", d || s.d0[i]));
+      }
+      // with reduced motion a pluck only glows
+      let glow = Math.max(e, s.drive * 12);
+      if (s.flash) { const f = 1 - (t - s.flash) / 700; if (f > 0) { glow = Math.max(glow, f * 12); moving = true; } else s.flash = 0; }
+      if (s.glow) s.glow.style.opacity = Math.min(0.6, glow / 20).toFixed(3);
+      s.busy = moving;
+      if (moving) again = true;
+    });
+    if (again || mic) wake();
+  }
+
+  function hitStr(s, ax, ay, bx, by, speed, cx, now) {
+    if (now - s.last < (s.cool || 70)) return;
+    const m0 = Math.min(ax, bx) - 30, m1 = Math.max(ax, bx) + 30, n0 = Math.min(ay, by) - 30, n1 = Math.max(ay, by) + 30;
+    const ex = bx - ax, ey = by - ay;
+    for (const g of s.segs) {
+      if (g.w.held || g.bb[2] < m0 || g.bb[0] > m1 || g.bb[3] < n0 || g.bb[1] > n1) continue;
+      const { n, pts, nrm } = g, u = g.w.u;
+      for (let i = 0; i < n - 1; i++) {
+        const x1 = pts[2 * i] + nrm[2 * i] * u[i], y1 = pts[2 * i + 1] + nrm[2 * i + 1] * u[i];
+        const x2 = pts[2 * i + 2] + nrm[2 * i + 2] * u[i + 1], y2 = pts[2 * i + 3] + nrm[2 * i + 3] * u[i + 1];
+        if (Math.max(x1, x2) < m0 || Math.min(x1, x2) > m1 || Math.max(y1, y2) < n0 || Math.min(y1, y2) > n1) continue;
+        const fx = x2 - x1, fy = y2 - y1, den = ex * fy - ey * fx;
+        if (!den) continue;
+        const tA = ((x1 - ax) * fy - (y1 - ay) * fx) / den, tB = ((x1 - ax) * ey - (y1 - ay) * ex) / den;
+        if (tA < 0 || tA > 1 || tB < 0 || tB > 1) continue;
+        const k = tB < 0.5 ? i : i + 1;
+        pluck(s, g, k, Math.sign(ex * nrm[2 * k] + ey * nrm[2 * k + 1]) || 1, speed, cx, now);
+        return;
+      }
+    }
+  }
+
+  const sing = (s, g, k, vel, cx) => { if (s.note) S.Sound.pluck(s.note(g, k), vel, (cx / window.innerWidth) * 2 - 1, { gain: s.vol, ring: s.ring }); };
+  function pluck(s, g, k, side, speed, cx, now) {
+    s.last = now;
+    const a = clamp(speed * (s.gainK || 8), s.min, s.max) * side, vel = clamp(Math.abs(a) / s.max, 0.15, 1);
+    if (!state.motion) { s.flash = now; sing(s, g, k, vel, cx); }
+    else if (s.grab) g.w.held = { k, side, t0: now, d: 0, cx }; // the string follows the pointer until it slips off
+    else { if (s.local) g.w.bump(k, a, s.local); else g.w.tri(k, a); sing(s, g, k, vel, cx); }
+    if (!s.grab || !state.motion) s.onPluck && s.onPluck(s, vel);
+    wake();
+  }
+  function drag(s, g, lx, ly) {
+    const h = g.w.held, k = h.k;
+    h.d = (lx - g.pts[2 * k]) * g.nrm[2 * k] + (ly - g.pts[2 * k + 1]) * g.nrm[2 * k + 1];
+    if (h.d * h.side < 0 || Math.abs(h.d) > s.max) release(s, g);
+    else g.w.tri(k, h.d);
+  }
+  function release(s, g) {
+    const h = g.w.held;
+    if (!h) return;
+    g.w.held = null;
+    const a = clamp(Math.abs(h.d), s.min, s.max) * h.side, vel = clamp(Math.abs(a) / s.max, 0.2, 1);
+    g.w.tri(h.k, a);
+    sing(s, g, h.k, vel, h.cx);
+    s.onPluck && s.onPluck(s, vel);
+    wake();
+  }
+
+  // the pointer: one segment per move, tested against every string it could have crossed
+  let px = null, py = null, pt = 0;
+  const caseEl = $("#case"), termEl = $("#term");
+  function strMove(x, y) {
+    const now = performance.now();
+    if (px != null && now - pt < 160 && caseEl.hidden && termEl.hidden) {
+      const speed = Math.hypot(x - px, y - py) / Math.max(8, now - pt);
+      const rects = new Map();
+      strs.forEach((s) => {
+        let r = rects.get(s.host);
+        if (!r) { r = s.host.getBoundingClientRect(); rects.set(s.host, r); }
+        const held = s.segs.find((g) => g.w.held);
+        if (held) { drag(s, held, x - r.left, y - r.top); return; }
+        if (Math.max(x, px) < r.left - 30 || Math.min(x, px) > r.right + 30 || Math.max(y, py) < r.top - 30 || Math.min(y, py) > r.bottom + 30) return;
+        hitStr(s, px - r.left, py - r.top, x - r.left, y - r.top, speed, x, now);
+      });
+    }
+    px = x; py = y; pt = now;
+  }
+  window.addEventListener("pointermove", (e) => { strMove(e.clientX, e.clientY); sheenAt(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener("pointerdown", (e) => { px = e.clientX; py = e.clientY; pt = performance.now(); sheenAt(px, py); if (S.Sound.on) S.Sound.unlock(); }, { passive: true });
+  ["pointerup", "pointercancel"].forEach((n) => window.addEventListener(n, (e) => { if (e.pointerType !== "mouse") px = null; }, { passive: true }));
+  window.addEventListener("keydown", () => { if (S.Sound.on) S.Sound.unlock(); });
+
+  /* the open strings */
+  const hero = $("#hero"), strSvg = $("#strings"), strLabs = $("#str-labs");
+  strSvg.innerHTML = `<defs><radialGradient id="sheen" gradientUnits="userSpaceOnUse" cx="-999" cy="-999" r="340"><stop offset="0" class="s0"/><stop offset=".45" class="s1"/><stop offset="1" class="s2"/></radialGradient></defs>`;
+  const sheen = $("#sheen", strSvg);
+  strLabs.innerHTML = OPEN.map((o, i) => `<button type="button" class="str-lab" data-go="${o.go}" data-i="${i}" aria-label="${o.n} string, ${o.lab}"><i>${o.n}</i><span>${o.lab}</span></button>`).join("");
+  const labEls = $$(".str-lab", strLabs);
+  function sheenAt(x, y) {
+    const r = strSvg.getBoundingClientRect();
+    if (y < r.top - 200 || y > r.bottom + 200) return;
+    sheen.setAttribute("cx", (x - r.left).toFixed(0)); sheen.setAttribute("cy", (y - r.top).toFixed(0));
+  }
+  const ringLab = (i) => { const l = labEls[i]; l.classList.remove("ring"); void l.offsetWidth; l.classList.add("ring"); clearTimeout(l._t); l._t = setTimeout(() => l.classList.remove("ring"), 600); };
+
+  function layoutHero() {
+    dropStr("open:");
+    $$("g.str", strSvg).forEach((g) => g.remove());
+    const upright = isMobile() || hero.clientWidth < hero.clientHeight * 0.9;
+    hero.classList.toggle("upright", upright);
+    const or = out.getBoundingClientRect(), hr = hero.getBoundingClientRect();
+    const W = Math.round(or.width), H = hero.offsetHeight, ox = or.left - hr.left;
+    Object.assign(strSvg.style, { left: ox + "px", width: W + "px", height: H + "px" });
+    strSvg.setAttribute("width", W); strSvg.setAttribute("height", H);
+    const rel = (el) => { const r = el.getBoundingClientRect(); return { x: r.left - or.left, y: r.top - hr.top, w: r.width, h: r.height }; };
+    const nm = rel(nameEl), row = rel($(".hero-row", hero)), st = rel($(".hero-stats", hero));
+    const pr = parseFloat(getComputedStyle(out).paddingRight) || 40;
+    OPEN.forEach((o, i) => {
+      let A, B, lab; // A: the nut, where the strings meet; B: the bridge, where they spread and carry their names
+      if (!upright) {
+        // they run through the name and fan out to the right, clear of the smaller text below it
+        const top = nm.y - 4, bot = nm.y + nm.h * 0.96;
+        A = [-W * 0.12, nm.y + nm.h * 0.6 + i * 7];
+        B = [W + 20, top + ((bot - top) * i) / 3];
+        const lx = W - pr;
+        lab = [lx + ox, A[1] + ((B[1] - A[1]) * (lx - A[0])) / (B[0] - A[0]) - 3];
+      } else {
+        A = [W * 0.5 + (i - 1.5) * 5, Math.max(8, nm.y - 30)];
+        B = [W * (0.17 + 0.22 * i), st.y - 100];
+        lab = [B[0] + ox, B[1]];
+      }
+      const len = Math.hypot(B[0] - A[0], B[1] - A[1]), n = Math.max(40, Math.round(len / 12));
+      const g = mk("g", { class: `str${o.wound ? " wound" : ""}` }, strSvg);
+      const d0 = `M ${A[0].toFixed(1)} ${A[1].toFixed(1)} L ${B[0].toFixed(1)} ${B[1].toFixed(1)}`;
+      const glow = mk("path", { class: "s-glow", d: d0, "stroke-width": (o.w * 3 + 2).toFixed(1) }, g);
+      const paths = [glow, mk("path", { class: "s-core", d: d0, "stroke-width": o.w }, g)];
+      if (o.wound) paths.push(mk("path", { class: "s-wind", d: d0, "stroke-width": o.w }, g));
+      const pts = Array.from({ length: n }, (_, j) => [A[0] + ((B[0] - A[0]) * j) / (n - 1), A[1] + ((B[1] - A[1]) * j) / (n - 1)]);
+      addStr("open:" + i, strSvg, paths, pts, {
+        grab: true, min: 5, max: upright ? 22 : 28, gainK: 10, cool: 90, glow, ring: true,
+        wave: { c2: 0.45, damp: 0.986, sub: 3 }, driveAmp: upright ? 7 : 10, driveHz: 0.045 + i * 0.011,
+        note: () => o.f, onPluck: () => ringLab(i)
+      });
+      Object.assign(labEls[i].style, { left: lab[0].toFixed(1) + "px", top: lab[1].toFixed(1) + "px" });
+    });
+  }
+  function bow(i, amp = 20) {
+    const s = strs.get("open:" + i);
+    if (!s) return;
+    const g = s.segs[0], o = OPEN[i];
+    if (state.motion) g.w.tri(Math.round(g.n * (0.55 + 0.1 * i)), amp * (i % 2 ? -1 : 1)); else s.flash = performance.now();
+    S.Sound.pluck(o.f, 0.85, 0.3, { ring: true });
+    ringLab(i); wake();
+  }
+  const strum = () => OPEN.forEach((o, i) => setTimeout(() => bow(i, 12 - i * 1.5), i * 110));
+  strLabs.addEventListener("click", (e) => { const b = e.target.closest(".str-lab"); if (b) bow(+b.dataset.i); });
+
+  /* sound: off until the visitor asks for it */
+  const SND = "alan.fung/sound";
+  function setSound(on, byHand) {
+    S.Sound.on = on;
+    try { localStorage.setItem(SND, on ? "1" : "0"); } catch (e) {}
+    $$("[data-sound]").forEach((b) => { b.setAttribute("aria-pressed", String(on)); b.title = on ? "Sound on" : "Sound off"; const t = $(".t", b); if (t) t.textContent = on ? "sound on" : "sound off"; });
+    if (on && byHand) { S.Sound.unlock(); setTimeout(strum, 60); }
+  }
+  let sndSaved = false;
+  try { sndSaved = localStorage.getItem(SND) === "1"; } catch (e) {}
+  document.addEventListener("click", (e) => { const b = e.target.closest("[data-sound]"); if (b) setSound(!S.Sound.on, true); });
+
+  /* listen: sing or play near an open string and it rings along; hold the note to open its section */
+  const micBtn = $("#mic"), tuner = $("#tuner");
+  const TUNER_IDLE = "Or turn on listen and sing or play a G, D, A or E: that string rings along.";
+  tuner.textContent = TUNER_IDLE;
+  let mic = null;
+  const pcDist = (midi, pc) => { let d = (((midi - pc) % 12) + 12) % 12; if (d > 6) d -= 12; return d * 100; };
+  function micUI(on, msg) {
+    micBtn.setAttribute("aria-pressed", String(on));
+    $(".t", micBtn).textContent = on ? "listening" : "listen";
+    hero.classList.toggle("listening", on);
+    if (msg != null) tuner.textContent = msg;
+  }
+  async function listen(on) {
+    if (!on) {
+      if (mic) mic.stream.getTracks().forEach((t) => t.stop());
+      mic = null;
+      OPEN.forEach((o, i) => { const s = strs.get("open:" + i); if (s) s.driveTo = 0; labEls[i].style.setProperty("--hold", 0); });
+      micUI(false, TUNER_IDLE);
+      return;
+    }
+    const ctx = S.Sound.unlock();
+    if (!ctx || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { micUI(false, "This browser can't listen here, but the strings still play by hand."); return; }
+    micUI(true, "Asking for the microphone…");
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+      const an = ctx.createAnalyser();
+      an.fftSize = 2048;
+      ctx.createMediaStreamSource(stream).connect(an);
+      mic = { stream, an, buf: new Float32Array(an.fftSize), hold: -1, t0: 0, seen: 0, f: 0 };
+      micUI(true, "Listening. Sing or play a G, D, A or E, and hold it to open that section.");
+      wake();
+      micLoop();
+    } catch (err) {
+      micUI(false, err && err.name === "NotAllowedError" ? "The microphone is blocked, but the strings still play by hand." : "No microphone was found, but the strings still play by hand.");
+    }
+  }
+  function micLoop() {
+    if (!mic) return;
+    requestAnimationFrame(micLoop);
+    if (mic.f++ % 2) return;
+    mic.an.getFloatTimeDomainData(mic.buf);
+    const r = S.pitch(mic.buf, S.Sound.ctx.sampleRate), now = performance.now();
+    if (!r) {
+      if (now - mic.seen > 260) {
+        OPEN.forEach((o, i) => { strs.get("open:" + i).driveTo = 0; labEls[i].style.setProperty("--hold", 0); });
+        mic.hold = -1;
+      }
+      return;
+    }
+    mic.seen = now;
+    const nt = S.note(r.f);
+    let hit = -1;
+    OPEN.forEach((o, i) => {
+      const dc = Math.abs(pcDist(nt.midi, o.pc));
+      strs.get("open:" + i).driveTo = clamp(1 - dc / 90, 0, 1) * clamp(r.rms * 30, 0.4, 1);
+      if (dc < 35) hit = i;
+    });
+    if (hit !== mic.hold) { mic.hold = hit; mic.t0 = now; }
+    const held = hit >= 0 ? clamp((now - mic.t0) / 1000, 0, 1) : 0;
+    labEls.forEach((l, i) => l.style.setProperty("--hold", i === hit ? held.toFixed(2) : 0));
+    const c = Math.round(nt.cents);
+    tuner.innerHTML = `<b>${nt.name}<sub>${nt.octave}</sub></b><span class="cents">${c > 0 ? "+" : c < 0 ? "−" : "±"}${Math.abs(c)}¢</span><span class="needle" style="--c:${clamp(c / 50, -1, 1).toFixed(2)}"><i></i></span><span class="hint">${hit >= 0 ? `hold it for ${OPEN[hit].lab}` : "hold a G, D, A or E"}</span>`;
+    if (held >= 1) {
+      const o = OPEN[hit];
+      listen(false);
+      toast(`heard ${nt.name}${nt.octave} → <b>${o.lab}</b>`);
+      bow(hit);
+      go(o.go);
+    }
+  }
+  micBtn.addEventListener("click", () => listen(!mic));
+
+  /* the rest of the page */
+  function strThread() {
+    dropStr("thread");
+    const H = Math.max(1, out.scrollHeight);
+    addStr("thread", thread, [tBase, tLit, tFlow], tSamples.map((p) => [p[1], p[2]]), {
+      step: 6, local: 4, min: 3, max: 14, gainK: 6, cool: 90, vol: 0.45,
+      wave: { c2: 0.5, damp: 0.994, sub: 3 },
+      note: (g, k) => penta(12 - Math.round((g.pts[2 * k + 1] / H) * 9))
+    });
+  }
+  // scrolling bows the thread a little where the pulse is
+  let lastSY = window.scrollY, lastBow = 0;
+  function bowThread() {
+    const dy = window.scrollY - lastSY, now = performance.now();
+    lastSY = window.scrollY;
+    const s = strs.get("thread");
+    if (!s || !state.motion || Math.abs(dy) < 24 || now - lastBow < 90) return;
+    lastBow = now;
+    const y = window.innerHeight * 0.62 - out.getBoundingClientRect().top;
+    for (const g of s.segs) {
+      if (y < g.bb[1] || y > g.bb[3]) continue;
+      let k = 1;
+      while (k < g.n - 2 && g.pts[2 * k + 1] < y) k++;
+      g.w.bump(k, clamp(dy * 0.05, -5, 5), 3);
+      wake();
+      break;
+    }
+  }
+  const skillNote = (i) => penta(15 - Math.round((i * 15) / Math.max(1, SK.length - 1)));
+  function twang(i, pid) {
+    [gSkills[i], gProjs.find((b) => b.dataset.p === pid)].forEach((el) => {
+      if (!el) return;
+      el.classList.remove("twang"); void el.offsetWidth; el.classList.add("twang");
+      clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("twang"), 520);
+    });
+  }
+  function strWire(w, n) {
+    const L = w.base.getTotalLength(), pts = [];
+    for (let l = 0; l <= L; l += 8) { const q = w.base.getPointAtLength(l); pts.push([q.x, q.y]); }
+    addStr("wire:" + n, wires, [w.base, w.flow], pts, {
+      min: 3, max: 12, gainK: 7, cool: 120, vol: 0.5, wave: { c2: 0.45, damp: 0.984, sub: 3 },
+      note: () => skillNote(w.i),
+      onPluck: () => {
+        gTouched = true; stopIdle();
+        twang(w.i, w.p);
+        [w.base, w.flow].forEach((el) => { el.classList.add("ring"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("ring"), 700); });
+      }
+    });
+  }
+  function strLane(base, lit, i) {
+    const L = base.getTotalLength(), pts = [];
+    for (let l = 0; l <= L; l += 8) { const q = base.getPointAtLength(l); pts.push([q.x, q.y]); }
+    addStr("lane:" + i, lanes, [base, lit], pts, { min: 3, max: 12, gainK: 7, cool: 120, vol: 0.5, wave: { c2: 0.45, damp: 0.985, sub: 3 }, note: () => penta(6 + i * 2) });
+  }
+  function strLoop() {
+    dropStr("loop");
+    addStr("loop", loopSvg, [lBase, lLit], lSamples.map((p) => [p[1], p[2]]), {
+      step: 8, local: 5, min: 3, max: 12, gainK: 6, cool: 100, vol: 0.45, wave: { c2: 0.5, damp: 0.992, sub: 3 },
+      note: (g, k) => penta(4 + Math.round((k / g.n) * 8))
+    });
+  }
+  // turning the page to a new year plucks the loop at that year
+  function plinkYear(i) {
+    const s = strs.get("loop");
+    if (!s || !state.motion) return;
+    const node = $(".yr-node", chaps[i]);
+    const x = chapLeft[i] + node.offsetLeft;
+    for (const g of s.segs) { let k = 1; while (k < g.n - 2 && g.pts[2 * k] < x) k++; g.w.bump(k, 7, 4); }
+    wake();
+  }
+
+  // after the name lands, the strings settle with a quiet strum so they read as strings
+  function introStrum() {
+    if (!state.motion) return;
+    OPEN.forEach((o, i) => setTimeout(() => {
+      const st = strs.get("open:" + i);
+      if (!st) return;
+      const g = st.segs[0];
+      g.w.tri(Math.round(g.n * (0.58 + 0.08 * i)), (i % 2 ? -1 : 1) * (10 - i * 1.5));
+      wake();
+    }, 1250 + i * 120));
+  }
 
   /* -------------------------------------------------------- case studies */
 
@@ -942,7 +1341,10 @@
       `  coffee: ${LIVE("coffee")}, // cups a day`,
       "});",
       "",
-      "main(alan, config);"
+      "// the open strings of a violin; each one opens a section",
+      `const strings = { ${OPEN.map((o) => `${o.n}${Math.floor(Math.log2(o.f / 440) * 12 + 69) / 12 - 1 | 0}: ${o.lab.replace("()", "")}`).join(", ")} };`,
+      "",
+      "main(alan, config, strings);"
     ]);
     block("whoami", [
       "",
@@ -1224,6 +1626,7 @@
     nameIn = true;
     nameEl.classList.add("in");
     $$("#hero .rv").forEach((el, i) => { el.style.transitionDelay = `${0.35 + i * 0.1}s`; el.classList.add("in"); });
+    introStrum();
   };
 
   /* ---------------------------------------------------------------- boot */
@@ -1315,6 +1718,8 @@
       "blog                   latest notes",
       "hire                   get in touch",
       "source                 toggle the live source pane",
+      "strum · sound <on|off>  play the strings (sound is off until you turn it on)",
+      "listen                 sing a G, D, A or E and its string rings along",
       "",
       "theme <midnight|paper|phosphor> · accent <#hex>",
       "coffee <0-9> · motion <on|off> · name <text>",
@@ -1385,6 +1790,9 @@
     vim: () => "you're already in an editor. try <span class=\"a\">source</span>.",
     hi: () => `hi! 👋 type <span class="a">hire</span> if you want to talk.`
   };
+  CMDS.strum = () => { strum(); return S.Sound.on ? "G3 D4 A4 E5" : "G3 D4 A4 E5 (silent: type sound on)"; };
+  CMDS.sound = (a) => { const on = a[0] ? a[0] === "on" : !S.Sound.on; setSound(on, on); return `sound ${on ? "on" : "off"}`; };
+  CMDS.listen = () => { openTerm(false); go("hero"); listen(true); return "listening…"; };
   CMDS.hello = CMDS.hi; CMDS.emacs = CMDS.vim; CMDS.nano = CMDS.vim; CMDS["?"] = CMDS.help; CMDS.cd = CMDS.checkout; CMDS.history = () => hist.join("\n"); CMDS.stack = CMDS.skills;
   function run(line) {
     print(esc(line), "c");
@@ -1432,12 +1840,14 @@
     updateLanes();
     updateNav();
     syncEditor();
+    bowThread();
   }
   window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
   let rl;
   function relayout() {
     clearTimeout(rl);
     rl = setTimeout(() => {
+      layoutHero();
       layoutLoop();
       layoutThread();
       layoutLanes();
@@ -1451,7 +1861,8 @@
   apply();
   observe();
   boot(heroIn);
-  layoutLoop(); layoutThread(); layoutLanes(); layoutGraph(); frame();
+  setSound(sndSaved);
+  layoutHero(); layoutLoop(); layoutThread(); layoutLanes(); layoutGraph(); frame();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { redrawCovers(); relayout(); });
   const m = location.hash.match(/^#work\/([\w-]+)/);
   if (m) setTimeout(() => openCase(m[1]), 300);
