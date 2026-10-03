@@ -2,17 +2,16 @@
 //   1. split every post into passages at its headings
 //   2. BM25 inverted index over the passages
 //   3. TF-IDF matrix -> randomized truncated SVD (latent semantic analysis)
-//   4. UMAP of the passage vectors into 3D for the galaxy
+//   4. pack everything into one binary index plus a JSON manifest
 // Output goes to public/data/, which Vite copies into the built site.
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse, HTMLElement, Node, TextNode } from "node-html-parser";
-import { UMAP } from "umap-js";
 import { tokenize } from "../src/search/text";
 import type { Chunk, Meta, Post, Section } from "../src/search/types";
-import { randomizedSVD, rng, type CSR } from "./linalg";
+import { randomizedSVD, type CSR } from "./linalg";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BLOG = join(ROOT, "..", "blog");
@@ -26,6 +25,8 @@ const OVERLAP = 250;
 const MIN_CHARS = 80;
 
 // ---------------------------------------------------------------- 1. passages
+
+const tStart = Date.now();
 
 function findPosts(dir: string): string[] {
   const out: string[] = [];
@@ -191,10 +192,13 @@ for (const p of parsed) {
   texts.push(postTexts);
 }
 const N = chunks.length;
+const parseSeconds = (Date.now() - tStart) / 1000;
 console.log(`posts ${posts.length}, passages ${N}, categories ${categoryIds.size}`);
 if (N >= 65536) throw new Error("passage ids no longer fit in Uint16");
 
 // ---------------------------------------------------------------- 2. BM25
+
+let t0 = Date.now();
 
 const termIds = new Map<string, number>();
 const termCounts: Map<number, number>[] = chunkTokens.map((toks) => {
@@ -223,6 +227,7 @@ termCounts.forEach((m, i) => {
 });
 const lens = Uint16Array.from(chunkTokens, (t) => Math.min(65535, t.length));
 const avgLen = lens.reduce((a, b) => a + b, 0) / N;
+const indexSeconds = (Date.now() - t0) / 1000;
 console.log(`vocabulary ${T}, postings ${offsets[T]}, avg passage ${avgLen.toFixed(0)} tokens`);
 
 // ---------------------------------------------------------------- 3. LSA
@@ -260,25 +265,18 @@ termCounts.forEach((m, i) => {
 });
 const X: CSR = { rows: N, cols: lsaTerms.length, ptr, idx: Uint32Array.from(idx), val: Float64Array.from(val) };
 
-let t0 = Date.now();
+t0 = Date.now();
 const { V, sigma, XV } = randomizedSVD(X, K, { seed: 7 });
 const explained = sigma.reduce((a, s) => a + s * s, 0) / N;
 const svdSeconds = (Date.now() - t0) / 1000;
-console.log(`SVD ${N}x${lsaTerms.length} -> k=${K} in ${((Date.now() - t0) / 1000).toFixed(1)}s, ${(explained * 100).toFixed(1)}% of variance`);
+console.log(`SVD ${N}x${lsaTerms.length} -> k=${K} in ${svdSeconds.toFixed(1)}s, ${(explained * 100).toFixed(1)}% of variance`);
 
 const C = new Int8Array(N * K);
-const unit: number[][] = [];
 for (let i = 0; i < N; i++) {
   let n = 0;
   for (let d = 0; d < K; d++) n += XV[i * K + d] ** 2;
   n = Math.sqrt(n) || 1;
-  const v: number[] = [];
-  for (let d = 0; d < K; d++) {
-    const x = XV[i * K + d] / n;
-    v.push(x);
-    C[i * K + d] = Math.round(x * 127);
-  }
-  unit.push(v);
+  for (let d = 0; d < K; d++) C[i * K + d] = Math.round((XV[i * K + d] / n) * 127);
 }
 const Vq = new Int8Array(lsaTerms.length * K);
 const vScale = new Float32Array(lsaTerms.length);
@@ -289,31 +287,13 @@ for (let r = 0; r < lsaTerms.length; r++) {
   for (let d = 0; d < K; d++) Vq[r * K + d] = max ? Math.round((V[r * K + d] / max) * 127) : 0;
 }
 
-// ---------------------------------------------------------------- 4. layout
-
-t0 = Date.now();
-const umap = new UMAP({ nComponents: 3, nNeighbors: 15, minDist: 0.3, spread: 1.6, random: rng(11) });
-const emb = umap.fit(unit);
-const umapSeconds = (Date.now() - t0) / 1000;
-console.log(`UMAP in ${umapSeconds.toFixed(1)}s`);
-const center = [0, 1, 2].map((d) => emb.reduce((a, p) => a + p[d], 0) / N);
-// Scale by the 90th-percentile distance so a few far stragglers do not
-// shrink the whole galaxy.
-const dists = emb.map((p) => Math.hypot(p[0] - center[0], p[1] - center[1], p[2] - center[2])).sort((a, b) => a - b);
-const radius = dists[Math.floor(N * 0.9)];
-const layout = new Float32Array(N * 3);
-emb.forEach((p, i) => {
-  for (let d = 0; d < 3; d++) layout[i * 3 + d] = ((p[d] - center[d]) / radius) * 50;
-});
-
-// ---------------------------------------------------------------- write
+// ---------------------------------------------------------------- 4. write
 
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(join(OUT, "text"), { recursive: true });
 
 const arrays: [string, Section["type"], ArrayBufferView & { length: number }][] = [
   ["offsets", "u32", offsets],
-  ["layout", "f32", layout],
   ["vScale", "f32", vScale],
   ["lens", "u16", lens],
   ["docs", "u16", docs],
@@ -344,7 +324,19 @@ const meta: Meta = {
   bm25: { k1: 1.2, b: 0.75, avgLen },
   lsa: { k: K, rows, idf: idf.map((x) => Math.round(x * 1e4) / 1e4) },
   sections,
-  stats: { vocabulary: T, lsaVocabulary: lsaTerms.length, postings: offsets[T], variance: explained, svdSeconds, umapSeconds },
+  stats: {
+    vocabulary: T,
+    lsaVocabulary: lsaTerms.length,
+    postings: offsets[T],
+    variance: explained,
+    avgTokens: avgLen,
+    indexBytes: offset,
+    window: WINDOW,
+    overlap: OVERLAP,
+    parseSeconds,
+    indexSeconds,
+    svdSeconds,
+  },
 };
 writeFileSync(join(OUT, "meta.json"), JSON.stringify(meta));
 texts.forEach((t, i) => writeFileSync(join(OUT, "text", `${i}.json`), JSON.stringify(t)));

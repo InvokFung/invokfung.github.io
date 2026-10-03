@@ -1,3 +1,4 @@
+import type { Kernel } from "./kernel";
 import { tokenize } from "./text";
 import type { Meta } from "./types";
 
@@ -21,8 +22,6 @@ export interface IndexArrays {
   vScale: Float32Array;
   /** Unit-length LSA vector of each chunk (chunks x k), int8 scaled by 127. */
   C: Int8Array;
-  /** 3D galaxy position of each chunk (chunks x 3). */
-  layout: Float32Array;
 }
 
 export function readIndex(meta: Meta, buf: ArrayBuffer): IndexArrays {
@@ -41,11 +40,90 @@ export type Mode = "bm25" | "lsa" | "hybrid";
 /** Reciprocal-rank-fusion constant; 60 is the value from the original RRF paper. */
 const RRF_K = 60;
 
-function topK(scores: Float32Array, limit: number): Hit[] {
+export interface FusedHit extends Hit {
+  /** 1-based rank of this passage in the keyword and meaning lists, or null if absent from the top 100. */
+  kw: number | null;
+  sem: number | null;
+}
+
+export interface Trace {
+  words: { text: string; tokens: { t: string; known: boolean; df: number; idf: number; lsa: boolean }[] }[];
+  bm25: { hits: Hit[]; postings: number; scored: number; ms: number };
+  lsa: { hits: Hit[]; vector: Float32Array | null; ms: number };
+  fused: { hits: FusedHit[]; union: number; both: number; ms: number };
+  ms: number;
+}
+
+/** Reciprocal rank fusion: each list adds 1 / (k + rank) for every passage it ranks. */
+export function fuse(a: Hit[], b: Hit[], limit: number): Hit[] {
+  const fused = new Map<number, number>();
+  for (const list of [a, b]) list.forEach((h, rank) => fused.set(h.chunk, (fused.get(h.chunk) ?? 0) + 1 / (RRF_K + rank + 1)));
+  return [...fused].map(([chunk, score]) => ({ chunk, score })).sort((x, y) => y.score - x.score).slice(0, limit);
+}
+
+/** RRF contribution of a 1-based rank. */
+export const rrf = (rank: number | null) => (rank === null ? 0 : 1 / (RRF_K + rank));
+
+/**
+ * Mean time of fn in milliseconds. Repeats until a few milliseconds have
+ * passed, since browsers coarsen performance.now() to 0.1 ms or worse.
+ */
+export function timed<T>(fn: () => T, budget = 3): { value: T; ms: number } {
+  let value = fn();
+  let reps = 0;
+  const t0 = performance.now();
+  let t = t0;
+  do {
+    value = fn();
+    reps++;
+    t = performance.now();
+  } while (t - t0 < budget && reps < 50);
+  return { value, ms: (t - t0) / reps };
+}
+
+/**
+ * The best `limit` positive scores, best first, ties by passage order. A
+ * bounded min-heap keeps this linear in the passage count instead of
+ * sorting every match.
+ */
+export function topK(scores: Float32Array, limit: number): Hit[] {
+  const hs = new Float32Array(limit);
+  const hc = new Int32Array(limit);
+  let size = 0;
+  // Is entry a ranked below entry b? Lower score, or same score and later passage.
+  const below = (sa: number, ca: number, sb: number, cb: number) => sa < sb || (sa === sb && ca > cb);
+  for (let i = 0; i < scores.length; i++) {
+    const s = scores[i];
+    if (!(s > 0)) continue;
+    let j: number;
+    if (size < limit) {
+      j = size++;
+      while (j > 0) {
+        const p = (j - 1) >> 1;
+        if (!below(s, i, hs[p], hc[p])) break;
+        hs[j] = hs[p];
+        hc[j] = hc[p];
+        j = p;
+      }
+    } else {
+      if (!below(hs[0], hc[0], s, i)) continue;
+      j = 0;
+      for (;;) {
+        let m = 2 * j + 1;
+        if (m >= size) break;
+        if (m + 1 < size && below(hs[m + 1], hc[m + 1], hs[m], hc[m])) m++;
+        if (!below(hs[m], hc[m], s, i)) break;
+        hs[j] = hs[m];
+        hc[j] = hc[m];
+        j = m;
+      }
+    }
+    hs[j] = s;
+    hc[j] = i;
+  }
   const hits: Hit[] = [];
-  for (let i = 0; i < scores.length; i++) if (scores[i] > 0) hits.push({ chunk: i, score: scores[i] });
-  hits.sort((a, b) => b.score - a.score);
-  return hits.slice(0, limit);
+  for (let j = 0; j < size; j++) hits.push({ chunk: hc[j], score: hs[j] });
+  return hits.sort((a, b) => b.score - a.score || a.chunk - b.chunk);
 }
 
 export class Engine {
@@ -53,6 +131,7 @@ export class Engine {
   readonly ix: IndexArrays;
   private termId: Map<string, number>;
   private k: number;
+  private kernel: Kernel | null = null;
 
   constructor(meta: Meta, ix: IndexArrays) {
     this.meta = meta;
@@ -71,14 +150,21 @@ export class Engine {
   }
 
   bm25(query: string, limit = 100): Hit[] {
+    return this.bm25Scored(query, limit).hits;
+  }
+
+  /** BM25 plus the work it did: postings walked and passages that got a score. */
+  private bm25Scored(query: string, limit: number): { hits: Hit[]; postings: number; scored: number } {
     const { offsets, docs, tfs, lens } = this.ix;
     const { k1, b, avgLen } = this.meta.bm25;
     const n = this.meta.chunks.length;
     const scores = new Float32Array(n);
+    let postings = 0;
     for (const [t, qtf] of this.queryTerms(query)) {
       const start = offsets[t];
       const end = offsets[t + 1];
       const df = end - start;
+      postings += df;
       const idf = Math.log(1 + (n - df + 0.5) / (df + 0.5));
       for (let j = start; j < end; j++) {
         const tf = tfs[j];
@@ -86,7 +172,9 @@ export class Engine {
         scores[docs[j]] += qtf * idf * ((tf * (k1 + 1)) / (tf + norm));
       }
     }
-    return topK(scores, limit);
+    let scored = 0;
+    for (let i = 0; i < n; i++) if (scores[i] > 0) scored++;
+    return { hits: topK(scores, limit), postings, scored };
   }
 
   /** Projects a query into the LSA space: q · V, normalised. */
@@ -121,18 +209,50 @@ export class Engine {
     return q;
   }
 
+  /** Uses a compiled dot-product kernel for the cosine scan; both paths give identical scores. */
+  useKernel(kernel: Kernel | null) {
+    this.kernel = kernel;
+  }
+
+  get kernelName(): string {
+    return this.kernel?.name ?? "JavaScript";
+  }
+
+  /**
+   * Cosine of a unit query with every passage. The query is quantized to
+   * int16 and the sums are exact int32, so the WebAssembly kernel and the
+   * JavaScript loop below agree bit for bit.
+   */
   private cosineAll(q: Float32Array): Float32Array {
+    const k = this.k;
+    const n = this.meta.chunks.length;
+    let max = 1e-12;
+    for (let d = 0; d < k; d++) max = Math.max(max, Math.abs(q[d]));
+    const scale = 32767 / max;
+    const qi = new Int16Array(k);
+    for (let d = 0; d < k; d++) qi[d] = Math.round(q[d] * scale);
+    const dots = this.kernel ? this.kernel.dots(qi) : this.dotsJS(qi);
+    const scores = new Float32Array(n);
+    const f = 1 / (scale * 127);
+    for (let i = 0; i < n; i++) scores[i] = dots[i] * f;
+    return scores;
+  }
+
+  private dotsJS(qi: Int16Array): Int32Array {
     const { C } = this.ix;
     const k = this.k;
     const n = this.meta.chunks.length;
-    const scores = new Float32Array(n);
-    for (let i = 0; i < n; i++) {
-      let s = 0;
-      const base = i * k;
-      for (let d = 0; d < k; d++) s += q[d] * C[base + d];
-      scores[i] = s / 127;
+    const out = new Int32Array(n);
+    for (let i = 0, base = 0; i < n; i++, base += k) {
+      let a = 0;
+      let b = 0;
+      for (let d = 0; d < k; d += 2) {
+        a = (a + qi[d] * C[base + d]) | 0;
+        b = (b + qi[d + 1] * C[base + d + 1]) | 0;
+      }
+      out[i] = (a + b) | 0;
     }
-    return scores;
+    return out;
   }
 
   lsa(query: string, limit = 100): Hit[] {
@@ -141,11 +261,51 @@ export class Engine {
   }
 
   hybrid(query: string, limit = 100): Hit[] {
-    const fused = new Map<number, number>();
-    for (const list of [this.bm25(query, 100), this.lsa(query, 100)]) {
-      list.forEach((h, rank) => fused.set(h.chunk, (fused.get(h.chunk) ?? 0) + 1 / (RRF_K + rank + 1)));
-    }
-    return [...fused].map(([chunk, score]) => ({ chunk, score })).sort((a, b) => b.score - a.score).slice(0, limit);
+    return fuse(this.bm25(query, 100), this.lsa(query, 100), limit);
+  }
+
+  /**
+   * Runs the hybrid search one stage at a time, timing each stage, and keeps
+   * the intermediate results so the page can show how the answer was built.
+   */
+  trace(query: string): Trace {
+    const n = this.meta.chunks.length;
+    const words = query
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((text) => ({
+        text,
+        tokens: tokenize(text).map((t) => {
+          const id = this.termId.get(t);
+          const df = id === undefined ? 0 : this.ix.offsets[id + 1] - this.ix.offsets[id];
+          return {
+            t,
+            known: id !== undefined,
+            df,
+            idf: df ? Math.log(1 + (n - df + 0.5) / (df + 0.5)) : 0,
+            lsa: id !== undefined && this.meta.lsa.rows[id] >= 0,
+          };
+        }),
+      }));
+    const kw = timed(() => this.bm25Scored(query, 100));
+    const vec = timed(() => this.embed(query));
+    const cos = timed(() => (vec.value ? topK(this.cosineAll(vec.value), 100) : []));
+    const fused = timed(() => fuse(kw.value.hits, cos.value, 100));
+    const kwRank = new Map(kw.value.hits.map((h, i) => [h.chunk, i + 1]));
+    const semRank = new Map(cos.value.map((h, i) => [h.chunk, i + 1]));
+    const ranked = fused.value.map((h) => ({ ...h, kw: kwRank.get(h.chunk) ?? null, sem: semRank.get(h.chunk) ?? null }));
+    return {
+      words,
+      bm25: { hits: kw.value.hits, postings: kw.value.postings, scored: kw.value.scored, ms: kw.ms },
+      lsa: { hits: cos.value, vector: vec.value, ms: vec.ms + cos.ms },
+      fused: {
+        hits: ranked,
+        union: ranked.length,
+        both: ranked.filter((h) => h.kw !== null && h.sem !== null).length,
+        ms: fused.ms,
+      },
+      ms: kw.ms + vec.ms + cos.ms + fused.ms,
+    };
   }
 
   search(query: string, mode: Mode = "hybrid", limit = 100): Hit[] {
@@ -164,7 +324,7 @@ export class Engine {
 }
 
 /** Keeps the best-scoring chunk of each post, preserving order. */
-export function firstPerPost(meta: Meta, hits: Hit[]): Hit[] {
+export function firstPerPost<T extends Hit>(meta: Meta, hits: T[]): T[] {
   const seen = new Set<number>();
   return hits.filter((h) => {
     const p = meta.chunks[h.chunk].p;

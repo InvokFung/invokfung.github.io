@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Engine, firstPerPost, readIndex, type Mode } from "../src/search/engine";
+import { loadKernel } from "../src/search/kernel";
 import type { Meta } from "../src/search/types";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -13,6 +14,9 @@ const DATA = join(ROOT, "public", "data");
 const meta: Meta = JSON.parse(readFileSync(join(DATA, "meta.json"), "utf8"));
 const bin = readFileSync(join(DATA, "index.bin"));
 const engine = new Engine(meta, readIndex(meta, bin.buffer.slice(bin.byteOffset, bin.byteOffset + bin.byteLength)));
+const jsOnly = process.argv.includes("--js");
+if (!jsOnly) engine.useKernel(await loadKernel(engine.ix.C, meta.chunks.length, meta.lsa.k));
+console.log(`cosine scan: ${engine.kernelName}`);
 const questions: { q: string; expect: string[] }[] = JSON.parse(readFileSync(join(ROOT, "eval", "questions.json"), "utf8"));
 
 const slug = (p: number) => meta.posts[p].url.split("/").filter(Boolean).pop()!;

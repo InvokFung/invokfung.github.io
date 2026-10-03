@@ -37,7 +37,21 @@ export interface Meta {
   bm25: { k1: number; b: number; avgLen: number };
   lsa: { k: number; /** term id -> row in V, -1 if not in the LSA vocabulary */ rows: number[]; idf: number[] };
   sections: Section[];
-  stats: { vocabulary: number; lsaVocabulary: number; postings: number; variance: number; svdSeconds: number; umapSeconds: number };
+  stats: {
+    vocabulary: number;
+    lsaVocabulary: number;
+    postings: number;
+    /** Share of the TF-IDF matrix's variance the k dimensions keep. */
+    variance: number;
+    avgTokens: number;
+    indexBytes: number;
+    /** Passage window and overlap, in characters. */
+    window: number;
+    overlap: number;
+    parseSeconds: number;
+    indexSeconds: number;
+    svdSeconds: number;
+  };
 }
 
 export interface EvalReport {

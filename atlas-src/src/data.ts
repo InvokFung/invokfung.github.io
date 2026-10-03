@@ -1,4 +1,5 @@
 import { Engine, readIndex } from "./search/engine";
+import { loadKernel } from "./search/kernel";
 import type { EvalReport, Meta, PostText } from "./search/types";
 
 const BASE = `${import.meta.env.BASE_URL}data/`;
@@ -33,7 +34,7 @@ export interface Atlas {
 
 /** Loads the metadata and binary index; reports progress as a 0..1 fraction of the expected bytes. */
 export async function loadAtlas(onProgress: (f: number) => void): Promise<Atlas> {
-  const expected = 4.6e6; // uncompressed size of meta.json + index.bin, for the progress bar only
+  const expected = 3.5e6; // uncompressed size of meta.json + index.bin, for the progress bar only
   let got = 0;
   const tick = (n: number) => onProgress(Math.min(0.98, (got += n) / expected));
   const [metaBuf, bin, evalReport] = await Promise.all([
@@ -44,8 +45,10 @@ export async function loadAtlas(onProgress: (f: number) => void): Promise<Atlas>
       .catch(() => null),
   ]);
   const meta = JSON.parse(new TextDecoder().decode(metaBuf)) as Meta;
+  const engine = new Engine(meta, readIndex(meta, bin));
+  engine.useKernel(await loadKernel(engine.ix.C, meta.chunks.length, meta.lsa.k).catch(() => null));
   onProgress(1);
-  return { meta, engine: new Engine(meta, readIndex(meta, bin)), evalReport };
+  return { meta, engine, evalReport };
 }
 
 const textCache = new Map<number, Promise<PostText>>();
