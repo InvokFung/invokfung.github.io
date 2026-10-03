@@ -20,8 +20,8 @@ window.PORTFOLIO = {
     github: "https://github.com/InvokFung",
     firstCommit: 2018,
     // the measured number the hero leads with
-    metric: ["85%", "hit@1, my search engine"],
-    focus: ["full-stack web", "search & retrieval", "real-time systems", "graphics"],
+    metric: ["98.9%", "incidents traced to the right service"],
+    focus: ["customer data", "observability", "full-stack web", "search & retrieval", "real-time systems", "graphics"],
     about: [
       "Most of my week is spent next to the people who use the software. That is the job of a Forward Deployed Engineer: hear the real problem, not the ticket, then build until it works in their hands.",
       "The rest goes into going deeper than anyone asked. I wrote my own SVD for a search engine, my own pitch detector for a violin, and a slicer in C++ that doesn't even lean on a standard library, then measured each one to find out whether I was right.",
@@ -33,8 +33,8 @@ window.PORTFOLIO = {
   statement: "I'm Alan, a Forward Deployed Engineer. I {go where the problem lives}, {ship the whole stack} and {put a number on everything}. Off the clock I {learn the maths underneath}, {write it all down} and {pick up the violin}, which is how a pitch detector ended up on this page.",
   traits: [
     { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "Web developer in 2023, full-stack engineer in 2024, software engineer in 2025, Forward Deployed Engineer since 2026. The job now is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
-    { k: "ship the whole stack", n: "4", unit: "flagships", text: "A search engine, a pitch detector and a 3D-printing slicer that run entirely in your browser, and a multiplayer game server load-tested to 1,000 clients. Each one is live, the source is public, and the numbers are on the card.", link: "#work", linkText: "see the work ↓" },
-    { k: "put a number on everything", n: "85%", unit: "hit@1", text: "Every flagship ships with its benchmark. Atlas puts the right post first 85% of the time across 60 real questions. Studio's pitch detector is off by at most 0.17 cents on clean tones. Layerline's C++ core runs a median 8× faster than the same algorithm in TypeScript, and its output matches the native build byte for byte.", link: "/atlas/", linkText: "try Atlas →" },
+    { k: "ship the whole stack", n: "6", unit: "flagships", text: "A customer-data pipeline and a tracing system that finds the root cause, built the way I work with customers. Then a search engine, a pitch detector, a 3D-printing slicer and a multiplayer game server load-tested to 1,000 clients. Each one is live, the source is public, and the numbers are on the card.", link: "#work", linkText: "see the work ↓" },
+    { k: "put a number on everything", n: "98.9%", unit: "root cause first", text: "Every flagship ships with its benchmark. Tracewise names the faulty service first in 98.9% of incidents across 200 injected faults; the best dashboard heuristic manages 66.1%. Onboard matches customers across three exports at 0.977 F1, where email alone scores 0.659. Atlas puts the right post first 85% of the time across 60 real questions.", link: "/tracewise/", linkText: "break something in Tracewise →" },
     { k: "learn the maths underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. Not for show: Atlas runs on a randomized SVD and an eigensolver I wrote myself, and Layerline does its geometry on exact integers." },
     { k: "write it all down", n: "174", unit: "public notes", text: "Every deep dive becomes a long-form post on StudyLog, my public engineering notebook: a 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs.", link: "/blog/", linkText: "open StudyLog →" },
     { k: "pick up the violin", n: "19", unit: "music notes", text: "Violin, and a piano I'm teaching myself. Checking scales on a tuner one note at a time got old, so I built Intonation Studio: it listens to the whole scale and scores every note to the cent.", link: "/studio/", linkText: "try Studio →" }
@@ -86,7 +86,7 @@ window.PORTFOLIO = {
     ] },
     { group: "Backend & data", items: [
       ["Node.js", 2024], ["WebSockets", 2026],
-      ["Search & retrieval", 2026],
+      ["Search & retrieval", 2026], ["Entity resolution", 2026], ["Data quality & PII", 2026],
       ["MongoDB", 2025, "30-part MongoDB course on StudyLog: indexes, sharding, change streams, CQRS"],
       ["PostgreSQL", 2025, "8-part PostgreSQL course on StudyLog: planner, MVCC, replication"]
     ] },
@@ -95,10 +95,11 @@ window.PORTFOLIO = {
       ["Kubernetes", 2026, "8-part Docker and Kubernetes series on StudyLog"],
       ["AWS", 2025, "9-part AWS series on StudyLog: VPC, compute, serverless, observability"],
       ["Terraform", 2026, "Infrastructure as code chapter of the AWS series"],
-      ["Networking", 2022, "Data communications and networking notes (2022), VPC design on AWS"]
+      ["Networking", 2022, "Data communications and networking notes (2022), VPC design on AWS"],
+      ["Observability", 2026]
     ] },
     { group: "Maths & making", items: [
-      ["Linear algebra", 2025], ["Signal processing", 2026], ["Computational geometry", 2026],
+      ["Linear algebra", 2025], ["Statistics", 2026], ["Signal processing", 2026], ["Computational geometry", 2026],
       ["3D printing", 2026, "8-part 3D printing course on StudyLog: slicing, tolerances, functional parts"]
     ] }
   ],
@@ -146,27 +147,62 @@ window.PORTFOLIO = {
     },
     {
       id: "2026", label: "2026", title: "Forward deployed", role: "Forward Deployed Engineer",
-      text: "I became a Forward Deployed Engineer: closer to the people using the software, and on the hook for what happens after the demo. Off the clock, four flagships, each answering a question with numbers.",
-      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets", "Computational geometry", "Web Workers"], projects: ["atlas", "intonation", "arena", "layerline"],
-      events: [["2026", "Become a Forward Deployed Engineer"], ["2026-01", "Kubernetes, AWS at scale, Terraform"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Ship Layerline"], ["2026-10", "Rebuild this site as an instrument"]]
+      text: "I became a Forward Deployed Engineer: closer to the people using the software, and on the hook for what happens after the demo. Off the clock, the flagships on this page, each one a question answered with numbers.",
+      picked: ["Entity resolution", "Data quality & PII", "Observability", "Statistics", "Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets", "Computational geometry", "Web Workers"], projects: ["onboard", "tracewise", "atlas", "intonation", "arena", "layerline"],
+      events: [["2026", "Become a Forward Deployed Engineer"], ["2026-01", "Kubernetes, AWS at scale, Terraform"], ["2026-10", "Ship Onboard, Tracewise, Atlas, Studio, Arena and Layerline"], ["2026-10", "Rebuild this site as an instrument"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Still building",
-      text: "Each flagship has one milestone left: Arena on a real Kubernetes cluster, a real part printed from Layerline's G-code, neural embeddings and cited answers in Atlas, and a write-up of pitch detection from scratch. After that, whichever question I can't leave alone next.",
+      text: "Every flagship still has one milestone open, listed below: a real collector, a real cluster, a real printed part. After that, whichever question I can't leave alone next.",
       picked: [],
-      events: [["soon", "Arena: deploy to a real cluster"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
+      events: [["soon", "Onboard: learn from the review queue"], ["soon", "Tracewise: take traffic from a real OpenTelemetry Collector"], ["soon", "Arena: deploy to a real cluster"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
     }
   ],
 
   /*
    * tier: "flagship" (big cards, case study) | "experiment" (smaller cards)
    * status: "live" | "source" | "wip"
-   * motif: the generated cover: "passages" | "pitch" | "cards" | "layers" | "rings" | "mesh" | "geo" | "dots" (default)
+   * motif: the generated cover: "passages" | "pitch" | "cards" | "layers" | "merge" | "spans" | "rings" | "mesh" | "geo" | "dots" (default)
    * metrics: measured numbers [value, label], shown on the card and the case study.
    * uses: skills the project proves beyond the ones already named in `stack`.
+   * featured: true gives the card the full row, cover beside the text (the work closest to the day job).
    * why / how / milestones are optional and fill the case study.
    */
   projects: [
+    {
+      id: "onboard", tier: "flagship", featured: true, motif: "merge", name: "Onboard", year: 2026, kind: "Customer data", status: "live",
+      question: "Can three messy exports become one customer table you'd trust?",
+      pitch: "A CRM, a billing system and a help desk each remember the same 4,000 customers a little differently. Feed in all three exports and one customer table comes out, every value traced to the file, row and column it came from. It runs entirely in your browser.",
+      why: "Every customer project starts with their data, and their data never agrees with itself. Onboard is that first week turned into a tool: profile it, protect it, map it, decide who is who, and score every one of those decisions against the truth.",
+      how: [
+        "Ingest and profile: a CSV parser that scans char codes and sniffs delimiters, BOMs and quoted line breaks, then a profile per column with a HyperLogLog distinct count (MurmurHash3) beside the exact one.",
+        "PII is found in columns and inside free-text notes, then checked instead of trusted: Luhn for cards, mod-97 for IBANs. Regex alone managed 71% precision on the demo data; with the checks, 100%. Each type is masked, kept or tokenized with HMAC-SHA256 in WebCrypto.",
+        "Columns are matched to 17 canonical fields one-to-one with the Hungarian algorithm, 12 data contracts quarantine test rows and records that identify nobody, and entity resolution does the rest: blocking skips 99.96% of 51.8 million pairs, Fellegi-Sunter weights learned by EM score what is left, guard rules become cannot-link constraints in union-find, and unsure pairs go to a review queue instead of being guessed.",
+        "Measured, not guessed: the 10,200 records are synthetic but carry the real mess (typos, nicknames, households, mixed date formats). npm run eval scores every stage against the generator's truth on five seeds, 66 tests cover the core, and the page runs the same modules in a Web Worker, with a SQL engine I wrote for querying the result."
+      ],
+      metrics: [["0.977", "match F1, vs 0.659 on email"], ["99.96%", "of pairs skipped"], ["48 / 48", "columns mapped"], ["6,439", "records per second"]],
+      milestones: [["Seeded exports + ground truth", true], ["Profiling, PII, mapping, contracts", true], ["Fellegi-Sunter entity resolution", true], ["Golden records, review queue, SQL", true], ["Learn from the review queue", false]],
+      stack: ["TypeScript", "React", "Web Workers", "Fellegi-Sunter + EM", "HyperLogLog", "WebCrypto"],
+      uses: ["Entity resolution", "Data quality & PII", "Statistics"],
+      links: { live: "/onboard/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/onboard-src" }
+    },
+    {
+      id: "tracewise", tier: "flagship", featured: true, motif: "spans", name: "Tracewise", year: 2026, kind: "Observability", status: "live",
+      question: "When checkout breaks, can the traces name the culprit?",
+      pitch: "Break a microservice system and watch the tracing pipeline find the cause. Eleven simulated services send OpenTelemetry spans through your browser. Inject latency, errors or a bad deploy, and Tracewise opens an incident and ranks the likely culprit, evidence first.",
+      why: "When something breaks on a customer's system, the first hour goes on finding where. Dashboards show what got slower, not what caused it: across these runs, blaming the service closest to the alert found the real cause only 17% of the time. Tracewise asks whether traces can answer the only question that matters in an incident: which service do we fix?",
+      how: [
+        "A seeded discrete-event simulation of a checkout system (gateway, auth, orders, payments, a Postgres database, a Redis cache, a card API and more) with worker pools, timeouts, retries and a Kafka-style consumer, so slowness cascades the way it does in production.",
+        "Spans arrive out of order and are assembled into traces as they finish. Every trace feeds RED metrics and exclusive time before sampling, with percentiles from a DDSketch written from scratch (within 1%). A tail sampler then keeps every error trace, every trace slower than its flow's rolling p99, and a token-bucket share of the rest.",
+        "Detection runs EWMA forecasts, MAD-scaled z-scores and CUSUM per flow and minute, and SLO alerts follow the SRE workbook's multi-window burn-rate rules. The ranking blends a personalised PageRank blame walk from caller to callee with anomaly scores and a diff of the critical path.",
+        "Measured, not guessed: npm run eval replays 200 seeded faults on a held-out seed, 171.7 million spans, and scores Tracewise against three dashboard heuristics; 58 tests cover the pieces, and ingest runs at 653k spans a second on one thread. The simulator is cleaner than production, and the README says where the method could break. Real OTLP/JSON files can be dropped in for the same map, metrics and waterfalls."
+      ],
+      metrics: [["98.9%", "culprit first, vs 66.1%"], ["171 / 171", "user-visible faults caught"], ["2.0 min", "median to detect"], ["0", "false alarms in 42 h"]],
+      milestones: [["Simulated 11-service system", true], ["Traces, RED metrics, DDSketch", true], ["Anomaly detection + burn-rate alerts", true], ["Root-cause ranking + 200-fault eval", true], ["OTLP receiver for a real Collector", false]],
+      stack: ["TypeScript", "React", "Web Workers", "OpenTelemetry", "DDSketch", "PageRank", "Canvas 2D"],
+      uses: ["Observability", "Statistics"],
+      links: { live: "/tracewise/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/tracewise-src" }
+    },
     {
       id: "atlas", tier: "flagship", motif: "passages", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
       question: "Can a search engine run with no server at all?",

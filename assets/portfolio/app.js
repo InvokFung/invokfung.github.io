@@ -138,8 +138,9 @@
   const ORDER_ALL = () => [...FLAG, ...EXP];
   const metrics = (p, cls) => (p.metrics ? `<span class="${cls}">${p.metrics.map(([v, l]) => `<span><b>${esc(v)}</b><i>${esc(l)}</i></span>`).join("")}</span>` : "");
 
+  // a featured flagship takes the full row, cover beside the text
   function fcard(p) {
-    return `<button type="button" class="fcard rv" data-case="${p.id}" data-ref="p:${p.id}" aria-label="Open the ${esc(p.name)} case study">
+    return `<button type="button" class="fcard rv${p.featured ? " wide" : ""}" data-case="${p.id}" data-ref="p:${p.id}" aria-label="Open the ${esc(p.name)} case study">
       <canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>
       <span class="fbody">
         <span class="ctop"><span class="st is-${p.status}">${STATUS[p.status]}</span><span>${p.year} · ${esc(p.kind)}</span></span>
@@ -426,6 +427,46 @@
         g.stroke();
       }
     },
+    // rows from three exports, resolved into one row per customer
+    merge(g, w, h, r, t) {
+      const small = h < 80, n = small ? 4 : 7, gap = h / (n + 1), rw = small ? 12 : 22, rh = small ? 3 : 5;
+      const gx = w * 0.7, gw = Math.min(w * 0.24, 150), lit = Math.floor(t * 1.2) % n;
+      const gold = Array.from({ length: n }, (_, k) => gap * (k + 1));
+      g.lineWidth = 1;
+      for (let s = 0; s < 3; s++) {
+        const x = w * (0.05 + s * 0.12), m = small ? 4 : 9;
+        for (let j = 0; j < m; j++) {
+          const y = h * (0.1 + 0.8 * r()), k = Math.floor(r() * n), on = k === lit;
+          g.globalAlpha = on ? 0.95 : 0.14;
+          g.beginPath(); g.moveTo(x + rw, y); g.bezierCurveTo(gx - w * 0.2, y, gx - w * 0.16, gold[k], gx, gold[k]); g.stroke();
+          g.globalAlpha = on ? 1 : 0.35;
+          g.beginPath(); g.roundRect(x, y - rh / 2, rw, rh, rh / 2); g.fill();
+        }
+      }
+      gold.forEach((y, k) => {
+        g.globalAlpha = k === lit ? 1 : 0.4;
+        g.beginPath(); g.roundRect(gx, y - rh, gw, rh * 2, rh); k === lit ? g.fill() : g.stroke();
+      });
+    },
+    // a trace waterfall: spans nest under their callers, and one of them is the culprit
+    spans(g, w, h, r, t) {
+      const small = h < 80, n = small ? 5 : 11, gap = (h - 20) / n, rh = small ? 4 : Math.max(8, gap * 0.34);
+      const sp = [[w * 0.05, w * 0.9]], bad = 3 + Math.floor(r() * (n - 4)), scan = w * ((0.62 + t * 0.18) % 1);
+      g.globalAlpha = 0.07; g.lineWidth = 1;
+      for (let k = 1; k < 8; k++) { g.beginPath(); g.moveTo(w * k / 8, 0); g.lineTo(w * k / 8, h); g.stroke(); }
+      for (let i = 1; i < n; i++) {
+        const [px, pw] = sp[Math.floor(r() * i)], x = px + pw * (0.04 + r() * 0.4);
+        sp.push([x, Math.max(12, (px + pw - x) * (0.25 + r() * 0.65))]);
+      }
+      g.lineWidth = 1.2;
+      sp.forEach(([x, len], i) => {
+        const y = 10 + gap * (i + 0.5), on = i === bad;
+        g.globalAlpha = on ? 0.75 + 0.25 * Math.sin(t * 4) : x < scan && scan < x + len ? 0.7 : 0.3;
+        g.beginPath(); g.roundRect(x, y - rh / 2, len, rh, rh / 2); on ? g.fill() : g.stroke();
+      });
+      g.globalAlpha = 0.25; g.setLineDash([3, 5]);
+      g.beginPath(); g.moveTo(scan, 0); g.lineTo(scan, h); g.stroke(); g.setLineDash([]);
+    },
     // concentric timer arcs
     rings(g, w, h, r, t) {
       const cx = w * (0.3 + r() * 0.4), cy = h * 0.5, R = Math.max(w, h);
@@ -595,7 +636,19 @@
   const lPulse = mk("circle", { class: "pulse", r: 5 }, loopSvg);
   let dist = 0, chapLeft = [], lLen = 0, lSamples = [], loopP = 0, active = -1, inLoop = false;
 
+  // a busy chapter sheds detail until it clears the year rail: less space on top, then the log, then the chips
+  function fitChaps() {
+    const st = stage.getBoundingClientRect().top, limit = $("#rail").getBoundingClientRect().top - st - 14;
+    chaps.forEach((c) => {
+      c.classList.remove("fit1", "fit2", "fit3", "fit4");
+      const top = c.getBoundingClientRect().top - st;
+      const bottom = () => top + Math.max(...[...c.children].filter((el) => getComputedStyle(el).position !== "absolute").map((el) => el.offsetTop + el.offsetHeight));
+      for (let k = 1; k <= 4 && bottom() > limit; k++) c.classList.add("fit" + k);
+    });
+  }
+
   function layoutLoop() {
+    fitChaps();
     const stageW = stage.clientWidth;
     const trackW = chaps.reduce((s, c) => s + c.offsetWidth, 0);
     track.style.width = trackW + "px";
@@ -683,7 +736,7 @@
     const cards = $$(".fcard", fork).map((c) => { const r = c.getBoundingClientRect(); return { x: r.left - fr.left, y: r.top - fr.top, w: r.width, h: r.height }; });
     cards.forEach((c, i) => {
       const cx = c.x + c.w / 2;
-      const above = cards.slice(0, i).reverse().find((o) => Math.abs(o.x - c.x) < 8 && o.y < c.y);
+      const above = cards.slice(0, i).reverse().find((o) => o.x - 8 < cx && cx < o.x + o.w + 8 && o.y < c.y);
       let d;
       if (above) d = `M ${cx} ${above.y + above.h} L ${cx} ${c.y}`;
       else {

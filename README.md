@@ -14,7 +14,7 @@ can play. One thread runs from `main()` to `contact()` and lights up as you scro
 3. **skills()**: a wiring diagram. Every skill is wired to the projects that use it; hover or tap
    a skill or a project to trace it, or strum across the wires like a harp. Skills with no shipped
    project yet show their evidence instead.
-4. **fork(projects)**: the thread forks into four flagship cards, each led by the question it set out to answer and its measured numbers, then the
+4. **fork(projects)**: the thread forks into the flagship cards, each led by the question it set out to answer and its measured numbers, then the
    smaller experiments. Each card opens a case study (`#work/<id>` links straight to one).
 5. **history()**: a `for (const year of alan.life)` loop. The section pins and scrolls sideways
    through the years, with a rail, live counters and `HEAD → <year>` in the nav. ← → also work.
@@ -43,5 +43,5 @@ are all generated from that entry. A project is wired to every skill named in it
 To add a chapter, push onto `eras` and list the project ids it shipped. Blog numbers in `writing` are a
 snapshot and need a manual refresh.
 
-Other corners: `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/layerline/` (Layerline),
+Other corners: `/onboard/` (Onboard), `/tracewise/` (Tracewise), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/layerline/` (Layerline),
 `/ptimer/` (ChillTimer), `/triplefind/` (TripleFind).
