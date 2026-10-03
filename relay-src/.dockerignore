@@ -1,0 +1,13 @@
+**/node_modules
+**/dist
+src
+public
+bench
+test
+apps/server/test
+index.html
+vite.config.ts
+tsconfig.json
+*.log
+Dockerfile
+README.md
