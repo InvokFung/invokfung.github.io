@@ -3,9 +3,9 @@
 Alan Fung's portfolio, served from GitHub Pages.
 
 The landing page is drawn as the control flow of a program, and every line on it is a string you
-can play. One thread runs from `main()` to `hire()` and lights up as you scroll:
+can play. One thread runs from `main()` to `contact()` and lights up as you scroll:
 
-1. **main()**: the name, the role (Forward Deployed Engineer), an "open to roles" badge and the headline numbers,
+1. **main()**: the name, the role (Forward Deployed Engineer), what I focus on and the headline numbers,
    with the four open strings of a violin (G D A E) running through the name. Run the cursor (or
    swipe a finger) across them to pluck them; each string's name opens a section. With sound on
    they ring at their real pitch. **Listen** uses the microphone: sing or play near G, D, A or E
@@ -18,7 +18,7 @@ can play. One thread runs from `main()` to `hire()` and lights up as you scroll:
    smaller experiments. Each card opens a case study (`#work/<id>` links straight to one).
 5. **history()**: a `for (const year of alan.life)` loop. The section pins and scrolls sideways
    through the years, with a rail, live counters and `HEAD → <year>` in the nav. ← → also work.
-6. **hire()**: run the line to resolve the promise.
+6. **contact()**: run `await alan.contact()` to resolve the promise to my email and GitHub.
 
 Extras: `</> source` opens the page's own generated source next to it (the dotted values are live:
 theme, accent, motion, name, coffee), and <kbd>`</kbd> opens a terminal (`help`, `checkout 2023`,

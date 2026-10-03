@@ -15,14 +15,13 @@ window.PORTFOLIO = {
     role: "Forward Deployed Engineer",
     // [title, from], oldest first; the last one is the current role
     career: [["Web Developer", 2023], ["Full Stack Engineer", 2024], ["Software Engineer", 2025], ["Forward Deployed Engineer", 2026]],
-    status: "open to FDE and engineering roles",
     tagline: "I tune software the way I tune a violin: by ear, beside the people who play it, then to the cent.",
     email: "aflung10@gmail.com",
     github: "https://github.com/InvokFung",
     firstCommit: 2018,
     // the measured number the hero leads with
     metric: ["85%", "hit@1, my search engine"],
-    focus: ["forward deployment", "full-stack web", "search & retrieval", "real-time systems", "graphics"],
+    focus: ["full-stack web", "search & retrieval", "real-time systems", "graphics"],
     about: [
       "Most of my week is spent next to the people who use the software. That is the job of a Forward Deployed Engineer: hear the real problem, not the ticket, then build until it works in their hands.",
       "The rest goes into going deeper than anyone asked. I wrote my own SVD for a search engine, my own pitch detector for a violin, and a slicer in C++ that doesn't even lean on a standard library, then measured each one to find out whether I was right.",
@@ -61,9 +60,9 @@ window.PORTFOLIO = {
       title: "How a Java group project became a <em>career</em>",
       lede: "{chapters} chapters, from my first commit to what's next. Keep scrolling and the page turns sideways through the years; the rail and the ← → keys jump straight to one."
     },
-    hire: {
-      title: "Bring me the <em>hard</em> part",
-      lede: "A role, a customer nobody has cracked yet, or a strange idea that needs an engineer in the room. Run the line below."
+    contact: {
+      title: "Say <em>hello</em>",
+      lede: "Questions about a project, an idea worth building, or a note about violin practice: all welcome. Run the line below for my email and GitHub."
     }
   },
 
@@ -151,8 +150,8 @@ window.PORTFOLIO = {
       events: [["2026", "Become a Forward Deployed Engineer"], ["2026-01", "Kubernetes, AWS at scale, Terraform"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Ship Layerline"], ["2026-10", "Rebuild this site as an instrument"]]
     },
     {
-      id: "next", label: "next", title: "What's next", role: "Open to roles",
-      text: "Each flagship has one milestone left: Arena on a real Kubernetes cluster, a real part printed from Layerline's G-code, neural embeddings and cited answers in Atlas, and a write-up of pitch detection from scratch. And the next team that wants an engineer in the room where the problem is.",
+      id: "next", label: "next", title: "What's next", role: "Still building",
+      text: "Each flagship has one milestone left: Arena on a real Kubernetes cluster, a real part printed from Layerline's G-code, neural embeddings and cited answers in Atlas, and a write-up of pitch detection from scratch. After that, whichever question I can't leave alone next.",
       picked: [],
       events: [["soon", "Arena: deploy to a real cluster"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
     }

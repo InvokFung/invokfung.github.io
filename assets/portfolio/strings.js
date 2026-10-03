@@ -58,7 +58,7 @@
   // every pass so the high partials die first. A first-order allpass supplies the fractional
   // part of the period, so the strings are in tune to well under a cent.
   const Sound = {
-    ctx: null, out: null, on: false, voices: 0, cache: new Map(),
+    ctx: null, out: null, on: false, woke: false, voices: 0, cache: new Map(),
     unlock() {
       const AC = window.AudioContext || window.webkitAudioContext;
       if (!AC) return null;
@@ -70,8 +70,26 @@
         this.out = ctx.createGain(); this.out.gain.value = 0.8;
         this.out.connect(body); body.connect(air); air.connect(comp); comp.connect(ctx.destination);
       }
-      if (this.ctx.state === "suspended") this.ctx.resume().catch(() => {});
+      // iOS plays Web Audio through the ringer channel, so the silent switch mutes it. Asking for the
+      // "playback" session (Safari 17+) fixes that; a one-sample buffer started inside the tap wakes
+      // the output on older iOS.
+      try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
+      if (!this.woke) {
+        try { const src = this.ctx.createBufferSource(); src.buffer = this.ctx.createBuffer(1, 1, this.ctx.sampleRate); src.connect(this.ctx.destination); src.start(); this.woke = true; } catch (e) {}
+      }
+      if (this.ctx.state !== "running") this.ctx.resume().catch(() => {});
       return this.ctx;
+    },
+    // resolves true once the output is actually running, false if the browser keeps it suspended
+    ready(ms = 1200) {
+      const ctx = this.unlock();
+      if (!ctx) return Promise.resolve(false);
+      if (ctx.state === "running") return Promise.resolve(true);
+      return new Promise((done) => {
+        const t = setTimeout(() => { ctx.removeEventListener("statechange", on); done(ctx.state === "running"); }, ms);
+        const on = () => { if (ctx.state === "running") { clearTimeout(t); ctx.removeEventListener("statechange", on); done(true); } };
+        ctx.addEventListener("statechange", on);
+      });
     },
     buffer(f, ring) {
       const key = Math.round(f * 100) + (ring ? "r" : "");
@@ -95,7 +113,9 @@
       return b;
     },
     pluck(f, vel = 0.6, pan = 0, o = {}) {
-      if (!this.on || !this.ctx || this.ctx.state !== "running" || this.voices > 16) return;
+      if (!this.on || !this.ctx || this.voices > 16) return;
+      // notes started on a suspended context would all fire at once when it resumes, so drop them and ask again
+      if (this.ctx.state !== "running") { if (this.ctx.state === "suspended") this.ctx.resume().catch(() => {}); return; }
       const ctx = this.ctx, src = ctx.createBufferSource();
       src.buffer = this.buffer(f, o.ring);
       const tone = ctx.createBiquadFilter(); tone.type = "lowpass"; tone.frequency.value = 800 + 5200 * vel;

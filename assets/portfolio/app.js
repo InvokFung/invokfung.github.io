@@ -1,6 +1,6 @@
 /*
  * alan.fung runtime.
- * The page is drawn as the control flow of a program: one thread runs from main() to hire(),
+ * The page is drawn as the control flow of a program: one thread runs from main() to contact(),
  * history is a horizontal for-loop over the years, and work() forks into the projects.
  * "</> source" slides in the page's own source; its dotted values are live and recompile the page.
  * Everything is generated from data.js.
@@ -168,11 +168,11 @@
     <section class="sec hero" id="hero" data-block="main" aria-label="Intro">
       <svg class="strings" id="strings" aria-hidden="true"></svg>
       <div class="str-labs" id="str-labs"></div>
-      <div class="eyebrow rv"><span class="avail"><span class="dot" aria-hidden="true"></span>${esc(P.status)}</span><span>writing code since ${P.firstCommit}</span><span>@${esc(P.handle)}</span></div>
+      <div class="eyebrow rv"><span class="avail"><span class="dot" aria-hidden="true"></span>${esc(P.role)}</span><span>shipping software since ${P.career ? P.career[0][1] : P.firstCommit}</span><span>@${esc(P.handle)}</span></div>
       <h1 class="hero-name" id="hero-name"></h1>
       <p class="err" id="hero-err" hidden>TypeError: alan.name is undefined. Type a name in the source.</p>
       <div class="hero-row">
-        <div class="rv"><div class="hero-role">// ${esc(P.role.toLowerCase())} · shipping software since ${P.career ? P.career[0][1] : P.firstCommit}</div><p class="hero-tag">${esc(P.tagline)}</p></div>
+        <div class="rv"><div class="hero-role">// ${P.focus.map(esc).join(" · ")}</div><p class="hero-tag">${esc(P.tagline)}</p></div>
         <div class="play rv" id="play">
           <p class="play-hint">This page is strung like a violin. ${fine() ? "<b>Drag your cursor across the strings</b> to play them" : "<b>Swipe across the strings</b> to play them"}, and ${fine() ? "click" : "tap"} a string's name to go there.</p>
           <div class="play-ctl">
@@ -198,7 +198,7 @@
         <div class="rv">${P.about.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
         <div class="imports rv"><span class="kw">export const</span> alan = {
           <div class="kv"><span>role:</span> <span class="s">"${esc(P.role)}"</span>,</div>
-          <div class="kv"><span>status:</span> <span class="s">"${esc(P.status)}"</span>,</div>
+          <div class="kv"><span>since:</span> <span class="n">${P.career ? P.career[0][1] : P.firstCommit}</span>,</div>
           <div class="kv"><span>focus:</span> [${P.focus.map((f) => `<span class="s">"${esc(f)}"</span>`).join(", ")}],</div>
           <div class="kv"><span>${WIP.length ? "building" : "shipped"}:</span> [${(WIP.length ? WIP : FLAG).map((p) => `<button type="button" class="s lnk" data-case="${p.id}">"${esc(p.name)}"</button>`).join(", ")}],</div>
           <div class="kv"><span>email:</span> <a class="s" href="mailto:${esc(P.email)}">"${esc(P.email)}"</a>,</div>
@@ -246,10 +246,10 @@
     </section>
 
     <section class="sec contact" id="contact" data-block="contact" aria-label="Contact">
-      ${node("await hire(alan)", "05", "contact")}
-      <h2 class="title split">${secTitle("hire", "Let's build <em>something</em>")}</h2>
-      <p class="lede rv">${secLede("hire", "Run the line below.")}</p>
-      <button type="button" class="hire rv" id="hire" data-node-end><span><span class="kw">await</span> <span class="fn">hire</span><span class="p">(</span>alan<span class="p">)</span></span><span class="caret" aria-hidden="true"></span></button>
+      ${node("contact()", "05", "contact")}
+      <h2 class="title split">${secTitle("contact", "Say <em>hello</em>")}</h2>
+      <p class="lede rv">${secLede("contact", "Run the line below.")}</p>
+      <button type="button" class="hire rv" id="hire" data-node-end><span><span class="kw">await</span> alan<span class="p">.</span><span class="fn">contact</span><span class="p">()</span></span><span class="caret" aria-hidden="true"></span></button>
       <div class="promise" id="promise" hidden></div>
       <footer class="foot">
         <span>© ${NOW} ${esc(P.name)} · hand-written, no framework, served from GitHub Pages</span>
@@ -821,7 +821,7 @@
     { n: "G", f: 196.0, pc: 7, go: "whoami", lab: "whoami()", w: 3.1, wound: true },
     { n: "D", f: 293.66, pc: 2, go: "skills", lab: "skills()", w: 2.4, wound: true },
     { n: "A", f: 440.0, pc: 9, go: "work", lab: "work()", w: 1.8 },
-    { n: "E", f: 659.26, pc: 4, go: "contact", lab: "hire()", w: 1.3 }
+    { n: "E", f: 659.26, pc: 4, go: "contact", lab: "contact()", w: 1.3 }
   ];
   let sRaf = 0;
   const wake = () => { if (!sRaf) sRaf = requestAnimationFrame(tickStrings); };
@@ -1033,7 +1033,13 @@
     S.Sound.on = on;
     try { localStorage.setItem(SND, on ? "1" : "0"); } catch (e) {}
     $$("[data-sound]").forEach((b) => { b.setAttribute("aria-pressed", String(on)); b.title = on ? "Sound on" : "Sound off"; const t = $(".t", b); if (t) t.textContent = on ? "sound on" : "sound off"; });
-    if (on && byHand) { S.Sound.unlock(); setTimeout(strum, 60); }
+    if (!on || !byHand) return;
+    // ready() unlocks the output inside this click; strum only once it is actually running, and say so if it never does
+    S.Sound.ready().then((ok) => {
+      if (!S.Sound.on) return;
+      if (ok) { strum(); toast(`sound on · ${fine() ? "run your cursor across" : "swipe"} any line to play it`); }
+      else { setSound(false); toast("this browser kept the audio switched off here"); }
+    });
   }
   let sndSaved = false;
   try { sndSaved = localStorage.getItem(SND) === "1"; } catch (e) {}
@@ -1276,7 +1282,7 @@
   /* ------------------------------------------------------------ nav + map */
 
   const sections = $$(".sec[data-block]");
-  const MAP = [["hero", "main()"], ["whoami", "whoami()"], ["skills", "skills()"], ["work", "fork()"], ["history", "history()"], ["contact", "hire()"]];
+  const MAP = [["hero", "main()"], ["whoami", "whoami()"], ["skills", "skills()"], ["work", "fork()"], ["history", "history()"], ["contact", "contact()"]];
   $("#minimap").innerHTML = MAP.map(([id, l]) => `<button type="button" data-go="${id}" aria-label="Go to ${l}"><span>${l}</span><i></i></button>`).join("");
   const headEl = $("#head");
   let curSec = null;
@@ -1379,7 +1385,7 @@
       "",
       "function whoami() {",
       ...D.traits.map((t, i) => ({ s: `  // ${String(i + 1).padStart(2, "0")} ${t.k}: ${t.n} ${t.unit}`, ref: "t:" + i })),
-      `  return { status: ${q(P.status)} };`,
+      `  return { role: ${q(P.role)}, since: ${P.career ? P.career[0][1] : P.firstCommit} };`,
       "}"
     ]);
     block("skills", [
@@ -1409,7 +1415,7 @@
     block("contact", [
       "",
       "try {",
-      "  await hire(alan);",
+      "  await alan.contact();",
       "} catch {",
       "  // there is no catch. say hi.",
       "}"
@@ -1699,7 +1705,7 @@
     setTimeout(tick, 150);
   }
 
-  /* ------------------------------------------------------------ hire(alan) */
+  /* -------------------------------------------------------- alan.contact() */
 
   const hireBtn = $("#hire"), promise = $("#promise");
   hireBtn.addEventListener("click", () => {
@@ -1745,7 +1751,7 @@
       "git log                every commit of my history",
       "skills [name]          what I build with, and where (e.g. skills c++)",
       "blog                   latest notes",
-      "hire                   get in touch",
+      "contact                get in touch",
       "source                 toggle the live source pane",
       "strum · sound <on|off>  play the strings (sound is off until you turn it on)",
       "listen                 sing a G, D, A or E and its string rings along",
@@ -1786,8 +1792,8 @@
       return list.map((x) => { const ps = usedBy(x); return `${esc(x.name.padEnd(Math.max(...SK.map((s) => s.name.length)) + 2))} since ${x.since}  ${ps.length ? ps.map((p) => esc(p.id) + (p.status === "wip" ? "*" : "")).join(", ") : `<span style="color:var(--mute)">${esc(x.proof || "")}</span>`}`; }).join("\n") + (k || !PROJ.some((p) => p.status === "wip") ? "" : "\n\n* in progress");
     },
     blog: () => D.writing.latest.map((p) => `${p.date}  <a href="${esc(p.url)}">${esc(p.title)}</a>`).join("\n") + `\n\n${D.writing.total} notes in total → <a href="/blog/">/blog/</a>`,
-    hire: () => `Promise { &lt;fulfilled&gt; }\nemail   <a href="mailto:${esc(P.email)}">${esc(P.email)}</a>\ngithub  <a href="${esc(P.github)}" target="_blank" rel="noopener">${esc(P.github)}</a>`,
-    contact: () => CMDS.hire(),
+    contact: () => `Promise { &lt;fulfilled&gt; }\nemail   <a href="mailto:${esc(P.email)}">${esc(P.email)}</a>\ngithub  <a href="${esc(P.github)}" target="_blank" rel="noopener">${esc(P.github)}</a>`,
+    hire: () => CMDS.contact(),
     source: () => { setSource(!root.classList.contains("source")); return `source mode ${root.classList.contains("source") ? "on" : "off"}`; },
     theme: (a) => {
       if (!a[0]) return `theme = "${state.theme}"  (${THEMES.join(" | ")})`;
@@ -1817,7 +1823,7 @@
     sudo: () => `<span class="e">alan is not in the sudoers file. This incident will be reported.</span>`,
     rm: () => `<span class="e">nice try. this page is immutable (mostly).</span>`,
     vim: () => "you're already in an editor. try <span class=\"a\">source</span>.",
-    hi: () => `hi! 👋 type <span class="a">hire</span> if you want to talk.`
+    hi: () => `hi! 👋 type <span class="a">contact</span> for my email and GitHub.`
   };
   CMDS.strum = () => { strum(); return S.Sound.on ? "G3 D4 A4 E5" : "G3 D4 A4 E5 (silent: type sound on)"; };
   CMDS.sound = (a) => { const on = a[0] ? a[0] === "on" : !S.Sound.on; setSound(on, on); return `sound ${on ? "on" : "off"}`; };

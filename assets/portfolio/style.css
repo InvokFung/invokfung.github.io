@@ -295,7 +295,7 @@ em { font-style: italic; }
 .who-grid p { font-size: 17px; color: var(--fg2); max-width: 44ch; }
 .who-grid p + p { margin-top: 14px; }
 .imports { font: 400 13px/1.9 var(--mono); color: var(--fg2); border: 1px solid var(--line2); border-radius: 18px; padding: 22px 24px; background: var(--bg2); }
-.imports .kw { color: var(--kw); } .imports .s { color: var(--str); }
+.imports .kw { color: var(--kw); } .imports .s { color: var(--str); } .imports .n { color: var(--num); }
 .imports .kv { padding-left: 2ch; } .imports .kv > span:first-child { color: var(--fn); }
 .imports .lnk, .imports a.s { font: inherit; color: var(--str); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--str) 40%, transparent); text-underline-offset: 3px; }
 .imports .lnk:hover, .imports a.s:hover { text-decoration-color: currentColor; }
