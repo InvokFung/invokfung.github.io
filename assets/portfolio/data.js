@@ -4,6 +4,7 @@
  * so editing an entry here updates both.
  *
  *   New project   → add an object to `projects` (tier "flagship" or "experiment").
+ *   New skill     → add it to a group in `skills`; projects that list it in `stack` or `uses` are wired to it.
  *   New chapter   → add an object to `eras` (shown in the history loop, oldest first).
  *   Blog numbers  → update `writing` (a snapshot of /blog at the time of editing).
  */
@@ -12,85 +13,117 @@ window.PORTFOLIO = {
     name: "Alan Fung",
     handle: "InvokFung",
     role: "Software Engineer",
-    tagline: "Dedicated to programming. Obsessed with charm, visual effects and the feel of a good interface.",
+    status: "open to software engineering roles",
+    tagline: "Full-stack engineer who goes down to the maths underneath: search engines, real-time systems and the feel of a good interface.",
     email: "aflung10@gmail.com",
     github: "https://github.com/InvokFung",
     firstCommit: 2018,
+    // the measured number the hero leads with
+    metric: ["85%", "hit@1, my search engine"],
+    focus: ["full-stack web", "search & retrieval", "real-time systems", "graphics"],
     about: [
       "I'm a developer obsessed with charm, stunning visual effects and user experience.",
-      "I don't stop at the interface: I go down into databases, networking, infrastructure and the maths underneath, and I write everything I learn into a public study log."
+      "I don't stop at the interface: I go down into databases, networking, infrastructure and the maths underneath, and I measure what I build."
     ]
   },
 
   // The whoami() statement. Each {token} is interactive and shows the evidence behind it.
-  statement: "I'm Alan. I {write everything down}, {go to first principles}, {ship small things often} and {build with my hands}. Off the keyboard, I {play the violin}.",
+  statement: "I'm Alan, a software engineer. I {ship full-stack products}, {measure what I build}, {learn the theory underneath} and {write it all down}. Off the keyboard, I {play the violin}.",
   traits: [
-    { k: "write everything down", n: "174", unit: "notes", text: "Every course, deep dive and side quest becomes a long-form post on StudyLog. Ten in 2022, 86 in 2025 alone.", link: "/blog/" },
-    { k: "go to first principles", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis, because the abstractions under graphics, search and ML are worth knowing properly." },
-    { k: "ship small things often", n: "7", unit: "shipped", text: "From a Java group project in 2018 to a memory game, a focus timer, a final-year 3D reconstruction system and a semantic search engine." },
-    { k: "build with my hands", n: "19", unit: "hardware notes", text: "An 8-part 3D printing course (slicing, G-code, functional parts) and logic circuit design. Layerline, my browser slicer, grows out of this." },
+    { k: "ship full-stack products", n: "7", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine that runs in the browser, a memory game, a focus timer and more. Three bigger builds are in progress.", link: "#work", linkText: "see the work ↓" },
+    { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query.", link: "/atlas/", linkText: "try Atlas →" },
+    { k: "learn the theory underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. It pays off: Atlas runs on a randomized SVD and an eigensolver I wrote myself." },
+    { k: "write it all down", n: "174", unit: "technical notes", text: "A 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs: every deep dive becomes a long-form post on StudyLog, my public engineering notebook.", link: "/blog/", linkText: "open StudyLog →" },
     { k: "play the violin", n: "19", unit: "music notes", text: "Violin notes, and I'm teaching myself the piano. Intonation Studio, a practice room that listens to you play, grows out of this." }
   ],
 
-  // Shown as `import { ... } from "experience"`. since = first year with evidence (a repo or a post).
-  stack: [
-    ["TypeScript", 2025], ["JavaScript", 2020], ["Python", 2024], ["C++", 2022], ["Java", 2018],
-    ["React", 2026], ["Next.js", 2025], ["Vue", 2026], ["Node.js", 2024], ["Three.js", 2025], ["GLSL", 2025],
-    ["MongoDB", 2025], ["PostgreSQL", 2025], ["Docker", 2025], ["Kubernetes", 2026], ["AWS", 2025], ["Terraform", 2026],
-    ["Networking", 2022], ["Linear algebra", 2025], ["3D printing", 2026]
+  /*
+   * skills(): grouped, with the year of the first evidence. A project proves a skill when the
+   * skill's name is in its `stack` or `uses`. `proof` backs up a skill with no shipped project yet.
+   */
+  skills: [
+    { group: "Languages", items: [
+      ["TypeScript", 2025], ["JavaScript", 2020], ["Python", 2024],
+      ["C++", 2022, "Data structures in C++ (2022), then a 6-part modern C++ series on StudyLog"],
+      ["Java", 2018, "My first repository: a Java group project"]
+    ] },
+    { group: "Frontend & graphics", items: [
+      ["React", 2026], ["Next.js", 2025],
+      ["Vue", 2026, "4-part Vue series on StudyLog: reactivity internals, compiler, production"],
+      ["Three.js", 2025, "14-part Three.js course on StudyLog: PBR, instancing, shaders, physics"],
+      ["GLSL", 2025, "Shaders and post-processing chapters of the Three.js course"],
+      ["WebAssembly", 2026]
+    ] },
+    { group: "Backend & data", items: [
+      ["Node.js", 2024],
+      ["Search & retrieval", 2026],
+      ["MongoDB", 2025, "30-part MongoDB course on StudyLog: indexes, sharding, change streams, CQRS"],
+      ["PostgreSQL", 2025, "8-part PostgreSQL course on StudyLog: planner, MVCC, replication"]
+    ] },
+    { group: "Cloud & infra", items: [
+      ["Docker", 2025, "8-part Docker and Kubernetes series on StudyLog"],
+      ["Kubernetes", 2026, "8-part Docker and Kubernetes series on StudyLog"],
+      ["AWS", 2025, "9-part AWS series on StudyLog: VPC, compute, serverless, observability"],
+      ["Terraform", 2026, "Infrastructure as code chapter of the AWS series"],
+      ["Networking", 2022, "Data communications and networking notes (2022), VPC design on AWS"]
+    ] },
+    { group: "Maths & making", items: [
+      ["Linear algebra", 2025],
+      ["3D printing", 2026, "8-part 3D printing course on StudyLog: slicing, tolerances, functional parts"]
+    ] }
   ],
 
   /*
-   * The history loop, oldest first. `notes` = StudyLog posts published by the end of that year.
+   * The history loop, oldest first. `picked` = skills that chapter added.
    * `events` also feed `git log` in the terminal.
    */
   eras: [
     {
       id: "2018", label: "2018", title: "First commit", role: "Student",
       text: "A Java group project became my first repository on GitHub. Everything since has been one long commit history.",
-      picked: ["Java", "Git"], notes: 0,
+      picked: ["Java", "Git"],
       events: [["2018-11", "First repo: a Java group project"]]
     },
     {
       id: "2020", label: "2020", title: "Tinkering", role: "Tinkerer",
       text: "Side experiments to see how things work: serverless databases with FaunaDB, a chess board, and small playful web pages.",
-      picked: ["JavaScript", "Serverless DBs", "HTML/CSS"], notes: 0, projects: ["genius"],
+      picked: ["JavaScript", "Serverless DBs", "HTML/CSS"], projects: ["genius"],
       events: [["2020-09", "Experiments with serverless databases (FaunaDB)"], ["2020-11", "A chess board"], ["2021-07", "genius, a fun web experiment"]]
     },
     {
-      id: "2022", label: "2022", title: "Learning in public", role: "Computer science student",
-      text: "I started StudyLog and this site, publishing my course notes: data structures in C++, Java, networking, logic circuits and statistics.",
-      picked: ["C++", "Networking", "Logic circuits"], notes: 10, projects: ["studylog"],
-      events: [["2022-05", "git init invokfung.github.io"], ["2022-05", "First StudyLog notes: DSA in C++, Java, networking, circuits"]]
+      id: "2022", label: "2022", title: "Foundations", role: "Computer science student",
+      text: "Computer science fundamentals: data structures in C++, Java, networking and logic circuits. I built this site and started StudyLog to publish what I learn.",
+      picked: ["C++", "Networking", "Logic circuits"], projects: ["studylog"],
+      events: [["2022-05", "git init invokfung.github.io"], ["2022-05", "Data structures in C++, Java, networking"]]
     },
     {
       id: "2023", label: "2023", title: "Shipping small things", role: "Builder",
       text: "I started turning ideas into things people can click: a memory game with time-proportional scoring, a focus timer, and a coordinate-geometry calculator.",
-      picked: ["DOM", "Game logic", "Responsive UI"], notes: 10, projects: ["triplefind", "chilltimer", "shapecalc"],
+      picked: ["DOM", "Game logic", "Responsive UI"], projects: ["triplefind", "chilltimer", "shapecalc"],
       events: [["2023-02", "TripleFind goes live"], ["2023-03", "First version of ChillTimer"], ["2023-06", "Shape Calculator"]]
     },
     {
-      id: "2024", label: "2024", title: "Final year", role: "Final-year student",
-      text: "My final year project was a three-tier 3D reconstruction system: a web client, a Node API and a Python backend. In November I relaunched StudyLog, starting with violin and Python notes.",
-      picked: ["Python", "Node.js", "REST APIs"], notes: 20, projects: ["reconstruction"],
-      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024-09", "Browser automation with Puppeteer"], ["2024-11", "Relaunch StudyLog: violin and Python notes"]]
+      id: "2024", label: "2024", title: "Full stack", role: "Final-year student",
+      text: "My final year project was a three-tier 3D reconstruction system: a web client, a Node API and a Python processing backend.",
+      picked: ["Python", "Node.js", "REST APIs"], projects: ["reconstruction"],
+      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
     },
     {
       id: "2025", label: "2025", title: "Going deep", role: "Software engineer",
-      text: "86 notes in one year: a 30-part MongoDB course, 14 parts of Three.js, C++, PostgreSQL, linear and abstract algebra, and the start of containers and AWS.",
-      picked: ["TypeScript", "MongoDB", "Three.js", "PostgreSQL", "Docker"], notes: 106,
-      events: [["2025-03", "Start a 30-part MongoDB course"], ["2025-06", "Three.js course: shaders, instancing, R3F, physics"], ["2025-09", "PostgreSQL course"], ["2025-11", "Containers and abstract algebra"]]
+      text: "Depth on the backend and in graphics: MongoDB from indexes to sharding, PostgreSQL internals, modern C++, Three.js shaders and instancing, linear algebra, then containers and AWS.",
+      picked: ["TypeScript", "MongoDB", "PostgreSQL", "Three.js", "Docker"],
+      events: [["2025-03", "MongoDB: indexes, aggregation, sharding"], ["2025-06", "Three.js: PBR, instancing, GLSL shaders"], ["2025-09", "PostgreSQL: planner, MVCC, replication"], ["2025-11", "Containers from first principles"]]
     },
     {
       id: "2026", label: "2026", title: "Building in the open", role: "Software engineer",
-      text: "AWS and Kubernetes, React, Vue and Next.js deep dives, real analysis, a 3D printing course and a 24-part Dev Essentials series. Then StudyLog Atlas, and this site.",
-      picked: ["Kubernetes", "Terraform", "React", "Vue", "Next.js"], notes: 174, projects: ["atlas"],
-      events: [["2026-01", "Kubernetes and a JavaScript deep dive"], ["2026-04", "3D printing course; Dev Essentials begins"], ["2026-09", "Dev Essentials: 24 of 24"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Rebuild this site as a program"]]
+      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then StudyLog Atlas: a search engine with a WebAssembly SIMD kernel, measured at 85% hit@1.",
+      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval"], projects: ["atlas"],
+      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Rebuild this site as a program"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Building flagships",
       text: "Three flagship builds are under way: a practice room that hears my violin, my card game as real-time multiplayer on Kubernetes, and a 3D-printing slicer in C++ compiled to WebAssembly.",
-      picked: ["Web Audio", "WebSockets", "WebAssembly"], notes: 174, projects: ["intonation", "arena", "layerline"],
+      picked: ["Web Audio", "WebSockets", "Emscripten"], projects: ["intonation", "arena", "layerline"],
       events: [["soon", "Intonation Studio: tuner prototype"], ["soon", "TripleFind Arena: multiplayer rooms"], ["soon", "Layerline: C++ slicing core"]]
     }
   ],
@@ -99,22 +132,26 @@ window.PORTFOLIO = {
    * tier: "flagship" (big cards, case study) | "experiment" (smaller cards)
    * status: "live" | "source" | "wip"
    * motif: the generated cover: "passages" | "pitch" | "cards" | "layers" | "rings" | "mesh" | "geo" | "dots" (default)
+   * metrics: measured numbers [value, label], shown on the card and the case study.
+   * uses: skills the project proves beyond the ones already named in `stack`.
    * why / how / milestones are optional and fill the case study.
    */
   projects: [
     {
-      id: "atlas", tier: "flagship", motif: "passages", name: "StudyLog Atlas", year: 2026, kind: "Search engine + 3D", status: "live",
-      pitch: "Every StudyLog post as a 3D map of 5,551 passages placed by meaning. Ask a question and the matching passages light up, with the exact section linked.",
-      why: "173 long-form posts were only browsable by date and tag. Atlas makes the whole notebook searchable by meaning and visible at a glance.",
+      id: "atlas", tier: "flagship", motif: "passages", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
+      pitch: "A hybrid search engine that runs entirely in the browser over 5,551 passages of my notes, and shows its work: every stage of a query reports its output and its time on your device.",
+      why: "173 long-form posts were only browsable by date and tag. Atlas makes the whole notebook searchable by meaning, with no model, API key or server.",
       how: [
-        "Parses the rendered blog into 5,551 passages and builds a BM25 index plus a TF-IDF matrix at build time.",
-        "Reduces it with a randomized truncated SVD written from scratch, then lays passages out in 3D with UMAP.",
-        "Hybrid search fuses keyword and semantic rankings with reciprocal rank fusion: 85% hit@1, 98% hit@5 on a 60-question eval.",
-        "React Three Fiber draws every passage in one draw call with a custom GLSL shader. No model, API key or server."
+        "Build step in TypeScript: parse the rendered blog into 5,551 passages and pack a BM25 inverted index into typed arrays.",
+        "Latent semantic analysis: a TF-IDF matrix reduced to 96 dimensions by a randomized truncated SVD, with my own Gram-Schmidt and Jacobi eigensolver.",
+        "Query time: int8 passage vectors scored by a WebAssembly SIMD kernel (about 6× faster than the JavaScript loop), a bounded min-heap for top-k, then reciprocal rank fusion of the two rankings.",
+        "Measured, not guessed: a 60-question benchmark reruns live in the browser; npm test checks the kernel is bit-identical to the JavaScript fallback."
       ],
-      milestones: [["Passage index + BM25", true], ["Semantic space (SVD) + UMAP layout", true], ["60-question retrieval eval", true], ["3D map + search UI", true], ["Neural embeddings + cited answers", false]],
-      stack: ["TypeScript", "React Three Fiber", "GLSL", "BM25", "SVD", "UMAP"],
-      links: { live: "/atlas/" }
+      metrics: [["85%", "hit@1"], ["98%", "hit@5"], ["~0.5 ms", "per query"], ["82 kB", "gzipped"]],
+      milestones: [["Passage index + BM25", true], ["LSA from a from-scratch SVD", true], ["60-question benchmark", true], ["WASM SIMD kernel + pipeline UI", true], ["Neural embeddings + cited answers", false]],
+      stack: ["TypeScript", "React", "WebAssembly", "BM25", "LSA / SVD", "Vite"],
+      uses: ["Search & retrieval", "Linear algebra"],
+      links: { live: "/atlas/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/atlas-src" }
     },
     {
       id: "intonation", tier: "flagship", motif: "pitch", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "wip",
@@ -127,7 +164,8 @@ window.PORTFOLIO = {
         "A live visualiser with a custom shader that responds to pitch accuracy and dynamics."
       ],
       milestones: [["Tuner prototype in an AudioWorklet", false], ["Drill engine + per-note scoring", false], ["Practice history + heatmap", false], ["Visualiser + mobile polish", false], ["Write-up: pitch detection from scratch", false]],
-      stack: ["TypeScript", "Web Audio", "AudioWorklet", "DSP", "Three.js", "Postgres"],
+      stack: ["TypeScript", "Web Audio", "AudioWorklet", "DSP", "Three.js", "PostgreSQL"],
+      uses: ["GLSL"],
       links: {}
     },
     {
@@ -142,6 +180,7 @@ window.PORTFOLIO = {
       ],
       milestones: [["Shared game-logic package", false], ["Single-node multiplayer + reconnect", false], ["Event-sourced replays + leaderboard", false], ["Kubernetes + Terraform deploy", false], ["Observability + load test", false]],
       stack: ["Node.js", "TypeScript", "WebSockets", "Redis", "MongoDB", "Kubernetes", "Terraform"],
+      uses: ["Docker", "AWS", "Networking"],
       links: { original: "/triplefind/" }
     },
     {
@@ -156,11 +195,12 @@ window.PORTFOLIO = {
       ],
       milestones: [["C++ core + reference mesh tests", false], ["Emscripten build in a Worker", false], ["Perimeters, infill, G-code", false], ["Toolpath viewer", false], ["Print a real part + benchmarks", false]],
       stack: ["C++", "WebAssembly", "Web Workers", "Three.js", "Computational geometry"],
+      uses: ["3D printing", "Linear algebra"],
       links: {}
     },
     {
       id: "studylog", tier: "experiment", motif: "dots", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",
-      pitch: "A public engineering notebook: 174 long-form notes on databases, cloud, maths, 3D printing and music.",
+      pitch: "My public engineering notebook: 174 long-form technical notes on databases, cloud, C++, graphics and maths, with diagrams and full-text search.",
       how: ["Custom build pipeline with static export", "Diagrams, KaTeX and local full-text search"],
       stack: ["Next.js", "Markdown", "KaTeX", "Python"], links: { live: "/blog/" }
     },
@@ -190,7 +230,7 @@ window.PORTFOLIO = {
     {
       id: "genius", tier: "experiment", motif: "dots", name: "genius", year: 2021, kind: "Experiment", status: "source",
       pitch: "A playful little web experiment from the early days.",
-      stack: ["HTML", "CSS", "JS"], links: { source: "https://github.com/InvokFung/genius" }
+      stack: ["HTML", "CSS", "JavaScript"], links: { source: "https://github.com/InvokFung/genius" }
     }
   ],
 

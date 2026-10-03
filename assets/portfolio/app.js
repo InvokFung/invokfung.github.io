@@ -65,6 +65,10 @@
   const eraYear = (e) => parseInt(e.id, 10) || NOW + 1;
   const shipped = PROJ.filter((p) => p.status !== "wip");
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
+  const SK = D.skills.flatMap((g) => g.items.map(([name, since, proof]) => ({ name, since, proof, group: g.group })));
+  const proves = (p, s) => (p.stack || []).includes(s.name) || (p.uses || []).includes(s.name);
+  const usedBy = (s) => PROJ.filter((p) => proves(p, s));
+  const skillsOf = (p) => SK.filter((s) => proves(p, s));
   const ext = (u) => (/^https?:/.test(u) ? ` target="_blank" rel="noopener"` : "");
 
   /* ----------------------------------------------------------------- output */
@@ -106,6 +110,9 @@
     return `<div class="prog"><span>${done}/${p.milestones.length} milestones</span><span class="bar"><i data-w="${(done / p.milestones.length) * 100}"></i></span></div>`;
   }
 
+  const ORDER_ALL = () => [...FLAG, ...EXP];
+  const metrics = (p, cls) => (p.metrics ? `<span class="${cls}">${p.metrics.map(([v, l]) => `<span><b>${esc(v)}</b>${esc(l)}</span>`).join("")}</span>` : "");
+
   function fcard(p) {
     return `<button type="button" class="fcard rv" data-case="${p.id}" data-ref="p:${p.id}" aria-label="Open the ${esc(p.name)} case study">
       <canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>
@@ -113,9 +120,10 @@
         <span class="ctop"><span class="st is-${p.status}">${STATUS[p.status]}</span><span>${p.year} · ${esc(p.kind)}</span></span>
         <h3>${esc(p.name)}</h3>
         <p>${esc(p.pitch)}</p>
+        ${metrics(p, "metrics")}
         ${progress(p)}
         <span class="tags">${p.stack.slice(0, 5).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</span>
-        <span class="open">open case study <span class="arr">↗</span></span>
+        <span class="go-case">open case study <span class="arr">↗</span></span>
       </span>
     </button>`;
   }
@@ -132,22 +140,22 @@
 
   out.insertAdjacentHTML("beforeend", `
     <section class="sec hero" id="hero" data-block="main" aria-label="Intro">
-      <div class="eyebrow rv"><span class="dot" aria-hidden="true"></span><span>writing code since ${P.firstCommit}</span><span>${esc(P.role.toLowerCase())}</span><span>@${esc(P.handle)}</span></div>
+      <div class="eyebrow rv"><span class="avail"><span class="dot" aria-hidden="true"></span>${esc(P.status)}</span><span>writing code since ${P.firstCommit}</span><span>@${esc(P.handle)}</span></div>
       <h1 class="hero-name" id="hero-name"></h1>
       <p class="err" id="hero-err" hidden>TypeError: alan.name is undefined. Type a name in the source.</p>
       <div class="hero-row">
         <div class="rv"><div class="hero-role">// ${esc(P.role.toLowerCase())}, dedicated to programming</div><p class="hero-tag">${esc(P.tagline)}</p></div>
         <div class="cta rv">
-          <a class="btn" href="#history" data-go="history" data-magnetic>Walk my history <span class="arr">→</span></a>
-          <a class="btn ghost" href="#work" data-go="work" data-magnetic>See the work</a>
+          <a class="btn" href="#work" data-go="work" data-magnetic>See the work <span class="arr">→</span></a>
+          <a class="btn ghost" href="#skills" data-go="skills" data-magnetic>Skills, with proof</a>
           <a class="btn ghost" href="#contact" data-go="contact" data-magnetic>Say hi</a>
         </div>
       </div>
       <div class="hero-stats rv">
+        <div><b>${esc(P.metric[0])}</b><span>${esc(P.metric[1])}</span></div>
+        <div><b>${shipped.length}</b><span>projects shipped</span></div>
+        <div><b>${SK.length}</b><span>skills, each with proof</span></div>
         <div><b>${P.firstCommit}</b><span>first commit</span></div>
-        <div><b>${ERAS.length}</b><span>chapters</span></div>
-        <div><b>${D.writing.total}</b><span>notes published</span></div>
-        <div><b>${FLAG.length}</b><span>flagship builds</span></div>
       </div>
     </section>
 
@@ -157,21 +165,27 @@
       <div class="ev" id="ev" role="tooltip"></div>
       <div class="who-grid">
         <div class="rv">${P.about.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
-        <div class="imports rv"><span class="kw">import</span> {<div class="chips">${D.stack.map(([n, y]) => `<span class="chip" data-since="${y}">${esc(n)}<small>${y}</small></span>`).join("")}</div>} <span class="kw">from</span> <span class="s">"experience"</span>;</div>
+        <div class="imports rv"><span class="kw">export const</span> alan = {
+          <div class="kv"><span>status:</span> <span class="s">"${esc(P.status)}"</span>,</div>
+          <div class="kv"><span>focus:</span> [${P.focus.map((f) => `<span class="s">"${esc(f)}"</span>`).join(", ")}],</div>
+          <div class="kv"><span>building:</span> [${FLAG.filter((p) => p.status === "wip").map((p) => `<button type="button" class="s lnk" data-case="${p.id}">"${esc(p.name)}"</button>`).join(", ")}],</div>
+          <div class="kv"><span>email:</span> <a class="s" href="mailto:${esc(P.email)}">"${esc(P.email)}"</a>,</div>
+        };</div>
       </div>
     </section>
 
-    <section class="sec history" id="history" data-block="history" aria-label="History">
-      <div class="intro" id="intro">
-        ${node("for (const year of alan.life)", "02", "history")}
-        <h2 class="title split">${split("How I got <em>here</em>")}</h2>
-        <p class="lede rv">${ERAS.length} chapters, from my first commit to what I'm building next. Keep scrolling and the page runs sideways through the years. Use the rail or the ← → keys to jump.</p>
+    <section class="sec skills" id="skills" data-block="skills" aria-label="Skills">
+      ${node("skills()", "02", "skills")}
+      <h2 class="title split">${split("What I can do, <em>wired</em> to the proof")}</h2>
+      <p class="lede rv">${SK.length} skills, each traced to the projects that use it. Hover or tap a skill to light up its projects, or a project to see what it's built with. Solid wires are shipped work, dashed ones are in progress.</p>
+      <div class="graph rv" id="graph">
+        <svg class="wires" id="wires" aria-hidden="true"></svg>
+        <div class="g-skills">${D.skills.map((g) => `<div class="g-group"><div class="g-h">// ${esc(g.group.toLowerCase())}</div>${g.items.map(([n]) => { const i = SK.findIndex((x) => x.name === n); const sk = SK[i]; const live = usedBy(sk).filter((p) => p.status !== "wip").length; return `<button type="button" class="g-skill" data-s="${i}" data-ref="s:${i}"><span class="nm">${esc(n)}</span><span class="since">${sk.since}</span><span class="cnt${live ? "" : " none"}">${usedBy(sk).length || "·"}</span></button>`; }).join("")}</div>`).join("")}</div>
+        <div class="g-side">
+          <div class="g-proof" id="g-proof" aria-live="polite"></div>
+          <div class="g-projs">${ORDER_ALL().map((p) => `<button type="button" class="g-proj" data-p="${p.id}"><span class="st is-${p.status}"></span><span class="nm">${esc(p.name)}</span><span class="k">${esc(p.kind)}</span></button>`).join("")}</div>
+        </div>
       </div>
-      <div class="pin" id="pin"><div class="stage" id="stage">
-        <div class="stage-top"><span><span class="kw">for</span> (const year <span class="kw">of</span> alan.life) { <b id="loop-year"></b></span><span class="counters">notes <b id="c-notes">0</b> shipped <b id="c-ship">0</b> years <b id="c-years">0</b></span></div>
-        <div class="track" id="track"><svg class="loop-thread" id="loop-thread" aria-hidden="true"></svg>${ERAS.map(chap).join("")}</div>
-        <div class="rail" id="rail" role="tablist" aria-label="Jump to a year"><span class="fill" id="rail-fill"></span>${ERAS.map((e, i) => `<button type="button" role="tab" data-i="${i}"><span>${esc(e.label)}</span></button>`).join("")}</div>
-      </div></div>
     </section>
 
     <section class="sec work" id="work" data-block="work" aria-label="Work">
@@ -186,8 +200,21 @@
       <div class="experiments">${EXP.map(xcard).join("")}</div>
     </section>
 
+    <section class="sec history" id="history" data-block="history" aria-label="History">
+      <div class="intro" id="intro">
+        ${node("for (const year of alan.life)", "04", "history")}
+        <h2 class="title split">${split("How I got <em>here</em>")}</h2>
+        <p class="lede rv">${ERAS.length} chapters, from my first commit to what I'm building next, with the skills and projects each one added. Keep scrolling and the page runs sideways through the years. Use the rail or the ← → keys to jump.</p>
+      </div>
+      <div class="pin" id="pin"><div class="stage" id="stage">
+        <div class="stage-top"><span><span class="kw">for</span> (const year <span class="kw">of</span> alan.life) { <b id="loop-year"></b></span><span class="counters">skills <b id="c-skills">0</b> shipped <b id="c-ship">0</b> years <b id="c-years">0</b></span></div>
+        <div class="track" id="track"><svg class="loop-thread" id="loop-thread" aria-hidden="true"></svg>${ERAS.map(chap).join("")}</div>
+        <div class="rail" id="rail" role="tablist" aria-label="Jump to a year"><span class="fill" id="rail-fill"></span>${ERAS.map((e, i) => `<button type="button" role="tab" data-i="${i}"><span>${esc(e.label)}</span></button>`).join("")}</div>
+      </div></div>
+    </section>
+
     <section class="sec contact" id="contact" data-block="contact" aria-label="Contact">
-      ${node("await hire(alan)", "04", "contact")}
+      ${node("await hire(alan)", "05", "contact")}
       <h2 class="title split">${split("Let's build <em>something</em>")}</h2>
       <p class="lede rv">A role, a collaboration, or a strange idea that needs an engineer. Run the line below.</p>
       <button type="button" class="hire rv" id="hire" data-node-end><span><span class="kw">await</span> <span class="fn">hire</span><span class="p">(</span>alan<span class="p">)</span></span><span class="caret" aria-hidden="true"></span></button>
@@ -247,7 +274,7 @@
     const t = D.traits[i];
     if (!t) return;
     $$(".tok", statement).forEach((x) => x.classList.toggle("on", x === tok));
-    ev.innerHTML = `<div><span class="n">${esc(t.n)}</span><span class="u">${esc(t.unit)}</span></div><p>${esc(t.text)}</p>${t.link ? `<a href="${esc(t.link)}">open StudyLog →</a>` : ""}`;
+    ev.innerHTML = `<div><span class="n">${esc(t.n)}</span><span class="u">${esc(t.unit)}</span></div><p>${esc(t.text)}</p>${t.link ? `<a href="${esc(t.link)}"${t.link[0] === "#" ? ` data-go="${esc(t.link.slice(1))}"` : ""}>${esc(t.linkText || "open →")}</a>` : ""}`;
     if (!isMobile()) {
       const sr = statement.getBoundingClientRect();
       const host = $("#whoami").getBoundingClientRect();
@@ -477,6 +504,7 @@
     // on phones the name fills the width, so the thread starts in the gutter instead of crossing the text
     const start = isMobile() ? { x: gxAbs, y: c.y + c.h / 2 } : { x: c.x + c.w / 2, y: c.y + c.h + 6 };
     const yWho = dotY('[data-node="whoami"]');
+    const ySki = dotY('[data-node="skills"]');
     const yHis = dotY('[data-node="history"]');
     const secR = relTo($("#history"), out);
     const pinR = relTo($("#pin"), out);
@@ -486,13 +514,14 @@
 
     let d = `M ${start.x} ${start.y}`;
     d += sway(start.x, start.y, gxAbs, yWho, -amp);
-    d += sway(gxAbs, yWho, gxAbs, yHis, amp);
+    d += sway(gxAbs, yWho, gxAbs, ySki, amp);
+    d += sway(gxAbs, ySki, gxAbs, yWork, -amp);
+    d += sway(gxAbs, yWork, gxAbs, yHis, amp);
     d += ` L ${gxAbs} ${pinR.y}`; // hands over to the loop thread at the top of the stage
     // the loop runs sideways inside the pinned stage; the main thread resumes below it
     const resume = secR.y + secR.h;
     d += ` M ${gxAbs} ${resume - 40}`;
-    d += sway(gxAbs, resume - 40, gxAbs, yWork, -amp);
-    d += sway(gxAbs, yWork, gxAbs, yCon, amp);
+    d += sway(gxAbs, resume - 40, gxAbs, yCon, -amp);
     const hy = hire.y + hire.h / 2;
     d += ` C ${gxAbs} ${yCon + (hy - yCon) * 0.6}, ${gxAbs} ${hy}, ${hire.x} ${hy}`;
 
@@ -578,7 +607,7 @@
       chaps.forEach((c, i) => c.classList.toggle("on", i === a));
       railBtns.forEach((b, i) => { b.classList.toggle("on", i === a); b.classList.toggle("past", i < a); b.setAttribute("aria-selected", String(i === a)); });
       const e = ERAS[a];
-      setNum($("#c-notes"), e.notes);
+      setNum($("#c-skills"), SK.filter((x) => x.since <= eraYear(e)).length);
       setNum($("#c-ship"), shipped.filter((p) => p.year <= eraYear(e)).length);
       setNum($("#c-years"), Math.min(eraYear(e), NOW) - P.firstCommit);
       $("#loop-year").textContent = `// ${e.label}: ${e.title}`;
@@ -640,6 +669,103 @@
     });
   }
 
+  /* --------------------------------------------------------- skills graph */
+
+  const graph = $("#graph"), wires = $("#wires"), gProof = $("#g-proof");
+  const gSkills = $$(".g-skill", graph), gProjs = $$(".g-proj", graph);
+  gProjs.forEach((b) => { b.dataset.case = b.dataset.p; });
+  let wireEls = [], gPin = -1, gCur = null, gIdle = 0, gIdleI = 0, gSeen = false, gTouched = false;
+  const EDGES = SK.flatMap((sk, i) => usedBy(sk).map((p) => ({ i, p })));
+
+  function layoutGraph() {
+    wires.innerHTML = "";
+    wireEls = [];
+    graph.classList.toggle("narrow", !isMobile() && graph.clientWidth < 1040);
+    if (isMobile()) return;
+    const gr = graph.getBoundingClientRect();
+    wires.setAttribute("width", gr.width); wires.setAttribute("height", gr.height);
+    const pos = {};
+    gProjs.forEach((b) => { const r = b.getBoundingClientRect(); pos[b.dataset.p] = [r.left - gr.left, r.top - gr.top + r.height / 2]; });
+    EDGES.forEach(({ i, p }) => {
+      const r = gSkills[i].getBoundingClientRect();
+      const x1 = r.right - gr.left, y1 = r.top - gr.top + r.height / 2, [x2, y2] = pos[p.id], dx = (x2 - x1) * 0.5;
+      const d = `M ${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
+      const cls = p.status === "wip" ? " wip" : "";
+      const base = mk("path", { class: "wire" + cls, d }, wires);
+      const flow = mk("path", { class: "wflow" + cls, d }, wires);
+      wireEls.push({ i, p: p.id, base, flow });
+    });
+    if (gCur) light(gCur);
+  }
+
+  const chipsFor = (ps) => ps.map((p) => `<button type="button" class="pchip" data-case="${p.id}"><span class="st is-${p.status}"></span>${esc(p.name)}</button>`).join("");
+  function proofHTML(sel) {
+    if (!sel) {
+      return `<div class="pk">skills()</div><p class="big">${SK.length} skills · ${PROJ.length} projects · ${EDGES.length} wires</p>
+        <p>Every skill on the left is wired to the work that uses it. Point at one to trace it, or pick a project to see its stack.</p>
+        <p class="hint">${isMobile() ? "tap a skill" : "hover a skill or a project · click a skill to pin it"}</p>`;
+    }
+    if (sel.s != null) {
+      const sk = SK[sel.s], ps = usedBy(sk), live = ps.filter((p) => p.status !== "wip");
+      return `<div class="pk">${esc(sk.group.toLowerCase())}</div><h3>${esc(sk.name)}</h3>
+        <p class="meta">${[`since ${sk.since}`, live.length ? `${live.length} shipped` : "", ps.length > live.length ? `${ps.length - live.length} in progress` : ""].filter(Boolean).join(" · ")}</p>
+        ${ps.length ? `<div class="pchips">${chipsFor(ps)}</div>` : ""}
+        ${sk.proof && !live.length ? `<p class="proof"><b>evidence</b> ${esc(sk.proof)}</p>` : ""}`;
+    }
+    const p = byId(sel.p), ss = skillsOf(p);
+    return `<div class="pk">${esc(p.kind.toLowerCase())} · ${STATUS[p.status]}</div><h3>${esc(p.name)}</h3>
+      <p>${esc(p.pitch)}</p>
+      ${metrics(p, "metrics sm")}
+      <p class="meta">built with ${ss.map((x) => esc(x.name)).join(", ") || esc(p.stack.join(", "))}</p>
+      <button type="button" class="btn sm" data-case="${p.id}">open case study <span class="arr">↗</span></button>`;
+  }
+  function light(sel) {
+    gCur = sel;
+    graph.classList.toggle("focus", !!sel);
+    const skOn = new Set(), pOn = new Set();
+    if (sel && sel.s != null) { skOn.add(sel.s); usedBy(SK[sel.s]).forEach((p) => pOn.add(p.id)); }
+    if (sel && sel.p) { pOn.add(sel.p); skillsOf(byId(sel.p)).forEach((x) => skOn.add(SK.indexOf(x))); }
+    gSkills.forEach((b, i) => { b.classList.toggle("on", skOn.has(i)); b.classList.toggle("pin", i === gPin); });
+    gProjs.forEach((b) => b.classList.toggle("on", pOn.has(b.dataset.p)));
+    wireEls.forEach((w) => {
+      const on = !!sel && (sel.s != null ? w.i === sel.s : w.p === sel.p);
+      w.base.classList.toggle("on", on); w.flow.classList.toggle("on", on);
+      if (on) wires.appendChild(w.base), wires.appendChild(w.flow); // draw lit wires on top
+    });
+    gProof.innerHTML = proofHTML(sel);
+  }
+  function pickSkill(i, pin) {
+    gTouched = true; stopIdle();
+    if (pin) gPin = gPin === i ? -1 : i;
+    light(gPin >= 0 ? { s: gPin } : pin ? null : { s: i });
+  }
+  graph.addEventListener("pointerover", (e) => {
+    if (e.pointerType === "touch") return;
+    const sb = e.target.closest(".g-skill"), pb = e.target.closest(".g-proj");
+    if (sb) { gTouched = true; stopIdle(); light({ s: +sb.dataset.s }); }
+    else if (pb) { gTouched = true; stopIdle(); light({ p: pb.dataset.p }); }
+  });
+  graph.addEventListener("pointerleave", () => { light(gPin >= 0 ? { s: gPin } : null); startIdle(); });
+  graph.addEventListener("click", (e) => { const sb = e.target.closest(".g-skill"); if (sb) pickSkill(+sb.dataset.s, true); });
+  graph.addEventListener("focusin", (e) => {
+    const sb = e.target.closest(".g-skill"), pb = e.target.closest(".g-proj");
+    if (sb && sb.matches(":focus-visible")) light({ s: +sb.dataset.s });
+    else if (pb && pb.matches(":focus-visible")) light({ p: pb.dataset.p });
+  });
+
+  // until someone touches it, the graph traces one skill after another so it reads as alive
+  const demo = SK.map((x, i) => i).filter((i) => usedBy(SK[i]).length > 1);
+  function stopIdle() { clearInterval(gIdle); gIdle = 0; }
+  function startIdle() {
+    stopIdle();
+    if (gTouched || !gSeen || !state.motion || gPin >= 0 || !demo.length) return;
+    gIdle = setInterval(() => { light({ s: demo[gIdleI++ % demo.length] }); }, 2200);
+  }
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver((en) => { gSeen = en[0].isIntersecting; gSeen ? startIdle() : stopIdle(); }, { threshold: 0.35 }).observe(graph);
+  }
+  light(null);
+
   /* -------------------------------------------------------- case studies */
 
   const cs = $("#case"), csScroll = $("#case-scroll");
@@ -660,12 +786,14 @@
       <div class="kick"><span>git show <b>${sha(p.id + p.name)}</b></span><span class="st is-${p.status}">${STATUS[p.status]}</span><span>${p.year}</span><span>${esc(p.kind)}</span></div>
       <h2 id="case-title">${esc(p.name)}</h2>
       <p class="pitch">${esc(p.pitch)}</p>
+      ${metrics(p, "metrics")}
       <canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>
       <div class="case-grid">
         ${p.why ? `<h4>why</h4><p>${esc(p.why)}</p>` : ""}
         ${p.how ? `<h4>${p.tier === "flagship" ? "how it works" : "highlights"}</h4><ol>${p.how.map((h) => `<li>${esc(h)}</li>`).join("")}</ol>` : ""}
         ${p.milestones ? `<h4>milestones · ${done}/${p.milestones.length}</h4><ul class="miles">${p.milestones.map(([t, ok]) => `<li class="${ok ? "done" : ""}">${esc(t)}</li>`).join("")}</ul>` : ""}
         <h4>stack</h4><div class="tags">${p.stack.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+        ${skillsOf(p).length ? `<h4>skills it proves</h4><div class="tags">${skillsOf(p).map((x) => `<button type="button" class="tag lnk" data-skill="${SK.indexOf(x)}">${esc(x.name)}</button>`).join("")}</div>` : ""}
         <h4>links</h4><div class="actions">${links}</div>
       </div>
       <div class="case-nav">
@@ -712,12 +840,14 @@
     const t = e.target.closest("[data-case]");
     if (t) { e.preventDefault(); openCase(t.dataset.case, t); return; }
     if (e.target.closest("#case-x")) closeCase();
+    const sk = e.target.closest("[data-skill]");
+    if (sk) { closeCase(); go("skills"); gPin = -1; pickSkill(+sk.dataset.skill, true); }
   });
 
   /* ------------------------------------------------------------ nav + map */
 
   const sections = $$(".sec[data-block]");
-  const MAP = [["hero", "main()"], ["whoami", "whoami()"], ["history", "history()"], ["work", "fork()"], ["contact", "hire()"]];
+  const MAP = [["hero", "main()"], ["whoami", "whoami()"], ["skills", "skills()"], ["work", "fork()"], ["history", "history()"], ["contact", "hire()"]];
   $("#minimap").innerHTML = MAP.map(([id, l]) => `<button type="button" data-go="${id}" aria-label="Go to ${l}"><span>${l}</span><i></i></button>`).join("");
   const headEl = $("#head");
   let curSec = null;
@@ -817,14 +947,17 @@
       "",
       "function whoami() {",
       ...D.traits.map((t, i) => ({ s: `  // ${String(i + 1).padStart(2, "0")} ${t.k}: ${t.n} ${t.unit}`, ref: "t:" + i })),
-      `  return import(${D.stack.length} skills, "experience");`,
+      `  return { status: ${q(P.status)} };`,
       "}"
     ]);
-    block("history", [
+    block("skills", [
       "",
-      "for (const year of alan.life) {",
-      ...ERAS.map((e) => ({ s: `  chapter(${q(e.label)}, ${q(e.title)});`, ref: "e:" + e.id })),
-      "}"
+      "skills({",
+      ...D.skills.flatMap((g) => [
+        `  // ${g.group.toLowerCase()}`,
+        ...g.items.map(([n]) => { const i = SK.findIndex((x) => x.name === n); const ps = usedBy(SK[i]).map((p) => p.id); return { s: `  ${q(n)}: [${ps.map(q).join(", ")}],${ps.length ? "" : " // proof: notes"}`, ref: "s:" + i }; })
+      ]),
+      "});"
     ]);
     block("work", [
       "",
@@ -834,6 +967,12 @@
       "experiments([",
       ...EXP.map((p) => ({ s: `  ${q(p.id)}, // ${p.year}`, ref: "p:" + p.id })),
       "]);"
+    ]);
+    block("history", [
+      "",
+      "for (const year of alan.life) {",
+      ...ERAS.map((e) => ({ s: `  chapter(${q(e.label)}, ${q(e.title)});`, ref: "e:" + e.id })),
+      "}"
     ]);
     block("contact", [
       "",
@@ -1096,9 +1235,9 @@
     const log = $("#boot-log"), bar = $("#boot-bar"), el = $("#boot");
     const steps = [
       `compile alan.fung`,
-      `lexing ${D.writing.total} notes`,
+      `resolving ${SK.length} skills`,
+      `linking ${PROJ.length} projects as proof`,
       `parsing ${ERAS.length} chapters, ${P.firstCommit} → next`,
-      `linking ${PROJ.length} projects`,
       `forking ${FLAG.length} flagships`,
       `running main()`
     ];
@@ -1171,7 +1310,7 @@
       "open <id|blog|github>  run a project",
       "checkout <year>        jump to a chapter (2018 … next)",
       "git log                every commit of my history",
-      "stack                  what I build with",
+      "skills [name]          what I build with, and where (e.g. skills c++)",
       "blog                   latest notes",
       "hire                   get in touch",
       "source                 toggle the live source pane",
@@ -1204,7 +1343,13 @@
       return `HEAD is now at ${sha(ERAS[i].id)} ${esc(ERAS[i].title)}`;
     },
     git: (a) => (a[0] === "log" ? gitLog() : a[0] === "checkout" ? CMDS.checkout(a.slice(1)) : "usage: git log | git checkout <year>"),
-    stack: () => D.stack.map(([n, y]) => `${n.padEnd(16)} since ${y}`).join("\n"),
+    skills: (a) => {
+      const k = a.join(" ").toLowerCase();
+      const list = k ? SK.filter((x) => x.name.toLowerCase().includes(k)) : SK;
+      if (!list.length) return `<span class="e">skills: nothing matches "${esc(k)}"</span>`;
+      if (k && list.length === 1) { openTerm(false); go("skills"); gPin = -1; pickSkill(SK.indexOf(list[0]), true); }
+      return list.map((x) => { const ps = usedBy(x); return `${esc(x.name.padEnd(19))} since ${x.since}  ${ps.length ? ps.map((p) => esc(p.id) + (p.status === "wip" ? "*" : "")).join(", ") : `<span style="color:var(--mute)">${esc(x.proof || "")}</span>`}`; }).join("\n") + (k ? "" : "\n\n* in progress");
+    },
     blog: () => D.writing.latest.map((p) => `${p.date}  <a href="${esc(p.url)}">${esc(p.title)}</a>`).join("\n") + `\n\n${D.writing.total} notes in total → <a href="/blog/">/blog/</a>`,
     hire: () => `Promise { &lt;fulfilled&gt; }\nemail   <a href="mailto:${esc(P.email)}">${esc(P.email)}</a>\ngithub  <a href="${esc(P.github)}" target="_blank" rel="noopener">${esc(P.github)}</a>`,
     contact: () => CMDS.hire(),
@@ -1239,7 +1384,7 @@
     vim: () => "you're already in an editor. try <span class=\"a\">source</span>.",
     hi: () => `hi! 👋 type <span class="a">hire</span> if you want to talk.`
   };
-  CMDS.hello = CMDS.hi; CMDS.emacs = CMDS.vim; CMDS.nano = CMDS.vim; CMDS["?"] = CMDS.help; CMDS.cd = CMDS.checkout; CMDS.history = () => hist.join("\n");
+  CMDS.hello = CMDS.hi; CMDS.emacs = CMDS.vim; CMDS.nano = CMDS.vim; CMDS["?"] = CMDS.help; CMDS.cd = CMDS.checkout; CMDS.history = () => hist.join("\n"); CMDS.stack = CMDS.skills;
   function run(line) {
     print(esc(line), "c");
     const [cmd, ...args] = line.trim().split(/\s+/);
@@ -1295,6 +1440,7 @@
       layoutLoop();
       layoutThread();
       layoutLanes();
+      layoutGraph();
       frame();
     }, 60);
   }
@@ -1304,7 +1450,7 @@
   apply();
   observe();
   boot(heroIn);
-  layoutLoop(); layoutThread(); layoutLanes(); frame();
+  layoutLoop(); layoutThread(); layoutLanes(); layoutGraph(); frame();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { redrawCovers(); relayout(); });
   const m = location.hash.match(/^#work\/([\w-]+)/);
   if (m) setTimeout(() => openCase(m[1]), 300);
