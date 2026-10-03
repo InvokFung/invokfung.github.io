@@ -1,0 +1,9 @@
+{
+  "name": "@arena/core",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Transport-agnostic authoritative arena: sessions, rooms, matchmaking, match runtime, event store, ladder projection, bots.",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@arena/engine": "0.1.0", "@arena/protocol": "0.1.0" }
+}

@@ -1,0 +1,46 @@
+# Room affinity. Matches live in one process's memory, so every player of a room (and
+# its spectators) must reach the same pod. The client reconnects with ?room=<CODE>
+# before it creates or joins a room, and with ?room=quick before it queues for quick
+# match; ingress-nginx then picks the upstream by consistent hashing on that value, so
+# the room code is the shard key, known before the room exists (the client proposes it).
+# Consistent hashing also means a scale-out only moves about 1/N of the keys.
+#
+# What this does not cover: with an empty ?room (lobby browsing) every socket hashes to
+# the same pod; that traffic is light, but the ladder/replay lists come from that pod.
+# A cookie (nginx.ingress.kubernetes.io/affinity: cookie) would not work instead: two
+# friends on two browsers have two cookies.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: arena
+  namespace: triplefind-arena
+  annotations:
+    nginx.ingress.kubernetes.io/upstream-hash-by: "$arg_room"
+    # WebSockets are long-lived: do not cut idle sockets (the server pings every 25 s).
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-body-size: 8k
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: [arena.example.com]
+      secretName: arena-tls
+  rules:
+    - host: arena.example.com
+      http:
+        paths:
+          - path: /ws
+            pathType: Exact
+            backend:
+              service:
+                name: arena
+                port:
+                  name: http
+          - path: /healthz
+            pathType: Exact
+            backend:
+              service:
+                name: arena
+                port:
+                  name: http

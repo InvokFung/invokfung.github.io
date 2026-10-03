@@ -1,0 +1,43 @@
+{
+  "label": "200 clients",
+  "date": "2026-10-03T09:35:27.478Z",
+  "machine": {
+    "vcpus": 4,
+    "model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "memGiB": 16,
+    "node": "v22.22.0",
+    "note": "load generator and server on the same machine"
+  },
+  "clients": 200,
+  "durationS": 30,
+  "matchesFinished": 199,
+  "matchesPerSecond": 6.63,
+  "matchSeconds": {
+    "p50": 4.6,
+    "p90": 6.2
+  },
+  "flips": 8564,
+  "flipsPerSecond": 285.5,
+  "clientFramesOutPerSecond": 611,
+  "serverFramesOutPerSecond": 2937,
+  "flipRttMs": {
+    "p50": 0.32,
+    "p90": 0.58,
+    "p99": 1.58,
+    "max": 13.27
+  },
+  "connectMs": {
+    "p50": 17.01,
+    "p99": 38.48
+  },
+  "serverFlipHandleMs": {
+    "p50Bucket": "0.25",
+    "p99Bucket": "1"
+  },
+  "serverCpuPercentOfOneCore": 9.4,
+  "serverRssMiB": 127,
+  "errors": 11,
+  "errorCodes": {
+    "card_unavailable": 11
+  }
+}

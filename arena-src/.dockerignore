@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+apps/server/data
+tools/loadtest/results
+infra
+*.log
+.loadtest
+Dockerfile
+docker-compose.yml
+README.md
