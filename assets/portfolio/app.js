@@ -467,6 +467,35 @@
       g.globalAlpha = 0.25; g.setLineDash([3, 5]);
       g.beginPath(); g.moveTo(scan, 0); g.lineTo(scan, h); g.stroke(); g.setLineDash([]);
     },
+    // requests through a chain of stages; the primary upstream is down, so they take the fallback
+    route(g, w, h, r, t) {
+      const small = h < 80, my = h * 0.5, split = w * 0.66, up = h * 0.26, fb = h * 0.74, stages = small ? 6 : 9;
+      const ys = (u) => { // the path's y at x = u * w, bending to the fallback lane after the split
+        const x = u * w; if (x <= split) return my;
+        const k = Math.min(1, (x - split) / (w * 0.16)); return my + (fb - my) * k * k * (3 - 2 * k);
+      };
+      g.lineWidth = 1;
+      const lit = Math.floor(t * 2.5) % stages;
+      for (let i = 0; i < stages; i++) {
+        const x = w * (0.08 + 0.52 * i / (stages - 1)), bh = h * (0.3 + 0.16 * ((i * 5) % 3) / 2);
+        g.globalAlpha = i === lit ? 0.55 : 0.16; g.beginPath(); g.roundRect(x - 2, my - bh / 2, 4, bh, 2); g.fill();
+      }
+      g.globalAlpha = 0.5; g.lineWidth = 1.5; g.beginPath();
+      for (let u = 0; u <= 1.001; u += 0.01) u ? g.lineTo(u * w, ys(u)) : g.moveTo(0, my);
+      g.stroke();
+      // the dead primary: dashed, ends in a cross
+      const ex = w * 0.86;
+      g.globalAlpha = 0.28; g.setLineDash([4, 6]); g.beginPath(); g.moveTo(split, my);
+      g.bezierCurveTo(split + w * 0.08, my, split + w * 0.08, up, split + w * 0.16, up); g.lineTo(ex, up); g.stroke(); g.setLineDash([]);
+      const c = small ? 4 : 7; g.globalAlpha = 0.6; g.lineWidth = 2;
+      g.beginPath(); g.moveTo(ex - c, up - c); g.lineTo(ex + c, up + c); g.moveTo(ex + c, up - c); g.lineTo(ex - c, up + c); g.stroke();
+      // requests in flight
+      const n = small ? 9 : 16, rad = small ? 2 : 3.2;
+      for (let i = 0; i < n; i++) {
+        const u = (i / n + t * 0.12 + (r() - 0.5) * 0.035 + 1) % 1;
+        g.globalAlpha = 0.45 + 0.55 * u; g.beginPath(); g.arc(u * w, ys(u), rad, 0, TAU); g.fill();
+      }
+    },
     // concentric timer arcs
     rings(g, w, h, r, t) {
       const cx = w * (0.3 + r() * 0.4), cy = h * 0.5, R = Math.max(w, h);
@@ -1786,7 +1815,7 @@
     const show = open == null ? term.hidden : open;
     term.hidden = !show;
     if (show) {
-      if (!greeted) { greeted = true; print(`Welcome to <span class="a">alan@fung</span>. Type <span class="a">help</span>. Try <span class="a">checkout 2023</span> or <span class="a">show atlas</span>.`); }
+      if (!greeted) { greeted = true; print(`Welcome to <span class="a">alan@fung</span>. Type <span class="a">help</span>. Try <span class="a">checkout 2023</span> or <span class="a">show relay</span>.`); }
       setTimeout(() => tin.focus(), 30);
     } else tin.blur();
   }
@@ -1798,7 +1827,7 @@
     help: () => [
       "whoami                 who is this",
       "ls                     list projects",
-      "show <id>              open a case study (e.g. show atlas)",
+      "show <id>              open a case study (e.g. show relay)",
       "open <id|blog|github>  run a project",
       "checkout <year>        jump to a chapter (2018 … next)",
       "git log                every commit of my history",

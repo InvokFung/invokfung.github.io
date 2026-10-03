@@ -22,7 +22,7 @@ can play. One thread runs from `main()` to `contact()` and lights up as you scro
 
 Extras: `</> source` opens the page's own generated source next to it (the dotted values are live:
 theme, accent, motion, name, coffee), and <kbd>`</kbd> opens a terminal (`help`, `checkout 2023`,
-`show atlas`, `skills kubernetes`, `git log`, `theme paper`, `strum`, `sound on`, `listen`…).
+`show relay`, `skills kubernetes`, `git log`, `theme paper`, `strum`, `sound on`, `listen`…).
 
 The strings: the main thread, the skill wires, the fork lanes and the history loop are all
 plucked by the pointer too. A damped 1D wave equation moves each one; sound is Karplus-Strong
@@ -43,5 +43,5 @@ are all generated from that entry. A project is wired to every skill named in it
 To add a chapter, push onto `eras` and list the project ids it shipped. Blog numbers in `writing` are a
 snapshot and need a manual refresh.
 
-Other corners: `/onboard/` (Onboard), `/tracewise/` (Tracewise), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/layerline/` (Layerline),
+Other corners: `/relay/` (Relay), `/tracewise/` (Tracewise), `/onboard/` (Onboard), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/layerline/` (Layerline),
 `/ptimer/` (ChillTimer), `/triplefind/` (TripleFind).
