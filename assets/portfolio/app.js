@@ -64,6 +64,7 @@
   const NOW = new Date().getFullYear();
   const eraYear = (e) => parseInt(e.id, 10) || NOW + 1;
   const shipped = PROJ.filter((p) => p.status !== "wip");
+  const WIP = FLAG.filter((p) => p.status === "wip");
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
   const spell = (n) => ["no", "one", "two", "three", "four", "five", "six"][n] || String(n);
   const SK = D.skills.flatMap((g) => g.items.map(([name, since, proof]) => ({ name, since, proof, group: g.group })));
@@ -98,7 +99,7 @@
       <div class="role">${esc(e.role)}</div>
       <h3>${esc(e.title)}</h3>
       <p class="t">${esc(e.text)}</p>
-      <div class="picked">${e.picked.map((p) => `<span>+ ${esc(p)}</span>`).join("")}</div>
+      ${e.picked.length ? `<div class="picked">${e.picked.map((p) => `<span>+ ${esc(p)}</span>`).join("")}</div>` : ""}
       <ul class="events">${e.events.map(([d, t]) => `<li><b>${esc(d)}</b> ${esc(t)}</li>`).join("")}</ul>
       ${e.projects ? `<div class="ships">${e.projects.map((id) => byId(id)).filter(Boolean).map((p) => `<button type="button" class="btn sm ghost" data-case="${p.id}">${esc(p.name)} <span class="arr">↗</span></button>`).join("")}</div>` : ""}
       ${last ? `<div class="close-brace" aria-hidden="true">}</div>` : ""}
@@ -174,7 +175,7 @@
         <div class="imports rv"><span class="kw">export const</span> alan = {
           <div class="kv"><span>status:</span> <span class="s">"${esc(P.status)}"</span>,</div>
           <div class="kv"><span>focus:</span> [${P.focus.map((f) => `<span class="s">"${esc(f)}"</span>`).join(", ")}],</div>
-          <div class="kv"><span>building:</span> [${FLAG.filter((p) => p.status === "wip").map((p) => `<button type="button" class="s lnk" data-case="${p.id}">"${esc(p.name)}"</button>`).join(", ")}],</div>
+          <div class="kv"><span>${WIP.length ? "building" : "shipped"}:</span> [${(WIP.length ? WIP : FLAG).map((p) => `<button type="button" class="s lnk" data-case="${p.id}">"${esc(p.name)}"</button>`).join(", ")}],</div>
           <div class="kv"><span>email:</span> <a class="s" href="mailto:${esc(P.email)}">"${esc(P.email)}"</a>,</div>
         };</div>
       </div>
@@ -183,7 +184,7 @@
     <section class="sec skills" id="skills" data-block="skills" aria-label="Skills">
       ${node("skills()", "02", "skills")}
       <h2 class="title split">${split("What I can do, <em>wired</em> to the proof")}</h2>
-      <p class="lede rv">${SK.length} skills, each traced to the projects that use it. Point at a skill to light up its projects, or at a project to see what it's built with${root.classList.contains("fine") ? ", or strum across the wires" : ""}. Solid wires are shipped work, dashed ones are in progress.</p>
+      <p class="lede rv">${SK.length} skills, each traced to the projects that use it. Point at a skill to light up its projects, or at a project to see what it's built with${root.classList.contains("fine") ? ", or strum across the wires" : ""}.${PROJ.some((p) => p.status === "wip") ? " Solid wires are shipped work, dashed ones are in progress." : ""}</p>
       <div class="graph rv" id="graph">
         <svg class="wires" id="wires" aria-hidden="true"></svg>
         <div class="g-skills">${D.skills.map((g) => `<div class="g-group"><div class="g-h">// ${esc(g.group.toLowerCase())}</div>${g.items.map(([n]) => { const i = SK.findIndex((x) => x.name === n); const sk = SK[i]; const live = usedBy(sk).filter((p) => p.status !== "wip").length; return `<button type="button" class="g-skill" data-s="${i}" data-ref="s:${i}"><span class="nm">${esc(n)}</span><span class="since">${sk.since}</span><span class="cnt${live ? "" : " none"}">${usedBy(sk).length || "·"}</span></button>`; }).join("")}</div>`).join("")}</div>
@@ -199,7 +200,7 @@
         <svg class="lanes" id="lanes" aria-hidden="true"></svg>
         ${node("fork(projects)", "03", "work")}
         <h2 class="title split">${split(`${spell(FLAG.length)[0].toUpperCase() + spell(FLAG.length).slice(1)} <em>flagships</em>, and the experiments that led here`)}</h2>
-        <p class="lede rv">The main thread forks into the builds I care most about: ${spell(FLAG.filter((p) => p.status !== "wip").length)} live, ${spell(FLAG.filter((p) => p.status === "wip").length)} in progress. Open any card for the case study.</p>
+        <p class="lede rv">The main thread forks into the builds I care most about: ${WIP.length ? `${spell(FLAG.length - WIP.length)} live, ${spell(WIP.length)} in progress` : `all ${spell(FLAG.length)} live, each with numbers I measured`}. Open any card for the case study.</p>
         <div class="flagships" id="flagships">${FLAG.map(fcard).join("")}</div>
       </div>
       <div class="subhead rv"><b>Experiments</b><span>${EXP.length} smaller things, ${P.firstCommit + 3}–2024</span></div>
@@ -1754,7 +1755,7 @@
       const list = k ? SK.filter((x) => x.name.toLowerCase().includes(k)) : SK;
       if (!list.length) return `<span class="e">skills: nothing matches "${esc(k)}"</span>`;
       if (k && list.length === 1) { openTerm(false); go("skills"); gPin = -1; pickSkill(SK.indexOf(list[0]), true); }
-      return list.map((x) => { const ps = usedBy(x); return `${esc(x.name.padEnd(19))} since ${x.since}  ${ps.length ? ps.map((p) => esc(p.id) + (p.status === "wip" ? "*" : "")).join(", ") : `<span style="color:var(--mute)">${esc(x.proof || "")}</span>`}`; }).join("\n") + (k ? "" : "\n\n* in progress");
+      return list.map((x) => { const ps = usedBy(x); return `${esc(x.name.padEnd(Math.max(...SK.map((s) => s.name.length)) + 2))} since ${x.since}  ${ps.length ? ps.map((p) => esc(p.id) + (p.status === "wip" ? "*" : "")).join(", ") : `<span style="color:var(--mute)">${esc(x.proof || "")}</span>`}`; }).join("\n") + (k || !PROJ.some((p) => p.status === "wip") ? "" : "\n\n* in progress");
     },
     blog: () => D.writing.latest.map((p) => `${p.date}  <a href="${esc(p.url)}">${esc(p.title)}</a>`).join("\n") + `\n\n${D.writing.total} notes in total → <a href="/blog/">/blog/</a>`,
     hire: () => `Promise { &lt;fulfilled&gt; }\nemail   <a href="mailto:${esc(P.email)}">${esc(P.email)}</a>\ngithub  <a href="${esc(P.github)}" target="_blank" rel="noopener">${esc(P.github)}</a>`,

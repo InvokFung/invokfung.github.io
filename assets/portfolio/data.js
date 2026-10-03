@@ -30,8 +30,8 @@ window.PORTFOLIO = {
   // The whoami() statement. Each {token} is interactive and shows the evidence behind it.
   statement: "I'm Alan, a software engineer. I {ship full-stack products}, {measure what I build}, {learn the theory underneath} and {write it all down}. Off the keyboard, I {play the violin}.",
   traits: [
-    { k: "ship full-stack products", n: "9", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine and a real-time pitch detector that run in the browser, a multiplayer game server load-tested to 1,000 clients, a focus timer and more. One bigger build is in progress.", link: "#work", linkText: "see the work ↓" },
-    { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query. Intonation Studio's pitch detector is swept across the whole violin range: on clean, harmonic-rich tones its worst error is 0.17 cents.", link: "/atlas/", linkText: "try Atlas →" },
+    { k: "ship full-stack products", n: "10", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine, a real-time pitch detector and a 3D-printing slicer that all run in the browser, a multiplayer game server load-tested to 1,000 clients, a focus timer and more.", link: "#work", linkText: "see the work ↓" },
+    { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query. Intonation Studio's pitch detector is swept across the whole violin range: on clean, harmonic-rich tones its worst error is 0.17 cents. Layerline's WebAssembly core is benchmarked against the same algorithm in TypeScript and checked byte for byte against the native C++ build.", link: "/atlas/", linkText: "try Atlas →" },
     { k: "learn the theory underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. It pays off: Atlas runs on a randomized SVD and an eigensolver I wrote myself." },
     { k: "write it all down", n: "174", unit: "technical notes", text: "A 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs: every deep dive becomes a long-form post on StudyLog, my public engineering notebook.", link: "/blog/", linkText: "open StudyLog →" },
     { k: "play the violin", n: "19", unit: "music notes", text: "Violin notes, and I'm teaching myself the piano. So I built Intonation Studio, a practice room that hears a scale and scores every note to the cent.", link: "/studio/", linkText: "try Studio →" }
@@ -52,7 +52,7 @@ window.PORTFOLIO = {
       ["Vue", 2026, "4-part Vue series on StudyLog: reactivity internals, compiler, production"],
       ["Three.js", 2025, "14-part Three.js course on StudyLog: PBR, instancing, shaders, physics"],
       ["GLSL", 2025, "Shaders and post-processing chapters of the Three.js course"],
-      ["WebAssembly", 2026], ["Web Audio", 2026]
+      ["WebAssembly", 2026], ["Web Workers", 2026], ["Web Audio", 2026]
     ] },
     { group: "Backend & data", items: [
       ["Node.js", 2024], ["WebSockets", 2026],
@@ -68,7 +68,7 @@ window.PORTFOLIO = {
       ["Networking", 2022, "Data communications and networking notes (2022), VPC design on AWS"]
     ] },
     { group: "Maths & making", items: [
-      ["Linear algebra", 2025], ["Signal processing", 2026],
+      ["Linear algebra", 2025], ["Signal processing", 2026], ["Computational geometry", 2026],
       ["3D printing", 2026, "8-part 3D printing course on StudyLog: slicing, tolerances, functional parts"]
     ] }
   ],
@@ -116,15 +116,15 @@ window.PORTFOLIO = {
     },
     {
       id: "2026", label: "2026", title: "Building in the open", role: "Software engineer",
-      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then three flagships: StudyLog Atlas, a search engine measured at 85% hit@1; Intonation Studio, a pitch detector within 0.17 cents on clean tones; and TripleFind Arena, a multiplayer game server load-tested to 1,000 clients.",
-      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets"], projects: ["atlas", "intonation", "arena"],
-      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Rebuild this site as a program"]]
+      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then four flagships: StudyLog Atlas, a search engine measured at 85% hit@1; Intonation Studio, a pitch detector within 0.17 cents on clean tones; TripleFind Arena, a multiplayer game server load-tested to 1,000 clients; and Layerline, a 3D-printing slicer whose C++ core runs as WebAssembly, a median 8× faster than the same algorithm in TypeScript.",
+      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets", "Computational geometry", "Web Workers"], projects: ["atlas", "intonation", "arena", "layerline"],
+      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Ship Layerline"], ["2026-10", "Rebuild this site as a program"]]
     },
     {
-      id: "next", label: "next", title: "What's next", role: "Building flagships",
-      text: "One flagship is under way: Layerline, a 3D-printing slicer in C++ compiled to WebAssembly, then printing a real part with it.",
-      picked: ["Emscripten", "Web Workers", "Computational geometry"], projects: ["layerline"],
-      events: [["soon", "Layerline: C++ slicing core"], ["soon", "Layerline: print a real part"]]
+      id: "next", label: "next", title: "What's next", role: "Open to roles",
+      text: "All four flagships are live, and each has one milestone left: deploy Arena to a real Kubernetes cluster, print a real part from Layerline's G-code, add neural embeddings and cited answers to Atlas, and write up pitch detection from scratch. Alongside that, a software engineering role where this is the day job.",
+      picked: [],
+      events: [["soon", "Arena: deploy to a real cluster"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
     }
   ],
 
@@ -186,19 +186,20 @@ window.PORTFOLIO = {
       links: { live: "/arena/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/arena-src", original: "/triplefind/" }
     },
     {
-      id: "layerline", tier: "flagship", motif: "layers", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "wip",
-      pitch: "A 3D-printing slicer that runs in the browser: load an STL, slice it, preview the toolpaths and export G-code.",
-      why: "It connects my 3D printing, C++, linear algebra and Three.js notes in one artefact, and ends in a physical part you can hold.",
+      id: "layerline", tier: "flagship", motif: "layers", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "live",
+      pitch: "A 3D-printing slicer that runs in the browser: drop in an STL, get printer-ready G-code. A freestanding C++17 core, compiled to 66 KB of WebAssembly with no Emscripten and no libc, slices in a Web Worker and streams every layer into a WebGL preview as soon as it is done.",
+      why: "A slicer is computational geometry with no room for hand-waving: broken meshes, walls thinner than the nozzle, exact tie-breaking, and an output a printer has to follow. It ties my C++, 3D printing and Three.js notes into one tool.",
       how: [
-        "C++ slicing core compiled to WebAssembly, running in a Web Worker so the UI never freezes.",
-        "Planar slicing into closed polygons, perimeters by polygon offsetting, rectilinear infill.",
-        "G-code export for Marlin / Klipper with print-time and filament estimates.",
-        "Toolpath preview with instanced line rendering and layer scrubbing."
+        "Integer geometry on a 1 µm grid with exact 64-bit orientation tests: triangle–plane intersection, loop stitching that repairs gaps and flipped triangles, and island nesting by winding number.",
+        "Walls come from mitred polygon offsets cleaned by my own N-ary polygon boolean; the same boolean finds the top and bottom skins in one pass. Rectilinear infill, then nearest-first ordering.",
+        "Built with clang for wasm32 with no libc: an arena allocator over memory.grow and math from compiler builtins. The same sources run natively under ASan and UBSan, and the WASM output is byte-identical to the native build.",
+        "The worker streams batches sized to about 12 ms, so the first layer appears in tens of milliseconds, and the preview draws every bead in one instanced GLSL draw call. The G-code time estimate replays a Marlin-style lookahead planner."
       ],
-      milestones: [["C++ core + reference mesh tests", false], ["Emscripten build in a Worker", false], ["Perimeters, infill, G-code", false], ["Toolpath viewer", false], ["Print a real part + benchmarks", false]],
-      stack: ["C++", "WebAssembly", "Web Workers", "Three.js", "Computational geometry"],
-      uses: ["3D printing", "Linear algebra"],
-      links: {}
+      metrics: [["8×", "median vs TypeScript"], ["21 ms", "full slice of a gear"], ["66 KB", "of WebAssembly"], ["38 / 38", "tests pass"]],
+      milestones: [["C++ core + native tests", true], ["Freestanding WASM in a Worker", true], ["Walls, skins, infill, G-code", true], ["Streaming WebGL preview + benchmark", true], ["Print a real part", false]],
+      stack: ["C++", "WebAssembly", "Web Workers", "TypeScript", "React", "Three.js", "GLSL"],
+      uses: ["Computational geometry", "3D printing"],
+      links: { live: "/layerline/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/layerline-src" }
     },
     {
       id: "studylog", tier: "experiment", motif: "dots", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",

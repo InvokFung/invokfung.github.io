@@ -43,5 +43,5 @@ are all generated from that entry. A project is wired to every skill named in it
 To add a chapter, push onto `eras` and list the project ids it shipped. Blog numbers in `writing` are a
 snapshot and need a manual refresh.
 
-Other corners: `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/ptimer/` (ChillTimer),
-`/triplefind/` (TripleFind).
+Other corners: `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/layerline/` (Layerline),
+`/ptimer/` (ChillTimer), `/triplefind/` (TripleFind).
