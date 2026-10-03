@@ -1,0 +1,21 @@
+{
+  "name": "@arena/loadtest",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Spins up N bot clients over real WebSockets, plays full matches, reports throughput and latency percentiles.",
+  "scripts": {
+    "start": "tsx src/run.ts",
+    "facts": "tsx src/facts.ts",
+    "calibrate": "tsx src/calibrate-bots.ts"
+  },
+  "dependencies": {
+    "@arena/core": "0.1.0",
+    "@arena/engine": "0.1.0",
+    "@arena/protocol": "0.1.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.2"
+  }
+}

@@ -1,0 +1,15 @@
+# kubectl apply -k infra/k8s   (after creating arena-secrets; see secret.example.yaml)
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: triplefind-arena
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+  - hpa.yaml
+  - pdb.yaml
+images:
+  - name: ghcr.io/invokfung/triplefind-arena
+    newTag: 0.1.0

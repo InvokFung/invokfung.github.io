@@ -1,0 +1,32 @@
+{
+  "name": "triplefind-arena",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Real-time multiplayer TripleFind: authoritative server, event-sourced matches, replays and an Elo ladder.",
+  "workspaces": [
+    "packages/engine",
+    "packages/protocol",
+    "packages/core",
+    "apps/server",
+    "apps/client",
+    "tools/loadtest"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.test.json && tsc -p packages/engine && tsc -p packages/protocol && tsc -p packages/core && tsc -p apps/server && tsc -p apps/client && tsc -p tools/loadtest",
+    "test": "tsx --test packages/engine/test/*.test.ts packages/protocol/test/*.test.ts packages/core/test/*.test.ts apps/server/test/*.test.ts",
+    "dev:server": "npm run dev -w @arena/server",
+    "dev:client": "npm run dev -w @arena/client",
+    "build:client": "npm run build -w @arena/client",
+    "build:server": "npm run build -w @arena/server",
+    "build": "npm run typecheck && npm run build:client && npm run build:server",
+    "loadtest": "npm run start -w @arena/loadtest --",
+    "facts": "npm run facts -w @arena/loadtest --",
+    "calibrate": "npm run calibrate -w @arena/loadtest"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

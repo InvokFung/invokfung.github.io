@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-10-03T09:38:33.487Z",
+  "machine": "4 vCPU Intel Xeon @ 2.10GHz, Node 22",
+  "tests": {
+    "passed": 50,
+    "total": 50,
+    "skipped": 0
+  },
+  "loadtest": {
+    "clients": 1000,
+    "flipsPerSecond": 1491,
+    "matchesPerSecond": 30.27,
+    "flipRttP50": 0.32,
+    "flipRttP99": 2.7,
+    "serverCpu": 33,
+    "serverRssMiB": 164
+  },
+  "bundle": {
+    "appGzipKB": 90.1,
+    "workerGzipKB": 15.4
+  }
+}

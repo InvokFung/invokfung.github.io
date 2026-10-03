@@ -1,0 +1,8 @@
+{
+  "name": "@relay/core",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "The Relay gateway: a dependency-free middleware chain that runs unchanged in the browser and in Node.",
+  "exports": { ".": "./src/index.ts" }
+}

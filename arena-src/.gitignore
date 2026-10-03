@@ -1,0 +1,6 @@
+node_modules/
+**/node_modules/
+apps/server/dist/
+apps/server/data/
+*.log
+.loadtest/

@@ -1,0 +1,41 @@
+{
+  "label": "compose-8783",
+  "date": "2026-10-03T09:43:27.466Z",
+  "machine": {
+    "vcpus": 4,
+    "model": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "memGiB": 16,
+    "node": "v22.22.0",
+    "note": "load generator and server on the same machine"
+  },
+  "clients": 40,
+  "durationS": 15,
+  "matchesFinished": 20,
+  "matchesPerSecond": 1.33,
+  "matchSeconds": {
+    "p50": 4.4,
+    "p90": 5.8
+  },
+  "flips": 876,
+  "flipsPerSecond": 58.4,
+  "clientFramesOutPerSecond": 124,
+  "serverFramesOutPerSecond": 595,
+  "flipRttMs": {
+    "p50": 0.78,
+    "p90": 1.28,
+    "p99": 2.66,
+    "max": 4.01
+  },
+  "connectMs": {
+    "p50": 42.52,
+    "p99": 51.38
+  },
+  "serverFlipHandleMs": {
+    "p50Bucket": "0.25",
+    "p99Bucket": "1"
+  },
+  "serverCpuPercentOfOneCore": null,
+  "serverRssMiB": 99,
+  "errors": 0,
+  "errorCodes": {}
+}

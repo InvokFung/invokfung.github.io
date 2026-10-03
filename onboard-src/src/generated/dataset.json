@@ -1,0 +1,41 @@
+{
+  "seed": "week-one",
+  "customers": 4000,
+  "records": 10200,
+  "junkRecords": 19,
+  "files": [
+    {
+      "id": "crm",
+      "label": "CRM export",
+      "name": "crm_contacts_export.csv",
+      "bytes": 727192,
+      "sha256": "83e8aa9f410be2b373ea298cda7d0ea978c5b21dc5ab1b59f4a30bb23f893ca7",
+      "rows": 3743
+    },
+    {
+      "id": "billing",
+      "label": "Billing system",
+      "name": "billing_accounts.ndjson",
+      "bytes": 1378146,
+      "sha256": "87ce45e1588b5f8e1942c253369c8a7b3c11b839ca596dce42743beea9fd6f01",
+      "rows": 3194
+    },
+    {
+      "id": "support",
+      "label": "Support desk",
+      "name": "helpdesk_requesters.csv",
+      "bytes": 443309,
+      "sha256": "7bc136becfb739c1931c4e79b5be2725a5412df1b4c0fcb53633636731ecc130",
+      "rows": 3263
+    }
+  ],
+  "piiSpans": 2129,
+  "piiByType": {
+    "email": 403,
+    "card": 384,
+    "phone": 667,
+    "iban": 259,
+    "dob": 416
+  },
+  "generateMs": 333
+}

@@ -1,0 +1,1 @@
+var e={crm:`var(--crm)`,billing:`var(--billing)`,support:`var(--support)`},t=[`var(--crm)`,`var(--billing)`,`var(--support)`,`var(--ext1)`,`var(--ext2)`];function n(n,r=[]){if(e[n])return e[n];let i=r.indexOf(n);return t[(i<0?0:i)%t.length]}function r(e,t){return e===`crm`?`CRM`:e===`billing`?`Billing`:e===`support`?`Support`:t??e}export{r as n,n as t};
