@@ -30,7 +30,7 @@ window.PORTFOLIO = {
   // The whoami() statement. Each {token} is interactive and shows the evidence behind it.
   statement: "I'm Alan, a software engineer. I {ship full-stack products}, {measure what I build}, {learn the theory underneath} and {write it all down}. Off the keyboard, I {play the violin}.",
   traits: [
-    { k: "ship full-stack products", n: "8", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine and a real-time pitch detector that run in the browser, a memory game, a focus timer and more. Two bigger builds are in progress.", link: "#work", linkText: "see the work ↓" },
+    { k: "ship full-stack products", n: "9", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine and a real-time pitch detector that run in the browser, a multiplayer game server load-tested to 1,000 clients, a focus timer and more. One bigger build is in progress.", link: "#work", linkText: "see the work ↓" },
     { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query. Intonation Studio's pitch detector is swept across the whole violin range: on clean, harmonic-rich tones its worst error is 0.17 cents.", link: "/atlas/", linkText: "try Atlas →" },
     { k: "learn the theory underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. It pays off: Atlas runs on a randomized SVD and an eigensolver I wrote myself." },
     { k: "write it all down", n: "174", unit: "technical notes", text: "A 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs: every deep dive becomes a long-form post on StudyLog, my public engineering notebook.", link: "/blog/", linkText: "open StudyLog →" },
@@ -55,7 +55,7 @@ window.PORTFOLIO = {
       ["WebAssembly", 2026], ["Web Audio", 2026]
     ] },
     { group: "Backend & data", items: [
-      ["Node.js", 2024],
+      ["Node.js", 2024], ["WebSockets", 2026],
       ["Search & retrieval", 2026],
       ["MongoDB", 2025, "30-part MongoDB course on StudyLog: indexes, sharding, change streams, CQRS"],
       ["PostgreSQL", 2025, "8-part PostgreSQL course on StudyLog: planner, MVCC, replication"]
@@ -116,15 +116,15 @@ window.PORTFOLIO = {
     },
     {
       id: "2026", label: "2026", title: "Building in the open", role: "Software engineer",
-      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then two flagships: StudyLog Atlas, a search engine measured at 85% hit@1, and Intonation Studio, a pitch detector written from scratch that is within 0.17 cents on clean tones.",
-      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing"], projects: ["atlas", "intonation"],
-      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Rebuild this site as a program"]]
+      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then three flagships: StudyLog Atlas, a search engine measured at 85% hit@1; Intonation Studio, a pitch detector within 0.17 cents on clean tones; and TripleFind Arena, a multiplayer game server load-tested to 1,000 clients.",
+      picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets"], projects: ["atlas", "intonation", "arena"],
+      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Rebuild this site as a program"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Building flagships",
-      text: "Two flagship builds are under way: my card game as real-time multiplayer on Kubernetes, and a 3D-printing slicer in C++ compiled to WebAssembly.",
-      picked: ["WebSockets", "Emscripten", "Web Workers"], projects: ["arena", "layerline"],
-      events: [["soon", "TripleFind Arena: multiplayer rooms"], ["soon", "Layerline: C++ slicing core"]]
+      text: "One flagship is under way: Layerline, a 3D-printing slicer in C++ compiled to WebAssembly, then printing a real part with it.",
+      picked: ["Emscripten", "Web Workers", "Computational geometry"], projects: ["layerline"],
+      events: [["soon", "Layerline: C++ slicing core"], ["soon", "Layerline: print a real part"]]
     }
   ],
 
@@ -170,19 +170,20 @@ window.PORTFOLIO = {
       links: { live: "/studio/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/studio-src" }
     },
     {
-      id: "arena", tier: "flagship", motif: "cards", name: "TripleFind Arena", year: 2026, kind: "Distributed systems", status: "wip",
-      pitch: "My memory game rebuilt as real-time multiplayer: rooms, matchmaking, replays and a ranked ladder, on infrastructure defined in code.",
-      why: "TripleFind is a single-player browser game. Arena turns the same rules into a backend showcase you can watch under load.",
+      id: "arena", tier: "flagship", motif: "cards", name: "TripleFind Arena", year: 2026, kind: "Real-time multiplayer", status: "live",
+      pitch: "My 2023 memory game rebuilt as a real-time race for two to four players on one shared board. An authoritative WebSocket server deals and checks every flip, and every match is an event log that replays and an Elo ladder are rebuilt from.",
+      why: "TripleFind was a single-player browser game. Arena turns the same rules into a backend you can measure: hidden information, fair deals, reconnects and load.",
       how: [
-        "Authoritative Node.js + TypeScript game server over WebSockets: the server deals and validates every flip.",
-        "Rooms and quick-match via a Redis queue, with reconnect-and-resume when a player drops.",
-        "Matches stored as event logs in MongoDB, giving replays and a leaderboard projection for free.",
-        "Docker, Kubernetes and Terraform on AWS, with OpenTelemetry traces and a published load test."
+        "Clients send intents. A Node and TypeScript server validates each one against a typed protocol, applies it with a pure, seeded engine and sends the public result to every player.",
+        "Each match is an append-only event log with optimistic concurrency. Replays, results and the Elo ladder are projections of it, stored in MongoDB, a JSONL file or memory.",
+        "Deals are provably fair: the server commits to a SHA-256 hash of the shuffled board, reveals it at the end, and the client checks it.",
+        "On GitHub Pages the same server code and bots run in a Web Worker, so it plays without a backend. Docker, Compose and Kubernetes manifests (HPA, PDB, Ingress) are included and validated, not yet deployed to a cluster."
       ],
-      milestones: [["Shared game-logic package", false], ["Single-node multiplayer + reconnect", false], ["Event-sourced replays + leaderboard", false], ["Kubernetes + Terraform deploy", false], ["Observability + load test", false]],
-      stack: ["Node.js", "TypeScript", "WebSockets", "Redis", "MongoDB", "Kubernetes", "Terraform"],
-      uses: ["Docker", "AWS", "Networking"],
-      links: { original: "/triplefind/" }
+      metrics: [["1,000", "concurrent clients"], ["2.7 ms", "p99 flip round trip"], ["1,491", "flips per second"], ["50 / 50", "tests pass"]],
+      milestones: [["Pure engine + typed protocol", true], ["Authoritative server + reconnect", true], ["Event-sourced replays + Elo ladder", true], ["Load test to 1,000 clients", true], ["Deploy to a real cluster", false]],
+      stack: ["Node.js", "TypeScript", "WebSockets", "React", "MongoDB", "Docker", "Kubernetes"],
+      uses: ["Networking"],
+      links: { live: "/arena/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/arena-src", original: "/triplefind/" }
     },
     {
       id: "layerline", tier: "flagship", motif: "layers", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "wip",
