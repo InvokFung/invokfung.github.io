@@ -65,8 +65,26 @@
   const eraYear = (e) => parseInt(e.id, 10) || NOW + 1;
   const shipped = PROJ.filter((p) => p.status !== "wip");
   const WIP = FLAG.filter((p) => p.status === "wip");
+  // section headings live in data.js; {placeholders} are filled here
+  const SEC = D.sections || {};
+  const fine = () => root.classList.contains("fine");
+  const FILL = {
+    skills: () => SK.length,
+    Flagships: () => cap(spell(FLAG.length)),
+    chapters: () => cap(spell(ERAS.length)),
+    questions: () => FLAG.map((p) => p.question).filter(Boolean).join(" "),
+    answers: () => (WIP.length ? `${cap(spell(FLAG.length - WIP.length))} answers are live, ${spell(WIP.length)} still in progress.` : "Every answer is live, with the numbers to back it."),
+    Hover: () => (fine() ? "Hover" : "Tap"),
+    hover: () => (fine() ? "hover" : "tap"),
+    strum: () => (fine() ? " The wires are strings too: strum them." : "")
+  };
+  const fill = (t) => String(t || "").replace(/\{(\w+)\}/g, (m, k) => (FILL[k] ? FILL[k]() : m));
+  const secTitle = (k, dflt) => split(fill((SEC[k] && SEC[k].title) || dflt));
+  const secLede = (k, dflt) => esc(fill((SEC[k] && SEC[k].lede) || dflt));
+  const XH = SEC.experiments || ["Experiments", "smaller things"];
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
-  const spell = (n) => ["no", "one", "two", "three", "four", "five", "six"][n] || String(n);
+  const spell = (n) => ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] || String(n);
+  const cap = (w) => String(w).charAt(0).toUpperCase() + String(w).slice(1);
   const SK = D.skills.flatMap((g) => g.items.map(([name, since, proof]) => ({ name, since, proof, group: g.group })));
   const proves = (p, s) => (p.stack || []).includes(s.name) || (p.uses || []).includes(s.name);
   const usedBy = (s) => PROJ.filter((p) => proves(p, s));
@@ -84,10 +102,15 @@
   function statementHTML() {
     wi = 0;
     let t = 0;
-    return D.statement.split(/\{([^}]+)\}/).map((part, i) => {
-      if (i % 2 === 0) return words(part);
+    const parts = D.statement.split(/\{([^}]+)\}/), PUNCT = /^[,.;:!?]+/;
+    return parts.map((part, i) => {
+      if (i % 2 === 0) return words(i ? part.replace(PUNCT, "") : part);
       const idx = t++;
-      return `<button type="button" class="tok" data-t="${idx}" data-ref="t:${idx}" aria-describedby="ev">${words(part)}<sup>0${idx + 1}</sup></button>`;
+      const punct = (parts[i + 1].match(PUNCT) || [""])[0];
+      const ws = part.trim().split(/\s+/), last = ws.pop();
+      // a span, not a <button>: buttons lay out as inline-blocks, so a token that wraps would turn into a box.
+      // The last word, its footnote number and the punctuation after the token never wrap apart.
+      return `<span class="tokw"><span class="tok" role="button" tabindex="0" data-t="${idx}" data-ref="t:${idx}" aria-describedby="ev">${ws.length ? words(ws.join(" ") + " ") : ""}<span class="nw">${words(last)}<sup>0${idx + 1}</sup></span></span>${punct ? words(punct) : ""}</span>`;
     }).join("");
   }
 
@@ -121,6 +144,7 @@
       <span class="fbody">
         <span class="ctop"><span class="st is-${p.status}">${STATUS[p.status]}</span><span>${p.year} · ${esc(p.kind)}</span></span>
         <h3>${esc(p.name)}</h3>
+        ${p.question ? `<span class="q">${esc(p.question)}</span>` : ""}
         <p>${esc(p.pitch)}</p>
         ${metrics(p, "metrics")}
         ${progress(p)}
@@ -148,9 +172,9 @@
       <h1 class="hero-name" id="hero-name"></h1>
       <p class="err" id="hero-err" hidden>TypeError: alan.name is undefined. Type a name in the source.</p>
       <div class="hero-row">
-        <div class="rv"><div class="hero-role">// ${esc(P.role.toLowerCase())}, dedicated to programming</div><p class="hero-tag">${esc(P.tagline)}</p></div>
+        <div class="rv"><div class="hero-role">// ${esc(P.role.toLowerCase())} · shipping software since ${P.career ? P.career[0][1] : P.firstCommit}</div><p class="hero-tag">${esc(P.tagline)}</p></div>
         <div class="play rv" id="play">
-          <p class="play-hint">${root.classList.contains("fine") ? "<b>Run your cursor across the strings</b> to play them." : "<b>Swipe across the strings</b> to play them."} Each one opens a section: ${root.classList.contains("fine") ? "click" : "tap"} its name.</p>
+          <p class="play-hint">This page is strung like a violin. ${fine() ? "<b>Drag your cursor across the strings</b> to play them" : "<b>Swipe across the strings</b> to play them"}, and ${fine() ? "click" : "tap"} a string's name to go there.</p>
           <div class="play-ctl">
             <button type="button" id="snd" data-sound aria-pressed="false"><span class="ic" aria-hidden="true">♪</span><span class="t">sound off</span></button>
             <button type="button" id="mic" aria-pressed="false"><span class="ic dot" aria-hidden="true"></span><span class="t">listen</span></button>
@@ -161,7 +185,7 @@
       <div class="hero-stats rv">
         <div><b>${esc(P.metric[0])}</b><span>${esc(P.metric[1])}</span></div>
         <div><b>${shipped.length}</b><span>projects shipped</span></div>
-        <div><b>${SK.length}</b><span>skills, each with proof</span></div>
+        <div><b>${SK.length}</b><span>skills, each with a receipt</span></div>
         <div><b>${P.firstCommit}</b><span>first commit</span></div>
       </div>
     </section>
@@ -173,6 +197,7 @@
       <div class="who-grid">
         <div class="rv">${P.about.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
         <div class="imports rv"><span class="kw">export const</span> alan = {
+          <div class="kv"><span>role:</span> <span class="s">"${esc(P.role)}"</span>,</div>
           <div class="kv"><span>status:</span> <span class="s">"${esc(P.status)}"</span>,</div>
           <div class="kv"><span>focus:</span> [${P.focus.map((f) => `<span class="s">"${esc(f)}"</span>`).join(", ")}],</div>
           <div class="kv"><span>${WIP.length ? "building" : "shipped"}:</span> [${(WIP.length ? WIP : FLAG).map((p) => `<button type="button" class="s lnk" data-case="${p.id}">"${esc(p.name)}"</button>`).join(", ")}],</div>
@@ -183,8 +208,8 @@
 
     <section class="sec skills" id="skills" data-block="skills" aria-label="Skills">
       ${node("skills()", "02", "skills")}
-      <h2 class="title split">${split("What I can do, <em>wired</em> to the proof")}</h2>
-      <p class="lede rv">${SK.length} skills, each traced to the projects that use it. Point at a skill to light up its projects, or at a project to see what it's built with${root.classList.contains("fine") ? ", or strum across the wires" : ""}.${PROJ.some((p) => p.status === "wip") ? " Solid wires are shipped work, dashed ones are in progress." : ""}</p>
+      <h2 class="title split">${secTitle("skills", "What I can do, <em>wired</em> to the proof")}</h2>
+      <p class="lede rv">${secLede("skills", "{skills} skills, each traced to the projects that use it.")}${PROJ.some((p) => p.status === "wip") ? " Solid wires are shipped work, dashed ones are in progress." : ""}</p>
       <div class="graph rv" id="graph">
         <svg class="wires" id="wires" aria-hidden="true"></svg>
         <div class="g-skills">${D.skills.map((g) => `<div class="g-group"><div class="g-h">// ${esc(g.group.toLowerCase())}</div>${g.items.map(([n]) => { const i = SK.findIndex((x) => x.name === n); const sk = SK[i]; const live = usedBy(sk).filter((p) => p.status !== "wip").length; return `<button type="button" class="g-skill" data-s="${i}" data-ref="s:${i}"><span class="nm">${esc(n)}</span><span class="since">${sk.since}</span><span class="cnt${live ? "" : " none"}">${usedBy(sk).length || "·"}</span></button>`; }).join("")}</div>`).join("")}</div>
@@ -199,19 +224,19 @@
       <div class="fork" id="fork">
         <svg class="lanes" id="lanes" aria-hidden="true"></svg>
         ${node("fork(projects)", "03", "work")}
-        <h2 class="title split">${split(`${spell(FLAG.length)[0].toUpperCase() + spell(FLAG.length).slice(1)} <em>flagships</em>, and the experiments that led here`)}</h2>
-        <p class="lede rv">The main thread forks into the builds I care most about: ${WIP.length ? `${spell(FLAG.length - WIP.length)} live, ${spell(WIP.length)} in progress` : `all ${spell(FLAG.length)} live, each with numbers I measured`}. Open any card for the case study.</p>
+        <h2 class="title split">${secTitle("work", "{Flagships} <em>flagships</em>, and the experiments that led here")}</h2>
+        <p class="lede rv">${secLede("work", "{answers} Open any card for the case study.")}</p>
         <div class="flagships" id="flagships">${FLAG.map(fcard).join("")}</div>
       </div>
-      <div class="subhead rv"><b>Experiments</b><span>${EXP.length} smaller things, ${P.firstCommit + 3}–2024</span></div>
+      <div class="subhead rv"><b>${esc(XH[0])}</b><span>${EXP.length} ${esc(XH[1])}, ${Math.min(...EXP.map((p) => p.year))}–${Math.max(...EXP.map((p) => p.year))}</span></div>
       <div class="experiments">${EXP.map(xcard).join("")}</div>
     </section>
 
     <section class="sec history" id="history" data-block="history" aria-label="History">
       <div class="intro" id="intro">
         ${node("for (const year of alan.life)", "04", "history")}
-        <h2 class="title split">${split("How I got <em>here</em>")}</h2>
-        <p class="lede rv">${ERAS.length} chapters, from my first commit to what I'm building next, with the skills and projects each one added. Keep scrolling and the page runs sideways through the years. Use the rail or the ← → keys to jump.</p>
+        <h2 class="title split">${secTitle("history", "How I got <em>here</em>")}</h2>
+        <p class="lede rv">${secLede("history", "{chapters} chapters, from my first commit to what's next.")}</p>
       </div>
       <div class="pin" id="pin"><div class="stage" id="stage">
         <div class="stage-top"><span><span class="kw">for</span> (const year <span class="kw">of</span> alan.life) { <b id="loop-year"></b></span><span class="counters">skills <b id="c-skills">0</b> shipped <b id="c-ship">0</b> years <b id="c-years">0</b></span></div>
@@ -222,8 +247,8 @@
 
     <section class="sec contact" id="contact" data-block="contact" aria-label="Contact">
       ${node("await hire(alan)", "05", "contact")}
-      <h2 class="title split">${split("Let's build <em>something</em>")}</h2>
-      <p class="lede rv">A role, a collaboration, or a strange idea that needs an engineer. Run the line below.</p>
+      <h2 class="title split">${secTitle("hire", "Let's build <em>something</em>")}</h2>
+      <p class="lede rv">${secLede("hire", "Run the line below.")}</p>
       <button type="button" class="hire rv" id="hire" data-node-end><span><span class="kw">await</span> <span class="fn">hire</span><span class="p">(</span>alan<span class="p">)</span></span><span class="caret" aria-hidden="true"></span></button>
       <div class="promise" id="promise" hidden></div>
       <footer class="foot">
@@ -285,7 +310,8 @@
     if (!isMobile()) {
       const sr = statement.getBoundingClientRect();
       const host = $("#whoami").getBoundingClientRect();
-      const r = tok.getClientRects()[0] || tok.getBoundingClientRect();
+      // under the line where the token ends (a token can wrap over two lines)
+      const rs = tok.getClientRects(), r = rs[rs.length - 1] || tok.getBoundingClientRect();
       const w = Math.min(360, sr.width);
       ev.style.left = clamp(r.left - host.left, 0, host.width - w) + "px";
       ev.style.top = r.bottom - host.top + 12 + "px";
@@ -305,6 +331,7 @@
   ev.addEventListener("pointerleave", () => { if (!isMobile()) hideSoon(); });
   statement.addEventListener("click", (e) => { const t = e.target.closest(".tok"); if (!t) return; if (evOn === +t.dataset.t && isMobile()) hideEv(); else showEv(t); });
   // keyboard focus only: a tap focuses too, and the click that follows would toggle it shut again
+  statement.addEventListener("keydown", (e) => { const t = e.target.closest(".tok"); if (t && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); showEv(t); } });
   statement.addEventListener("focusin", (e) => { const t = e.target.closest(".tok"); if (t && t.matches(":focus-visible")) showEv(t); });
   statement.addEventListener("focusout", () => { if (!isMobile()) hideEv(); });
 
@@ -1014,7 +1041,7 @@
 
   /* listen: sing or play near an open string and it rings along; hold the note to open its section */
   const micBtn = $("#mic"), tuner = $("#tuner");
-  const TUNER_IDLE = "Or turn on listen and sing or play a G, D, A or E: that string rings along.";
+  const TUNER_IDLE = "Got an instrument? Turn on listen and play or hum a G, D, A or E. The matching string answers.";
   tuner.textContent = TUNER_IDLE;
   let mic = null;
   const pcDist = (midi, pc) => { let d = (((midi - pc) % 12) + 12) % 12; if (d > 6) d -= 12; return d * 100; };
@@ -1186,6 +1213,7 @@
       <button type="button" class="pill-btn case-x" id="case-x" aria-label="Close case study">esc ✕</button>
       <div class="kick"><span>git show <b>${sha(p.id + p.name)}</b></span><span class="st is-${p.status}">${STATUS[p.status]}</span><span>${p.year}</span><span>${esc(p.kind)}</span></div>
       <h2 id="case-title">${esc(p.name)}</h2>
+      ${p.question ? `<p class="q">${esc(p.question)}</p>` : ""}
       <p class="pitch">${esc(p.pitch)}</p>
       ${metrics(p, "metrics")}
       <canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>

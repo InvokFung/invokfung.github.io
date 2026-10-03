@@ -275,6 +275,7 @@ em { font-style: italic; }
   background-image: linear-gradient(var(--acc), var(--acc)); background-size: 100% 1.5px; background-repeat: no-repeat; background-position: 0 92%;
   transition: background-size .4s var(--ease), color .3s; padding: 0 .04em;
 }
+.tokw, .tok .nw { white-space: nowrap; } .tokw .tok { white-space: normal; }
 .tok sup { font: 600 .2em var(--mono); font-style: normal; color: var(--mute); vertical-align: super; margin-left: .15em; }
 .tok:hover, .tok.on { background-size: 100% 100%; color: var(--on-acc); }
 [data-theme="paper"] .tok:hover, [data-theme="paper"] .tok.on { color: #fff; background-image: linear-gradient(var(--acc-ink), var(--acc-ink)); }
@@ -432,6 +433,7 @@ em { font-style: italic; }
 .st.is-wip { color: var(--warn); } .st.is-wip::before { background: var(--warn); animation: pulse 2s infinite; }
 .fcard h3 { font: 400 clamp(36px, 3.4vw, 52px)/1 var(--serif); letter-spacing: -.015em; }
 .fcard p, .xcard p { color: var(--fg2); font-size: 15px; line-height: 1.55; }
+.fcard .q { font: italic 400 21px/1.25 var(--serif); color: var(--acc-ink); margin-top: -6px; text-wrap: balance; }
 .prog { display: flex; align-items: center; gap: 12px; font: 500 11.5px var(--mono); color: var(--mute); }
 .prog .bar { flex: 1; height: 4px; border-radius: 2px; background: var(--line2); overflow: hidden; }
 .prog .bar i { display: block; height: 100%; background: var(--acc-ink); width: 0; transition: width 1.4s var(--ease); }
@@ -456,6 +458,7 @@ em { font-style: italic; }
 .case .kick { font: 500 12.5px var(--mono); color: var(--mute); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .case .kick b { color: var(--num); font-weight: 500; }
 .case h2 { margin: 18px 0 18px; font: 400 clamp(56px, 10vw, 150px)/.88 var(--serif); letter-spacing: -.03em; }
+.case .q { font: italic 400 clamp(22px, 2.4vw, 32px)/1.25 var(--serif); color: var(--acc-ink); margin: 0 0 10px; }
 .case .pitch { font: 400 clamp(22px, 2.4vw, 32px)/1.3 var(--serif); color: var(--fg2); max-width: 30em; }
 .case .cover { display: block; width: 100%; height: clamp(200px, 30vw, 360px); margin: 44px 0; border-radius: 22px; background: var(--bg2); border: 1px solid var(--line); }
 .case-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 28px 48px; border-top: 1px solid var(--line2); padding-top: 34px; }

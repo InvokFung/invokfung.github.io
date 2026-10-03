@@ -5,7 +5,7 @@ Alan Fung's portfolio, served from GitHub Pages.
 The landing page is drawn as the control flow of a program, and every line on it is a string you
 can play. One thread runs from `main()` to `hire()` and lights up as you scroll:
 
-1. **main()**: the name, an "open to software engineering roles" badge and the headline numbers,
+1. **main()**: the name, the role (Forward Deployed Engineer), an "open to roles" badge and the headline numbers,
    with the four open strings of a violin (G D A E) running through the name. Run the cursor (or
    swipe a finger) across them to pluck them; each string's name opens a section. With sound on
    they ring at their real pitch. **Listen** uses the microphone: sing or play near G, D, A or E
@@ -14,7 +14,7 @@ can play. One thread runs from `main()` to `hire()` and lights up as you scroll:
 3. **skills()**: a wiring diagram. Every skill is wired to the projects that use it; hover or tap
    a skill or a project to trace it, or strum across the wires like a harp. Skills with no shipped
    project yet show their evidence instead.
-4. **fork(projects)**: the thread forks into four flagship cards (with measured numbers), then the
+4. **fork(projects)**: the thread forks into four flagship cards, each led by the question it set out to answer and its measured numbers, then the
    smaller experiments. Each card opens a case study (`#work/<id>` links straight to one).
 5. **history()**: a `for (const year of alan.life)` loop. The section pins and scrolls sideways
    through the years, with a rail, live counters and `HEAD → <year>` in the nav. ← → also work.
@@ -30,7 +30,7 @@ plucked by the pointer too. A damped 1D wave equation moves each one; sound is K
 Sound stays off until the visitor turns it on, and nothing from the microphone leaves the page.
 
 - `index.html`: page shell
-- `assets/portfolio/data.js`: **all content** (profile, statement, skills, eras, projects, blog stats)
+- `assets/portfolio/data.js`: **all content** (profile, statement, section headings, skills, eras, projects, blog stats)
 - `assets/portfolio/app.js`: renderer, thread engine, strings, history loop, case studies, source view, terminal
 - `assets/portfolio/strings.js`: the wave equation, the plucked-string synth and the pitch detector (no page code)
 - `assets/portfolio/style.css`: themes and layout

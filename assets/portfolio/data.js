@@ -12,30 +12,60 @@ window.PORTFOLIO = {
   profile: {
     name: "Alan Fung",
     handle: "InvokFung",
-    role: "Software Engineer",
-    status: "open to software engineering roles",
-    tagline: "Full-stack engineer who goes down to the maths underneath: search engines, real-time systems and the feel of a good interface.",
+    role: "Forward Deployed Engineer",
+    // [title, from], oldest first; the last one is the current role
+    career: [["Software Engineer", 2024], ["Forward Deployed Engineer", 2026]],
+    status: "open to FDE and engineering roles",
+    tagline: "I tune software the way I tune a violin: by ear, beside the people who play it, then to the cent.",
     email: "aflung10@gmail.com",
     github: "https://github.com/InvokFung",
     firstCommit: 2018,
     // the measured number the hero leads with
     metric: ["85%", "hit@1, my search engine"],
-    focus: ["full-stack web", "search & retrieval", "real-time systems", "graphics"],
+    focus: ["forward deployment", "full-stack web", "search & retrieval", "real-time systems", "graphics"],
     about: [
-      "I'm a developer obsessed with charm, stunning visual effects and user experience.",
-      "I don't stop at the interface: I go down into databases, networking, infrastructure and the maths underneath, and I measure what I build."
+      "Most of my week is spent next to the people who use the software. That is the job of a Forward Deployed Engineer: hear the real problem, not the ticket, then build until it works in their hands.",
+      "The rest goes into going deeper than anyone asked. I wrote my own SVD for a search engine, my own pitch detector for a violin, and a slicer in C++ that doesn't even lean on a standard library, then measured each one to find out whether I was right.",
+      "And I care how it feels. People keep using tools they enjoy, which is why this page plays like an instrument."
     ]
   },
 
-  // The whoami() statement. Each {token} is interactive and shows the evidence behind it.
-  statement: "I'm Alan, a software engineer. I {ship full-stack products}, {measure what I build}, {learn the theory underneath} and {write it all down}. Off the keyboard, I {play the violin}.",
+  // The whoami() statement. Each {token} opens the evidence in `traits`, in the same order.
+  statement: "I'm Alan, a Forward Deployed Engineer. I {go where the problem lives}, {ship the whole stack} and {put a number on everything}. Off the clock I {learn the maths underneath}, {write it all down} and {pick up the violin}, which is how a pitch detector ended up on this page.",
   traits: [
-    { k: "ship full-stack products", n: "10", unit: "shipped", text: "A three-tier 3D reconstruction system (web client, Node API, Python backend), a search engine, a real-time pitch detector and a 3D-printing slicer that all run in the browser, a multiplayer game server load-tested to 1,000 clients, a focus timer and more.", link: "#work", linkText: "see the work ↓" },
-    { k: "measure what I build", n: "85%", unit: "hit@1", text: "StudyLog Atlas is scored on 60 real questions: the right post ranks first 85% of the time and lands in the top five 98% of the time, in about half a millisecond per query. Intonation Studio's pitch detector is swept across the whole violin range: on clean, harmonic-rich tones its worst error is 0.17 cents. Layerline's WebAssembly core is benchmarked against the same algorithm in TypeScript and checked byte for byte against the native C++ build.", link: "/atlas/", linkText: "try Atlas →" },
-    { k: "learn the theory underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. It pays off: Atlas runs on a randomized SVD and an eigensolver I wrote myself." },
-    { k: "write it all down", n: "174", unit: "technical notes", text: "A 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs: every deep dive becomes a long-form post on StudyLog, my public engineering notebook.", link: "/blog/", linkText: "open StudyLog →" },
-    { k: "play the violin", n: "19", unit: "music notes", text: "Violin notes, and I'm teaching myself the piano. So I built Intonation Studio, a practice room that hears a scale and scores every note to the cent.", link: "/studio/", linkText: "try Studio →" }
+    { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "Software engineer from 2024, Forward Deployed Engineer since 2026. The job is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
+    { k: "ship the whole stack", n: "10", unit: "shipped", text: "From a three-tier 3D reconstruction system (web client, Node API, Python backend) to a search engine, a pitch detector and a 3D-printing slicer that run entirely in your browser, plus a multiplayer server load-tested to 1,000 clients.", link: "#work", linkText: "see the work ↓" },
+    { k: "put a number on everything", n: "85%", unit: "hit@1", text: "Every flagship ships with its benchmark. Atlas puts the right post first 85% of the time across 60 real questions. Studio's pitch detector is off by at most 0.17 cents on clean tones. Layerline's C++ core runs a median 8× faster than the same algorithm in TypeScript, and its output matches the native build byte for byte.", link: "/atlas/", linkText: "try Atlas →" },
+    { k: "learn the maths underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. Not for show: Atlas runs on a randomized SVD and an eigensolver I wrote myself, and Layerline does its geometry on exact integers." },
+    { k: "write it all down", n: "174", unit: "public notes", text: "Every deep dive becomes a long-form post on StudyLog, my public engineering notebook: a 30-part MongoDB course, 14 parts of Three.js, Kubernetes, AWS, PostgreSQL, design docs.", link: "/blog/", linkText: "open StudyLog →" },
+    { k: "pick up the violin", n: "19", unit: "music notes", text: "Violin, and a piano I'm teaching myself. Checking scales on a tuner one note at a time got old, so I built Intonation Studio: it listens to the whole scale and scores every note to the cent.", link: "/studio/", linkText: "try Studio →" }
   ],
+
+  /*
+   * Section headings. <em>…</em> is drawn in the accent italic. Placeholders filled by app.js:
+   *   {skills} skill count · {Flagships} spelled flagship count · {chapters} spelled chapter count
+   *   {questions} every flagship's `question` · {answers} live / in-progress status of the flagships
+   *   {Hover} / {hover} "Hover" or "Tap" · {strum} a strum hint on mouse devices
+   */
+  sections: {
+    skills: {
+      title: "No skill without a <em>receipt</em>",
+      lede: "{skills} skills, each wired to the project that proves it or the notes where I learned it. {Hover} a skill and its projects light up; {hover} a project and you see what it's made of.{strum}"
+    },
+    work: {
+      title: "{Flagships} questions I couldn't <em>leave alone</em>",
+      lede: "{questions} {answers} Open a card for the whole story."
+    },
+    experiments: ["Before the flagships", "smaller builds"],
+    history: {
+      title: "How a Java group project became a <em>career</em>",
+      lede: "{chapters} chapters, from my first commit to what's next. Keep scrolling and the page turns sideways through the years; the rail and the ← → keys jump straight to one."
+    },
+    hire: {
+      title: "Bring me the <em>hard</em> part",
+      lede: "A role, a customer nobody has cracked yet, or a strange idea that needs an engineer in the room. Run the line below."
+    }
+  },
 
   /*
    * skills(): grouped, with the year of the first evidence. A project proves a skill when the
@@ -80,49 +110,49 @@ window.PORTFOLIO = {
   eras: [
     {
       id: "2018", label: "2018", title: "First commit", role: "Student",
-      text: "A Java group project became my first repository on GitHub. Everything since has been one long commit history.",
+      text: "A Java group project became my first repository. Nobody told me it was commit one of a very long log.",
       picked: ["Java", "Git"],
       events: [["2018-11", "First repo: a Java group project"]]
     },
     {
-      id: "2020", label: "2020", title: "Tinkering", role: "Tinkerer",
-      text: "Side experiments to see how things work: serverless databases with FaunaDB, a chess board, and small playful web pages.",
+      id: "2020", label: "2020", title: "Taking things apart", role: "Tinkerer",
+      text: "Curiosity with a keyboard: serverless databases with FaunaDB, a chess board, and small web toys built to find out how things tick.",
       picked: ["JavaScript", "Serverless DBs", "HTML/CSS"], projects: ["genius"],
       events: [["2020-09", "Experiments with serverless databases (FaunaDB)"], ["2020-11", "A chess board"], ["2021-07", "genius, a fun web experiment"]]
     },
     {
       id: "2022", label: "2022", title: "Foundations", role: "Computer science student",
-      text: "Computer science fundamentals: data structures in C++, Java, networking and logic circuits. I built this site and started StudyLog to publish what I learn.",
+      text: "The proper groundwork: data structures in C++ and Java, networking, logic circuits. I put this site online and started StudyLog, because I only trust what I can explain.",
       picked: ["C++", "Networking", "Logic circuits"], projects: ["studylog"],
       events: [["2022-05", "git init invokfung.github.io"], ["2022-05", "Data structures in C++, Java, networking"]]
     },
     {
       id: "2023", label: "2023", title: "Shipping small things", role: "Builder",
-      text: "I started turning ideas into things people can click: a memory game with time-proportional scoring, a focus timer, and a coordinate-geometry calculator.",
+      text: "Ideas started turning into things other people could click: a memory game that pays you for speed, a focus timer, a calculator that reads shapes from their coordinates.",
       picked: ["DOM", "Game logic", "Responsive UI"], projects: ["triplefind", "chilltimer", "shapecalc"],
       events: [["2023-02", "TripleFind goes live"], ["2023-03", "First version of ChillTimer"], ["2023-06", "Shape Calculator"]]
     },
     {
-      id: "2024", label: "2024", title: "Full stack", role: "Final-year student",
-      text: "My final year project was a three-tier 3D reconstruction system: a web client, a Node API and a Python processing backend.",
+      id: "2024", label: "2024", title: "Full stack, for real", role: "Software engineer",
+      text: "My final year project was a three-tier 3D reconstruction system: web client, Node API, Python backend. Then the title became a job: software engineer.",
       picked: ["Python", "Node.js", "REST APIs"], projects: ["reconstruction"],
-      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
+      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024", "Start as a software engineer"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
     },
     {
-      id: "2025", label: "2025", title: "Going deep", role: "Software engineer",
-      text: "Depth on the backend and in graphics: MongoDB from indexes to sharding, PostgreSQL internals, modern C++, Three.js shaders and instancing, linear algebra, then containers and AWS.",
+      id: "2025", label: "2025", title: "Going below the surface", role: "Software engineer",
+      text: "A year of asking what's underneath: MongoDB from indexes to sharding, PostgreSQL internals, modern C++, Three.js shaders and instancing, linear algebra, then containers and AWS.",
       picked: ["TypeScript", "MongoDB", "PostgreSQL", "Three.js", "Docker"],
       events: [["2025-03", "MongoDB: indexes, aggregation, sharding"], ["2025-06", "Three.js: PBR, instancing, GLSL shaders"], ["2025-09", "PostgreSQL: planner, MVCC, replication"], ["2025-11", "Containers from first principles"]]
     },
     {
-      id: "2026", label: "2026", title: "Building in the open", role: "Software engineer",
-      text: "Cloud infrastructure (AWS, Kubernetes, Terraform) and modern frontend (React, Vue, Next.js). Then four flagships: StudyLog Atlas, a search engine measured at 85% hit@1; Intonation Studio, a pitch detector within 0.17 cents on clean tones; TripleFind Arena, a multiplayer game server load-tested to 1,000 clients; and Layerline, a 3D-printing slicer whose C++ core runs as WebAssembly, a median 8× faster than the same algorithm in TypeScript.",
+      id: "2026", label: "2026", title: "Forward deployed", role: "Forward Deployed Engineer",
+      text: "I became a Forward Deployed Engineer: closer to the people using the software, and on the hook for what happens after the demo. Off the clock, four flagships, each answering a question with numbers.",
       picked: ["Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets", "Computational geometry", "Web Workers"], projects: ["atlas", "intonation", "arena", "layerline"],
-      events: [["2026-01", "Kubernetes architecture, AWS at scale"], ["2026-03", "Terraform and React 19"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Ship Layerline"], ["2026-10", "Rebuild this site as a program"]]
+      events: [["2026", "Become a Forward Deployed Engineer"], ["2026-01", "Kubernetes, AWS at scale, Terraform"], ["2026-10", "Ship StudyLog Atlas"], ["2026-10", "Ship Intonation Studio"], ["2026-10", "Ship TripleFind Arena"], ["2026-10", "Ship Layerline"], ["2026-10", "Rebuild this site as an instrument"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Open to roles",
-      text: "All four flagships are live, and each has one milestone left: deploy Arena to a real Kubernetes cluster, print a real part from Layerline's G-code, add neural embeddings and cited answers to Atlas, and write up pitch detection from scratch. Alongside that, a software engineering role where this is the day job.",
+      text: "Each flagship has one milestone left: Arena on a real Kubernetes cluster, a real part printed from Layerline's G-code, neural embeddings and cited answers in Atlas, and a write-up of pitch detection from scratch. And the next team that wants an engineer in the room where the problem is.",
       picked: [],
       events: [["soon", "Arena: deploy to a real cluster"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
     }
@@ -139,8 +169,9 @@ window.PORTFOLIO = {
   projects: [
     {
       id: "atlas", tier: "flagship", motif: "passages", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
-      pitch: "A hybrid search engine that runs entirely in the browser over 5,551 passages of my notes, and shows its work: every stage of a query reports its output and its time on your device.",
-      why: "173 long-form posts were only browsable by date and tag. Atlas makes the whole notebook searchable by meaning, with no model, API key or server.",
+      question: "Can a search engine run with no server at all?",
+      pitch: "A search engine over 5,551 passages of my notes that runs entirely in your browser: no server, no API key, no model. Ask it something and it shows its working, every stage with its output and its time on your device.",
+      why: "I had 173 long posts and could only find them by date and tag. I wanted to ask my notebook a question and get the right paragraph back, without renting a server or shipping a model.",
       how: [
         "Build step in TypeScript: parse the rendered blog into 5,551 passages and pack a BM25 inverted index into typed arrays.",
         "Latent semantic analysis: a TF-IDF matrix reduced to 96 dimensions by a randomized truncated SVD, with my own Gram-Schmidt and Jacobi eigensolver.",
@@ -155,8 +186,9 @@ window.PORTFOLIO = {
     },
     {
       id: "intonation", tier: "flagship", motif: "pitch", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "live",
-      pitch: "A practice room in the browser that listens to a violin or a piano and scores a whole scale, note by note, to the cent. A synthesized violinist can play the drill, so you can judge it without an instrument.",
-      why: "It joins engineering with something I actually practise. A tuner shows one note at a time; this scores scales and arpeggios by grade and tracks how each note improves.",
+      question: "Can a browser tab hear a violin to the cent?",
+      pitch: "A practice room that listens to a violin or a piano and scores a whole scale, note by note, to the cent. No instrument to hand? A synthesized violinist plays the drill for you.",
+      why: "A tuner shows one note at a time, but practice is scales and arpeggios, and what matters is which notes keep drifting. Studio scores whole drills by grade and remembers how each note improves.",
       how: [
         "A McLeod pitch detector written from scratch in an AudioWorklet: the autocorrelation comes from one half-size real FFT, and a cosine fit gives the sub-sample lag (parabolic interpolation was off by up to 0.95 cents).",
         "Notes are segmented with hysteresis and scored on their vibrato-free centre: the contour is smoothed over exactly one vibrato cycle before steadiness is judged.",
@@ -171,8 +203,9 @@ window.PORTFOLIO = {
     },
     {
       id: "arena", tier: "flagship", motif: "cards", name: "TripleFind Arena", year: 2026, kind: "Real-time multiplayer", status: "live",
-      pitch: "My 2023 memory game rebuilt as a real-time race for two to four players on one shared board. An authoritative WebSocket server deals and checks every flip, and every match is an event log that replays and an Elo ladder are rebuilt from.",
-      why: "TripleFind was a single-player browser game. Arena turns the same rules into a backend you can measure: hidden information, fair deals, reconnects and load.",
+      question: "Would my 2023 memory game survive 1,000 players?",
+      pitch: "My 2023 memory game, rebuilt as a real-time race for two to four players on one board. The server deals and checks every flip, so no client can peek, and every match is an event log you can replay move by move.",
+      why: "TripleFind was a single-player browser game. Making it a fair race meant solving real backend problems: hidden information, provably fair deals, reconnects and load.",
       how: [
         "Clients send intents. A Node and TypeScript server validates each one against a typed protocol, applies it with a pure, seeded engine and sends the public result to every player.",
         "Each match is an append-only event log with optimistic concurrency. Replays, results and the Elo ladder are projections of it, stored in MongoDB, a JSONL file or memory.",
@@ -187,8 +220,9 @@ window.PORTFOLIO = {
     },
     {
       id: "layerline", tier: "flagship", motif: "layers", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "live",
-      pitch: "A 3D-printing slicer that runs in the browser: drop in an STL, get printer-ready G-code. A freestanding C++17 core, compiled to 66 KB of WebAssembly with no Emscripten and no libc, slices in a Web Worker and streams every layer into a WebGL preview as soon as it is done.",
-      why: "A slicer is computational geometry with no room for hand-waving: broken meshes, walls thinner than the nozzle, exact tie-breaking, and an output a printer has to follow. It ties my C++, 3D printing and Three.js notes into one tool.",
+      question: "How small can a real 3D-printing slicer get?",
+      pitch: "Drop in an STL, get G-code a printer can run. The slicer is 66 KB of WebAssembly built from freestanding C++17, with no Emscripten and no libc. It slices on a background thread and paints each layer the moment it is done.",
+      why: "A slicer is computational geometry with no room for hand-waving: broken meshes, walls thinner than the nozzle, exact tie-breaking, and an output a printer has to obey. It pulls my C++, 3D printing and graphics notes into one tool.",
       how: [
         "Integer geometry on a 1 µm grid with exact 64-bit orientation tests: triangle–plane intersection, loop stitching that repairs gaps and flipped triangles, and island nesting by winding number.",
         "Walls come from mitred polygon offsets cleaned by my own N-ary polygon boolean; the same boolean finds the top and bottom skins in one pass. Rectilinear infill, then nearest-first ordering.",
@@ -203,36 +237,36 @@ window.PORTFOLIO = {
     },
     {
       id: "studylog", tier: "experiment", motif: "dots", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",
-      pitch: "My public engineering notebook: 174 long-form technical notes on databases, cloud, C++, graphics and maths, with diagrams and full-text search.",
+      pitch: "Where every deep dive ends up: 174 long-form notes on databases, cloud, C++, graphics and maths, with diagrams, maths typesetting and full-text search.",
       how: ["Custom build pipeline with static export", "Diagrams, KaTeX and local full-text search"],
       stack: ["Next.js", "Markdown", "KaTeX", "Python"], links: { live: "/blog/" }
     },
     {
       id: "chilltimer", tier: "experiment", motif: "rings", name: "ChillTimer", year: 2023, kind: "Focus tool", status: "live",
-      pitch: "An immersive Pomodoro timer with lofi music, ambient sounds, video scenes and weekly focus stats.",
+      pitch: "A Pomodoro timer you would actually leave open: lofi music, an ambient sound mixer, video scenes and weekly focus stats.",
       how: ["Music and ambient mixer", "Scene backgrounds", "Weekly and all-time stats in localStorage"],
       stack: ["JavaScript", "CSS", "HTML5 media"], links: { live: "/ptimer/" }
     },
     {
       id: "triplefind", tier: "experiment", motif: "cards", name: "TripleFind", year: 2023, kind: "Game", status: "live",
-      pitch: "Find the triples against the clock. The faster you find one the more it's worth; re-flipping a card you've seen costs you.",
+      pitch: "Find the triples against the clock. Quick finds score more, and flipping a card you have already seen costs you. Later rebuilt as TripleFind Arena.",
       how: ["Card count adapts to screen size", "Time-proportional scoring", "Scene transitions and result analysis"],
       stack: ["JavaScript", "DOM", "CSS"], links: { live: "/triplefind/" }
     },
     {
       id: "reconstruction", tier: "experiment", motif: "mesh", name: "3D Reconstruction", year: 2024, kind: "Final year project", status: "source",
-      pitch: "A three-tier system for turning images into 3D models: web client, Node API and Python backend.",
+      pitch: "My final year project: images in, 3D model out, across a web client, a Node API and a Python processing backend.",
       how: ["Web client", "Node.js API", "Python processing backend"],
       stack: ["JavaScript", "Node.js", "Python"], links: { source: "https://github.com/InvokFung/3dreconstruction" }
     },
     {
       id: "shapecalc", tier: "experiment", motif: "geo", name: "Shape Calculator", year: 2023, kind: "Utility", status: "source",
-      pitch: "Compute the properties of shapes straight from their coordinates.",
+      pitch: "Give it the coordinates, get the shape's properties back.",
       stack: ["JavaScript"], links: { source: "https://github.com/InvokFung/ShapeCalculator" }
     },
     {
       id: "genius", tier: "experiment", motif: "dots", name: "genius", year: 2021, kind: "Experiment", status: "source",
-      pitch: "A playful little web experiment from the early days.",
+      pitch: "One of my first web experiments, from back when the browser was a toy box.",
       stack: ["HTML", "CSS", "JavaScript"], links: { source: "https://github.com/InvokFung/genius" }
     }
   ],
