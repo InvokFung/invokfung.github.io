@@ -14,7 +14,7 @@ window.PORTFOLIO = {
     handle: "InvokFung",
     role: "Forward Deployed Engineer",
     // [title, from], oldest first; the last one is the current role
-    career: [["Software Engineer", 2024], ["Forward Deployed Engineer", 2026]],
+    career: [["Web Developer", 2023], ["Full Stack Engineer", 2024], ["Software Engineer", 2025], ["Forward Deployed Engineer", 2026]],
     status: "open to FDE and engineering roles",
     tagline: "I tune software the way I tune a violin: by ear, beside the people who play it, then to the cent.",
     email: "aflung10@gmail.com",
@@ -33,7 +33,7 @@ window.PORTFOLIO = {
   // The whoami() statement. Each {token} opens the evidence in `traits`, in the same order.
   statement: "I'm Alan, a Forward Deployed Engineer. I {go where the problem lives}, {ship the whole stack} and {put a number on everything}. Off the clock I {learn the maths underneath}, {write it all down} and {pick up the violin}, which is how a pitch detector ended up on this page.",
   traits: [
-    { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "Software engineer from 2024, Forward Deployed Engineer since 2026. The job is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
+    { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "Web developer in 2023, full-stack engineer in 2024, software engineer in 2025, Forward Deployed Engineer since 2026. The job now is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
     { k: "ship the whole stack", n: "10", unit: "shipped", text: "From a three-tier 3D reconstruction system (web client, Node API, Python backend) to a search engine, a pitch detector and a 3D-printing slicer that run entirely in your browser, plus a multiplayer server load-tested to 1,000 clients.", link: "#work", linkText: "see the work ↓" },
     { k: "put a number on everything", n: "85%", unit: "hit@1", text: "Every flagship ships with its benchmark. Atlas puts the right post first 85% of the time across 60 real questions. Studio's pitch detector is off by at most 0.17 cents on clean tones. Layerline's C++ core runs a median 8× faster than the same algorithm in TypeScript, and its output matches the native build byte for byte.", link: "/atlas/", linkText: "try Atlas →" },
     { k: "learn the maths underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. Not for show: Atlas runs on a randomized SVD and an eigensolver I wrote myself, and Layerline does its geometry on exact integers." },
@@ -127,22 +127,22 @@ window.PORTFOLIO = {
       events: [["2022-05", "git init invokfung.github.io"], ["2022-05", "Data structures in C++, Java, networking"]]
     },
     {
-      id: "2023", label: "2023", title: "Shipping small things", role: "Builder",
-      text: "Ideas started turning into things other people could click: a memory game that pays you for speed, a focus timer, a calculator that reads shapes from their coordinates.",
+      id: "2023", label: "2023", title: "Shipping small things", role: "Web developer",
+      text: "My first title: web developer. Ideas started turning into things other people could click: a memory game that pays you for speed, a focus timer, a calculator that reads shapes from their coordinates.",
       picked: ["DOM", "Game logic", "Responsive UI"], projects: ["triplefind", "chilltimer", "shapecalc"],
-      events: [["2023-02", "TripleFind goes live"], ["2023-03", "First version of ChillTimer"], ["2023-06", "Shape Calculator"]]
+      events: [["2023", "Start as a web developer"], ["2023-02", "TripleFind goes live"], ["2023-03", "First version of ChillTimer"], ["2023-06", "Shape Calculator"]]
     },
     {
-      id: "2024", label: "2024", title: "Full stack, for real", role: "Software engineer",
-      text: "My final year project was a three-tier 3D reconstruction system: web client, Node API, Python backend. Then the title became a job: software engineer.",
+      id: "2024", label: "2024", title: "Full stack, for real", role: "Full-stack engineer",
+      text: "My final year project was a three-tier 3D reconstruction system: web client, Node API, Python backend. The day job went the same way, from the browser down to the server: full-stack engineer.",
       picked: ["Python", "Node.js", "REST APIs"], projects: ["reconstruction"],
-      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024", "Start as a software engineer"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
+      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024", "Become a full-stack engineer"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
     },
     {
       id: "2025", label: "2025", title: "Going below the surface", role: "Software engineer",
-      text: "A year of asking what's underneath: MongoDB from indexes to sharding, PostgreSQL internals, modern C++, Three.js shaders and instancing, linear algebra, then containers and AWS.",
+      text: "Software engineer, and a year of asking what's underneath: MongoDB from indexes to sharding, PostgreSQL internals, modern C++, Three.js shaders, linear algebra, then containers and AWS.",
       picked: ["TypeScript", "MongoDB", "PostgreSQL", "Three.js", "Docker"],
-      events: [["2025-03", "MongoDB: indexes, aggregation, sharding"], ["2025-06", "Three.js: PBR, instancing, GLSL shaders"], ["2025-09", "PostgreSQL: planner, MVCC, replication"], ["2025-11", "Containers from first principles"]]
+      events: [["2025", "Become a software engineer"], ["2025-03", "MongoDB: indexes, aggregation, sharding"], ["2025-06", "Three.js: PBR, instancing, GLSL shaders"], ["2025-09", "PostgreSQL: planner, MVCC, replication"], ["2025-11", "Containers from first principles"]]
     },
     {
       id: "2026", label: "2026", title: "Forward deployed", role: "Forward Deployed Engineer",
