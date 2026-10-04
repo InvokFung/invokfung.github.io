@@ -1,0 +1,3 @@
+node_modules/
+# written by `npm run data`; regenerate from the seed
+data/

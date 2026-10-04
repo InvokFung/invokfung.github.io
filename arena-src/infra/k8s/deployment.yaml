@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arena
+  namespace: triplefind-arena
+  labels:
+    app.kubernetes.io/name: arena
+    app.kubernetes.io/part-of: triplefind-arena
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: arena
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: arena
+        app.kubernetes.io/part-of: triplefind-arena
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8782"
+        prometheus.io/path: /metrics
+    spec:
+      # Live matches are in memory: give the pod time to drain (ARENA_DRAIN_MS) and let
+      # running matches finish or be abandoned and flushed before it is killed.
+      terminationGracePeriodSeconds: 45
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        seccompProfile:
+          type: RuntimeDefault
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/name: arena
+      containers:
+        - name: arena
+          image: ghcr.io/invokfung/triplefind-arena:0.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8782
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: arena-config
+            - secretRef:
+                name: arena-secrets
+          env:
+            - name: ARENA_INSTANCE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NODE_OPTIONS
+              value: --max-old-space-size=384
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              memory: 512Mi
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 2
+            failureThreshold: 30
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          readinessProbe:
+            # 503 while the event store is unreachable or the pod is draining.
+            httpGet:
+              path: /readyz
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 2
+            failureThreshold: 2
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir:
+            sizeLimit: 16Mi

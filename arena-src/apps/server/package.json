@@ -1,0 +1,23 @@
+{
+  "name": "@arena/server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Authoritative TripleFind Arena server: WebSockets, health/metrics, memory/file/MongoDB event stores.",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "node dist/server.mjs",
+    "build": "esbuild src/main.ts --bundle --platform=node --target=node22 --format=esm --sourcemap --outfile=dist/server.mjs --external:bufferutil --external:utf-8-validate --external:kerberos --external:snappy --external:@mongodb-js/zstd --external:@aws-sdk/credential-providers --external:gcp-metadata --external:mongodb-client-encryption --external:socks --external:aws4 --banner:js=\"import{createRequire as __cr}from'node:module';const require=__cr(import.meta.url);\""
+  },
+  "dependencies": {
+    "@arena/core": "0.1.0",
+    "@arena/engine": "0.1.0",
+    "@arena/protocol": "0.1.0",
+    "mongodb": "^7.7.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.2",
+    "esbuild": "^0.28.2"
+  }
+}

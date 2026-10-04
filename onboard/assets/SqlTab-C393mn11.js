@@ -1,0 +1,21 @@
+import{a as e,d as t,f as n,l as r,o as i,p as a,t as o}from"./jsx-runtime-erfK5mqW.js";var s=a(),c=o(),l=[{label:`Customers by country`,sql:`SELECT country, COUNT(*) AS customers, ROUND(AVG(balance_eur), 2) AS avg_balance
+FROM customers
+GROUP BY country
+ORDER BY customers DESC`},{label:`Seen in all three systems`,sql:`SELECT golden_id, first_name, last_name, records
+FROM customers
+WHERE sources = 'crm+billing+support'
+ORDER BY records DESC, last_name
+LIMIT 20`},{label:`Pairs by decision`,sql:`SELECT status, COUNT(*) AS pairs, ROUND(MIN(probability), 4) AS lowest, ROUND(MAX(probability), 4) AS highest
+FROM pairs
+GROUP BY status
+ORDER BY pairs DESC`},{label:`Records per customer`,sql:`SELECT records, COUNT(*) AS customers
+FROM customers
+GROUP BY records
+ORDER BY records`},{label:`Quarantined records`,sql:`SELECT source, line, first_name, last_name, quarantined
+FROM records
+WHERE quarantined IS NOT NULL
+ORDER BY source, line`},{label:`Biggest balances`,sql:`SELECT golden_id, first_name || ' ' || last_name AS name, company, balance_eur
+FROM customers
+WHERE balance_eur IS NOT NULL
+ORDER BY balance_eur DESC
+LIMIT 10`}];function u(){let a=t(),o=n({type:`sqlSchema`}),[u,d]=(0,s.useState)(l[0].sql),[f,p]=(0,s.useState)(null),[m,h]=(0,s.useState)(null),[g,_]=(0,s.useState)(!1),v=(0,s.useCallback)(async(e=u)=>{_(!0);try{p(await r.call({type:`sql`,query:e})),h(null)}catch(e){h(e.message),p(null)}finally{_(!1)}},[u]);return(0,s.useEffect)(()=>{v()},[a.version]),(0,c.jsxs)(`div`,{className:`tab-body`,children:[(0,c.jsxs)(`p`,{className:`tab-intro`,children:[`A small SQL engine written for this page (tokenizer, recursive-descent parser, executor): `,(0,c.jsx)(`code`,{children:`SELECT`}),`, `,(0,c.jsx)(`code`,{children:`WHERE`}),`, `,(0,c.jsx)(`code`,{children:`GROUP BY`}),`, `,(0,c.jsx)(`code`,{children:`HAVING`}),`, `,(0,c.jsx)(`code`,{children:`ORDER BY`}),`, `,(0,c.jsx)(`code`,{children:`LIMIT`}),`, aggregates, `,(0,c.jsx)(`code`,{children:`CASE`}),`, `,(0,c.jsx)(`code`,{children:`LIKE`}),`, `,(0,c.jsx)(`code`,{children:`IN`}),`, `,(0,c.jsx)(`code`,{children:`BETWEEN`}),`. It reads the session’s live tables, so a review decision changes the answer. `,(0,c.jsx)(`kbd`,{children:`Ctrl`}),`+`,(0,c.jsx)(`kbd`,{children:`Enter`}),` runs.`]}),(0,c.jsxs)(`div`,{className:`sql-grid`,children:[(0,c.jsxs)(`div`,{children:[(0,c.jsx)(`div`,{className:`chips small`,children:l.map(e=>(0,c.jsx)(`button`,{className:`chip`,onClick:()=>{d(e.sql),v(e.sql)},children:e.label},e.label))}),(0,c.jsx)(`textarea`,{className:`sql-input mono`,value:u,spellCheck:!1,"aria-label":`SQL query`,rows:6,onChange:e=>d(e.target.value),onKeyDown:e=>{(e.ctrlKey||e.metaKey)&&e.key===`Enter`&&(e.preventDefault(),v())}}),(0,c.jsxs)(`div`,{className:`export-row`,children:[(0,c.jsx)(`button`,{className:`btn small`,onClick:()=>void v(),disabled:g,children:`Run`}),f&&(0,c.jsxs)(`span`,{className:`muted small mono`,children:[e(f.total),` row`,f.total===1?``:`s`,f.total>f.rows.length?`, first ${f.rows.length} shown`:``,` · `,e(f.scanned),` scanned · `,i(f.ms)]})]}),m&&(0,c.jsx)(`p`,{className:`sql-err mono`,children:m})]}),(0,c.jsxs)(`aside`,{className:`schema`,children:[(0,c.jsx)(`h4`,{className:`label`,children:`Tables`}),o.data?.tables.map(t=>(0,c.jsxs)(`details`,{children:[(0,c.jsxs)(`summary`,{children:[(0,c.jsx)(`b`,{className:`mono`,children:t.name}),` `,(0,c.jsxs)(`span`,{className:`muted small`,children:[e(t.rows),` rows`]})]}),(0,c.jsx)(`p`,{className:`muted small`,children:t.description}),(0,c.jsx)(`p`,{className:`mono small cols`,children:t.columns.join(`, `)})]},t.name))]})]}),f&&(0,c.jsx)(`div`,{className:`scroll-x`,tabIndex:0,role:`region`,"aria-label":`Query result`,children:(0,c.jsxs)(`table`,{className:`data`,children:[(0,c.jsx)(`thead`,{children:(0,c.jsx)(`tr`,{children:f.columns.map((e,t)=>(0,c.jsx)(`th`,{children:e},t))})}),(0,c.jsx)(`tbody`,{children:f.rows.map((t,n)=>(0,c.jsx)(`tr`,{children:t.map((t,n)=>(0,c.jsx)(`td`,{className:`mono`,children:t===null?(0,c.jsx)(`span`,{className:`null`,children:`null`}):typeof t==`number`?Number.isInteger(t)?e(t):t.toFixed(4).replace(/0+$/,``):String(t)},n))},n))})]})})]})}export{u as default};

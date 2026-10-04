@@ -1,0 +1,61 @@
+# Local stack.
+#
+#   docker compose up --build                   server on :8782, events in a JSONL file (volume)
+#   docker compose --profile mongo up --build   + MongoDB, and a second server on :8783 that uses it
+#
+# Then open the client with ?server=ws://localhost:8782/ws (or :8783).
+name: triplefind-arena
+
+x-arena: &arena
+  build: .
+  image: triplefind-arena:local
+  restart: unless-stopped
+  stop_grace_period: 20s
+  environment: &arena-env
+    ARENA_SESSION_SECRET: ${ARENA_SESSION_SECRET:-dev-only-change-me}
+    # Comma-separated browser origins allowed to open a socket. Empty = any (dev only).
+    ARENA_ALLOWED_ORIGINS: ${ARENA_ALLOWED_ORIGINS:-}
+    ARENA_DRAIN_MS: "3000"
+    LOG_LEVEL: info
+
+services:
+  arena:
+    <<: *arena
+    ports: ["8782:8782"]
+    environment:
+      <<: *arena-env
+      ARENA_STORE: file
+      ARENA_FILE: /data/events.jsonl
+      ARENA_INSTANCE: arena-file
+    volumes:
+      - arena-data:/data
+
+  arena-mongo:
+    <<: *arena
+    profiles: [mongo]
+    ports: ["8783:8782"]
+    environment:
+      <<: *arena-env
+      ARENA_STORE: mongo
+      ARENA_MONGO_URL: mongodb://mongo:27017
+      ARENA_MONGO_DB: triplefind_arena
+      ARENA_INSTANCE: arena-mongo
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  mongo:
+    image: mongo:7
+    profiles: [mongo]
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  arena-data:
+  mongo-data:

@@ -1,0 +1,8 @@
+{
+  "name": "@arena/engine",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pure, deterministic TripleFind rules: seeded deck, match state machine, scoring, bots. No I/O.",
+  "exports": { ".": "./src/index.ts" }
+}

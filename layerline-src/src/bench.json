@@ -1,0 +1,54 @@
+{
+  "measuredAt": "2026-10-03",
+  "runtime": "Node 22.22.0 (V8 12.4.254.21-node.33)",
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "wasmBytes": 67582,
+  "layerHeight": 0.2,
+  "rows": [
+    {
+      "id": "cube",
+      "label": "Cube",
+      "triangles": 12,
+      "layers": 100,
+      "tsMs": 2.050764800000002,
+      "wasmMs": 0.06001597604790391,
+      "fullMs": 1.225074999999947
+    },
+    {
+      "id": "gear",
+      "label": "Gear",
+      "triangles": 3104,
+      "layers": 40,
+      "tsMs": 37.386580000000095,
+      "wasmMs": 4.409508666666625,
+      "fullMs": 21.113270000000057
+    },
+    {
+      "id": "torus",
+      "label": "Torus",
+      "triangles": 16384,
+      "layers": 70,
+      "tsMs": 27.287851000000046,
+      "wasmMs": 3.446920000000015,
+      "fullMs": 149.64553400000023
+    },
+    {
+      "id": "vase",
+      "label": "Vase",
+      "triangles": 92880,
+      "layers": 320,
+      "tsMs": 144.8625630000006,
+      "wasmMs": 17.904844000000594,
+      "fullMs": 208.35499199999958
+    },
+    {
+      "id": "torus-dense",
+      "label": "Dense torus",
+      "triangles": 262144,
+      "layers": 70,
+      "tsMs": 107.4083959999989,
+      "wasmMs": 20.015956999999617,
+      "fullMs": 159.06627500000104
+    }
+  ]
+}

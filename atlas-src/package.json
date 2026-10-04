@@ -1,0 +1,29 @@
+{
+  "name": "studylog-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "data": "tsx scripts/build-data.ts",
+    "eval": "tsx scripts/eval.ts",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "all": "npm run data && npm run eval && npm test && npm run build",
+    "kernel": "clang --target=wasm32 -O3 -msimd128 -fno-builtin -nostdlib -Wl,--no-entry -Wl,--export=__heap_base -o kernel/dot.wasm kernel/dot.c && node kernel/embed.mjs",
+    "test": "tsx scripts/test.ts"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "node-html-parser": "^9.0.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
+}

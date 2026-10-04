@@ -1,0 +1,9 @@
+{
+  "name": "@arena/protocol",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Typed wire protocol (discriminated unions) and runtime validation shared by server, worker and client.",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@arena/engine": "0.1.0" }
+}

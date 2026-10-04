@@ -1,0 +1,18 @@
+{
+  "name": "@relay/server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Node host for Relay: an Anthropic-compatible POST /v1/messages with SSE, Prometheus /metrics and /audit.",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "node dist/server.mjs",
+    "build": "esbuild src/main.ts --bundle --platform=node --target=node22 --format=esm --sourcemap --outfile=dist/server.mjs"
+  },
+  "dependencies": {
+    "@relay/core": "0.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
