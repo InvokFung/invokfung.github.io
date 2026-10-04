@@ -13,6 +13,7 @@ window.PORTFOLIO = {
     name: "Alan Fung",
     handle: "InvokFung",
     role: "Forward Deployed Engineer",
+    education: "Information Engineering",
     // [title, from], oldest first; the last one is the current role
     career: [["Web Developer", 2023], ["Full Stack Engineer", 2024], ["Software Engineer", 2025], ["Forward Deployed Engineer", 2026]],
     tagline: "I tune software the way I tune a violin: by ear, beside the people who play it, then to the cent.",
@@ -32,7 +33,7 @@ window.PORTFOLIO = {
   // The whoami() statement. Each {token} opens the evidence in `traits`, in the same order.
   statement: "I'm Alan, a Forward Deployed Engineer. I {go where the problem lives}, {ship the whole stack} and {put a number on everything}. Off the clock I {learn the maths underneath}, {write it all down} and {pick up the violin}, which is how a pitch detector ended up on this page.",
   traits: [
-    { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "Web developer in 2023, full-stack engineer in 2024, software engineer in 2025, Forward Deployed Engineer since 2026. The job now is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
+    { k: "go where the problem lives", n: "FDE", unit: "since 2026", text: "An Information Engineering degree, then web developer in 2023, full-stack engineer in 2024, software engineer in 2025 and Forward Deployed Engineer since 2026. The job now is to sit with the people who use the software, find out what they actually need, and build it into their world instead of a demo.", link: "#history", linkText: "see how I got here ↓" },
     { k: "ship the whole stack", n: "7", unit: "flagships", text: "An LLM gateway, a tracing system that finds the root cause and a customer-data pipeline, built the way I work with customers. Then a search engine, a pitch detector, a 3D-printing slicer and a multiplayer game server load-tested to 1,000 clients. Each one is live, the source is public, and the numbers are on the card.", link: "#work", linkText: "see the work ↓" },
     { k: "put a number on everything", n: "98.9%", unit: "root cause first", text: "Every flagship ships with its benchmark. Tracewise names the faulty service first in 98.9% of incidents across 200 injected faults; the best dashboard heuristic manages 66.1%. Relay keeps 99.98% of model calls succeeding through a simulated regional outage, against 68.6% unprotected. Onboard matches customers across three exports at 0.977 F1, where email alone scores 0.659.", link: "/tracewise/", linkText: "break something in Tracewise →" },
     { k: "learn the maths underneath", n: "24", unit: "maths notes", text: "Linear algebra, abstract algebra and real analysis. Not for show: Atlas runs on a randomized SVD and an eigensolver I wrote myself, and Layerline does its geometry on exact integers." },
@@ -78,14 +79,14 @@ window.PORTFOLIO = {
       ["Java", 2018, "My first repository: a Java group project"]
     ] },
     { group: "Frontend & graphics", items: [
-      ["React", 2026], ["Next.js", 2025],
+      ["React", 2023], ["Next.js", 2025],
       ["Vue", 2026, "4-part Vue series on StudyLog: reactivity internals, compiler, production"],
-      ["Three.js", 2025, "14-part Three.js course on StudyLog: PBR, instancing, shaders, physics"],
+      ["Three.js", 2024, "14-part Three.js course on StudyLog: PBR, instancing, shaders, physics"],
       ["GLSL", 2025, "Shaders and post-processing chapters of the Three.js course"],
       ["WebAssembly", 2026], ["Web Workers", 2026], ["Web Audio", 2026]
     ] },
     { group: "Backend & data", items: [
-      ["Node.js", 2024], ["WebSockets", 2026],
+      ["Node.js", 2024], ["WebSockets", 2024],
       ["Search & retrieval", 2026], ["LLM integration", 2026], ["Entity resolution", 2026], ["Data quality & PII", 2026],
       ["MongoDB", 2025, "30-part MongoDB course on StudyLog: indexes, sharding, change streams, CQRS"],
       ["PostgreSQL", 2025, "8-part PostgreSQL course on StudyLog: planner, MVCC, replication"]
@@ -96,10 +97,10 @@ window.PORTFOLIO = {
       ["AWS", 2025, "9-part AWS series on StudyLog: VPC, compute, serverless, observability"],
       ["Terraform", 2026, "Infrastructure as code chapter of the AWS series"],
       ["Networking", 2022, "Data communications and networking notes (2022), VPC design on AWS"],
-      ["Observability", 2026], ["Reliability engineering", 2026]
+      ["Observability", 2025], ["Reliability engineering", 2026]
     ] },
     { group: "Maths & making", items: [
-      ["Linear algebra", 2025], ["Statistics", 2026], ["Signal processing", 2026], ["Computational geometry", 2026],
+      ["Linear algebra", 2025], ["Statistics", 2022], ["Signal processing", 2020], ["Computational geometry", 2026],
       ["3D printing", 2026, "8-part 3D printing course on StudyLog: slicing, tolerances, functional parts"]
     ] }
   ],
@@ -107,6 +108,8 @@ window.PORTFOLIO = {
   /*
    * The history loop, oldest first. `picked` = skills that chapter added.
    * `events` also feed `git log` in the terminal.
+   * `built`: smaller things shipped that year, [name, link]; a null link marks one that never shipped.
+   * `grew`: [era id, where it started, project id], each flagship traced back to the chapter it grew from.
    */
   eras: [
     {
@@ -116,40 +119,51 @@ window.PORTFOLIO = {
       events: [["2018-11", "First repo: a Java group project"]]
     },
     {
-      id: "2020", label: "2020", title: "Taking things apart", role: "Tinkerer",
-      text: "Curiosity with a keyboard: serverless databases with FaunaDB, a chess board, and small experiments built to find out how things tick.",
-      picked: ["JavaScript", "Serverless DBs", "HTML/CSS"],
-      events: [["2020-09", "Experiments with serverless databases (FaunaDB)"], ["2020-11", "A chess board"]]
+      id: "2020", label: "2020", title: "Information Engineering", role: "University",
+      text: "I majored in Information Engineering: signals and systems, probability, networks, logic circuits. On the side, the browser was my toy box: a chess board, serverless databases on FaunaDB, an experiment called genius. The theory felt abstract then. Half my flagships run on it now.",
+      picked: ["JavaScript", "HTML/CSS", "Signal processing"],
+      built: [["genius", "https://github.com/InvokFung/genius"]],
+      events: [["2020", "Start Information Engineering"], ["2020-09", "Serverless databases with FaunaDB"], ["2020-11", "A chess board in the browser"], ["2021", "genius, an early web experiment"]]
     },
     {
-      id: "2022", label: "2022", title: "Foundations", role: "Computer science student",
-      text: "The proper groundwork: data structures in C++ and Java, networking, logic circuits. I put this site online and started StudyLog, because I only trust what I can explain.",
-      picked: ["C++", "Networking", "Logic circuits"], projects: ["studylog"],
-      events: [["2022-05", "git init invokfung.github.io"], ["2022-05", "Data structures in C++, Java, networking"]]
+      id: "2022", label: "2022", title: "Foundations, written down", role: "Information Engineering",
+      text: "The groundwork: data structures in C++ and Java, data communications, logic circuit design, statistics and probability. I put this site online and wrote up every course as I went, because I only trust what I can explain. Those notes became StudyLog.",
+      picked: ["C++", "Networking", "Statistics", "Logic circuits"], projects: ["studylog"],
+      events: [["2022-05", "git init invokfung.github.io"], ["2022-05", "Notes: networking, data structures, logic circuits"], ["2022-05", "Notes: statistics and probability models"]]
     },
     {
       id: "2023", label: "2023", title: "Shipping small things", role: "Web developer",
-      text: "My first title: web developer. Building interfaces for other people every day, and shipping TripleFind on the side: a timed memory game I would later rebuild as a multiplayer server.",
-      picked: ["DOM", "Game logic", "Responsive UI"], projects: ["arena"],
-      events: [["2023", "Start as a web developer"], ["2023-02", "TripleFind goes live"]]
+      text: "My first title: web developer. Interfaces for other people by day, small things of my own by night: TripleFind, a memory game against the clock, a pomodoro timer I actually used, a shape calculator. Small, finished and live turned out to be the habit that mattered.",
+      picked: ["React", "Responsive UI", "DOM", "Game logic"],
+      built: [["TripleFind", "/triplefind/"], ["Pomodoro timer", "/ptimer/"], ["Shape Calculator", "https://github.com/InvokFung/ShapeCalculator"]],
+      events: [["2023", "Start as a web developer"], ["2023-02", "TripleFind goes live"], ["2023-03", "A pomodoro timer, later ChillTimer"], ["2023", "Shape Calculator"]]
     },
     {
       id: "2024", label: "2024", title: "Full stack, for real", role: "Full-stack engineer",
-      text: "My final year project was a three-tier 3D reconstruction system: web client, Node API, Python backend. The day job went the same way, from the browser down to the server: full-stack engineer.",
-      picked: ["Python", "Node.js", "REST APIs"],
-      events: [["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024", "Become a full-stack engineer"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins"]]
+      text: "My final year project turned photos into 3D models across a web client, a Node API and a Python backend. Then I tried to build a web metaverse, a shared 3D world in the browser. It never shipped, and it showed me exactly where real-time 3D gets hard.",
+      picked: ["Node.js", "Python", "REST APIs", "Three.js", "WebSockets"],
+      built: [["3D Reconstruction", "https://github.com/InvokFung/3dreconstruction"], ["Web metaverse", null]],
+      events: [["2024", "Become a full-stack engineer"], ["2024-02", "Ship 3D Reconstruction, my final year project"], ["2024", "Try to build a web metaverse"], ["2024-09", "Browser automation with Puppeteer"], ["2024-12", "Python series begins on StudyLog"]]
     },
     {
       id: "2025", label: "2025", title: "Going below the surface", role: "Software engineer",
-      text: "Software engineer, and a year of asking what's underneath: MongoDB from indexes to sharding, PostgreSQL internals, modern C++, Three.js shaders, linear algebra, then containers and AWS.",
-      picked: ["TypeScript", "MongoDB", "PostgreSQL", "Three.js", "Docker"],
-      events: [["2025", "Become a software engineer"], ["2025-03", "MongoDB: indexes, aggregation, sharding"], ["2025-06", "Three.js: PBR, instancing, GLSL shaders"], ["2025-09", "PostgreSQL: planner, MVCC, replication"], ["2025-11", "Containers from first principles"]]
+      text: "Software engineer, and a year of asking what's underneath: a 30-part MongoDB course from indexes to sharding, modern C++, Three.js down to the shaders, linear algebra up to the SVD, PostgreSQL internals, then containers from first principles. 86 notes in one year, and most of them ended up inside something I built.",
+      picked: ["TypeScript", "MongoDB", "PostgreSQL", "GLSL", "Linear algebra", "Docker", "Observability"],
+      events: [["2025", "Become a software engineer"], ["2025-02", "Modern C++ series begins"], ["2025-03", "MongoDB: indexes, aggregation, sharding"], ["2025-05", "Linear algebra, all the way to the SVD"], ["2025-06", "Three.js: PBR, instancing, GLSL shaders"], ["2025-08", "OpenTelemetry and observability"], ["2025-09", "PostgreSQL: planner, MVCC, replication"], ["2025-11", "Containers from first principles"]]
     },
     {
       id: "2026", label: "2026", title: "Forward deployed", role: "Forward Deployed Engineer",
-      text: "I became a Forward Deployed Engineer: closer to the people using the software, and on the hook for what happens after the demo. Off the clock, the flagships on this page, each one a question answered with numbers.",
-      picked: ["LLM integration", "Reliability engineering", "Observability", "Entity resolution", "Data quality & PII", "Statistics", "Kubernetes", "Terraform", "React", "WebAssembly", "Search & retrieval", "Signal processing", "WebSockets", "Computational geometry", "Web Workers"], projects: ["relay", "tracewise", "onboard", "atlas", "intonation", "arena", "layerline"],
-      events: [["2026", "Become a Forward Deployed Engineer"], ["2026-01", "Kubernetes, AWS at scale, Terraform"], ["2026-10", "Ship Relay, Tracewise and Onboard"], ["2026-10", "Ship Atlas, Studio, Arena and Layerline"], ["2026-10", "Rebuild this site as an instrument"]]
+      text: "I became a Forward Deployed Engineer: closer to the people using the software, and on the hook for what happens after the demo. The studying followed the job: AWS and Kubernetes at scale, Terraform, how JavaScript and React really run, and how LLMs work under the hood.",
+      picked: ["Kubernetes", "Terraform", "LLM integration", "Reliability engineering", "Vue", "3D printing"],
+      events: [["2026", "Become a Forward Deployed Engineer"], ["2026-01", "AWS at scale and Kubernetes"], ["2026-03", "Terraform, and React's rendering model"], ["2026-04", "3D printing, from slicing to strong parts"], ["2026-04", "Rebuild the pomodoro timer as ChillTimer"], ["2026-08", "How LLMs work, and coding with agents"], ["2026-09", "RAG from scratch"]]
+    },
+    {
+      id: "now", label: "now", title: "The sequels", role: "Seven flagships",
+      text: "Every flagship is the sequel to an earlier chapter; pick a year below to jump back to it. Relay, Tracewise and Onboard take on the problems a Forward Deployed Engineer meets every week. The other four pick up threads from university and my first jobs.",
+      picked: ["WebAssembly", "Web Workers", "Web Audio", "Search & retrieval", "Computational geometry", "Entity resolution", "Data quality & PII"],
+      projects: ["relay", "tracewise", "onboard", "atlas", "intonation", "arena", "layerline"],
+      grew: [["2026", "How LLMs work", "relay"], ["2025", "OpenTelemetry notes", "tracewise"], ["2022", "Probability models", "onboard"], ["2022", "StudyLog", "atlas"], ["2020", "Signals and systems", "intonation"], ["2023", "TripleFind", "arena"], ["2025", "Modern C++", "layerline"]],
+      events: [["2026-10", "Ship Relay, Tracewise and Onboard"], ["2026-10", "Ship Atlas, Studio, Arena and Layerline"], ["2026-10", "Rebuild this site as an instrument"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Still building",
@@ -300,6 +314,7 @@ window.PORTFOLIO = {
   writing: {
     total: 174,
     since: 2022,
+    byYear: { 2022: 10, 2024: 10, 2025: 86, 2026: 68 },
     latest: [
       { date: "2026-09-25", title: "Desk Health: Eye Strain, Posture, Movement and Setup", url: "/blog/2026/09/25/dev_24_desk_health/" },
       { date: "2026-09-20", title: "Design Docs and READMEs People Actually Read", url: "/blog/2026/09/20/dev_22_design_docs_readmes/" },

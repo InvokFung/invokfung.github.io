@@ -401,8 +401,14 @@ em { font-style: italic; }
 .chap .events { list-style: none; margin-top: 20px; font: 400 12.5px/1.9 var(--mono); color: var(--mute); max-width: 52ch; }
 .chap .events b { color: var(--fg2); font-weight: 400; }
 .chap .ships { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.btn.unfinished { border-style: dashed; color: var(--mute); cursor: default; } .btn.unfinished:hover { border-color: var(--line2); }
+.chap .events.grew li { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 10px; }
+.chap .events.grew .yr { font: inherit; color: var(--acc-ink); text-decoration: underline dotted; text-underline-offset: 3px; cursor: pointer; }
+.chap .events.grew .yr:hover { color: var(--fg); }
+.chap .events.grew .to { color: var(--dim); }
+.chap .events.grew .lnk { font: inherit; color: var(--fg); border-bottom: 1px solid var(--line2); cursor: pointer; } .chap .events.grew .lnk:hover { border-color: var(--acc-ink); }
 .chap.fit1 { padding-top: calc(var(--nav-h) + 17vh); }
-.chap.fit2 .events, .chap.fit3 .picked { display: none; }
+.chap.fit2 .events:not(.grew), .chap.fit3 .picked { display: none; }
 .chap.fit4 h3 { font-size: clamp(30px, 4vw, 48px); margin-bottom: 10px; }
 .chap .close-brace { position: absolute; right: 12%; top: 50%; font: 400 clamp(120px, 16vw, 240px)/1 var(--mono); color: var(--line2); translate: 0 -50%; }
 .rail { position: absolute; z-index: 3; left: calc(var(--gx) + var(--gap)); right: var(--pr); bottom: 26px; display: flex; align-items: center; gap: 0; }
@@ -628,6 +634,7 @@ em { font-style: italic; }
   .chap { width: 88vw; padding: calc(var(--nav-h) + 19vh) 22px 15vh calc(var(--gx) + var(--gap)); }
   .chap h3 { font-size: clamp(34px, 9vw, 48px); }
   .chap .events { display: none; }
+  .chap .events.grew { display: block; }
   .chap .big { font-size: 44vw; bottom: 12vh; }
   .stage-top { flex-direction: column; gap: 4px; }
   .counters { justify-content: flex-start; gap: 12px; }

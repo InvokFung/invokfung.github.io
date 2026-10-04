@@ -63,7 +63,6 @@
   const byId = (id) => PROJ.find((p) => p.id === id || p.name.toLowerCase() === String(id).toLowerCase());
   const NOW = new Date().getFullYear();
   const eraYear = (e) => parseInt(e.id, 10) || NOW + 1;
-  const shipped = PROJ.filter((p) => p.status !== "wip");
   const WIP = FLAG.filter((p) => p.status === "wip");
   // section headings live in data.js; {placeholders} are filled here
   const SEC = D.sections || {};
@@ -123,11 +122,27 @@
       <h3>${esc(e.title)}</h3>
       <p class="t">${esc(e.text)}</p>
       ${e.picked.length ? `<div class="picked">${e.picked.map((p) => `<span>+ ${esc(p)}</span>`).join("")}</div>` : ""}
-      <ul class="events">${e.events.map(([d, t]) => `<li><b>${esc(d)}</b> ${esc(t)}</li>`).join("")}</ul>
-      ${e.projects ? `<div class="ships">${e.projects.map((id) => byId(id)).filter(Boolean).map((p) => `<button type="button" class="btn sm ghost" data-case="${p.id}">${esc(p.name)} <span class="arr">↗</span></button>`).join("")}</div>` : ""}
+      ${e.grew
+        ? `<ul class="events grew">${e.grew.map(([y, from, id]) => byId(id) && `<li><button type="button" class="yr" data-goto="${esc(y)}">${esc(y)}</button><span>${esc(from)} <span class="to">→</span> <button type="button" class="lnk" data-case="${id}">${esc(byId(id).name)}</button></span></li>`).filter(Boolean).join("")}</ul>`
+        : `<ul class="events">${e.events.map(([d, t]) => `<li><b>${esc(d)}</b> ${esc(t)}</li>`).join("")}</ul>`}
+      ${shipsHTML(e)}
       ${last ? `<div class="close-brace" aria-hidden="true">}</div>` : ""}
     </article>`;
   }
+
+  // the chapter's pills: its projects (unless `grew` already links them) and the smaller things it shipped
+  function shipsHTML(e) {
+    const traced = new Set((e.grew || []).map((g) => g[2]));
+    const projs = (e.projects || []).map((id) => byId(id)).filter((p) => p && !traced.has(p.id))
+      .map((p) => `<button type="button" class="btn sm ghost" data-case="${p.id}">${esc(p.name)} <span class="arr">↗</span></button>`);
+    const built = (e.built || []).map(([n, href]) => href
+      ? `<a class="btn sm ghost" href="${esc(href)}"${/^https?:/.test(href) ? ' target="_blank" rel="noopener"' : ""}>${esc(n)} <span class="arr">↗</span></a>`
+      : `<span class="btn sm ghost unfinished" title="never shipped">${esc(n)} · unfinished</span>`);
+    return projs.length + built.length ? `<div class="ships">${projs.concat(built).join("")}</div>` : "";
+  }
+  // things shipped up to and including chapter i: its live projects plus the built items that have a link
+  const shippedBy = (i) => ERAS.slice(0, i + 1).reduce((n, e) => n + (e.projects || []).filter((id) => byId(id) && byId(id).status !== "wip").length + (e.built || []).filter((b) => b[1]).length, 0);
+  const notesBy = (y) => Object.entries(D.writing.byYear || {}).reduce((n, [k, v]) => n + (+k <= y ? v : 0), 0);
 
   function progress(p) {
     if (!p.milestones) return "";
@@ -199,6 +214,7 @@
         <div class="rv">${P.about.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
         <div class="imports rv"><span class="kw">export const</span> alan = {
           <div class="kv"><span>role:</span> <span class="s">"${esc(P.role)}"</span>,</div>
+          ${P.education ? `<div class="kv"><span>studied:</span> <span class="s">"${esc(P.education)}"</span>,</div>` : ""}
           <div class="kv"><span>since:</span> <span class="n">${P.career ? P.career[0][1] : P.firstCommit}</span>,</div>
           <div class="kv"><span>focus:</span> [${P.focus.map((f) => `<span class="s">"${esc(f)}"</span>`).join(", ")}],</div>
           <div class="kv"><span>${WIP.length ? "building" : "shipped"}:</span> [${(WIP.length ? WIP : FLAG).map((p) => `<button type="button" class="s lnk" data-case="${p.id}">"${esc(p.name)}"</button>`).join(", ")}],</div>
@@ -240,7 +256,7 @@
         <p class="lede rv">${secLede("history", "{chapters} chapters, from my first commit to what's next.")}</p>
       </div>
       <div class="pin" id="pin"><div class="stage" id="stage">
-        <div class="stage-top"><span><span class="kw">for</span> (const year <span class="kw">of</span> alan.life) { <b id="loop-year"></b></span><span class="counters">skills <b id="c-skills">0</b> shipped <b id="c-ship">0</b> years <b id="c-years">0</b></span></div>
+        <div class="stage-top"><span><span class="kw">for</span> (const year <span class="kw">of</span> alan.life) { <b id="loop-year"></b></span><span class="counters">skills <b id="c-skills">0</b> shipped <b id="c-ship">0</b> notes <b id="c-notes">0</b> years <b id="c-years">0</b></span></div>
         <div class="track" id="track"><svg class="loop-thread" id="loop-thread" aria-hidden="true"></svg>${ERAS.map(chap).join("")}</div>
         <div class="rail" id="rail" role="tablist" aria-label="Jump to a year"><span class="fill" id="rail-fill"></span>${ERAS.map((e, i) => `<button type="button" role="tab" data-i="${i}"><span>${esc(e.label)}</span></button>`).join("")}</div>
       </div></div>
@@ -726,7 +742,8 @@
       railBtns.forEach((b, i) => { b.classList.toggle("on", i === a); b.classList.toggle("past", i < a); b.setAttribute("aria-selected", String(i === a)); });
       const e = ERAS[a];
       setNum($("#c-skills"), SK.filter((x) => x.since <= eraYear(e)).length);
-      setNum($("#c-ship"), shipped.filter((p) => p.year <= eraYear(e)).length);
+      setNum($("#c-ship"), shippedBy(a));
+      setNum($("#c-notes"), notesBy(eraYear(e)));
       setNum($("#c-years"), Math.min(eraYear(e), NOW) - P.firstCommit);
       $("#loop-year").textContent = `// ${e.label}: ${e.title}`;
       plinkYear(a);
@@ -748,6 +765,7 @@
     window.scrollTo({ top: docStart + p * dist + 2, behavior: state.motion ? "smooth" : "auto" });
   }
   railBtns.forEach((b) => b.addEventListener("click", () => goChapter(+b.dataset.i)));
+  $$("[data-goto]", track).forEach((b) => b.addEventListener("click", () => goChapter(ERAS.findIndex((e) => e.id === b.dataset.goto))));
 
   /* ------------------------------------------------------------ fork lanes */
 
