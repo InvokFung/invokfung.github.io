@@ -97,8 +97,9 @@
       if (w === this.w && h === this.h) return;
       this.w = w;
       this.h = h;
-      this.s = clamp(Math.min(w / 960, h / 600), 0.4, 1.45);
       this.tall = h > w * 1.05;
+      // a tall box is read at its own proportions, not as a squashed wide one
+      this.s = clamp(this.tall ? Math.min(w / 640, h / 880) : Math.min(w / 960, h / 600), 0.4, 1.45);
       this.L = null;
     }
     step(dt) { this.t += dt; }

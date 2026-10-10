@@ -310,7 +310,7 @@ window.PORTFOLIO = {
     atlas: { tag: ["85%", "right first time, no server"], line: "Ask my notes anything. The search runs here, on your device.", proof: "The full Atlas searches 5,551 passages, gets 85% right first time and answers in about half a millisecond." },
     intonation: { tag: ["0.17¢", "worst error"], line: "Detune the string. The detector still hears it to a fraction of a cent.", proof: "The real detector's worst error on clean tones is 0.17 cents, with no octave slips in 182 noisy ones." },
     arena: { tag: ["1,000", "clients load tested"], line: "Three bots race on one board. Drag back through the log to replay any flip.", proof: "Load tested to 1,000 clients at 2.7 ms p99 per flip, and every match is an event log." },
-    layerline: { tag: ["66 KB", "of WebAssembly"], line: "Drag the plane through the part. Each layer becomes walls, infill and a nozzle path.", proof: "The real slicer is 66 KB of WebAssembly and slices a full gear in 21 ms, 8× faster than TypeScript." },
+    layerline: { tag: ["66 KB", "of WebAssembly"], line: "Slide through the part. Each layer becomes walls, infill and a nozzle path.", proof: "The real slicer is 66 KB of WebAssembly and slices a full gear in 21 ms, 8× faster than TypeScript." },
     notes: { tag: ["174", "notes"], line: "Every note I've published, one square each. Click one to read it." }
   },
 

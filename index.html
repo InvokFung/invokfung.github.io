@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/assets/portfolio/live/live.css" />
 </head>
 <body>
-  <a class="skip" href="#list" id="skip">Skip the map and see everything as a list</a>
+  <a class="skip" href="#list" id="skip">See everything as a list</a>
   <h1 class="sr">Alan Fung, Forward Deployed Engineer. I go where the software breaks.</h1>
 
   <canvas id="map" aria-hidden="true"></canvas>
@@ -38,18 +38,14 @@
     </div>
   </header>
 
-  <div class="hud bottom">
-    <div class="where">
-      <canvas id="mini" aria-label="Overview of the map. Click to move there." role="img"></canvas>
-      <p class="hint">drag to move · scroll to zoom · <kbd>L</kbd> for a list</p>
-    </div>
-    <button type="button" class="nudge" id="nudge">See all seven <span aria-hidden="true">⊖</span></button>
-    <div class="zoom" role="group" aria-label="Zoom">
-      <button type="button" id="z-out" aria-label="Zoom out">−</button>
-      <button type="button" id="z-fit" aria-label="Show the whole map">all</button>
-      <button type="button" id="z-in" aria-label="Zoom in">+</button>
-    </div>
-  </div>
+  <aside class="panel" id="panel" aria-label="What you are looking at">
+    <div class="pn-body" id="pn-body" aria-live="polite"></div>
+    <nav class="pn-nav" aria-label="The tour">
+      <button type="button" class="pn-prev" id="pn-prev" aria-label="Back">←</button>
+      <div class="rail-w"><ol class="rail" id="rail"></ol><i class="pk" id="rail-pk" aria-hidden="true"></i></div>
+      <button type="button" class="pn-next" id="pn-next"><span id="pn-next-k">Next</span> <b id="pn-next-name"></b> <i aria-hidden="true">→</i></button>
+    </nav>
+  </aside>
 
   <div class="contact" id="contact" hidden>
     <a class="c-mail" href="#"></a>
@@ -65,38 +61,6 @@
     <ol class="list-path" id="list-path"></ol>
     <h3>Elsewhere</h3>
     <p class="list-more" id="list-more"></p>
-  </section>
-
-  <section class="page" id="page" aria-labelledby="pg-name" hidden>
-    <header class="pg-top">
-      <a class="pg-back" id="pg-back" href="#/"><span aria-hidden="true">←</span> map</a>
-      <p class="pg-crumb" aria-hidden="true"><span>map</span><i></i><b id="pg-crumb"></b></p>
-      <nav class="pg-nav" aria-label="Other projects">
-        <a id="pg-prev" href="#/" aria-label="Previous project">‹</a>
-        <span id="pg-count"></span>
-        <a id="pg-next" href="#/" aria-label="Next project">›</a>
-      </nav>
-    </header>
-    <div class="pg-body">
-      <div class="pg-fig" id="pg-fig"><canvas id="pg-cv"></canvas></div>
-      <div class="pg-side">
-        <p class="pg-kind" id="pg-kind"></p>
-        <h2 id="pg-name"></h2>
-        <p class="pg-q" id="pg-q"></p>
-        <p class="pg-line" id="pg-line"></p>
-        <input class="pg-query" id="pg-query" type="search" placeholder="Ask my notes something" aria-label="Search my notes" hidden />
-        <div class="pg-ctl">
-          <label for="pg-range" id="pg-label"></label>
-          <output id="pg-out" for="pg-range"></output>
-          <input type="range" id="pg-range" />
-        </div>
-        <dl class="pg-live" id="pg-live" aria-live="off"></dl>
-        <p class="pg-proof" id="pg-proof"></p>
-        <div class="pg-links" id="pg-links"></div>
-        <details class="pg-how"><summary>How it's built</summary><ol id="pg-how"></ol></details>
-        <p class="pg-share" id="pg-share"></p>
-      </div>
-    </div>
   </section>
 
   <p class="toast" id="toast" role="status" aria-live="polite"></p>

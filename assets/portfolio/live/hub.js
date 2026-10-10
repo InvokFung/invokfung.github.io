@@ -7,6 +7,11 @@
   "use strict";
   const { TAU, SANS, SERIF, INK, ink, rgba, font, fit, label, Fig } = root.FigKit;
 
+  function fitTo(ctx, t, max, px) {
+    font(ctx, px, 400, SERIF);
+    return fit(ctx, t, max);
+  }
+
   class Hub extends Fig {
     constructor(o) {
       super(o);
@@ -18,8 +23,9 @@
     lay() {
       if (this.L) return this.L;
       const { w, h } = this, L = {};
-      const x0 = w * 0.07, x1 = w * 0.93;
-      L.line = this.tall ? { x0: w * 0.12, x1: w * 0.12, y0: h * 0.42, y1: h * 0.9 } : { x0, x1, y0: h * 0.7, y1: h * 0.7 };
+      const ro = this.routeOnly, x0 = w * (ro ? 0.09 : 0.07), x1 = w * (ro ? 0.91 : 0.93);
+      if (ro) L.line = this.tall ? { x0: w * 0.14, x1: w * 0.14, y0: h * 0.08, y1: h * 0.8 } : { x0, x1, y0: h * 0.6, y1: h * 0.6 };
+      else L.line = this.tall ? { x0: w * 0.12, x1: w * 0.12, y0: h * 0.42, y1: h * 0.9 } : { x0, x1, y0: h * 0.7, y1: h * 0.7 };
       L.stops = this.stops.map((st, i) => {
         const k = i / (this.stops.length - 1);
         return this.tall ? [L.line.x0, L.line.y0 + k * (L.line.y1 - L.line.y0)] : [x0 + k * (x1 - x0), L.line.y0];
@@ -43,7 +49,14 @@
       return false;
     }
     draw(ctx) {
-      const L = this.lay(), { w, h, s } = this, c = this.color, p = this.p;
+      // on the last stop of the tour the panel says who I am, so the cell is just the route, bigger
+      const L = this.lay(), ro = this.routeOnly, s = this.s * (ro ? 1.35 : 1);
+      if (ro) this.links = [];
+      else this.drawName(ctx, s);
+      this.drawRoute(ctx, L, s, ro);
+    }
+    drawName(ctx, s) {
+      const { w, h } = this, c = this.color, p = this.p;
       ctx.textBaseline = "alphabetic";
       const nx = w * 0.07;
       const big = this.tall ? Math.min(w * 0.17, 96 * s) : 108 * s;
@@ -83,14 +96,16 @@
         this.links.push({ x: lx, y: ly, w: tw, h: 20 * s, href, t });
         lx += tw + 22 * s;
       });
-
-      // the route
+    }
+    drawRoute(ctx, L, s, ro) {
+      const { w, h } = this, c = this.color;
+      ctx.textBaseline = "middle";
       const Ln = L.line;
       ctx.strokeStyle = ink(0.22);
       ctx.lineWidth = 2 * s;
       ctx.beginPath(); ctx.moveTo(Ln.x0, Ln.y0); ctx.lineTo(Ln.x1, Ln.y1); ctx.stroke();
       ctx.lineWidth = 1;
-      const sel = this.hit >= 0 ? this.hit : this.pinned >= 0 ? this.pinned : -1;
+      const sel = this.hit >= 0 ? this.hit : this.pinned >= 0 ? this.pinned : ro ? this.stops.length - 1 : -1;
       L.stops.forEach(([sx, sy], i) => {
         const st = this.stops[i], last = i === this.stops.length - 1, on = sel === i;
         ctx.beginPath();
@@ -112,15 +127,26 @@
         } else {
           label(ctx, st.y, sx, sy - 20 * s, 11 * s, on || last ? c : ink(0.7), "center", 600);
           font(ctx, 9.5 * s, 400);
-          const words = st.r.split(" ");
-          const lines = words.length > 2 ? [words.slice(0, 2).join(" "), words.slice(2).join(" ")] : [st.r];
+          // wrap the role to the space between stops so neighbours never overlap
+          const room = (L.stops.length > 1 ? Math.abs(L.stops[1][0] - L.stops[0][0]) : w) * 0.92, lines = [];
+          for (const wd of st.r.split(" ")) {
+            const t = lines.length ? lines[lines.length - 1] + " " + wd : wd;
+            if (lines.length && ctx.measureText(t).width <= room) lines[lines.length - 1] = t;
+            else lines.push(wd);
+          }
           lines.forEach((t, j) => label(ctx, t, sx, sy + (18 + j * 13) * s, 9.5 * s, on ? INK : ink(0.5), "center"));
         }
       });
       if (sel >= 0) {
         const st = this.stops[sel];
-        const ty = this.tall ? h * 0.96 : Ln.y0 - 46 * s;
-        label(ctx, st.d, this.tall ? Ln.x0 : w / 2, ty, 12 * s, ink(0.8), this.tall ? "left" : "center", 400, SANS);
+        if (ro) {
+          const tx = this.tall ? Ln.x0 : w / 2, ty = this.tall ? h * 0.9 : h * 0.3, al = this.tall ? "left" : "center";
+          label(ctx, st.y + " · " + st.r, tx, ty - 24 * s, 10.5 * s, c, al, 600);
+          label(ctx, fitTo(ctx, st.d, w * 0.84, 17 * s), tx, ty + 4 * s, 17 * s, INK, al, 400, SERIF);
+        } else {
+          const ty = this.tall ? h * 0.96 : Ln.y0 - 46 * s;
+          label(ctx, st.d, this.tall ? Ln.x0 : w / 2, ty, 12 * s, ink(0.8), this.tall ? "left" : "center", 400, SANS);
+        }
       }
     }
   }
@@ -171,6 +197,10 @@
       if (this.hit < 0) return false;
       this.fx("open", this.notes[this.hit].url);
       return true;
+    }
+    stats() {
+      const series = new Set(this.notes.map((n) => n.series).filter(Boolean));
+      return [[String(this.notes.length), "notes"], [String(series.size), "series"], [this.notes.length ? String(this.notes[0].y) : "…", "first note"]];
     }
     draw(ctx) {
       const L = this.lay(), { w, h, s } = this, c = this.color;

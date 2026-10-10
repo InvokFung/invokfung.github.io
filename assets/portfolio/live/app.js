@@ -1,11 +1,11 @@
 /*
- * The home page is one map. Nine cells: my name and career in the middle, a live project in each
- * of the seven around it, and StudyLog below. You arrive zoomed in on Relay, already running.
+ * The home page is a guided tour of one map. Nine cells: my name and career in the middle, a live
+ * project in each of the seven around it, and StudyLog. The left column (the bottom sheet on a
+ * phone) says what you are looking at and what to try; the rest of the screen is one viewport.
  *
- * One canvas draws the map. Cells far away become dot-matrix sketches of their own figure and
- * decode when you point at them; close enough, the figure itself runs and takes your input.
- * Opening a project grows its cell into a page (View Transitions where the browser has them).
- * Every bit of feedback is the same thing: a request travelling along a trace.
+ * You start on the whole map, every cell a dot-matrix print of its own figure. Each step of the
+ * tour flies the camera to the next cell, which develops from dots into the live project and takes
+ * your input. Scroll, the arrow keys, a swipe or the Next button move the tour on.
  */
 (function () {
   "use strict";
@@ -15,6 +15,7 @@
   const BG = "#0a0b0d";
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const ext = (u) => /^https?:/.test(u);
+  const pad = (i) => String(i).padStart(2, "0");
 
   const motionQ = matchMedia("(prefers-reduced-motion: reduce)");
   let calm = motionQ.matches;
@@ -23,7 +24,8 @@
   /* ------------------------------------------------------------------ the nodes */
   const PROJ = Object.fromEntries(D.projects.map((p) => [p.id, p]));
   const FIG = { relay: F.Relay, tracewise: F.Tracewise, onboard: F.Onboard, atlas: F.Atlas, intonation: F.Studio, arena: F.Arena, layerline: F.Layerline };
-  const CELL = { intonation: [0, 0], atlas: [1, 0], onboard: [2, 0], arena: [0, 1], hub: [1, 1], relay: [2, 1], layerline: [0, 2], notes: [1, 2], tracewise: [2, 2] };
+  // a ring around the hub in tour order, so every step of the tour is a step to the next cell
+  const CELL = { relay: [2, 1], tracewise: [2, 2], onboard: [1, 2], atlas: [0, 2], intonation: [0, 1], arena: [0, 0], layerline: [1, 0], notes: [2, 0], hub: [1, 1] };
   const ORDER = ["relay", "tracewise", "onboard", "atlas", "intonation", "arena", "layerline"];
   const grew = Object.fromEntries((D.eras.find((e) => e.id === "now").grew || []).map(([y, from, id]) => [id, [y, from]]));
   grew.notes = ["2022", "Writing it all down"];
@@ -31,15 +33,15 @@
   const nodes = [];
   const byId = {};
   for (const [id, cell] of Object.entries(CELL)) {
-    const n = { id, cell, p: PROJ[id] || null, live: D.live[id] || null, dec: 0, hov: 0, snapAt: -1e9, scr: 0 };
+    const n = { id, cell, p: PROJ[id] || null, live: D.live[id] || null, dec: 0, dev: 1, alpha: 1, scr: 0, snapAt: -1e9 };
     const fx = (name, data) => onFx(n, name, data);
     if (id === "hub") { n.color = INK; n.fig = new F.Hub({ color: INK, profile: D.profile, path: D.path, fx }); n.name = D.profile.name; }
-    else if (id === "notes") { const s = PROJ.studylog; n.color = s.color; n.fig = new F.Notes({ color: s.color, fx }); n.name = "StudyLog"; n.kind = "Notes"; n.year = "since " + s.year; n.href = "/blog/"; }
+    else if (id === "notes") { const s = PROJ.studylog; n.color = s.color; n.fig = new F.Notes({ color: s.color, fx }); n.name = "StudyLog"; n.kind = "Notes"; n.year = "since " + s.year; }
     else { n.color = n.p.color; n.fig = new FIG[id]({ color: n.p.color, fx }); n.name = n.p.name; n.kind = n.p.kind; n.year = String(n.p.year); }
     nodes.push(n);
     byId[id] = n;
   }
-  const projects = ORDER.map((id) => byId[id]);
+  byId.atlas.fig.external = true; // its query box lives in the panel
 
   // links between projects: the distinctive skills two of them share
   const COMMON = new Set(["TypeScript", "React", "Vite", "JavaScript"]);
@@ -51,17 +53,42 @@
     if (sh.length) links.push({ a: byId[ORDER[i]], b: byId[ORDER[j]], skills: sh });
   }
 
-  /* ------------------------------------------------------------------ canvas and camera */
+  /* ------------------------------------------------------------------ the tour */
+  const STOPS = [
+    { id: "start", label: "Start" },
+    ...ORDER.map((id) => ({ id, n: byId[id], label: byId[id].name })),
+    { id: "notes", n: byId.notes, label: "StudyLog" },
+    { id: "about", n: byId.hub, label: "Path and contact" },
+  ];
+  const stopOf = (n) => STOPS.findIndex((s) => s.n === n);
+  const hashOf = (i) => (i ? "#/" + STOPS[i].id : "#/");
+  let cur = 0;
+  const focus = () => STOPS[cur].n || null;
+
+  /* ------------------------------------------------------------------ canvas, viewport, camera */
   const cv = $("#map"), ctx = cv.getContext("2d");
-  let W = 0, H = 0, DPR = 1, tall = false;
+  const root = document.documentElement.style;
+  let W = 0, H = 0, DPR = 1, tall = false, stacked = false, TOP = 76;
   let CW = 1200, CH = 800, NW = 1000, NH = 640;
+  const VR = { x: 0, y: 0, w: 1, h: 1 };
   const cam = { x: 0, y: 0, z: 1 };
   let flight = null;
-  const TOP = () => (W < 640 ? 64 : 76), BOT = () => (W < 640 ? 76 : 70);
 
   function layout() {
-    tall = H > W * 1.1;
-    if (tall) { CW = 760; CH = 1160; NW = 640; NH = 960; } else { CW = 1200; CH = 800; NW = 1000; NH = 640; }
+    TOP = W < 640 ? 60 : 76;
+    stacked = W < 960 || H > W;
+    if (stacked) {
+      VR.x = 8; VR.y = TOP; VR.w = W - 16; VR.h = Math.round((H - TOP) * (W < 640 ? 0.5 : 0.56));
+    } else {
+      const pw = Math.round(clamp(W * 0.32, 360, 480));
+      root.setProperty("--pw", pw + "px");
+      VR.x = pw + 8; VR.y = TOP; VR.w = W - VR.x - 32; VR.h = H - TOP - 32;
+    }
+    root.setProperty("--top", TOP + "px");
+    root.setProperty("--vb", VR.y + VR.h + "px");
+    document.body.classList.toggle("stacked", stacked);
+    tall = VR.h > VR.w * 0.9;
+    if (tall) { CW = 760; CH = 1010; NW = 640; NH = 820; } else { CW = 1200; CH = 800; NW = 1000; NH = 640; }
     for (const n of nodes) {
       const [c, r] = n.cell;
       const cx = (c - 1) * CW, cy = (r - 1) * CH;
@@ -69,33 +96,24 @@
       n.c = [cx, cy];
     }
   }
-  const fitZ = () => Math.min((W - 40) / (3 * CW), (H - TOP() - BOT()) / (3 * CH));
-  const focusZ = (n) => Math.min((W - (W < 640 ? 20 : 80)) / n.r.w, (H - TOP() - BOT() - (W < 640 ? 110 : 70)) / n.r.h);
-  const camFor = (n) => ({ x: n.c[0], y: n.c[1] + (W < 640 ? 14 : -24) / focusZ(n), z: focusZ(n) });
-  const midY = () => TOP() + (H - TOP() - BOT()) / 2;
-  const sx = (x) => (x - cam.x) * cam.z + W / 2;
-  const sy = (y) => (y - cam.y) * cam.z + midY();
-  const wx = (x) => (x - W / 2) / cam.z + cam.x;
-  const wy = (y) => (y - midY()) / cam.z + cam.y;
+  const zFocus = () => Math.min(VR.w / NW, VR.h / NH) * 0.98;
+  const zAll = () => Math.min(VR.w / (2 * CW + NW), VR.h / (2 * CH + NH + 70)) * 0.96;
+  const camAt = (i) => { const n = STOPS[i].n; return n ? { x: n.c[0], y: n.c[1], z: zFocus() } : { x: 0, y: -12 / zAll(), z: zAll() }; };
+  const vcx = () => VR.x + VR.w / 2, vcy = () => VR.y + VR.h / 2;
+  const sx = (x) => (x - cam.x) * cam.z + vcx();
+  const sy = (y) => (y - cam.y) * cam.z + vcy();
   const scr = (r) => ({ x: sx(r.x), y: sy(r.y), w: r.w * cam.z, h: r.h * cam.z });
-  const clampCam = () => {
-    cam.z = clamp(cam.z, fitZ() * 0.7, 2.2);
-    cam.x = clamp(cam.x, -1.6 * CW, 1.6 * CW);
-    cam.y = clamp(cam.y, -1.6 * CH, 1.6 * CH);
-  };
 
   function resize() {
-    const keep = W ? { x: cam.x, y: cam.y } : null;
     W = innerWidth;
     H = innerHeight;
     DPR = Math.min(2, devicePixelRatio || 1);
     cv.width = Math.round(W * DPR);
     cv.height = Math.round(H * DPR);
-    const wasTall = tall;
     layout();
-    if (!keep || wasTall !== tall) Object.assign(cam, camFor(focusNode || byId.relay));
-    clampCam();
-    mini.size();
+    flight = null;
+    Object.assign(cam, camAt(cur));
+    if (railReady) placeRail();
     wake();
   }
 
@@ -115,18 +133,15 @@
     f.S = S;
     return f;
   }
-  function fly(to, ms) {
-    to = { x: to.x, y: to.y, z: clamp(to.z, fitZ() * 0.7, 2.2) };
+  function fly(to) {
     if (calm) { Object.assign(cam, to); flight = null; wake(); return; }
-    const path = zoomPath([cam.x, cam.y, W / cam.z], [to.x, to.y, W / to.z]);
-    flight = { path, t0: performance.now(), ms: ms || clamp(path.S * 520, 480, 1300) };
+    const path = zoomPath([cam.x, cam.y, VR.w / cam.z], [to.x, to.y, VR.w / to.z]);
+    flight = { path, t0: performance.now(), ms: clamp(path.S * 560, 560, 1250) };
     wake();
   }
-  function flyTo(n) { focusNode = n; fly(camFor(n)); }
-  function flyAll() { focusNode = null; fly({ x: 0, y: 0, z: fitZ() }); }
 
   /* ------------------------------------------------------------------ the loop */
-  let raf = 0, last = performance.now(), now = 0, focusNode = byId.relay, hoverNode = null, hovered = false;
+  let raf = 0, last = performance.now(), now = 0, hoverNode = null, statT = 0;
   function wake() { if (!raf && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } }
   document.addEventListener("visibilitychange", () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; Sound.hush(); } else wake(); });
 
@@ -138,17 +153,13 @@
     if (flight) {
       const k = clamp((t - flight.t0) / flight.ms, 0, 1), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
       const [x, y, w] = flight.path(e);
-      cam.x = x; cam.y = y; cam.z = W / w;
+      cam.x = x; cam.y = y; cam.z = VR.w / w;
       if (k >= 1) flight = null;
     }
-    const speed = calm ? 0.5 : 1;
-    if (page) {
-      page.fig.step(dt * speed);
-      drawPage();
-    } else {
-      for (const n of nodes) if (n.vis || n === byId.relay) n.fig.step(dt * speed);
-      draw(dt);
-    }
+    const speed = calm ? 0.5 : 1, f = focus();
+    for (const n of nodes) if (n.vis || n === f) n.fig.step(dt * speed);
+    draw(dt);
+    if (now - statT > 250) { statT = now; panelStats(); }
     raf = requestAnimationFrame(frame);
   }
 
@@ -182,8 +193,12 @@
     const t = Math.min(tx, ty);
     return [from[0] + dx * t, from[1] + dy * t];
   }
-  function spokes(dt) {
+  let spokeA = 1;
+  function spokes(dt, f) {
     const hub = byId.hub;
+    // they belong to the whole map; on a stop they fade so nothing runs across the panel
+    spokeA += ((f && !flight ? 0 : 1) - spokeA) * (1 - Math.exp(-dt * 6));
+    if (spokeA < 0.02) return;
     ctx.lineWidth = 1;
     for (const sp of spokePk) {
       const n = sp.n;
@@ -191,9 +206,9 @@
       const A = [sx(a[0]), sy(a[1])], B = [sx(b[0]), sy(b[1])];
       const len = Math.hypot(B[0] - A[0], B[1] - A[1]);
       const hot = hoverNode === n || (yearPick && grew[n.id] && grew[n.id][0] === yearPick);
+      ctx.globalAlpha = spokeA;
       ctx.strokeStyle = hot ? rgba(n.color, 0.6) : ink(0.1);
       ctx.beginPath(); ctx.moveTo(A[0], A[1]); ctx.lineTo(B[0], B[1]); ctx.stroke();
-      // terminals
       ctx.fillStyle = hot ? n.color : ink(0.3);
       ctx.fillRect(A[0] - 2, A[1] - 2, 4, 4);
       ctx.fillRect(B[0] - 2, B[1] - 2, 4, 4);
@@ -202,22 +217,23 @@
         if (sp.acc <= 0) { sp.acc = 1 + Math.random(); sp.pk.push(0); }
         sp.pk = sp.pk.map((u) => u + (dt * 380) / Math.max(1, Math.hypot(b[0] - a[0], b[1] - a[1]))).filter((u) => u < 1);
         ctx.fillStyle = n.color;
+        const base = ctx.globalAlpha;
         for (const u of sp.pk) {
           for (let k = 3; k >= 0; k--) {
             const v = Math.max(0, u - k * 0.012);
-            ctx.globalAlpha = k ? 0.14 * (4 - k) : 1;
+            ctx.globalAlpha = base * (k ? 0.14 * (4 - k) : 1);
             ctx.beginPath();
             ctx.arc(A[0] + (B[0] - A[0]) * v, A[1] + (B[1] - A[1]) * v, k ? 1.6 : 2.4, 0, 7);
             ctx.fill();
           }
         }
-        ctx.globalAlpha = 1;
       }
+      ctx.globalAlpha = 1;
       const g = grew[n.id];
       const mx = (A[0] + B[0]) / 2, my = (A[1] + B[1]) / 2;
-      // labels fade out under the HUD bands so they never sit behind the name or the nav
-      const clear = Math.min(1, Math.max(0, (Math.min(my - 96, H - 96 - my, mx - 40, W - 40 - mx)) / 40));
-      if (g && len > 150 && clear > 0) {
+      // labels only inside the viewport, so they never sit behind the panel or the nav
+      const clear = clamp(Math.min(my - VR.y - 20, VR.y + VR.h - 20 - my, mx - VR.x - 20, VR.x + VR.w - 20 - mx) / 40, 0, 1);
+      if (g && len > 150 && clear > 0 && !f) {
         ctx.save();
         ctx.globalAlpha = clear;
         ctx.translate(mx, my);
@@ -232,7 +248,7 @@
 
   function skillLinks() {
     const n = hoverNode;
-    if (!n || !n.p || n.tier !== "dots") return;
+    if (!n || !n.p || focus()) return;
     ctx.setLineDash([4, 5]);
     for (const l of links) {
       if (l.a !== n && l.b !== n) continue;
@@ -259,16 +275,16 @@
     if (now - n.snapAt < every) return;
     n.snapAt = now;
     // small on purpose: at this size a 1px line still covers a fair share of each sample
-    const rw = tall ? 300 : 480, rh = tall ? 450 : 307;
+    const rw = tall ? 300 : 480, rh = tall ? 384 : 307;
     if (!n.off) { n.off = document.createElement("canvas"); n.octx = n.off.getContext("2d"); }
-    if (n.off.width !== rw) { n.off.width = rw; n.off.height = rh; }
+    if (n.off.width !== rw || n.off.height !== rh) { n.off.width = rw; n.off.height = rh; }
     const c = n.octx;
     c.setTransform(1, 0, 0, 1, 0, 0);
     c.fillStyle = BG;
     c.fillRect(0, 0, rw, rh);
     n.fig.size(rw, rh);
     n.fig.draw(c);
-    const cols = tall ? 50 : 80, rows = tall ? 75 : 51;
+    const cols = tall ? 50 : 80, rows = tall ? 64 : 51;
     sampler.width = cols;
     sampler.height = rows;
     sctx.drawImage(n.off, 0, 0, cols, rows);
@@ -276,14 +292,14 @@
     for (let i = 0; i < cols * rows; i++) lum[i] = Math.pow(Math.max(px[i * 4], px[i * 4 + 1], px[i * 4 + 2]) / 255, 0.55);
     n.dots = { cols, rows, lum };
   }
-  function matrix(n, R) {
+  function matrix(n, R, a) {
     const d = n.dots;
-    if (!d) return;
+    if (!d || a <= 0) return;
     const cw = R.w / d.cols, ch = R.h / d.rows, m = Math.min(cw, ch);
-    ctx.globalAlpha = 1 - n.dec;
     // every cell has a dot, like an unlit LED panel; the figure lights some of them
-    for (const [lo, hi, k, a] of [[0, 0.2, 0.22, 0.13], [0.2, 0.42, 0.36, 0.55], [0.42, 0.7, 0.56, 0.85], [0.7, 2, 0.78, 1]]) {
-      ctx.fillStyle = rgba(n.color === INK ? "#ecebe6" : n.color, a);
+    for (const [lo, hi, k, al] of [[0, 0.2, 0.22, 0.13], [0.2, 0.42, 0.36, 0.55], [0.42, 0.7, 0.56, 0.85], [0.7, 2, 0.78, 1]]) {
+      ctx.globalAlpha = a * al;
+      ctx.fillStyle = n.color === INK ? "#ecebe6" : n.color;
       ctx.beginPath();
       for (let j = 0; j < d.rows; j++) for (let i = 0; i < d.cols; i++) {
         const v = d.lum[j * d.cols + i];
@@ -304,42 +320,18 @@
     return out;
   }
 
-  function header(n, R, liveTier) {
+  // the name above a cell on the whole map; on a stop the panel carries it instead
+  function header(n, R) {
     if (n.id === "hub") return;
-    const gap = ((CH - NH) / 2) * cam.z;
-    const big = gap > 34;
-    const ny = R.y - (big ? Math.min(18, gap * 0.25) : 8);
-    const npx = clamp(cam.z * 30, 13, 30);
+    const npx = clamp(cam.z * 30, 12, 26);
+    const ny = R.y - (R.h > 200 ? 14 : 9);
     const name = n.scr > 0 && n.scr < 0.45 ? scramble(n.name, n.scr) : n.name;
     K.label(ctx, name, R.x, ny, npx, INK, "left", 400, SERIF);
-    if (!big) return;
-    K.font(ctx, npx, 400, SERIF);
-    const nw = ctx.measureText(n.name).width;
-    K.label(ctx, (n.kind + " · " + n.year).toUpperCase(), R.x + nw + 12, ny - 2, 10, ink(0.45), "left", 500, MONO);
-    if (liveTier && n.live) {
-      K.font(ctx, 13, 400, K.SANS);
-      const lw = ctx.measureText(n.live.line).width;
-      K.font(ctx, 10, 500, MONO);
-      const room = R.w - nw - 12 - ctx.measureText((n.kind + " · " + n.year).toUpperCase()).width - 28;
-      if (lw <= room) K.label(ctx, n.live.line, R.x + R.w, ny - 2, 13, rgba(n.color, 0.95), "right", 400, K.SANS);
-      else if (R.y + R.h / 2 > 0 && R.y + R.h / 2 < H) wrap(n.live.line, R.x, R.y + R.h + 22, R.w, 18, 13, rgba(n.color, 0.95));
-    } else if (n.live && R.w > 240) {
-      K.label(ctx, n.live.tag[1], R.x + R.w, ny - 1, 10, ink(0.45), "right", 400, MONO);
+    if (n.live && R.w > 230 && !focus()) {
+      K.label(ctx, n.live.tag[1], R.x + R.w, ny, 10, ink(0.45), "right", 400, MONO);
       K.font(ctx, 10, 400, MONO);
-      K.label(ctx, n.live.tag[0], R.x + R.w - ctx.measureText(n.live.tag[1]).width - 8, ny - 1, 12, n.color, "right", 600, MONO);
+      K.label(ctx, n.live.tag[0], R.x + R.w - ctx.measureText(n.live.tag[1]).width - 8, ny, 12, n.color, "right", 600, MONO);
     }
-  }
-
-  function wrap(text, x, y, max, lh, px, color) {
-    K.font(ctx, px, 400, K.SANS);
-    const words = text.split(" "), lines = [];
-    let cur = "";
-    for (const w of words) {
-      const t = cur ? cur + " " + w : w;
-      if (ctx.measureText(t).width > max && cur) { lines.push(cur); cur = w; } else cur = t;
-    }
-    if (cur) lines.push(cur);
-    lines.slice(0, 3).forEach((l, i) => K.label(ctx, l, x, y + i * lh, px, color, "left", 400, K.SANS));
   }
 
   function frameBox(n, R, hot) {
@@ -357,49 +349,60 @@
     ctx.lineWidth = 1;
   }
 
-  const LIVE_W = () => (W < 640 ? 300 : 600);
   function draw(dt) {
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     ctx.fillStyle = BG;
     ctx.fillRect(0, 0, W, H);
     if (intro.on) return drawIntro(dt);
     grid();
-    spokes(dt);
+    const f = focus();
+    spokes(dt, f);
     for (const n of nodes) {
       const R = scr(n.r);
       n.R = R;
+      // on a stop everything but the stop sinks back, so there is one thing to look at
+      const target = !f || n === f ? 1 : 0.14;
+      n.alpha += (target - n.alpha) * (1 - Math.exp(-dt * 7));
       n.vis = R.x < W && R.x + R.w > 0 && R.y < H && R.y + R.h > 0;
       if (!n.vis) continue;
-      const liveTier = R.w >= LIVE_W();
-      n.tier = liveTier ? "live" : "dots";
-      const hot = hoverNode === n;
+      const live = n === f && !flight;
+      n.tier = live ? "live" : "dots";
+      const hot = hoverNode === n && !live;
       n.dec = clamp(n.dec + (hot ? dt : -dt) / 0.3, 0, 1);
       if (hot) n.scr += dt; else n.scr = 0;
-      if (liveTier) {
+      const a = n.alpha;
+      if (live) {
+        // the cell develops from its dot print into the running figure
+        n.dev = calm ? 1 : Math.min(1, n.dev + dt / 0.5);
+        const e = 1 - Math.pow(1 - n.dev, 2);
         n.fig.size(R.w, R.h);
         ctx.save();
         ctx.beginPath();
         ctx.rect(R.x, R.y, R.w, R.h);
         ctx.clip();
         ctx.translate(R.x, R.y);
+        ctx.globalAlpha = e;
         n.fig.draw(ctx);
         ctx.restore();
+        ctx.globalAlpha = 1;
+        if (n.dev < 1) matrix(n, R, 1 - e);
       } else {
-        snap(n, n.dec > 0 ? 60 : 220);
-        if (n.dec < 1) matrix(n, R);
+        snap(n, n === f || n.dec > 0 ? 60 : 220);
+        if (n.dec < 1) matrix(n, R, a * (1 - n.dec));
         if (n.dec > 0 && n.off) {
-          ctx.globalAlpha = n.dec;
+          ctx.globalAlpha = a * n.dec;
           ctx.drawImage(n.off, R.x, R.y, R.w, R.h);
           ctx.globalAlpha = 1;
         }
       }
-      frameBox(n, R, hot);
-      header(n, R, liveTier);
+      ctx.globalAlpha = a;
+      frameBox(n, R, hot || n === f);
+      if (n !== f) header(n, R);
+      ctx.globalAlpha = 1;
     }
     skillLinks();
     if (introReveal < 1) revealMask(dt);
-    placeHits();
-    mini.draw();
+    if (!cur) placeHits();
   }
 
   /* ------------------------------------------------------------------ opening
@@ -410,15 +413,9 @@
   try { seen = sessionStorage.getItem("af.seen") === "1"; } catch (e) {}
   const intro = { on: !calm && !seen, t: 0, ready: false, ms: 0 };
   let introReveal = intro.on ? 0 : 1, revealAt = [0, 0];
-  function introTarget() {
-    const n = byId.relay, R = scr(n.r);
-    n.fig.size(R.w, R.h);
-    const L = n.fig.lay();
-    return [R.x + L.C[0], R.y + L.C[1]];
-  }
   function drawIntro(dt) {
     intro.t += dt;
-    const [tx, ty] = introTarget();
+    const tx = vcx(), ty = vcy();
     const p = intro.ready ? clamp(intro.t / 0.75, 0, 1) : Math.min(0.85, intro.t / 0.9);
     const x = tx * p;
     ctx.strokeStyle = ink(0.35);
@@ -466,9 +463,7 @@
   });
   if (!intro.on) document.body.classList.add("ready");
 
-  /* ------------------------------------------------------------------ pointer and keys */
-  const pts = new Map();
-  let drag = null, pinch = null, moved = 0, downNode = null, consumed = false;
+  /* ------------------------------------------------------------------ pointer, wheel, keys */
   function nodeAt(x, y) {
     for (const n of nodes) { const R = n.R; if (n.vis && R && x >= R.x && x <= R.x + R.w && y >= R.y && y <= R.y + R.h) return n; }
     return null;
@@ -478,136 +473,95 @@
     if (hoverNode && hoverNode.tier === "live") hoverNode.fig.leave();
     hoverNode = n;
   }
+  const go = (n) => (location.hash = hashOf(stopOf(n)));
+  let press = null;
   cv.addEventListener("pointerdown", (e) => {
     skipIntro();
-    cv.setPointerCapture(e.pointerId);
-    pts.set(e.pointerId, [e.clientX, e.clientY]);
-    moved = 0;
-    consumed = false;
-    flight = null;
-    if (pts.size === 2) {
-      const [a, b] = [...pts.values()];
-      pinch = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), z: cam.z, c: [wx((a[0] + b[0]) / 2), wy((a[1] + b[1]) / 2)] };
-      drag = null;
-      return;
-    }
-    drag = { x: e.clientX, y: e.clientY, cx: cam.x, cy: cam.y };
     const n = nodeAt(e.clientX, e.clientY);
-    downNode = n;
-    if (n && n.tier === "live" && n.fig.down(e.clientX - n.R.x, e.clientY - n.R.y)) { consumed = true; drag = null; }
+    press = { x: e.clientX, y: e.clientY, n, used: false };
+    if (n && n.tier === "live" && n.fig.down(e.clientX - n.R.x, e.clientY - n.R.y)) { press.used = true; n.fig.auto = false; syncSlider(); }
+    cv.setPointerCapture(e.pointerId);
   });
   cv.addEventListener("pointermove", (e) => {
-    if (pts.has(e.pointerId)) pts.set(e.pointerId, [e.clientX, e.clientY]);
-    if (pinch && pts.size === 2) {
-      const [a, b] = [...pts.values()];
-      const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
-      cam.z = clamp(pinch.z * (d / pinch.d), fitZ() * 0.7, 2.2);
-      const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
-      cam.x = pinch.c[0] - (mx - W / 2) / cam.z;
-      cam.y = pinch.c[1] - (my - midY()) / cam.z;
-      clampCam();
-      moved = 99;
-      touched();
-      return;
-    }
-    if (drag) {
-      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-      moved = Math.max(moved, Math.hypot(dx, dy));
-      if (moved > 5) {
-        cam.x = drag.cx - dx / cam.z;
-        cam.y = drag.cy - dy / cam.z;
-        clampCam();
-        cv.style.cursor = "grabbing";
-        touched();
-        return;
-      }
-    }
     const n = nodeAt(e.clientX, e.clientY);
     setHover(n);
-    let cur = n ? "pointer" : "grab";
-    if (n && n.tier === "live") cur = n.fig.move(e.clientX - n.R.x, e.clientY - n.R.y) || (n.id === "hub" ? "grab" : "pointer");
-    cv.style.cursor = cur;
+    let c = "default";
+    if (n && n.tier === "live") c = n.fig.move(e.clientX - n.R.x, e.clientY - n.R.y) || "default";
+    else if (n) c = "pointer";
+    cv.style.cursor = c;
   });
-  const end = (e) => {
-    pts.delete(e.pointerId);
-    if (pts.size < 2) pinch = null;
-    if (!drag && !consumed) return;
-    const wasDrag = moved > 5;
-    drag = null;
-    cv.style.cursor = "grab";
-    if (wasDrag || consumed || e.type === "pointercancel") return;
+  cv.addEventListener("pointerup", (e) => {
+    const p = press;
+    press = null;
+    if (!p || p.used) return;
+    const dx = e.clientX - p.x, dy = e.clientY - p.y;
+    // a sideways swipe moves the tour on, for fingers
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.4) return step(dx < 0 ? 1 : -1);
+    if (Math.hypot(dx, dy) > 8) return;
     const n = nodeAt(e.clientX, e.clientY);
-    if (!n || n !== downNode) return;
-    if (n.id === "hub") return;
-    if (n.id === "notes") { if (n.tier !== "live") flyTo(n); return; }
-    location.hash = "#/" + n.id;
-  };
-  cv.addEventListener("pointerup", end);
-  cv.addEventListener("pointercancel", end);
-  cv.addEventListener("pointerleave", () => { setHover(null); });
-  cv.addEventListener("wheel", (e) => {
+    if (n && n === p.n && n !== focus()) go(n);
+  });
+  cv.addEventListener("pointercancel", () => (press = null));
+  cv.addEventListener("pointerleave", () => setHover(null));
+
+  // one flick of the wheel or the trackpad is one step; its inertia is ignored until it settles
+  let wheelAcc = 0, wheelLock = 0, wheelLast = 0;
+  addEventListener("wheel", (e) => {
+    if (listOpen()) return;
+    const box = e.target.closest && e.target.closest(".pn-body");
+    if (box && box.scrollHeight > box.clientHeight + 2) {
+      const can = e.deltaY > 0 ? box.scrollTop + box.clientHeight < box.scrollHeight - 1 : box.scrollTop > 0;
+      if (can) return;
+    }
     e.preventDefault();
     skipIntro();
-    flight = null;
-    // a mouse wheel zooms; a trackpad's two-finger scroll pans and its pinch zooms
-    const pad = !e.ctrlKey && (Math.abs(e.deltaX) > 0.5 || (e.deltaMode === 0 && Math.abs(e.deltaY) < 50 && !Number.isInteger(e.deltaY)));
-    if (pad) { cam.x += e.deltaX / cam.z; cam.y += e.deltaY / cam.z; }
-    else {
-      const k = Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0018));
-      const bx = wx(e.clientX), by = wy(e.clientY);
-      cam.z = clamp(cam.z * k, fitZ() * 0.7, 2.2);
-      cam.x = bx - (e.clientX - W / 2) / cam.z;
-      cam.y = by - (e.clientY - midY()) / cam.z;
-    }
-    clampCam();
-    touched();
+    const t = performance.now(), gap = t - wheelLast;
+    wheelLast = t;
+    if (t < wheelLock) { if (gap < 160) wheelLock = Math.max(wheelLock, t + 160); return; }
+    if (gap > 300) wheelAcc = 0;
+    wheelAcc += Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    if (Math.abs(wheelAcc) < 40) return;
+    step(wheelAcc > 0 ? 1 : -1);
+    wheelAcc = 0;
+    wheelLock = t + 700;
   }, { passive: false });
 
   addEventListener("keydown", (e) => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     if (intro.on) skipIntro();
-    if (e.key === "Escape") { if (listOpen()) return closeList(); if (contactOpen()) return closeContact(); if (page) return (location.hash = "#/"); }
+    if (e.key === "Escape") { if (listOpen()) return closeList(); if (contactOpen()) return closeContact(); if (cur) location.hash = "#/"; return; }
     if (e.target.closest && e.target.closest("input, textarea, select")) return;
-    if (page) {
-      if (e.key === "ArrowRight" && !e.target.closest("input")) step(1);
-      if (e.key === "ArrowLeft" && !e.target.closest("input")) step(-1);
-      return;
-    }
-    const k = e.key.toLowerCase(), pan = 140 / cam.z;
-    if (k === "l") { listOpen() ? closeList() : openList(); return; }
+    const k = e.key;
+    if (k.toLowerCase() === "l") { listOpen() ? closeList() : openList(); return; }
     if (listOpen()) return;
-    if (e.key === "ArrowLeft") cam.x -= pan; else if (e.key === "ArrowRight") cam.x += pan;
-    else if (e.key === "ArrowUp") cam.y -= pan; else if (e.key === "ArrowDown") cam.y += pan;
-    else if (k === "+" || k === "=") fly({ x: cam.x, y: cam.y, z: cam.z * 1.4 }, 320);
-    else if (k === "-" || k === "_") fly({ x: cam.x, y: cam.y, z: cam.z / 1.4 }, 320);
-    else if (k === "0") flyAll();
+    if (k === "ArrowRight" || k === "ArrowDown" || k === "PageDown" || (k === " " && !e.target.closest("button, a"))) step(1);
+    else if (k === "ArrowLeft" || k === "ArrowUp" || k === "PageUp") step(-1);
+    else if (k === "Home") location.hash = "#/";
+    else if (k === "End") location.hash = hashOf(STOPS.length - 1);
     else return;
     e.preventDefault();
-    clampCam();
-    touched();
   });
 
-  // the first time someone moves the map themselves, the nudge has done its job
-  let nudged = false;
-  function touched() {
-    focusNode = null;
-    if (!nudged && cam.z < focusZ(byId.relay) * 0.8) { nudged = true; $("#nudge").classList.add("gone"); }
+  function step(d) {
+    let i = cur + d;
+    if (i < 0) return;
+    if (i >= STOPS.length) i = 0;
+    location.hash = hashOf(i);
   }
 
-  /* ------------------------------------------------------------------ keyboard targets
-   * Invisible links sit over each cell, so Tab walks the map and Enter opens a project. */
+  /* ------------------------------------------------------------------ keyboard targets on the whole map
+   * Invisible links sit over each cell, so Tab walks the map and Enter goes to that stop. */
   const hits = $("#hits");
-  for (const n of [...projects, byId.notes]) {
+  for (const n of nodes) {
     const a = document.createElement("a");
     a.className = "hit";
-    a.href = n.href || "#/" + n.id;
-    a.innerHTML = `<span class="sr">${esc(n.name)}, ${esc(n.kind)}. ${esc(n.live ? n.live.line : "")}</span>`;
-    a.addEventListener("focus", () => { if (!page) flyTo(n); });
+    a.href = hashOf(stopOf(n));
+    a.innerHTML = `<span class="sr">${esc(n.name)}${n.kind ? ", " + esc(n.kind) : ""}. ${esc(n.live ? n.live.line : "")}</span>`;
     hits.appendChild(a);
     n.hit = a;
   }
   function placeHits() {
-    for (const n of [...projects, byId.notes]) {
+    for (const n of nodes) {
       const R = n.R;
       if (!R) continue;
       n.hit.style.transform = `translate(${R.x}px, ${R.y}px)`;
@@ -616,54 +570,169 @@
     }
   }
 
-  /* ------------------------------------------------------------------ minimap */
-  const mini = (() => {
-    const c = $("#mini"), m = c.getContext("2d");
-    let w = 0, h = 0, sc = 1;
-    const api = {
-      size() {
-        w = c.clientWidth; h = c.clientHeight;
-        c.width = w * DPR; c.height = h * DPR;
-        sc = Math.min(w / (3 * CW), h / (3 * CH));
-      },
-      draw() {
-        if (!w) return;
-        m.setTransform(DPR, 0, 0, DPR, 0, 0);
-        m.clearRect(0, 0, w, h);
-        const ox = w / 2, oy = h / 2;
-        for (const n of nodes) {
-          const col = n.color === INK ? "#ecebe6" : n.color;
-          m.fillStyle = rgba(col, hoverNode === n ? 0.5 : 0.14);
-          m.fillRect(ox + n.r.x * sc, oy + n.r.y * sc, n.r.w * sc, n.r.h * sc);
-          m.strokeStyle = rgba(col, 0.6);
-          m.strokeRect(ox + n.r.x * sc + 0.5, oy + n.r.y * sc + 0.5, n.r.w * sc - 1, n.r.h * sc - 1);
-        }
-        const vx = wx(0), vy = wy(0), vw = W / cam.z, vh = H / cam.z;
-        m.strokeStyle = "rgba(236,235,230,0.9)";
-        m.lineWidth = 1;
-        m.strokeRect(ox + vx * sc + 0.5, oy + vy * sc + 0.5, vw * sc, vh * sc);
-      },
-    };
-    const go = (e) => {
-      const b = c.getBoundingClientRect();
-      cam.x = (e.clientX - b.left - w / 2) / sc;
-      cam.y = (e.clientY - b.top - h / 2) / sc;
-      flight = null;
-      clampCam();
-      touched();
-    };
-    let on = false;
-    c.addEventListener("pointerdown", (e) => { on = true; c.setPointerCapture(e.pointerId); go(e); });
-    c.addEventListener("pointermove", (e) => on && go(e));
-    c.addEventListener("pointerup", () => (on = false));
-    return api;
-  })();
+  /* ------------------------------------------------------------------ the panel: what you are looking at */
+  const P = D.profile;
+  const panel = $("#panel"), pbody = $("#pn-body");
+  const linkBtns = (p) => {
+    const L = p.links, out = [];
+    if (L.live) out.push(`<a class="btn" href="${esc(L.live)}">Open ${esc(p.name)} <span aria-hidden="true">↗</span></a>`);
+    if (L.source) out.push(`<a class="btn ghost" href="${esc(L.source)}" target="_blank" rel="noopener">Source</a>`);
+    if (L.original) out.push(`<a class="btn ghost" href="${esc(L.original)}">The 2023 original</a>`);
+    return out.join("");
+  };
+  const tryLine = (t) => `<p class="pn-try"><i aria-hidden="true">${stacked ? "↑" : "→"}</i><span>${esc(t)}</span></p>`;
+  const ctl = (s) => (s ? `<div class="pn-ctl"><label for="pn-range">${esc(s.label)}</label><output id="pn-out" for="pn-range"></output><input type="range" id="pn-range" min="${s.min}" max="${s.max}" step="${s.step}" value="${s.value}" /></div>` : "");
 
-  $("#z-in").onclick = () => fly({ x: cam.x, y: cam.y, z: cam.z * 1.5 }, 360);
-  $("#z-out").onclick = () => { fly({ x: cam.x, y: cam.y, z: cam.z / 1.5 }, 360); nudged = true; $("#nudge").classList.add("gone"); };
-  $("#z-fit").onclick = () => { flyAll(); nudged = true; $("#nudge").classList.add("gone"); };
-  $("#nudge").onclick = () => { flyAll(); nudged = true; $("#nudge").classList.add("gone"); };
-  $("#brand").onclick = (e) => { e.preventDefault(); if (page) location.hash = "#/"; flyTo(byId.hub); };
+  function startHTML() {
+    return `
+      <p class="pn-kind pn-role"><i class="dot" aria-hidden="true"></i>${esc(P.role)}</p>
+      <p class="pn-hello" data-decode>${esc(P.name)}</p>
+      <p class="pn-tag">${P.tagline}</p>
+      <p class="pn-lede">Seven systems I built, all running live on this page. Each one is yours to break.</p>
+      <div class="pn-links"><a class="btn" href="#/relay">Start with Relay <span aria-hidden="true">→</span></a><span class="pn-hint">or ${stacked ? "swipe" : "scroll"}</span></div>
+      <p class="pn-contact"><a href="mailto:${esc(P.email)}">${esc(P.email)}</a><a href="${esc(P.github)}" target="_blank" rel="noopener">GitHub</a><a href="/blog/">StudyLog</a></p>`;
+  }
+  function projectHTML(n) {
+    const p = n.p, i = ORDER.indexOf(n.id);
+    return `
+      <p class="pn-kind"><b>${pad(i + 1)}</b> / ${pad(ORDER.length)} · ${esc(p.kind)} · ${p.year}</p>
+      <h2 class="pn-name" data-decode>${esc(p.name)}</h2>
+      <p class="pn-q">${esc(p.question)}</p>
+      ${tryLine(n.live.line)}
+      ${n.id === "atlas" ? `<input class="pn-query" id="pn-query" type="search" placeholder="Ask my notes something" aria-label="Search my notes" value="${esc(n.fig.q)}" />` : ""}
+      ${ctl(n.fig.slider)}
+      <dl class="pn-live" id="pn-live"></dl>
+      <p class="pn-proof">${esc(n.live.proof)}</p>
+      <div class="pn-links">${linkBtns(p)}</div>`;
+  }
+  function notesHTML(n) {
+    const s = PROJ.studylog;
+    return `
+      <p class="pn-kind"><b>Notes</b> · since ${s.year}</p>
+      <h2 class="pn-name" data-decode>StudyLog</h2>
+      <p class="pn-q">Where every deep dive ends up.</p>
+      ${tryLine(n.live.line)}
+      <dl class="pn-live" id="pn-live"></dl>
+      <div class="pn-links">${linkBtns(s)}</div>`;
+  }
+  function aboutHTML() {
+    const first = D.path[0], lastStep = D.path[D.path.length - 1];
+    return `
+      <p class="pn-kind"><b>Path</b> · ${esc(first.y)} to ${esc(lastStep.y)}</p>
+      <h2 class="pn-name pn-name-s">${D.sections.path}</h2>
+      ${tryLine("Click a year on the route to see what it added.")}
+      <p class="pn-lede">${esc(P.education)}, then a new title every year since 2023, each one closer to the people using the software.</p>
+      <div class="pn-links"><a class="btn" href="mailto:${esc(P.email)}">contact() <span aria-hidden="true">→</span></a><button type="button" class="btn ghost" id="pn-copy">Copy email</button><a class="btn ghost" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <p class="pn-contact"><span>${esc(P.email)}</span></p>`;
+  }
+
+  let fillT = 0, decodeRaf = 0;
+  // fade the bottom edge while the column has more below it
+  const more = () => pbody.classList.toggle("more", pbody.scrollTop + pbody.clientHeight < pbody.scrollHeight - 4);
+  pbody.addEventListener("scroll", more, { passive: true });
+  addEventListener("resize", more);
+  function fillPanel(animate) {
+    const s = STOPS[cur], n = s.n;
+    panel.style.setProperty("--c", n ? n.color : "#ecebe6");
+    const html = s.id === "start" ? startHTML() : s.id === "about" ? aboutHTML() : s.id === "notes" ? notesHTML(n) : projectHTML(n);
+    const put = () => {
+      pbody.innerHTML = `<div class="pn-in${animate && !calm ? " enter" : ""}">${html}</div>`;
+      pbody.scrollTop = 0;
+      bindPanel(n);
+      panelStats();
+      decode();
+      more();
+    };
+    clearTimeout(fillT);
+    const old = pbody.firstElementChild;
+    if (animate && !calm && old) { old.classList.add("leave"); fillT = setTimeout(put, 170); } else put();
+    // the tour controls
+    const nxt = cur + 1 < STOPS.length ? STOPS[cur + 1] : null;
+    $("#pn-prev").disabled = cur === 0;
+    $("#pn-next-k").textContent = nxt ? "Next" : "Back to";
+    $("#pn-next-name").textContent = nxt ? nxt.label : "the start";
+    $("#pn-next").style.setProperty("--nc", nxt && nxt.n ? nxt.n.color : "#ecebe6");
+    placeRail();
+  }
+  function bindPanel(n) {
+    const r = $("#pn-range");
+    if (r) r.addEventListener("input", () => { n.fig.set(Number(r.value)); syncSlider(); });
+    const q = $("#pn-query");
+    if (q) q.addEventListener("input", () => n.fig.query(q.value));
+    const c = $("#pn-copy");
+    if (c) c.onclick = copyEmail;
+  }
+  function panelStats() {
+    const n = focus(), el = $("#pn-live");
+    if (!n || !el) return;
+    el.innerHTML = n.fig.stats().map(([v, l]) => `<div><dt>${esc(l)}</dt><dd>${esc(v)}</dd></div>`).join("");
+    syncSlider();
+    const q = $("#pn-query");
+    if (q && document.activeElement !== q && q.value !== n.fig.q) q.value = n.fig.q;
+  }
+  function syncSlider() {
+    const n = focus(), inp = $("#pn-range");
+    if (!n || !inp || !n.fig.slider) return;
+    const s = n.fig.slider;
+    if (document.activeElement !== inp) inp.value = s.value;
+    $("#pn-out").textContent = s.fmt(Number(s.value));
+  }
+  // the title decodes in, the same way a cell's name does when you point at it
+  function decode() {
+    const el = pbody.querySelector("[data-decode]");
+    cancelAnimationFrame(decodeRaf);
+    if (!el || calm) return;
+    const word = el.textContent, t0 = performance.now();
+    const tick = (t) => {
+      const k = (t - t0) / 1000;
+      el.textContent = k >= 0.45 ? word : scramble(word, k);
+      if (k < 0.45) decodeRaf = requestAnimationFrame(tick);
+    };
+    decodeRaf = requestAnimationFrame(tick);
+  }
+
+  // the rail: one stop per step of the tour, and a packet riding to where you are
+  const rail = $("#rail"), railPk = $("#rail-pk");
+  let railReady = false;
+  rail.innerHTML = STOPS.map((s, i) => `<li><button type="button" data-i="${i}" style="--c:${s.n ? s.n.color : "#ecebe6"}" aria-label="${esc(s.label)}" title="${esc(s.label)}"></button></li>`).join("");
+  railReady = true;
+  rail.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) location.hash = hashOf(Number(b.dataset.i)); });
+  function placeRail() {
+    rail.querySelectorAll("button").forEach((b, i) => b.setAttribute("aria-current", i === cur ? "step" : "false"));
+    const b = rail.querySelectorAll("button")[cur];
+    if (b) railPk.style.transform = `translateX(${b.offsetLeft + b.offsetWidth / 2}px)`;
+    railPk.style.background = focus() ? focus().color : "#ecebe6";
+  }
+  $("#pn-prev").onclick = () => step(-1);
+  $("#pn-next").onclick = () => step(1);
+  // swipe the panel sideways to move the tour on a phone
+  let pswipe = null;
+  panel.addEventListener("touchstart", (e) => { const t = e.touches[0]; pswipe = { x: t.clientX, y: t.clientY }; }, { passive: true });
+  panel.addEventListener("touchend", (e) => {
+    if (!pswipe || e.target.closest("input")) return (pswipe = null);
+    const t = e.changedTouches[0], dx = t.clientX - pswipe.x, dy = t.clientY - pswipe.y;
+    pswipe = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.4) step(dx < 0 ? 1 : -1);
+  });
+
+  function goStop(i, instant) {
+    const prev = cur;
+    cur = i;
+    const n = focus();
+    if (n && prev !== i) n.dev = 0;
+    const hub = byId.hub.fig, ro = n === byId.hub;
+    if (hub.routeOnly !== ro) { hub.routeOnly = ro; hub.L = null; }
+    document.body.classList.toggle("at-start", i === 0);
+    hits.hidden = i !== 0;
+    if (instant) { flight = null; Object.assign(cam, camAt(i)); } else fly(camAt(i));
+    setHover(null);
+    fillPanel(!instant && prev !== i);
+    Sound.hush();
+    if (n && n.id === "intonation" && Sound.on) Sound.tone(n.fig.freq());
+    document.title = n && n.p ? `${n.p.name} · Alan Fung` : "Alan Fung · Forward Deployed Engineer";
+    traceTo("map");
+    wake();
+  }
 
   /* ------------------------------------------------------------------ the HUD trace
    * map · list · contact are stops on one line; a packet rides to whichever is active. */
@@ -677,16 +746,16 @@
     const b = e.target.closest("button");
     if (!b) return;
     const v = b.dataset.v;
-    if (v === "map") { closeList(); closeContact(); if (page) location.hash = "#/"; else flyAll(); }
+    if (v === "map") { closeList(); closeContact(); location.hash = "#/"; }
     if (v === "list") { closeContact(); listOpen() ? closeList() : openList(); }
     if (v === "contact") { closeList(); contactOpen() ? closeContact() : openContact(); }
   });
+  $("#brand").onclick = (e) => { e.preventDefault(); location.hash = "#/"; };
 
   /* ------------------------------------------------------------------ list (the plain way in) */
   const list = $("#list");
   function buildList() {
-    const P = D.profile;
-    $("#list-projects").innerHTML = projects.map((n) => `
+    $("#list-projects").innerHTML = ORDER.map((id) => byId[id]).map((n) => `
       <li><a href="#/${n.id}" style="--c:${n.color}">
         <span class="li-name">${esc(n.name)}</span>
         <span class="li-kind">${esc(n.kind)}</span>
@@ -700,21 +769,22 @@
   const listOpen = () => !list.hidden;
   let listFrom = null;
   function openList() { listFrom = document.activeElement; list.hidden = false; traceTo("list"); requestAnimationFrame(() => list.querySelector("a").focus()); }
-  function closeList() { if (list.hidden) return; list.hidden = true; traceTo(page ? "" : "map"); listFrom && listFrom.focus && listFrom.focus(); }
+  function closeList() { if (list.hidden) return; list.hidden = true; traceTo("map"); listFrom && listFrom.focus && listFrom.focus(); }
   $("#list-x").onclick = closeList;
-  list.addEventListener("click", (e) => { if (e.target.closest("a[href^='#/']")) list.hidden = true; });
+  list.addEventListener("click", (e) => { if (e.target.closest("a[href^='#/']")) { list.hidden = true; traceTo("map"); } });
 
   /* ------------------------------------------------------------------ contact */
   const contact = $("#contact");
-  contact.querySelector(".c-mail").textContent = D.profile.email;
-  contact.querySelector(".c-mail").href = "mailto:" + D.profile.email;
-  contact.querySelector(".c-gh").href = D.profile.github;
+  contact.querySelector(".c-mail").textContent = P.email;
+  contact.querySelector(".c-mail").href = "mailto:" + P.email;
+  contact.querySelector(".c-gh").href = P.github;
   const contactOpen = () => !contact.hidden;
   function openContact() { contact.hidden = false; traceTo("contact"); contact.querySelector("a").focus(); }
-  function closeContact() { if (contact.hidden) return; contact.hidden = true; traceTo(page ? "" : "map"); }
-  $("#c-copy").onclick = async () => {
-    try { await navigator.clipboard.writeText(D.profile.email); toast("Copied " + D.profile.email); } catch (e) { toast(D.profile.email); }
-  };
+  function closeContact() { if (contact.hidden) return; contact.hidden = true; traceTo("map"); }
+  async function copyEmail() {
+    try { await navigator.clipboard.writeText(P.email); toast("Copied " + P.email); } catch (e) { toast(P.email); }
+  }
+  $("#c-copy").onclick = copyEmail;
   document.addEventListener("pointerdown", (e) => { if (!contact.hidden && !e.target.closest("#contact, #trace")) closeContact(); });
 
   /* ------------------------------------------------------------------ status, toast, offline */
@@ -819,18 +889,18 @@
     Sound.set(!Sound.on);
     sbtn.setAttribute("aria-pressed", String(Sound.on));
     sbtn.querySelector("span").textContent = Sound.on ? "sound on" : "sound off";
-    if (Sound.on && page && page.id === "intonation") Sound.tone(page.fig.freq());
+    const n = focus();
+    if (Sound.on && n && n.id === "intonation") Sound.tone(n.fig.freq());
   };
 
   /* ------------------------------------------------------------------ events from the figures */
   let yearPick = null;
   function onFx(n, name, data) {
     if (name === "open") { if (ext(data)) open(data, "_blank", "noopener"); else location.href = data; return; }
-    if (name === "slider") { if (page === n) syncSlider(); return; }
+    if (name === "slider") { if (focus() === n) syncSlider(); return; }
     if (name === "year") { yearPick = yearPick === data ? null : data; return; }
-    // sounds only come from what you are looking at
-    const audible = page ? page === n : n.tier === "live" && n.vis;
-    if (!audible || !Sound.on) return;
+    // sounds only come from the stop you are on
+    if (focus() !== n || !Sound.on) return;
     if (n.id === "relay") {
       if (name === "served") Sound.tick(620 + 90 * (data || 0), 0.018, 0.05, "sine", 0.06);
       else if (name === "failed") Sound.tick(170, 0.05, 0.14, "triangle", 0.02);
@@ -844,181 +914,24 @@
       if (name === "reject") Sound.tick(210, 0.04, 0.08, "square", 0.02);
       if (name === "triple") [784, 988, 1175].forEach((f, i) => setTimeout(() => Sound.tick(f, 0.04, 0.12, "sine", 0), i * 70));
     } else if (n.id === "layerline" && name === "layer") Sound.tick(330, 0.015, 0.05);
-    else if (n.id === "intonation" && name === "pitch" && page === n) Sound.tone(data);
+    else if (n.id === "intonation" && name === "pitch") Sound.tone(data);
   }
-
-  /* ------------------------------------------------------------------ project pages */
-  let page = null;
-  const pg = $("#page"), pcv = $("#pg-cv"), pctx = pcv.getContext("2d"), pfig = $("#pg-fig");
-  let pw = 0, ph = 0, statT = 0;
-  function sizePage() {
-    const b = pfig.getBoundingClientRect();
-    pw = Math.max(10, b.width);
-    ph = Math.max(10, b.height);
-    pcv.width = Math.round(pw * DPR);
-    pcv.height = Math.round(ph * DPR);
-  }
-  new ResizeObserver(() => { if (page) sizePage(); }).observe(pfig);
-  function drawPage() {
-    pctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    pctx.fillStyle = BG;
-    pctx.fillRect(0, 0, pw, ph);
-    page.fig.size(pw, ph);
-    page.fig.draw(pctx);
-    if (now - statT > 250) { statT = now; stats(); }
-  }
-  function stats() {
-    $("#pg-live").innerHTML = page.fig.stats().map(([v, l]) => `<div><dt>${esc(l)}</dt><dd>${esc(v)}</dd></div>`).join("");
-    syncSlider();
-  }
-  function syncSlider() {
-    const s = page.fig.slider, inp = $("#pg-range");
-    if (document.activeElement !== inp) inp.value = s.value;
-    $("#pg-out").textContent = s.fmt(Number(s.value));
-  }
-  // on its page the visitor drives; figures that were demoing themselves stop and wait
-  const HANDS_OFF = new Set(["tracewise", "onboard", "intonation", "atlas"]);
-  function fillPage(n) {
-    const p = n.p, s = n.fig.slider;
-    if (HANDS_OFF.has(n.id)) n.fig.auto = false;
-    pg.style.setProperty("--c", n.color);
-    $("#pg-kind").textContent = `${p.kind} · ${p.year}`;
-    $("#pg-name").textContent = p.name;
-    $("#pg-q").textContent = p.question;
-    $("#pg-line").textContent = n.live.line;
-    $("#pg-proof").textContent = n.live.proof;
-    $("#pg-crumb").textContent = n.id;
-    const inp = $("#pg-range");
-    inp.min = s.min; inp.max = s.max; inp.step = s.step; inp.value = s.value;
-    $("#pg-label").textContent = s.label;
-    syncSlider();
-    const q = $("#pg-query");
-    q.hidden = n.id !== "atlas";
-    if (n.id === "atlas") {
-      n.fig.external = true;
-      n.fig.L = null;
-      if (n.fig.q.length < 4) n.fig.query("make docker images smaller");
-      q.value = n.fig.q;
-    }
-    const L = p.links, out = [];
-    if (L.live) out.push(`<a class="btn" href="${esc(L.live)}">Open ${esc(p.name)} <span aria-hidden="true">↗</span></a>`);
-    if (L.source) out.push(`<a class="btn ghost" href="${esc(L.source)}" target="_blank" rel="noopener">Source</a>`);
-    if (L.original) out.push(`<a class="btn ghost" href="${esc(L.original)}">The 2023 original</a>`);
-    $("#pg-links").innerHTML = out.join("");
-    $("#pg-how").innerHTML = (p.how || []).map((h) => `<li>${esc(h)}</li>`).join("");
-    const sh = links.filter((l) => l.a === n || l.b === n).map((l) => ({ o: l.a === n ? l.b : l.a, s: l.skills }));
-    $("#pg-share").innerHTML = sh.length ? `<span>Shares</span>` + sh.map(({ o, s }) => `<a href="#/${o.id}" style="--c:${o.color}">${esc(s[0])} <i>with</i> ${esc(o.name)}</a>`).join("") : "";
-    const i = ORDER.indexOf(n.id);
-    $("#pg-prev").href = "#/" + ORDER[(i + ORDER.length - 1) % ORDER.length];
-    $("#pg-next").href = "#/" + ORDER[(i + 1) % ORDER.length];
-    $("#pg-count").textContent = `${i + 1} / ${ORDER.length}`;
-    document.title = `${p.name} · Alan Fung`;
-  }
-  $("#pg-range").addEventListener("input", (e) => { page.fig.set(Number(e.target.value)); syncSlider(); });
-  $("#pg-query").addEventListener("input", (e) => page && page.fig.query(e.target.value));
-  pcv.addEventListener("pointermove", (e) => { if (!page) return; const b = pcv.getBoundingClientRect(); pcv.style.cursor = page.fig.move(e.clientX - b.left, e.clientY - b.top) || "default"; });
-  pcv.addEventListener("pointerleave", () => page && page.fig.leave());
-  pcv.addEventListener("pointerdown", (e) => { if (!page) return; const b = pcv.getBoundingClientRect(); if (page.fig.down(e.clientX - b.left, e.clientY - b.top)) { page.fig.auto = false; syncSlider(); } });
-
-  function ghostAt(R, src, sxr) {
-    const g = document.createElement("canvas");
-    g.className = "vt-ghost";
-    g.width = Math.max(1, Math.round(R.w * DPR));
-    g.height = Math.max(1, Math.round(R.h * DPR));
-    Object.assign(g.style, { left: R.x + "px", top: R.y + "px", width: R.w + "px", height: R.h + "px" });
-    try { g.getContext("2d").drawImage(src, sxr.x * DPR, sxr.y * DPR, sxr.w * DPR, sxr.h * DPR, 0, 0, g.width, g.height); } catch (e) {}
-    return g;
-  }
-  const canVT = () => !!document.startViewTransition && !calm;
-  function showPage(n) {
-    page = n;
-    fillPage(n);
-    pg.hidden = false;
-    document.body.classList.add("paged");
-    sizePage();
-    drawPage();
-    stats();
-    traceTo("");
-    if (n.id === "intonation" && Sound.on) Sound.tone(n.fig.freq());
-  }
-  function hidePage() {
-    if (page && page.id === "atlas") { page.fig.external = false; page.fig.L = null; }
-    Sound.hush();
-    pg.hidden = true;
-    document.body.classList.remove("paged");
-    page = null;
-    document.title = "Alan Fung · Forward Deployed Engineer";
-    traceTo("map");
-  }
-  function openPage(n, how) {
-    closeList();
-    closeContact();
-    if (page === n) return;
-    const from = page;
-    const R = !from && n.R && n.vis ? n.R : null;
-    if (canVT() && how !== "instant") {
-      let ghost = null;
-      if (R) { draw(0); ghost = ghostAt(R, cv, R); ghost.style.viewTransitionName = "fig"; document.body.appendChild(ghost); }
-      else if (from) pfig.style.viewTransitionName = "fig";
-      const vt = document.startViewTransition(() => {
-        if (ghost) ghost.remove();
-        if (from) hidePage();
-        showPage(n);
-        pfig.style.viewTransitionName = "fig";
-      });
-      vt.finished.finally(() => (pfig.style.viewTransitionName = ""));
-    } else {
-      if (from) hidePage();
-      showPage(n);
-      if (R && !calm) {
-        const b = pfig.getBoundingClientRect();
-        pfig.animate([{ transform: `translate(${R.x - b.left}px, ${R.y - b.top}px) scale(${R.w / b.width}, ${R.h / b.height})`, opacity: 0.6 }, { transform: "none", opacity: 1 }], { duration: 520, easing: "cubic-bezier(.2,.8,.2,1)" });
-      }
-    }
-    $("#pg-back").focus({ preventScroll: true });
-  }
-  function closePage() {
-    if (!page) return;
-    const n = page;
-    Object.assign(cam, camFor(n));
-    focusNode = n;
-    clampCam();
-    if (canVT()) {
-      pfig.style.viewTransitionName = "fig";
-      let ghost = null;
-      const vt = document.startViewTransition(() => {
-        pfig.style.viewTransitionName = "";
-        hidePage();
-        draw(0);
-        const R = scr(n.r);
-        ghost = ghostAt(R, cv, R);
-        ghost.style.viewTransitionName = "fig";
-        document.body.appendChild(ghost);
-      });
-      vt.finished.finally(() => ghost && ghost.remove());
-    } else hidePage();
-    if (n.hit) n.hit.focus({ preventScroll: true });
-  }
-  function step(d) {
-    const i = ORDER.indexOf(page.id);
-    location.hash = "#/" + ORDER[(i + d + ORDER.length) % ORDER.length];
-  }
-  $("#pg-back").onclick = () => (location.hash = "#/");
 
   /* ------------------------------------------------------------------ routing */
   function route(first) {
     const id = location.hash.replace(/^#\/?/, "");
-    if (byId[id] && byId[id].p) { if (first) { Object.assign(cam, camFor(byId[id])); skipIntro(); } openPage(byId[id], first ? "instant" : ""); }
-    else if (id === "list") { closePage(); openList(); }
-    else closePage();
+    if (id === "list") { openList(); if (first) goStop(0, true); return; }
+    let i = STOPS.findIndex((s) => s.id === id);
+    if (i < 0) i = 0;
+    if (first && i) skipIntro();
+    if (first || i !== cur) goStop(i, first);
   }
   addEventListener("hashchange", () => route(false));
 
   /* ------------------------------------------------------------------ go */
   addEventListener("resize", resize);
   resize();
-  traceTo("map");
   route(true);
   wake();
-  window.__map = { cam, nodes, byId, fly, flyTo, flyAll, skipIntro, Sound, get page() { return page; } };
+  window.__map = { cam, nodes, byId, STOPS, step, skipIntro, Sound, get stop() { return STOPS[cur].id; }, get flying() { return !!flight; } };
 })();
