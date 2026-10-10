@@ -1,106 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="midnight">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Alan Fung · Forward Deployed Engineer</title>
-<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. Seven projects running live on one page: an LLM gateway that rides out outages, tracing that names the broken service, a customer-data pipeline, a search engine with no server, a pitch detector, a 1,000-player game server and a slicer in WebAssembly." />
-<meta name="theme-color" content="#09090b" />
+<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. The home page is a live map of seven projects you can break: an LLM gateway, tracing that names the broken service, customer-data matching, search with no server, a pitch detector, a multiplayer game server and a slicer in WebAssembly." />
+<meta name="theme-color" content="#0a0b0d" />
 <meta property="og:title" content="Alan Fung · Forward Deployed Engineer" />
-<meta property="og:description" content="Forward Deployed Engineer. I go where the software breaks, and I don't leave until the numbers say it's fixed." />
+<meta property="og:description" content="I go where the software breaks. Seven projects, all running, all yours to break." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://invokfung.github.io/" />
+<meta property="og:image" content="https://invokfung.github.io/assets/portfolio/media/relay.webp" />
 <link rel="icon" href="/blog/assets/icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/portfolio/style.css" />
-<script>
-  // Apply saved settings before first paint so there is no flash.
-  try {
-    var s = JSON.parse(localStorage.getItem("alan.fung/config") || "null");
-    var light = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches;
-    document.documentElement.dataset.theme = (s && s.theme) || (light ? "paper" : "midnight");
-    if (s && s.accent) document.documentElement.style.setProperty("--acc", s.accent);
-  } catch (e) {}
-  document.documentElement.classList.add("js");
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/portfolio/live/live.css" />
 </head>
 <body>
-  <a class="skip" href="#whoami">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"><i></i><b></b><span></span></div>
+  <a class="skip" href="#list" id="skip">See everything as a list</a>
+  <h1 class="sr">Alan Fung, Forward Deployed Engineer. I go where the software breaks.</h1>
 
-  <div class="boot" id="boot" aria-hidden="true">
-    <div class="boot-in">
-      <div class="boot-log" id="boot-log"></div>
-      <div class="boot-bar"><i id="boot-bar"></i></div>
-    </div>
-  </div>
+  <canvas id="map" aria-hidden="true"></canvas>
+  <nav id="hits" aria-label="Projects on the map"></nav>
 
-  <header class="nav" id="nav">
-    <a class="brand" href="#top" aria-label="Alan Fung, back to top"><span class="mono-mark">af</span><span class="brand-t">alan.fung</span></a>
-    <nav class="links" aria-label="Sections">
-      <a href="#whoami" data-sec="whoami"><i>01</i>whoami()</a>
-      <a href="#work" data-sec="work"><i>02</i>work()</a>
-      <a href="#skills" data-sec="skills"><i>03</i>skills()</a>
-      <a href="#history" data-sec="history"><i>04</i>history()</a>
-      <a href="#contact" data-sec="contact"><i>05</i>contact()</a>
+  <header class="hud top">
+    <a class="brand" id="brand" href="#/"><b>Alan Fung</b><span>Forward Deployed Engineer</span></a>
+    <nav class="trace" id="trace" aria-label="Views">
+      <button type="button" data-v="map">map</button>
+      <button type="button" data-v="list">list</button>
+      <button type="button" data-v="contact">contact()</button>
+      <i class="pk" aria-hidden="true"></i>
     </nav>
-    <div class="nav-r">
-      <span class="head" id="head" title="Where you are in my history">HEAD → <b>main</b></span>
-      <button type="button" class="pill-btn snd" id="btn-snd" data-sound aria-pressed="false" title="Sound off">♪<span class="sr">sound</span></button>
-      <button type="button" class="pill-btn" id="btn-src" aria-pressed="false" title="View this page's live source">&lt;/&gt;<span> source</span></button>
-      <button type="button" class="pill-btn" id="btn-term" title="Open a terminal (press `)">›_</button>
+    <div class="tools">
+      <p class="status" id="status" title=""><i aria-hidden="true"></i><span>connecting</span></p>
+      <button type="button" class="sound" id="sound" aria-pressed="false" title="Sound is off until you turn it on"><i aria-hidden="true"><b></b><b></b><b></b></i><span>sound off</span></button>
     </div>
   </header>
 
-  <nav class="minimap" id="minimap" aria-label="Progress"></nav>
+  <aside class="panel" id="panel" aria-label="What you are looking at">
+    <div class="pn-body" id="pn-body" aria-live="polite"></div>
+    <nav class="pn-nav" aria-label="The tour">
+      <button type="button" class="pn-prev" id="pn-prev" aria-label="Back">←</button>
+      <div class="rail-w"><ol class="rail" id="rail"></ol><i class="pk" id="rail-pk" aria-hidden="true"></i></div>
+      <button type="button" class="pn-next" id="pn-next"><span id="pn-next-k">Next</span> <b id="pn-next-name"></b> <i aria-hidden="true">→</i></button>
+    </nav>
+  </aside>
 
-  <div class="app" id="top">
-    <aside class="editor" id="editor" aria-label="The source code of this page">
-      <div class="ed-bar">
-        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="tab" id="tab"><span class="glyph">ƒ</span>alan.fung<span class="dirty" title="edited"></span></div>
-        <div class="ed-actions">
-          <button type="button" id="btn-reset" title="Reset live values">⟲ reset</button>
-          <button type="button" id="btn-close" title="Close source">✕</button>
-        </div>
-      </div>
-      <div class="code" id="code" tabindex="-1"></div>
-      <div class="ed-status" id="status"></div>
-    </aside>
-
-    <main class="out" id="out">
-      <svg class="thread" id="thread" aria-hidden="true"></svg>
-      <noscript>
-        <section class="sec">
-          <h1 class="title">Alan Fung</h1>
-          <p class="lede">Forward Deployed Engineer, building for the web since 2023. This page is interactive and needs JavaScript. Meanwhile: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/blog/">StudyLog</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/arena/">TripleFind Arena</a> · <a href="/layerline/">Layerline</a> · <a href="https://github.com/InvokFung">GitHub</a></p>
-        </section>
-      </noscript>
-    </main>
+  <div class="contact" id="contact" hidden>
+    <a class="c-mail" href="#"></a>
+    <button type="button" id="c-copy">copy</button>
+    <a class="c-gh" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="/blog/">StudyLog</a>
   </div>
 
-  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
-    <div class="case-scroll" id="case-scroll"></div>
-  </div>
+  <section class="list" id="list" role="dialog" aria-modal="false" aria-labelledby="list-h" hidden>
+    <header><h2 id="list-h">Everything, as a list</h2><button type="button" id="list-x" aria-label="Close the list">esc ✕</button></header>
+    <ol class="list-projects" id="list-projects"></ol>
+    <h3>Path</h3>
+    <ol class="list-path" id="list-path"></ol>
+    <h3>Elsewhere</h3>
+    <p class="list-more" id="list-more"></p>
+  </section>
 
-  <div class="term" id="term" role="dialog" aria-label="Terminal" hidden>
-    <div class="term-bar"><span>alan@fung: ~ · zsh</span><button type="button" id="term-x" aria-label="Close terminal">esc ✕</button></div>
-    <div class="term-out" id="term-out" aria-live="polite"></div>
-    <form class="term-in" id="term-form" autocomplete="off">
-      <label for="term-input">alan@fung:~$</label>
-      <input id="term-input" spellcheck="false" autocapitalize="off" placeholder="type help" />
-    </form>
-  </div>
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
 
-  <div class="toast" id="toast" role="status"></div>
+  <noscript>
+    <div class="noscript">
+      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a live map and needs JavaScript. The projects: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/arena/">TripleFind Arena</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+    </div>
+  </noscript>
 
   <script src="/assets/portfolio/data.js"></script>
-  <script src="/assets/portfolio/strings.js"></script>
-  <script src="/assets/portfolio/spectro.js"></script>
-  <script src="/assets/portfolio/sims.js"></script>
-  <script src="/assets/portfolio/app.js"></script>
+  <script src="/assets/portfolio/notes.js"></script>
+  <script src="/assets/portfolio/live/kit.js"></script>
+  <script src="/assets/portfolio/live/relay.js"></script>
+  <script src="/assets/portfolio/live/tracewise.js"></script>
+  <script src="/assets/portfolio/live/onboard.js"></script>
+  <script src="/assets/portfolio/live/atlas.js"></script>
+  <script src="/assets/portfolio/live/studio.js"></script>
+  <script src="/assets/portfolio/live/arena.js"></script>
+  <script src="/assets/portfolio/live/layerline.js"></script>
+  <script src="/assets/portfolio/live/hub.js"></script>
+  <script src="/assets/portfolio/live/app.js"></script>
 </body>
 </html>

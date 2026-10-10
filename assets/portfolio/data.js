@@ -1,11 +1,10 @@
 /*
  * Everything the portfolio shows lives in this file.
- * The page renders its output AND writes its own "source code" from this data,
- * so editing an entry here updates both.
  *
- *   New project   → add an object to `projects` (tier "flagship" or "experiment").
+ *   New project   → add an object to `projects` (tier "flagship" or "experiment"); a flagship on the
+ *                   map also needs a figure in assets/portfolio/live/, a cell in live/app.js and a `live` entry below.
  *   New skill     → add it to a group in `skills`; projects that list it in `stack` or `uses` are wired to it.
- *   New chapter   → add an object to `eras` (shown in the history loop, oldest first).
+ *   New step      → add it to `path` (the career line, oldest first).
  *   Blog numbers  → update `writing` (a snapshot of /blog at the time of editing).
  */
 window.PORTFOLIO = {
@@ -16,7 +15,8 @@ window.PORTFOLIO = {
     education: "Information Engineering",
     // [title, from], oldest first; the last one is the current role
     career: [["Web Developer", 2023], ["Full Stack Engineer", 2024], ["Software Engineer", 2025], ["Forward Deployed Engineer", 2026]],
-    tagline: "I go where the software breaks, and I don't leave until the numbers say it's fixed.",
+    // the hero line; <em>…</em> is drawn in the gradient
+    tagline: "I go where the software <em>breaks.</em>",
     email: "aflung10@gmail.com",
     github: "https://github.com/InvokFung",
     firstCommit: 2018,
@@ -24,46 +24,37 @@ window.PORTFOLIO = {
   },
 
   /*
-   * whoami(): three lines, each with its number. Hover or tap a line for the proof behind it.
+   * About: three lines, each with its big number. The proof shows under it.
    * `aside`: the off-the-clock part, one short line each.
    */
   whoami: {
     lines: [
-      { k: "Go where the problem lives.", n: "FDE", unit: "since 2026", proof: "Information Engineering, then web developer, full-stack engineer, software engineer and now Forward Deployed Engineer: closer to the people using the software every year.", link: "#history", linkText: "how I got here" },
-      { k: "Ship the whole stack.", n: "7", unit: "flagships, all live", proof: "An LLM gateway, a tracing system, a customer-data pipeline and four more. Every one runs in your browser, source included.", link: "#work", linkText: "play with them" },
-      { k: "Put a number on it.", n: "98.9%", unit: "culprit found first", proof: "Tracewise names the faulty service first in 98.9% of 200 injected faults. The obvious guess manages 66.1%.", link: "#work/tracewise", linkText: "break something" }
+      { k: "Go where the problem lives.", n: "FDE", unit: "since 2026", proof: "Closer to the people using the software every year.", link: "#path", linkText: "How I got here" },
+      { k: "Ship the whole stack.", n: "7", unit: "flagships, all live", proof: "Each one runs in your browser, source included.", link: "#work", linkText: "See them" },
+      { k: "Put a number on it.", n: "98.9%", unit: "culprit found first", proof: "Tracewise, over 200 injected faults. The obvious guess gets 66.1%.", link: "#work/tracewise", linkText: "Break something" }
     ],
     aside: [
-      { icon: "♪", text: "Off the clock I play violin. That's why this page can hear you.", link: "#hero", linkText: "sing to it" },
+      { icon: "♪", text: "Off the clock I play violin. That's why this page can hear you.", link: "#hero", linkText: "Sing to it" },
       { icon: "✎", text: "I write up everything I learn: {notes} notes so far.", link: "/blog/", linkText: "StudyLog" }
     ]
   },
 
-  /*
-   * Section headings. <em>…</em> is drawn in the accent italic. Placeholders filled by app.js:
-   *   {skills} skill count · {Flagships} spelled flagship count · {chapters} spelled chapter count · {notes} note count
-   *   {Hover} / {hover} "Hover" or "Tap"
-   */
+  // Section headings. <em>…</em> is drawn in the gradient. {notes} is the note count.
   sections: {
-    skills: {
-      title: "No skill without a <em>receipt</em>",
-      lede: "{skills} skills, each plugged into the work that proves it. {Hover} one to follow its cables."
-    },
-    work: {
-      title: "{Flagships} questions I couldn't <em>leave alone</em>",
-      lede: "Every tile is running. Go on, break something."
-    },
-    // the line under the tiles; {notes} is the note count, the link to older experiments is added after it
-    experiments: "Every one of them started as notes in StudyLog: {notes} so far.",
-    history: {
-      title: "How a Java group project became a <em>career</em>",
-      lede: "Keep scrolling. The years run sideways."
-    },
-    contact: {
-      title: "Say <em>hello</em>",
-      lede: "A question about a project, or an idea worth building? Run the line."
-    }
+    work: "Seven questions I couldn't <em>leave alone.</em>",
+    path: "One repo in 2018. <em>Forward deployed</em> in 2026.",
+    tools: "Pick a tool to see where I used it."
   },
+
+  // The career line, oldest first. `d` opens under the step.
+  path: [
+    { y: "2018", r: "First commit", d: "A Java group project became repo one." },
+    { y: "2020", r: "Information Engineering", d: "Signals, probability, networks. Half my projects run on them." },
+    { y: "2023", r: "Web Developer", d: "Small games and tools, finished and live." },
+    { y: "2024", r: "Full Stack Engineer", d: "Photos into 3D models, then a web metaverse." },
+    { y: "2025", r: "Software Engineer", d: "Databases, C++, shaders, containers: 86 notes." },
+    { y: "2026", r: "Forward Deployed Engineer", d: "Closer to the people using it. Seven projects, all live." }
+  ],
 
   /*
    * skills(): grouped, with the year of the first evidence. A project proves a skill when the
@@ -103,8 +94,8 @@ window.PORTFOLIO = {
   ],
 
   /*
-   * The history loop, oldest first. `picked` = skills that chapter added.
-   * `events` also feed `git log` in the terminal.
+   * The long history, oldest first, for the terminal (`git log`, `checkout <year>`).
+   * `picked` = skills that chapter added. `events` feed `git log`.
    * `built`: smaller things shipped that year, [name, link]; a null link marks one that never shipped.
    * `grew`: [era id, where it started, project id], each flagship traced back to the chapter it grew from.
    */
@@ -171,18 +162,17 @@ window.PORTFOLIO = {
   ],
 
   /*
-   * tier: "flagship" (a live tile and a case study) | "experiment" (a line under the tiles)
+   * tier: "flagship" (on the stage, with footage and a case study) | "experiment" (linked from the footer)
    * status: "live" | "source" | "wip"
-   * motif: the generated cover: "passages" | "pitch" | "cards" | "layers" | "merge" | "spans" | "route" | "rings" | "mesh" | "geo" | "dots" (default)
-   * metrics: measured numbers [value, label], shown on the card and the case study.
+   * metrics: measured numbers [value, label]; the first is the headline on the stage.
    * uses: skills the project proves beyond the ones already named in `stack`.
-   * featured: true marks the work closest to the day job; it gets the biggest tiles.
-   * color: the project's colour on its tile and its cables in skills().
+   * featured: true marks the work closest to the day job; it comes first.
+   * color: the project's colour on the stage and in its case study.
    * why / how / milestones are optional and fill the case study.
    */
   projects: [
     {
-      id: "relay", color: "#ffb547", tier: "flagship", featured: true, motif: "route", name: "Relay", year: 2026, kind: "LLM gateway", status: "live",
+      id: "relay", color: "#ffb547", tier: "flagship", featured: true, name: "Relay", year: 2026, kind: "LLM gateway", status: "live",
       question: "When the model provider goes down, can the product stay up?",
       pitch: "An LLM gateway that keeps model calls safe, reliable and accountable. Each request passes nine stages, from PII redaction and an injection screen to a semantic cache, fallbacks across regions and a hash-chained audit log. Send your own prompt through it, to a simulator or to Claude with your own key.",
       why: "Once a model is inside a product, the hard questions are not about prompts: what happens to customer data on the way in, who pays when usage runs away, and what users see when the provider has an outage. Relay answers all three in one place, in front of every model call, and backs each answer with a benchmark.",
@@ -199,7 +189,7 @@ window.PORTFOLIO = {
       links: { live: "/relay/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/relay-src" }
     },
     {
-      id: "tracewise", color: "#62b6ff", tier: "flagship", featured: true, motif: "spans", name: "Tracewise", year: 2026, kind: "Observability", status: "live",
+      id: "tracewise", color: "#62b6ff", tier: "flagship", featured: true, name: "Tracewise", year: 2026, kind: "Observability", status: "live",
       question: "When checkout breaks, can the traces name the culprit?",
       pitch: "Break a microservice system and watch the tracing pipeline find the cause. Eleven simulated services send OpenTelemetry spans through your browser. Inject latency, errors or a bad deploy, and Tracewise opens an incident and ranks the likely culprit, evidence first.",
       why: "When something breaks on a customer's system, the first hour goes on finding where. Dashboards show what got slower, not what caused it: across these runs, blaming the service closest to the alert found the real cause only 17% of the time. Tracewise asks whether traces can answer the only question that matters in an incident: which service do we fix?",
@@ -216,7 +206,7 @@ window.PORTFOLIO = {
       links: { live: "/tracewise/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/tracewise-src" }
     },
     {
-      id: "onboard", color: "#4fe3c1", tier: "flagship", featured: true, motif: "merge", name: "Onboard", year: 2026, kind: "Customer data", status: "live",
+      id: "onboard", color: "#4fe3c1", tier: "flagship", featured: true, name: "Onboard", year: 2026, kind: "Customer data", status: "live",
       question: "Can three messy exports become one customer table you'd trust?",
       pitch: "A CRM, a billing system and a help desk each remember the same 4,000 customers a little differently. Feed in all three exports and one customer table comes out, every value traced to the file, row and column it came from. It runs entirely in your browser.",
       why: "Every customer project starts with their data, and their data never agrees with itself. Onboard is that first week turned into a tool: profile it, protect it, map it, decide who is who, and score every one of those decisions against the truth.",
@@ -233,7 +223,7 @@ window.PORTFOLIO = {
       links: { live: "/onboard/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/onboard-src" }
     },
     {
-      id: "atlas", color: "#a78bfa", tier: "flagship", motif: "passages", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
+      id: "atlas", color: "#a78bfa", tier: "flagship", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
       question: "Can a search engine run with no server at all?",
       pitch: "A search engine over 5,551 passages of my notes that runs entirely in your browser: no server, no API key, no model. Ask it something and it shows its working, every stage with its output and its time on your device.",
       why: "I had 173 long posts and could only find them by date and tag. I wanted to ask my notebook a question and get the right paragraph back, without renting a server or shipping a model.",
@@ -250,7 +240,7 @@ window.PORTFOLIO = {
       links: { live: "/atlas/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/atlas-src" }
     },
     {
-      id: "intonation", color: "#c8ff4a", tier: "flagship", motif: "pitch", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "live",
+      id: "intonation", color: "#c8ff4a", tier: "flagship", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "live",
       question: "Can a browser tab hear a violin to the cent?",
       pitch: "A practice room that listens to a violin or a piano and scores a whole scale, note by note, to the cent. No instrument to hand? A synthesized violinist plays the drill for you.",
       why: "A tuner shows one note at a time, but practice is scales and arpeggios, and what matters is which notes keep drifting. Studio scores whole drills by grade and remembers how each note improves.",
@@ -267,7 +257,7 @@ window.PORTFOLIO = {
       links: { live: "/studio/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/studio-src" }
     },
     {
-      id: "arena", color: "#ff7ab6", tier: "flagship", motif: "cards", name: "TripleFind Arena", year: 2026, kind: "Real-time multiplayer", status: "live",
+      id: "arena", color: "#ff7ab6", tier: "flagship", name: "TripleFind Arena", year: 2026, kind: "Real-time multiplayer", status: "live",
       question: "Would my 2023 memory game survive 1,000 players?",
       pitch: "My 2023 memory game, rebuilt as a real-time race for two to four players on one board. The server deals and checks every flip, so no client can peek, and every match is an event log you can replay move by move.",
       why: "TripleFind was a single-player browser game. Making it a fair race meant solving real backend problems: hidden information, provably fair deals, reconnects and load.",
@@ -284,7 +274,7 @@ window.PORTFOLIO = {
       links: { live: "/arena/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/arena-src", original: "/triplefind/" }
     },
     {
-      id: "layerline", color: "#ff8a65", tier: "flagship", motif: "layers", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "live",
+      id: "layerline", color: "#ff8a65", tier: "flagship", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "live",
       question: "How small can a real 3D-printing slicer get?",
       pitch: "Drop in an STL, get G-code a printer can run. The slicer is 66 KB of WebAssembly built from freestanding C++17, with no Emscripten and no libc. It slices on a background thread and paints each layer the moment it is done.",
       why: "A slicer is computational geometry with no room for hand-waving: broken meshes, walls thinner than the nozzle, exact tie-breaking, and an output a printer has to obey. It pulls my C++, 3D printing and graphics notes into one tool.",
@@ -301,12 +291,28 @@ window.PORTFOLIO = {
       links: { live: "/layerline/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/layerline-src" }
     },
     {
-      id: "studylog", color: "#b7b6b0", tier: "experiment", motif: "dots", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",
+      id: "studylog", color: "#b7b6b0", tier: "experiment", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",
       pitch: "Where every deep dive ends up: 174 long-form notes on databases, cloud, C++, graphics and maths, with diagrams, maths typesetting and full-text search.",
       how: ["Custom build pipeline with static export", "Diagrams, KaTeX and local full-text search"],
       stack: ["Next.js", "Markdown", "KaTeX", "Python"], links: { live: "/blog/" }
     }
   ],
+
+  /*
+   * The map on the home page. Per project: `tag` is the headline number shown on the map, `line` is
+   * the one instruction beside its live figure, and `proof` is the measured result from the real
+   * project, quoted on its page. One short sentence each, and every number must match `metrics`.
+   */
+  live: {
+    relay: { tag: ["99.98%", "answered in an outage"], line: "Take a deployment down. The answers keep landing.", proof: "The real gateway answers 99.98% of calls through an outage. Without it, 68.6%." },
+    tracewise: { tag: ["98.9%", "culprit named first"], line: "Click a service to slow it down. Tracewise follows the slow spans to the cause.", proof: "Over 200 injected faults it named the culprit first 98.9% of the time. The best dashboard guess managed 66.1%." },
+    onboard: { tag: ["0.977", "match F1"], line: "Slide the threshold. Too low merges strangers, too high splits people.", proof: "On 10,200 messy records the real pipeline scores 0.977 F1. Matching on email alone gets 0.659." },
+    atlas: { tag: ["85%", "right first time, no server"], line: "Ask my notes anything. The search runs here, on your device.", proof: "The full Atlas searches 5,551 passages, gets 85% right first time and answers in about half a millisecond." },
+    intonation: { tag: ["0.17¢", "worst error"], line: "Detune the string. The detector still hears it to a fraction of a cent.", proof: "The real detector's worst error on clean tones is 0.17 cents, with no octave slips in 182 noisy ones." },
+    arena: { tag: ["1,000", "clients load tested"], line: "Three bots race on one board. Drag back through the log to replay any flip.", proof: "Load tested to 1,000 clients at 2.7 ms p99 per flip, and every match is an event log." },
+    layerline: { tag: ["66 KB", "of WebAssembly"], line: "Slide through the part. Each layer becomes walls, infill and a nozzle path.", proof: "The real slicer is 66 KB of WebAssembly and slices a full gear in 21 ms, 8× faster than TypeScript." },
+    notes: { tag: ["174", "notes"], line: "Every note I've published, one square each. Click one to read it." }
+  },
 
   // Snapshot of /blog (174 posts as of 2026-10-02).
   writing: {
