@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="midnight">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Alan Fung · Forward Deployed Engineer</title>
-<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. Seven projects, all live: an LLM gateway that rides out outages, tracing that names the broken service, a customer-data pipeline, a search engine with no server, a pitch detector, a 1,000-player game server and a slicer in WebAssembly." />
-<meta name="theme-color" content="#07070a" />
+<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. The home page is a live map of seven projects you can break: an LLM gateway, tracing that names the broken service, customer-data matching, search with no server, a pitch detector, a multiplayer game server and a slicer in WebAssembly." />
+<meta name="theme-color" content="#0a0b0d" />
 <meta property="og:title" content="Alan Fung · Forward Deployed Engineer" />
-<meta property="og:description" content="I go where the software breaks. Seven projects, all running live." />
+<meta property="og:description" content="I go where the software breaks. Seven projects, all running, all yours to break." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://invokfung.github.io/" />
 <meta property="og:image" content="https://invokfung.github.io/assets/portfolio/media/relay.webp" />
@@ -15,136 +15,109 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/portfolio/style.css" />
-<script>
-  // Apply the saved theme before first paint so there is no flash.
-  try {
-    var s = JSON.parse(localStorage.getItem("alan.fung/config") || "null");
-    if (s && s.theme) document.documentElement.dataset.theme = s.theme;
-  } catch (e) {}
-  document.documentElement.classList.add("js");
-</script>
+<link rel="stylesheet" href="/assets/portfolio/live/live.css" />
 </head>
 <body>
-  <a class="skip" href="#work">Skip to the work</a>
-  <div class="cursor" aria-hidden="true"><i></i><span></span></div>
+  <a class="skip" href="#list" id="skip">Skip the map and see everything as a list</a>
+  <h1 class="sr">Alan Fung, Forward Deployed Engineer. I go where the software breaks.</h1>
 
-  <header class="nav" id="nav">
-    <a class="brand" href="#top" aria-label="Alan Fung, back to top">Alan Fung</a>
-    <nav class="links" aria-label="Sections">
-      <a href="#work" data-sec="work">Work</a>
-      <a href="#about" data-sec="about">About</a>
-      <a href="#path" data-sec="path">Path</a>
-      <a href="#contact" data-sec="contact">Contact</a>
+  <canvas id="map" aria-hidden="true"></canvas>
+  <nav id="hits" aria-label="Projects on the map"></nav>
+
+  <header class="hud top">
+    <a class="brand" id="brand" href="#/"><b>Alan Fung</b><span>Forward Deployed Engineer</span></a>
+    <nav class="trace" id="trace" aria-label="Views">
+      <button type="button" data-v="map">map</button>
+      <button type="button" data-v="list">list</button>
+      <button type="button" data-v="contact">contact()</button>
+      <i class="pk" aria-hidden="true"></i>
     </nav>
     <div class="tools">
-      <button type="button" class="tool" id="btn-theme" title="Change the theme" aria-label="Change the theme"><i aria-hidden="true"></i></button>
-      <button type="button" class="tool" id="btn-term" title="Open a terminal (press `)" aria-label="Open a terminal">›_</button>
+      <p class="status" id="status" title=""><i aria-hidden="true"></i><span>connecting</span></p>
+      <button type="button" class="sound" id="sound" aria-pressed="false" title="Sound is off until you turn it on"><i aria-hidden="true"><b></b><b></b><b></b></i><span>sound off</span></button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero" id="hero" aria-label="Intro">
-      <canvas class="terrain" id="terrain" role="img" aria-label="My name, Alan Fung, drawn as a landscape of sound. Each ridge is a pitch, and the loud part spells the name."></canvas>
-      <h1 class="sr">Alan Fung</h1>
-      <div class="hero-copy">
-        <p class="eyebrow rv"><span class="live" aria-hidden="true"></span><span id="role">Forward Deployed Engineer</span></p>
-        <p class="hero-line split" id="tagline">I go where the software <em>breaks.</em></p>
-      </div>
-      <div class="hero-act rv">
-        <p class="hear-cap" id="hear-cap" aria-live="polite">That's my name, as sound.</p>
-        <div class="btns">
-          <button type="button" class="btn" id="hear"><span class="ic" aria-hidden="true">▶</span><span class="t">Hear it</span></button>
-          <button type="button" class="btn ghost" id="sing"><span class="ic rec" aria-hidden="true"></span><span class="t">Sing to it</span></button>
-        </div>
-      </div>
-      <a class="cue" href="#work" aria-label="Scroll to the work"><span></span></a>
-    </section>
-
-    <section class="sec work" id="work" aria-labelledby="work-h">
-      <div class="stage" id="stage">
-        <div class="stage-side">
-          <header class="sec-head">
-            <p class="label rv"><b>01</b> Work</p>
-            <h2 class="title split" id="work-h">Seven questions I couldn't <em>leave alone.</em></h2>
-          </header>
-          <ol class="stage-list" id="stage-list" role="tablist" aria-label="Projects"></ol>
-        </div>
-        <div class="stage-main">
-          <figure class="frame" id="frame">
-            <div class="frame-in" id="frame-in">
-              <video class="vid on" muted playsinline loop preload="none" aria-hidden="true"></video>
-              <video class="vid" muted playsinline loop preload="none" aria-hidden="true"></video>
-              <div class="lab" id="lab" hidden></div>
-              <div class="frame-tint" aria-hidden="true"></div>
-            </div>
-            <figcaption class="frame-cap" id="frame-cap"></figcaption>
-          </figure>
-          <div class="stage-info" id="stage-info" aria-live="polite"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec about" id="about" aria-labelledby="about-h">
-      <header class="sec-head">
-        <p class="label rv"><b>02</b> About</p>
-        <h2 class="sr" id="about-h">About me</h2>
-      </header>
-      <ol class="stats" id="stats"></ol>
-      <p class="aside rv" id="aside"></p>
-    </section>
-
-    <section class="sec path" id="path" aria-labelledby="path-h">
-      <header class="sec-head">
-        <p class="label rv"><b>03</b> Path</p>
-        <h2 class="title split" id="path-h">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
-      </header>
-      <ol class="steps" id="steps"></ol>
-    </section>
-
-    <section class="tools-band" id="tools" aria-label="What I build with">
-      <div class="marquee" id="marquee"></div>
-      <p class="band-cap rv">Pick a tool to see where I used it.</p>
-    </section>
-
-    <section class="sec contact" id="contact" aria-labelledby="contact-h">
-      <p class="label rv"><b>04</b> Contact</p>
-      <h2 class="sr" id="contact-h">Say hello</h2>
-      <div class="hello"><canvas class="terrain" id="hello" role="img" aria-label="The word hello, drawn as a landscape of sound. Click it to make waves."></canvas></div>
-      <a class="mail rv" id="mail" href="mailto:aflung10@gmail.com">aflung10@gmail.com</a>
-      <div class="elsewhere rv" id="elsewhere"></div>
-      <footer class="foot">
-        <span id="foot-c">© 2026 Alan Fung</span>
-        <span>Hand-written, no framework. Press <kbd>`</kbd> for a terminal.</span>
-      </footer>
-    </section>
-
-    <noscript>
-      <section class="sec">
-        <p>Alan Fung, Forward Deployed Engineer. This page is interactive and needs JavaScript. Meanwhile: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/arena/">TripleFind Arena</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a></p>
-      </section>
-    </noscript>
-  </main>
-
-  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
-    <div class="case-scroll" id="case-scroll"></div>
+  <div class="hud bottom">
+    <div class="where">
+      <canvas id="mini" aria-label="Overview of the map. Click to move there." role="img"></canvas>
+      <p class="hint">drag to move · scroll to zoom · <kbd>L</kbd> for a list</p>
+    </div>
+    <button type="button" class="nudge" id="nudge">See all seven <span aria-hidden="true">⊖</span></button>
+    <div class="zoom" role="group" aria-label="Zoom">
+      <button type="button" id="z-out" aria-label="Zoom out">−</button>
+      <button type="button" id="z-fit" aria-label="Show the whole map">all</button>
+      <button type="button" id="z-in" aria-label="Zoom in">+</button>
+    </div>
   </div>
 
-  <div class="term" id="term" role="dialog" aria-label="Terminal" hidden>
-    <div class="term-bar"><span>alan@fung: ~ · zsh</span><button type="button" id="term-x" aria-label="Close terminal">esc ✕</button></div>
-    <div class="term-out" id="term-out" aria-live="polite"></div>
-    <form class="term-in" id="term-form" autocomplete="off">
-      <label for="term-input">alan@fung:~$</label>
-      <input id="term-input" spellcheck="false" autocapitalize="off" placeholder="type help" />
-    </form>
+  <div class="contact" id="contact" hidden>
+    <a class="c-mail" href="#"></a>
+    <button type="button" id="c-copy">copy</button>
+    <a class="c-gh" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="/blog/">StudyLog</a>
   </div>
 
-  <div class="toast" id="toast" role="status"></div>
+  <section class="list" id="list" role="dialog" aria-modal="false" aria-labelledby="list-h" hidden>
+    <header><h2 id="list-h">Everything, as a list</h2><button type="button" id="list-x" aria-label="Close the list">esc ✕</button></header>
+    <ol class="list-projects" id="list-projects"></ol>
+    <h3>Path</h3>
+    <ol class="list-path" id="list-path"></ol>
+    <h3>Elsewhere</h3>
+    <p class="list-more" id="list-more"></p>
+  </section>
+
+  <section class="page" id="page" aria-labelledby="pg-name" hidden>
+    <header class="pg-top">
+      <a class="pg-back" id="pg-back" href="#/"><span aria-hidden="true">←</span> map</a>
+      <p class="pg-crumb" aria-hidden="true"><span>map</span><i></i><b id="pg-crumb"></b></p>
+      <nav class="pg-nav" aria-label="Other projects">
+        <a id="pg-prev" href="#/" aria-label="Previous project">‹</a>
+        <span id="pg-count"></span>
+        <a id="pg-next" href="#/" aria-label="Next project">›</a>
+      </nav>
+    </header>
+    <div class="pg-body">
+      <div class="pg-fig" id="pg-fig"><canvas id="pg-cv"></canvas></div>
+      <div class="pg-side">
+        <p class="pg-kind" id="pg-kind"></p>
+        <h2 id="pg-name"></h2>
+        <p class="pg-q" id="pg-q"></p>
+        <p class="pg-line" id="pg-line"></p>
+        <input class="pg-query" id="pg-query" type="search" placeholder="Ask my notes something" aria-label="Search my notes" hidden />
+        <div class="pg-ctl">
+          <label for="pg-range" id="pg-label"></label>
+          <output id="pg-out" for="pg-range"></output>
+          <input type="range" id="pg-range" />
+        </div>
+        <dl class="pg-live" id="pg-live" aria-live="off"></dl>
+        <p class="pg-proof" id="pg-proof"></p>
+        <div class="pg-links" id="pg-links"></div>
+        <details class="pg-how"><summary>How it's built</summary><ol id="pg-how"></ol></details>
+        <p class="pg-share" id="pg-share"></p>
+      </div>
+    </div>
+  </section>
+
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+  <noscript>
+    <div class="noscript">
+      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a live map and needs JavaScript. The projects: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/arena/">TripleFind Arena</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+    </div>
+  </noscript>
 
   <script src="/assets/portfolio/data.js"></script>
-  <script src="/assets/portfolio/strings.js"></script>
-  <script src="/assets/portfolio/terrain.js"></script>
-  <script src="/assets/portfolio/sims.js"></script>
-  <script src="/assets/portfolio/app.js"></script>
+  <script src="/assets/portfolio/notes.js"></script>
+  <script src="/assets/portfolio/live/kit.js"></script>
+  <script src="/assets/portfolio/live/relay.js"></script>
+  <script src="/assets/portfolio/live/tracewise.js"></script>
+  <script src="/assets/portfolio/live/onboard.js"></script>
+  <script src="/assets/portfolio/live/atlas.js"></script>
+  <script src="/assets/portfolio/live/studio.js"></script>
+  <script src="/assets/portfolio/live/arena.js"></script>
+  <script src="/assets/portfolio/live/layerline.js"></script>
+  <script src="/assets/portfolio/live/hub.js"></script>
+  <script src="/assets/portfolio/live/app.js"></script>
 </body>
 </html>

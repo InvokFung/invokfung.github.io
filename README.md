@@ -2,40 +2,33 @@
 
 Alan Fung's portfolio, served from GitHub Pages.
 
-The landing page shows one big thing per screen:
+The landing page is one map. Seven projects and a hub sit on a 3×3 grid, and every cell is the
+project itself running live in the browser: Relay routes requests round a deployment you take down,
+Tracewise blames the service you slow, Onboard matches messy records as you slide the threshold, Atlas
+searches my notes on your device, the Studio detector hears a detuned violin note, Arena bots race on
+one board, Layerline slices a gear. Zoomed out, each cell is a dot-matrix print of its own live
+frame; zoom in and it takes input. Click a cell (or press Enter on it) and it opens as a page with a
+slider, live numbers and the result from the real project.
 
-1. **Hero**: my name as a landscape of sound, in WebGL2 (`terrain.js`). Each ridge is a pitch and the
-   loud part spells the name. **Hear it** plays that landscape as one sine per ridge and the ridges
-   follow the audio. **Sing to it** turns on the microphone and the note you sing becomes a ripple.
-   Click or drag on it to make waves (a damped 2D wave equation on the height field).
-2. **Work**: one flagship at a time on a stage. The footage is recorded from the project's own live
-   page and loops; the stage moves on every few seconds unless you are looking. **Try it here** swaps
-   the footage for a small model of the idea you can poke (`sims.js`), **How it works** opens the case
-   study (`#work/<id>` links straight to one).
-3. **About**: three numbers. **Path**: six steps from the first commit to Forward Deployed Engineer.
-4. **Tools**: a marquee of what I build with. Pick one and the stage jumps to the project that uses it.
-5. **Contact**.
+- Drag to move, scroll or pinch to zoom, <kbd>L</kbd> for a plain list, arrows to step, <kbd>Esc</kbd> to back out.
+- Sound is off until the visitor turns it on. Reduced motion skips the opening and halves the speed.
+- A service worker keeps the page working offline, and Relay loses its deployments with the connection.
 
-Extras: three themes, and <kbd>`</kbd> opens a terminal (`help`, `show relay`, `try atlas`,
-`skills c++`, `git log`, `name Ada`, `play`, `sing`, `theme paper`…). Nothing from the microphone
-leaves the page, and nothing plays until the visitor asks.
+Files:
 
-- `index.html`: page shell
-- `assets/portfolio/data.js`: **all content** (profile, about lines, section headings, path, skills, eras, projects, blog stats)
-- `assets/portfolio/app.js`: the stage, reveals, case studies, marquee, terminal
-- `assets/portfolio/terrain.js`: the hero (ridge curtains, MSAA, bloom, synth, microphone, a canvas fallback)
-- `assets/portfolio/sims.js`: the "try it" models, one class per flagship
-- `assets/portfolio/strings.js`: audio unlock and the pitch detector (no page code)
-- `assets/portfolio/notes.js`: the note index the Atlas model searches; rebuild with `python3 assets/portfolio/notes.py`
-- `assets/portfolio/media/<id>.{webm,mp4,webp}`: footage per flagship (VP9, H.264 fallback, poster)
-- `assets/portfolio/style.css`: themes and layout
+- `index.html`: page shell, the list, the contact card and the project page
+- `assets/portfolio/data.js`: **all content** (profile, path, skills, projects, and the `live` copy per figure)
+- `assets/portfolio/live/kit.js`: shared drawing helpers and the `Fig` base class
+- `assets/portfolio/live/{relay,tracewise,onboard,atlas,studio,arena,layerline,hub}.js`: one live figure each
+- `assets/portfolio/live/app.js`: the map (camera, zoom, dot matrix, spokes), input, pages, sound, offline
+- `assets/portfolio/live/live.css`: the HUD, list, page and transitions
+- `assets/portfolio/notes.js`: the note index Atlas searches; rebuild with `python3 assets/portfolio/notes.py`
+- `assets/portfolio/media/<id>.webp`: a still per flagship, used for link previews
+- `sw.js`: network-first cache for the home page
 
-To add a project, push an object onto `projects` in `data.js` (`tier: "flagship"` or
-`"experiment"`, `status: "live" | "source" | "wip"`, a `color`, a `question`, optional `metrics`). A
-flagship also needs footage in `media/` under its id (16:10, about 8 s, seamless loop) and a model
-in `sims.js` under its id. A project is linked to every skill named in its `stack` or `uses`. To add
-a skill, put it in a `skills` group (with `proof` if no shipped project uses it yet). Blog numbers
-in `writing` are a snapshot and need a manual refresh.
+A figure implements `size`, `step`, `draw`, pointer handlers, `set(v)` with a `slider`, and `stats()`.
+To add one, write it in `live/`, give it a cell in `CELL` in `live/app.js` and a `live` entry in
+`data.js`. Blog numbers in `writing` are a snapshot and need a manual refresh.
 
 Other corners: `/relay/` (Relay), `/tracewise/` (Tracewise), `/onboard/` (Onboard), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/arena/` (TripleFind Arena), `/layerline/` (Layerline),
 `/ptimer/` (ChillTimer), `/triplefind/` (TripleFind).

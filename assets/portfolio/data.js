@@ -1,8 +1,8 @@
 /*
  * Everything the portfolio shows lives in this file.
  *
- *   New project   → add an object to `projects` (tier "flagship" or "experiment"); a flagship also
- *                   wants footage in assets/portfolio/media/<id>.mp4 + <id>.webp and a sketch in sims.js.
+ *   New project   → add an object to `projects` (tier "flagship" or "experiment"); a flagship on the
+ *                   map also needs a figure in assets/portfolio/live/, a cell in live/app.js and a `live` entry below.
  *   New skill     → add it to a group in `skills`; projects that list it in `stack` or `uses` are wired to it.
  *   New step      → add it to `path` (the career line, oldest first).
  *   Blog numbers  → update `writing` (a snapshot of /blog at the time of editing).
@@ -297,6 +297,22 @@ window.PORTFOLIO = {
       stack: ["Next.js", "Markdown", "KaTeX", "Python"], links: { live: "/blog/" }
     }
   ],
+
+  /*
+   * The map on the home page. Per project: `tag` is the headline number shown on the map, `line` is
+   * the one instruction beside its live figure, and `proof` is the measured result from the real
+   * project, quoted on its page. One short sentence each, and every number must match `metrics`.
+   */
+  live: {
+    relay: { tag: ["99.98%", "answered in an outage"], line: "Take a deployment down. The answers keep landing.", proof: "The real gateway answers 99.98% of calls through an outage. Without it, 68.6%." },
+    tracewise: { tag: ["98.9%", "culprit named first"], line: "Click a service to slow it down. Tracewise follows the slow spans to the cause.", proof: "Over 200 injected faults it named the culprit first 98.9% of the time. The best dashboard guess managed 66.1%." },
+    onboard: { tag: ["0.977", "match F1"], line: "Slide the threshold. Too low merges strangers, too high splits people.", proof: "On 10,200 messy records the real pipeline scores 0.977 F1. Matching on email alone gets 0.659." },
+    atlas: { tag: ["85%", "right first time, no server"], line: "Ask my notes anything. The search runs here, on your device.", proof: "The full Atlas searches 5,551 passages, gets 85% right first time and answers in about half a millisecond." },
+    intonation: { tag: ["0.17¢", "worst error"], line: "Detune the string. The detector still hears it to a fraction of a cent.", proof: "The real detector's worst error on clean tones is 0.17 cents, with no octave slips in 182 noisy ones." },
+    arena: { tag: ["1,000", "clients load tested"], line: "Three bots race on one board. Drag back through the log to replay any flip.", proof: "Load tested to 1,000 clients at 2.7 ms p99 per flip, and every match is an event log." },
+    layerline: { tag: ["66 KB", "of WebAssembly"], line: "Drag the plane through the part. Each layer becomes walls, infill and a nozzle path.", proof: "The real slicer is 66 KB of WebAssembly and slices a full gear in 21 ms, 8× faster than TypeScript." },
+    notes: { tag: ["174", "notes"], line: "Every note I've published, one square each. Click one to read it." }
+  },
 
   // Snapshot of /blog (174 posts as of 2026-10-02).
   writing: {
