@@ -1,11 +1,11 @@
 /*
- * Keeps the home page working offline. Only the home page and its own files are handled, always
- * network first, so an online visit never sees a stale copy. Everything else on the site (the
- * blog, the project apps) is left alone.
+ * Keeps the intro (/) and the full portfolio (/explore/) working offline. Only those two pages and
+ * their own files are handled, always network first, so an online visit never sees a stale copy.
+ * Everything else on the site (the blog, the project apps) is left alone.
  */
-const CACHE = "home-v1";
-const MINE = (url) =>
-  url.origin === location.origin && (url.pathname === "/" || url.pathname === "/index.html" || url.pathname.startsWith("/assets/portfolio/"));
+const CACHE = "home-v2";
+const PAGES = ["/", "/index.html", "/explore/", "/explore/index.html"];
+const MINE = (url) => url.origin === location.origin && (PAGES.includes(url.pathname) || url.pathname.startsWith("/assets/portfolio/"));
 const FONTS = (url) => url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com";
 
 self.addEventListener("install", () => self.skipWaiting());
@@ -26,6 +26,6 @@ self.addEventListener("fetch", (e) => {
         }
         return res;
       })
-      .catch(() => caches.match(e.request, { ignoreSearch: true }).then((hit) => hit || (e.request.mode === "navigate" ? caches.match("/") : Response.error())))
+      .catch(() => caches.match(e.request, { ignoreSearch: true }).then((hit) => hit || (e.request.mode === "navigate" ? caches.match(url.pathname.startsWith("/explore") ? "/explore/" : "/") : Response.error())))
   );
 });

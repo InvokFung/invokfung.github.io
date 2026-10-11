@@ -136,10 +136,12 @@
   /* ------------------------------------------------------------------ the words: one section per stop */
   const P = D.profile;
   const flow = $("#flow");
+  // the project itself, and its case study on the full portfolio at /explore/
   const linkBtns = (p) => {
     const L = p.links, out = [];
     if (L.live) out.push(`<a class="btn" href="${esc(L.live)}">Open ${esc(p.name)} <span aria-hidden="true">↗</span></a>`);
-    if (L.source) out.push(`<a class="btn ghost" href="${esc(L.source)}" target="_blank" rel="noopener">Source</a>`);
+    if (p.tier === "flagship") out.push(`<a class="btn ghost" href="/explore/#work/${esc(p.id)}">Case study</a>`);
+    else if (L.source) out.push(`<a class="btn ghost" href="${esc(L.source)}" target="_blank" rel="noopener">Source</a>`);
     return out.join("");
   };
   const tryLine = (t) => `<p class="pn-try"><i aria-hidden="true"></i><span>${esc(t)}</span></p>`;
@@ -152,7 +154,7 @@
       <h2 class="pn-hello" data-decode>${esc(P.name)}</h2>
       <p class="pn-tag">${esc(tagA)}<em>${esc(tagB)}</em></p>
       <p class="pn-lede">${esc(D.home.lede)}</p>
-      <p class="pn-contact"><a href="mailto:${esc(P.email)}">${esc(P.email)}</a><a href="${esc(P.github)}" target="_blank" rel="noopener">GitHub</a><a href="/blog/">StudyLog</a></p>
+      <p class="pn-contact"><a href="mailto:${esc(P.email)}">${esc(P.email)}</a><a href="${esc(P.github)}" target="_blank" rel="noopener">GitHub</a><a href="/explore/">Full portfolio</a></p>
       <span class="cue" aria-hidden="true"><i></i></span>`;
   }
   function projectHTML(n) {
@@ -184,7 +186,8 @@
       <p class="pn-kind"><b>Path</b> · ${esc(first.y)} to ${esc(lastStep.y)}</p>
       <h2 class="pn-name pn-name-s">${D.sections.path}</h2>
       ${tryLine("Click a year on the route to see what it added.")}
-      <p class="pn-lede">${esc(P.education)}, then a new title every year since 2023, each one closer to the people using the software.</p>`;
+      <p class="pn-lede">${esc(P.education)}, then a new title every year since 2023, each one closer to the people using the software.</p>
+      <div class="pn-links"><a class="btn ghost" href="/explore/#history">The full story</a></div>`;
   }
   function contactHTML() {
     return `
@@ -192,7 +195,7 @@
       <h2 class="pn-name" data-decode>Say hello.</h2>
       <p class="pn-lede">${esc(D.home.contact)}</p>
       <a class="pn-mail" href="mailto:${esc(P.email)}">${esc(P.email)}</a>
-      <div class="pn-links"><button type="button" class="btn" id="pn-copy">Copy email</button><a class="btn ghost" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a><a class="btn ghost" href="/blog/">StudyLog</a></div>
+      <div class="pn-links"><button type="button" class="btn" id="pn-copy">Copy email</button><a class="btn ghost" href="/explore/">Full portfolio</a><a class="btn ghost" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a></div>
       <p class="pn-foot">© ${new Date().getFullYear()} ${esc(P.name)}. Every cell on this page is running in your browser.</p>`;
   }
   flow.innerHTML = STOPS.map((s) => {

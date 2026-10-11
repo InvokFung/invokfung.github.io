@@ -1,8 +1,12 @@
 /*
  * Everything the portfolio shows lives in this file.
  *
+ * Two pages read it: the intro at / (assets/portfolio/live/) and the full portfolio at /explore/
+ * (assets/portfolio/explore/).
+ *
  *   New project   → add an object to `projects` (tier "flagship" or "experiment"); a flagship on the
- *                   map also needs a figure in assets/portfolio/live/, a cell in live/app.js and a `live` entry below.
+ *                   map also needs a figure in assets/portfolio/live/, a cell in live/app.js and a `live` entry below,
+ *                   and a tile sketch in explore/sims.js.
  *   New skill     → add it to a group in `skills`; projects that list it in `stack` or `uses` are wired to it.
  *   New step      → add it to `path` (the career line, oldest first).
  *   Blog numbers  → update `writing` (a snapshot of /blog at the time of editing).
@@ -50,6 +54,32 @@ window.PORTFOLIO = {
     work: "Seven questions I couldn't <em>leave alone.</em>",
     path: "One repo in 2018. <em>Forward deployed</em> in 2026.",
     tools: "Pick a tool to see where I used it."
+  },
+
+  /*
+   * Headings on the full portfolio at /explore/. <em>…</em> is drawn in the accent italic. Placeholders:
+   *   {skills} skill count · {Flagships} spelled flagship count · {chapters} spelled chapter count · {notes} note count
+   *   {Hover} / {hover} "Hover" or "Tap"
+   */
+  explore: {
+    skills: {
+      title: "No skill without a <em>receipt</em>",
+      lede: "{skills} skills, each plugged into the work that proves it. {Hover} one to follow its cables."
+    },
+    work: {
+      title: "{Flagships} questions I couldn't <em>leave alone</em>",
+      lede: "Every tile is running. Go on, break something."
+    },
+    // the line under the tiles; {notes} is the note count, the link to older experiments is added after it
+    experiments: "Every one of them started as notes in StudyLog: {notes} so far.",
+    history: {
+      title: "How a Java group project became a <em>career</em>",
+      lede: "Keep scrolling. The years run sideways."
+    },
+    contact: {
+      title: "Say <em>hello</em>",
+      lede: "A question about a project, or an idea worth building? Run the line."
+    }
   },
 
   // The career line, oldest first. `d` opens under the step.
@@ -157,28 +187,30 @@ window.PORTFOLIO = {
       picked: ["WebAssembly", "Web Workers", "Web Audio", "Search & retrieval", "Computational geometry", "Entity resolution", "Data quality & PII"],
       projects: ["relay", "tracewise", "onboard", "dispatch", "atlas", "intonation", "layerline"],
       grew: [["2026", "How LLMs work", "relay"], ["2025", "OpenTelemetry notes", "tracewise"], ["2022", "Probability models", "onboard"], ["2022", "StudyLog", "atlas"], ["2020", "Signals and systems", "intonation"], ["2022", "Data structures and algorithms", "dispatch"], ["2025", "Modern C++", "layerline"]],
-      events: [["2026-10", "Ship Relay, Tracewise and Onboard"], ["2026-10", "Ship Atlas, Studio, Arena and Layerline"], ["2026-10", "Rebuild this site: a name you can hear, tiles you can break"]]
+      events: [["2026-10", "Ship Relay, Tracewise and Onboard"], ["2026-10", "Ship Atlas, Studio, Arena and Layerline"], ["2026-10", "Rebuild this site: a name you can hear, tiles you can break"], ["2026-10", "Ship Dispatch, and give this site a front door"]]
     },
     {
       id: "next", label: "next", title: "What's next", role: "Still building",
       text: "Every flagship has one milestone left. After that, whatever I can't stop thinking about.",
       picked: [],
-      events: [["soon", "Relay: an embedding match for paraphrases"], ["soon", "Onboard: learn from the review queue"], ["soon", "Tracewise: take traffic from a real OpenTelemetry Collector"], ["soon", "Arena: deploy to a real cluster"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
+      events: [["soon", "Relay: an embedding match for paraphrases"], ["soon", "Onboard: learn from the review queue"], ["soon", "Tracewise: take traffic from a real OpenTelemetry Collector"], ["soon", "Dispatch: plan on a real road network"], ["soon", "Layerline: print a real part"], ["soon", "Atlas: neural embeddings + cited answers"], ["soon", "Write-up: pitch detection from scratch"]]
     }
   ],
 
   /*
-   * tier: "flagship" (on the stage, with footage and a case study) | "experiment" (linked from the footer)
+   * tier: "flagship" (a live tile and a case study) | "experiment" (a line under the tiles on /explore/)
    * status: "live" | "source" | "wip"
-   * metrics: measured numbers [value, label]; the first is the headline on the stage.
+   * motif: the case study's generated cover on /explore/: "passages" | "pitch" | "cards" | "layers" | "merge" |
+   *        "spans" | "route" | "streets" | "dots" (default)
+   * metrics: measured numbers [value, label]; the first is the headline on the tile.
    * uses: skills the project proves beyond the ones already named in `stack`.
-   * featured: true marks the work closest to the day job; it comes first.
-   * color: the project's colour on the stage and in its case study.
+   * featured: true marks the work closest to the day job; it comes first and gets the bigger tiles.
+   * color: the project's colour on the map, its tile and its case study.
    * why / how / milestones are optional and fill the case study.
    */
   projects: [
     {
-      id: "relay", color: "#ffb547", tier: "flagship", featured: true, name: "Relay", year: 2026, kind: "LLM gateway", status: "live",
+      id: "relay", color: "#ffb547", tier: "flagship", featured: true, motif: "route", name: "Relay", year: 2026, kind: "LLM gateway", status: "live",
       question: "When the model provider goes down, can the product stay up?",
       pitch: "An LLM gateway that keeps model calls safe, reliable and accountable. Each request passes nine stages, from PII redaction and an injection screen to a semantic cache, fallbacks across regions and a hash-chained audit log. Send your own prompt through it, to a simulator or to Claude with your own key.",
       why: "Once a model is inside a product, the hard questions are not about prompts: what happens to customer data on the way in, who pays when usage runs away, and what users see when the provider has an outage. Relay answers all three in one place, in front of every model call, and backs each answer with a benchmark.",
@@ -195,7 +227,7 @@ window.PORTFOLIO = {
       links: { live: "/relay/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/relay-src" }
     },
     {
-      id: "tracewise", color: "#62b6ff", tier: "flagship", featured: true, name: "Tracewise", year: 2026, kind: "Observability", status: "live",
+      id: "tracewise", color: "#62b6ff", tier: "flagship", featured: true, motif: "spans", name: "Tracewise", year: 2026, kind: "Observability", status: "live",
       question: "When checkout breaks, can the traces name the culprit?",
       pitch: "Break a microservice system and watch the tracing pipeline find the cause. Eleven simulated services send OpenTelemetry spans through your browser. Inject latency, errors or a bad deploy, and Tracewise opens an incident and ranks the likely culprit, evidence first.",
       why: "When something breaks on a customer's system, the first hour goes on finding where. Dashboards show what got slower, not what caused it: across these runs, blaming the service closest to the alert found the real cause only 17% of the time. Tracewise asks whether traces can answer the only question that matters in an incident: which service do we fix?",
@@ -212,7 +244,7 @@ window.PORTFOLIO = {
       links: { live: "/tracewise/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/tracewise-src" }
     },
     {
-      id: "onboard", color: "#4fe3c1", tier: "flagship", featured: true, name: "Onboard", year: 2026, kind: "Customer data", status: "live",
+      id: "onboard", color: "#4fe3c1", tier: "flagship", featured: true, motif: "merge", name: "Onboard", year: 2026, kind: "Customer data", status: "live",
       question: "Can three messy exports become one customer table you'd trust?",
       pitch: "A CRM, a billing system and a help desk each remember the same 4,000 customers a little differently. Feed in all three exports and one customer table comes out, every value traced to the file, row and column it came from. It runs entirely in your browser.",
       why: "Every customer project starts with their data, and their data never agrees with itself. Onboard is that first week turned into a tool: profile it, protect it, map it, decide who is who, and score every one of those decisions against the truth.",
@@ -229,7 +261,7 @@ window.PORTFOLIO = {
       links: { live: "/onboard/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/onboard-src" }
     },
     {
-      id: "dispatch", color: "#ff7ab6", tier: "flagship", featured: true, name: "Dispatch", year: 2026, kind: "Field service", status: "live",
+      id: "dispatch", color: "#ff7ab6", tier: "flagship", featured: true, motif: "streets", name: "Dispatch", year: 2026, kind: "Field service", status: "live",
       question: "When a technician calls in sick at nine, does every customer still get their visit?",
       pitch: "Dispatch plans a day of home-service visits for a team of technicians, then re-plans it every time the day changes: a sick call, an urgent job, an overrun, a traffic jam. Send a technician home, drop an urgent job on the map or slow the traffic, and see which jobs move and to whom.",
       why: "A good morning plan meets a bad day at nine o'clock, when someone calls in sick, and that is the part a dispatcher actually lives with. I wanted re-planning that is fast, doesn't reshuffle the whole day, and is measured against what a dispatch desk does without a solver.",
@@ -246,7 +278,7 @@ window.PORTFOLIO = {
       links: { live: "/dispatch/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/dispatch-src" }
     },
     {
-      id: "atlas", color: "#a78bfa", tier: "flagship", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
+      id: "atlas", color: "#a78bfa", tier: "flagship", motif: "passages", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
       question: "Can a search engine run with no server at all?",
       pitch: "A search engine over 5,551 passages of my notes that runs entirely in your browser: no server, no API key, no model. Ask it something and it shows its working, every stage with its output and its time on your device.",
       why: "I had 173 long posts and could only find them by date and tag. I wanted to ask my notebook a question and get the right paragraph back, without renting a server or shipping a model.",
@@ -263,7 +295,7 @@ window.PORTFOLIO = {
       links: { live: "/atlas/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/atlas-src" }
     },
     {
-      id: "intonation", color: "#c8ff4a", tier: "flagship", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "live",
+      id: "intonation", color: "#c8ff4a", tier: "flagship", motif: "pitch", name: "Intonation Studio", year: 2026, kind: "Real-time audio", status: "live",
       question: "Can a browser tab hear a violin to the cent?",
       pitch: "A practice room that listens to a violin or a piano and scores a whole scale, note by note, to the cent. No instrument to hand? A synthesized violinist plays the drill for you.",
       why: "A tuner shows one note at a time, but practice is scales and arpeggios, and what matters is which notes keep drifting. Studio scores whole drills by grade and remembers how each note improves.",
@@ -280,7 +312,7 @@ window.PORTFOLIO = {
       links: { live: "/studio/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/studio-src" }
     },
     {
-      id: "arena", color: "#ff7ab6", tier: "flagship", name: "TripleFind Arena", year: 2026, kind: "Real-time multiplayer", status: "live",
+      id: "arena", color: "#ff7ab6", tier: "experiment", motif: "cards", name: "TripleFind Arena", year: 2026, kind: "Real-time multiplayer", status: "live",
       question: "Would my 2023 memory game survive 1,000 players?",
       pitch: "My 2023 memory game, rebuilt as a real-time race for two to four players on one board. The server deals and checks every flip, so no client can peek, and every match is an event log you can replay move by move.",
       why: "TripleFind was a single-player browser game. Making it a fair race meant solving real backend problems: hidden information, provably fair deals, reconnects and load.",
@@ -297,7 +329,7 @@ window.PORTFOLIO = {
       links: { live: "/arena/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/arena-src", original: "/triplefind/" }
     },
     {
-      id: "layerline", color: "#ff8a65", tier: "flagship", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "live",
+      id: "layerline", color: "#ff8a65", tier: "flagship", motif: "layers", name: "Layerline", year: 2026, kind: "Geometry + WebAssembly", status: "live",
       question: "How small can a real 3D-printing slicer get?",
       pitch: "Drop in an STL, get G-code a printer can run. The slicer is 66 KB of WebAssembly built from freestanding C++17, with no Emscripten and no libc. It slices on a background thread and paints each layer the moment it is done.",
       why: "A slicer is computational geometry with no room for hand-waving: broken meshes, walls thinner than the nozzle, exact tie-breaking, and an output a printer has to obey. It pulls my C++, 3D printing and graphics notes into one tool.",
@@ -314,7 +346,7 @@ window.PORTFOLIO = {
       links: { live: "/layerline/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/layerline-src" }
     },
     {
-      id: "studylog", color: "#b7b6b0", tier: "experiment", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",
+      id: "studylog", color: "#b7b6b0", tier: "experiment", motif: "dots", name: "StudyLog", year: 2022, kind: "Knowledge base", status: "live",
       pitch: "Where every deep dive ends up: 174 long-form notes on databases, cloud, C++, graphics and maths, with diagrams, maths typesetting and full-text search.",
       how: ["Custom build pipeline with static export", "Diagrams, KaTeX and local full-text search"],
       stack: ["Next.js", "Markdown", "KaTeX", "Python"], links: { live: "/blog/" }

@@ -1,6 +1,16 @@
 # invokfung.github.io
 
-Alan Fung's portfolio, served from GitHub Pages.
+Alan Fung's portfolio, served from GitHub Pages. It has two pages that link to each other:
+
+- `/` is the intro: one live map you travel by scrolling, ending in `contact()`.
+- `/explore/` is the full portfolio: a tile you can break for every flagship, each with its case
+  study, the skills patch bay, the history loop, a terminal and the page's own live source.
+
+Every project section on the intro has a **Case study** button that opens `/explore/#work/<id>`,
+the path links to `/explore/#history`, and the start and contact sections link to `/explore/`. On
+`/explore/` the name in the corner goes back to `/`. Both pages read the same `data.js`.
+
+## The intro
 
 The landing page is one map you travel by scrolling. Seven projects, StudyLog and a hub sit on a
 3×3 grid, and every cell is the project itself running live in the browser. The words run down the
@@ -27,12 +37,24 @@ Files:
 - `assets/portfolio/live/live.css`: the HUD, the thread, the sections
 - `assets/portfolio/notes.js`: the note index Atlas searches; rebuild with `python3 assets/portfolio/notes.py`
 - `assets/portfolio/media/<id>.webp`: a still per flagship, used for link previews
-- `sw.js`: network-first cache for the home page
+- `sw.js`: network-first cache for both pages
 
 A figure implements `size`, `step`, `draw`, pointer handlers, `set(v)` with a `slider`, and `stats()`.
 To add one, write it in `live/`, give it a cell in `CELL` and a place in `ORDER` in `live/app.js`,
 and a `live` entry in `data.js`. `live/arena.js` is the TripleFind Arena figure, kept but no longer
 on the map. Blog numbers in `writing` are a snapshot and need a manual refresh.
+
+## The full portfolio
+
+- `explore/index.html`: page shell (nav, source editor, terminal, case study dialog)
+- `assets/portfolio/explore/app.js`: the sections, tiles, patch bay, history loop, case studies, terminal and live source
+- `assets/portfolio/explore/sims.js`: the live sketch on each tile; a new flagship needs one in `KINDS`
+- `assets/portfolio/explore/spectro.js`, `strings.js`: the hero, my name drawn as sound
+- `assets/portfolio/explore/style.css`: the three themes and everything else
+
+Its headings are `explore` in `data.js`, and each project's case study cover is its `motif`. It opens
+dark like the intro; the theme is a live value in the source panel. TripleFind Arena is listed under
+the tiles as an experiment rather than as a tile.
 
 Other corners: `/relay/` (Relay), `/tracewise/` (Tracewise), `/onboard/` (Onboard), `/dispatch/` (Dispatch), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/layerline/` (Layerline),
 `/arena/` (TripleFind Arena), `/ptimer/` (ChillTimer), `/triplefind/` (TripleFind).
