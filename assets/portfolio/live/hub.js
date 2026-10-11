@@ -49,7 +49,7 @@
       return false;
     }
     draw(ctx) {
-      // on the last stop of the tour the panel says who I am, so the cell is just the route, bigger
+      // beside the Path section the words say who I am, so the cell is just the route, bigger
       const L = this.lay(), ro = this.routeOnly, s = this.s * (ro ? 1.35 : 1);
       if (ro) this.links = [];
       else this.drawName(ctx, s);
@@ -72,13 +72,18 @@
       font(ctx, big, 400, SERIF);
       ctx.fillStyle = INK;
       ctx.fillText(p.name, nx - 3 * s, ny);
-      font(ctx, big * 0.3, 400, SERIF);
+      // the line from data.js, its <em> part in italics, shrunk if it would run off the cell
+      const m = p.tagline.match(/^(.*?)<em>(.*?)<\/em>/) || [0, p.tagline, ""];
+      let tp = big * 0.3;
+      font(ctx, tp, 400, SERIF);
+      const full = ctx.measureText(m[1] + m[2]).width;
+      if (full > w * 0.86) { tp *= (w * 0.86) / full; font(ctx, tp, 400, SERIF); }
       ctx.fillStyle = ink(0.72);
-      const tag = "I go where the software ";
-      ctx.fillText(tag, nx, ny + big * 0.5);
-      ctx.font = `italic 400 ${(big * 0.3).toFixed(1)}px ${SERIF}`;
+      ctx.fillText(m[1], nx, ny + big * 0.5);
+      const tw = ctx.measureText(m[1]).width;
+      ctx.font = `italic 400 ${tp.toFixed(1)}px ${SERIF}`;
       ctx.fillStyle = c;
-      ctx.fillText("breaks.", nx + (font(ctx, big * 0.3, 400, SERIF), ctx.measureText(tag).width), ny + big * 0.5);
+      ctx.fillText(m[2], nx + tw, ny + big * 0.5);
 
       // contact, as plain links
       ctx.textBaseline = "middle";

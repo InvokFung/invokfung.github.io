@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Alan Fung · Forward Deployed Engineer</title>
-<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. The home page is a live map of seven projects you can break: an LLM gateway, tracing that names the broken service, customer-data matching, search with no server, a pitch detector, a multiplayer game server and a slicer in WebAssembly." />
+<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. Selected work, running live as you scroll: an LLM gateway, tracing that names the broken service, customer-data matching, field-service dispatch, search with no server, a pitch detector and a slicer in WebAssembly." />
 <meta name="theme-color" content="#0a0b0d" />
 <meta property="og:title" content="Alan Fung · Forward Deployed Engineer" />
-<meta property="og:description" content="I go where the software breaks. Seven projects, all running, all yours to break." />
+<meta property="og:description" content="From the customer's desk to production. Selected work, every piece running live." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://invokfung.github.io/" />
 <meta property="og:image" content="https://invokfung.github.io/assets/portfolio/media/relay.webp" />
@@ -18,56 +18,27 @@
 <link rel="stylesheet" href="/assets/portfolio/live/live.css" />
 </head>
 <body>
-  <a class="skip" href="#list" id="skip">See everything as a list</a>
-  <h1 class="sr">Alan Fung, Forward Deployed Engineer. I go where the software breaks.</h1>
+  <a class="skip" href="#/contact">Skip to contact</a>
+  <h1 class="sr">Alan Fung, Forward Deployed Engineer. From the customer's desk to production.</h1>
 
   <canvas id="map" aria-hidden="true"></canvas>
-  <nav id="hits" aria-label="Projects on the map"></nav>
 
   <header class="hud top">
     <a class="brand" id="brand" href="#/"><b>Alan Fung</b><span>Forward Deployed Engineer</span></a>
-    <nav class="trace" id="trace" aria-label="Views">
-      <button type="button" data-v="map">map</button>
-      <button type="button" data-v="list">list</button>
-      <button type="button" data-v="contact">contact()</button>
-      <i class="pk" aria-hidden="true"></i>
-    </nav>
     <div class="tools">
       <p class="status" id="status" title=""><i aria-hidden="true"></i><span>connecting</span></p>
       <button type="button" class="sound" id="sound" aria-pressed="false" title="Sound is off until you turn it on"><i aria-hidden="true"><b></b><b></b><b></b></i><span>sound off</span></button>
     </div>
   </header>
 
-  <aside class="panel" id="panel" aria-label="What you are looking at">
-    <div class="pn-body" id="pn-body" aria-live="polite"></div>
-    <nav class="pn-nav" aria-label="The tour">
-      <button type="button" class="pn-prev" id="pn-prev" aria-label="Back">←</button>
-      <div class="rail-w"><ol class="rail" id="rail"></ol><i class="pk" id="rail-pk" aria-hidden="true"></i></div>
-      <button type="button" class="pn-next" id="pn-next"><span id="pn-next-k">Next</span> <b id="pn-next-name"></b> <i aria-hidden="true">→</i></button>
-    </nav>
-  </aside>
-
-  <div class="contact" id="contact" hidden>
-    <a class="c-mail" href="#"></a>
-    <button type="button" id="c-copy">copy</button>
-    <a class="c-gh" href="#" target="_blank" rel="noopener">GitHub ↗</a>
-    <a href="/blog/">StudyLog</a>
-  </div>
-
-  <section class="list" id="list" role="dialog" aria-modal="false" aria-labelledby="list-h" hidden>
-    <header><h2 id="list-h">Everything, as a list</h2><button type="button" id="list-x" aria-label="Close the list">esc ✕</button></header>
-    <ol class="list-projects" id="list-projects"></ol>
-    <h3>Path</h3>
-    <ol class="list-path" id="list-path"></ol>
-    <h3>Elsewhere</h3>
-    <p class="list-more" id="list-more"></p>
-  </section>
+  <div class="thread" id="thread" aria-hidden="true"></div>
+  <main class="flow" id="flow"></main>
 
   <p class="toast" id="toast" role="status" aria-live="polite"></p>
 
   <noscript>
     <div class="noscript">
-      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a live map and needs JavaScript. The projects: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/arena/">TripleFind Arena</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a live map and needs JavaScript. Selected work: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
     </div>
   </noscript>
 
@@ -79,7 +50,7 @@
   <script src="/assets/portfolio/live/onboard.js"></script>
   <script src="/assets/portfolio/live/atlas.js"></script>
   <script src="/assets/portfolio/live/studio.js"></script>
-  <script src="/assets/portfolio/live/arena.js"></script>
+  <script src="/assets/portfolio/live/dispatch.js"></script>
   <script src="/assets/portfolio/live/layerline.js"></script>
   <script src="/assets/portfolio/live/hub.js"></script>
   <script src="/assets/portfolio/live/app.js"></script>

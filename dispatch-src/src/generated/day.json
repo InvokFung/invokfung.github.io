@@ -1,0 +1,85 @@
+{
+  "citySeed": "harbour-city",
+  "daySeed": "monday",
+  "sha256": "8b1f224219c3bff4ded26131a7ed3b1a8f0ffb8b4a8c963863a407b29c7f18d1",
+  "city": {
+    "nodes": 395,
+    "roads": 667,
+    "bridges": 5,
+    "widthKm": 16.2,
+    "heightKm": 10.2
+  },
+  "techs": 10,
+  "jobs": 76,
+  "windows": {
+    "slot": 24,
+    "half": 20,
+    "day": 32
+  },
+  "skills": [
+    {
+      "skill": "Electrical",
+      "techs": 7,
+      "jobs": 29
+    },
+    {
+      "skill": "Gas",
+      "techs": 3,
+      "jobs": 12
+    },
+    {
+      "skill": "Plumbing",
+      "techs": 5,
+      "jobs": 14
+    },
+    {
+      "skill": "HVAC",
+      "techs": 3,
+      "jobs": 7
+    },
+    {
+      "skill": "Appliances",
+      "techs": 4,
+      "jobs": 14
+    }
+  ],
+  "events": [
+    {
+      "kind": "overrun",
+      "job": 7,
+      "extra": 75
+    },
+    {
+      "kind": "sick",
+      "at": 540,
+      "tech": 0
+    },
+    {
+      "kind": "urgent",
+      "at": 814,
+      "node": 190,
+      "skill": 2,
+      "dur": 55,
+      "task": "Urgent: leak repair"
+    },
+    {
+      "kind": "urgent",
+      "at": 830,
+      "node": 103,
+      "skill": 2,
+      "dur": 35,
+      "task": "Urgent: blocked drain"
+    },
+    {
+      "kind": "traffic",
+      "at": 908,
+      "factor": 1.6
+    },
+    {
+      "kind": "traffic",
+      "at": 978,
+      "factor": 1
+    }
+  ],
+  "generateMs": 39
+}

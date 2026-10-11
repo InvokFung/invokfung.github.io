@@ -15,12 +15,18 @@ window.PORTFOLIO = {
     education: "Information Engineering",
     // [title, from], oldest first; the last one is the current role
     career: [["Web Developer", 2023], ["Full Stack Engineer", 2024], ["Software Engineer", 2025], ["Forward Deployed Engineer", 2026]],
-    // the hero line; <em>…</em> is drawn in the gradient
-    tagline: "I go where the software <em>breaks.</em>",
+    // the hero line; <em>…</em> is drawn in italics
+    tagline: "From the customer's desk <em>to production.</em>",
     email: "aflung10@gmail.com",
     github: "https://github.com/InvokFung",
     firstCommit: 2018,
     focus: ["LLM systems", "observability", "customer data", "full-stack web", "search & retrieval", "graphics"]
+  },
+
+  // The first and last screens of the home page.
+  home: {
+    lede: "Selected work, not the whole shelf. Every piece here is running live, so go ahead and try it.",
+    contact: "A question about a project, or an idea worth building? Write to me."
   },
 
   /*
@@ -53,7 +59,7 @@ window.PORTFOLIO = {
     { y: "2023", r: "Web Developer", d: "Small games and tools, finished and live." },
     { y: "2024", r: "Full Stack Engineer", d: "Photos into 3D models, then a web metaverse." },
     { y: "2025", r: "Software Engineer", d: "Databases, C++, shaders, containers: 86 notes." },
-    { y: "2026", r: "Forward Deployed Engineer", d: "Closer to the people using it. Seven projects, all live." }
+    { y: "2026", r: "Forward Deployed Engineer", d: "Building beside the people who use the software." }
   ],
 
   /*
@@ -149,8 +155,8 @@ window.PORTFOLIO = {
       id: "now", label: "now", title: "The sequels", role: "Seven flagships",
       text: "Seven flagships, each the sequel to an earlier chapter. Pick a year to jump back to it.",
       picked: ["WebAssembly", "Web Workers", "Web Audio", "Search & retrieval", "Computational geometry", "Entity resolution", "Data quality & PII"],
-      projects: ["relay", "tracewise", "onboard", "atlas", "intonation", "arena", "layerline"],
-      grew: [["2026", "How LLMs work", "relay"], ["2025", "OpenTelemetry notes", "tracewise"], ["2022", "Probability models", "onboard"], ["2022", "StudyLog", "atlas"], ["2020", "Signals and systems", "intonation"], ["2023", "TripleFind", "arena"], ["2025", "Modern C++", "layerline"]],
+      projects: ["relay", "tracewise", "onboard", "dispatch", "atlas", "intonation", "layerline"],
+      grew: [["2026", "How LLMs work", "relay"], ["2025", "OpenTelemetry notes", "tracewise"], ["2022", "Probability models", "onboard"], ["2022", "StudyLog", "atlas"], ["2020", "Signals and systems", "intonation"], ["2022", "Data structures and algorithms", "dispatch"], ["2025", "Modern C++", "layerline"]],
       events: [["2026-10", "Ship Relay, Tracewise and Onboard"], ["2026-10", "Ship Atlas, Studio, Arena and Layerline"], ["2026-10", "Rebuild this site: a name you can hear, tiles you can break"]]
     },
     {
@@ -221,6 +227,23 @@ window.PORTFOLIO = {
       stack: ["TypeScript", "React", "Web Workers", "Fellegi-Sunter + EM", "HyperLogLog", "WebCrypto"],
       uses: ["Entity resolution", "Data quality & PII", "Statistics"],
       links: { live: "/onboard/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/onboard-src" }
+    },
+    {
+      id: "dispatch", color: "#ff7ab6", tier: "flagship", featured: true, name: "Dispatch", year: 2026, kind: "Field service", status: "live",
+      question: "When a technician calls in sick at nine, does every customer still get their visit?",
+      pitch: "Dispatch plans a day of home-service visits for a team of technicians, then re-plans it every time the day changes: a sick call, an urgent job, an overrun, a traffic jam. Send a technician home, drop an urgent job on the map or slow the traffic, and see which jobs move and to whom.",
+      why: "A good morning plan meets a bad day at nine o'clock, when someone calls in sick, and that is the part a dispatcher actually lives with. I wanted re-planning that is fast, doesn't reshuffle the whole day, and is measured against what a dispatch desk does without a solver.",
+      how: [
+        "Time-dependent travel on a synthetic city with a river and five bridges. Rush-hour speeds change in steps, so leaving later never arrives sooner, and arrival and latest departure are table lookups.",
+        "Each route keeps two latest-start times per visit, so checking an insertion is O(1) and exact even under rush hour. Regret-3 construction, then adaptive large neighbourhood search with four destroy and three repair operators.",
+        "Every event freezes what is done or under way, repairs the rest in under a millisecond, then searches for up to 50 ms in a Web Worker. Moving a job to another technician costs as much as five minutes of driving, so the day isn't reshuffled for nothing.",
+        "Measured, not guessed: 120 seeded days with a sick call, urgent jobs, an overrun and a traffic spike, scored against the unchanged morning plan and a greedy dispatcher, every re-plan timed; plus 12 Solomon VRPTW instances at a 2.29% mean gap to the best known. 21 tests cover the pieces."
+      ],
+      metrics: [["97.0%", "on time under disruption, vs 90.8%"], ["98.9%", "jobs completed, vs 94.4%"], ["17.6 ms", "median re-plan, 50.0 ms p95"], ["23.5%", "less driving than construction alone"]],
+      milestones: [["Seeded city, technicians and jobs", true], ["Regret insertion + ALNS solver", true], ["Live re-planning on disruptions", true], ["Eval against two baselines", true], ["Real road network data", false]],
+      stack: ["TypeScript", "React", "Web Workers", "ALNS", "Canvas 2D"],
+      uses: ["Optimization", "Scheduling"],
+      links: { live: "/dispatch/", source: "https://github.com/InvokFung/invokfung.github.io/tree/main/dispatch-src" }
     },
     {
       id: "atlas", color: "#a78bfa", tier: "flagship", name: "StudyLog Atlas", year: 2026, kind: "Search engine", status: "live",
@@ -310,6 +333,7 @@ window.PORTFOLIO = {
     atlas: { tag: ["85%", "right first time, no server"], line: "Ask my notes anything. The search runs here, on your device.", proof: "The full Atlas searches 5,551 passages, gets 85% right first time and answers in about half a millisecond." },
     intonation: { tag: ["0.17¢", "worst error"], line: "Detune the string. The detector still hears it to a fraction of a cent.", proof: "The real detector's worst error on clean tones is 0.17 cents, with no octave slips in 182 noisy ones." },
     arena: { tag: ["1,000", "clients load tested"], line: "Three bots race on one board. Drag back through the log to replay any flip.", proof: "Load tested to 1,000 clients at 2.7 ms p99 per flip, and every match is an event log." },
+    dispatch: { tag: ["97.0%", "on time on a bad day"], line: "Send a technician home, or click the map for an urgent job. The day re-plans itself.", proof: "On 120 synthetic days, each with a sick call, urgent jobs and a traffic jam, the real planner kept 97.0% of visits on time. The unchanged morning plan managed 90.8%." },
     layerline: { tag: ["66 KB", "of WebAssembly"], line: "Slide through the part. Each layer becomes walls, infill and a nozzle path.", proof: "The real slicer is 66 KB of WebAssembly and slices a full gear in 21 ms, 8× faster than TypeScript." },
     notes: { tag: ["174", "notes"], line: "Every note I've published, one square each. Click one to read it." }
   },
