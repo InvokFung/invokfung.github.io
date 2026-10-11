@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- the intro's map: nine cells, each project in its colour, the hub in the middle -->
+  <rect width="32" height="32" rx="7" fill="#0a0b0d"/>
+  <g>
+    <rect x="5" y="5" width="6" height="6" rx="1.6" fill="#c8ff4a"/>
+    <rect x="13" y="5" width="6" height="6" rx="1.6" fill="#ff8a65"/>
+    <rect x="21" y="5" width="6" height="6" rx="1.6" fill="#b7b6b0"/>
+    <rect x="5" y="13" width="6" height="6" rx="1.6" fill="#a78bfa"/>
+    <rect x="13" y="13" width="6" height="6" rx="1.6" fill="#ecebe6"/>
+    <rect x="21" y="13" width="6" height="6" rx="1.6" fill="#ffb547"/>
+    <rect x="5" y="21" width="6" height="6" rx="1.6" fill="#ff7ab6"/>
+    <rect x="13" y="21" width="6" height="6" rx="1.6" fill="#4fe3c1"/>
+    <rect x="21" y="21" width="6" height="6" rx="1.6" fill="#62b6ff"/>
+  </g>
+</svg>
