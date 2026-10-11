@@ -1,6 +1,9 @@
 /* The map page. One canvas that never scrolls, and the words scrolling beside it (below it on a phone). */
-/* it and the full portfolio at /explore/ cross-fade into each other where the browser can */
+/* it and the full portfolio at /explore/ cross-fade into each other where the browser can, and a
+   project's name carries over into its case study's title */
 @view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; }
+::view-transition-group(pname) { animation-duration: 0.6s; animation-timing-function: cubic-bezier(0.3, 0, 0.2, 1); }
 :root {
   --bg: #0a0b0d;
   --ink: #ecebe6;
@@ -95,6 +98,19 @@ body.ready .flow { opacity: 1; }
 .pn-tag { margin: 0; font: 400 clamp(26px, 2.3vw, 34px) / 1.15 var(--serif); color: rgba(236, 235, 230, 0.82); }
 .pn-tag em { color: #4fe3c1; }
 .pn-name { margin: -4px 0 0 -2px; font: 400 clamp(46px, 4.4vw, 70px) / 0.95 var(--serif); }
+/* the name is the door to the case study one level down: its corner mark is the map frame's corner */
+.pn-door { position: relative; display: inline-block; padding-right: 0.42em; color: inherit; text-decoration: none; }
+.pn-door i { position: absolute; right: 0.04em; top: 0.12em; width: 0.22em; height: 0.22em; border-top: 2px solid var(--c); border-right: 2px solid var(--c); opacity: 0.75; transition: transform 0.35s var(--ease), opacity 0.35s; }
+.pn-door span[data-decode] { background: linear-gradient(var(--c), var(--c)) 0 100% / 0 2px no-repeat; transition: background-size 0.45s var(--ease); }
+.pn-door:hover i, .pn-door:focus-visible i { transform: translate(0.07em, -0.07em) scale(1.3); opacity: 1; }
+.pn-door:hover span[data-decode], .pn-door:focus-visible span[data-decode] { background-size: 100% 2px; }
+.pn-door:focus-visible { outline: none; }
+/* links inside the copy */
+.pn-lede a, .pn-proof a, .pn-foot a { color: var(--ink); text-decoration: underline 1px; text-decoration-color: color-mix(in srgb, var(--c) 55%, transparent); text-underline-offset: 3px; transition: text-decoration-color 0.25s, color 0.25s; }
+.pn-lede a:hover, .pn-proof a:hover, .pn-foot a:hover { text-decoration-color: var(--c); }
+.pn-proof a { white-space: nowrap; }
+/* diving into a cell: everything but the name gets out of the way */
+body.diving .pn-in > :not(.pn-name), body.diving .hud, body.diving .thread { opacity: 0 !important; transition: opacity 0.3s var(--ease); }
 .pn-name-s { font-size: clamp(34px, 3vw, 46px); line-height: 1.04; }
 .pn-name-s em { font-style: italic; color: var(--dim); }
 .pn-q { margin: 0; font: italic 400 21px/1.3 var(--serif); color: var(--dim); }

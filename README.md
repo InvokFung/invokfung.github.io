@@ -6,9 +6,19 @@ Alan Fung's portfolio, served from GitHub Pages. It has two pages that link to e
 - `/explore/` is the full portfolio: a tile you can break for every flagship, each with its case
   study, the skills patch bay, the history loop, a terminal and the page's own live source.
 
-Every project section on the intro has a **Case study** button that opens `/explore/#work/<id>`,
-the path links to `/explore/#history`, and the start and contact sections link to `/explore/`. On
-`/explore/` the name in the corner goes back to `/`. Both pages read the same `data.js`.
+They are two levels of one map, linked through the design rather than a menu:
+
+- On the intro, a project's name is the door to its case study (`/explore/#work/<id>`), and so is
+  the "How it works" after its measured result. Followed from the cell you are reading, the map
+  dives into that cell first, and where the browser has cross-document view transitions the name
+  carries over into the case study's title.
+- Each case study's cover leads back up to the project running live on the map (`/#/<id>`), and the
+  map surfaces out of that cell. The back button surfaces the same way.
+- The copy links the rest: "the whole shelf" in the opening line, "a new title every year" on the
+  path (`/explore/#history`), "one level down" at the very end, and "on one map" on `/explore/`.
+  Copy in `data.js` can carry `[words](/link/)`. The name in the corner of `/explore/` goes to `/`.
+
+Both pages read the same `data.js`.
 
 ## The intro
 

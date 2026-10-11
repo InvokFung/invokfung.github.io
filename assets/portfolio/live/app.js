@@ -136,14 +136,18 @@
   /* ------------------------------------------------------------------ the words: one section per stop */
   const P = D.profile;
   const flow = $("#flow");
-  // the project itself, and its case study on the full portfolio at /explore/
   const linkBtns = (p) => {
     const L = p.links, out = [];
     if (L.live) out.push(`<a class="btn" href="${esc(L.live)}">Open ${esc(p.name)} <span aria-hidden="true">↗</span></a>`);
-    if (p.tier === "flagship") out.push(`<a class="btn ghost" href="/explore/#work/${esc(p.id)}">Case study</a>`);
-    else if (L.source) out.push(`<a class="btn ghost" href="${esc(L.source)}" target="_blank" rel="noopener">Source</a>`);
+    if (L.source) out.push(`<a class="btn ghost" href="${esc(L.source)}" target="_blank" rel="noopener">Source</a>`);
     return out.join("");
   };
+  // copy in data.js may carry [words](/a/link/); everything else is escaped
+  const md = (t) => esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, w, u) => `<a href="${u}">${w}</a>`);
+  // one level down: a project's case study on the full portfolio at /explore/. Its name is the door,
+  // and following it dives the map into the cell (see dive below).
+  const caseURL = (pid) => `/explore/#work/${esc(pid)}`;
+  const door = (n, pid, name) => `<h2 class="pn-name"><a class="pn-door" href="${caseURL(pid)}" data-dive="${n.id}"><span data-decode>${esc(name)}</span><i aria-hidden="true"></i><span class="sr">, the case study</span></a></h2>`;
   const tryLine = (t) => `<p class="pn-try"><i aria-hidden="true"></i><span>${esc(t)}</span></p>`;
   const ctl = (id, s) => (s ? `<div class="pn-ctl"><label for="rg-${id}">${esc(s.label)}</label><output id="out-${id}" for="rg-${id}"></output><input type="range" id="rg-${id}" data-id="${id}" min="${s.min}" max="${s.max}" step="${s.step}" value="${s.value}" /></div>` : "");
   const [tagA, tagB] = (() => { const m = P.tagline.match(/^(.*?)<em>(.*?)<\/em>/); return m ? [m[1], m[2]] : [P.tagline, ""]; })();
@@ -153,28 +157,28 @@
       <p class="pn-kind pn-role"><i class="dot" aria-hidden="true"></i>${esc(P.role)}</p>
       <h2 class="pn-hello" data-decode>${esc(P.name)}</h2>
       <p class="pn-tag">${esc(tagA)}<em>${esc(tagB)}</em></p>
-      <p class="pn-lede">${esc(D.home.lede)}</p>
-      <p class="pn-contact"><a href="mailto:${esc(P.email)}">${esc(P.email)}</a><a href="${esc(P.github)}" target="_blank" rel="noopener">GitHub</a><a href="/explore/">Full portfolio</a></p>
+      <p class="pn-lede">${md(D.home.lede)}</p>
+      <p class="pn-contact"><a href="mailto:${esc(P.email)}">${esc(P.email)}</a><a href="${esc(P.github)}" target="_blank" rel="noopener">GitHub</a><a href="/blog/">StudyLog</a></p>
       <span class="cue" aria-hidden="true"><i></i></span>`;
   }
   function projectHTML(n) {
     const p = n.p;
     return `
       <p class="pn-kind"><b>${esc(p.kind)}</b> · ${p.year}</p>
-      <h2 class="pn-name" data-decode>${esc(p.name)}</h2>
+      ${door(n, p.id, p.name)}
       <p class="pn-q">${esc(p.question)}</p>
       ${tryLine(n.live.line)}
       ${n.id === "atlas" ? `<input class="pn-query" id="pn-query" type="search" placeholder="Ask my notes something" aria-label="Search my notes" value="${esc(n.fig.q)}" />` : ""}
       ${ctl(n.id, n.fig.slider)}
       <dl class="pn-live" id="live-${n.id}"></dl>
-      <p class="pn-proof">${esc(n.live.proof)}</p>
+      <p class="pn-proof">${esc(n.live.proof)} <a href="${caseURL(p.id)}" data-dive="${n.id}">How it works</a></p>
       <div class="pn-links">${linkBtns(p)}</div>`;
   }
   function notesHTML(n) {
     const s = PROJ.studylog;
     return `
       <p class="pn-kind"><b>Notes</b> · since ${s.year}</p>
-      <h2 class="pn-name" data-decode>StudyLog</h2>
+      ${door(n, s.id, "StudyLog")}
       <p class="pn-q">Where every deep dive ends up.</p>
       ${tryLine(n.live.line)}
       <dl class="pn-live" id="live-notes"></dl>
@@ -186,8 +190,7 @@
       <p class="pn-kind"><b>Path</b> · ${esc(first.y)} to ${esc(lastStep.y)}</p>
       <h2 class="pn-name pn-name-s">${D.sections.path}</h2>
       ${tryLine("Click a year on the route to see what it added.")}
-      <p class="pn-lede">${esc(P.education)}, then a new title every year since 2023, each one closer to the people using the software.</p>
-      <div class="pn-links"><a class="btn ghost" href="/explore/#history">The full story</a></div>`;
+      <p class="pn-lede">${md(D.home.path)}</p>`;
   }
   function contactHTML() {
     return `
@@ -195,8 +198,8 @@
       <h2 class="pn-name" data-decode>Say hello.</h2>
       <p class="pn-lede">${esc(D.home.contact)}</p>
       <a class="pn-mail" href="mailto:${esc(P.email)}">${esc(P.email)}</a>
-      <div class="pn-links"><button type="button" class="btn" id="pn-copy">Copy email</button><a class="btn ghost" href="/explore/">Full portfolio</a><a class="btn ghost" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a></div>
-      <p class="pn-foot">© ${new Date().getFullYear()} ${esc(P.name)}. Every cell on this page is running in your browser.</p>`;
+      <div class="pn-links"><button type="button" class="btn" id="pn-copy">Copy email</button><a class="btn ghost" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a><a class="btn ghost" href="/blog/">StudyLog</a></div>
+      <p class="pn-foot">© ${new Date().getFullYear()} ${esc(P.name)}. ${md(D.home.foot)}</p>`;
   }
   flow.innerHTML = STOPS.map((s) => {
     const n = s.n;
@@ -476,18 +479,21 @@
     }
   }
 
-  function frameBox(n, R, hot) {
+  function frameBox(n, R, hot, open = 0) {
     ctx.strokeStyle = hot ? rgba(n.color, 0.5) : ink(0.06);
     ctx.lineWidth = 1;
     ctx.strokeRect(R.x + 0.5, R.y + 0.5, R.w - 1, R.h - 1);
-    const t = Math.min(16, R.w * 0.05);
+    // open: the pointer is on this cell's door (its name), so the corners step out and grow
+    const e = smooth(open), o = 9 * e, t = Math.min(16, R.w * 0.05) + 14 * e;
     ctx.strokeStyle = rgba(n.color, hot ? 1 : 0.55);
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 1.5 + e;
+    if (e) { ctx.shadowColor = n.color; ctx.shadowBlur = 14 * e; }
     ctx.beginPath();
-    for (const [x, y, ax, ay] of [[R.x, R.y, 1, 1], [R.x + R.w, R.y, -1, 1], [R.x, R.y + R.h, 1, -1], [R.x + R.w, R.y + R.h, -1, -1]]) {
+    for (const [x, y, ax, ay] of [[R.x - o, R.y - o, 1, 1], [R.x + R.w + o, R.y - o, -1, 1], [R.x - o, R.y + R.h + o, 1, -1], [R.x + R.w + o, R.y + R.h + o, -1, -1]]) {
       ctx.moveTo(x + ax * t, y); ctx.lineTo(x, y); ctx.lineTo(x, y + ay * t);
     }
     ctx.stroke();
+    ctx.shadowBlur = 0;
     ctx.lineWidth = 1;
   }
 
@@ -596,7 +602,8 @@
         }
       }
       ctx.globalAlpha = a * (1 - fo);
-      frameBox(n, R, hot || live);
+      n.door = clamp((n.door || 0) + (doorHot === n && live ? dt : -dt) / 0.25, 0, 1);
+      frameBox(n, R, hot || live, n.door);
       if (!live) header(n, R);
       ctx.globalAlpha = 1;
     }
@@ -703,6 +710,62 @@
   });
   cv.addEventListener("pointercancel", () => (press = null));
   cv.addEventListener("pointerleave", () => setHover(null));
+
+  /* ------------------------------------------------------------------ one level down
+   * A project's name, and the "How it works" after its proof, open its case study on the full
+   * portfolio at /explore/. Followed from the cell you are reading, the map first dives into that
+   * cell; coming back from a case study it surfaces out of it again. Where the browser has
+   * cross-document view transitions, the name also carries over into the case study's title. */
+  let doorHot = null;
+  flow.addEventListener("pointerover", (e) => { const a = e.target.closest("a[data-dive]"); doorHot = a ? byId[a.dataset.dive] : null; });
+  flow.addEventListener("focusin", (e) => { const a = e.target.closest("a[data-dive]"); doorHot = a ? byId[a.dataset.dive] : null; });
+  flow.addEventListener("focusout", () => (doorHot = null));
+  flow.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-dive]");
+    if (!a || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const n = byId[a.dataset.dive];
+    if (calm || !n || n !== focus() || !n.R) return; // nothing on screen to dive into: a plain link
+    e.preventDefault();
+    dive(n, a.href);
+  });
+  const nameOf = (n) => $(`#s-${STOPS[stopOf(n)].id} .pn-name`);
+  // the transform that blows cell n up until it covers the canvas
+  function lens(n) {
+    const r = n.R, k = Math.max(W / r.w, H / r.h) * 1.04, cx = r.x + r.w / 2, cy = r.y + r.h / 2;
+    return { origin: `${cx}px ${cy}px`, to: `translate(${W / 2 - cx}px, ${H / 2 - cy}px) scale(${k})` };
+  }
+  function dive(n, href) {
+    const L = lens(n), name = nameOf(n);
+    if (name) name.style.viewTransitionName = "pname";
+    cv.style.transformOrigin = L.origin;
+    cv.style.transition = "transform .62s cubic-bezier(.7, 0, .25, 1)";
+    cv.style.transform = L.to;
+    document.body.classList.add("diving");
+    setTimeout(() => location.assign(href), 600);
+  }
+  // from inside the cell back out to the map; the zoomed state is either left over from a dive
+  // (the back button) or set here first (arriving from a case study)
+  function surface(n, set) {
+    const name = nameOf(n);
+    if (name) name.style.viewTransitionName = "pname";
+    if (set && !calm) {
+      placeCam(sp);
+      n.R = scr(n.r);
+      const L = lens(n);
+      cv.style.transition = "none";
+      cv.style.transformOrigin = L.origin;
+      cv.style.transform = L.to;
+      document.body.classList.add("diving");
+      cv.getBoundingClientRect();
+    }
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      cv.style.transition = calm ? "none" : "transform .75s cubic-bezier(.3, 0, .2, 1)";
+      cv.style.transform = "";
+      document.body.classList.remove("diving");
+      setTimeout(() => { cv.style.transition = ""; if (name) name.style.viewTransitionName = ""; }, 900);
+    }));
+  }
+  addEventListener("pageshow", (e) => { if (e.persisted && document.body.classList.contains("diving")) surface(STOPS[cur].n); });
 
   /* ------------------------------------------------------------------ the words beside the cell */
   function panelStats() {
@@ -900,6 +963,10 @@
   const first = stopFromHash();
   if (first > 0) { skipIntro(); scrollTo(0, centerOf(first)); spT = sp = progressAt(scrollY); }
   setCur(clamp(Math.round(spT), 0, LAST));
+  let up = false;
+  try { up = sessionStorage.getItem("af.surface") === "1"; sessionStorage.removeItem("af.surface"); } catch (e) {}
+  try { up = up || performance.getEntriesByType("navigation")[0].type === "back_forward"; } catch (e) {}
+  if (up && first > 0 && STOPS[first].n && nameOf(STOPS[first].n) && nameOf(STOPS[first].n).querySelector(".pn-door")) surface(STOPS[first].n, true);
   cur === 0 && document.body.classList.add("at-start");
   secs[cur].classList.add("on");
   wake();

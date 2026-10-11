@@ -27,10 +27,12 @@ window.PORTFOLIO = {
     focus: ["LLM systems", "observability", "customer data", "full-stack web", "search & retrieval", "graphics"]
   },
 
-  // The first and last screens of the home page.
+  // Lines on the intro. [words](/link/) becomes a link; /explore/ is the full portfolio, one level down.
   home: {
-    lede: "Selected work, not the whole shelf. Every piece here is running live, so go ahead and try it.",
-    contact: "A question about a project, or an idea worth building? Write to me."
+    lede: "Selected work, not [the whole shelf](/explore/). Every piece here is running live, so go ahead and try it.",
+    path: "Information Engineering, then [a new title every year](/explore/#history) since 2023, each one closer to the people using the software.",
+    contact: "A question about a project, or an idea worth building? Write to me.",
+    foot: "Every cell on this page is running in your browser. The rest of the shelf is [one level down](/explore/)."
   },
 
   /*
@@ -68,7 +70,7 @@ window.PORTFOLIO = {
     },
     work: {
       title: "{Flagships} questions I couldn't <em>leave alone</em>",
-      lede: "Every tile is running. Go on, break something."
+      lede: "Every tile is running. Go on, break something, or see them all [on one map](/)."
     },
     // the line under the tiles; {notes} is the note count, the link to older experiments is added after it
     experiments: "Every one of them started as notes in StudyLog: {notes} so far.",

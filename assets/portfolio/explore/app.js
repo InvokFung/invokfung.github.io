@@ -80,7 +80,11 @@
   };
   const fill = (t) => String(t || "").replace(/\{(\w+)\}/g, (m, k) => (FILL[k] ? FILL[k]() : m));
   const secTitle = (k, dflt) => split(fill((SEC[k] && SEC[k].title) || dflt));
-  const secLede = (k, dflt) => esc(fill((SEC[k] && SEC[k].lede) || dflt));
+  const secLede = (k, dflt) => md(fill((SEC[k] && SEC[k].lede) || dflt));
+  // copy in data.js may carry [words](/a/link/); everything else is escaped
+  const md = (t) => esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, w, u) => `<a href="${u}">${w}</a>`);
+  // where a project sits on the intro's map (one level up), if it is there
+  const mapStop = (p) => (p.tier === "flagship" ? p.id : p.id === "studylog" ? "notes" : null);
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
   const spell = (n) => ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] || String(n);
   const cap = (w) => String(w).charAt(0).toUpperCase() + String(w).slice(1);
@@ -1025,7 +1029,9 @@
       <p class="pitch">${esc(p.pitch)}</p>
       ${metrics(p, "metrics")}
       <div class="actions top">${links}</div>
-      <canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>
+      ${mapStop(p)
+        ? `<a class="cover-link" href="/#/${mapStop(p)}" data-surface><canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas><span class="cover-cap">running live on the map <b aria-hidden="true">↖</b></span></a>`
+        : `<canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>`}
       <div class="case-grid">
         ${p.why ? `<h4>why</h4><p>${esc(p.why)}</p>` : ""}
         ${p.how ? `<h4>${p.tier === "flagship" ? "how it works" : "highlights"}</h4><ol>${p.how.map((h) => `<li>${esc(h)}</li>`).join("")}</ol>` : ""}
@@ -1039,7 +1045,7 @@
       </div>
     </div>`;
   }
-  function openCase(id, from) {
+  function openCase(id, from, instant) {
     const p = byId(id);
     if (!p) return false;
     const wasOpen = !!csId;
@@ -1056,11 +1062,13 @@
     csScroll.scrollTop = 0;
     cs.hidden = false;
     root.style.overflow = "hidden";
-    requestAnimationFrame(() => {
+    const show = () => {
       cs.classList.add("open");
       drawCover($("canvas.cover", csScroll), 0);
       $("#case-x").focus({ preventScroll: true });
-    });
+    };
+    if (instant) { cs.classList.add("instant"); show(); requestAnimationFrame(() => requestAnimationFrame(() => cs.classList.remove("instant"))); }
+    else requestAnimationFrame(show);
     try { history.replaceState(null, "", "#work/" + p.id); } catch (e) {}
     return true;
   }
@@ -1077,6 +1085,8 @@
     const t = e.target.closest("[data-case]");
     if (t && !t.closest("#bay .pj")) { e.preventDefault(); openCase(t.dataset.case, t); return; }
     if (e.target.closest("#case-x")) closeCase();
+    // back up to the map: the intro surfaces out of this project's cell
+    if (e.target.closest("[data-surface]")) { try { sessionStorage.setItem("af.surface", "1"); } catch (err) {} }
     const sk = e.target.closest("[data-skill]");
     if (sk) { closeCase(); go("skills"); bPin = -1; pickSkill(+sk.dataset.skill, true); }
     const tl = e.target.closest("[data-tile]");
@@ -1701,7 +1711,7 @@
     requestAnimationFrame(land);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(land);
   }
-  if (m) setTimeout(() => openCase(m[1], deep), 300);
+  if (m) openCase(m[1], deep, true);
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
     addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
   }
