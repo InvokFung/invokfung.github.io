@@ -4,7 +4,8 @@
  * work() is a wall of live sketches, skills() a patch bay and history a horizontal for-loop.
  * The hero is my name written as sound (spectro.js); the tiles run on sims.js.
  * "</> source" slides in the page's own source; its dotted values are live and recompile the page.
- * Everything is generated from data.js.
+ * Everything is generated from data.js. This is the full portfolio at /explore/; the intro at / is
+ * assets/portfolio/live/.
  */
 (() => {
   "use strict";
@@ -40,7 +41,7 @@
   const ACCENTS = ["#c8ff4a", "#ffb547", "#6ee7ff", "#ff7aa8", "#a78bfa"];
   const KEY = "alan.fung/config";
   const DEFAULTS = {
-    theme: mq("(prefers-color-scheme: light)") ? "paper" : "midnight",
+    theme: "midnight", // dark like the intro at /
     accent: ACCENTS[0],
     motion: !mq("(prefers-reduced-motion: reduce)"),
     coffee: 3,
@@ -66,8 +67,8 @@
   const NOW = new Date().getFullYear();
   const eraYear = (e) => parseInt(e.id, 10) || NOW + 1;
   const WHO = D.whoami;
-  // section headings live in data.js; {placeholders} are filled here
-  const SEC = D.sections || {};
+  // section headings live in data.js (`explore`); {placeholders} are filled here
+  const SEC = D.explore || {};
   const fine = () => root.classList.contains("fine");
   const FILL = {
     skills: () => SK.length,
@@ -79,7 +80,11 @@
   };
   const fill = (t) => String(t || "").replace(/\{(\w+)\}/g, (m, k) => (FILL[k] ? FILL[k]() : m));
   const secTitle = (k, dflt) => split(fill((SEC[k] && SEC[k].title) || dflt));
-  const secLede = (k, dflt) => esc(fill((SEC[k] && SEC[k].lede) || dflt));
+  const secLede = (k, dflt) => md(fill((SEC[k] && SEC[k].lede) || dflt));
+  // copy in data.js may carry [words](/a/link/); everything else is escaped
+  const md = (t) => esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, w, u) => `<a href="${u}">${w}</a>`);
+  // where a project sits on the intro's map (one level up), if it is there
+  const mapStop = (p) => (p.tier === "flagship" ? p.id : p.id === "studylog" ? "notes" : null);
   const STATUS = { live: "live", source: "on github", wip: "in progress" };
   const spell = (n) => ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] || String(n);
   const cap = (w) => String(w).charAt(0).toUpperCase() + String(w).slice(1);
@@ -90,6 +95,7 @@
   const ext = (u) => (/^https?:/.test(u) ? ` target="_blank" rel="noopener"` : "");
   // a link from data.js: #section scrolls there, #work/<id> goes to that tile
   const hrefAttrs = (link) => {
+    if (link === "#path") link = "#history"; // the intro calls it the path
     const m = link.match(/^#work\/([\w-]+)$/);
     if (m) return `href="${esc(link)}" data-tile="${esc(m[1])}"`;
     if (link[0] === "#") return `href="${esc(link)}" data-go="${esc(link.slice(1))}"`;
@@ -143,7 +149,7 @@
     onboard: "Fourteen customer records from three exports, merged into customer rows.",
     atlas: "Where in time the matching notes were written.",
     intonation: "A pitch trace in cents around the nearest note.",
-    arena: "A thousand players on one server, flashing as their flips come back. Click one to drop it.",
+    dispatch: "Five technicians on their rounds across a city with a river. Click a technician to send them home, or the map for an urgent job, and the day re-plans.",
     layerline: "One layer of a sliced gear being printed. Drag up or down to pick a layer."
   };
   // a tile: the question, a live sketch you can poke, and the measured number
@@ -175,7 +181,7 @@
       <div class="spec rv" id="spec-wrap"><canvas id="spec" aria-hidden="true"></canvas></div>
       <p class="err" id="hero-err" hidden>TypeError: alan.name is undefined. Type a name in the source.</p>
       <div class="hero-row">
-        <p class="hero-tag rv">${esc(P.tagline)}</p>
+        <p class="hero-tag rv">${esc(P.tagline).replace(/&lt;(\/?)em&gt;/g, "<$1em>")}</p>
         <div class="hear rv">
           <p class="hear-cap" id="hear-cap" aria-live="polite"></p>
           <div class="hear-btns">
@@ -216,7 +222,7 @@
       <div class="bay rv" id="bay">
         <svg class="cables" id="cables" aria-hidden="true"></svg>
         <div class="bay-groups">${D.skills.map((g, gi) => `<div class="bg" data-g="${gi}"><div class="bg-h">${esc(g.group)}</div>${g.items.map(([n]) => { const i = SK.findIndex((x) => x.name === n); const sk = SK[i]; return `<button type="button" class="sk${usedBy(sk).length ? "" : " none"}" data-s="${i}" data-ref="s:${i}"><i class="jack" aria-hidden="true"></i><span class="nm">${esc(n)}</span><span class="since">${sk.since}</span></button>`; }).join("")}</div>`).join("")}</div>
-        <div class="bay-jacks">${PROJ.map((p) => `<button type="button" class="pj" data-p="${p.id}" style="--c-raw:${esc(p.color || "#c8ff4a")}"><i class="jack" aria-hidden="true"></i><span class="nm">${esc(p.name)}</span><span class="k">${esc(p.kind)}</span></button>`).join("")}</div>
+        <div class="bay-jacks" style="--jacks:${PROJ.length}">${PROJ.map((p) => `<button type="button" class="pj" data-p="${p.id}" style="--c-raw:${esc(p.color || "#c8ff4a")}"><i class="jack" aria-hidden="true"></i><span class="nm">${esc(p.name)}</span><span class="k">${esc(p.kind)}</span></button>`).join("")}</div>
         <p class="bay-read" id="bay-read" aria-live="polite"></p>
       </div>
     </section>
@@ -243,7 +249,7 @@
       <footer class="foot">
         <span>© ${NOW} ${esc(P.name)} · hand-written, no framework, served from GitHub Pages</span>
         <span class="latest">latest note: <a href="${esc(D.writing.latest[0].url)}">${esc(D.writing.latest[0].title)}</a></span>
-        <span><a href="/blog/">blog</a> · <a href="${esc(P.github)}" target="_blank" rel="noopener">github</a> · press <b>\`</b> for a terminal</span>
+        <span><a href="/">intro</a> · <a href="/blog/">blog</a> · <a href="${esc(P.github)}" target="_blank" rel="noopener">github</a> · press <b>\`</b> for a terminal</span>
       </footer>
     </section>
   `);
@@ -461,6 +467,38 @@
         const u = (i / n + t * 0.12 + (r() - 0.5) * 0.035 + 1) % 1;
         g.globalAlpha = 0.45 + 0.55 * u; g.beginPath(); g.arc(u * w, ys(u), rad, 0, TAU); g.fill();
       }
+    },
+    // a city cut by a river with two bridges, and a few technicians' rounds through it
+    streets(g, w, h, r, t) {
+      const small = h < 80, n = small ? 8 : 14, cell = Math.max(w, h) / n, rx = w * 0.56, by = [h * 0.27, h * 0.73];
+      g.lineWidth = 1; g.globalAlpha = 0.08;
+      for (let x = cell / 2; x < w; x += cell) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, h); g.stroke(); }
+      for (let y = cell / 2; y < h; y += cell) { g.beginPath(); g.moveTo(0, y); g.lineTo(w, y); g.stroke(); }
+      const bank = (d) => { for (let y = 0; y <= h; y += 6) g.lineTo(rx + d + Math.sin(y * 0.03) * 6, y); };
+      g.globalAlpha = 0.12; g.beginPath(); bank(-10); for (let y = h; y >= 0; y -= 6) g.lineTo(rx + 10 + Math.sin(y * 0.03) * 6, y); g.closePath(); g.fill();
+      g.globalAlpha = 0.5; g.lineWidth = small ? 2 : 3;
+      for (const y of by) { g.beginPath(); g.moveTo(rx - 18, y); g.lineTo(rx + 18, y); g.stroke(); }
+      // three rounds, street by street; the east-west one crosses on the nearer bridge
+      const pts = (k) => {
+        const out = [], m = 4 + Math.floor(r() * 3);
+        let x = (k === 1 ? 0.7 + r() * 0.2 : 0.08 + r() * 0.3) * w, y = (0.15 + r() * 0.7) * h;
+        out.push([x, y]);
+        for (let i = 0; i < m; i++) {
+          let nx = (k === 2 && i === 1 ? 0.62 + r() * 0.3 : k === 1 ? 0.6 + r() * 0.35 : 0.05 + r() * 0.45) * w, ny = (0.08 + r() * 0.84) * h;
+          if ((x < rx) !== (nx < rx)) { const b = Math.abs(y - by[0]) + Math.abs(ny - by[0]) < Math.abs(y - by[1]) + Math.abs(ny - by[1]) ? by[0] : by[1]; out.push([x, b], [nx, b]); }
+          else out.push([nx, y]);
+          out.push([nx, ny, 1]); x = nx; y = ny;
+        }
+        return out;
+      };
+      for (let k = 0; k < 3; k++) {
+        const P = pts(k);
+        g.lineWidth = small ? 1.2 : 1.8; g.globalAlpha = 0.55; g.setLineDash(k ? [5, 5] : []);
+        g.beginPath(); P.forEach(([x, y], i) => (i ? g.lineTo(x, y) : g.moveTo(x, y))); g.stroke(); g.setLineDash([]);
+        const js = small ? 4 : 7;
+        P.forEach(([x, y, stop]) => { if (stop) { g.globalAlpha = 0.85; g.strokeRect(x - js / 2, y - js / 2, js, js); } });
+        const [x0, y0] = P[0]; g.globalAlpha = 1; g.beginPath(); g.arc(x0, y0, small ? 3 : 5.5, 0, TAU); g.fill();
+      }
     }
   };
 
@@ -481,7 +519,7 @@
   /* ----------------------------------------------------------------- tiles */
 
   const tiles = $$(".tile");
-  if (window.Sims) tiles.forEach((t) => window.Sims.mount(t, t.dataset.sim, { notes: BASE + "notes.js" }));
+  if (window.Sims) tiles.forEach((t) => window.Sims.mount(t, t.dataset.sim, { notes: BASE + "../notes.js" }));
   // a link to one tile scrolls to it and makes it blink
   function focusTile(id) {
     const t = $(`.tile[data-sim="${id}"]`);
@@ -991,7 +1029,9 @@
       <p class="pitch">${esc(p.pitch)}</p>
       ${metrics(p, "metrics")}
       <div class="actions top">${links}</div>
-      <canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>
+      ${mapStop(p)
+        ? `<a class="cover-link" href="/#/${mapStop(p)}" data-surface><canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas><span class="cover-cap">running live on the map <b aria-hidden="true">↖</b></span></a>`
+        : `<canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>`}
       <div class="case-grid">
         ${p.why ? `<h4>why</h4><p>${esc(p.why)}</p>` : ""}
         ${p.how ? `<h4>${p.tier === "flagship" ? "how it works" : "highlights"}</h4><ol>${p.how.map((h) => `<li>${esc(h)}</li>`).join("")}</ol>` : ""}
@@ -1005,7 +1045,7 @@
       </div>
     </div>`;
   }
-  function openCase(id, from) {
+  function openCase(id, from, instant) {
     const p = byId(id);
     if (!p) return false;
     const wasOpen = !!csId;
@@ -1022,11 +1062,13 @@
     csScroll.scrollTop = 0;
     cs.hidden = false;
     root.style.overflow = "hidden";
-    requestAnimationFrame(() => {
+    const show = () => {
       cs.classList.add("open");
       drawCover($("canvas.cover", csScroll), 0);
       $("#case-x").focus({ preventScroll: true });
-    });
+    };
+    if (instant) { cs.classList.add("instant"); show(); requestAnimationFrame(() => requestAnimationFrame(() => cs.classList.remove("instant"))); }
+    else requestAnimationFrame(show);
     try { history.replaceState(null, "", "#work/" + p.id); } catch (e) {}
     return true;
   }
@@ -1043,6 +1085,8 @@
     const t = e.target.closest("[data-case]");
     if (t && !t.closest("#bay .pj")) { e.preventDefault(); openCase(t.dataset.case, t); return; }
     if (e.target.closest("#case-x")) closeCase();
+    // back up to the map: the intro surfaces out of this project's cell
+    if (e.target.closest("[data-surface]")) { try { sessionStorage.setItem("af.surface", "1"); } catch (err) {} }
     const sk = e.target.closest("[data-skill]");
     if (sk) { closeCase(); go("skills"); bPin = -1; pickSkill(+sk.dataset.skill, true); }
     const tl = e.target.closest("[data-tile]");
@@ -1082,7 +1126,7 @@
     window.scrollTo({ top, behavior: state.motion ? "smooth" : "auto" });
   }
   document.addEventListener("click", (e) => {
-    const a = e.target.closest("[data-go], .links a, .brand");
+    const a = e.target.closest("[data-go], .links a");
     if (!a) return;
     const id = a.dataset.go || a.dataset.sec || "hero";
     e.preventDefault();
@@ -1426,7 +1470,7 @@
   function boot(done) {
     let first = true;
     try { first = !sessionStorage.getItem("alan.fung/booted"); sessionStorage.setItem("alan.fung/booted", "1"); } catch (e) {}
-    if (!first || !state.motion) { done(); return; }
+    if (!first || !state.motion || location.hash) { done(); return; } // a deep link goes straight in
     root.classList.add("booting");
     const log = $("#boot-log"), bar = $("#boot-bar"), el = $("#boot");
     const steps = [
@@ -1657,6 +1701,18 @@
   setSound(sndSaved);
   layoutLoop(); layoutThread(); layoutBay(); frame();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (spec) { spec.theme(); spec.setName(state.name.trim() || "undefined", false); } if (window.Sims) window.Sims.theme(); relayout(); });
+  // deep links from the intro: #work/<id> opens that case study over its tile, #<section> scrolls there
   const m = location.hash.match(/^#work\/([\w-]+)/);
-  if (m) setTimeout(() => openCase(m[1]), 300);
+  const deep = m ? $(".t-" + m[1]) : document.getElementById(location.hash.slice(1));
+  if (deep && deep.closest(".sec")) {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    const land = () => window.scrollTo(0, window.scrollY + deep.getBoundingClientRect().top - (deep.id === "history" ? 0 : 20));
+    land();
+    requestAnimationFrame(land);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(land);
+  }
+  if (m) openCase(m[1], deep, true);
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
+  }
 })();

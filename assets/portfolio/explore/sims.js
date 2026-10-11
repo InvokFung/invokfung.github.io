@@ -1,8 +1,9 @@
 /*
  * Live sketches for the work tiles. Each flagship's question gets a small model you can poke:
  * take a region down in front of Relay, break a service for Tracewise, merge three messy exports
- * with Onboard, search the notes Atlas indexes, play a note into Studio's pitch detector, drop
- * players from Arena, scrub the layers Layerline slices.
+ * with Onboard, send a technician home on Dispatch's day, search the notes Atlas indexes, play a
+ * note into Studio's pitch detector, scrub the layers Layerline slices. (Arena's sketch is kept
+ * for the record; TripleFind Arena is no longer a tile.)
  *
  * They are sketches of each idea, small enough to run seven at once. The measured numbers on the
  * tiles come from each project's own benchmark, not from these. No dependencies.
@@ -817,7 +818,328 @@
     }
   }
 
-  const KINDS = { relay: Relay, tracewise: Tracewise, onboard: Onboard, atlas: Atlas, intonation: Studio, arena: Arena, layerline: Layerline };
+
+  /* ------------------------------------------------------------- Dispatch */
+  // Five technicians and a day of jobs across a city cut by a river with two bridges. The plan is
+  // regret insertion, then relocate moves until a few milliseconds run out. When the day changes
+  // (someone goes home, an urgent job lands, the traffic slows) whatever is done or under way is
+  // frozen and the rest is re-planned from the current plan.
+  const DAY = 600, RATE = 13; // minutes from 08:00 to 18:00; simulated minutes per second
+  const CREW = [["Mei", 0.08, 0.14], ["Sam", 0.93, 0.16], ["Ravi", 0.09, 0.86], ["Jo", 0.92, 0.88], ["Lena", 0.4, 0.5]];
+  const CREW_INK = {
+    midnight: ["#ff7ab6", "#62b6ff", "#4fe3c1", "#ffc978", "#c9b6ff"],
+    paper: ["#c2306f", "#1f6fb8", "#11806a", "#9c6200", "#6a4fc9"]
+  };
+  const SPLIT = 0.56, BRIDGES = [0.27, 0.73];
+  const hhmm = (m) => { const t = Math.round(480 + m); return `${String(Math.floor(t / 60)).padStart(2, "0")}:${String(t % 60).padStart(2, "0")}`; };
+  const westOf = (p) => p.x < SPLIT;
+  const blocks = (a, b) => {
+    if (westOf(a) === westOf(b)) return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+    return Math.min(...BRIDGES.map((y) => Math.abs(a.x - b.x) + Math.abs(a.y - y) + Math.abs(y - b.y)));
+  };
+  const streets = (a, b) => {
+    if (westOf(a) === westOf(b)) return [a, { x: b.x, y: a.y }, b];
+    const y = BRIDGES.reduce((m, q) => (Math.abs(a.y - q) + Math.abs(q - b.y) < Math.abs(a.y - m) + Math.abs(m - b.y) ? q : m));
+    return [a, { x: a.x, y }, { x: b.x, y }, b];
+  };
+  const alongStreets = (pts, f) => {
+    const seg = (i) => Math.abs(pts[i].x - pts[i - 1].x) + Math.abs(pts[i].y - pts[i - 1].y);
+    let tot = 0;
+    for (let i = 1; i < pts.length; i++) tot += seg(i);
+    let d = clamp(f, 0, 1) * tot;
+    for (let i = 1; i < pts.length; i++) {
+      const l = seg(i);
+      if (d <= l || i === pts.length - 1) { const k = l ? d / l : 1; return { x: lerp(pts[i - 1].x, pts[i].x, k), y: lerp(pts[i - 1].y, pts[i].y, k) }; }
+      d -= l;
+    }
+    return pts[pts.length - 1];
+  };
+  const seeded = (seed) => () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+
+  class Dispatch extends Sim {
+    init() {
+      this.seed = 7; this.traffic = 0; this.hov = -1; this.last = 0; this.note = "";
+      this.bHome = this.btn("send someone home", () => this.sendBusiest(), "warn");
+      this.bJam = this.btn("traffic: clear", () => this.setJam(!this.traffic), "tog");
+      this.btn("new day", () => this.newDay());
+      this.newDay();
+    }
+    theme() {
+      super.theme();
+      const th = document.documentElement.dataset.theme;
+      this.ink = th === "phosphor" ? CREW.map(() => this.C.c) : CREW_INK[th] || CREW_INK.midnight;
+    }
+    // back to demoing: let the script carry on from now rather than replaying what it missed
+    reset() { (this.script || []).forEach((ev) => { if (ev[0] < this.T) ev[2] = true; }); }
+    setJam(on) {
+      this.traffic = on ? 0.5 : 0;
+      this.bJam.textContent = on ? "traffic: rush hour" : "traffic: clear";
+      this.bJam.classList.toggle("on", on);
+      this.replan(on ? "rush hour, 50% slower" : "traffic clears");
+    }
+    tt(a, b) { return blocks(a, b) * 72 * (1 + this.traffic); }
+    newDay() {
+      const r = seeded(this.seed++ * 2654435761);
+      this.T = 0;
+      this.techs = CREW.map(([name, x, y], i) => ({ i, name, home: { x, y }, pos: { x, y }, free: 0, on: true, offAt: DAY, job: null, route: [], leg: null }));
+      this.jobs = [];
+      for (let k = 0; k < 24; k++) {
+        let x = 0.05 + r() * 0.9;
+        if (Math.abs(x - SPLIT) < 0.05) x += x < SPLIT ? -0.06 : 0.06;
+        const appt = r() < 0.5, dur = 20 + Math.round(r() * 7) * 5, a = appt ? Math.round((r() * 420) / 30) * 30 : 0;
+        this.jobs.push({ id: k, x, y: 0.06 + r() * 0.88, a, b: appt ? a + 120 : DAY - dur, dur, pr: 1, tech: -1, st: "plan", eta: 0, flash: 0 });
+      }
+      this.script = [[100, "home"], [175, "urgent"], [265, "urgent"], [350, "urgent"]];
+      this.note = "";
+      this.replan(null, true);
+      this.bHome.disabled = false;
+    }
+
+    /* planning */
+    startOf(t) {
+      const j = t.job;
+      if (j) return { from: j, avail: j.st === "work" ? j.start + j.dur : Math.max(t.leg.t1, j.a) + j.dur };
+      return { from: t.pos, avail: Math.max(this.T, t.free) };
+    }
+    // lateness first, then driving, then overtime, then how long customers wait (which spreads the work)
+    cost(t, st, route, write) {
+      let time = st.avail, pos = st.from, late = 0, drive = 0, wait = 0;
+      for (const id of route) {
+        const j = this.jobs[id], d = this.tt(pos, j), s = Math.max(time + d, j.a);
+        drive += d; late += Math.max(0, s - j.b) * j.pr; wait += s - j.a;
+        if (write) j.eta = s;
+        time = s + j.dur; pos = j;
+      }
+      return late * 8 + drive + Math.max(0, time + this.tt(pos, t.home) - DAY) * 3 + wait * 0.08;
+    }
+    bestSpot(id, routes, sts, costs) {
+      let best = { c: Infinity, ti: -1, p: -1 }, second = Infinity;
+      for (const t of this.techs) {
+        if (!t.on) continue;
+        const r = routes[t.i];
+        let bc = Infinity, bp = -1;
+        for (let p = 0; p <= r.length; p++) {
+          r.splice(p, 0, id);
+          const c = this.cost(t, sts[t.i], r) - costs[t.i];
+          r.splice(p, 1);
+          if (c < bc) { bc = c; bp = p; }
+        }
+        if (bc < best.c) { second = best.c; best = { c: bc, ti: t.i, p: bp }; } else if (bc < second) second = bc;
+      }
+      best.regret = second === Infinity ? 1e6 : second - best.c;
+      return best;
+    }
+    replan(why, quiet, before = this.jobs.map((j) => j.tech)) {
+      const t0 = performance.now(), T = this.techs;
+      const sts = T.map((t) => this.startOf(t));
+      const routes = T.map((t) => (t.on ? t.route.slice() : []));
+      const pool = this.jobs.filter((j) => j.st === "plan" && (j.tech < 0 || !T[j.tech].on || !routes[j.tech].includes(j.id))).map((j) => j.id);
+      const costs = T.map((t) => this.cost(t, sts[t.i], routes[t.i]));
+      // regret insertion: place first the job that would cost most to place second-best
+      while (pool.length && T.some((t) => t.on)) {
+        let pick = null;
+        for (const id of pool) {
+          const b = this.bestSpot(id, routes, sts, costs);
+          if (!pick || b.regret > pick.b.regret || (b.regret === pick.b.regret && b.c < pick.b.c)) pick = { id, b };
+        }
+        routes[pick.b.ti].splice(pick.b.p, 0, pick.id);
+        costs[pick.b.ti] = this.cost(T[pick.b.ti], sts[pick.b.ti], routes[pick.b.ti]);
+        pool.splice(pool.indexOf(pick.id), 1);
+      }
+      // then relocate moves until the budget runs out
+      const r = seeded(this.seed * 31 + Math.round(this.T)), ids = routes.flat();
+      for (let it = 0; it < 4000 && ids.length && performance.now() - t0 < 4; it++) {
+        const id = ids[(r() * ids.length) | 0], ti = routes.findIndex((x) => x.includes(id)), p = routes[ti].indexOf(id), old = costs[ti];
+        routes[ti].splice(p, 1);
+        costs[ti] = this.cost(T[ti], sts[ti], routes[ti]);
+        const b = this.bestSpot(id, routes, sts, costs);
+        if (b.ti >= 0 && b.c < old - costs[ti] - 1e-9) { routes[b.ti].splice(b.p, 0, id); costs[b.ti] = this.cost(T[b.ti], sts[b.ti], routes[b.ti]); }
+        else { routes[ti].splice(p, 0, id); costs[ti] = old; }
+      }
+      T.forEach((t) => { t.route = routes[t.i]; t.route.forEach((id) => (this.jobs[id].tech = t.i)); this.cost(t, sts[t.i], t.route, true); });
+      this.last = performance.now() - t0;
+      // a job has moved when it had a technician before the change and has another one now
+      let moved = 0;
+      this.jobs.forEach((j, k) => { if (j.st === "plan" && before[k] >= 0 && before[k] !== j.tech) { moved++; j.flash = 1; } });
+      if (!quiet) {
+        const fresh = this.jobs[before.length], who = fresh && fresh.tech >= 0 ? `, ${T[fresh.tech].name} takes it` : "";
+        this.note = `${why}${who} · <b>${moved}</b> moved`;
+        this.noteT = this.t;
+      }
+    }
+
+    /* the day changes */
+    sendHome(t) {
+      if (!t.on || this.techs.filter((x) => x.on).length < 2) return;
+      const before = this.jobs.map((j) => j.tech);
+      t.on = false; t.offAt = this.T;
+      // a job under way gets finished; one they were driving to goes back in the pool
+      if (t.job && t.job.st === "go") { t.job.st = "plan"; t.job.tech = -1; t.job = null; t.leg = null; }
+      t.route.forEach((id) => (this.jobs[id].tech = -1));
+      t.route = [];
+      this.replan(`${t.name} went home at ${hhmm(this.T)}`, false, before);
+      this.bHome.disabled = this.techs.filter((x) => x.on).length < 2;
+    }
+    sendBusiest() {
+      const on = this.techs.filter((t) => t.on);
+      if (on.length > 1) this.sendHome(on.reduce((a, b) => (b.route.length > a.route.length ? b : a)));
+    }
+    urgent(x, y) {
+      const T = Math.min(this.T, DAY - 90), before = this.jobs.map((j) => j.tech);
+      this.jobs.push({ id: this.jobs.length, x: clamp(x, 0.03, 0.97), y: clamp(y, 0.03, 0.97), a: T, b: T + 90, dur: 30, pr: 3, tech: -1, st: "plan", eta: 0, flash: 1, hot: true });
+      this.replan(`urgent job at ${hhmm(T)}`, false, before);
+    }
+    auto() {
+      for (const ev of this.script) {
+        if (ev[2] || this.T < ev[0]) continue;
+        ev[2] = true;
+        const r = seeded(this.seed * 7 + ev[0]);
+        if (ev[1] === "home") { const on = this.techs.filter((t) => t.on && t.route.length); if (on.length > 1) this.sendHome(on[(r() * on.length) | 0]); }
+        else this.urgent(0.1 + r() * 0.8, 0.1 + r() * 0.8);
+      }
+    }
+
+    /* the clock */
+    step(dt) {
+      const T0 = this.T;
+      this.T += dt * RATE;
+      for (const t of this.techs) {
+        for (let guard = 0; guard < 4; guard++) {
+          const j = t.job;
+          if (j) {
+            if (j.st === "go" && this.T >= t.leg.t1) { j.st = "work"; j.start = Math.max(t.leg.t1, j.a); j.late = Math.max(0, j.start - j.b); }
+            if (j.st === "work" && this.T >= j.start + j.dur) { j.st = "done"; t.pos = { x: j.x, y: j.y }; t.free = j.start + j.dur; t.job = null; t.leg = null; continue; }
+            break;
+          }
+          if (!t.on || !t.route.length) break;
+          const n = this.jobs[t.route.shift()], dep = Math.max(t.free, T0);
+          n.st = "go"; t.job = n;
+          t.leg = { from: { ...t.pos }, t0: dep, t1: dep + this.tt(t.pos, n) };
+        }
+      }
+      this.jobs.forEach((j) => (j.flash = Math.max(0, j.flash - dt * 0.6)));
+      if ((this.etaT = (this.etaT || 0) + dt) > 0.25) { this.etaT = 0; this.techs.forEach((t) => this.cost(t, this.startOf(t), t.route, true)); }
+      if (this.T > DAY + 40) this.newDay();
+      const all = this.jobs, done = all.filter((j) => j.st === "done").length;
+      const ok = all.filter((j) => (j.st === "done" ? !j.late : j.tech >= 0 && j.eta <= j.b)).length, pct = Math.round((100 * ok) / all.length);
+      const note = this.note && this.t - this.noteT < 5 ? this.note + " · " : this.hov >= 0 ? `click: send ${this.techs[this.hov].name} home · ` : "";
+      this.say(`${note}<b${pct < 90 ? ' class="bad"' : ""}>${pct}%</b> on time · <b>${done}/${all.length}</b> done · re-plan <b>${this.last.toFixed(1)} ms</b>`);
+    }
+    where(t) {
+      const j = t.job;
+      if (!t.on && !j) return t.home;
+      if (j && j.st === "go") return alongStreets(streets(t.leg.from, j), (this.T - t.leg.t0) / Math.max(1e-6, t.leg.t1 - t.leg.t0));
+      return j || t.pos;
+    }
+
+    /* pointer */
+    layout() {
+      const { w, h } = this, strip = h >= 260 ? 5 * 10 + 12 : 0;
+      this.M = { x: 8, y: 22, w: w - 16, h: h - 30 - strip };
+      this.G = strip ? { x: 8, y: h - strip, w: w - 16, h: strip - 6 } : null;
+    }
+    X(x) { return this.M.x + x * this.M.w; }
+    Y(y) { return this.M.y + y * this.M.h; }
+    techAt(x, y) {
+      for (const t of this.techs) { const p = this.where(t); if (t.on && Math.hypot(x - this.X(p.x), y - this.Y(p.y)) < 13) return t.i; }
+      return -1;
+    }
+    down(x, y) {
+      const k = this.techAt(x, y);
+      if (k >= 0) return this.sendHome(this.techs[k]);
+      if (inBox(this.M, x, y)) this.urgent((x - this.M.x) / this.M.w, (y - this.M.y) / this.M.h);
+    }
+    move(x, y) { this.hov = this.techAt(x, y); this.cv.style.cursor = this.hov >= 0 ? "pointer" : inBox(this.M, x, y) ? "crosshair" : ""; }
+    leave() { this.hov = -1; }
+
+    /* drawing */
+    draw(g) {
+      const { C, M, ink } = this;
+      g.lineWidth = 1;
+      // streets, then the river and its two bridges
+      g.strokeStyle = C.line;
+      for (let k = 0; k <= 12; k++) {
+        g.globalAlpha = k % 4 ? 0.35 : 0.7;
+        const gx = M.x + (k / 12) * M.w, gy = M.y + (k / 12) * M.h;
+        g.beginPath(); g.moveTo(gx, M.y); g.lineTo(gx, M.y + M.h); g.moveTo(M.x, gy); g.lineTo(M.x + M.w, gy); g.stroke();
+      }
+      g.globalAlpha = 1;
+      g.fillStyle = "rgba(98,182,255,0.12)"; g.strokeStyle = "rgba(98,182,255,0.35)";
+      g.beginPath();
+      for (let k = 0; k <= 24; k++) g.lineTo(this.X(SPLIT - 0.022 + Math.sin((k / 24) * 7) * 0.008), this.Y(k / 24));
+      for (let k = 24; k >= 0; k--) g.lineTo(this.X(SPLIT + 0.022 + Math.sin((k / 24) * 7) * 0.008), this.Y(k / 24));
+      g.closePath(); g.fill(); g.stroke();
+      g.strokeStyle = C.mute; g.lineWidth = 3;
+      for (const by of BRIDGES) { g.beginPath(); g.moveTo(this.X(SPLIT - 0.04), this.Y(by)); g.lineTo(this.X(SPLIT + 0.04), this.Y(by)); g.stroke(); }
+      // each route: the leg under way solid, the rest of the day dashed
+      for (const t of this.techs) {
+        if (!t.on && !t.job) continue;
+        let from = this.where(t);
+        g.strokeStyle = ink[t.i]; g.globalAlpha = this.hov === t.i ? 0.95 : 0.6; g.lineWidth = this.hov === t.i ? 2.2 : 1.4;
+        (t.job ? [t.job] : []).concat(t.route.map((id) => this.jobs[id])).forEach((j, k) => {
+          g.setLineDash(k ? [4, 4] : []);
+          g.beginPath(); streets(from, j).forEach((p, q) => (q ? g.lineTo(this.X(p.x), this.Y(p.y)) : g.moveTo(this.X(p.x), this.Y(p.y)))); g.stroke();
+          from = j;
+        });
+      }
+      g.setLineDash([]); g.globalAlpha = 1;
+      // jobs: hollow while planned, filled once done, red if it will be late, amber if nobody has it
+      const js = 6.5;
+      for (const j of this.jobs) {
+        const x = this.X(j.x), y = this.Y(j.y), col = j.tech >= 0 ? ink[j.tech] : C.warn;
+        const late = j.st === "done" ? j.late > 0 : j.tech >= 0 && j.eta > j.b;
+        if (j.flash > 0) { g.strokeStyle = col; g.globalAlpha = j.flash; g.lineWidth = 1; g.beginPath(); g.arc(x, y, js + (1 - j.flash) * 18, 0, TAU); g.stroke(); g.globalAlpha = 1; }
+        g.beginPath();
+        if (j.hot) { g.moveTo(x, y - js * 0.9); g.lineTo(x + js * 0.9, y); g.lineTo(x, y + js * 0.9); g.lineTo(x - js * 0.9, y); g.closePath(); }
+        else g.rect(x - js / 2, y - js / 2, js, js);
+        if (j.st === "done") { g.fillStyle = late ? C.bad : C.dim; g.globalAlpha = 0.6; g.fill(); g.globalAlpha = 1; }
+        else if (j.tech < 0) { g.strokeStyle = C.warn; g.globalAlpha = 0.5 + 0.5 * Math.sin(this.t * 6); g.lineWidth = 1.5; g.stroke(); g.globalAlpha = 1; }
+        else { g.fillStyle = j.st === "plan" ? C.bg : col; g.fill(); g.strokeStyle = late ? C.bad : col; g.lineWidth = late ? 2 : 1.3; g.stroke(); }
+      }
+      // technicians, and the homes they start from
+      g.font = this.font(10, 600); g.textBaseline = "middle"; g.textAlign = "left";
+      for (const t of this.techs) {
+        const hx = this.X(t.home.x), hy = this.Y(t.home.y), hs = 5;
+        g.strokeStyle = ink[t.i]; g.globalAlpha = t.on ? 0.55 : 0.25; g.lineWidth = 1;
+        g.beginPath(); g.moveTo(hx - hs, hy); g.lineTo(hx, hy - hs); g.lineTo(hx + hs, hy); g.lineTo(hx + hs, hy + hs); g.lineTo(hx - hs, hy + hs); g.closePath(); g.stroke();
+        const p = this.where(t), x = this.X(p.x), y = this.Y(p.y), lit = t.on || t.job;
+        g.globalAlpha = 1;
+        g.beginPath(); g.arc(x, y, this.hov === t.i ? 8 : 6, 0, TAU);
+        g.fillStyle = lit ? ink[t.i] : C.dim; g.fill();
+        g.strokeStyle = C.bg; g.lineWidth = 2; g.stroke();
+        g.fillStyle = lit ? ink[t.i] : C.mute;
+        g.fillText(t.on ? t.name : t.name + " · home", x + 10, y - 9);
+      }
+      // the clock
+      g.font = this.font(13, 600); g.fillStyle = C.fg; g.fillText(hhmm(Math.min(this.T, DAY)), M.x, 11);
+      g.font = this.font(10.5, 500); g.fillStyle = C.mute; g.textAlign = "right";
+      g.fillText(this.hov >= 0 ? `send ${this.techs[this.hov].name} home` : "click the map: urgent job", M.x + M.w, 11);
+      g.textAlign = "left";
+      // the day, one thin row per technician
+      const G = this.G;
+      if (!G) return;
+      const rh = (G.h - 8) / 5, X = (m) => G.x + 34 + (m / DAY) * (G.w - 34);
+      g.font = this.font(9, 500);
+      this.techs.forEach((t, k) => {
+        const yc = G.y + 8 + k * rh + rh / 2;
+        g.fillStyle = t.on ? C.mute : C.dim; g.fillText(t.name, G.x, yc);
+        g.fillStyle = C.line; g.fillRect(X(0), yc - 0.5, X(DAY) - X(0), 1);
+        if (!t.on) { g.globalAlpha = 0.5; g.fillRect(X(t.offAt), yc - rh * 0.3, X(DAY) - X(t.offAt), rh * 0.6); g.globalAlpha = 1; }
+        for (const j of this.jobs) {
+          if (j.tech !== k) continue;
+          const st = j.st === "plan" ? j.eta : j.st === "go" ? Math.max(t.leg ? t.leg.t1 : j.eta, j.a) : j.start;
+          if (st == null) continue;
+          const x0 = X(st), x1 = X(Math.min(DAY, st + j.dur)), late = j.st === "done" ? j.late > 0 : j.eta > j.b;
+          g.fillStyle = late ? C.bad : ink[k]; g.globalAlpha = j.st === "done" ? 0.35 : j.st === "plan" ? 0.75 : 1;
+          g.fillRect(x0, yc - rh * 0.3, Math.max(2, x1 - x0 - 1), rh * 0.6);
+        }
+        g.globalAlpha = 1;
+      });
+      g.fillStyle = C.fg; g.globalAlpha = 0.6; g.fillRect(X(Math.min(this.T, DAY)), G.y + 6, 1, G.h - 6); g.globalAlpha = 1;
+    }
+  }
+
+  const KINDS = { relay: Relay, tracewise: Tracewise, onboard: Onboard, dispatch: Dispatch, atlas: Atlas, intonation: Studio, arena: Arena, layerline: Layerline };
 
   function loop(now) {
     raf = requestAnimationFrame(loop);

@@ -1,0 +1,435 @@
+{
+ "generatedAt": "2026-10-11T08:47:11.240Z",
+ "node": "v22.22.0",
+ "citySeed": "harbour-city",
+ "days": 120,
+ "techsRange": [
+  8,
+  12
+ ],
+ "jobsRange": [
+  62,
+  96
+ ],
+ "budgets": {
+  "morningIterations": 2500,
+  "replanIterations": 500,
+  "replanDeadlineMs": 50,
+  "qMax": 20,
+  "qFrac": 0.25
+ },
+ "scenario": "one technician sent home at a random time between 09:00 and 11:00, 2-3 urgent jobs called in between 10:00 and 15:30 (each to start within 2 h), one job overrunning by 40-75 min, and a 1.4-1.8x traffic spike starting between 15:00 and 16:00 and lasting 60-90 min",
+ "daysAtJobFloor": 21,
+ "methods": [
+  {
+   "key": "dispatch",
+   "label": "Dispatch (re-plans every event)",
+   "jobs": 9051,
+   "served": 8953,
+   "missed": 98,
+   "completedRate": 0.9892,
+   "onTime": 8778,
+   "onTimeRate": 0.9698,
+   "lateJobs": 175,
+   "weightedLatePerDay": 41.7,
+   "lateMinPerDay": 34.4,
+   "driveMinPerDay": 702.9,
+   "overtimeMinPerDay": 227.5,
+   "urgent": 302,
+   "urgentOnTime": 297,
+   "daysAllOnTime": 32,
+   "daysAllServed": 72
+  },
+  {
+   "key": "repair",
+   "label": "Dispatch, repair only (no search)",
+   "jobs": 9051,
+   "served": 8844,
+   "missed": 207,
+   "completedRate": 0.9771,
+   "onTime": 8387,
+   "onTimeRate": 0.9266,
+   "lateJobs": 457,
+   "weightedLatePerDay": 215.3,
+   "lateMinPerDay": 140.7,
+   "driveMinPerDay": 699.3,
+   "overtimeMinPerDay": 230.3,
+   "urgent": 302,
+   "urgentOnTime": 217,
+   "daysAllOnTime": 6,
+   "daysAllServed": 37
+  },
+  {
+   "key": "keep",
+   "label": "Morning plan, no re-planning",
+   "jobs": 9051,
+   "served": 8542,
+   "missed": 509,
+   "completedRate": 0.9438,
+   "onTime": 8220,
+   "onTimeRate": 0.9082,
+   "lateJobs": 322,
+   "weightedLatePerDay": 672.1,
+   "lateMinPerDay": 333.4,
+   "driveMinPerDay": 653,
+   "overtimeMinPerDay": 177.6,
+   "urgent": 302,
+   "urgentOnTime": 68,
+   "daysAllOnTime": 2,
+   "daysAllServed": 9
+  },
+  {
+   "key": "greedy",
+   "label": "Greedy nearest free technician",
+   "jobs": 9051,
+   "served": 8419,
+   "missed": 632,
+   "completedRate": 0.9302,
+   "onTime": 5916,
+   "onTimeRate": 0.6536,
+   "lateJobs": 2503,
+   "weightedLatePerDay": 3168.4,
+   "lateMinPerDay": 2170.3,
+   "driveMinPerDay": 1376.7,
+   "overtimeMinPerDay": 288.8,
+   "urgent": 302,
+   "urgentOnTime": 300,
+   "daysAllOnTime": 0,
+   "daysAllServed": 11
+  }
+ ],
+ "wins": {
+  "vsKeep": 111,
+  "tiesKeep": 6,
+  "vsGreedy": 120,
+  "tiesGreedy": 0
+ },
+ "latency": {
+  "count": 781,
+  "p50": 17.64,
+  "p95": 50.04,
+  "max": 50.51,
+  "sickP50": 49.95,
+  "sickP95": 50.13,
+  "hitDeadline": 158,
+  "iterationsP50": 500,
+  "movedP50": 12,
+  "jobsInPlayP50": 21,
+  "repairP50": 0.05,
+  "repairP95": 0.22,
+  "repairMax": 1.09
+ },
+ "undisrupted": {
+  "construct": {
+   "jobs": 8749,
+   "served": 8747,
+   "missed": 2,
+   "completedRate": 0.9998,
+   "onTime": 8707,
+   "onTimeRate": 0.9952,
+   "lateJobs": 40,
+   "weightedLatePerDay": 5.5,
+   "lateMinPerDay": 5.2,
+   "driveMinPerDay": 699.9,
+   "overtimeMinPerDay": 59.9,
+   "urgent": 0,
+   "urgentOnTime": 0,
+   "daysAllOnTime": 94,
+   "daysAllServed": 119
+  },
+  "alns": {
+   "jobs": 8749,
+   "served": 8749,
+   "missed": 0,
+   "completedRate": 1,
+   "onTime": 8748,
+   "onTimeRate": 0.9999,
+   "lateJobs": 1,
+   "weightedLatePerDay": 0.1,
+   "lateMinPerDay": 0.1,
+   "driveMinPerDay": 535.3,
+   "overtimeMinPerDay": 1.7,
+   "urgent": 0,
+   "urgentOnTime": 0,
+   "daysAllOnTime": 119,
+   "daysAllServed": 120
+  },
+  "morningMsP50": 514.9,
+  "morningMsMax": 764.5,
+  "driveCut": 0.2352
+ },
+ "demo": {
+  "seed": "monday",
+  "techs": 10,
+  "jobs": 78,
+  "disrupted": {
+   "dispatch": {
+    "jobs": 78,
+    "served": 78,
+    "missed": 0,
+    "onTime": 78,
+    "onTimeRate": 1,
+    "lateJobs": 0,
+    "lateMin": 0,
+    "weightedLate": 0,
+    "driveMin": 629.6862007740594,
+    "overtimeMin": 105.4983822890174,
+    "urgent": 2,
+    "urgentOnTime": 2
+   },
+   "repair": {
+    "jobs": 78,
+    "served": 78,
+    "missed": 0,
+    "onTime": 77,
+    "onTimeRate": 0.9871794871794872,
+    "lateJobs": 1,
+    "lateMin": 47.88670227362377,
+    "weightedLate": 47.88670227362377,
+    "driveMin": 721.5377459800857,
+    "overtimeMin": 146.98784773180535,
+    "urgent": 2,
+    "urgentOnTime": 2
+   },
+   "keep": {
+    "jobs": 78,
+    "served": 74,
+    "missed": 4,
+    "onTime": 70,
+    "onTimeRate": 0.8974358974358975,
+    "lateJobs": 4,
+    "lateMin": 655.3219801846377,
+    "weightedLate": 1191.392005429179,
+    "driveMin": 632.6938275423995,
+    "overtimeMin": 112.54644019152443,
+    "urgent": 2,
+    "urgentOnTime": 0
+   },
+   "greedy": {
+    "jobs": 78,
+    "served": 75,
+    "missed": 3,
+    "onTime": 53,
+    "onTimeRate": 0.6794871794871795,
+    "lateJobs": 22,
+    "lateMin": 1712.3574924793152,
+    "weightedLate": 1794.2830013404641,
+    "driveMin": 1308.5869544754646,
+    "overtimeMin": 144.6220913786334,
+    "urgent": 2,
+    "urgentOnTime": 2
+   }
+  },
+  "undisrupted": {
+   "construct": {
+    "jobs": 76,
+    "served": 76,
+    "missed": 0,
+    "onTime": 76,
+    "onTimeRate": 1,
+    "lateJobs": 0,
+    "lateMin": 0,
+    "weightedLate": 0,
+    "driveMin": 723.8087386336972,
+    "overtimeMin": 34.62202030757612,
+    "urgent": 0,
+    "urgentOnTime": 0
+   },
+   "alns": {
+    "jobs": 76,
+    "served": 76,
+    "missed": 0,
+    "onTime": 76,
+    "onTimeRate": 1,
+    "lateJobs": 0,
+    "lateMin": 0,
+    "weightedLate": 0,
+    "driveMin": 529.9352787922035,
+    "overtimeMin": 0,
+    "urgent": 0,
+    "urgentOnTime": 0
+   }
+  },
+  "log": [
+   {
+    "at": 540,
+    "kind": "sick",
+    "ms": 50.05,
+    "moved": 11
+   },
+   {
+    "at": 684.86,
+    "kind": "overrun",
+    "ms": 30.91,
+    "moved": 2
+   },
+   {
+    "at": 814,
+    "kind": "urgent",
+    "ms": 17.34,
+    "moved": 2
+   },
+   {
+    "at": 830,
+    "kind": "urgent",
+    "ms": 9.56,
+    "moved": 1
+   },
+   {
+    "at": 908,
+    "kind": "traffic",
+    "ms": 5.08,
+    "moved": 2
+   },
+   {
+    "at": 978,
+    "kind": "traffic",
+    "ms": 0.04,
+    "moved": 0
+   }
+  ],
+  "morningMs": 464.1
+ },
+ "solomon": [
+  {
+   "name": "C101",
+   "distance": 827.3,
+   "bks": 827.3,
+   "gap": 0,
+   "vehicles": 10,
+   "bksVehicles": 10,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 1423
+  },
+  {
+   "name": "C102",
+   "distance": 827.3,
+   "bks": 827.3,
+   "gap": 0,
+   "vehicles": 10,
+   "bksVehicles": 10,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 1469
+  },
+  {
+   "name": "C201",
+   "distance": 589.1,
+   "bks": 589.1,
+   "gap": 0,
+   "vehicles": 3,
+   "bksVehicles": 3,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 5728
+  },
+  {
+   "name": "C202",
+   "distance": 589.1,
+   "bks": 589.1,
+   "gap": 0,
+   "vehicles": 3,
+   "bksVehicles": 3,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 4737
+  },
+  {
+   "name": "R101",
+   "distance": 1651.9,
+   "bks": 1637.7,
+   "gap": 0.00867,
+   "vehicles": 19,
+   "bksVehicles": 20,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 1561
+  },
+  {
+   "name": "R102",
+   "distance": 1472.6,
+   "bks": 1466.6,
+   "gap": 0.00409,
+   "vehicles": 18,
+   "bksVehicles": 18,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 1481
+  },
+  {
+   "name": "R201",
+   "distance": 1191.1,
+   "bks": 1143.2,
+   "gap": 0.0419,
+   "vehicles": 6,
+   "bksVehicles": 8,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 2928
+  },
+  {
+   "name": "R202",
+   "distance": 1078.3,
+   "bks": 1029.6,
+   "gap": 0.0473,
+   "vehicles": 6,
+   "bksVehicles": 8,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 2741
+  },
+  {
+   "name": "RC101",
+   "distance": 1655.1,
+   "bks": 1619.8,
+   "gap": 0.02179,
+   "vehicles": 16,
+   "bksVehicles": 15,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 1522
+  },
+  {
+   "name": "RC102",
+   "distance": 1475.4,
+   "bks": 1457.4,
+   "gap": 0.01235,
+   "vehicles": 14,
+   "bksVehicles": 14,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 1779
+  },
+  {
+   "name": "RC201",
+   "distance": 1320.4,
+   "bks": 1261.8,
+   "gap": 0.04644,
+   "vehicles": 8,
+   "bksVehicles": 9,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 2644
+  },
+  {
+   "name": "RC202",
+   "distance": 1193.2,
+   "bks": 1092.3,
+   "gap": 0.09237,
+   "vehicles": 6,
+   "bksVehicles": 8,
+   "late": 0,
+   "unassigned": 0,
+   "ms": 3087
+  }
+ ],
+ "solomonSummary": {
+  "instances": 12,
+  "meanGap": 0.02291,
+  "maxGap": 0.09237,
+  "atBks": 4,
+  "allFeasible": true,
+  "iterations": 5000
+ }
+}

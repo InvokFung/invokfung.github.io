@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alan Fung · Full portfolio</title>
+<meta name="description" content="The full portfolio of Alan Fung (InvokFung), Forward Deployed Engineer: seven live projects with their case studies, the skills behind them and the path from a first commit in 2018 to now." />
+<meta name="theme-color" content="#09090b" />
+<meta property="og:title" content="Alan Fung · Full portfolio" />
+<meta property="og:description" content="Forward Deployed Engineer. From the customer's desk to production. Seven live projects, their case studies and how I got here." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://invokfung.github.io/explore/" />
+<link rel="icon" href="/blog/assets/icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/portfolio/explore/style.css" />
+<script>
+  // Apply saved settings before first paint so there is no flash.
+  try {
+    var s = JSON.parse(localStorage.getItem("alan.fung/config") || "null");
+    // dark by default, like the intro at /; paper and phosphor are one click away
+    document.documentElement.dataset.theme = (s && s.theme) || "midnight";
+    if (s && s.accent) document.documentElement.style.setProperty("--acc", s.accent);
+  } catch (e) {}
+  document.documentElement.classList.add("js");
+</script>
+</head>
+<body>
+  <a class="skip" href="#whoami">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><i></i><b></b><span></span></div>
+
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-in">
+      <div class="boot-log" id="boot-log"></div>
+      <div class="boot-bar"><i id="boot-bar"></i></div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="/" aria-label="Alan Fung, back to the intro"><span class="mono-mark">af</span><span class="brand-t">alan.fung</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#whoami" data-sec="whoami"><i>01</i>whoami()</a>
+      <a href="#work" data-sec="work"><i>02</i>work()</a>
+      <a href="#skills" data-sec="skills"><i>03</i>skills()</a>
+      <a href="#history" data-sec="history"><i>04</i>history()</a>
+      <a href="#contact" data-sec="contact"><i>05</i>contact()</a>
+    </nav>
+    <div class="nav-r">
+      <span class="head" id="head" title="Where you are in my history">HEAD → <b>main</b></span>
+      <button type="button" class="pill-btn snd" id="btn-snd" data-sound aria-pressed="false" title="Sound off">♪<span class="sr">sound</span></button>
+      <button type="button" class="pill-btn" id="btn-src" aria-pressed="false" title="View this page's live source">&lt;/&gt;<span> source</span></button>
+      <button type="button" class="pill-btn" id="btn-term" title="Open a terminal (press `)">›_</button>
+    </div>
+  </header>
+
+  <nav class="minimap" id="minimap" aria-label="Progress"></nav>
+
+  <div class="app" id="top">
+    <aside class="editor" id="editor" aria-label="The source code of this page">
+      <div class="ed-bar">
+        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="tab" id="tab"><span class="glyph">ƒ</span>alan.fung<span class="dirty" title="edited"></span></div>
+        <div class="ed-actions">
+          <button type="button" id="btn-reset" title="Reset live values">⟲ reset</button>
+          <button type="button" id="btn-close" title="Close source">✕</button>
+        </div>
+      </div>
+      <div class="code" id="code" tabindex="-1"></div>
+      <div class="ed-status" id="status"></div>
+    </aside>
+
+    <main class="out" id="out">
+      <svg class="thread" id="thread" aria-hidden="true"></svg>
+      <noscript>
+        <section class="sec">
+          <h1 class="title">Alan Fung</h1>
+          <p class="lede">Forward Deployed Engineer, building for the web since 2023. This page is interactive and needs JavaScript. Meanwhile: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/blog/">StudyLog</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="https://github.com/InvokFung">GitHub</a></p>
+        </section>
+      </noscript>
+    </main>
+  </div>
+
+  <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="case-title" hidden>
+    <div class="case-scroll" id="case-scroll"></div>
+  </div>
+
+  <div class="term" id="term" role="dialog" aria-label="Terminal" hidden>
+    <div class="term-bar"><span>alan@fung: ~ · zsh</span><button type="button" id="term-x" aria-label="Close terminal">esc ✕</button></div>
+    <div class="term-out" id="term-out" aria-live="polite"></div>
+    <form class="term-in" id="term-form" autocomplete="off">
+      <label for="term-input">alan@fung:~$</label>
+      <input id="term-input" spellcheck="false" autocapitalize="off" placeholder="type help" />
+    </form>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="/assets/portfolio/data.js"></script>
+  <script src="/assets/portfolio/explore/strings.js"></script>
+  <script src="/assets/portfolio/explore/spectro.js"></script>
+  <script src="/assets/portfolio/explore/sims.js"></script>
+  <script src="/assets/portfolio/explore/app.js"></script>
+</body>
+</html>
