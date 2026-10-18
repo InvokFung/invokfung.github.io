@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Morph · Motion Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../lab.css" />
+<style>
+  main {
+    position: fixed; inset: 0; display: grid; align-content: center; justify-items: center; gap: 18px;
+    padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+  }
+  .year { font: 500 clamp(30px, 4.6vw, 58px)/1 var(--mono); color: var(--accent); letter-spacing: -0.02em; display: flex; }
+  .roller .col { display: inline-block; height: 1em; overflow: hidden; }
+  .roller .strip { display: block; transition: transform 0.95s cubic-bezier(0.65, 0, 0.2, 1); }
+  .roller .strip span { display: block; height: 1em; line-height: 1em; }
+  #title { position: relative; margin: 0; width: min(1320px, 100%); color: var(--ink); }
+  .morph-layer { position: absolute; inset: 0; }
+  .ch { position: absolute; left: 0; top: 0; display: block; line-height: 1.02; text-align: center; white-space: pre; will-change: transform; }
+  .ch.scr { color: var(--accent); opacity: 0.75; transform-origin: center; }
+  .liquid { position: absolute; inset: 0; filter: url(#goo); }
+  .liquid span { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; line-height: 1.02; }
+  .sub { min-height: 1.6em; max-width: 46ch; text-align: center; font: 400 clamp(15px, 1.4vw, 18px)/1.5 var(--sans); color: var(--dim); transition: opacity 0.4s var(--ease), filter 0.4s var(--ease); }
+  .sub.out { opacity: 0; filter: blur(4px); }
+  .years { display: flex; gap: 6px; margin-top: 18px; }
+  .years button { font: 500 12px/1 var(--mono); color: var(--dim); padding: 8px 10px; border-radius: 6px; }
+  .years button[aria-current="true"] { color: var(--ink); background: rgba(255, 255, 255, 0.07); }
+  .styles {
+    position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px;
+  }
+  .styles button { padding: 8px 14px; border-radius: 999px; font: 500 12px/1 var(--mono); color: var(--dim); }
+  .styles button:hover { color: var(--ink); }
+  .styles button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  .lab-hint { bottom: auto; top: calc(56px + env(safe-area-inset-top, 0px)); }
+  @media (max-width: 640px) { .lab-hint { display: none; } }
+</style>
+</head>
+<body>
+<header class="lab-bar">
+  <a class="crumb" href="../index.html">lab / <b>morph</b></a>
+  <span class="spacer"></span>
+  <a class="src" href="https://gsap.com/docs/v3/Plugins/SplitText/" target="_blank" rel="noopener">after GSAP SplitText and React Bits text effects ↗</a>
+  <button type="button" data-notes aria-expanded="false" aria-controls="notes">notes</button>
+</header>
+
+<aside id="notes" class="lab-notes" hidden>
+  <h2>Morph</h2>
+  <p>My titles, one after another, with the year rolling beside them. The word turns into the next one instead of being swapped. Pick how: glide, decode or liquid.</p>
+  <h3>Where it came from</h3>
+  <ul>
+    <li>Split and scramble text reveals are the biggest category in <a href="https://github.com/DavidHDev/react-bits" target="_blank" rel="noopener">React Bits</a> (about 49k stars, #2 in JS Rising Stars 2025). GSAP made SplitText and ScrambleText free in April 2025.</li>
+    <li>Liquid is the blur and threshold morph from <a href="https://magicui.design/docs/components/morphing-text" target="_blank" rel="noopener">Magic UI's Morphing Text</a>.</li>
+    <li>The year rolls like <a href="https://github.com/barvian/number-flow" target="_blank" rel="noopener">NumberFlow</a>.</li>
+  </ul>
+  <h3>How it works</h3>
+  <ul>
+    <li>Glide finds the longest run of letters the two titles share, in order, and slides those to their new place. "Engineer" never leaves the screen.</li>
+    <li>Every letter is measured once on a canvas, so nothing waits on the DOM's layout.</li>
+    <li>No libraries. About 200 lines.</li>
+  </ul>
+  <p class="verdict"><b>Rank 3 of 6.</b> Ship glide for the career line. Quiet on its own, but it tells the whole path in one glance. <a href="../index.html#morph">All six, ranked</a></p>
+</aside>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="goo"><feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -9" /></filter>
+</svg>
+
+<main>
+  <div class="year" id="year"></div>
+  <h1 id="title" aria-live="polite"></h1>
+  <p class="sub" id="sub"></p>
+  <nav class="years" id="years" aria-label="Years"></nav>
+</main>
+<div class="styles" id="styles" role="group" aria-label="Morph style">
+  <button type="button" data-style="glide" aria-pressed="true">glide</button>
+  <button type="button" data-style="decode" aria-pressed="false">decode</button>
+  <button type="button" data-style="liquid" aria-pressed="false">liquid</button>
+</div>
+<div class="lab-hint" aria-hidden="true">pick a year · switch the style</div>
+
+<script type="module">
+  import '../lab.js';
+  import { mountMorph, mountRoller } from './morph.js';
+
+  // The career line, from assets/portfolio/data.js
+  const path = [
+    { y: '2020', r: 'Information Engineering', d: 'Signals, probability, networks. Half my projects run on them.' },
+    { y: '2023', r: 'Web Developer', d: 'Small games and tools, finished and live.' },
+    { y: '2024', r: 'Full Stack Engineer', d: 'Photos into 3D models, then a web metaverse.' },
+    { y: '2025', r: 'Software Engineer', d: 'Databases, C++, shaders, containers: 86 notes.' },
+    { y: '2026', r: 'Forward Deployed Engineer', d: 'Building beside the people who use the software.' }
+  ];
+
+  await document.fonts.load('400 100px "Instrument Serif"').catch(() => {});
+  const title = document.getElementById('title');
+  const sub = document.getElementById('sub');
+  const morph = mountMorph(title, { titles: path.map((p) => p.r) });
+  const year = mountRoller(document.getElementById('year'), path[0].y);
+  const nav = document.getElementById('years');
+
+  let i = 0, auto = true;
+  function go(k) {
+    i = k;
+    morph.set(path[i].r);
+    year.set(path[i].y);
+    sub.classList.add('out');
+    setTimeout(() => { sub.textContent = path[i].d; sub.classList.remove('out'); }, 380);
+    for (const b of nav.children) b.setAttribute('aria-current', String(b.dataset.i == i));
+  }
+  path.forEach((p, k) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = p.y; b.dataset.i = k;
+    b.onclick = () => { auto = false; go(k); };
+    nav.append(b);
+  });
+  go(0);
+  setInterval(() => { if (auto) go((i + 1) % path.length); }, 3200);
+
+  for (const b of document.querySelectorAll('#styles button')) {
+    b.onclick = () => {
+      for (const o of document.querySelectorAll('#styles button')) o.setAttribute('aria-pressed', String(o === b));
+      morph.setStyle(b.dataset.style);
+    };
+  }
+</script>
+</body>
+</html>

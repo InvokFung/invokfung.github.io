@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Assemble · Motion Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../lab.css" />
+<style>
+  #gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+  .caption {
+    position: fixed; left: 0; right: 0; bottom: calc(78px + env(safe-area-inset-bottom, 0px)); z-index: 12;
+    padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+    text-align: center; pointer-events: none; transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  }
+  .caption.out { opacity: 0; transform: translateY(6px); }
+  .caption b { display: block; font: 400 clamp(22px, 2.6vw, 30px)/1.15 var(--serif); color: var(--ink); }
+  .caption span { display: block; margin-top: 4px; font: 500 12px/1.4 var(--mono); color: var(--dim); }
+  .scenes {
+    position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(24px + env(safe-area-inset-bottom, 0px)); z-index: 12;
+    display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: rgba(10, 11, 13, 0.7);
+    max-width: calc(100vw - 32px); overflow-x: auto; scrollbar-width: none;
+  }
+  .scenes button { position: relative; padding: 7px 12px; border-radius: 999px; font: 500 12px/1 var(--mono); color: var(--dim); white-space: nowrap; overflow: hidden; }
+  .scenes button:hover { color: var(--ink); }
+  .scenes button[aria-pressed="true"] { color: var(--bg); background: var(--ink); }
+  .scenes button .bar { position: absolute; left: 0; bottom: 0; height: 2px; background: var(--accent); width: 0; }
+  .drop { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; background: rgba(10, 11, 13, 0.8); font: 400 34px var(--serif); color: var(--ink); pointer-events: none; }
+  .lab-hint { bottom: auto; top: calc(56px + env(safe-area-inset-top, 0px)); }
+  @media (max-width: 640px) { .lab-hint { display: none; } }
+</style>
+</head>
+<body>
+<header class="lab-bar">
+  <a class="crumb" href="../index.html">lab / <b>assemble</b></a>
+  <span class="spacer"></span>
+  <a class="src" href="https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/" target="_blank" rel="noopener">after Bruno Imbrizi's Interactive Particles ↗</a>
+  <button type="button" data-notes aria-expanded="false" aria-controls="notes">notes</button>
+</header>
+
+<aside id="notes" class="lab-notes" hidden>
+  <h2>Assemble</h2>
+  <p>Up to 42,000 particles fly between scenes: my name in type, a line of copy, and stills from Layerline and Tracewise. Drop a photo on the page and they become you.</p>
+  <h3>Where it came from</h3>
+  <p>The image-to-particles effect people share as "pixels that turn into my photo". The best-known write-up is <a href="https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/" target="_blank" rel="noopener">Interactive Particles with Three.js</a> by Bruno Imbrizi on Codrops. This version is written from scratch in plain WebGL, no three.js.</p>
+  <h3>How it works</h3>
+  <ul>
+    <li>Each scene is sampled once on the CPU: type is filled with dots, an image becomes a halftone where bright pixels are bigger dots.</li>
+    <li>Every particle keeps where it was and where it is going. The vertex shader flies it there with a swirl that peaks mid-flight, so one draw call moves all of them.</li>
+    <li>The scene sweeps in from the left, and the cursor pushes the dots aside.</li>
+  </ul>
+  <h3>Your photo</h3>
+  <p>Drop a photo anywhere, or use the + photo button. It stays in your browser. To make it the default here, save a headshot as <code>lab/assemble/portrait.jpg</code>; a plain background works best.</p>
+  <p class="verdict"><b>Rank 4 of 6.</b> The biggest wow, and it needs a real photo to land. Keep it to portraits and objects; dashboards turn to mush as dots. <a href="../index.html#assemble">All six, ranked</a></p>
+</aside>
+
+<canvas id="gl" aria-label="Particles forming my name, then project stills"></canvas>
+<div class="caption" id="caption" aria-live="polite"><b></b><span></span></div>
+<nav class="scenes" id="scenes" aria-label="Scenes"></nav>
+<input type="file" id="file" accept="image/*" hidden />
+<div class="drop" id="drop" hidden>Let go to become particles</div>
+<div class="lab-hint" aria-hidden="true">move through it · drop a photo</div>
+<div class="lab-meter" id="meter" aria-hidden="true"></div>
+
+<script type="module">
+  import '../lab.js';
+  import { mountAssemble, loadImage } from './assemble.js';
+
+  const narrow = innerWidth < 700;
+  const count = narrow ? 18000 : 42000;
+  const serif = (italic) => (px) => `${italic ? 'italic ' : ''}400 ${px}px "Instrument Serif", Georgia, serif`;
+
+  await Promise.all([
+    document.fonts.load('400 100px "Instrument Serif"'),
+    document.fonts.load('italic 400 100px "Instrument Serif"')
+  ]).catch(() => {});
+  const [gear, map] = await Promise.all([loadImage('media/layerline-gear.jpg'), loadImage('media/tracewise-map.jpg')]);
+
+  const scenes = [
+    { id: 'name', label: 'name', text: 'Alan Fung', font: serif(false), ink: [0.93, 0.92, 0.9], title: 'Alan Fung', sub: 'Forward Deployed Engineer' },
+    { id: 'layerline', label: 'layerline', img: gear, title: 'Layerline', sub: 'this gear, sliced by 66 KB of WebAssembly in 21 ms' },
+    { id: 'line', label: 'line', text: "From the customer's desk\nto production.", font: serif(true), ink: [1, 0.71, 0.28], title: '', sub: 'the job, in one line' },
+    { id: 'tracewise', label: 'tracewise', img: map, title: 'Tracewise', sub: 'names the culprit first 98.9% of the time' }
+  ];
+  // a portrait saved next to this page joins the tour right after the name
+  try {
+    const me = await loadImage('portrait.jpg');
+    scenes.splice(1, 0, { id: 'me', label: 'me', img: me, title: 'Alan Fung', sub: 'hello' });
+  } catch {}
+
+  const canvas = document.getElementById('gl');
+  const cap = document.getElementById('caption');
+  const nav = document.getElementById('scenes');
+  const fx = mountAssemble(canvas, {
+    count,
+    onScene(s) {
+      cap.classList.add('out');
+      setTimeout(() => {
+        cap.querySelector('b').textContent = s.title;
+        cap.querySelector('span').textContent = s.sub;
+        cap.classList.remove('out');
+      }, 450);
+      for (const b of nav.children) b.setAttribute('aria-pressed', String(b.dataset.id === s.id));
+    }
+  });
+  document.getElementById('meter').textContent = `${count.toLocaleString('en')} particles · 1 draw call`;
+
+  // the tour: each scene holds for a few seconds, then the next one sweeps in; a click takes over
+  const HOLD = 5200;
+  let i = 0, auto = true, timer = 0, since = performance.now();
+  function show(k, byHand) {
+    i = (k + scenes.length) % scenes.length;
+    if (byHand) auto = false;
+    fx.show(scenes[i]);
+    since = performance.now();
+  }
+  function draw() {
+    for (const b of nav.children) {
+      const bar = b.querySelector('.bar');
+      if (!bar) continue;
+      const on = auto && b.dataset.id === scenes[i].id;
+      bar.style.width = on ? Math.min(100, (performance.now() - since) / HOLD * 100) + '%' : '0';
+    }
+    if (auto && performance.now() - since > HOLD) show(i + 1);
+    requestAnimationFrame(draw);
+  }
+
+  function chips() {
+    nav.innerHTML = '';
+    for (const [k, s] of scenes.entries()) {
+      const b = document.createElement('button');
+      b.type = 'button'; b.dataset.id = s.id; b.textContent = s.label;
+      b.setAttribute('aria-pressed', 'false');
+      b.append(Object.assign(document.createElement('span'), { className: 'bar' }));
+      b.onclick = () => show(k, true);
+      nav.append(b);
+    }
+    const add = document.createElement('button');
+    add.type = 'button'; add.textContent = '+ photo';
+    add.onclick = () => document.getElementById('file').click();
+    nav.append(add);
+  }
+
+  async function usePhoto(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+    const url = URL.createObjectURL(file);
+    const img = await loadImage(url);
+    const old = scenes.findIndex((s) => s.id === 'you');
+    const s = { id: 'you', label: 'you', img, title: 'You, in 42,000 dots', sub: 'it never left your browser' };
+    if (old >= 0) scenes[old] = s; else scenes.push(s);
+    chips();
+    show(scenes.indexOf(s), true);
+  }
+  document.getElementById('file').onchange = (e) => usePhoto(e.target.files[0]);
+  const drop = document.getElementById('drop');
+  addEventListener('dragover', (e) => { e.preventDefault(); drop.hidden = false; });
+  addEventListener('dragleave', (e) => { if (!e.relatedTarget) drop.hidden = true; });
+  addEventListener('drop', (e) => { e.preventDefault(); drop.hidden = true; usePhoto(e.dataTransfer.files[0]); });
+
+  chips();
+  show(0);
+  draw();
+</script>
+</body>
+</html>
