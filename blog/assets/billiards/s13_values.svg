@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-label="Seven balls with their values: red 1, yellow 2, green 3, brown 4, blue 5, pink 6, black 7. Below, the order of a break: red, colour, red, colour while reds are left; then the colours from yellow to black">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="430" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="428.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What each ball is worth</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Red, then any colour, again and again; when the reds are gone, the colours in order.</text>
+<circle cx="90" cy="150" r="30" fill="#d42a2a" stroke="#222" stroke-width="1.5"/>
+<text x="90.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="90.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">red</text>
+<circle cx="220" cy="150" r="30" fill="#e9c21a" stroke="#222" stroke-width="1.5"/>
+<text x="220.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937" text-anchor="middle">2</text>
+<text x="220.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">yellow</text>
+<circle cx="350" cy="150" r="30" fill="#127a3a" stroke="#222" stroke-width="1.5"/>
+<text x="350.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+<text x="350.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">green</text>
+<circle cx="480" cy="150" r="30" fill="#6b3b1c" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+<text x="480.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">brown</text>
+<circle cx="610" cy="150" r="30" fill="#1f5fd6" stroke="#222" stroke-width="1.5"/>
+<text x="610.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+<text x="610.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">blue</text>
+<circle cx="740" cy="150" r="30" fill="#f08aa8" stroke="#222" stroke-width="1.5"/>
+<text x="740.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2937" text-anchor="middle">6</text>
+<text x="740.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">pink</text>
+<circle cx="870" cy="150" r="30" fill="#141414" stroke="#222" stroke-width="1.5"/>
+<text x="870.0" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">7</text>
+<text x="870.0" y="205.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="middle">black</text>
+<text x="40.0" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">While reds are on the table:</text>
+<text x="40.0" y="288.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">red → any colour (it comes back on its spot) → red → colour → …</text>
+<text x="40.0" y="326.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">When the last red and its colour are gone:</text>
+<text x="40.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">yellow → green → brown → blue → pink → black (they stay down).</text>
+<text x="620.0" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">The maximum: 15 reds × (1 + 7) + 27</text>
+<text x="620.0" y="288.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#0d9488" text-anchor="start">= 120 + 27 = 147</text>
+<text x="40.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">WPBSA Official Rules 2024-25, Section 3 Rules 1 and 3. A free ball can add more; that is rare.</text>
+</svg>

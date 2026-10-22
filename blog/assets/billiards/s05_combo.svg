@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="The white's face with nine tip spots: centre, top, bottom, left, right, and four corners. Each corner combines spin: top right is follow with right side, bottom left is screw with left side">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="440" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="438.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Side mixes with follow and screw</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The white seen from behind. Every spot stays inside the safe zone (half-way to the edge).</text>
+<circle cx="250" cy="260" r="130" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
+<circle cx="250" cy="260" r="65.0" fill="#2f9e6b" fill-opacity="0.12" stroke="#2f9e6b" stroke-dasharray="6 5"/>
+<circle cx="250.0" cy="260.0" r="13" fill="#2f6fd6"/>
+<text x="250.0" y="264.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">C</text>
+<circle cx="250.0" cy="201.5" r="13" fill="#2f6fd6"/>
+<text x="250.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">T</text>
+<circle cx="250.0" cy="318.5" r="13" fill="#2f6fd6"/>
+<text x="250.0" y="323.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+<circle cx="191.5" cy="260.0" r="13" fill="#2f6fd6"/>
+<text x="191.5" y="264.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">L</text>
+<circle cx="308.5" cy="260.0" r="13" fill="#2f6fd6"/>
+<text x="308.5" y="264.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">R</text>
+<circle cx="209.1" cy="219.1" r="13" fill="#2f6fd6"/>
+<text x="209.1" y="223.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TL</text>
+<circle cx="290.9" cy="219.1" r="13" fill="#2f6fd6"/>
+<text x="290.9" y="223.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TR</text>
+<circle cx="209.1" cy="300.9" r="13" fill="#2f6fd6"/>
+<text x="209.1" y="305.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">BL</text>
+<circle cx="290.9" cy="300.9" r="13" fill="#2f6fd6"/>
+<text x="290.9" y="305.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">BR</text>
+<text x="450.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" text-anchor="start">C</text>
+<text x="530.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">centre</text>
+<text x="530.0" y="180.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">plain</text>
+<text x="450.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" text-anchor="start">T / B</text>
+<text x="530.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">top / bottom</text>
+<text x="530.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">follow / screw</text>
+<text x="450.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" text-anchor="start">L / R</text>
+<text x="530.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">left / right</text>
+<text x="530.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">side only</text>
+<text x="450.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" text-anchor="start">TL / TR</text>
+<text x="530.0" y="316.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">top left / top right</text>
+<text x="530.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">follow + side: runs on, then side off the cushion</text>
+<text x="450.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#2f6fd6" text-anchor="start">BL / BR</text>
+<text x="530.0" y="368.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">bottom left / bottom right</text>
+<text x="530.0" y="388.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">screw + side: comes back, then side off the cushion</text>
+<text x="40.0" y="422.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Corner spots still squirt and throw like plain side. Keep them inside the safe zone.</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-label="Side view of a ball touching the cushion. The cushion's nose meets the ball 33 millimetres above the cloth, 7 millimetres above the ball's centre at 26 millimetres. The push from the cushion points back and a little down, into the cloth">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="500" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="498.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Where the cushion meets the ball</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Side view, to scale (×4). The nose sits a little above the ball's middle.</text>
+<rect x="60" y="440" width="880" height="10" fill="#2f9e6b"/>
+<path d="M431.1,306.6 L481.1,292.0 L761.1,292.0 L761.1,440 L521.1,440 Z" fill="#1f7a4d" stroke="#14532d" stroke-width="2"/>
+<circle cx="330" cy="335.0" r="105.0" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
+<circle cx="330" cy="335.0" r="4" fill="#111"/>
+<circle cx="431.1" cy="306.6" r="5" fill="#dc4c3a"/>
+<line x1="431.1" y1="306.6" x2="315.6" y2="339.1" stroke="#dc4c3a" stroke-width="4" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="521.1" y="266.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#dc4c3a" text-anchor="middle">push from the cushion</text>
+<line x1="180.0" y1="335.0" x2="180.0" y2="440.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<line x1="180.0" y1="335.0" x2="330.0" y2="335.0" stroke="#6b7280" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="170.0" y="392.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">26 mm: centre</text>
+<line x1="791.1" y1="306.6" x2="791.1" y2="440.0" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<line x1="431.1" y1="306.6" x2="791.1" y2="306.6" stroke="#6b7280" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<text x="801.1" y="378.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2937" text-anchor="start">33 mm: nose</text>
+<text x="60.0" y="120.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">The nose is above the centre, so the push points a little down into the cloth.</text>
+<text x="60.0" y="144.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">The cloth then grips the ball during the hit, and most of the white's spin is taken off.</text>
+<text x="40.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Model: nose 7 mm above the ball's centre (64% of its height). Real cushions differ a little.</text>
+</svg>

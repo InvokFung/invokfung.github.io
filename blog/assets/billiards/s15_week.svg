@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 528" width="1000" height="528" role="img" aria-label="A 70-minute practice session as six bars: straight cue 10 minutes, long blue 10, stop, follow and screw 10, the line-up 20, clearing the colours 10, safety 10">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="528" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="526.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">One practice session: 70 minutes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Short drills first, then a long one that links them.</text>
+<text x="40.0" y="152.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Straight cue</text>
+<text x="40.0" y="174.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">white from the brown spot to the top cushion and back over the spot</text>
+<rect x="620.0" y="138.0" width="120.0" height="28.0" rx="6" fill="#1f2937" stroke="#1f2937" stroke-width="1.5"/>
+<text x="750.0" y="158.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">10 min</text>
+<text x="40.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="start">Long blue</text>
+<text x="40.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">blue on its spot, white in the D, pot into a corner</text>
+<rect x="620.0" y="196.0" width="120.0" height="28.0" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1.5"/>
+<text x="750.0" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">10 min</text>
+<text x="40.0" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">Stop, follow, screw</text>
+<text x="40.0" y="290.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">a straight colour; stop it dead, then follow and screw to a mark</text>
+<rect x="620.0" y="254.0" width="120.0" height="28.0" rx="6" fill="#0d9488" stroke="#0d9488" stroke-width="1.5"/>
+<text x="750.0" y="274.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">10 min</text>
+<text x="40.0" y="326.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">The line-up</text>
+<text x="40.0" y="348.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">15 reds on the long line, colours on spots; red, colour, red ...</text>
+<rect x="620.0" y="312.0" width="240.0" height="28.0" rx="6" fill="#dc4c3a" stroke="#dc4c3a" stroke-width="1.5"/>
+<text x="870.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">20 min</text>
+<text x="40.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Clear the colours</text>
+<text x="40.0" y="406.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">only the colours, yellow to black in order</text>
+<rect x="620.0" y="370.0" width="120.0" height="28.0" rx="6" fill="#d97706" stroke="#d97706" stroke-width="1.5"/>
+<text x="750.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">10 min</text>
+<text x="40.0" y="442.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#16a34a" text-anchor="start">Safety</text>
+<text x="40.0" y="464.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">white in the D, a red near the top cushion; hit it and come back to baulk</text>
+<rect x="620.0" y="428.0" width="120.0" height="28.0" rx="6" fill="#16a34a" stroke="#16a34a" stroke-width="1.5"/>
+<text x="750.0" y="448.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">10 min</text>
+<text x="40.0" y="510.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Coaching advice. Note a score for each drill (for example, pots out of 10) to see progress week by week.</text>
+</svg>

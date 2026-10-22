@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-label="A table with three pots in a row. 1: the white pots a red into the top right corner and rolls to a landing spot below the blue. 2: from there it pots the blue into the top middle pocket and rolls left to a spot near the next red. 3: it pots that red into the bottom left corner">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="470" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="468.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Plan three balls ahead</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Choose each landing spot from the pot that comes after it.</text>
+<rect x="40.0" y="110.0" width="600.0" height="300.0" rx="8" fill="#2f8f55" stroke="#6b3b1c" stroke-width="8"/>
+<circle cx="40" cy="110" r="11" fill="#111"/>
+<circle cx="340.0" cy="110" r="11" fill="#111"/>
+<circle cx="640" cy="110" r="11" fill="#111"/>
+<circle cx="40" cy="410" r="11" fill="#111"/>
+<circle cx="340.0" cy="410" r="11" fill="#111"/>
+<circle cx="640" cy="410" r="11" fill="#111"/>
+<line x1="440.0" y1="385.0" x2="513.0" y2="191.0" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M513,191 Q430,300 388,290" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<line x1="372.0" y1="278.0" x2="343.0" y2="234.0" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M336,234 Q290,250 237,250" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<line x1="530.0" y1="185.0" x2="640.0" y2="110.0" stroke="#ffd84d" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<line x1="340.0" y1="215.0" x2="340.0" y2="110.0" stroke="#ffd84d" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<line x1="150.0" y1="335.0" x2="40.0" y2="410.0" stroke="#ffd84d" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<circle cx="530" cy="185" r="9" fill="#d42a2a" stroke="#222"/>
+<circle cx="340" cy="215" r="9" fill="#1f5fd6" stroke="#222"/>
+<circle cx="150" cy="335" r="9" fill="#d42a2a" stroke="#222"/>
+<circle cx="440" cy="385" r="9" fill="#fff" stroke="#222"/>
+<circle cx="378" cy="290" r="11" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 3"/>
+<circle cx="225" cy="250" r="11" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 3"/>
+<circle cx="552.0" cy="167.0" r="12" fill="#d97706"/>
+<text x="552.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<circle cx="362.0" cy="197.0" r="12" fill="#d97706"/>
+<text x="362.0" y="202.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="172.0" cy="317.0" r="12" fill="#d97706"/>
+<text x="172.0" y="322.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="680.0" y="150.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">1 · Pot the red</text>
+<text x="680.0" y="172.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">land below the blue, with an angle</text>
+<text x="680.0" y="222.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">2 · Pot the blue</text>
+<text x="680.0" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">that angle sends the white left,</text>
+<text x="680.0" y="264.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">towards the next red</text>
+<text x="680.0" y="314.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">3 · Pot the next red</text>
+<text x="680.0" y="336.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">and plan the next colour from it</text>
+<text x="680.0" y="380.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">White dashes: the white. Yellow: the pots.</text>
+<text x="40.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">A diagram of the idea, not to scale.</text>
+</svg>

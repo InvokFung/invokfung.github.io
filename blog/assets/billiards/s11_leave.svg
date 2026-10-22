@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-label="Three small tables. 1: the white far from the reds. 2: the white close to a cushion. 3: the white hidden behind a colour, so no red can be hit directly">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="400" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="398.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">What a good safety leaves</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">One of these is good; two or three together is very good.</text>
+<rect x="40.0" y="110.0" width="280.0" height="150.0" rx="6" fill="#2f8f55" stroke="#6b3b1c" stroke-width="6"/>
+<circle cx="255" cy="180" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="265" cy="170" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="265" cy="190" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="275" cy="160" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="275" cy="180" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="275" cy="200" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<line x1="72.0" y1="206.0" x2="240.0" y2="182.0" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+<circle cx="62" cy="210" r="6" fill="#ffffff" stroke="#555"/>
+<circle cx="52.0" cy="294.0" r="12" fill="#0d9488"/>
+<text x="52.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="72.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Far away</text>
+<text x="72.0" y="322.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">long shot, little room</text>
+<rect x="360.0" y="110.0" width="280.0" height="150.0" rx="6" fill="#2f8f55" stroke="#6b3b1c" stroke-width="6"/>
+<circle cx="575" cy="180" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="585" cy="170" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="585" cy="190" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="595" cy="160" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="595" cy="180" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="595" cy="200" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="430" cy="247" r="6" fill="#ffffff" stroke="#555"/>
+<circle cx="372.0" cy="294.0" r="12" fill="#0d9488"/>
+<text x="372.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="392.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">On a cushion</text>
+<text x="392.0" y="322.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">cue raised, top of the white only</text>
+<rect x="680.0" y="110.0" width="280.0" height="150.0" rx="6" fill="#2f8f55" stroke="#6b3b1c" stroke-width="6"/>
+<circle cx="895" cy="180" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="905" cy="170" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="905" cy="190" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="915" cy="160" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="915" cy="180" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="915" cy="200" r="5.5" fill="#d42a2a" stroke="#7a1010"/>
+<circle cx="740" cy="185" r="6" fill="#e9c21a" stroke="#8a6d00"/>
+<circle cx="728" cy="185" r="6" fill="#ffffff" stroke="#555"/>
+<circle cx="692.0" cy="294.0" r="12" fill="#0d9488"/>
+<text x="692.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="712.0" y="299.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="start">Behind a colour</text>
+<text x="712.0" y="322.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">a snooker: no direct red</text>
+<text x="40.0" y="382.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Not to scale.</text>
+</svg>

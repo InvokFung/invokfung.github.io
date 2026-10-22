@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-label="A diagram of a double. The red is near the top cushion, the pocket on the far side. The cushion point splits the distance along the cushion in the same ratio as the red's and the pocket's distances from the cushion: here about one fifth of the way">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="500" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="498.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Where to hit the cushion: split the distance</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The cushion point divides the distance along the cushion in the ratio red-to-cushion : pocket-to-cushion.</text>
+<line x1="140.0" y1="150.0" x2="930.0" y2="150.0" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+<text x="930.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="end">cushion</text>
+<line x1="254.0" y1="218.6" x2="351.9" y2="150.0" stroke="#d42a2a" stroke-width="3" stroke-linecap="round"/>
+<line x1="351.9" y1="150.0" x2="777.4" y2="448.5" stroke="#d42a2a" stroke-width="3" stroke-linecap="round" marker-end="url(#ah)"/>
+<circle cx="254.0" cy="218.6" r="11" fill="#d42a2a" stroke="#7a1010" stroke-width="1.5"/>
+<circle cx="777.4" cy="448.5" r="16" fill="#222"/>
+<circle cx="351.9" cy="150.0" r="7" fill="#f2c418" stroke="#8a6d00"/>
+<line x1="214.0" y1="150.0" x2="214.0" y2="218.6" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="204.0" y="189.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="end">a = 40 cm</text>
+<line x1="827.4" y1="150.0" x2="827.4" y2="448.5" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="837.4" y="304.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="start">b = 176 cm</text>
+<line x1="254.0" y1="128.0" x2="351.9" y2="128.0" stroke="#0d9488" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<line x1="351.9" y1="128.0" x2="777.4" y2="128.0" stroke="#d97706" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="302.9" y="120.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">5 cm</text>
+<text x="564.7" y="120.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#d97706" text-anchor="middle">22 cm</text>
+<text x="80.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937" text-anchor="start">5 : 22  =  a : b  =  40 : 176</text>
+<text x="80.0" y="362.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">A red close to the cushion hits it almost</text>
+<text x="80.0" y="384.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">straight in front of itself.</text>
+<text x="40.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Exact for a sliding ball (angle in = angle out), measured from where a ball's centre meets the cushion. Across the table not to scale.</text>
+</svg>

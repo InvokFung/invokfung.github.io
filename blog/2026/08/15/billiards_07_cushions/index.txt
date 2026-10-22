@@ -1,0 +1,401 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+4:["year","2026","d"]
+5:["month","08","d"]
+6:["day","15","d"]
+7:["slug","billiards_07_cushions","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["mdPTm5e8aK9zEKOZy2fjt",[[["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","15","d"],{"children":[["slug","billiards_07_cushions","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"08\",\"day\":\"15\",\"slug\":\"billiards_07_cushions\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","08","d"],{"children":[["day","15","d"],{"children":[["slug","billiards_07_cushions","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-10-22 15:05:14\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}],"$undefined"],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+12:I[117,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+11:T43f7,<p>Every escape, double and positional shot uses a cushion. &quot;Angle in equals angle out&quot; is a good start, but pace and spin bend it. This lesson covers how the cushion meets the ball, the mirror point and when it works, how pace and spin bend the line, how far the white comes back off a cushion, running and check side (and when they matter), two-cushion routes, a ball on the cushion, and the white touching the cushion.</p>
+<blockquote>
+<p>Series map. <em>★ Basics:</em> 01 Cue action and elevation → 02 Aiming and potting → 03 Tip and power → 04 Where the white goes · <em>★★ Club:</em> 05 Side spin → 06 Cut and side into pockets → <strong>07 Cushions</strong> (this post) → 08 Doubles · <em>★★★ Advanced:</em> 09 Escaping snookers → 10 Multi-ball shots → 11 Safety → 12 Position play · <em>★★★★ Hard:</em> 13 Break-building → 14 Special shots · <em>Reference:</em> 15 Rules, tactics and practice.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Know where the cushion touches the ball, and why it takes spin off.</li>
+<li>Find a cushion point with the <strong>mirror point</strong>, and adjust it for pace and spin.</li>
+<li>Control how far the white comes back off a cushion.</li>
+<li>Use running side and check side, and know when side makes a big difference.</li>
+<li>Plan a two-cushion route.</li>
+<li>Pot a ball sitting on the cushion, and play the white when it touches the cushion.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-How-the-cushion-works"><a href="#Chapter-1-—-How-the-cushion-works" class="headerlink" title="Chapter 1 — How the cushion works"></a>Chapter 1 — How the cushion works</h1>
+<h2 id="1-Where-the-cushion-meets-the-ball"><a href="#1-Where-the-cushion-meets-the-ball" class="headerlink" title="1 · Where the cushion meets the ball"></a>1 · Where the cushion meets the ball</h2>
+<p><img src="/blog/assets/billiards/s07_contact.svg" alt="Side view of a ball touching the cushion. The cushion's nose meets the ball 33 millimetres above the cloth, 7 millimetres above the ball's centre at 26 millimetres. The push from the cushion points back and a little down, into the cloth"></p>
+<p>The cushion's <strong>nose</strong> is a little above the middle of the ball, about 64% of its height in the model. So the push from the cushion points slightly <strong>down</strong>, pressing the ball into the cloth during the hit. The cloth then grips it, and most of the white's spin comes off at the cushion.</p>
+<p>This is why, after a cushion, spin effects are <strong>smaller</strong> than you might expect, and why the angle off the cushion is the thing that changes.</p>
+<hr>
+<h2 id="2-The-mirror-point-and-when-it-works"><a href="#2-The-mirror-point-and-when-it-works" class="headerlink" title="2 · The mirror point, and when it works"></a>2 · The mirror point, and when it works</h2>
+<p><img src="/blog/assets/billiards/b07_mirror.webp" alt="Three top views of the white sent off the top side cushion to a green ring. A faint ring behind the cushion is the mirror point. 1: centre ball, power 3, aimed at the mirror point: the white comes off a little flatter and runs past the ring, cross. 2: the same aim, power 4: the white goes through the ring, tick. 3: power 3 with the aim moved shorter along the cushion: through the ring, tick"></p>
+<p>To send the white off a cushion to a spot: reflect the spot behind the cushion (the <strong>mirror point</strong>) and aim at it.</p>
+<p>That works when the white is <strong>still sliding</strong> at the cushion. A white that is already <strong>rolling</strong> comes off a little flatter and runs on.</p>
+<table>
+<thead>
+<tr>
+<th>Hit</th>
+<th>Where it goes (model, 80 cm to the cushion)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 · power 3, centre ball (rolling by the cushion)</td>
+<td>about 12 cm past the target ✗</td>
+</tr>
+<tr>
+<td>2 · the same aim, power 4 (still sliding)</td>
+<td>within 4 cm ✓</td>
+</tr>
+<tr>
+<td>3 · power 3, aim about 5 cm <strong>shorter</strong> along the cushion</td>
+<td>on target ✓</td>
+</tr>
+</tbody>
+</table>
+<p>Two good answers: play it firmer, or keep the slow pace and aim shorter. Choose by where you want the white to stop.</p>
+<blockquote>
+<p><strong>Trick:</strong> reflect the target in the line where the white's <strong>centre</strong> touches the cushion, half a ball out from the rubber, not in the rubber itself.</p>
+</blockquote>
+<hr>
+<h2 id="3-Pace-and-spin-bend-the-line"><a href="#3-Pace-and-spin-bend-the-line" class="headerlink" title="3 · Pace and spin bend the line"></a>3 · Pace and spin bend the line</h2>
+<p><img src="/blog/assets/billiards/b07_pace.webp" alt="Top view of one line into the top side cushion at 45 degrees and four tracks coming off it. Slow roll: the flattest. Firm roll: a little flatter than the line in. Stun: straight, like a mirror. Screw: steeper, bending away from the cushion"></p>
+<p>The same line in at 45°, four hits:</p>
+<table>
+<thead>
+<tr>
+<th>Hit</th>
+<th>Off the cushion at…</th>
+<th>Then</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slow roll (power 2, a little above centre)</td>
+<td>35°</td>
+<td>almost straight</td>
+</tr>
+<tr>
+<td>firm roll (power 4, a little above centre)</td>
+<td>39°</td>
+<td>straight</td>
+</tr>
+<tr>
+<td><strong>stun</strong> (power 3, below centre, sliding at the cushion)</td>
+<td><strong>47°</strong></td>
+<td>straight: angle in = angle out</td>
+</tr>
+<tr>
+<td>screw (power 4, below centre, still spinning back)</td>
+<td>48°</td>
+<td>bends away, to 52°</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A rolling white comes off flatter</strong> (the slower, the flatter), <strong>a stun follows the mirror</strong>, and <strong>backspin makes it steeper and bends it away</strong>.</p>
+<hr>
+<h2 id="4-Straight-in-and-back-the-tip-sets-the-distance"><a href="#4-Straight-in-and-back-the-tip-sets-the-distance" class="headerlink" title="4 · Straight in and back: the tip sets the distance"></a>4 · Straight in and back: the tip sets the distance</h2>
+<p><img src="/blog/assets/billiards/s07_back.webp" alt="Top view of four whites, each sent straight into the top cushion from 60 cm at power 2 with a different tip, shown by small faces. The yellow tracks show how far each comes back: top 117 cm, centre 56 cm, a little low 23 cm, low 8 cm"></p>
+<p>Four whites, 60 cm from the cushion, straight in at power 2. Only the tip changes (model):</p>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Comes back from the cushion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top (7/10 height)</td>
+<td>117 cm</td>
+</tr>
+<tr>
+<td>centre</td>
+<td>56 cm</td>
+</tr>
+<tr>
+<td>a little low</td>
+<td>23 cm</td>
+</tr>
+<tr>
+<td>low</td>
+<td>8 cm</td>
+</tr>
+</tbody>
+</table>
+<p>A high tip rolls from the start and arrives with the most pace. A low tip spends pace on the cloth while its backspin wears off (post 03), so it arrives slowly and <strong>dies near the cushion</strong>.</p>
+<blockquote>
+<p><strong>Trick:</strong> to leave the white tight on a cushion (a good safety, post 11), go straight in with a low tip and soft pace.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-Side-at-the-cushion"><a href="#Chapter-2-—-Side-at-the-cushion" class="headerlink" title="Chapter 2 — Side at the cushion"></a>Chapter 2 — Side at the cushion</h1>
+<h2 id="5-Running-side-and-check-side"><a href="#5-Running-side-and-check-side" class="headerlink" title="5 · Running side and check side"></a>5 · Running side and check side</h2>
+<p><img src="/blog/assets/billiards/b07_side.webp" alt="Top view of one line into the top side cushion at 60 degrees and three tracks off it, each with a face showing the tip spot. Right-hand side: the flattest track, running along the table. Centre: in the middle. Left-hand side: the steepest track"></p>
+<ul>
+<li><strong>Running side</strong> makes the white run on: it comes off <strong>wider</strong> (flatter to the cushion) and keeps more pace.</li>
+<li><strong>Check side</strong> holds it: it comes off <strong>narrower</strong> (squarer) and slower.</li>
+</ul>
+<p>Which is which? Look at the way the white will turn off the cushion. Here it turns <strong>right</strong>, so <strong>right-hand side</strong> is running side.</p>
+<hr>
+<h2 id="6-Side-matters-most-when-you-hit-the-cushion-square"><a href="#6-Side-matters-most-when-you-hit-the-cushion-square" class="headerlink" title="6 · Side matters most when you hit the cushion square"></a>6 · Side matters most when you hit the cushion square</h2>
+<p><img src="/blog/assets/billiards/s07_entry.webp" alt="Two top views. Left: a line into the top cushion at 30 degrees; check, plain and running side come off at 17, 18 and 14 degrees, almost the same. Right: a line in at 60 degrees; check 62, plain 55, running 33 degrees, far apart"></p>
+<p>The same side, two lines in (model, power 3, side 0.6 R):</p>
+<table>
+<thead>
+<tr>
+<th>Line in</th>
+<th>Check</th>
+<th>Plain</th>
+<th>Running</th>
+<th>Side changes it by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30° (shallow)</td>
+<td>17°</td>
+<td>18°</td>
+<td>14°</td>
+<td>3°</td>
+</tr>
+<tr>
+<td>60° (square-ish)</td>
+<td>62°</td>
+<td>55°</td>
+<td>33°</td>
+<td><strong>29°</strong></td>
+</tr>
+</tbody>
+</table>
+<p>On a shallow line, the white is already sliding along the cushion and side has little to add. Coming in <strong>squarer</strong>, side changes everything. So when you need side for the angle, <strong>come into the cushion squarer</strong>.</p>
+<hr>
+<h2 id="7-Watch-it-running-side-opens-the-angle"><a href="#7-Watch-it-running-side-opens-the-angle" class="headerlink" title="7 · Watch it: running side opens the angle"></a>7 · Watch it: running side opens the angle</h2>
+<div class="bclip"><img class="no-lightbox" src="/blog/assets/billiards/b07_clip_side.webp" alt="Clip: the white is played into the top side cushion with right-hand running side at power 3. It comes off wide and runs on down the table towards the far cushion"></div>
+<p>Right-hand side, power 3. Off the cushion, the white runs on down the table instead of coming back across.</p>
+<hr>
+<h2 id="8-Two-cushions-for-position"><a href="#8-Two-cushions-for-position" class="headerlink" title="8 · Two cushions for position"></a>8 · Two cushions for position</h2>
+<p><img src="/blog/assets/billiards/s07_two_cushion.webp" alt="Top view of the whole table. The white is sent up into the top cushion near the corner, then off the end cushion, with three tips. Check side ends near the right side of the table, plain ends lower, running side travels furthest, across to the left half of the table. Each end spot has a ring and a face"></p>
+<p>The same aim, into the top cushion near the corner and off the end cushion, power 3 (model):</p>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Where the white ends</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check side</td>
+<td>stays near the end cushion, after two cushions</td>
+</tr>
+<tr>
+<td>plain (a touch of top)</td>
+<td>lower down the right half, after three</td>
+</tr>
+<tr>
+<td>running side</td>
+<td>right across into the other half, after three</td>
+</tr>
+</tbody>
+</table>
+<p>Each cushion multiplies a small change in the angle. That makes two-cushion routes powerful for position, and also less accurate: <strong>pick the route with the widest landing area</strong>, not the cleverest one.</p>
+<hr>
+<h1 id="Chapter-3-—-Balls-on-the-cushion"><a href="#Chapter-3-—-Balls-on-the-cushion" class="headerlink" title="Chapter 3 — Balls on the cushion"></a>Chapter 3 — Balls on the cushion</h1>
+<h2 id="9-Potting-a-ball-on-the-cushion"><a href="#9-Potting-a-ball-on-the-cushion" class="headerlink" title="9 · Potting a ball on the cushion"></a>9 · Potting a ball on the cushion</h2>
+<div class="bclip"><img class="no-lightbox" src="/blog/assets/billiards/b07_clip_rail.webp" alt="Clip: a red sits against the top side cushion 70 cm from the corner pocket. A yellow mark shows the point on the cushion just in front of it. The white hits the cushion and the red at the same moment, and the red runs along the cushion into the corner pocket"></div>
+<p>A red frozen on the cushion is hard to pot along it. If the white hits the red first, the red bounces off the cushion and away from the pocket.</p>
+<p>Hit the <strong>cushion and the red at the same moment</strong> (the cushion a hair first is fine). In the clip, power 3, the white's centre aims about 4 cm to the cushion side of the red's centre, and the window is tiny.</p>
+<blockquote>
+<p><strong>Common pitfall:</strong> playing it soft &quot;to be safe&quot;. In the model, at power 2 no aim potted this red; at power 3 the &quot;together&quot; aim did.</p>
+</blockquote>
+<hr>
+<h2 id="10-The-white-touching-the-cushion"><a href="#10-The-white-touching-the-cushion" class="headerlink" title="10 · The white touching the cushion"></a>10 · The white touching the cushion</h2>
+<p><img src="/blog/assets/billiards/s07_tight.webp" alt="Two 3D views of the white touching the top cushion, cueing away from it. 1: from the side, the cue rising over the cushion and the rail, a wedge shows 12 degrees. 2: closer, the tip meets the white well above its centre; a face shows the tip spot near the top"></p>
+<p>When the white touches the cushion and you cue away from it, the cushion and the rail are right behind the white:</p>
+<ul>
+<li>The cue has to pass <strong>over the cushion</strong>, so the tip can only reach the <strong>top of the white</strong>: at least about 0.55 R above centre (model sizes).</li>
+<li>The cue rises about <strong>12°</strong> to clear the rail's edge.</li>
+</ul>
+<p>So from the cushion, you play with <strong>topspin</strong>: no screw, no real stun. Plan the next shot for a white that follows, and keep the side small (a raised cue with side swerves, post 05).</p>
+<hr>
+<h1 id="Try-it-at-the-table"><a href="#Try-it-at-the-table" class="headerlink" title="Try it at the table"></a>Try it at the table</h1>
+<table>
+<thead>
+<tr>
+<th>Drill</th>
+<th>Set-up</th>
+<th>Look for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirror point</td>
+<td>the white in the D; a coin on the table; off one side cushion to the coin</td>
+<td>first with power 4, then power 3 aimed shorter</td>
+</tr>
+<tr>
+<td>Four hits</td>
+<td>the same line in at 45°, slow roll, firm roll, stun, screw</td>
+<td>how far each one bends</td>
+</tr>
+<tr>
+<td>Back off the cushion</td>
+<td>straight in from 60 cm, power 2: top, centre, low</td>
+<td>1 m, half a metre, and dead near the cushion</td>
+</tr>
+<tr>
+<td>Shallow vs square</td>
+<td>the same side at 30° in and at 60° in</td>
+<td>side changes the 60° shot far more</td>
+</tr>
+<tr>
+<td>Two cushions</td>
+<td>into the top cushion near a corner, check, plain, running</td>
+<td>three landing spots</td>
+</tr>
+<tr>
+<td>Frozen red</td>
+<td>a red on the side cushion 70 cm from the corner</td>
+<td>the red stays on the cushion</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cushion nose</td>
+<td>a little above the ball's middle; takes most spin off</td>
+</tr>
+<tr>
+<td>Mirror point</td>
+<td>reflect the target half a ball behind the cushion; aim at it</td>
+</tr>
+<tr>
+<td>Works best</td>
+<td>when the white still slides at the cushion (firmer, or below centre)</td>
+</tr>
+<tr>
+<td>Rolling white</td>
+<td>comes off a little flatter; aim a touch shorter</td>
+</tr>
+<tr>
+<td>Backspin</td>
+<td>comes off steeper and bends away</td>
+</tr>
+<tr>
+<td>Coming back</td>
+<td>top comes back far; low dies near the cushion</td>
+</tr>
+<tr>
+<td>Running / check side</td>
+<td>wider and faster / narrower and slower; big effect only when you come in squarer</td>
+</tr>
+<tr>
+<td>Ball on the cushion</td>
+<td>cushion and ball together, medium pace</td>
+</tr>
+<tr>
+<td>White on the cushion</td>
+<td>tip high, cue raised about 12°: the white will follow</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p><strong>08 · Doubles (反彈).</strong> The same cushion ideas for the ball you hit: the mirror double, the cross double, the cut-back, and the kiss to avoid.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li>Dr. Dave Alciatore, rail rebound with follow, draw and English; running and reverse (check) English; ball frozen on the rail. <a href="https://billiards.colostate.edu/" target="_blank" rel="noopener external nofollow noreferrer">https://billiards.colostate.edu/</a></li>
+<li>WPBSA, <em>Official Rules</em> (2022): table and ball sizes. <a href="https://wpbsa.com/rules/" target="_blank" rel="noopener external nofollow noreferrer">https://wpbsa.com/rules/</a></li>
+<li>Angles and distances come from the physics model (cushion restitution 0.8, cushion friction 0.2, the nose 7 mm above the ball's centre, cloth friction during the hit). Real cushions vary; the directions of the effects are the same, the exact degrees are not. The white-on-the-cushion numbers are geometry with model sizes (cushion top 36 mm, rail 48 mm).</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: the plain-ball natural angle off the top cushion, and three-cushion routes.</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Billiards & Snooker — 07 · Cushions (庫邊)\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-10-22 15:05:14\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/billiards/cover_07_cushions.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Billiards & Snooker — 07 · Cushions (庫邊)"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-08-15T08:02:11.000Z","title":"Created 2026-08-15 16:02:11","children":"2026-08-15"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-08-15T08:02:11.000Z","title":"Updated 2026-08-15 16:02:11","children":"2026-08-15"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Sports",{"className":"post-meta-categories","href":"/blog/categories/Sports/","children":"Sports"}]],[["$","span","sep-Billiards",{"children":" > "}],["$","a","Billiards",{"className":"post-meta-categories","href":"/blog/categories/Billiards/","children":"Billiards"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Billiards & Snooker — 07 · Cushions (庫邊)","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/08/15/billiards_07_cushions/","children":"https://invokfung.github.io/blog/2026/08/15/billiards_07_cushions/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Billiards",{"className":"post-meta__tags","href":"/blog/tags/Billiards/","children":"Billiards"}],["$","a","Snooker",{"className":"post-meta__tags","href":"/blog/tags/Snooker/","children":"Snooker"}],["$","a","Cushions",{"className":"post-meta__tags","href":"/blog/tags/Cushions/","children":"Cushions"}],["$","a","Side Spin",{"className":"post-meta__tags","href":"/blog/tags/Side-Spin/","children":"Side Spin"}],["$","a","Angles",{"className":"post-meta__tags","href":"/blog/tags/Angles/","children":"Angles"}],["$","a","Cue Sports",{"className":"post-meta__tags","href":"/blog/tags/Cue-Sports/","children":"Cue Sports"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/08/19/dev_18_coding_with_ai_agents/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/dev/cover_18_coding_with_ai_agents.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 18 · Coding with AI Agents — Project Memory, Skills, Hooks and Reviewing Output</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/08/12/dev_17_how_llms_work/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/dev/cover_17_how_llms_work.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 17 · How LLMs Work in Practice — Tokens, Context, Sampling and Embeddings</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","billiards_05_side_spin",{"children":["$","a",null,{"href":"/blog/2026/07/30/billiards_05_side_spin/","title":"Billiards & Snooker — 05 · Side Spin","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_05_side_spin.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-30</div><div class=\"title\">Billiards &amp; Snooker — 05 · Side Spin</div></div>"}}]}],["$","div","billiards_06_cut_and_side_into_pockets",{"children":["$","a",null,{"href":"/blog/2026/08/07/billiards_06_cut_and_side_into_pockets/","title":"Billiards & Snooker — 06 · Cut and Side into Pockets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_06_cut_and_side_into_pockets.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-07</div><div class=\"title\">Billiards &amp; Snooker — 06 · Cut and Side into Pockets</div></div>"}}]}],["$","div","billiards_08_doubles",{"children":["$","a",null,{"href":"/blog/2026/08/19/billiards_08_doubles/","title":"Billiards & Snooker — 08 · Doubles (反彈)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_08_doubles.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-19</div><div class=\"title\">Billiards &amp; Snooker — 08 · Doubles (反彈)</div></div>"}}]}],["$","div","billiards_09_escaping_snookers",{"children":["$","a",null,{"href":"/blog/2026/08/29/billiards_09_escaping_snookers/","title":"Billiards & Snooker — 09 · Escaping Snookers (對射角)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_09_escaping_snookers.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-29</div><div class=\"title\">Billiards &amp; Snooker — 09 · Escaping Snookers (對射角)</div></div>"}}]}],["$","div","billiards_01_cue_action_and_elevation",{"children":["$","a",null,{"href":"/blog/2026/07/04/billiards_01_cue_action_and_elevation/","title":"Billiards & Snooker — 01 · Cue Action and Elevation","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_01_cue_action_and_elevation.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-04</div><div class=\"title\">Billiards &amp; Snooker — 01 · Cue Action and Elevation</div></div>"}}]}],["$","div","billiards_02_aiming_and_potting",{"children":["$","a",null,{"href":"/blog/2026/07/11/billiards_02_aiming_and_potting/","title":"Billiards & Snooker — 02 · Aiming and Potting","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_02_aiming_and_potting.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-11</div><div class=\"title\">Billiards &amp; Snooker — 02 · Aiming and Potting</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-How-the-cushion-works",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-How-the-cushion-works","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — How the cushion works"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","1-Where-the-cushion-meets-the-ball",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#1-Where-the-cushion-meets-the-ball","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"1 · Where the cushion meets the ball"}]]}],null]}],["$","li","2-The-mirror-point-and-when-it-works",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#2-The-mirror-point-and-when-it-works","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"2 · The mirror point, and when it works"}]]}],null]}],["$","li","3-Pace-and-spin-bend-the-line",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#3-Pace-and-spin-bend-the-line","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"3 · Pace and spin bend the line"}]]}],null]}],["$","li","4-Straight-in-and-back-the-tip-sets-the-distance",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#4-Straight-in-and-back-the-tip-sets-the-distance","children":[["$","span",null,{"className":"toc-number","children":"2.4."}]," ",["$","span",null,{"className":"toc-text","children":"4 · Straight in and back: the tip sets the distance"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Side-at-the-cushion",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Side-at-the-cushion","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Side at the cushion"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","5-Running-side-and-check-side",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#5-Running-side-and-check-side","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"5 · Running side and check side"}]]}],null]}],["$","li","6-Side-matters-most-when-you-hit-the-cushion-square",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#6-Side-matters-most-when-you-hit-the-cushion-square","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"6 · Side matters most when you hit the cushion square"}]]}],null]}],["$","li","7-Watch-it-running-side-opens-the-angle",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#7-Watch-it-running-side-opens-the-angle","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"7 · Watch it: running side opens the angle"}]]}],null]}],["$","li","8-Two-cushions-for-position",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#8-Two-cushions-for-position","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"8 · Two cushions for position"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Balls-on-the-cushion",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Balls-on-the-cushion","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Balls on the cushion"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","9-Potting-a-ball-on-the-cushion",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#9-Potting-a-ball-on-the-cushion","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"9 · Potting a ball on the cushion"}]]}],null]}],["$","li","10-The-white-touching-the-cushion",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#10-The-white-touching-the-cushion","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"10 · The white touching the cushion"}]]}],null]}]]}]]}],["$","li","Try-it-at-the-table",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Try-it-at-the-table","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Try it at the table"}]]}],null]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","billiards_15_rules_tactics_practice",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/10/14/billiards_15_rules_tactics_practice/","title":"Billiards & Snooker — 15 · Rules, Tactics and Practice","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_15_rules_tactics_practice.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 15 · Rules, Tactics and Practice\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/10/14/billiards_15_rules_tactics_practice/","title":"Billiards & Snooker — 15 · Rules, Tactics and Practice","children":"Billiards & Snooker — 15 · Rules, Tactics and Practice"}],["$","time",null,{"dateTime":"2026-10-14T13:46:13.000Z","title":"Created 2026-10-14 21:46:13","children":"2026-10-14"}]]}]]}],["$","div","billiards_14_special_shots",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/10/03/billiards_14_special_shots/","title":"Billiards & Snooker — 14 · Special Shots","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_14_special_shots.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 14 · Special Shots\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/10/03/billiards_14_special_shots/","title":"Billiards & Snooker — 14 · Special Shots","children":"Billiards & Snooker — 14 · Special Shots"}],["$","time",null,{"dateTime":"2026-10-03T08:27:58.000Z","title":"Created 2026-10-03 16:27:58","children":"2026-10-03"}]]}]]}],["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/25/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_24_desk_health.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/25/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-25T13:34:53.000Z","title":"Created 2026-09-25 21:34:53","children":"2026-09-25"}]]}]]}],["$","div","billiards_13_break_building",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/billiards_13_break_building/","title":"Billiards & Snooker — 13 · Break-building","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_13_break_building.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 13 · Break-building\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/billiards_13_break_building/","title":"Billiards & Snooker — 13 · Break-building","children":"Billiards & Snooker — 13 · Break-building"}],["$","time",null,{"dateTime":"2026-09-24T12:05:44.000Z","title":"Created 2026-09-24 20:05:44","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_23_money_basics.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T04:11:02.000Z","title":"Created 2026-09-22 12:11:02","children":"2026-09-22"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}],["$","$L12",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Billiards & Snooker — 07 · Cushions (庫邊) | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Every escape, double and positional shot uses a cushion. \"Angle in equals angle out\" is a good start, but pace and spin bend it. This lesson covers ho"}],["$","meta","5",{"name":"keywords","content":"Billiards,Snooker,Cushions,Side Spin,Angles,Cue Sports"}],["$","meta","6",{"property":"og:title","content":"Billiards & Snooker — 07 · Cushions (庫邊)"}],["$","meta","7",{"property":"og:description","content":"Every escape, double and positional shot uses a cushion. \"Angle in equals angle out\" is a good start, but pace and spin bend it. This lesson covers ho"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/billiards/cover_07_cushions.jpg"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Billiards & Snooker — 07 · Cushions (庫邊)"}],["$","meta","12",{"name":"twitter:description","content":"Every escape, double and positional shot uses a cushion. \"Angle in equals angle out\" is a good start, but pace and spin bend it. This lesson covers ho"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/billiards/cover_07_cushions.jpg"}]]
+1:null

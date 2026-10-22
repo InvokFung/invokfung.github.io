@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-label="Five rows, each a rule about hitting the ball on: foul, foul and a miss, three misses, when no miss is called, and the free ball">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="600" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="598.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">When you are snookered: what the rules say</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">You must try your best to hit a ball on first.</text>
+<rect x="40.0" y="104.0" width="920.0" height="82.0" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+<text x="60.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#dc4c3a" text-anchor="start">Foul</text>
+<text x="250.0" y="136.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">The white hits a ball not on first, or hits nothing.</text>
+<text x="250.0" y="162.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Your opponent gets 4 points, or the value of the ball you hit if higher (the blue first: 5).</text>
+<rect x="40.0" y="196.0" width="920.0" height="82.0" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="60.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">Foul and a miss</text>
+<text x="250.0" y="228.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">The referee judges you did not try your best to hit the ball on.</text>
+<text x="250.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Your opponent may have the balls put back and make you play the shot again.</text>
+<rect x="40.0" y="288.0" width="920.0" height="82.0" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+<text x="60.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="start">Three misses</text>
+<text x="250.0" y="320.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">If a straight line to a full-ball hit on a ball on was open, a miss is always called.</text>
+<text x="250.0" y="346.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">After the second miss the referee warns you; a third one loses the frame.</text>
+<rect x="40.0" y="380.0" width="920.0" height="82.0" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+<text x="60.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">No miss</text>
+<text x="250.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">If no way to hit the ball on exists, play at it (directly or off cushions) hard enough</text>
+<text x="250.0" y="438.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">to reach it. Also no miss if a player needs snookers and the referee judges it was not on purpose.</text>
+<rect x="40.0" y="472.0" width="920.0" height="82.0" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+<text x="60.0" y="504.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#16a34a" text-anchor="start">Free ball</text>
+<text x="250.0" y="504.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">If your opponent's foul leaves you snookered, you may name any ball as the ball on.</text>
+<text x="250.0" y="530.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">It counts as the ball on for that shot; if potted, a colour is put back on its spot.</text>
+<text x="40.0" y="582.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">WPBSA Official Rules 2024-25: Section 3 Rules 11 (penalty values), 12 (free ball), 14 (foul and a miss). Wording simplified.</text>
+</svg>

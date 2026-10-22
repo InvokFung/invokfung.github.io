@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-label="Five columns: full, three-quarter, half, quarter and one-eighth ball. Top: the view down the cue, the see-through white covering all, three quarters, half, a quarter or an eighth of the yellow. Bottom: from above, the yellow leaves at 0, 14, 30, 49 and 61 degrees from the white's line">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="500" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="498.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">How much of the ball you cover sets the cut angle</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Down the cue (top) and from above (bottom). Exact geometry for a stun or slow shot, before throw.</text>
+<circle cx="120" cy="170" r="34" fill="#f2c418" stroke="#8a6d00" stroke-width="2"/>
+<circle cx="120.0" cy="170" r="34" fill="#ffffff" fill-opacity="0.55" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="120.0" y1="124" x2="120.0" y2="216" stroke="#2563eb" stroke-width="2"/>
+<text x="140.0" y="108.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">full ball</text>
+<line x1="70.0" y1="400.0" x2="180.0" y2="400.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="70.0" y1="400.0" x2="180.0" y2="400.0" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<circle cx="70" cy="400" r="9" fill="#f2c418" stroke="#8a6d00" stroke-width="1.5"/>
+<text x="130.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706" text-anchor="middle">0°</text>
+<circle cx="310" cy="170" r="34" fill="#f2c418" stroke="#8a6d00" stroke-width="2"/>
+<circle cx="327.0" cy="170" r="34" fill="#ffffff" fill-opacity="0.55" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="327.0" y1="124" x2="327.0" y2="216" stroke="#2563eb" stroke-width="2"/>
+<text x="330.0" y="108.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">¾ ball</text>
+<line x1="260.0" y1="400.0" x2="370.0" y2="400.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="260.0" y1="400.0" x2="366.5" y2="372.5" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M306.0,400.0 A46,46 0 0 0 304.5,388.5" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="260" cy="400" r="9" fill="#f2c418" stroke="#8a6d00" stroke-width="1.5"/>
+<text x="320.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706" text-anchor="middle">14°</text>
+<circle cx="500" cy="170" r="34" fill="#f2c418" stroke="#8a6d00" stroke-width="2"/>
+<circle cx="534.0" cy="170" r="34" fill="#ffffff" fill-opacity="0.55" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="534.0" y1="124" x2="534.0" y2="216" stroke="#2563eb" stroke-width="2"/>
+<text x="520.0" y="108.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">½ ball</text>
+<line x1="450.0" y1="400.0" x2="560.0" y2="400.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="450.0" y1="400.0" x2="545.3" y2="345.0" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M496.0,400.0 A46,46 0 0 0 489.8,377.0" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="450" cy="400" r="9" fill="#f2c418" stroke="#8a6d00" stroke-width="1.5"/>
+<text x="510.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706" text-anchor="middle">30°</text>
+<circle cx="690" cy="170" r="34" fill="#f2c418" stroke="#8a6d00" stroke-width="2"/>
+<circle cx="741.0" cy="170" r="34" fill="#ffffff" fill-opacity="0.55" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="741.0" y1="124" x2="741.0" y2="216" stroke="#2563eb" stroke-width="2"/>
+<text x="710.0" y="108.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">¼ ball</text>
+<line x1="640.0" y1="400.0" x2="750.0" y2="400.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="640.0" y1="400.0" x2="712.8" y2="317.5" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M686.0,400.0 A46,46 0 0 0 670.4,365.5" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="640" cy="400" r="9" fill="#f2c418" stroke="#8a6d00" stroke-width="1.5"/>
+<text x="700.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706" text-anchor="middle">49°</text>
+<circle cx="880" cy="170" r="34" fill="#f2c418" stroke="#8a6d00" stroke-width="2"/>
+<circle cx="939.5" cy="170" r="34" fill="#ffffff" fill-opacity="0.55" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="939.5" y1="124" x2="939.5" y2="216" stroke="#2563eb" stroke-width="2"/>
+<text x="900.0" y="108.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">⅛ ball</text>
+<line x1="830.0" y1="400.0" x2="940.0" y2="400.0" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="830.0" y1="400.0" x2="883.3" y2="303.8" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M876.0,400.0 A46,46 0 0 0 852.3,359.8" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="830" cy="400" r="9" fill="#f2c418" stroke="#8a6d00" stroke-width="1.5"/>
+<text x="890.0" y="434.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="700" fill="#d97706" text-anchor="middle">61°</text>
+<text x="40.0" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">Blue line = where the white's centre points. Half ball: it points at the yellow's edge.</text>
+<text x="40.0" y="290.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#6b7280" text-anchor="start">From above: the yellow's path (orange) and the white's line (grey).</text>
+<text x="40.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">cut = arcsin(1 − fraction covered). ¾ = 14.5°, ½ = 30°, ¼ = 48.6°, ⅛ = 61.0°.</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-label="Diagram of two touching reds hit by the white. Red 2 leaves along the line through both centres. Red 1 leaves along the tangent line, at 90 degrees to it. The white's direction only changes how fast each goes">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="500" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="498.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Two touching balls: where each one goes</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">The white's direction changes the speeds, hardly the directions.</text>
+<line x1="300.0" y1="450.0" x2="300.0" y2="128.0" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="100.0" y1="300.0" x2="560.0" y2="300.0" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+<line x1="300.0" y1="218.0" x2="300.0" y2="143.0" stroke="#dc4c3a" stroke-width="4" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="330.0" y1="300.0" x2="550.0" y2="300.0" stroke="#dc4c3a" stroke-width="4" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="192.9" y1="390.6" x2="258.8" y2="334.9" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6" marker-end="url(#ahm)"/>
+<circle cx="170.0" cy="410.0" r="26" fill="#fff" stroke="#888" stroke-width="1.5"/>
+<line x1="264.5" y1="406.5" x2="282.9" y2="351.2" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6" marker-end="url(#ahm)"/>
+<circle cx="255.0" cy="435.0" r="26" fill="#fff" stroke="#888" stroke-width="1.5"/>
+<circle cx="300" cy="300" r="26" fill="#d42a2a" stroke="#7a1010" stroke-width="1.5"/>
+<circle cx="300" cy="248" r="26" fill="#d42a2a" stroke="#7a1010" stroke-width="1.5"/>
+<text x="300.0" y="306.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="300.0" y="254.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+<path d="M318,300 L318,282 L300,282" fill="none" stroke="#1f2937" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="316.0" y="168.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="start">red 2: along the line of centres</text>
+<text x="450.0" y="286.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#dc4c3a" text-anchor="middle">red 1: along the tangent</text>
+<text x="450.0" y="326.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">(90° to the line of centres)</text>
+<text x="75.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">the white from</text>
+<text x="75.0" y="388.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">different angles</text>
+<text x="640.0" y="190.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Set: line of centres at the pocket</text>
+<text x="640.0" y="214.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">pots red 2.</text>
+<text x="640.0" y="260.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">Tangent kiss: tangent at the pocket</text>
+<text x="640.0" y="284.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">pots red 1.</text>
+<text x="640.0" y="330.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#6b7280" text-anchor="start">Throw drags both a little the way</text>
+<text x="640.0" y="352.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#6b7280" text-anchor="start">the white moves; on long ones, it counts.</text>
+<text x="40.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Exact for sliding, frictionless balls; the model adds ball-to-ball friction (throw).</text>
+</svg>

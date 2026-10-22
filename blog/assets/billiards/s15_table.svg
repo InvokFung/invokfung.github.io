@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="A to-scale plan of a snooker table: 3569 by 1778 millimetres. The baulk line 737 millimetres from the baulk cushion, the D with a radius of 292 millimetres, and the six colour spots: yellow, brown, green on the baulk line, blue in the middle, pink half-way between the blue and the top cushion, black 324 millimetres from the top cushion">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The table</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Playing area and spots, to scale (WPBSA).</text>
+<rect x="66.0" y="136.0" width="788.0" height="406.6" rx="10" fill="#6b3b1c" stroke="#4a2a12" stroke-width="1"/>
+<rect x="80.0" y="150.0" width="760.0" height="378.6" rx="2" fill="#2f8f55" stroke="#2f8f55" stroke-width="1"/>
+<circle cx="841.3" cy="148.7" r="11" fill="#111"/>
+<circle cx="78.7" cy="148.7" r="11" fill="#111"/>
+<circle cx="841.3" cy="529.9" r="11" fill="#111"/>
+<circle cx="78.7" cy="529.9" r="11" fill="#111"/>
+<circle cx="460.0" cy="145.3" r="11" fill="#111"/>
+<circle cx="460.0" cy="533.3" r="11" fill="#111"/>
+<line x1="236.9" y1="150.0" x2="236.9" y2="528.6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M236.9,277.1 A62.2,62.2 0 0 0 236.9,401.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="236.9" cy="401.5" r="5.6" fill="#e9c21a" stroke="#222"/>
+<circle cx="236.9" cy="339.3" r="5.6" fill="#6b3b1c" stroke="#222"/>
+<circle cx="236.9" cy="277.1" r="5.6" fill="#127a3a" stroke="#222"/>
+<circle cx="460.0" cy="339.3" r="5.6" fill="#1f5fd6" stroke="#222"/>
+<circle cx="650.0" cy="339.3" r="5.6" fill="#f08aa8" stroke="#222"/>
+<circle cx="771.0" cy="339.3" r="5.6" fill="#141414" stroke="#222"/>
+<line x1="80.0" y1="568.6" x2="840.0" y2="568.6" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="460.0" y="590.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3569 mm (11 ft 8½ in)</text>
+<line x1="874.0" y1="150.0" x2="874.0" y2="528.6" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="884.0" y="344.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">1778 mm</text>
+<line x1="80.0" y1="126.0" x2="236.9" y2="126.0" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="158.5" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">baulk line 737 mm</text>
+<line x1="771.0" y1="126.0" x2="840.0" y2="126.0" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="765.5" y="118.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0d9488" text-anchor="middle">black 324 mm</text>
+<text x="228.9" y="269.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="end">the D: radius 292 mm</text>
+<text x="650.0" y="379.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#ffffff" text-anchor="middle">pink: half-way, blue to top cushion</text>
+<text x="84.0" y="598.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">baulk end</text>
+<text x="836.0" y="598.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="end">top end</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">WPBSA Official Rules 2024-25, Section 1. Balls 52.5 mm across. Pockets drawn as dots, not to scale.</text>
+</svg>

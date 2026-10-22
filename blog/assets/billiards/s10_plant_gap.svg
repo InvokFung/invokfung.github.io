@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-label="Bar chart of the room in the aim for a plant: gap 5 cm 0.36 degrees, 20 cm 0.14, 50 cm 0.06">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="430" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="428.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">A plant gets harder as the gap grows</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Room in the aim that still pots red 2. Same cuts, same pocket, only the gap changes.</text>
+<text x="200.0" y="167.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="end">gap 5 cm</text>
+<rect x="220.0" y="140.0" width="600.0" height="40.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="830.0" y="167.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">0.36°</text>
+<text x="200.0" y="247.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="end">gap 20 cm</text>
+<rect x="220.0" y="220.0" width="233.3" height="40.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="463.3" y="247.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">0.14°</text>
+<text x="200.0" y="327.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#1f2937" text-anchor="end">gap 50 cm</text>
+<rect x="220.0" y="300.0" width="100.0" height="40.0" rx="6" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="330.0" y="327.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#0d9488" text-anchor="start">0.06°</text>
+<text x="220.0" y="395.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">Red 2 is 40 cm from the corner; red 1 is cut 15° onto it; the white 70 cm from red 1, power 4.</text>
+<text x="40.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Physics model with ball-to-ball friction (throw). The pattern holds on any table; your own numbers will differ.</text>
+</svg>

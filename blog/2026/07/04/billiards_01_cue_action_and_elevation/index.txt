@@ -1,0 +1,369 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+4:["year","2026","d"]
+5:["month","07","d"]
+6:["day","04","d"]
+7:["slug","billiards_01_cue_action_and_elevation","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["mdPTm5e8aK9zEKOZy2fjt",[[["",{"children":[["year","2026","d"],{"children":[["month","07","d"],{"children":[["day","04","d"],{"children":[["slug","billiards_01_cue_action_and_elevation","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"07\",\"day\":\"04\",\"slug\":\"billiards_01_cue_action_and_elevation\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","07","d"],{"children":[["day","04","d"],{"children":[["slug","billiards_01_cue_action_and_elevation","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-10-22 15:05:14\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}],"$undefined"],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+12:I[117,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+11:T3aaa,<p>Every shot starts with the cue: its line, how it moves through the white, where the tip meets the ball, and how steeply it points down. This first lesson covers a straight cue action, the follow-through, feathering and a pre-shot routine, chalk, tip height, and what &quot;raising the cue&quot; means, with the angle drawn for every case: normal shots, near a cushion and over a ball.</p>
+<blockquote>
+<p>Series map. <em>★ Basics:</em> <strong>01 Cue action and elevation</strong> (this post) → 02 Aiming and potting → 03 Tip and power → 04 Where the white goes · <em>★★ Club:</em> 05 Side spin → 06 Cut and side into pockets → 07 Cushions → 08 Doubles · <em>★★★ Advanced:</em> 09 Escaping snookers → 10 Multi-ball shots → 11 Safety → 12 Position play · <em>★★★★ Hard:</em> 13 Break-building → 14 Special shots · <em>Reference:</em> 15 Rules, tactics and practice.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Deliver the cue straight along the line, and follow through.</li>
+<li>Use the same feather, pause and strike, and the same routine, on every shot.</li>
+<li>Keep the tip chalked and inside the safe zone.</li>
+<li>Hit high or low on the white with a level cue.</li>
+<li>Know what cue elevation is, how much each shot needs, and why lower is better.</li>
+<li>Find the angle the cue needs near a cushion and over a ball.</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-The-cue-action"><a href="#Chapter-1-—-The-cue-action" class="headerlink" title="Chapter 1 — The cue action"></a>Chapter 1 — The cue action</h1>
+<h2 id="1-The-cue-on-the-line"><a href="#1-The-cue-on-the-line" class="headerlink" title="1 · The cue on the line"></a>1 · The cue on the line</h2>
+<p><img src="/blog/assets/billiards/b01_line.webp" alt="Two top views. Left: the cue straight behind the white, the white runs along the dashed line to the red, tick. Right: the cue a little across the line, the white goes off the line and misses the red, cross"></p>
+<p>The white goes where the cue points <strong>at the moment of the hit</strong>. Line the cue up behind the white, on the line to where you aim, and keep it on that line from the back swing to the end of the stroke.</p>
+<blockquote>
+<p><strong>Watch out:</strong> a small turn of the cue, about 7° here, misses a red only half a table away.</p>
+</blockquote>
+<hr>
+<h2 id="2-Follow-through"><a href="#2-Follow-through" class="headerlink" title="2 · Follow through"></a>2 · Follow through</h2>
+<p><img src="/blog/assets/billiards/s01_stroke.svg" alt="Two top views of the cue and the white. Left, tick, three steps on one line: back swing, contact, and the follow-through with the tip past where the white was. Right, cross: the cue stops at the white and its back end swings off the line"></p>
+<p>Let the cue run on <strong>past where the white was</strong>, along the same line. A cue that stops at the ball usually turns at the last moment ✗.</p>
+<hr>
+<h2 id="3-Feather-pause-strike"><a href="#3-Feather-pause-strike" class="headerlink" title="3 · Feather, pause, strike"></a>3 · Feather, pause, strike</h2>
+<div class="bclip"><img class="no-lightbox" src="/blog/assets/billiards/s01_clip_action.webp" alt="Side-view clip of the cue and the white. The cue makes a few slow practice strokes, pauses at the back, then moves smoothly through the white and on; the white rolls away"></div>
+<p>Watch the cue in the clip:</p>
+<ol>
+<li><strong>Feathers</strong>: a few slow practice strokes, the tip close to the white. They check the line and the tip spot.</li>
+<li><strong>Pause</strong> at the back of the last back swing.</li>
+<li><strong>Strike</strong>: speed up smoothly through the white.</li>
+<li><strong>Follow through</strong>, and hold still until the white has stopped.</li>
+</ol>
+<blockquote>
+<p><strong>Common pitfall:</strong> a quick, jerky back swing. The cue changes speed and line. Slow back, smooth through.</p>
+</blockquote>
+<hr>
+<h2 id="4-A-pre-shot-routine"><a href="#4-A-pre-shot-routine" class="headerlink" title="4 · A pre-shot routine"></a>4 · A pre-shot routine</h2>
+<p><img src="/blog/assets/billiards/s01_routine.svg" alt="Six steps of a pre-shot routine in a row: chalk, see the line from behind the white, put the cue on the line, feather, pause at the back with the eyes on the object ball, strike through the white and hold still"></p>
+<p>Do the same steps in the same order on every shot. The point is repetition: the stroke stays the same under pressure as in practice.</p>
+<hr>
+<h2 id="5-Chalk-and-stay-in-the-safe-zone"><a href="#5-Chalk-and-stay-in-the-safe-zone" class="headerlink" title="5 · Chalk, and stay in the safe zone"></a>5 · Chalk, and stay in the safe zone</h2>
+<p><img src="/blog/assets/billiards/b01_safe.svg" alt="The face of the white. A green circle half the ball's radius across, around the centre, marks where the tip is safe; five blue tip spots inside it are fine. Two red crosses outside it, near the edge, mark miscues"></p>
+<ul>
+<li><strong>Chalk</strong> the tip every shot or two. A dry tip slides off the white: a <strong>miscue</strong>.</li>
+<li>Keep the tip <strong>inside about half the radius</strong> from the centre. Further out, even a chalked tip miscues (post 03).</li>
+</ul>
+<hr>
+<h1 id="Chapter-2-—-Tip-height"><a href="#Chapter-2-—-Tip-height" class="headerlink" title="Chapter 2 — Tip height"></a>Chapter 2 — Tip height</h1>
+<h2 id="6-Hit-high-or-low-with-a-level-cue"><a href="#6-Hit-high-or-low-with-a-level-cue" class="headerlink" title="6 · Hit high or low with a level cue"></a>6 · Hit high or low with a level cue</h2>
+<p><img src="/blog/assets/billiards/s01_tip_height.webp" alt="Three 3D side views of the white and the cue only. The cue stays level each time and moves down or up: tip low for screw, at the centre, and high for follow. A small face of the white shows each tip spot"></p>
+<p>To hit low or high on the white, <strong>move the whole cue down or up</strong> and keep it level. Don't tip the cue to reach the spot.</p>
+<table>
+<thead>
+<tr>
+<th>You want</th>
+<th>Tip on the white</th>
+<th>Post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>screw (backspin)</td>
+<td>below centre</td>
+<td>03</td>
+</tr>
+<tr>
+<td>stop / stun</td>
+<td>centre or a little below</td>
+<td>03</td>
+</tr>
+<tr>
+<td>follow (topspin)</td>
+<td>above centre</td>
+<td>03</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Common pitfall:</strong> lifting the back of the cue to reach a low spot. The tip then strikes down into the white (post 03), and any side makes it curve (section 8).</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-3-—-Cue-elevation"><a href="#Chapter-3-—-Cue-elevation" class="headerlink" title="Chapter 3 — Cue elevation"></a>Chapter 3 — Cue elevation</h1>
+<h2 id="7-What-raise-the-cue-means"><a href="#7-What-raise-the-cue-means" class="headerlink" title="7 · What &quot;raise the cue&quot; means"></a>7 · What &quot;raise the cue&quot; means</h2>
+<p><img src="/blog/assets/billiards/s01_elevation.webp" alt="Four 3D side views of the white and the cue with a yellow wedge between the cue and the cloth. About 3 degrees: almost flat, every normal shot. About 12 degrees: the white near a cushion. About 20 degrees: swerve. About 60 degrees: massé, the cue nearly upright"></p>
+<p>&quot;Raise the cue 20°&quot; means <strong>lifting the back (butt) end of the cue</strong>, so the cue points down at the white. The tip still hits the same spot. The yellow wedge is the angle between the cue and the cloth.</p>
+<table>
+<thead>
+<tr>
+<th>Elevation</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>about 3°</td>
+<td>every normal shot: as level as the cushion allows</td>
+</tr>
+<tr>
+<td>about 12°</td>
+<td>the white near a cushion (section 9)</td>
+</tr>
+<tr>
+<td>about 20°</td>
+<td><strong>swerve</strong> on purpose (posts 05, 09, 14)</td>
+</tr>
+<tr>
+<td>about 60°</td>
+<td><strong>massé</strong>, a big curve (post 14)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-Keep-it-low"><a href="#8-Keep-it-low" class="headerlink" title="8 · Keep it low"></a>8 · Keep it low</h2>
+<p><img src="/blog/assets/billiards/s14_curve.webp" alt="Top view of one white and five tracks, all aimed along the same dashed line with right-hand side at power 2. Level cue: straight on. Raised 10 degrees: 10 cm to the right after 1 metre. 20 degrees: 20 cm. 30 degrees: 32 cm. 45 degrees: 55 cm"></p>
+<p>The same aim and the same side, only the cue raised more each time (model, from post 14). With side, a raised cue <strong>curves</strong> the white: 10 cm off the line after 1 m at 10°, 55 cm at 45°.</p>
+<p>So keep the cue <strong>as low as the table lets you</strong>. If normal long pots keep missing, check your elevation first.</p>
+<hr>
+<h2 id="9-Near-a-cushion"><a href="#9-Near-a-cushion" class="headerlink" title="9 · Near a cushion"></a>9 · Near a cushion</h2>
+<p><img src="/blog/assets/billiards/s01_cushion.webp" alt="Two 3D side views of the white near the bottom side cushion and the cue coming over the rail, a yellow wedge between the cue and the cloth. White 20 cm off the cushion: 12 degrees. White close to the cushion: 13 degrees"></p>
+<p>Near a cushion the cue has to pass <strong>over the rail</strong>, which is higher than the cloth, so it points down more (geometry of these set-ups):</p>
+<table>
+<thead>
+<tr>
+<th>White</th>
+<th>Cue raised</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20 cm off the cushion</td>
+<td>about 12°</td>
+</tr>
+<tr>
+<td>close to the cushion</td>
+<td>about 13°</td>
+</tr>
+</tbody>
+</table>
+<p>You can only reach the <strong>top half</strong> of the white. Keep the tip near centre, the stroke short and smooth, and let pace, not spin, do the work.</p>
+<hr>
+<h2 id="10-Over-a-ball"><a href="#10-Over-a-ball" class="headerlink" title="10 · Over a ball"></a>10 · Over a ball</h2>
+<p><img src="/blog/assets/billiards/s01_over_ball.webp" alt="3D side view of the white with a red 15 cm behind it. The cue passes over the red and comes down to the white, raised about 17 degrees; a yellow wedge shows the angle"></p>
+<p>When a ball sits just behind the white, the cue has to go <strong>over</strong> it. Here, with a red 15 cm behind, the cue must be raised <strong>about 17°</strong>.</p>
+<ul>
+<li>Play it <strong>smoothly and not too hard</strong>.</li>
+<li>Keep the tip near centre: with this angle, side curves the white (section 8) and screw is weaker.</li>
+<li>Don't touch the ball behind: moving any ball with the cue is a foul.</li>
+</ul>
+<hr>
+<h2 id="11-Out-of-reach-the-rest-spider-and-swan"><a href="#11-Out-of-reach-the-rest-spider-and-swan" class="headerlink" title="11 · Out of reach: the rest, spider and swan"></a>11 · Out of reach: the rest, spider and swan</h2>
+<p>When the white is too far to reach, the club has long cue rests. The cue lies on the rest's head:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use it when</th>
+<th>Cue angle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>rest</strong> (X-shaped head)</td>
+<td>the white is far away, nothing behind it</td>
+<td>as low as normal</td>
+</tr>
+<tr>
+<td><strong>spider</strong> (a tall arch)</td>
+<td>one ball behind the white</td>
+<td>raised, as in section 10</td>
+</tr>
+<tr>
+<td><strong>swan</strong> (a long curved neck)</td>
+<td>a group of balls behind the white</td>
+<td>raised, as in section 10</td>
+</tr>
+</tbody>
+</table>
+<p>On all of them, keep the tip near centre and play <strong>a little softer</strong> than normal.</p>
+<hr>
+<h1 id="Try-it-at-the-table"><a href="#Try-it-at-the-table" class="headerlink" title="Try it at the table"></a>Try it at the table</h1>
+<table>
+<thead>
+<tr>
+<th>Drill</th>
+<th>Set-up</th>
+<th>Look for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Straight line</td>
+<td>the white on the brown spot, hit it up over the blue and pink spots, off the top cushion, centre ball, power 2</td>
+<td>it comes straight back to the tip</td>
+</tr>
+<tr>
+<td>Follow-through</td>
+<td>the same, a coin 15 cm past the white</td>
+<td>the tip passes over the coin, on the line</td>
+</tr>
+<tr>
+<td>Routine</td>
+<td>ten shots, the same six steps each</td>
+<td>the same rhythm every time</td>
+</tr>
+<tr>
+<td>Height ladder</td>
+<td>a straight red, tip low, centre, high, the cue level each time</td>
+<td>screw, stop, follow</td>
+</tr>
+<tr>
+<td>Elevation check</td>
+<td>the white 20 cm, then close to a side cushion</td>
+<td>a smooth stroke, no miscue</td>
+</tr>
+<tr>
+<td>Over a ball</td>
+<td>a red 15 cm behind the white</td>
+<td>a clean centre-ball hit</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line</td>
+<td>the white goes where the cue points at the hit</td>
+</tr>
+<tr>
+<td>Stroke</td>
+<td>feather, pause, strike, follow through, hold still</td>
+</tr>
+<tr>
+<td>Routine</td>
+<td>the same six steps every shot</td>
+</tr>
+<tr>
+<td>Tip</td>
+<td>chalked; inside half the radius</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>move the whole cue down or up; keep it level</td>
+</tr>
+<tr>
+<td>Elevation</td>
+<td>lift the butt only as much as you must: about 3° normally</td>
+</tr>
+<tr>
+<td>Cushion</td>
+<td>about 12–13° to pass over the rail</td>
+</tr>
+<tr>
+<td>Over a ball</td>
+<td>about 17° with a red 15 cm behind</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p><strong>02 · Aiming and potting.</strong> The ghost ball, the classic red-dot miss, ball fractions, thin cuts, the pockets and long pots.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li>WPBSA, <em>Official Rules of the Games of Snooker and English Billiards</em> (2024-25): table and ball sizes, fouls for touching a ball. <a href="https://www.wpbsa.com/rules/" target="_blank" rel="noopener external nofollow noreferrer">https://www.wpbsa.com/rules/</a></li>
+<li>Dr. Dave Alciatore, &quot;What effects does cue elevation have on a shot&quot;: swerve, hop and follow-through with a raised cue. <a href="https://drdavepoolinfo.com/?p=1979" target="_blank" rel="noopener external nofollow noreferrer">https://drdavepoolinfo.com/?p=1979</a></li>
+<li>Masters of Games, extended spider and swan rests: what each is for. <a href="https://www.mastersofgames.com/cat/snooker-pool-extended-spider-swan-rests" target="_blank" rel="noopener external nofollow noreferrer">https://www.mastersofgames.com/cat/snooker-pool-extended-spider-swan-rests</a></li>
+<li>The pictures are drawn to scale with the cue only; the elevation numbers are the geometry of those set-ups, and the curve numbers come from the physics model. The follow-through and the routine are common coaching advice.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: the cue extension and butt for very long shots.</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Billiards & Snooker — 01 · Cue Action and Elevation\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-10-22 15:05:14\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/billiards/cover_01_cue_action_and_elevation.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Billiards & Snooker — 01 · Cue Action and Elevation"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-07-04T03:24:37.000Z","title":"Created 2026-07-04 11:24:37","children":"2026-07-04"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-07-04T03:24:37.000Z","title":"Updated 2026-07-04 11:24:37","children":"2026-07-04"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Sports",{"className":"post-meta-categories","href":"/blog/categories/Sports/","children":"Sports"}]],[["$","span","sep-Billiards",{"children":" > "}],["$","a","Billiards",{"className":"post-meta-categories","href":"/blog/categories/Billiards/","children":"Billiards"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Billiards & Snooker — 01 · Cue Action and Elevation","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/07/04/billiards_01_cue_action_and_elevation/","children":"https://invokfung.github.io/blog/2026/07/04/billiards_01_cue_action_and_elevation/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Billiards",{"className":"post-meta__tags","href":"/blog/tags/Billiards/","children":"Billiards"}],["$","a","Snooker",{"className":"post-meta__tags","href":"/blog/tags/Snooker/","children":"Snooker"}],["$","a","Cue Action",{"className":"post-meta__tags","href":"/blog/tags/Cue-Action/","children":"Cue Action"}],["$","a","Cue Elevation",{"className":"post-meta__tags","href":"/blog/tags/Cue-Elevation/","children":"Cue Elevation"}],["$","a","Cue Sports",{"className":"post-meta__tags","href":"/blog/tags/Cue-Sports/","children":"Cue Sports"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/07/11/dev_08_floating_point/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/dev/cover_08_floating_point.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 08 · Floating Point — Why 0.1 + 0.2 Is Not 0.3 and How to Store Money</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/06/29/nextjs_00_app_router_mental_model/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/nextjs/cover_00_app_router_mental_model.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Next.js Deep Dive — 00 · App Router Mental Model</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","billiards_02_aiming_and_potting",{"children":["$","a",null,{"href":"/blog/2026/07/11/billiards_02_aiming_and_potting/","title":"Billiards & Snooker — 02 · Aiming and Potting","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_02_aiming_and_potting.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-11</div><div class=\"title\">Billiards &amp; Snooker — 02 · Aiming and Potting</div></div>"}}]}],["$","div","billiards_03_tip_and_power",{"children":["$","a",null,{"href":"/blog/2026/07/16/billiards_03_tip_and_power/","title":"Billiards & Snooker — 03 · Tip and Power","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_03_tip_and_power.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-16</div><div class=\"title\">Billiards &amp; Snooker — 03 · Tip and Power</div></div>"}}]}],["$","div","billiards_04_where_the_white_goes",{"children":["$","a",null,{"href":"/blog/2026/07/25/billiards_04_where_the_white_goes/","title":"Billiards & Snooker — 04 · Where the White Goes","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_04_where_the_white_goes.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-25</div><div class=\"title\">Billiards &amp; Snooker — 04 · Where the White Goes</div></div>"}}]}],["$","div","billiards_05_side_spin",{"children":["$","a",null,{"href":"/blog/2026/07/30/billiards_05_side_spin/","title":"Billiards & Snooker — 05 · Side Spin","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_05_side_spin.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-30</div><div class=\"title\">Billiards &amp; Snooker — 05 · Side Spin</div></div>"}}]}],["$","div","billiards_06_cut_and_side_into_pockets",{"children":["$","a",null,{"href":"/blog/2026/08/07/billiards_06_cut_and_side_into_pockets/","title":"Billiards & Snooker — 06 · Cut and Side into Pockets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_06_cut_and_side_into_pockets.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-07</div><div class=\"title\">Billiards &amp; Snooker — 06 · Cut and Side into Pockets</div></div>"}}]}],["$","div","billiards_07_cushions",{"children":["$","a",null,{"href":"/blog/2026/08/15/billiards_07_cushions/","title":"Billiards & Snooker — 07 · Cushions (庫邊)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_07_cushions.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-15</div><div class=\"title\">Billiards &amp; Snooker — 07 · Cushions (庫邊)</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-The-cue-action",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-The-cue-action","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — The cue action"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","1-The-cue-on-the-line",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#1-The-cue-on-the-line","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"1 · The cue on the line"}]]}],null]}],["$","li","2-Follow-through",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#2-Follow-through","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"2 · Follow through"}]]}],null]}],["$","li","3-Feather-pause-strike",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#3-Feather-pause-strike","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"3 · Feather, pause, strike"}]]}],null]}],["$","li","4-A-pre-shot-routine",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#4-A-pre-shot-routine","children":[["$","span",null,{"className":"toc-number","children":"2.4."}]," ",["$","span",null,{"className":"toc-text","children":"4 · A pre-shot routine"}]]}],null]}],["$","li","5-Chalk-and-stay-in-the-safe-zone",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#5-Chalk-and-stay-in-the-safe-zone","children":[["$","span",null,{"className":"toc-number","children":"2.5."}]," ",["$","span",null,{"className":"toc-text","children":"5 · Chalk, and stay in the safe zone"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Tip-height",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Tip-height","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Tip height"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","6-Hit-high-or-low-with-a-level-cue",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#6-Hit-high-or-low-with-a-level-cue","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"6 · Hit high or low with a level cue"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Cue-elevation",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Cue-elevation","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Cue elevation"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","7-What-raise-the-cue-means",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#7-What-raise-the-cue-means","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"7 · What \"raise the cue\" means"}]]}],null]}],["$","li","8-Keep-it-low",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#8-Keep-it-low","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"8 · Keep it low"}]]}],null]}],["$","li","9-Near-a-cushion",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#9-Near-a-cushion","children":[["$","span",null,{"className":"toc-number","children":"4.3."}]," ",["$","span",null,{"className":"toc-text","children":"9 · Near a cushion"}]]}],null]}],["$","li","10-Over-a-ball",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#10-Over-a-ball","children":[["$","span",null,{"className":"toc-number","children":"4.4."}]," ",["$","span",null,{"className":"toc-text","children":"10 · Over a ball"}]]}],null]}],["$","li","11-Out-of-reach-the-rest-spider-and-swan",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#11-Out-of-reach-the-rest-spider-and-swan","children":[["$","span",null,{"className":"toc-number","children":"4.5."}]," ",["$","span",null,{"className":"toc-text","children":"11 · Out of reach: the rest, spider and swan"}]]}],null]}]]}]]}],["$","li","Try-it-at-the-table",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Try-it-at-the-table","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Try it at the table"}]]}],null]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","billiards_15_rules_tactics_practice",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/10/14/billiards_15_rules_tactics_practice/","title":"Billiards & Snooker — 15 · Rules, Tactics and Practice","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_15_rules_tactics_practice.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 15 · Rules, Tactics and Practice\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/10/14/billiards_15_rules_tactics_practice/","title":"Billiards & Snooker — 15 · Rules, Tactics and Practice","children":"Billiards & Snooker — 15 · Rules, Tactics and Practice"}],["$","time",null,{"dateTime":"2026-10-14T13:46:13.000Z","title":"Created 2026-10-14 21:46:13","children":"2026-10-14"}]]}]]}],["$","div","billiards_14_special_shots",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/10/03/billiards_14_special_shots/","title":"Billiards & Snooker — 14 · Special Shots","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_14_special_shots.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 14 · Special Shots\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/10/03/billiards_14_special_shots/","title":"Billiards & Snooker — 14 · Special Shots","children":"Billiards & Snooker — 14 · Special Shots"}],["$","time",null,{"dateTime":"2026-10-03T08:27:58.000Z","title":"Created 2026-10-03 16:27:58","children":"2026-10-03"}]]}]]}],["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/25/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_24_desk_health.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/25/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-25T13:34:53.000Z","title":"Created 2026-09-25 21:34:53","children":"2026-09-25"}]]}]]}],["$","div","billiards_13_break_building",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/billiards_13_break_building/","title":"Billiards & Snooker — 13 · Break-building","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_13_break_building.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 13 · Break-building\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/billiards_13_break_building/","title":"Billiards & Snooker — 13 · Break-building","children":"Billiards & Snooker — 13 · Break-building"}],["$","time",null,{"dateTime":"2026-09-24T12:05:44.000Z","title":"Created 2026-09-24 20:05:44","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_23_money_basics.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T04:11:02.000Z","title":"Created 2026-09-22 12:11:02","children":"2026-09-22"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}],["$","$L12",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Billiards & Snooker — 01 · Cue Action and Elevation | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Every shot starts with the cue: its line, how it moves through the white, where the tip meets the ball, and how steeply it points down. This first les"}],["$","meta","5",{"name":"keywords","content":"Billiards,Snooker,Cue Action,Cue Elevation,Cue Sports"}],["$","meta","6",{"property":"og:title","content":"Billiards & Snooker — 01 · Cue Action and Elevation"}],["$","meta","7",{"property":"og:description","content":"Every shot starts with the cue: its line, how it moves through the white, where the tip meets the ball, and how steeply it points down. This first les"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/billiards/cover_01_cue_action_and_elevation.jpg"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Billiards & Snooker — 01 · Cue Action and Elevation"}],["$","meta","12",{"name":"twitter:description","content":"Every shot starts with the cue: its line, how it moves through the white, where the tip meets the ball, and how steeply it points down. This first les"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/billiards/cover_01_cue_action_and_elevation.jpg"}]]
+1:null

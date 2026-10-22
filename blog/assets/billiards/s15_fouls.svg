@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img" aria-label="A table of the fouls met most often, each with its penalty: at least 4 points, or the value of the balls involved if higher; 7 for playing reds in successive strokes">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="640" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="638.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">The fouls you meet most</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Penalty points go to your opponent, who may also make you play again.</text>
+<text x="60.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start">Foul</text>
+<text x="600.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="start">Penalty (points)</text>
+<rect x="40.0" y="134.0" width="920.0" height="40.0" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">The white hits no ball at all</text>
+<text x="600.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the value of the ball on</text>
+<rect x="40.0" y="180.0" width="920.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">The white hits a ball not on first</text>
+<text x="600.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the higher of the ball on / that ball</text>
+<rect x="40.0" y="226.0" width="920.0" height="40.0" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">The white goes in a pocket (in-off)</text>
+<text x="600.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the value of the ball on; next player from the D</text>
+<rect x="40.0" y="272.0" width="920.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">A ball not on goes in</text>
+<text x="600.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the higher of the ball on / that ball</text>
+<rect x="40.0" y="318.0" width="920.0" height="40.0" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="344.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">Two balls hit at once (not two reds)</text>
+<text x="600.0" y="344.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the highest of the ball on and the two</text>
+<rect x="40.0" y="364.0" width="920.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">Touching a ball with the body, clothes or cue</text>
+<text x="600.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the higher of the ball on / that ball</text>
+<rect x="40.0" y="410.0" width="920.0" height="40.0" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="436.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">A push stroke</text>
+<text x="600.0" y="436.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the higher of the ball on / the ball hit</text>
+<rect x="40.0" y="456.0" width="920.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">A jump shot, or both feet off the floor</text>
+<text x="600.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the value of the ball on</text>
+<rect x="40.0" y="502.0" width="920.0" height="40.0" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">Playing before all the balls stop</text>
+<text x="600.0" y="528.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">4, or the higher of the ball on / the moving ball</text>
+<rect x="40.0" y="548.0" width="920.0" height="40.0" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+<text x="60.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#1f2937" text-anchor="start">Playing at reds twice in a row (red, then red again)</text>
+<text x="600.0" y="574.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">7</text>
+<text x="40.0" y="622.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">WPBSA Official Rules 2024-25, Section 3 Rule 11, simplified. The minimum is always 4.</text>
+</svg>

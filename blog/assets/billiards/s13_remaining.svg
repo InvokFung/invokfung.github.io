@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-label="Bar chart of the most points left on the table by the number of reds left, each red taken with the black: 15 reds 147, 10 reds 107, 5 reds 67, 1 red 35, no reds 27">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="500" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="498.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Points left on the table</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Each red with a black, then all the colours. Behind by more than this? You need snookers.</text>
+<rect x="70.0" y="130.0" width="46.0" height="280.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="93.0" y="122.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">147</text>
+<text x="93.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">15</text>
+<rect x="128.0" y="145.2" width="46.0" height="264.8" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="151.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">14</text>
+<rect x="186.0" y="160.5" width="46.0" height="249.5" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="209.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">13</text>
+<rect x="244.0" y="175.7" width="46.0" height="234.3" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="267.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">12</text>
+<rect x="302.0" y="191.0" width="46.0" height="219.0" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="325.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">11</text>
+<rect x="360.0" y="206.2" width="46.0" height="203.8" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="383.0" y="198.2" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">107</text>
+<text x="383.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">10</text>
+<rect x="418.0" y="221.4" width="46.0" height="188.6" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="441.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">9</text>
+<rect x="476.0" y="236.7" width="46.0" height="173.3" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="499.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">8</text>
+<rect x="534.0" y="251.9" width="46.0" height="158.1" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="557.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">7</text>
+<rect x="592.0" y="267.1" width="46.0" height="142.9" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="615.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">6</text>
+<rect x="650.0" y="282.4" width="46.0" height="127.6" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="673.0" y="274.4" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">67</text>
+<text x="673.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">5</text>
+<rect x="708.0" y="297.6" width="46.0" height="112.4" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="731.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">4</text>
+<rect x="766.0" y="312.9" width="46.0" height="97.1" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="789.0" y="304.9" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">51</text>
+<text x="789.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">3</text>
+<rect x="824.0" y="328.1" width="46.0" height="81.9" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="847.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">2</text>
+<rect x="882.0" y="343.3" width="46.0" height="66.7" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="905.0" y="335.3" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">35</text>
+<text x="905.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">1</text>
+<rect x="940.0" y="358.6" width="46.0" height="51.4" rx="4" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+<text x="963.0" y="350.6" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#0d9488" text-anchor="middle">27</text>
+<text x="963.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<text x="528.0" y="454.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="middle">reds left on the table</text>
+<text x="40.0" y="482.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Each red adds 8 (1 + 7); the colours add 27 (2 + 3 + 4 + 5 + 6 + 7).</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-label="Bars for four distances, 30 cm to 1.5 m, showing how far the aim must turn towards the side to still pot a half-ball black with right side, half-way, at power 3: 1.5 degrees at 30 cm, falling to 1.0 degree at 1.5 m">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="430" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="428.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Side on a cut: turn the aim towards the side</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Half-ball black into the corner, right side half-way, power 3, cue 3°. Turn compared with no side. Left side: about the same, to the left.</text>
+<text x="60.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">white 30 cm away</text>
+<rect x="300" y="130" width="278.1" height="22" rx="4" fill="#2f6fd6" fill-opacity="0.8"/>
+<text x="588.1" y="147.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="start">1.5°</text>
+<text x="820.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">≈ 8 mm at the ball</text>
+<text x="60.0" y="208.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">white 60 cm away</text>
+<rect x="300" y="192" width="214.6" height="22" rx="4" fill="#2f6fd6" fill-opacity="0.8"/>
+<text x="524.6" y="209.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="start">1.2°</text>
+<text x="820.0" y="208.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">≈ 12 mm at the ball</text>
+<text x="60.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">white 100 cm away</text>
+<rect x="300" y="254" width="188.5" height="22" rx="4" fill="#2f6fd6" fill-opacity="0.8"/>
+<text x="498.5" y="271.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="start">1.0°</text>
+<text x="820.0" y="270.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">≈ 18 mm at the ball</text>
+<text x="60.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">white 150 cm away</text>
+<rect x="300" y="316" width="175.3" height="22" rx="4" fill="#2f6fd6" fill-opacity="0.8"/>
+<text x="485.3" y="333.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d4ed8" text-anchor="start">1.0°</text>
+<text x="820.0" y="332.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">≈ 26 mm at the ball</text>
+<text x="60.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="400" fill="#1f2937" text-anchor="start">Turn towards the side you use: right side, aim a touch right. Left side, a touch left.</text>
+<text x="40.0" y="412.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Physics model with squirt 2.5° at half-way side, a little swerve from the 3° cue and spin throw. Learn your own cue's number.</text>
+</svg>

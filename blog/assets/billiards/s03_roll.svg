@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="1000" height="550" role="img" aria-label="Five rows, one per tip height, power 3. A bar shows the white's first 120 cm: blue while it still has backspin, amber while it slides, green once it rolls. High: rolls at once. Centre: slides 58 cm. Low: backspin to 88 cm, rolls from 103 cm">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="550" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="548.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Where the white starts to roll</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Power 3, the white alone. It slides first, then the cloth turns the slide into a natural roll.</text>
+<circle cx="60" cy="150" r="22" fill="#ffffff" stroke="#111" stroke-width="1.5"/>
+<circle cx="60" cy="141.2" r="5" fill="#2563eb"/>
+<text x="96.0" y="146.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">high (7/10 of the ball)</text>
+<text x="96.0" y="166.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">tip 0.4 R above centre</text>
+<rect x="330.0" y="141" width="0.6" height="18" fill="#f59e0b" fill-opacity="0.85"/>
+<rect x="330.6" y="141" width="623.4" height="18" fill="#2f9e6b" fill-opacity="0.85"/>
+<text x="338.0" y="135.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="start">rolls at once</text>
+<circle cx="60" cy="216" r="22" fill="#ffffff" stroke="#111" stroke-width="1.5"/>
+<circle cx="60" cy="211.6" r="5" fill="#2563eb"/>
+<text x="96.0" y="212.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">a little above centre</text>
+<text x="96.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">tip 0.2 R above centre</text>
+<rect x="330.0" y="207" width="162.9" height="18" fill="#f59e0b" fill-opacity="0.85"/>
+<rect x="492.9" y="207" width="461.1" height="18" fill="#2f9e6b" fill-opacity="0.85"/>
+<line x1="492.9" y1="200" x2="492.9" y2="232" stroke="#111" stroke-width="2"/>
+<text x="492.9" y="196.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">rolls from 31 cm</text>
+<circle cx="60" cy="282" r="22" fill="#ffffff" stroke="#111" stroke-width="1.5"/>
+<circle cx="60" cy="282.0" r="5" fill="#2563eb"/>
+<text x="96.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">centre</text>
+<text x="96.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">tip on centre</text>
+<rect x="330.0" y="273" width="300.3" height="18" fill="#f59e0b" fill-opacity="0.85"/>
+<rect x="630.3" y="273" width="323.7" height="18" fill="#2f9e6b" fill-opacity="0.85"/>
+<line x1="630.3" y1="266" x2="630.3" y2="298" stroke="#111" stroke-width="2"/>
+<text x="630.3" y="262.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">rolls from 58 cm</text>
+<circle cx="60" cy="348" r="22" fill="#ffffff" stroke="#111" stroke-width="1.5"/>
+<circle cx="60" cy="352.4" r="5" fill="#2563eb"/>
+<text x="96.0" y="344.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">a little below centre</text>
+<text x="96.0" y="364.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">tip 0.2 R below centre</text>
+<rect x="330.0" y="339" width="220.8" height="18" fill="#3b82f6" fill-opacity="0.85"/>
+<rect x="550.8" y="339" width="191.9" height="18" fill="#f59e0b" fill-opacity="0.85"/>
+<rect x="742.7" y="339" width="211.3" height="18" fill="#2f9e6b" fill-opacity="0.85"/>
+<line x1="742.7" y1="332" x2="742.7" y2="364" stroke="#111" stroke-width="2"/>
+<text x="742.7" y="328.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">rolls from 79 cm</text>
+<text x="440.4" y="378.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1d4ed8" text-anchor="middle">backspin to 42 cm</text>
+<circle cx="60" cy="414" r="22" fill="#ffffff" stroke="#111" stroke-width="1.5"/>
+<circle cx="60" cy="425.0" r="5" fill="#2563eb"/>
+<text x="96.0" y="410.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">low</text>
+<text x="96.0" y="430.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="400" fill="#6b7280" text-anchor="start">tip 0.5 R below centre</text>
+<rect x="330.0" y="405" width="459.3" height="18" fill="#3b82f6" fill-opacity="0.85"/>
+<rect x="789.3" y="405" width="75.1" height="18" fill="#f59e0b" fill-opacity="0.85"/>
+<rect x="864.5" y="405" width="89.5" height="18" fill="#2f9e6b" fill-opacity="0.85"/>
+<line x1="864.5" y1="398" x2="864.5" y2="430" stroke="#111" stroke-width="2"/>
+<text x="864.5" y="394.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">rolls from 103 cm</text>
+<text x="559.7" y="444.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1d4ed8" text-anchor="middle">backspin to 88 cm</text>
+<text x="330.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">0 cm</text>
+<text x="538.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">40 cm</text>
+<text x="746.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">80 cm</text>
+<text x="954.0" y="478.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="middle">120 cm</text>
+<rect x="330" y="496" width="14" height="10" fill="#3b82f6"/>
+<text x="350.0" y="505.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">backspin</text>
+<rect x="440" y="496" width="14" height="10" fill="#f59e0b"/>
+<text x="460.0" y="505.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">sliding</text>
+<rect x="610" y="496" width="14" height="10" fill="#2f9e6b"/>
+<text x="630.0" y="505.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6b7280" text-anchor="start">rolling</text>
+<text x="40.0" y="532.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">Physics model: cloth sliding friction 0.2, level cue, power 3 (2.15 m/s). Real cloth differs a little.</text>
+</svg>

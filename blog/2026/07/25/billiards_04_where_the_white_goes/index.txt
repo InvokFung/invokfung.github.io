@@ -1,0 +1,374 @@
+3:I[4707,[],""]
+8:I[6423,[],""]
+b:I[4060,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+c:I[9216,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+d:I[5207,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+e:I[8003,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],""]
+f:I[4683,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+4:["year","2026","d"]
+5:["month","07","d"]
+6:["day","25","d"]
+7:["slug","billiards_04_where_the_white_goes","d"]
+9:T537,const GLOBAL_CONFIG = {
+  root: "/blog/",
+  algolia: undefined,
+  localSearch: {
+    path: "/blog/local_search.xml",
+    preload: false,
+    top_n_per_article: 1,
+    unescape: false,
+    CDN: undefined,
+    languages: {
+      hits_empty: "We didn't find any results for the search: ${query}"
+    }
+  },
+  translate: {
+    defaultEncoding: 2,
+    translateDelay: 0,
+    msgToTraditionalChinese: "繁",
+    msgToSimplifiedChinese: "簡"
+  },
+  noticeOutdate: undefined,
+  highlight: {
+    plugin: "highlighjs",
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: false
+  },
+  copy: {
+    success: "Copy successfully",
+    error: "Copy error",
+    noSupport: "The browser does not support"
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: "days",
+  date_suffix: {
+    just: "Just",
+    min: "minutes ago",
+    hour: "hours ago",
+    day: "days ago",
+    month: "months ago"
+  },
+  copyright: undefined,
+  lightbox: "fancybox",
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js",
+      css: "https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css"
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}; window.__BUTTERFLY_AUTOINIT = false;a:T748,(function(win){
+  win.saveToLocal = {
+    set: function(k,v,t){ if(t===0)return; var n=new Date(); localStorage.setItem(k,JSON.stringify({value:v,expiry:n.getTime()+t*86400000})); },
+    get: function(k){ var s=localStorage.getItem(k); if(!s)return undefined; var i=JSON.parse(s); if(new Date().getTime()>i.expiry){localStorage.removeItem(k);return undefined;} return i.value; }
+  };
+  win.getScript = function(url){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=url; s.async=true; s.onerror=rej; s.onload=s.onreadystatechange=function(){ var st=this.readyState; if(st&&st!=='loaded'&&st!=='complete')return; s.onload=s.onreadystatechange=null; res(); }; document.head.appendChild(s); }); };
+  win.activateDarkMode = function(){ document.documentElement.setAttribute('data-theme','dark'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#0d0d0d'); };
+  win.activateLightMode = function(){ document.documentElement.setAttribute('data-theme','light'); var m=document.querySelector('meta[name="theme-color"]'); if(m)m.setAttribute('content','#ffffff'); };
+  var t=saveToLocal.get('theme');
+  if(t==='dark') activateDarkMode();
+  else if(t==='light') activateLightMode();
+  var a=saveToLocal.get('aside-status');
+  if(a!==undefined){ if(a==='hide') document.documentElement.classList.add('hide-aside'); else document.documentElement.classList.remove('hide-aside'); }
+  if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('apple');
+  document.addEventListener('error', function(e){ var t=e.target; if(t&&t.tagName==='IMG'&&!t.dataset.fallback){ t.dataset.fallback='1'; var alt=(t.alt||'').toLowerCase(); t.src=(alt.indexOf('avatar')>=0||t.classList.contains('avatar-img'))?'/blog/img/friend_404.gif':'/blog/img/404.jpg'; } }, true);
+})(window);0:["mdPTm5e8aK9zEKOZy2fjt",[[["",{"children":[["year","2026","d"],{"children":[["month","07","d"],{"children":[["day","25","d"],{"children":[["slug","billiards_04_where_the_white_goes","d"],{"children":["__PAGE__?{\"year\":\"2026\",\"month\":\"07\",\"day\":\"25\",\"slug\":\"billiards_04_where_the_white_goes\"}",{}]}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["year","2026","d"],{"children":[["month","07","d"],{"children":[["day","25","d"],{"children":[["slug","billiards_04_where_the_white_goes","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children","$7","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children","$6","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","html",null,{"lang":"en","data-theme":"light","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"httpEquiv":"X-UA-Compatible","content":"IE=edge"}],["$","meta",null,{"name":"author","content":"Vokint"}],["$","meta",null,{"name":"copyright","content":"Vokint"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:type","content":"website"}],["$","meta",null,{"property":"og:title","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:site_name","content":"Vokint's StudyLog"}],["$","meta",null,{"property":"og:description","content":"A StudyLog for Everyone"}],["$","meta",null,{"property":"og:locale","content":"en_US"}],["$","meta",null,{"property":"og:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","meta",null,{"property":"article:author","content":"Vokint"}],["$","meta",null,{"name":"twitter:card","content":"summary"}],["$","meta",null,{"name":"twitter:image","content":"https://invokfung.github.io/blog/assets/icon.png"}],["$","link",null,{"rel":"shortcut icon","href":"/blog/assets/icon.png"}],["$","link",null,{"rel":"preconnect","href":"//cdn.jsdelivr.net"}],["$","link",null,{"rel":"preconnect","href":"//abacus.jasoncameron.dev"}],["$","link",null,{"rel":"stylesheet","href":"/blog/css/index.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$a"}}],["$","noscript",null,{"children":["$","style",null,{"children":"#nav { opacity: 1 } .justified-gallery img { opacity: 1 } #recent-posts time, #post-meta time { display: inline !important }"}]}],["$","meta",null,{"name":"generator","content":"Hexo 6.2.0"}]]}],["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Vokint's StudyLog\",\"isPost\":false,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":false,\"postUpdate\":\"2026-10-22 15:05:14\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"page","id":"body-wrap","children":[["$","header",null,{"className":"not-home-page","id":"page-header","style":"$undefined","children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"page-site-info","children":["$","h1",null,{"id":"site-title","children":"404"}]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":["$","div",null,{"id":"error-wrap","children":["$","div",null,{"className":"error-content","children":[["$","div",null,{"className":"error-text","children":"404"}],["$","div",null,{"className":"error-subtitle","children":"Page Not Found"}],["$","a",null,{"className":"error-btn","href":"/blog/","children":"Back to Home"}]]}]}]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[false,["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],false,["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":false}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}],"$undefined"],"notFoundStyles":[]}]}]]}]],null],null],["$L10",null]]]]
+12:I[117,["325","static/chunks/325-1813a1208fea96c7.js","106","static/chunks/app/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D/page-9e88158f7a826712.js"],"default"]
+11:T3ee0,<p>Post 03 controlled the white on a straight pot. Most pots are cuts, and on a cut the white goes off to the side. This lesson shows where: the square line, the 30° rule, follow and screw on a cut, how power and the cut angle change the path, how much speed the white keeps, and two checks before every shot: in-offs and kisses.</p>
+<blockquote>
+<p>Series map. <em>★ Basics:</em> 01 Cue action and elevation → 02 Aiming and potting → 03 Tip and power → <strong>04 Where the white goes</strong> (this post) · <em>★★ Club:</em> 05 Side spin → 06 Cut and side into pockets → 07 Cushions → 08 Doubles · <em>★★★ Advanced:</em> 09 Escaping snookers → 10 Multi-ball shots → 11 Safety → 12 Position play · <em>★★★★ Hard:</em> 13 Break-building → 14 Special shots · <em>Reference:</em> 15 Rules, tactics and practice.</p>
+</blockquote>
+<hr>
+<h1 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h1>
+<ul>
+<li>Find the <strong>square line</strong> on any cut, and send the white along it with a stun.</li>
+<li>Send the white a little forward (stun run-through) or about 30° forward (rolling).</li>
+<li>Use power and the cut angle to predict how follow and screw bend the white.</li>
+<li>Know how much speed the white keeps on full, half and thin cuts.</li>
+<li>Check the white's path for a pocket (in-off) and for other balls (kisses).</li>
+</ul>
+<hr>
+<h1 id="Chapter-1-—-The-square-line"><a href="#Chapter-1-—-The-square-line" class="headerlink" title="Chapter 1 — The square line"></a>Chapter 1 — The square line</h1>
+<h2 id="1-Three-tips-three-paths"><a href="#1-Three-tips-three-paths" class="headerlink" title="1 · Three tips, three paths"></a>1 · Three tips, three paths</h2>
+<p><img src="/blog/assets/billiards/b03_three.webp" alt="Top view of a half-ball cut into the corner. The red goes up the yellow dashed line to the pocket. From the contact point three white tracks leave: yellow (top) bends forwards, white (stun) goes straight along the square line, blue (screw) goes back. A small white face at the end of each track shows the tip spot"></p>
+<p>The same pot, the same aim, three tips:</p>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>The white goes…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>▲ above centre (follow)</td>
+<td>forwards, bending away from the square line</td>
+</tr>
+<tr>
+<td>■ a little below (stun)</td>
+<td><strong>along the square line</strong>, at a right angle to the red's path</td>
+</tr>
+<tr>
+<td>▼ low (screw)</td>
+<td>back, behind the square line</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>square line</strong> (the small white square) is your anchor. Find it first, then decide: forwards of it, on it, or behind it.</p>
+<hr>
+<h2 id="2-Stun-run-through-on-a-cut"><a href="#2-Stun-run-through-on-a-cut" class="headerlink" title="2 · Stun run-through on a cut"></a>2 · Stun run-through on a cut</h2>
+<p><img src="/blog/assets/billiards/s04_run_cut.webp" alt="Top view of the same half-ball cut. Three white tracks leave the contact point: white, straight along the square line, labelled stun 0 degrees; yellow, a little forward, labelled run-through 15 degrees; orange, further forward, labelled rolling 26 degrees"></p>
+<p>Between stun and follow there is a whole range. In the model, half ball, power 3, white 40 cm away:</p>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>The white ends…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.19 R below centre (stun)</td>
+<td>on the square line</td>
+</tr>
+<tr>
+<td>0.04 R below centre (<strong>stun run-through</strong>)</td>
+<td>15° forward of it</td>
+</tr>
+<tr>
+<td>0.35 R above centre (rolling)</td>
+<td>26° forward of it</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Trick:</strong> need the white just a little forward of the square line, for a red a few inches from it? Stun run-through: hit just below centre, a little higher than your stun spot.</p>
+</blockquote>
+<hr>
+<h2 id="3-Rolling-white-about-30"><a href="#3-Rolling-white-about-30" class="headerlink" title="3 · Rolling white: about 30°"></a>3 · Rolling white: about 30°</h2>
+<p><img src="/blog/assets/billiards/b03_rule.webp" alt="Three top views: three-quarter ball, half ball and quarter ball cuts with a rolling white. In each, the white's track bends and then runs straight. A yellow wedge between the white's old line and its new line is about the same size in all three"></p>
+<p>When the white is <strong>rolling</strong> (hit above centre, or slow from far away), it ends up turned about <strong>30°</strong>, a third of a right angle, from the line you sent it on. That holds for most cuts from ¾ ball to ¼ ball. In the model: ¾ ball 28°, ½ ball 34°, ¼ ball 27°.</p>
+<blockquote>
+<p><strong>Trick:</strong> lay your cue on the table along the white's line, then turn it a third of the way to a right angle. That is where a rolling white goes.</p>
+</blockquote>
+<hr>
+<h1 id="Chapter-2-—-Follow-and-screw-on-a-cut"><a href="#Chapter-2-—-Follow-and-screw-on-a-cut" class="headerlink" title="Chapter 2 — Follow and screw on a cut"></a>Chapter 2 — Follow and screw on a cut</h1>
+<h2 id="4-Watch-it-follow-on-a-cut"><a href="#4-Watch-it-follow-on-a-cut" class="headerlink" title="4 · Watch it: follow on a cut"></a>4 · Watch it: follow on a cut</h2>
+<div class="bclip"><img class="no-lightbox" src="/blog/assets/billiards/b03_clip_follow.webp" alt="Clip: half-ball cut into the corner, tip above centre, power 3. The square line is shown dashed. The white first slides along the square line, then bends forwards"></div>
+<p>The white <strong>starts</strong> along the square line, then the topspin grips and <strong>bends</strong> it forwards.</p>
+<hr>
+<h2 id="5-Watch-it-screw-on-a-cut"><a href="#5-Watch-it-screw-on-a-cut" class="headerlink" title="5 · Watch it: screw on a cut"></a>5 · Watch it: screw on a cut</h2>
+<div class="bclip"><img class="no-lightbox" src="/blog/assets/billiards/b03_clip_screw.webp" alt="Clip: the same cut, tip low, power 3. The white leaves along the square line, then the backspin pulls it back behind the line"></div>
+<p>Low tip: the white leaves along the square line too, then the backspin pulls it <strong>back</strong> behind the line.</p>
+<hr>
+<h2 id="6-Power-decides-where-the-bend-starts"><a href="#6-Power-decides-where-the-bend-starts" class="headerlink" title="6 · Power decides where the bend starts"></a>6 · Power decides where the bend starts</h2>
+<p><img src="/blog/assets/billiards/s04_power_bend.webp" alt="Two top views of the same half-ball cut. Left, follow: at power 2 the white bends forwards almost at once; at power 4 it first runs a long way along the square line, then curves. Right, screw: at power 2 it bends back almost at once over a short distance; at power 4 it runs along the square line first and swings back in a wide curve"></p>
+<p>Every white leaves along the square line. The spin then takes time to grip. More pace = further along the square line before the bend (model, distance until the white has turned 15°):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Power 2</th>
+<th>Power 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>follow</td>
+<td>4 cm</td>
+<td>39 cm</td>
+</tr>
+<tr>
+<td>screw</td>
+<td>1 cm</td>
+<td>36 cm</td>
+</tr>
+</tbody>
+</table>
+<p>So the same tip spot gives very different paths. A <strong>soft</strong> shot turns at once; a <strong>firm</strong> shot keeps the square line for a while, then swings in a wide curve.</p>
+<blockquote>
+<p><strong>Watch out:</strong> a firm screw on a cut does not come straight back. It runs along the square line first. Check that part of the path too.</p>
+</blockquote>
+<hr>
+<h2 id="7-The-cut-decides-how-much-screw-comes-back"><a href="#7-The-cut-decides-how-much-screw-comes-back" class="headerlink" title="7 · The cut decides how much screw comes back"></a>7 · The cut decides how much screw comes back</h2>
+<p><img src="/blog/assets/billiards/s04_screw_cut.webp" alt="Three top views with the same low tip and power 3: three-quarter, half and quarter ball cuts. On the three-quarter ball the white comes back well behind the square line, 62 degrees; on half ball 40 degrees; on quarter ball only 23 degrees"></p>
+<p>The same screw (tip 0.45 R below centre, power 3) on three cuts:</p>
+<table>
+<thead>
+<tr>
+<th>Cut</th>
+<th>The white ends behind the square line by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¾ ball</td>
+<td>62°</td>
+</tr>
+<tr>
+<td>½ ball</td>
+<td>40°</td>
+</tr>
+<tr>
+<td>¼ ball</td>
+<td>23°</td>
+</tr>
+</tbody>
+</table>
+<p>The fuller the hit, the more the screw shows. On thin cuts the white keeps most of its forward speed (section 9), so screw only nudges it.</p>
+<hr>
+<h2 id="8-Nearly-full-cuts"><a href="#8-Nearly-full-cuts" class="headerlink" title="8 · Nearly full cuts"></a>8 · Nearly full cuts</h2>
+<p><img src="/blog/assets/billiards/s04_full.webp" alt="Top view of a seven-eighths ball cut. The yellow follow track runs on almost straight past the red, 17 degrees off the cue line; the blue screw track comes back almost straight towards the start, 26 degrees off"></p>
+<p>On a nearly straight pot (here ⅞ ball, a 7° cut), the white goes almost <strong>straight on</strong> with follow or almost <strong>straight back</strong> with screw. In the model, follow ended 17° off the cue line and screw 26° off it.</p>
+<p>This is why nearly straight pots are hard for position: the white can only go forward or back along one line. Leave yourself <strong>a bit of angle</strong> when you can (post 12).</p>
+<hr>
+<h2 id="9-How-much-speed-the-white-keeps"><a href="#9-How-much-speed-the-white-keeps" class="headerlink" title="9 · How much speed the white keeps"></a>9 · How much speed the white keeps</h2>
+<p><img src="/blog/assets/billiards/s04_speed_cut.webp" alt="Three top views with a stun at power 3: three-quarter, half and one-eighth ball cuts. Labels: the white keeps 25 percent of its speed on three-quarter ball, 50 percent on half ball, 87 percent on one-eighth ball"></p>
+<p>On a stun, the speed is split between the two balls:</p>
+<table>
+<thead>
+<tr>
+<th>Cut</th>
+<th>The white keeps</th>
+<th>The red gets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¾ ball</td>
+<td>25%</td>
+<td>97%</td>
+</tr>
+<tr>
+<td>½ ball</td>
+<td>50%</td>
+<td>87%</td>
+</tr>
+<tr>
+<td>⅛ ball</td>
+<td>87%</td>
+<td>48%</td>
+</tr>
+</tbody>
+</table>
+<p>(The two shares are the sine and cosine of the cut angle; they add up in speed squared, not in plain numbers.)</p>
+<p>So on a <strong>thin cut</strong>, the white travels a long way and the red only a little: play thin cuts <strong>firmer</strong> to reach the pocket, and expect the white to run on. On a <strong>full</strong> hit, the white goes only a short way.</p>
+<hr>
+<h1 id="Chapter-3-—-Check-the-whites-path"><a href="#Chapter-3-—-Check-the-whites-path" class="headerlink" title="Chapter 3 — Check the white's path"></a>Chapter 3 — Check the white's path</h1>
+<h2 id="10-Avoid-the-in-off"><a href="#10-Avoid-the-in-off" class="headerlink" title="10 · Avoid the in-off"></a>10 · Avoid the in-off</h2>
+<p><img src="/blog/assets/billiards/s04_inoff.webp" alt="Three top views of the same half-ball pot into the top-right corner. Stun: the white runs along the square line straight into the bottom-right corner pocket, cross. Follow: the white bends forwards, hits a cushion and stays on the table, tick. Screw: the white comes back and stays out, tick"></p>
+<p>Here the square line points <strong>straight at a pocket</strong>. A stun sends the white in after the red: an in-off, a foul ✗. Follow or screw move the white off the line ✓.</p>
+<div class="bclip"><img class="no-lightbox" src="/blog/assets/billiards/s04_clip_inoff.webp" alt="Clip: the half-ball pot into the top-right corner with a stun. The square line is drawn dashed from the contact point to the bottom-right corner pocket. The red goes in, and the white runs along the square line into the bottom-right corner"></div>
+<blockquote>
+<p><strong>Trick:</strong> before every cut, look along the square line. If it hits a pocket, choose follow or screw, or change the pace so the white stops short.</p>
+</blockquote>
+<hr>
+<h2 id="11-Check-for-kisses"><a href="#11-Check-for-kisses" class="headerlink" title="11 · Check for kisses"></a>11 · Check for kisses</h2>
+<p><img src="/blog/assets/billiards/s04_kiss.webp" alt="Two top views of the half-ball pot with a blue ball half a metre along the square line. Stun: the white runs along the square line and hits the blue, cross. Screw: the white bends back and misses the blue, tick"></p>
+<p>A ball on the white's path changes everything: the white stops, the other ball moves, and your next shot is gone. Here a blue sits 52 cm along the square line. The stun <strong>hits</strong> it ✗; screw takes the white <strong>behind</strong> it ✓.</p>
+<p>The check is the same as for in-offs: picture the path for your tip and pace, and look along all of it.</p>
+<hr>
+<h1 id="Try-it-at-the-table"><a href="#Try-it-at-the-table" class="headerlink" title="Try it at the table"></a>Try it at the table</h1>
+<table>
+<thead>
+<tr>
+<th>Drill</th>
+<th>Set-up</th>
+<th>Look for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Square line</td>
+<td>a half-ball pot; lay a cue on the table along the square line</td>
+<td>stun: the white runs along the cue</td>
+</tr>
+<tr>
+<td>Four paths</td>
+<td>the same pot with screw, stun, stun run-through, follow</td>
+<td>four different landing spots; mark each with a coin</td>
+</tr>
+<tr>
+<td>30° check</td>
+<td>top spin on ¾, ½ and ¼ ball cuts</td>
+<td>the white turns about the same each time</td>
+</tr>
+<tr>
+<td>Power and the bend</td>
+<td>follow at power 2, then at power 4</td>
+<td>the firm one runs along the square line first</td>
+</tr>
+<tr>
+<td>In-off spotter</td>
+<td>a pot whose square line points at a pocket</td>
+<td>play it with follow, then with screw, and stay out both times</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Cheat-sheet"><a href="#Cheat-sheet" class="headerlink" title="Cheat-sheet"></a>Cheat-sheet</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stun</td>
+<td>along the square line, at a right angle to the red's path</td>
+</tr>
+<tr>
+<td>Stun run-through</td>
+<td>just below centre: a little forward of the square line (about 15° on half ball)</td>
+</tr>
+<tr>
+<td>Follow</td>
+<td>forwards; ends about 30° off the line you sent the white on</td>
+</tr>
+<tr>
+<td>Screw</td>
+<td>behind the square line; more on fuller cuts (¾: 62°, ½: 40°, ¼: 23°)</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>firmer = runs along the square line longer before bending</td>
+</tr>
+<tr>
+<td>Nearly full</td>
+<td>only straight on or straight back</td>
+</tr>
+<tr>
+<td>Speed kept</td>
+<td>¾: 25% · ½: 50% · ⅛: 87%</td>
+</tr>
+<tr>
+<td>Before every shot</td>
+<td>look along the white's path: pockets, balls</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Whats-next"><a href="#Whats-next" class="headerlink" title="What's next"></a>What's next</h1>
+<p><strong>05 · Side spin.</strong> What side really does: squirt, swerve, throw, and side off a cushion, and how to aim with it.</p>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>
+<ul>
+<li>Dr. Dave Alciatore, the 90° rule and the 30° rule (articles, videos and technical proofs). <a href="https://billiards.colostate.edu/" target="_blank" rel="noopener external nofollow noreferrer">https://billiards.colostate.edu/</a></li>
+<li>WPBSA, <em>Official Rules</em> (2022): in-off is a foul. <a href="https://wpbsa.com/rules/" target="_blank" rel="noopener external nofollow noreferrer">https://wpbsa.com/rules/</a></li>
+<li>The speed split on a stun is exact for smooth balls (sine and cosine of the cut angle). The angles, distances and tip heights come from the physics model of the balls at snooker sizes; real tables vary a little, the patterns hold.</li>
+</ul>
+<blockquote>
+<p>Note: this post is <strong>in progress</strong>. Planned additions: the same paths into a middle pocket, and where the white goes after the first cushion.</p>
+</blockquote>
+2:[["$","script",null,{"id":"config-diff","dangerouslySetInnerHTML":{"__html":"var GLOBAL_CONFIG_SITE = {\"title\":\"Billiards & Snooker — 04 · Where the White Goes\",\"isPost\":true,\"isHome\":false,\"isHighlightShrink\":false,\"isToc\":true,\"postUpdate\":\"2026-10-22 15:05:14\"};"}}],["$","$Lb",null,{}],["$","div",null,{"id":"sidebar","children":[["$","div",null,{"id":"menu-mask"}],["$","div",null,{"id":"sidebar-menus","children":[["$","div",null,{"className":"avatar-img is-center","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"onerror=null;src='/blog/img/friend_404.gif'\" alt=\"avatar\">"}}],["$","div",null,{"className":"sidebar-site-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","hr",null,{}],["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}]]}]]}],["$","div",null,{"className":"post","id":"body-wrap","children":[["$","header",null,{"className":"post-bg","id":"page-header","style":{"backgroundImage":"url(/blog/assets/billiards/cover_04_where_the_white_goes.jpg)"},"children":[["$","nav",null,{"id":"nav","children":[["$","span",null,{"id":"blog_name","children":["$","a",null,{"id":"site-name","href":"/blog/","children":"Vokint's StudyLog"}]}],["$","div",null,{"id":"menus","children":[["$","div",null,{"className":"menus_items","children":[["$","div","/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/","children":[["$","i",null,{"className":"fa-fw fas fa-home"}],["$","span",null,{"children":[" ","Home"]}]]}]}],["$","div","/archives/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/archives/","children":[["$","i",null,{"className":"fa-fw fas fa-archive"}],["$","span",null,{"children":[" ","Archives"]}]]}]}],["$","div","/tags/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/tags/","children":[["$","i",null,{"className":"fa-fw fas fa-tags"}],["$","span",null,{"children":[" ","Tags"]}]]}]}],["$","div","/categories/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/categories/","children":[["$","i",null,{"className":"fa-fw fas fa-folder-open"}],["$","span",null,{"children":[" ","Categories"]}]]}]}],["$","div","/link/",{"className":"menus_item","children":["$","a",null,{"className":"site-page","href":"/blog/link/","children":[["$","i",null,{"className":"fa-fw fas fa-link"}],["$","span",null,{"children":[" ","Link"]}]]}]}]]}],["$","div",null,{"id":"search-button","children":["$","a",null,{"className":"site-page social-icon search","children":[["$","i",null,{"className":"fas fa-search fa-fw"}],["$","span",null,{"children":" Search"}]]}]}],["$","div",null,{"id":"toggle-menu","children":["$","a",null,{"className":"site-page","children":["$","i",null,{"className":"fas fa-bars fa-fw"}]}]}]]}]]}],["$","div",null,{"id":"post-info","children":[["$","h1",null,{"className":"post-title","children":"Billiards & Snooker — 04 · Where the White Goes"}],["$","div",null,{"id":"post-meta","children":[["$","div",null,{"className":"meta-firstline","children":[["$","span",null,{"className":"post-meta-date","children":[["$","i",null,{"className":"far fa-calendar-alt fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Created"}],["$","time",null,{"className":"post-meta-date-created","dateTime":"2026-07-25T02:52:06.000Z","title":"Created 2026-07-25 10:52:06","children":"2026-07-25"}],["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-history fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Updated"}],["$","time",null,{"className":"post-meta-date-updated","dateTime":"2026-07-25T02:52:06.000Z","title":"Updated 2026-07-25 10:52:06","children":"2026-07-25"}]]}],["$","span",null,{"className":"post-meta-categories","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","i",null,{"className":"fas fa-inbox fa-fw post-meta-icon"}],[[null,["$","a","Sports",{"className":"post-meta-categories","href":"/blog/categories/Sports/","children":"Sports"}]],[["$","span","sep-Billiards",{"children":" > "}],["$","a","Billiards",{"className":"post-meta-categories","href":"/blog/categories/Billiards/","children":"Billiards"}]]]]}]]}],["$","div",null,{"className":"meta-secondline","children":[["$","span",null,{"className":"post-meta-separator","children":"|"}],["$","span",null,{"className":"post-meta-pv-cv","id":"","data-flag-title":"Billiards & Snooker — 04 · Where the White Goes","children":[["$","i",null,{"className":"far fa-eye fa-fw post-meta-icon"}],["$","span",null,{"className":"post-meta-label","children":"Post View:"}],["$","span",null,{"id":"busuanzi_value_page_pv"}]]}]]}]]}]]}]]}],["$","main",null,{"className":"layout","id":"content-inner","children":[["$","div",null,{"id":"post","children":[["$","article",null,{"className":"post-content","id":"article-container","dangerouslySetInnerHTML":{"__html":"$11"}}],["$","div",null,{"className":"post-copyright","children":[["$","div",null,{"className":"post-copyright__author","children":[["$","span",null,{"className":"post-copyright-meta","children":"Author: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog","children":"Vokint"}]}]]}],["$","div",null,{"className":"post-copyright__type","children":[["$","span",null,{"className":"post-copyright-meta","children":"Link: "}],["$","span",null,{"className":"post-copyright-info","children":["$","a",null,{"href":"https://invokfung.github.io/blog/2026/07/25/billiards_04_where_the_white_goes/","children":"https://invokfung.github.io/blog/2026/07/25/billiards_04_where_the_white_goes/"}]}]]}],["$","div",null,{"className":"post-copyright__notice","children":[["$","span",null,{"className":"post-copyright-meta","children":"Copyright Notice: "}],["$","span",null,{"className":"post-copyright-info","children":["All articles in this blog are licensed under"," ",["$","a",null,{"target":"_blank","rel":"noopener","href":"https://creativecommons.org/licenses/by-nc-sa/4.0/","children":"CC BY-NC-SA 4.0"}]," ","unless stating additionally."]}]]}]]}],["$","div",null,{"className":"tag_share","children":[["$","div",null,{"className":"post-meta__tag-list","children":[["$","a","Billiards",{"className":"post-meta__tags","href":"/blog/tags/Billiards/","children":"Billiards"}],["$","a","Snooker",{"className":"post-meta__tags","href":"/blog/tags/Snooker/","children":"Snooker"}],["$","a","Stun",{"className":"post-meta__tags","href":"/blog/tags/Stun/","children":"Stun"}],["$","a","Position",{"className":"post-meta__tags","href":"/blog/tags/Position/","children":"Position"}],["$","a","Cut Shot",{"className":"post-meta__tags","href":"/blog/tags/Cut-Shot/","children":"Cut Shot"}],["$","a","Cue Sports",{"className":"post-meta__tags","href":"/blog/tags/Cue-Sports/","children":"Cue Sports"}]]}],["$","div",null,{"className":"post_share","dangerouslySetInnerHTML":{"__html":"<div class=\"addthis_inline_share_toolbox\"></div><script src=\"//s7.addthis.com/js/300/addthis_widget.js#pubid=null\" async=\"async\"></script>"}}]]}],["$","nav",null,{"className":"pagination-post","id":"pagination","children":[["$","div",null,{"className":"prev-post pull-left","children":["$","a",null,{"href":"/blog/2026/07/29/dev_12_owasp_top10/","dangerouslySetInnerHTML":{"__html":"<img class=\"prev-cover\" src=\"/blog/assets/dev/cover_12_owasp_top10.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of previous post\"><div class=\"pagination-info\"><div class=\"label\">Previous Post</div><div class=\"prev_info\">Dev Essentials — 12 · OWASP Top 10 with Runnable Examples</div></div>"}}]}],["$","div",null,{"className":"next-post pull-right","children":["$","a",null,{"href":"/blog/2026/07/17/dev_11_auth/","dangerouslySetInnerHTML":{"__html":"<img class=\"next-cover\" src=\"/blog/assets/dev/cover_11_auth.jpg\" onerror=\"onerror=null;src='/blog/img/404.jpg'\" alt=\"cover of next post\"><div class=\"pagination-info\"><div class=\"label\">Next Post</div><div class=\"next_info\">Dev Essentials — 11 · Authentication Done Right — Password Hashing, Sessions vs JWT, OAuth 2 and OIDC</div></div>"}}]}]]}],"$undefined",["$","div",null,{"className":"relatedPosts","children":[["$","div",null,{"className":"headline","children":[["$","i",null,{"className":"fas fa-thumbs-up fa-fw"}],["$","span",null,{"children":"Related Articles"}]]}],["$","div",null,{"className":"relatedPosts-list","children":[["$","div","billiards_03_tip_and_power",{"children":["$","a",null,{"href":"/blog/2026/07/16/billiards_03_tip_and_power/","title":"Billiards & Snooker — 03 · Tip and Power","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_03_tip_and_power.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-16</div><div class=\"title\">Billiards &amp; Snooker — 03 · Tip and Power</div></div>"}}]}],["$","div","billiards_01_cue_action_and_elevation",{"children":["$","a",null,{"href":"/blog/2026/07/04/billiards_01_cue_action_and_elevation/","title":"Billiards & Snooker — 01 · Cue Action and Elevation","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_01_cue_action_and_elevation.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-04</div><div class=\"title\">Billiards &amp; Snooker — 01 · Cue Action and Elevation</div></div>"}}]}],["$","div","billiards_02_aiming_and_potting",{"children":["$","a",null,{"href":"/blog/2026/07/11/billiards_02_aiming_and_potting/","title":"Billiards & Snooker — 02 · Aiming and Potting","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_02_aiming_and_potting.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-11</div><div class=\"title\">Billiards &amp; Snooker — 02 · Aiming and Potting</div></div>"}}]}],["$","div","billiards_05_side_spin",{"children":["$","a",null,{"href":"/blog/2026/07/30/billiards_05_side_spin/","title":"Billiards & Snooker — 05 · Side Spin","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_05_side_spin.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-07-30</div><div class=\"title\">Billiards &amp; Snooker — 05 · Side Spin</div></div>"}}]}],["$","div","billiards_06_cut_and_side_into_pockets",{"children":["$","a",null,{"href":"/blog/2026/08/07/billiards_06_cut_and_side_into_pockets/","title":"Billiards & Snooker — 06 · Cut and Side into Pockets","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_06_cut_and_side_into_pockets.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-07</div><div class=\"title\">Billiards &amp; Snooker — 06 · Cut and Side into Pockets</div></div>"}}]}],["$","div","billiards_07_cushions",{"children":["$","a",null,{"href":"/blog/2026/08/15/billiards_07_cushions/","title":"Billiards & Snooker — 07 · Cushions (庫邊)","dangerouslySetInnerHTML":{"__html":"<img class=\"cover\" src=\"/blog/assets/billiards/cover_07_cushions.jpg\" alt=\"cover\"><div class=\"content is-center\"><div class=\"date\"><i class=\"far fa-calendar-alt fa-fw\"></i> 2026-08-15</div><div class=\"title\">Billiards &amp; Snooker — 07 · Cushions (庫邊)</div></div>"}}]}]]}]]}]]}],["$","div",null,{"className":"aside-content","id":"aside-content","children":[["$","div",null,{"className":"card-widget card-info","children":[["$","div",null,{"className":"is-center","children":[["$","div",null,{"className":"avatar-img","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/icon.png\" onerror=\"this.onerror=null;this.src='/blog/img/friend_404.gif'\" alt=\"avatar\"/>"}}],["$","div",null,{"className":"author-info__name","children":"Vokint"}],["$","div",null,{"className":"author-info__description","children":"A StudyLog for Everyone"}]]}],["$","div",null,{"className":"card-info-data site-data is-center","children":[["$","a",null,{"href":"/blog/archives/","children":[["$","div",null,{"className":"headline","children":"Articles"}],["$","div",null,{"className":"length-num","children":189}]]}],["$","a",null,{"href":"/blog/tags/","children":[["$","div",null,{"className":"headline","children":"Tags"}],["$","div",null,{"className":"length-num","children":390}]]}],["$","a",null,{"href":"/blog/categories/","children":[["$","div",null,{"className":"headline","children":"Categories"}],["$","div",null,{"className":"length-num","children":24}]]}]]}],["$","a",null,{"id":"card-info-btn","href":"javascript:alert(\"Press Ctrl+D to bookmark and stay tuned for latest updates\")","children":[["$","i",null,{"className":"fas fa-bookmark"}],["$","span",null,{"children":"Press Ctrl+D to Bookmark"}]]}],["$","div",null,{"className":"card-info-social-icons is-center","children":[["$","a","https://github.com/vokint",{"className":"social-icon","href":"https://github.com/vokint","target":"_blank","title":"Github","children":["$","i",null,{"className":"fab fa-github"}]}],["$","a","mailto:aflung10@gmail.com",{"className":"social-icon","href":"mailto:aflung10@gmail.com","target":"_blank","title":"Email","children":["$","i",null,{"className":"fas fa-envelope"}]}]]}]]}],["$","div",null,{"className":"sticky_layout","children":[["$","div",null,{"className":"card-widget","id":"card-toc","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-stream"}],["$","span",null,{"children":"Catalog"}],["$","span",null,{"className":"toc-percentage"}]]}],["$","div",null,{"className":"toc-content is-expand","children":["$","ol",null,{"className":"toc","children":[["$","li","Learning-Outcome",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Learning-Outcome","children":[["$","span",null,{"className":"toc-number","children":"1."}]," ",["$","span",null,{"className":"toc-text","children":"Learning Outcome"}]]}],null]}],["$","li","Chapter-1-—-The-square-line",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-1-—-The-square-line","children":[["$","span",null,{"className":"toc-number","children":"2."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 1 — The square line"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","1-Three-tips-three-paths",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#1-Three-tips-three-paths","children":[["$","span",null,{"className":"toc-number","children":"2.1."}]," ",["$","span",null,{"className":"toc-text","children":"1 · Three tips, three paths"}]]}],null]}],["$","li","2-Stun-run-through-on-a-cut",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#2-Stun-run-through-on-a-cut","children":[["$","span",null,{"className":"toc-number","children":"2.2."}]," ",["$","span",null,{"className":"toc-text","children":"2 · Stun run-through on a cut"}]]}],null]}],["$","li","3-Rolling-white-about-30",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#3-Rolling-white-about-30","children":[["$","span",null,{"className":"toc-number","children":"2.3."}]," ",["$","span",null,{"className":"toc-text","children":"3 · Rolling white: about 30°"}]]}],null]}]]}]]}],["$","li","Chapter-2-—-Follow-and-screw-on-a-cut",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-2-—-Follow-and-screw-on-a-cut","children":[["$","span",null,{"className":"toc-number","children":"3."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 2 — Follow and screw on a cut"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","4-Watch-it-follow-on-a-cut",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#4-Watch-it-follow-on-a-cut","children":[["$","span",null,{"className":"toc-number","children":"3.1."}]," ",["$","span",null,{"className":"toc-text","children":"4 · Watch it: follow on a cut"}]]}],null]}],["$","li","5-Watch-it-screw-on-a-cut",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#5-Watch-it-screw-on-a-cut","children":[["$","span",null,{"className":"toc-number","children":"3.2."}]," ",["$","span",null,{"className":"toc-text","children":"5 · Watch it: screw on a cut"}]]}],null]}],["$","li","6-Power-decides-where-the-bend-starts",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#6-Power-decides-where-the-bend-starts","children":[["$","span",null,{"className":"toc-number","children":"3.3."}]," ",["$","span",null,{"className":"toc-text","children":"6 · Power decides where the bend starts"}]]}],null]}],["$","li","7-The-cut-decides-how-much-screw-comes-back",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#7-The-cut-decides-how-much-screw-comes-back","children":[["$","span",null,{"className":"toc-number","children":"3.4."}]," ",["$","span",null,{"className":"toc-text","children":"7 · The cut decides how much screw comes back"}]]}],null]}],["$","li","8-Nearly-full-cuts",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#8-Nearly-full-cuts","children":[["$","span",null,{"className":"toc-number","children":"3.5."}]," ",["$","span",null,{"className":"toc-text","children":"8 · Nearly full cuts"}]]}],null]}],["$","li","9-How-much-speed-the-white-keeps",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#9-How-much-speed-the-white-keeps","children":[["$","span",null,{"className":"toc-number","children":"3.6."}]," ",["$","span",null,{"className":"toc-text","children":"9 · How much speed the white keeps"}]]}],null]}]]}]]}],["$","li","Chapter-3-—-Check-the-whites-path",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Chapter-3-—-Check-the-whites-path","children":[["$","span",null,{"className":"toc-number","children":"4."}]," ",["$","span",null,{"className":"toc-text","children":"Chapter 3 — Check the white's path"}]]}],["$","ol",null,{"className":"toc-child","children":[["$","li","10-Avoid-the-in-off",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#10-Avoid-the-in-off","children":[["$","span",null,{"className":"toc-number","children":"4.1."}]," ",["$","span",null,{"className":"toc-text","children":"10 · Avoid the in-off"}]]}],null]}],["$","li","11-Check-for-kisses",{"className":"toc-item toc-level-2","children":[["$","a",null,{"className":"toc-link","href":"#11-Check-for-kisses","children":[["$","span",null,{"className":"toc-number","children":"4.2."}]," ",["$","span",null,{"className":"toc-text","children":"11 · Check for kisses"}]]}],null]}]]}]]}],["$","li","Try-it-at-the-table",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Try-it-at-the-table","children":[["$","span",null,{"className":"toc-number","children":"5."}]," ",["$","span",null,{"className":"toc-text","children":"Try it at the table"}]]}],null]}],["$","li","Cheat-sheet",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Cheat-sheet","children":[["$","span",null,{"className":"toc-number","children":"6."}]," ",["$","span",null,{"className":"toc-text","children":"Cheat-sheet"}]]}],null]}],["$","li","Whats-next",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#Whats-next","children":[["$","span",null,{"className":"toc-number","children":"7."}]," ",["$","span",null,{"className":"toc-text","children":"What's next"}]]}],null]}],["$","li","References",{"className":"toc-item toc-level-1","children":[["$","a",null,{"className":"toc-link","href":"#References","children":[["$","span",null,{"className":"toc-number","children":"8."}]," ",["$","span",null,{"className":"toc-text","children":"References"}]]}],null]}]]}]}]]}],["$","div",null,{"className":"card-widget card-recent-post","children":[["$","div",null,{"className":"item-headline","children":[["$","i",null,{"className":"fas fa-history"}],["$","span",null,{"children":"Recent Post"}]]}],["$","div",null,{"className":"aside-list","children":[["$","div","billiards_15_rules_tactics_practice",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/10/14/billiards_15_rules_tactics_practice/","title":"Billiards & Snooker — 15 · Rules, Tactics and Practice","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_15_rules_tactics_practice.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 15 · Rules, Tactics and Practice\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/10/14/billiards_15_rules_tactics_practice/","title":"Billiards & Snooker — 15 · Rules, Tactics and Practice","children":"Billiards & Snooker — 15 · Rules, Tactics and Practice"}],["$","time",null,{"dateTime":"2026-10-14T13:46:13.000Z","title":"Created 2026-10-14 21:46:13","children":"2026-10-14"}]]}]]}],["$","div","billiards_14_special_shots",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/10/03/billiards_14_special_shots/","title":"Billiards & Snooker — 14 · Special Shots","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_14_special_shots.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 14 · Special Shots\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/10/03/billiards_14_special_shots/","title":"Billiards & Snooker — 14 · Special Shots","children":"Billiards & Snooker — 14 · Special Shots"}],["$","time",null,{"dateTime":"2026-10-03T08:27:58.000Z","title":"Created 2026-10-03 16:27:58","children":"2026-10-03"}]]}]]}],["$","div","dev_24_desk_health",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/25/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_24_desk_health.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/25/dev_24_desk_health/","title":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup","children":"Dev Essentials — 24 · Desk Health — Eye Strain, Posture, Movement and Setup"}],["$","time",null,{"dateTime":"2026-09-25T13:34:53.000Z","title":"Created 2026-09-25 21:34:53","children":"2026-09-25"}]]}]]}],["$","div","billiards_13_break_building",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/24/billiards_13_break_building/","title":"Billiards & Snooker — 13 · Break-building","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/billiards/cover_13_break_building.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Billiards &amp; Snooker — 13 · Break-building\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/24/billiards_13_break_building/","title":"Billiards & Snooker — 13 · Break-building","children":"Billiards & Snooker — 13 · Break-building"}],["$","time",null,{"dateTime":"2026-09-24T12:05:44.000Z","title":"Created 2026-09-24 20:05:44","children":"2026-09-24"}]]}]]}],["$","div","dev_23_money_basics",{"className":"aside-list-item","children":[["$","a",null,{"className":"thumbnail","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","dangerouslySetInnerHTML":{"__html":"<img src=\"/blog/assets/dev/cover_23_money_basics.jpg\" onerror=\"this.onerror=null;this.src='/blog/img/404.jpg'\" alt=\"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds\">"}}],["$","div",null,{"className":"content","children":[["$","a",null,{"className":"title","href":"/blog/2026/09/22/dev_23_money_basics/","title":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds","children":"Dev Essentials — 23 · Money Basics for Engineers — Budget, Emergency Fund, Compound Interest and Index Funds"}],["$","time",null,{"dateTime":"2026-09-22T04:11:02.000Z","title":"Created 2026-09-22 12:11:02","children":"2026-09-22"}]]}]]}]]}]]}],false]}]]}]]}],["$","footer",null,{"id":"footer","children":["$","div",null,{"id":"footer-wrap","children":[["$","div",null,{"className":"copyright","dangerouslySetInnerHTML":{"__html":"&copy;2026 By Vokint"}}],["$","div",null,{"className":"framework-info","children":[["$","span",null,{"children":"Personal blog project by "}],["$","a",null,{"target":"_blank","rel":"noopener","href":"https://invokfung.github.io/blog/","children":"Vokint"}]]}],["$","div",null,{"className":"footer_custom_text","children":"I have not failed. I’ve just found 10,000 ways that won’t work."}]]}]}]]}],["$","div",null,{"id":"rightside","children":[["$","div",null,{"id":"rightside-config-hide","children":[["$","button",null,{"id":"readmode","type":"button","title":"Read Mode","children":["$","i",null,{"className":"fas fa-book-open"}]}],["$","button",null,{"id":"translateLink","type":"button","title":"Switch Between Traditional Chinese And Simplified Chinese","children":"繁"}],["$","button",null,{"id":"darkmode","type":"button","title":"Switch Between Light And Dark Mode","children":["$","i",null,{"className":"fas fa-adjust"}]}],["$","button",null,{"id":"hide-aside-btn","type":"button","title":"Toggle between single-column and double-column","children":["$","i",null,{"className":"fas fa-arrows-alt-h"}]}]]}],["$","div",null,{"id":"rightside-config-show","children":[["$","button",null,{"id":"rightside_config","type":"button","title":"Setting","children":["$","i",null,{"className":"fas fa-cog fa-spin"}]}],["$","button",null,{"className":"close","id":"mobile-toc-button","type":"button","title":"Table Of Contents","children":["$","i",null,{"className":"fas fa-list-ul"}]}],["$","button",null,{"id":"go-up","type":"button","title":"Back To Top","children":["$","i",null,{"className":"fas fa-arrow-up"}]}]]}]]}],["$","$Lc",null,{}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"var preloader = {\n  endLoading: () => {\n    document.body.style.overflow = 'auto';\n    document.getElementById('loading-box').classList.add(\"loaded\")\n  },\n  initLoading: () => {\n    document.body.style.overflow = '';\n    document.getElementById('loading-box').classList.remove(\"loaded\")\n  }\n}\nwindow.addEventListener('load',preloader.endLoading())"}}],["$","$Ld",null,{"isHome":false,"isPost":true}],["$","$Le",null,{"id":"abacus-counter","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"(function(){\n    if (window.__abacus_ran) return;\n    window.__abacus_ran = true;\n    var ns = \"invokfung-blog\";\n    var put = function(id, val){ var el = document.getElementById(id); if (el) el.textContent = String(val); };\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/site')\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_site_uv', d.value); put('busuanzi_value_site_pv', d.value); })\n      .catch(function(){});\n    var key = encodeURIComponent(location.pathname.replace(/^\\/+|\\/+$/g, '') || 'home').replace(/%2F/g, '_');\n    fetch('https://abacus.jasoncameron.dev/hit/' + ns + '/' + key)\n      .then(function(r){ return r.json(); })\n      .then(function(d){ put('busuanzi_value_page_pv', d.value); })\n      .catch(function(){});\n  })();"}}],["$","$Lf",null,{}],["$","$L12",null,{}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","content":"#ffffff"}],["$","meta","2",{"charSet":"utf-8"}],["$","title","3",{"children":"Billiards & Snooker — 04 · Where the White Goes | Vokint's StudyLog"}],["$","meta","4",{"name":"description","content":"Post 03 controlled the white on a straight pot. Most pots are cuts, and on a cut the white goes off to the side. This lesson shows where: the square l"}],["$","meta","5",{"name":"keywords","content":"Billiards,Snooker,Stun,Position,Cut Shot,Cue Sports"}],["$","meta","6",{"property":"og:title","content":"Billiards & Snooker — 04 · Where the White Goes"}],["$","meta","7",{"property":"og:description","content":"Post 03 controlled the white on a straight pot. Most pots are cuts, and on a cut the white goes off to the side. This lesson shows where: the square l"}],["$","meta","8",{"property":"og:image","content":"http://localhost:3000/assets/billiards/cover_04_where_the_white_goes.jpg"}],["$","meta","9",{"property":"og:type","content":"article"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Billiards & Snooker — 04 · Where the White Goes"}],["$","meta","12",{"name":"twitter:description","content":"Post 03 controlled the white on a straight pot. Most pots are cuts, and on a cut the white goes off to the side. This lesson shows where: the square l"}],["$","meta","13",{"name":"twitter:image","content":"http://localhost:3000/assets/billiards/cover_04_where_the_white_goes.jpg"}]]
+1:null

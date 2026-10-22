@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-label="A table with the six colours on their spots and arrows showing the order: yellow, green, brown in the D, then the blue in the middle, the pink and the black at the top end. Short notes give a usual pocket for each">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1f2937"/></marker><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"/></marker></defs>
+<rect width="1000" height="470" rx="14" fill="#ffffff"/>
+<rect x="0.75" y="0.75" width="998.5" height="468.5" rx="14" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="40.0" y="50.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2937" text-anchor="start">Clearing the colours</text>
+<text x="40.0" y="76.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="400" fill="#6b7280" text-anchor="start">Yellow to black, in order. Plan each one from the next.</text>
+<rect x="40.0" y="110.0" width="620.0" height="310.0" rx="8" fill="#2f8f55" stroke="#6b3b1c" stroke-width="8"/>
+<circle cx="40" cy="110" r="11" fill="#111"/>
+<circle cx="350.0" cy="110" r="11" fill="#111"/>
+<circle cx="660" cy="110" r="11" fill="#111"/>
+<circle cx="40" cy="420" r="11" fill="#111"/>
+<circle cx="350.0" cy="420" r="11" fill="#111"/>
+<circle cx="660" cy="420" r="11" fill="#111"/>
+<line x1="168.0" y1="110.0" x2="168.0" y2="420.0" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="168.0" y1="315.9" x2="168.0" y2="214.1" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<line x1="168.0" y1="214.1" x2="168.0" y2="265.0" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<line x1="168.0" y1="265.0" x2="350.0" y2="265.0" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<line x1="350.0" y1="265.0" x2="505.0" y2="265.0" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<line x1="505.0" y1="265.0" x2="603.7" y2="265.0" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ah)"/>
+<circle cx="168.0" cy="315.9" r="10" fill="#e9c21a" stroke="#222"/>
+<circle cx="186.0" cy="297.9" r="12" fill="#d97706"/>
+<text x="186.0" y="302.9" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<circle cx="168.0" cy="214.1" r="10" fill="#127a3a" stroke="#222"/>
+<circle cx="186.0" cy="196.1" r="12" fill="#d97706"/>
+<text x="186.0" y="201.1" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="168.0" cy="265.0" r="10" fill="#6b3b1c" stroke="#222"/>
+<circle cx="186.0" cy="247.0" r="12" fill="#d97706"/>
+<text x="186.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<circle cx="350.0" cy="265.0" r="10" fill="#1f5fd6" stroke="#222"/>
+<circle cx="368.0" cy="247.0" r="12" fill="#d97706"/>
+<text x="368.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<circle cx="505.0" cy="265.0" r="10" fill="#f08aa8" stroke="#222"/>
+<circle cx="523.0" cy="247.0" r="12" fill="#d97706"/>
+<text x="523.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<circle cx="603.7" cy="265.0" r="10" fill="#141414" stroke="#222"/>
+<circle cx="621.7" cy="247.0" r="12" fill="#d97706"/>
+<text x="621.7" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="690.0" y="140.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">1 · yellow (2)</text>
+<text x="690.0" y="160.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">often into a bottom corner</text>
+<text x="690.0" y="186.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">2 · green (3)</text>
+<text x="690.0" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">the other baulk corner</text>
+<text x="690.0" y="232.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">3 · brown (4)</text>
+<text x="690.0" y="252.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">a baulk corner or a middle</text>
+<text x="690.0" y="278.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">4 · blue (5)</text>
+<text x="690.0" y="298.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">a middle pocket or a corner</text>
+<text x="690.0" y="324.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">5 · pink (6)</text>
+<text x="690.0" y="344.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">a top corner or a middle</text>
+<text x="690.0" y="370.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">6 · black (7)</text>
+<text x="690.0" y="390.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#6b7280" text-anchor="start">a top corner</text>
+<text x="40.0" y="452.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af" text-anchor="start">The six colours add up to 27. Pockets are common choices (coaching advice), not rules.</text>
+</svg>
