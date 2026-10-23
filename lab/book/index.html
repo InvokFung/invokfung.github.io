@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Alan Fung · Forward Deployed Engineer</title>
+<meta name="description" content="A prototype of the portfolio as a pop-up book: each scroll turns a page, the paper layers fold flat, and the next page's layers stand up." />
+<meta name="theme-color" content="#0a0b0d" />
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="book.css" />
+</head>
+<body>
+<a class="skip" href="#contact">Skip to contact</a>
+
+<!-- The book: a sticky stage the height of the screen. Scrolling turns its pages. Each page is a
+     stack of paper layers, back to front; book.js stands them up and folds them flat. -->
+<div class="scroll" id="scroll">
+<div class="stage" id="stage">
+<!-- each page's sky is lifted out of the book into here: a backdrop, not a fold -->
+<div class="skies" id="skies" aria-hidden="true"></div>
+<div class="book" id="book">
+
+  <!-- 1 · cover: the name in a landscape, and nothing else -->
+  <section class="page cover" id="cover" data-name="Cover" aria-labelledby="cover-h">
+    <div class="sky" data-art="sky"></div>
+    <div class="layer ridge r1" data-art="ridge"></div>
+    <div class="layer ridge r2" data-art="ridge"></div>
+    <div class="layer mist m1" aria-hidden="true"><i></i></div>
+    <div class="layer name"><h1 id="cover-h"><span>Alan</span> <span>Fung</span></h1></div>
+    <div class="layer ridge r3" data-art="ridge"></div>
+    <div class="layer mist m2" aria-hidden="true"><i></i></div>
+    <div class="layer ridge r4" data-art="ridge"></div>
+    <div class="layer ridge r5 front" data-art="ridge">
+      <p class="role">Forward Deployed Engineer</p>
+      <p class="cue" aria-hidden="true">scroll to turn the page<i></i></p>
+    </div>
+  </section>
+
+  <!-- 2 · the climb: one mountain, a title a year up its trail -->
+  <section class="page climb" id="climb" data-name="How I got here" aria-labelledby="climb-h">
+    <div class="sky" data-art="sky"></div>
+    <div class="layer ridge r1" data-art="ridge"></div>
+    <div class="layer words" data-s="sky+0.03">
+      <p class="kicker">How I got here</p>
+      <h2 id="climb-h">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
+      <p class="lede">A new title every year since 2023, each one closer to the people using the software.</p>
+    </div>
+    <div class="layer ridge mountain" data-art="mountain"></div>
+    <!-- a flag a year, filled from data.js (path); they stand up in order, up the trail -->
+    <ol class="steps" id="steps"></ol>
+    <div class="layer ridge r2 front" data-art="ridge"></div>
+  </section>
+
+  <!-- 3 · the work: all seven at once -->
+  <section class="page work" id="work" data-name="Selected work" aria-labelledby="work-h">
+    <div class="sky" data-art="sky"></div>
+    <div class="layer words" data-s="sky+0.03">
+      <p class="kicker">Selected work</p>
+      <h2 id="work-h">Seven of them, <em>all running.</em></h2>
+      <p class="lede" data-md="home.lede"></p>
+    </div>
+    <div class="panels" id="panels"></div>
+  </section>
+
+  <!-- 4 · the craft: six effects, each with a page of its own -->
+  <section class="page craft" id="craft" data-name="Craft" aria-labelledby="craft-h">
+    <div class="sky" data-art="sky"></div>
+    <div class="layer words" data-s="sky+0.03">
+      <p class="kicker">Craft</p>
+      <h2 id="craft-h">I build the motion, <em>too.</em></h2>
+      <p class="lede">Six effects I built, each with a page of its own.</p>
+    </div>
+    <div class="specs" id="specs"></div>
+  </section>
+
+  <!-- 5 · back cover: contact -->
+  <section class="page contact" id="contact" data-name="Contact" aria-labelledby="contact-h">
+    <div class="sky" data-art="sky"></div>
+    <div class="layer ridge r1" data-art="ridge"></div>
+    <div class="layer ridge r2" data-art="ridge"></div>
+    <div class="layer words hello">
+      <p class="kicker">contact()</p>
+      <h2 id="contact-h">Say <em>hello.</em></h2>
+    </div>
+    <div class="layer ridge r3" data-art="ridge"></div>
+    <div class="layer ridge r4 front" data-art="ridge">
+      <div class="reach">
+        <p class="mail"><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+        <p class="links"><a href="https://github.com/InvokFung" target="_blank" rel="noopener">GitHub</a><a href="/explore/">The full portfolio</a><a href="/blog/">StudyLog</a></p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</div>
+
+<p class="folio" id="folio" aria-hidden="true"><b>1</b><span>/ 5</span><i></i></p>
+
+<script src="../../assets/portfolio/data.js"></script>
+<script src="../../assets/portfolio/notes.js"></script>
+<script src="../../assets/portfolio/live/kit.js"></script>
+<script src="../../assets/portfolio/live/relay.js"></script>
+<script src="../../assets/portfolio/live/tracewise.js"></script>
+<script src="../../assets/portfolio/live/onboard.js"></script>
+<script src="../../assets/portfolio/live/dispatch.js"></script>
+<script src="../../assets/portfolio/live/atlas.js"></script>
+<script src="../../assets/portfolio/live/studio.js"></script>
+<script src="../../assets/portfolio/live/layerline.js"></script>
+<script type="module" src="book.js"></script>
+</body>
+</html>

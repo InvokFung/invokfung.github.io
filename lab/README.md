@@ -92,3 +92,56 @@ Known limits, round 2:
 - The Work stage on a phone takes the top half of the screen; figures that expect a drag (Atlas's map) are tap-only there so the page still scrolls.
 - Root-relative links (`/explore/`, `/relay/`) only work on the real site, not in a preview copy.
 
+
+### 2026-10-23 · Round 3: the portfolio as a pop-up book
+
+Alan didn't want the effects stacked into one page. The asks: a first screen that is only something
+to look at, with no project talk; the story told a little more on each step; all the projects
+visible at a glance, so a visitor knows the range without scrolling through them; the six effects
+grouped as skills, each with a small live preview that opens its own page (and no hanging cards);
+less scrolling overall. Alan also remembered an award-winning portfolio built from layered
+mountains, like a book: turn the page and the layers stand up solid, turn again and they fold.
+
+`book/` is that idea, built without a library: `index.html`, `book.css`, `book.js` (the book) and
+`specimens.js` (the six previews). Five pages, one per scroll turn, and a turn snaps to the next page
+once you've scrolled a fifth of the way:
+
+| Page | What is on it |
+|---|---|
+| Cover | Alan's name between ridges at first light. The title and "scroll to turn the page", nothing else. |
+| How I got here | One mountain, with a flag for each year on the trail up it, from first commit in 2018 to Forward Deployed Engineer in 2026 (from `data.js` path). |
+| Selected work | All seven projects at once, each running its live figure; FDE work in the front row. Each opens its case study. |
+| Craft | The six effects as small live specimens (Reflow, Badge, Morph, Assemble, Pressure, Ink). Each opens its round 1 page. |
+| Contact | Dusk ridges, "Say hello.", the email and the links. |
+
+How the paper works: every layer is laid out flat in CSS, and `book.js` gives it a depth from where
+its bottom edge sits (lower on screen is nearer) and a scale that keeps it exactly where CSS put it.
+All layers stand on the page's floor, so each folds flat around its bottom edge. A turn folds this
+page's layers front first, swings the page over a spine off to the left, and stands the next page's
+layers up back first, with a little overshoot. It all follows the scroll position, so scrolling back
+plays it in reverse. The pointer moves the eye a little, so the layers part.
+
+Research (a helper searched award sites and case studies; Awwwards pages block fetching, so their
+awards were read from search results):
+
+- The site Alan remembered was not confirmed. Closest matches: Igloo Inc (igloo.inc, Awwwards Site of the Year per Igloo's own post: scroll turns a wireframe igloo on a mountain solid, then breaks it apart), Lusion's "My Little Storybook" (Awwwards SOTD, FWA, a Webby: a picture book you page through), and Iron0re's pop-up book portfolio (meilanunicorn.com: the exact mechanic, but no award found).
+- Portfolios that shaped the layout: Stefan Vitasović (Awwwards SOTD 2025: a welcome screen, then one grid where every project plays live), Rogier de Boevé (CSSDA WOTD 2024: the whole index in one scene), Artem Shcherban (CSSDA WOTD 2026: a one-screen hub), Tomasz Szmajda (FWA: projects shown as objects in a world, not cards).
+
+Changes to round 1 components: `pressure/pressure.js` measures a row by its layout width
+(`offsetWidth`) instead of its on-screen box, so it sizes right inside a 3D-transformed page. The
+round 1 page is unchanged by this, since nothing there is transformed.
+
+Chrome quirks found, and what the book does about them:
+
+- A 3D layer that hangs off the left of the screen is painted only to about a screen's width from its left edge. Ridges are drawn in two halves, two layers that share one transform.
+- A plane stretched up with `scale()` lost whole regions; the floor is laid out at full size instead.
+- Very deep, very large layers lost tiles, so the skies are flat backdrops behind the book, cross-faded on a turn.
+
+Checked in headless Chromium (software WebGL) at 1440×900, 1920×1080, 1024×768 and 390×844, and
+with reduced motion: no console errors, no horizontal overflow, every page turn filmed frame by
+frame, every specimen and live figure fits its box.
+
+Known limits, round 3:
+
+- Not yet seen on a real phone or a real GPU; frame rates in headless say little.
+- Root-relative links (`/explore/`, `/blog/`) only work on the real site.
