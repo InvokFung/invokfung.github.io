@@ -104,8 +104,9 @@ function edge(f, w, h, closed, side = 0) {
 // pad: room above the box for marks that stand on the crest (a pole on a summit); side: land drawn
 // on past each end, for when the ridge is seen from further off than its box. face: a lit face
 // on each of the peaks it names, on the side the light comes from ({ at: [x...], side: -1 | 1,
-// light, a }), as a lighter sheet laid on the ridge.
-export function paintRidge(w, h, k, sh, { color, rim, rimA = 0.5, haze, H, pad = 0, side = 0, face }, extra) {
+// light, a }), as a lighter sheet laid on the ridge. low: the colour its base goes down into (its own
+// shade unless given, as for peaks standing in haze).
+export function paintRidge(w, h, k, sh, { color, rim, rimA = 0.5, haze, H, pad = 0, side = 0, face, low }, extra) {
   const [cv, x] = canvas(w + 2 * side, h + pad, k), f = skyline(sh), fill = edge(f, w, h, true, side), top = edge(f, w, h, false, side);
   x.translate(side, pad);
   x.fillStyle = color; x.fill(fill);
@@ -137,7 +138,7 @@ export function paintRidge(w, h, k, sh, { color, rim, rimA = 0.5, haze, H, pad =
     x.shadowColor = 'transparent';
   }
   const fade = Math.min(h * 0.6, H * 0.18), fg = x.createLinearGradient(0, h - fade, 0, h);
-  fg.addColorStop(0, rgba(foot(color), 0)); fg.addColorStop(1, foot(color));
+  fg.addColorStop(0, rgba(low || foot(color), 0)); fg.addColorStop(1, low || foot(color));
   x.fillStyle = fg; x.fillRect(-side, h - fade, w + 2 * side, fade);
   x.restore();
   x.strokeStyle = rgba(rim, rimA); x.lineWidth = 1.3; x.lineJoin = 'round'; x.stroke(top);
@@ -222,6 +223,37 @@ export function paintMist(color, seed = 3) {
       x.fillStyle = g; x.fillRect(-rx, -rx, rx * 2, rx * 2);
       x.restore();
     }
+  }
+  return c;
+}
+// Thin cloud lying across the sky in streaks, lit along its top by a low sun: drawn once, 1024 wide
+// and tiling, to drift across a box. color: its body; light: its lit edge.
+export function paintWisp(color, light, seed = 1) {
+  const w = 1024, h = 128, [c, x] = canvas(w, h, 1), r = rng(seed);
+  const streak = (cx, cy, rx, ry, a) => {
+    for (const dx of [-w, 0, w]) {
+      x.save(); x.translate(cx + dx, cy); x.scale(1, ry / rx);
+      const g = x.createRadialGradient(0, 0, 0, 0, 0, rx);
+      g.addColorStop(0, rgba(color, a)); g.addColorStop(0.55, rgba(color, a * 0.45)); g.addColorStop(1, rgba(color, 0));
+      x.fillStyle = g; x.fillRect(-rx, -rx, rx * 2, rx * 2);
+      // its top, toward the sun, a little lighter
+      x.translate(0, -rx * 0.4);
+      const l = x.createRadialGradient(0, 0, 0, 0, 0, rx * 0.75);
+      l.addColorStop(0, rgba(light, a * 0.55)); l.addColorStop(1, rgba(light, 0));
+      x.fillStyle = l; x.fillRect(-rx, -rx, rx * 2, rx * 2);
+      x.restore();
+    }
+  };
+  // a few long banks, and finer strands along them
+  for (let i = 0; i < 4; i++) streak(r() * w, h * (0.42 + r() * 0.2), w * (0.1 + r() * 0.12), h * (0.06 + r() * 0.05), 0.14 + r() * 0.16);
+  for (let i = 0; i < 12; i++) streak(r() * w, h * (0.3 + r() * 0.42), w * (0.04 + r() * 0.09), h * (0.012 + r() * 0.02), 0.18 + r() * 0.3);
+  if (CAN_BLUR) {
+    const soft = document.createElement('canvas'); soft.width = w; soft.height = h;
+    const s = soft.getContext('2d');
+    s.filter = 'blur(1.5px)';
+    // (drawn three times across, so the blur wraps round like the streaks do)
+    for (const dx of [-w, 0, w]) s.drawImage(c, dx, 0);
+    x.clearRect(0, 0, w, h); x.drawImage(soft, 0, 0);
   }
   return c;
 }

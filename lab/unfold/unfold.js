@@ -19,7 +19,7 @@
 // Everything is a function of the scroll position, so scrolling back plays it all in reverse.
 import { mountSpecimens } from '../book/specimens.js';
 import { createScenery } from './scenery.js';
-import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
+import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintWisp, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
 
 const D = window.PORTFOLIO, F = window.Figs;
 const $ = (s, r = document) => r.querySelector(s);
@@ -71,8 +71,10 @@ const reduced = !gl || matchMedia('(prefers-reduced-motion: reduce)').matches;
 // camp for the work, golden hour for the craft, and last light at contact.
 const PAL = {
   cover: { sky: ['#090b11', '#151826', '#463645', '#a8694a'], sun: { x: 0.6, y: 0.93, r: 0.05, c: '#ffe1b0', glow: ['#ffaa60', 0.5] },
-    ridges: ['#6f5f6a', '#4d4555', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa',
-    // the far sea of cloud, toward the sun, and the near one
+    ridges: ['#6f5f6a', '#4d4555', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa', wisp: ['#b08a96', '#ffd2aa'],
+    // the sea of cloud, drawn live: its lit tops, its shade and the shade deep down between heaps
+    deck: { lit: tint('#ffc9a0'), shade: tint('#7a6482'), deep: tint('#2a2236'), feet: '#8a6670' },
+    // painted, where it can't be drawn live: the far sea, toward the sun, and the near one
     sea: [{ light: '#ffd9b0', body: '#8a7488', deep: '#4a3e52', haze: '#a8694a', seed: 3, rows: 4, R: [5, 10], top: 0.12, heap: 1.4, glare: 0.3, fade: 0.3 },
       { light: '#ffd2a6', body: '#5e5068', deep: '#2a2433', haze: '#7a5a62', seed: 5, rows: 5, R: [12, 34], top: 0.07, heap: 1.8, glare: 0.25 }] },
   climb: { sky: ['#070a10', '#111925', '#2a3a4d', '#64798e'], sun: { x: 0.86, y: 0.5, r: 0, c: '#f3f6f8', glow: ['#dcebf5', 0.22] },
@@ -268,12 +270,14 @@ function layout() {
         continue;
       }
       let c, it;
-      if (art === 'mist') {
-        const key = pal.mist;
-        if (!mists.has(key) || !gl) mists.set(key, paintMist(pal.mist));
+      if (art === 'mist' || art === 'wisp') {
+        // (a wisp: thin cloud across the peaks, lit by the low sun; each its own, by its seed)
+        const seed = +(el.dataset.seed || 3), key = art === 'wisp' ? `wisp${seed}` : pal.mist;
+        if (!mists.has(key) || !gl) mists.set(key, art === 'wisp' ? paintWisp(pal.wisp[0], pal.wisp[1], seed) : paintMist(pal.mist));
         c = mists.get(key);
         it = item(el, 'mist', b, sOf(el, b));
         it.tex = T(c, { repeat: true });
+        it.speed = +(el.dataset.speed || 1);
         if (!gl) { const cv = document.createElement('canvas'); cv.width = c.width; cv.height = c.height; cv.getContext('2d').drawImage(c, 0, 0); el.append(cv); }
         continue;
       }
@@ -281,6 +285,8 @@ function layout() {
         c = paintText(el, { l: b.l + sr.left, t: b.t + sr.top, w: b.w, h: b.h }, KT);
         it = item(el, 'text', b, sOf(el, b));
       } else if (art === 'sea') {
+        // the sea of cloud is drawn live (deck.js); painted, it stands in only where that can't be
+        if (gl?.deck) continue;
         // cloud runs on past each end like the land, and is lit from where the sky's sun stands (and
         // painted coarser: it's soft, and big)
         const o = pal.sea[sk(el)], sd = Math.round(b.w * 0.22), sunX = -0.12 * W + pal.sun.x * 1.24 * W;
@@ -291,6 +297,8 @@ function layout() {
         const big = art !== 'ridge', k = big ? 0 : rk(el);
         // land runs on past each end, for when a scene is seen from further off than at rest
         const opt = { H, color: big ? pal[art] : pal.ridges[k], rim: pal.rim, rimA: big ? 0.7 : pal.rimA[k], haze: pal.haze, pad: big ? Math.round(H * 0.08) : 0, side: Math.round(b.w * 0.22), face: big ? pal.face : null };
+        // (peaks standing in the sea of cloud go down into its haze, not into shade)
+        if (gl?.deck && pal.deck && k < 2) opt.low = pal.deck.feet;
         if (art === 'ridge') c = paintRidge(b.w, b.h, K, SHAPE[sc.id][k], opt);
         else if (art === 'mountain') c = paintRidge(b.w, b.h, K, SHAPE.mountain, opt, (x, f) => mountainMarks(x, f, b.w, b.h, W - b.l));
         else c = paintRidge(b.w, b.h, K, SHAPE.summit, opt, (x, f) => summitMarks(x, f, b.w, b.h, sc.id === 'contact'));
@@ -332,6 +340,7 @@ function layout() {
     sc.sky = skyOf(sc, pal);
   }
   stage.classList.remove('paint');
+  seaLayout(scenes[0]);
 
   radial = radial || paintRadial();
   const glow = T(radial);
@@ -460,6 +469,79 @@ function summitMarks(x, f, w, h, climbed) {
   const [sx] = peakOf(SHAPE.summit, 0.4, 0.6);
   if (climbed) trail(x, TRAIL_UP.map(([a, b]) => [a * w, b * h]), '#ffd2b4', 0.15, 0.7, 1.6);
   pennant(x, sx * w, (1 - f(sx)) * h + 1.5, Math.max(climbed ? 34 : 22, h * (climbed ? 0.09 : 0.06)), climbed ? 'rgba(255,214,186,0.9)' : 'rgba(232,240,246,0.7)', climbed ? 'next' : '');
+}
+
+/* ------------------------------------------------------------------ the sea of cloud */
+// The cover's sea of cloud has its own camera (deck.js): its horizon is the sky's, the peaks stand at
+// its far edge with their feet in it (where --sea says), and the name stands in it a little, so the
+// nearest heaps rise over its foot. In world units: the eye sits CAM over the cloud tops, which heap
+// up to DEEP from their floor.
+const CAM = 1.35, DEEP = 0.75, FOG = 0.012, NOTHIN = [1e8, 2e8];
+let sea = null;
+function seaLayout(sc) {
+  sea = null;
+  if (!gl?.deck) return;
+  const f = Math.max(H * 0.9, W * 0.75), hy = sc.hy;
+  const far = parseFloat(getComputedStyle(sc.el).getPropertyValue('--sea')) / 100 * H || hy + H * 0.03;
+  const name = sc.items.find((it) => it.role === 'text'), ridges = sc.items.filter((it) => it.art === 'ridge' && it.s < name.s);
+  sea = {
+    f, name, ridges,
+    far: f * CAM / Math.max(4, far - hy),
+    // the name's foot is down among the heaps, not on their tops
+    near: f * (CAM + DEEP * 0.45) / Math.max(4, name.b.t + name.b.h - hy),
+    // the drift of each layer of heaps, in world units a second: across, and toward you
+    v: [[0.18, 0.25], [0.28, 0.14], [0.35, 0.3], [0.04, 0.06]]
+  };
+}
+const fract = (v) => v - Math.floor(v);
+// the cover's sea as up to three passes, each a sprite slotted into the paper by depth (d)
+function pushSea(into, sc, off, po, sky, u, alpha) {
+  const { f, name, ridges } = sea;
+  // its horizon, where the sky's is now; it slides with the pointer as far things do, and comes
+  // nearer as the camera does, as fast as the peaks at its far edge
+  const Zs = sc.skyZ + off[2], w = (P - Zs) / P, hz = po[1] + (Yf + off[1] - po[1]) / w;
+  const slide = (po[0] - ox) * (1 - sc.skyS);
+  const zr = Math.max(...ridges.map((it) => it.z)), sr = P / (P - zr), sr2 = P / (P - zr - off[2]);
+  const ahead = sea.far * (1 - sr / sr2);
+  // first light: the eye rises a little out of the cloud tops as the light comes
+  const intro = sc.i === 0 && introT < 1 ? introT : 1, hc = CAM * (0.8 + 0.2 * easeOut(intro));
+  const light = 0.18 + 0.82 * smooth(0, 0.56, intro);
+  const T = reduced ? 0 : clock, ws = sea.v.map(([a, b]) => [a * T, b * T]);
+  const R = (v) => [v[0] * 0.8 - v[1] * 0.6, v[0] * 0.6 + v[1] * 0.8];
+  const w0 = [fract(-ws[0][0] * 0.03), fract(-ws[0][1] * 0.03), fract(0.37 - R(ws[1])[0] * 0.045), fract(0.37 - R(ws[1])[1] * 0.045)];
+  const w1 = [fract(0.53 - ws[2][0] * 0.075), fract(0.53 - ws[2][1] * 0.075), fract(-ws[3][0] * 0.006), fract(-ws[3][1] * 0.006)];
+  const [sx, sy, , gr] = sky.sky.sun, ga = sky.sky.glow[3];
+  const sun = [(sx - W / 2 - slide) / f, Math.max(0.02, -(sy - hz) / f), -1], sl = Math.hypot(...sun);
+  const c = sky.sky.colours, P0 = PAL.cover.deck;
+  const colours = { lit: P0.lit, shade: P0.shade, deep: P0.deep, glow: [...sky.sky.glow.slice(0, 3)], haze: [c[9], c[10], c[11]] };
+  // as the cover parts, so does the sea, down its middle
+  const part = !reduced && u > 0 ? easeInOut(clamp((u - 0.1) / 0.56)) * W * 0.8 : 0;
+  const halves = part > 0.5 ? [-1, 1] : [0];
+  const base = { view: [hz, f, slide, 0], cam: [slide * 3 / f, hc, -ahead, DEEP], w0, w1, sun: [sun[0] / sl, sun[1] / sl, sun[2] / sl, 1], glow: [sx, sy, gr, ga], colours };
+  // (fewer steps a ray on a slower tier; far rays, beyond aa[0], are taken aa[1] times against
+  // stair-steps, more on a faster tier)
+  const steps = tier === 'high' ? 14 : tier === 'mid' ? 11 : 8, aa = tier === 'high' ? [8, 3] : tier === 'mid' ? [12, 2] : [0, 1];
+  const pass = (rect, r0, r1, d, a = alpha, thin = NOTHIN) => {
+    if (rect[3] <= rect[1] + 1 || !(a > 0.002)) return;
+    for (const side of halves) {
+      into.paper.push({ deck: { ...base, view: [hz, f, slide, side * part], rect, range: [r0, r1, FOG, steps], cut: [side, 0.03, light, a], thin, aa }, alpha: a, d });
+    }
+  };
+  // the peaks stand in its far haze: the last stretch before them thins to nothing over their feet,
+  // and the pass behind them starts there too, so where no peak stands the sea runs on unbroken
+  const mist = sea.far * 0.45, yFar = hz + f * hc / sea.far, yFloor = hz + f * (hc + DEEP) / mist;
+  const zFar = Math.min(...ridges.map((it) => it.z)) + off[2], zName = name.z + off[2];
+  // past the peaks, behind them
+  pass([0, hz - 1, W, Math.min(H, yFloor + 2)], mist, 1e4, zFar - 1);
+  // from the peaks to you, in front of them and behind the name
+  pass([0, Math.max(hz, yFar - 2), W, H], 0, sea.far, zr + off[2] + 0.1, alpha, [mist, sea.far]);
+  // and nearer than the name, over its foot (only while it stands whole)
+  if (name.alpha > 0.002 && !(name.part > 0.5)) {
+    const b = name.b, s2 = P / (P - zName), X0 = ox + (b.l - ox) / name.s, X1 = ox + (b.l + b.w - ox) / name.s, Yb = oy + (b.t + b.h - oy) / name.s;
+    const at = (X) => po[0] + (X + off[0] - po[0]) * s2, yb = po[1] + (Yb + off[1] + name.dy - po[1]) * s2;
+    // (marched just as the pass before, so the two agree on every heap, but cut off past the name)
+    pass([Math.max(0, at(X0)), Math.max(hz, hz + f * hc / sea.near), Math.min(W, at(X1)), Math.min(H, yb + 4)], 0, sea.far, zName + 0.5, alpha * name.alpha, [sea.near, sea.near * 1.001]);
+  }
 }
 
 /* ------------------------------------------------------------------ the moves */
@@ -679,7 +761,9 @@ function render() {
     if (gl) {
       const sa = (u < 0 && inK ? (inK.skyIn ? inK.skyIn(1 + u) : 1) : u > 0 && outK ? outK.sky(u) : 1) * fade;
       const fa = (u < 0 && inK ? (inK.floorIn ? inK.floorIn(1 + u) : 1) : u > 0 && outK ? outK.floor(u) : 1) * fade;
-      into.sky.push(skySprite(sc, off, po, sa, sc.i === 0 ? introT : 1));
+      const sky = skySprite(sc, off, po, sa, sc.i === 0 ? introT : 1);
+      into.sky.push(sky);
+      if (sc.i === 0 && sea) pushSea(into, sc, off, po, sky, u, (u > 0 ? 1 - clamp((u - 0.6) / 0.25) : 1) * fade);
       const lit = sc.i === 0 && introT < 1 ? 0.18 + 0.82 * smooth(0.02, 0.6, introT) : 1; // the land lights with the back ridges
       into.floor.push({ mode: 1, tex: sc.floor.tex, box: [ox - sc.floor.half, 0, sc.floor.half * 2, 0], fl: [sc.floor.near, sc.floor.far, Yf, 0], off, alpha: fa, tint: [lit, lit, lit], fade: [0.9, 0.12, 0, 0.16], i: sc.i });
     }
@@ -762,7 +846,7 @@ function pushSprite(list, it, off) {
   if (it.role === 'mist') {
     // one width of mist across its box, drifting; it wraps round, so the box is always full (sub would
     // also cut the sheet itself short, which on a phone left a hard edge in the cover's mist)
-    list.soft.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, shift: [reduced ? 0 : clock * 0.006, 0], depth: 'test', d: depthNow });
+    list.soft.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, shift: [reduced ? 0 : (clock * 0.006 * it.speed) % 1, 0], depth: 'test', d: depthNow });
     return;
   }
   if (it.role === 'soft' || it.role === 'halo') {
@@ -777,8 +861,8 @@ function pushSprite(list, it, off) {
   if (it.drift && !reduced) o[0] += Math.sin(clock * 0.07 + it.ord * 4) * it.drift;
   if (it.pieces) {
     // (soft halves blend where they overlap, so they test depth without writing it)
-    for (const pc of it.pieces) list.paper.push({ tex: it.tex, box: bx, sub: pc.sub, cut: pc.cut, L, th, off: [o[0] + pc.side * (it.part || 0), o[1], o[2]], alpha: it.alpha, tint: tnt, depth: pc.soft ? 'test' : 'write', fade: pc.soft ? [2, 0, pc.soft, 0.08] : GRAIN, d: depthNow });
-  } else list.paper.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, tint: tnt, depth: 'write', fade: it.role === 'text' ? null : GRAIN, d: depthNow });
+    for (const pc of it.pieces) list.paper.push({ tex: it.tex, box: bx, sub: pc.sub, cut: pc.cut, L, th, off: [o[0] + pc.side * (it.part || 0), o[1], o[2]], alpha: it.alpha, tint: tnt, depth: pc.soft ? 'test' : 'write', fade: pc.soft ? [2, 0, pc.soft, 0.08] : it.fade || GRAIN, d: depthNow });
+  } else list.paper.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, tint: tnt, depth: 'write', fade: it.role === 'text' ? null : it.fade || GRAIN, d: depthNow });
 }
 // the page's own content: the same fold, written as a CSS transform
 function poseDom(it) {

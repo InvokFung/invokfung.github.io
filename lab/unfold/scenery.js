@@ -13,6 +13,11 @@
 // One canvas costs one composited layer, however much is drawn on it, which is what makes this
 // cheap: the round 4 page drew the same landscape as 60-odd 3D layers and spent its frames
 // compositing them.
+//
+// The cover's sea of cloud is the exception: a surface ray-marched per pixel by its own program
+// (deck.js), drawn in passes slotted between the paper as sprites with a deck.
+
+import { createDeck } from './deck.js';
 
 const VS = `
 precision highp float;
@@ -120,6 +125,7 @@ export function createScenery(canvas, { onRestore } = {}) {
     prog = gl.createProgram();
     gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS));
     gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS));
+    gl.bindAttribLocation(prog, 0, 'aC'); // the deck's program shares the quad
     gl.linkProgram(prog);
     if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
     gl.useProgram(prog);
@@ -155,6 +161,8 @@ export function createScenery(canvas, { onRestore } = {}) {
     return t;
   }
   try { init(); } catch (e) { console.warn('scenery: no WebGL landscape', e); return null; }
+  let deck = null;
+  try { deck = createDeck(gl); gl.useProgram(prog); } catch (e) { console.warn('scenery: no sea of cloud', e); gl.useProgram(prog); }
 
   // a texture from a canvas the art painted; repeat: it tiles across (its width is a power of two)
   function texture(src, { repeat = false } = {}) {
@@ -180,13 +188,15 @@ export function createScenery(canvas, { onRestore } = {}) {
   canvas.addEventListener('webglcontextrestored', () => {
     lost = false;
     init();
+    if (deck) { deck.restore(); gl.useProgram(prog); }
     for (const t of textures) { t.gl = gl.createTexture(); upload(t); }
     onRestore?.();
   });
 
-  let cw = 0, ch = 0;
+  let cw = 0, ch = 0, px = 1;
   function size(W, H, res) {
     const w = Math.max(1, Math.round(W * res)), h = Math.max(1, Math.round(H * res));
+    px = W / w;
     if (w !== cw || h !== ch) { canvas.width = cw = w; canvas.height = ch = h; }
   }
 
@@ -196,6 +206,7 @@ export function createScenery(canvas, { onRestore } = {}) {
   // cut, fade, shift, blend: 'over' | 'add', depth: 'none' | 'test' | 'write' }, or { clearDepth }
   function draw(view, list) {
     if (lost) return;
+    view.px = px;
     gl.viewport(0, 0, cw, ch);
     gl.depthMask(true);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -209,6 +220,14 @@ export function createScenery(canvas, { onRestore } = {}) {
       // between two whole scenes drawn one over the other
       if (s.clearDepth) { gl.depthMask(true); gl.clear(gl.DEPTH_BUFFER_BIT); depth = ''; continue; }
       if (!(s.alpha > 0.002)) continue;
+      if (s.deck) {
+        if (!deck) continue;
+        if (blend !== 'over') { BLEND.over(); blend = 'over'; }
+        if (depth !== 'none') { gl.disable(gl.DEPTH_TEST); gl.depthMask(false); depth = 'none'; }
+        deck.draw(view, s);
+        gl.useProgram(prog);
+        continue;
+      }
       const b = s.blend || 'over';
       if (b !== blend) { BLEND[b](); blend = b; }
       const d = s.depth || 'none';
@@ -246,6 +265,6 @@ export function createScenery(canvas, { onRestore } = {}) {
   // drawn by the processor, not a graphics chip (no GPU, or one the browser won't use)
   const info = gl.getExtension('WEBGL_debug_renderer_info');
   const software = /swiftshader|llvmpipe|softpipe|software|basic render/i.test(info ? gl.getParameter(info.UNMASKED_RENDERER_WEBGL) : '');
-  return { gl, texture, release, size, draw, software, get lost() { return lost; } };
+  return { gl, texture, release, size, draw, software, deck: !!deck, get lost() { return lost; } };
 }
 const ZERO2 = [0, 0], ZERO3 = [0, 0, 0], ZERO4 = [0, 0, 0, 0], ONE4 = [1, 0, 0, 0], UNIT = [0, 0, 1, 1], WHITE = [1, 1, 1], NOFADE = [2, 0, 0, 0];
