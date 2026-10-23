@@ -14,8 +14,15 @@ export function mountReflow(stage, opts) {
     family = 'Inter',
     glyphFamily = '"Instrument Serif"',
     glyphs = [{ ch: 'A' }, { ch: 'F', italic: true }],
-    highlight = [],                   // [{ re: /…/g, color }] painted over matching words (colour only, so widths don't change)
-    onFrame = () => {}
+    highlight = [],                   // [{ re: /…/g, color, go? }] painted over matching words (colour only, so widths don't change); `go` lands on the run as data-go
+    onFrame = () => {},
+    // for pages that put other things in the text's way (lab/flow): paint them into the mask in CSS px
+    obstacles = null,
+    margins = (W, H, narrow) => ({ top: narrow ? 64 : 72, bottom: narrow ? 44 : 52, side: narrow ? 16 : Math.max(28, W * 0.04) }),
+    maxSize = (narrow) => (narrow ? 17 : 24),
+    minSpan = (narrow) => (narrow ? 7 : 6),  // narrowest span worth a line, in ems
+    pointerHole = () => true,         // return false to keep the cursor from parting the text
+    isLive = () => true               // return false to skip frames while the stage is off screen
   } = opts;
 
   const dpr = Math.min(devicePixelRatio || 1, 2);
@@ -57,7 +64,7 @@ export function mountReflow(stage, opts) {
     const r = stage.getBoundingClientRect();
     W = r.width; H = r.height;
     const narrow = W < 700;
-    top = narrow ? 64 : 72; bottom = narrow ? 44 : 52; side = narrow ? 16 : Math.max(28, W * 0.04);
+    ({ top, bottom, side } = margins(W, H, narrow));
     art.width = Math.round(W * dpr); art.height = Math.round(H * dpr);
     art.style.width = W + 'px'; art.style.height = H + 'px';
     mask.width = Math.ceil(W * MASK); mask.height = Math.ceil(H * MASK);
@@ -74,7 +81,7 @@ export function mountReflow(stage, opts) {
 
   // pick the body size whose layout, with the letters at home, ends just above the bottom edge
   function fitType() {
-    let lo = 11, hi = W < 700 ? 17 : 24;
+    let lo = 11, hi = maxSize(W < 700);
     for (let k = 0; k < 7; k++) {
       const mid = (lo + hi) / 2;
       setType(mid);
@@ -110,6 +117,11 @@ export function mountReflow(stage, opts) {
     mctx.clearRect(0, 0, mask.width, mask.height);
     mctx.fillStyle = '#fff';
     for (const g of G) placeGlyph(mctx, g, MASK, home ? g.hx : g.x, home ? g.hy : g.y, home ? 0 : g.a);
+    if (obstacles) {
+      mctx.save(); mctx.scale(MASK, MASK);
+      obstacles(mctx, home);
+      mctx.restore();
+    }
     if (!home && pointer.r > 1) {
       mctx.beginPath();
       mctx.arc(pointer.x * MASK, pointer.y * MASK, pointer.r * MASK, 0, Math.PI * 2);
@@ -130,7 +142,7 @@ export function mountReflow(stage, opts) {
       for (let c = c0; c < c1; c++) if (pixels[row + c * 4 + 3] > 40) occ[c] = 1;
     }
     const out = [];
-    const minW = size * (W < 700 ? 7 : 6), pad = PAD_X;
+    const minW = size * minSpan(W < 700), pad = PAD_X;
     let start = -1;
     for (let c = c0; c <= c1; c++) {
       const free = c < c1 && !occ[c];
@@ -205,7 +217,8 @@ export function mountReflow(stage, opts) {
       let j = i;
       while (j < t.length && owner[j] === owner[i]) j++;
       const s = esc(t.slice(i, j));
-      html += owner[i] < 0 ? s : `<i style="color:${highlight[owner[i]].color}">${s}</i>`;
+      const h = highlight[owner[i]];
+      html += owner[i] < 0 ? s : `<i style="color:${h.color}"${h.go ? ` data-go="${h.go}"` : ''}>${s}</i>`;
       i = j;
     }
     return html;
@@ -279,7 +292,7 @@ export function mountReflow(stage, opts) {
   stage.addEventListener('pointermove', (e) => {
     const r = stage.getBoundingClientRect();
     const x = e.clientX - r.left, y = e.clientY - r.top;
-    pointer.x = x; pointer.y = y; pointer.inside = e.pointerType === 'mouse';
+    pointer.x = x; pointer.y = y; pointer.inside = e.pointerType === 'mouse' && pointerHole(e);
     stage.classList.toggle('over', !drag && !!hit(x, y));
     if (!drag) return;
     const now = performance.now(), dt = Math.max(1, now - drag.t) / 1000;
@@ -303,6 +316,7 @@ export function mountReflow(stage, opts) {
   let last = performance.now(), t0 = last, raf = 0;
   function frame(now) {
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
+    if (!isLive()) { raf = requestAnimationFrame(frame); return; }
     step(dt, (now - t0) / 1000);
     const a = performance.now();
     drawMask();

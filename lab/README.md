@@ -54,3 +54,41 @@ Known limits, round 1:
 - Ink's fluid runs on the main thread: 4 to 10 ms per step in the headless software renderer used for testing. A real laptop is likely faster; that is not measured yet.
 - Pressure needs Roboto Flex from Google Fonts; without it the letters do not change width.
 - Frame rates were measured in a headless software renderer, not on a real GPU.
+
+### 2026-10-23 · Round 2: the whole site in one flow
+
+Alan liked the six enough to show them, and asked for everything (the projects included, in the
+right priority) as one page with proper flow, where each effect has a reason to be where it is,
+rather than a gallery of cards. Alan liked the badge best and wanted content and a backdrop behind it.
+
+`flow/` is that page: `index.html`, `flow.css`, `flow.js` (wires the sections) and `handover.js`
+(new). It reads its content from `assets/portfolio/data.js` and runs the live figures from
+`assets/portfolio/live/`, the same files the live site uses. Nothing on the live site links to it.
+
+| Section | Effect | Its job |
+|---|---|---|
+| Hello | Badge + Reflow | Who I am first. The badge hangs near the right edge in front of the copy, which re-flows around the strap and card every frame; drag the card in and the text parts. Project names in the copy jump to the project. |
+| Work | live figures + handover (from Assemble) | Seven projects on one sticky stage, FDE work first (Relay, Tracewise, Onboard, Dispatch, then Atlas, Intonation Studio, Layerline). Between projects the outgoing figure is sampled into up to 16,000 points and they rebuild as the next figure, then the live canvas takes over. |
+| How I got here | Morph (glide) + roller | Scroll-driven, 2023 to 2026. Letters the titles share light up as they carry over. |
+| Craft | Pressure | "Hand-built, down to the type." over a paragraph naming each effect, linking to its lab page. |
+| Contact | Badge | The same badge: it is re-hung from the top of contact while off screen and turned to its contact side. |
+| Sign-off | Ink | The name as a fluid; "Stir it. It comes back." |
+
+Changes to round 1 components, all optional and off by default, so the round 1 pages behave as before:
+
+- `badge/badge.js`: `anchor`, `strap`, `visible`, `onFrame` options; `hang(still)`, `kick()`, `flipped`. A moving anchor tugs the strap up to 24 px a frame, and a bigger jump carries the whole badge along. Height-only resizes (a phone toolbar) no longer re-hang it.
+- `reflow/reflow.js`: `obstacles` (paint any shape into the mask), `margins`, `maxSize`, `minSpan`, `pointerHole`, `isLive`; a highlight can carry `go`.
+- `morph/morph.js`: shared letters get a `kept` class while they move.
+- `pressure/pressure.js`, `ink/ink.js`: `isLive`, so they stop work while off screen.
+
+Checked in headless Chromium (software WebGL) at 1440×900, 1024×768 and 390×844: no console
+errors, no horizontal overflow, the card drags into the copy and the copy parts, names in the copy
+land on their project, every handover completes in order, the badge turns up at contact on its
+contact side and flips back on a tap, and reduced motion swaps figures with no particles.
+
+Known limits, round 2:
+
+- Headless software rendering throttles animation frames, so frame rates there say little; not yet measured on a real phone.
+- The Work stage on a phone takes the top half of the screen; figures that expect a drag (Atlas's map) are tap-only there so the page still scrolls.
+- Root-relative links (`/explore/`, `/relay/`) only work on the real site, not in a preview copy.
+

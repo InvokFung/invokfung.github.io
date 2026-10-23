@@ -26,7 +26,7 @@ void main() {
   gl_FragColor = vec4(mix(uBg, col, a), 1.0);
 }`;
 
-export function mountInk(canvas, { name = ['Alan Fung'], cellFont = '500 13px "JetBrains Mono"', nameFont = (px) => `400 ${px}px "Instrument Serif"`, onFrame = () => {} } = {}) {
+export function mountInk(canvas, { name = ['Alan Fung'], cellFont = '500 13px "JetBrains Mono"', nameFont = (px) => `400 ${px}px "Instrument Serif"`, onFrame = () => {}, isLive = () => true } = {}) {
   const gl = canvas.getContext('webgl', { antialias: false });
   if (!gl) throw new Error('WebGL is off in this browser');
   const dpr = Math.min(devicePixelRatio || 1, 2);
@@ -259,6 +259,7 @@ export function mountInk(canvas, { name = ['Alan Fung'], cellFont = '500 13px "J
   let prev = performance.now(), t0 = prev, raf = 0;
   function frame(now) {
     const dt = Math.min(1 / 30, (now - prev) / 1000); prev = now;
+    if (!isLive()) { raf = requestAnimationFrame(frame); return; } // off screen: the fluid waits
     if (!reduced) ghostHand(dt);
     const a = performance.now();
     step(dt);

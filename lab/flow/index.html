@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Alan Fung · Forward Deployed Engineer</title>
+<meta name="description" content="A prototype of the whole portfolio as one scroll: the badge, the work running live, the career line and contact, with every motion effect from the lab doing one job." />
+<meta name="theme-color" content="#0a0b0d" />
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../lab.css" />
+<link rel="stylesheet" href="flow.css" />
+</head>
+<body>
+<a class="skip" href="#contact">Skip to contact</a>
+
+<a class="brand" id="brand" href="#hello"><b>Alan Fung</b><span>Forward Deployed Engineer</span></a>
+
+<!-- the badge hangs over the whole page: from the top of the first screen, then from the top of contact -->
+<div class="badge-layer" id="badge-layer">
+  <canvas id="strap" aria-hidden="true"></canvas>
+  <div class="card" id="card" tabindex="0" role="button" aria-pressed="false" aria-label="Alan Fung's badge. Press Enter to turn it over.">
+    <div class="face front">
+      <div class="slot"></div>
+      <div class="top">
+        <span>invokfung.github.io</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0a0b0d"/><rect x="5" y="5" width="6" height="6" rx="1.6" fill="#c8ff4a"/><rect x="13" y="5" width="6" height="6" rx="1.6" fill="#ff8a65"/><rect x="21" y="5" width="6" height="6" rx="1.6" fill="#b7b6b0"/><rect x="5" y="13" width="6" height="6" rx="1.6" fill="#a78bfa"/><rect x="13" y="13" width="6" height="6" rx="1.6" fill="#ecebe6"/><rect x="21" y="13" width="6" height="6" rx="1.6" fill="#ffb547"/><rect x="5" y="21" width="6" height="6" rx="1.6" fill="#ff7ab6"/><rect x="13" y="21" width="6" height="6" rx="1.6" fill="#4fe3c1"/><rect x="21" y="21" width="6" height="6" rx="1.6" fill="#62b6ff"/></svg>
+      </div>
+      <div class="seal"><span>A<i>F</i></span></div>
+      <div class="who"><b>Alan Fung</b><span>Forward Deployed Engineer</span></div>
+      <dl class="facts">
+        <div><dt>First commit</dt><dd>2018</dd></div>
+        <div><dt>Shipping since</dt><dd>2023</dd></div>
+        <div><dt>Flagships</dt><dd>7, all live</dd></div>
+      </dl>
+      <div class="code" id="code"></div>
+      <div class="glare"></div>
+    </div>
+    <div class="face back">
+      <div class="slot"></div>
+      <p class="fn">await alan.contact()</p>
+      <div class="line"><small>Email</small><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></div>
+      <div class="line"><small>GitHub</small><a href="https://github.com/InvokFung" target="_blank" rel="noopener">github.com/InvokFung</a></div>
+      <p class="list">Relay, Tracewise, Onboard, Dispatch, StudyLog Atlas, Intonation Studio and Layerline.</p>
+      <span class="turn">tap to turn it over</span>
+      <div class="glare"></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- 1 · hello: the badge, with the copy flowing around it -->
+  <section class="hello" id="hello" aria-labelledby="hello-h">
+    <h1 class="sr" id="hello-h">Alan Fung, Forward Deployed Engineer. From the customer's desk to production.</h1>
+    <p class="sr" id="wall-copy"></p>
+    <div class="wall" id="wall"></div>
+    <p class="why why-hello">// the copy is laid out again on every frame to make room for the badge</p>
+    <p class="cue" aria-hidden="true">scroll<i></i></p>
+  </section>
+
+  <!-- 2 · the work: one stage, seven figures handing over to each other -->
+  <section class="work" id="work" aria-labelledby="work-h">
+    <header class="work-head">
+      <p class="kicker">Selected work</p>
+      <h2 id="work-h" data-html="sections.work"></h2>
+      <p class="lede" data-md="home.lede"></p>
+    </header>
+    <div class="work-body">
+      <div class="stage-col">
+        <div class="stage" id="stage">
+          <div class="screen">
+            <canvas id="fig" aria-label="The live figure for the project you are reading about"></canvas>
+            <canvas id="dots" aria-hidden="true"></canvas>
+            <p class="stage-name" id="stage-name"><i></i><span></span></p>
+            <input class="query" id="query" type="search" placeholder="Ask my notes something" aria-label="Search my notes" hidden />
+          </div>
+          <div class="stage-foot">
+            <dl class="stats" id="stats"></dl>
+            <div class="ctl" id="ctl"><label for="rg" id="rgl"></label><output id="rgo" for="rg"></output><input type="range" id="rg" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="projects" id="projects"></div>
+    </div>
+    <p class="why why-work">// each figure breaks into points and rebuilds as the next one, in one WebGL draw call</p>
+  </section>
+
+  <!-- 3 · how I got here: the titles turn into each other as you scroll -->
+  <section class="path" id="path" aria-labelledby="path-h">
+    <div class="path-pin">
+      <p class="kicker">How I got here</p>
+      <h2 id="path-h" data-html="sections.path"></h2>
+      <p class="before">2018, a first commit. 2020, Information Engineering. Then a new title every year:</p>
+      <div class="year" id="year"></div>
+      <div class="title" id="title" role="img" aria-live="polite"></div>
+      <p class="d" id="path-d"></p>
+      <ol class="rail" id="rail" aria-hidden="true"></ol>
+      <p class="why">// titles keep the letters they share, so what carried over stays on screen</p>
+    </div>
+  </section>
+
+  <!-- 4 · the craft: what this page is made of -->
+  <section class="craft" id="craft" aria-labelledby="craft-h">
+    <h2 class="sr" id="craft-h">Hand-built, down to the type.</h2>
+    <div class="type" id="type"></div>
+    <p class="made">No templates, no UI kit, no animation library. The badge swings on <a href="../badge/">a verlet chain</a> I wrote, and <a href="../reflow/">Pretext</a> lays the copy around it on every frame. The projects hand over as <a href="../assemble/">thousands of points</a> in one WebGL draw call. Job titles <a href="../morph/">keep the letters they share</a>. This heading leans toward your cursor on <a href="../pressure/">three font axes</a>, and the sign-off below is <a href="../ink/">a fluid you can stir</a>. Each one also runs on its own in <a href="../">the lab</a>.</p>
+    <p class="why">// every letter above sits on three variable-font axes and leans toward your cursor</p>
+  </section>
+
+  <!-- 5 · contact: the same badge, turned over -->
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="contact-text">
+      <p class="kicker">contact()</p>
+      <h2 id="contact-h">Say <em>hello.</em></h2>
+      <p class="lede" data-md="home.contact"></p>
+      <p class="mail"><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+      <p class="links"><a href="https://github.com/InvokFung" target="_blank" rel="noopener">GitHub</a><a href="/blog/">StudyLog</a><a href="/explore/">The full portfolio</a></p>
+      <p class="why">// the badge from the top of the page, turned over</p>
+    </div>
+  </section>
+</main>
+
+<!-- 6 · sign-off: the name as a fluid you can stir -->
+<footer class="sign" id="sign">
+  <div class="ink-stage"><canvas id="ink" aria-label="My name drawn in characters on a fluid you can stir"></canvas></div>
+  <p class="stir">Stir it. It comes back.</p>
+  <p class="foot">Everything above runs in your browser. The rest of the shelf is <a href="/explore/">one level down</a>, and every effect has <a href="../">a page of its own</a>.</p>
+</footer>
+
+<script src="../../assets/portfolio/data.js"></script>
+<script src="../../assets/portfolio/notes.js"></script>
+<script src="../../assets/portfolio/live/kit.js"></script>
+<script src="../../assets/portfolio/live/relay.js"></script>
+<script src="../../assets/portfolio/live/tracewise.js"></script>
+<script src="../../assets/portfolio/live/onboard.js"></script>
+<script src="../../assets/portfolio/live/dispatch.js"></script>
+<script src="../../assets/portfolio/live/atlas.js"></script>
+<script src="../../assets/portfolio/live/studio.js"></script>
+<script src="../../assets/portfolio/live/layerline.js"></script>
+<script type="module" src="flow.js"></script>
+</body>
+</html>

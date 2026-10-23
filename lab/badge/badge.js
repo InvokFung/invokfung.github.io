@@ -4,7 +4,17 @@
 // follows the tilt. Lineage: React Bits' Lanyard (a 3D badge on a rope) and Simon Goellner's
 // pokemon-cards-css holo foil.
 
-export function mountBadge(stage, card, strapCanvas, { strapText = 'ALAN FUNG · INVOKFUNG.GITHUB.IO · ' } = {}) {
+// Options for pages that host the badge in a bigger layout (lab/flow): `anchor` moves the point the
+// strap hangs from (it is read every step, so a scrolling anchor makes the card swing), `strap`
+// sets the strap length, `visible` skips drawing while the card is off screen, and `onFrame`
+// reports where the card is, for layouts that flow around it.
+export function mountBadge(stage, card, strapCanvas, {
+  strapText = 'ALAN FUNG · INVOKFUNG.GITHUB.IO · ',
+  anchor = (W) => ({ x: W / 2, y: -10 }),
+  strap: strapLen = (W, H, cardH) => Math.max(120, H * 0.5 - cardH * 0.5),
+  visible = () => true,
+  onFrame = () => {}
+} = {}) {
   const ctx = strapCanvas.getContext('2d');
   const dpr = Math.min(devicePixelRatio || 1, 2);
   let W = 0, H = 0, cardW = 0, cardH = 0;
@@ -12,27 +22,42 @@ export function mountBadge(stage, card, strapCanvas, { strapText = 'ALAN FUNG ·
   let pts = [], seg = 0, cardLen = 0;
   const G = 2200;                       // gravity, px/s²
 
-  function build() {
+  function build(soft) {
+    const w0 = W;
     W = stage.clientWidth; H = stage.clientHeight;
     strapCanvas.width = W * dpr; strapCanvas.height = H * dpr;
     strapCanvas.style.width = W + 'px'; strapCanvas.style.height = H + 'px';
     cardW = card.offsetWidth; cardH = card.offsetHeight;
-    const strap = Math.max(120, H * 0.5 - cardH * 0.5);
-    seg = strap / N;
     cardLen = cardH - 22;               // the hole sits 22px below the card's top edge
-    const ax = W / 2;
+    // a phone's toolbar sliding away changes only the height: keep the card where it is
+    if (!soft || W !== w0 || !pts.length) hang();
+  }
+  // the whole chain hanging from the anchor, nearly at rest
+  function hang(still = false) {
+    seg = strapLen(W, H, cardH) / N;
+    const a = anchor(W, H);
+    lastA = a;
     pts = [];
-    for (let i = 0; i <= N; i++) pts.push(pt(ax + i * 6, -10 + i * seg * 0.96, i === 0 ? 0 : 1));
+    for (let i = 0; i <= N; i++) pts.push(pt(a.x + (still ? 0 : i * 6), a.y + i * seg * (still ? 1 : 0.96), i === 0 ? 0 : 1));
     // the card: its hole, then its bottom edge, heavier, so it hangs straight
     const hole = pts[N];
-    pts.push(pt(hole.x + 40, hole.y + cardLen, 3));
+    pts.push(pt(hole.x + (still ? 0 : 40), hole.y + cardLen, 3));
   }
   function pt(x, y, m) { return { x, y, px: x, py: y, m }; }
 
-  let drag = null;
+  let drag = null, lastA = null;
   function step(dt) {
     const sub = 3;
     const h = dt / sub;
+    // an anchor that moves (a page scrolling) tugs the strap, but only up to a point: a jump, like
+    // a link to the bottom of the page, carries the whole badge along instead of flinging it
+    const a0 = anchor(W, H);
+    if (lastA) {
+      const cap = (v) => v - Math.max(-24, Math.min(24, v));
+      const ex = cap(a0.x - lastA.x), ey = cap(a0.y - lastA.y);
+      if (ex || ey) for (const p of pts) { p.x += ex; p.px += ex; p.y += ey; p.py += ey; }
+    }
+    lastA = a0;
     for (let s = 0; s < sub; s++) {
       for (const p of pts) {
         if (!p.m) continue;
@@ -40,8 +65,9 @@ export function mountBadge(stage, card, strapCanvas, { strapText = 'ALAN FUNG ·
         p.px = p.x; p.py = p.y;
         p.x += vx; p.y += vy + G * h * h;
       }
+      const a = anchor(W, H);
       for (let it = 0; it < 10; it++) {
-        pts[0].x = W / 2; pts[0].y = -10;
+        pts[0].x = a.x; pts[0].y = a.y;
         for (let i = 0; i < pts.length - 1; i++) {
           const a = pts[i], b = pts[i + 1];
           const L = i === pts.length - 2 ? cardLen : seg;
@@ -101,7 +127,7 @@ export function mountBadge(stage, card, strapCanvas, { strapText = 'ALAN FUNG ·
       const L = Math.hypot(b.x - a.x, b.y - a.y), ang = Math.atan2(b.y - a.y, b.x - a.x);
       while (along < L) {
         const x = a.x + (b.x - a.x) * along / L, y = a.y + (b.y - a.y) * along / L;
-        if (y > 4) {
+        if (y > pts[0].y + 14) {
           ctx.save(); ctx.translate(x, y); ctx.rotate(ang - Math.PI / 2 + Math.PI);
           ctx.fillText(strapText[k % strapText.length], 0, 0); ctx.restore();
         }
@@ -179,19 +205,40 @@ export function mountBadge(stage, card, strapCanvas, { strapText = 'ALAN FUNG ·
   card.addEventListener('pointerleave', () => { if (!drag) { tilt.tx = 0; tilt.ty = 0; } });
   card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flipped = !flipped; } });
 
-  let last = performance.now();
+  let last = performance.now(), shown = true;
   function frame(now) {
     const dt = Math.min(1 / 30, (now - last) / 1000); last = now;
     step(dt);
-    draw();
-    place(dt);
+    const on = visible();
+    if (on) { draw(); place(dt); }
+    else if (shown) ctx.clearRect(0, 0, strapCanvas.width, strapCanvas.height);
+    shown = on;
+    card.style.visibility = strapCanvas.style.visibility = on ? '' : 'hidden';
     card.setAttribute('aria-pressed', String(flipped));
+    if (on) report();
     requestAnimationFrame(frame);
+  }
+  // where the card is now: its centre, angle and size, plus how far the flip has turned it
+  function report() {
+    const hole = pts[N], foot = pts[N + 1];
+    const l = Math.hypot(foot.x - hole.x, foot.y - hole.y) || 1;
+    onFrame({
+      cx: (hole.x + foot.x) / 2 - (foot.x - hole.x) / l * 11, cy: (hole.y + foot.y) / 2 - (foot.y - hole.y) / l * 11,
+      ang: Math.atan2(foot.y - hole.y, foot.x - hole.x) - Math.PI / 2,
+      w: cardW, h: cardH, turn: tilt.y + flip, strap: pts.slice(0, N + 1), held: !!drag
+    });
   }
   build();
   // arrive with a swing
   pts[N + 1].px -= 5; pts[N].px -= 2;
-  addEventListener('resize', build);
+  addEventListener('resize', () => build(true));
   requestAnimationFrame(frame);
-  return { flip() { flipped = !flipped; } };
+  return {
+    flip() { flipped = !flipped; },
+    set flipped(v) { flipped = !!v; },
+    get flipped() { return flipped; },
+    hang(still) { hang(still); },
+    // a push on the card, in px per frame, for pages that want it to react to something
+    kick(vx, vy = 0) { const f = pts[N + 1], h = pts[N]; f.px -= vx; f.py -= vy; h.px -= vx * 0.5; h.py -= vy * 0.5; }
+  };
 }

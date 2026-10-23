@@ -91,6 +91,8 @@ export function mountMorph(root, { font = (px) => `400 ${px}px "Instrument Serif
       if (keepNew.has(j)) {
         const s = spans[keepNew.get(j)];
         s.el.animate([{ transform: at(s.b) }, { transform: at(b) }], { duration: 900, delay: 120 + j * 10, easing: ease, fill: 'backwards' });
+        // a page can style what carried over (lab/flow lights it up while it moves)
+        s.el.classList.add('kept'); clearTimeout(s.kt); s.kt = setTimeout(() => s.el.classList.remove('kept'), 1500);
         s.el.style.transform = at(b); s.el.style.width = b.w + 'px';
         s.b = b; nextSpans.push(s);
       } else {

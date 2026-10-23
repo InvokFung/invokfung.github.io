@@ -2,7 +2,7 @@
 // Letters near the pointer swell wide and heavy; the rest pull in thin. With no pointer, a slow
 // wave runs through them instead. Lineage: React Bits' TextPressure and VariableProximity.
 
-export function mountPressure(root, { lines, axes = { wdth: [25, 151], wght: [140, 1000], opsz: [8, 144] } }) {
+export function mountPressure(root, { lines, axes = { wdth: [25, 151], wght: [140, 1000], opsz: [8, 144] }, isLive = () => true }) {
   const rows = lines.map((l) => {
     const row = document.createElement('div');
     row.className = 'p-row ' + (l.className || '');
@@ -56,8 +56,9 @@ export function mountPressure(root, { lines, axes = { wdth: [25, 151], wght: [14
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let t0 = performance.now(), last = t0, n = 0;
   function frame(now) {
-    if (n++ % 3 === 0) measure(); // letters drift as their neighbours change width
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
+    if (!isLive()) { requestAnimationFrame(frame); return; } // off screen: nothing to swell
+    if (n++ % 3 === 0) measure(); // letters drift as their neighbours change width
     const t = (now - t0) / 1000;
     ptr.x += (ptr.tx - ptr.x) * Math.min(1, dt * 12);
     ptr.y += (ptr.ty - ptr.y) * Math.min(1, dt * 12);
