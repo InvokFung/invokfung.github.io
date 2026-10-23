@@ -28,7 +28,7 @@ a { color: inherit; }
 .skies { will-change: transform; }
 .sky { position: absolute; }
 .ground { position: absolute; left: -12%; right: -12%; bottom: -12%; }   /* top set by book.js: the sky's foot */
-.book { position: absolute; inset: 0; transform-style: preserve-3d; }
+.book { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; }  /* its own box sits at depth 0, in front of every layer: let hits through to them */
 .page { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; }
 .page a, .page button, .page input, .page [data-live] { pointer-events: auto; }
 .layer { position: absolute; transform-origin: 0 0; transform-style: flat; will-change: transform; backface-visibility: visible; }
