@@ -63,16 +63,22 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
 .ridge { left: -10%; right: -10%; }
 .foot { left: 0; right: 0; bottom: 0; height: 36vh; }   /* words at the front, on their own sheet so they stay centred */
 .cover .r1 { top: 21%; bottom: 47%; }
-.cover .r2 { top: 30%; bottom: 40%; }
+.cover .r2 { top: 27%; bottom: 40%; }
 .cover .name { left: 0; right: 0; bottom: 33%; display: flex; justify-content: center; }
 .cover .name h1 { font-size: clamp(64px, 15.5vw, 300px); line-height: 0.8; color: var(--ink); white-space: nowrap; text-shadow: 0 0.04em 0.12em rgba(0, 0, 0, 0.35); }
 .cover .name h1 span:last-child { font-style: italic; }
-.cover .r3 { top: 54%; bottom: 26%; }
-.cover .r4 { top: 64%; bottom: 14%; }
-.cover .r5 { top: 76%; bottom: 0; }
+.cover .r3 { top: 85%; bottom: 0; }
 .mist { left: -10%; right: -10%; }
-.cover .m1 { top: 40%; bottom: 36%; }
-.cover .m2 { top: 58%; bottom: 20%; }
+.cover .m1 { top: 58%; bottom: 20%; }
+/* thin cloud across the peaks, and lower, just over the name */
+.cover .w1 { top: 25%; bottom: 55%; }
+.cover .w2 { top: 36%; bottom: 47%; }
+/* the sea of cloud runs from the horizon to your feet; --sea: where the peaks stand in it. Painted
+   (only where it can't be drawn live), it is a far sea behind the name and a near one round its feet */
+.cover { --hz: 44%; --sea: 46.5%; }
+.gl.sea { left: -10%; right: -10%; }
+.cover .s0 { top: 44%; bottom: 36%; }
+.cover .s1 { top: 61%; bottom: 5%; }
 .role { position: absolute; left: 0; right: 0; bottom: 9vh; margin: 0; text-align: center; font: 500 clamp(11px, 0.95vw, 14px)/1 var(--mono); letter-spacing: 0.32em; text-transform: uppercase; color: var(--dim); }
 .cue { position: absolute; left: 0; right: 0; bottom: 3.6vh; margin: 0; text-align: center; font: 400 11px/1 var(--mono); letter-spacing: 0.12em; color: rgba(236, 235, 230, 0.38); }
 .cue i { display: block; width: 1px; height: 18px; margin: 8px auto 0; background: linear-gradient(var(--faint), transparent); animation: cue 2.4s ease-in-out infinite; transform-origin: top; }
@@ -174,14 +180,16 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
 
 /* ---------------------------------------------------------------- phone */
 @media (max-width: 760px) {
-  .cover { --hz: 44%; }
-  .cover .r1 { top: 26%; bottom: 50%; }
-  .cover .r2 { top: 33%; bottom: 44%; }
+  .cover { --hz: 40%; --sea: 42.5%; }
+  .cover .r1 { top: 24%; bottom: 52%; }
+  .cover .r2 { top: 29%; bottom: 46%; }
   .cover .name { bottom: 38%; }
   .cover .name h1 { font-size: 21vw; display: flex; flex-direction: column; align-items: center; line-height: 0.84; }
-  .cover .r3 { top: 55%; bottom: 30%; }
-  .cover .r4 { top: 63%; bottom: 17%; }
-  .cover .r5 { top: 74%; bottom: 0; }
+  .cover .r3 { top: 84%; bottom: 0; }
+  .cover .w1 { top: 26%; bottom: 57%; }
+  .cover .w2 { top: 33%; bottom: 52%; }
+  .cover .s0 { top: 40%; bottom: 40%; }
+  .cover .s1 { top: 60%; bottom: 8%; }
   .role { bottom: 10vh; letter-spacing: 0.22em; }
   .climb { --hz: 42%; }
   .climb .r1 { top: 33%; bottom: 58%; }

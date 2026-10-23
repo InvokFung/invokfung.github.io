@@ -260,3 +260,53 @@ And on phones the cover's mist stopped in a hard vertical edge behind the name: 
 passed its tiling as `sub`, which also cuts the sheet's own width, so on screens under about 530px
 wide the sheet ended short of the screen. It now spans its whole box with one width of mist across
 it, which is how it already looked on wider screens.
+
+### 2026-10-23 · The opening, a sea of cloud
+
+Afung found the cover flat: an empty dark ground, mist smears, and ridges that only stood up after
+the page had been dark for a moment. Two openings were built and compared side by side:
+
+- **A, first light.** The ridges are there from the start, dark, and the dawn lights them from the
+  back ridge to the front one while the sun comes up behind them.
+- **B, sea of cloud.** Two ranges of peaks and the sun rise out of a sea of cloud at dawn, the name
+  just above it with billows round its feet, and a dark rock in front. The same first light plays
+  over it.
+
+B came closer, but Afung saw what was wrong with it: nothing layered over the peaks or just above
+the name, a dim line where the far sheet of cloud met the near one, so it read as two pieces, and
+not much life in the motion. So the cover's sea is no longer painted. It is drawn live by the
+graphics chip (`deck.js`): one surface of heaped cloud from your feet to the horizon, found pixel by
+pixel by following each ray from the eye until it meets a cloud top, then lit by the low sun ahead
+(shaded fronts, sunlit slopes, glowing crests, haze toward the horizon in the sky's own colour).
+It has its own camera, set so its horizon is the sky's and the peaks stand at its far edge, and it
+is drawn in up to three passes slotted between the paper by depth: behind the peaks, in front of
+them (thinning to nothing over their feet, so they stand in mist), and over the name's foot, so the
+name stands in it. All three read a ray the same way, so they meet without a seam.
+
+The heaps come from a 256-square noise texture baked once at load (about 20 ms): two layers of
+domes of every height, packed in cells with the creases between them softened, and two of smooth
+swells for where the sea runs thick or thin. The layers drift at different speeds and directions,
+so the heaps change shape as they go, like cloud in a time-lapse. Far off the heaps settle lower
+and those rays are taken three times down the pixel (on the fastest tier), or their edges
+stair-step. Thin bands of wisp (`paintWisp`) drift across the peaks and just above the name. At
+first light the light reaches the far cloud first and comes on toward you while the eye rises a
+little out of the tops. As the cover parts, the sea parts down the middle with it.
+
+Where WebGL is missing the cover falls back to the painted sea (`paintSea` in `art.js`, the two
+sheets now overlapping so no gap shows between them).
+
+On the way, two other spots got the same treatment:
+
+- The cloud banks between craft and contact were round bubbles. They are painted with `paintSea`
+  now, lit from the low sun on the left, and part with the same soft edge. They are big, so they
+  are painted once the first screen is showing, not before it.
+- In the pan from work to craft the incoming ridges showed hard vertical ends and a straight foot.
+  Every paper sheet now fades out at its ends and foot, beyond where it shows at rest.
+
+Speed, timed to the first posed frame at 4× CPU slowdown (SwiftShader, 1440×900, mid tier): the live
+site 3.4 s, A 3.1 s, B 3.4 s. Without the deferred banks it was 4.4 s and 5.5 s. Canvas 2D drawing is
+rasterised lazily in Chrome, so a painter can only be timed by reading a pixel back at the end.
+With the live sea the first posed frame comes as soon as before (2.5 to 3.0 s on the same test, high
+tier, against 2.9 to 3.2 s for the live site). Its cost moved into each frame instead: on a slow
+graphics chip the opening's frames run slow, and that steps the page down a tier (fewer steps a ray,
+no extra far rays, a coarser canvas) as it already did for the scroll.
