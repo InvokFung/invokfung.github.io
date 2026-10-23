@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>The map · Alan Fung</title>
+<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. Selected work, running live as you scroll: an LLM gateway, tracing that names the broken service, customer-data matching, field-service dispatch, search with no server, a pitch detector and a slicer in WebAssembly." />
+<meta name="theme-color" content="#0a0b0d" />
+<meta property="og:title" content="Alan Fung · Forward Deployed Engineer" />
+<meta property="og:description" content="From the customer's desk to production. Selected work, every piece running live." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://invokfung.github.io/map/" />
+<meta property="og:image" content="https://invokfung.github.io/assets/portfolio/media/relay.webp" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/portfolio/live/live.css" />
+</head>
+<body>
+  <a class="skip" href="#/contact">Skip to contact</a>
+  <h1 class="sr">Alan Fung, Forward Deployed Engineer. From the customer's desk to production.</h1>
+
+  <canvas id="map" aria-hidden="true"></canvas>
+
+  <header class="hud top">
+    <a class="brand" id="brand" href="#/"><b>Alan Fung</b><span>Forward Deployed Engineer</span></a>
+    <div class="tools">
+      <p class="status" id="status" title=""><i aria-hidden="true"></i><span>connecting</span></p>
+      <button type="button" class="sound" id="sound" aria-pressed="false" title="Sound is off until you turn it on"><i aria-hidden="true"><b></b><b></b><b></b></i><span>sound off</span></button>
+    </div>
+  </header>
+
+  <div class="thread" id="thread" aria-hidden="true"></div>
+  <main class="flow" id="flow"></main>
+
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+  <noscript>
+    <div class="noscript">
+      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a live map and needs JavaScript. Selected work: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+    </div>
+  </noscript>
+
+  <script src="/assets/portfolio/data.js"></script>
+  <script src="/assets/portfolio/notes.js"></script>
+  <script src="/assets/portfolio/live/kit.js"></script>
+  <script src="/assets/portfolio/live/relay.js"></script>
+  <script src="/assets/portfolio/live/tracewise.js"></script>
+  <script src="/assets/portfolio/live/onboard.js"></script>
+  <script src="/assets/portfolio/live/atlas.js"></script>
+  <script src="/assets/portfolio/live/studio.js"></script>
+  <script src="/assets/portfolio/live/dispatch.js"></script>
+  <script src="/assets/portfolio/live/layerline.js"></script>
+  <script src="/assets/portfolio/live/hub.js"></script>
+  <script src="/assets/portfolio/live/app.js"></script>
+</body>
+</html>

@@ -235,3 +235,18 @@ Known limits, take 2:
 - Not yet seen on a real phone or a real GPU.
 - On the lowest tier, the painted words ("Alan Fung", "Say hello.") are a little soft while the scroll moves.
 - The fly passes through grey cloud for a moment, so for about a tenth of a scene's scroll there is nothing to read.
+
+### 2026-10-23 · Shipped: take 2 is the homepage
+
+Take 2 is the homepage. The root `index.html` loads `unfold/unfold.css` and `unfold/unfold.js` from
+here, so this folder is now live code: change it on purpose, and start new experiments in a new
+folder. The map that was the homepage moved to `/map/`, and Selected work links it ("running live,
+here or on the map") next to the full portfolio ("not the whole shelf"). `book/specimens.js` now
+builds its links from its own location, so the specimens open the right page from `/` and from
+`/lab/unfold/`.
+
+One fix on the way out: the first pixel of scroll from the cover drew the next scene's land at full
+strength, so a blue band jumped into the dawn sky at the horizon. The land now fades in as the cover
+tears (`floorIn` on the `part` move), and the dawn sky gives way to day earlier, as the tears open
+rather than after. The other three moves were checked the same way, frame against frame after a
+three-thousandths-of-a-scene scroll, and nothing else appears in one step.

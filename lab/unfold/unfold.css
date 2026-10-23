@@ -23,6 +23,9 @@ a { color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .skip { position: fixed; left: 12px; top: -60px; z-index: 50; padding: 8px 12px; background: var(--ink); color: var(--bg); border-radius: 6px; text-decoration: none; font: 500 13px var(--sans); }
 .skip:focus { top: 12px; }
+/* without JavaScript (the homepage only): one plain line with every link */
+.noscript { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; background: var(--bg); z-index: 60; }
+.noscript p { max-width: 640px; line-height: 1.8; }
 
 .scroll { position: relative; }               /* height set by unfold.js: most of a screen per scene */
 .stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--bg); }

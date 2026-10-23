@@ -465,8 +465,11 @@ const MOVES = {
       else if (it.role === 'words') rising(it, t, 0.45, 0.4, 0);
       else rising(it, t, 0.1, 0.42, 0.4);
     },
-    sky: (t) => 1 - easeInOut(clamp((t - 0.18) / 0.45)),
-    floor: (t) => 1 - clamp((t - 0.12) / 0.3)
+    // dawn gives way to day as the tears open; the land behind comes in with it, not at the
+    // first pixel of scroll
+    sky: (t) => 1 - easeInOut(clamp((t - 0.08) / 0.34)),
+    floor: (t) => 1 - clamp((t - 0.12) / 0.3),
+    floorIn: (t) => smooth(0.06, 0.24, t)
   },
   // the camera flies to the camp and into the cloud beside it; the years fall away, and the work is
   // there when it clears

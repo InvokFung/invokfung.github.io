@@ -70,7 +70,7 @@ window.PORTFOLIO = {
     },
     work: {
       title: "{Flagships} questions I couldn't <em>leave alone</em>",
-      lede: "Every tile is running. Go on, break something, or see them all [on one map](/)."
+      lede: "Every tile is running. Go on, break something, or see them all [on one map](/map/)."
     },
     // the line under the tiles; {notes} is the note count, the link to older experiments is added after it
     experiments: "Every one of them started as notes in StudyLog: {notes} so far.",

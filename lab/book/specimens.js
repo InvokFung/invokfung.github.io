@@ -21,7 +21,8 @@ const clamp = (v, a = 0, b = 1) => (v < a ? a : v > b ? b : v);
 // slow (optional): while it returns true, only the specimen under the pointer runs every frame and
 // the rest every other frame, for a page that needs the frame time for something else.
 export function mountSpecimens(root, { isLive, slow }) {
-  root.innerHTML = SPECS.map((s) => `<a class="layer spec spec-${s.slug}" href="../${s.slug}/index.html">
+  // each effect's own page, found from this file, so the door works from any page that mounts these
+  root.innerHTML = SPECS.map((s) => `<a class="layer spec spec-${s.slug}" href="${new URL(`../${s.slug}/index.html`, import.meta.url).pathname}">
     <span class="art" aria-hidden="true"></span>
     <span class="cap"><b>${s.name}</b><span>${s.line}</span><em>open</em></span>
   </a>`).join('');
