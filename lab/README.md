@@ -250,3 +250,13 @@ strength, so a blue band jumped into the dawn sky at the horizon. The land now f
 tears (`floorIn` on the `part` move), and the dawn sky gives way to day earlier, as the tears open
 rather than after. The other three moves were checked the same way, frame against frame after a
 three-thousandths-of-a-scene scroll, and nothing else appears in one step.
+
+A second fix once it was live: on a cold load every scene showed at once, flat and stacked, until
+the fonts and scripts arrived and `unfold.js` posed them. The scenes and the folio now stay hidden
+until the first frame has posed them (`html.posed`), so a cold load shows the dark stage and then
+the opening. Filmed under a throttled network to check.
+
+And on phones the cover's mist stopped in a hard vertical edge behind the name: the mist sprite
+passed its tiling as `sub`, which also cuts the sheet's own width, so on screens under about 530px
+wide the sheet ended short of the screen. It now spans its whole box with one width of mist across
+it, which is how it already looked on wider screens.
