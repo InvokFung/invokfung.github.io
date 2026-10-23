@@ -17,7 +17,10 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html { background: var(--bg); overflow-x: clip; }
+html { background: var(--bg); overflow-x: clip; scrollbar-width: none; }
+/* no scroll bar: it would end the world at the screen's edge. The page still scrolls the browser's
+   own way; where you are shows on a faint thread at the right edge, only while you move (.thread) */
+html::-webkit-scrollbar { display: none; width: 0; height: 0; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
@@ -67,7 +70,7 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
 .cover .name { left: 0; right: 0; bottom: 33%; display: flex; justify-content: center; }
 .cover .name h1 { font-size: clamp(64px, 15.5vw, 300px); line-height: 0.8; color: var(--ink); white-space: nowrap; text-shadow: 0 0.04em 0.12em rgba(0, 0, 0, 0.35); }
 .cover .name h1 span:last-child { font-style: italic; }
-.cover .r3 { top: 85%; bottom: 0; }
+.cover .r3 { top: 85%; bottom: -8%; }   /* (past the bottom, so its faded foot never shows the sea under it) */
 .mist { left: -10%; right: -10%; }
 .cover .m1 { top: 58%; bottom: 20%; }
 /* thin cloud across the peaks, and lower, just over the name */
@@ -173,6 +176,23 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
 .reach .links a { color: var(--dim); text-decoration: none; }
 .reach .links a:hover { color: var(--ink); }
 
+/* ---------------------------------------------------------------- thread: where you are, while you move */
+/* a camp for each scene along a thread that fades out past the first and the last, and a light where
+   you are, in the colour of that scene's sun; it comes up while you scroll (or point at it, and you
+   can drag along it) and goes again once you stop. On a touch screen it only shows, so a swipe at the
+   edge still scrolls the page as usual */
+.thread { position: fixed; right: max(4px, env(safe-area-inset-right, 0px)); top: 50%; z-index: 5; width: 24px; height: min(40vh, 320px); margin: 0; transform: translateY(-50%); opacity: 0; transition: opacity 0.9s ease; pointer-events: none; }
+.thread.on, .thread.held { opacity: 1; transition-duration: 0.25s; }
+@media (hover: hover) and (pointer: fine) {
+  .thread { pointer-events: auto; cursor: grab; touch-action: none; }
+  .thread:hover { opacity: 1; transition-duration: 0.25s; }
+  .thread.held { cursor: grabbing; }
+}
+.thread::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: linear-gradient(transparent, rgba(236, 235, 230, 0.2) 22%, rgba(236, 235, 230, 0.2) 78%, transparent); }
+.thread i { position: absolute; left: 50%; width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; border-radius: 50%; background: rgba(236, 235, 230, 0.35); }
+.thread b { position: absolute; left: 50%; top: 0; width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; border-radius: 50%; background: var(--sun, #ffe1b0); box-shadow: 0 0 12px 3px var(--glow, rgba(255, 170, 96, 0.5)); will-change: transform; }
+html:not(.posed) .thread { visibility: hidden; }
+
 /* ---------------------------------------------------------------- folio: which scene you are in */
 .folio { position: fixed; right: calc(var(--gut) - 4px); bottom: max(18px, env(safe-area-inset-bottom, 0px)); z-index: 5; margin: 0; display: flex; align-items: baseline; gap: 6px; font: 400 12px/1 var(--mono); color: rgba(236, 235, 230, 0.45); pointer-events: none; }
 .folio b { font: 400 22px/1 var(--serif); color: var(--ink); }
@@ -185,7 +205,7 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
   .cover .r2 { top: 29%; bottom: 46%; }
   .cover .name { bottom: 38%; }
   .cover .name h1 { font-size: 21vw; display: flex; flex-direction: column; align-items: center; line-height: 0.84; }
-  .cover .r3 { top: 84%; bottom: 0; }
+  .cover .r3 { top: 84%; bottom: -8%; }
   .cover .w1 { top: 26%; bottom: 57%; }
   .cover .w2 { top: 33%; bottom: 52%; }
   .cover .s0 { top: 40%; bottom: 40%; }

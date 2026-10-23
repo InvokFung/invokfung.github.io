@@ -19,7 +19,7 @@
 // Everything is a function of the scroll position, so scrolling back plays it all in reverse.
 import { mountSpecimens } from '../book/specimens.js';
 import { createScenery } from './scenery.js';
-import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintWisp, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
+import { clamp, lerp, tint, rgba, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintWisp, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
 
 const D = window.PORTFOLIO, F = window.Figs;
 const $ = (s, r = document) => r.querySelector(s);
@@ -211,6 +211,7 @@ function layout() {
   STEP = H * (narrow() ? 0.8 : 0.9); // the scroll from one scene to the next
   DZ = P * 0.42;                      // and how far apart two scenes stand
   scroller.style.height = ((N - 1) * STEP + H) + 'px';
+  threadH = thread ? thread.clientHeight : 0;
   stage.style.perspective = P + 'px';
   for (const t of painted) gl?.release(t);
   painted = [];
@@ -518,9 +519,9 @@ function pushSea(into, sc, off, po, sky, u, alpha) {
   const part = !reduced && u > 0 ? easeInOut(clamp((u - 0.1) / 0.56)) * W * 0.8 : 0;
   const halves = part > 0.5 ? [-1, 1] : [0];
   const base = { view: [hz, f, slide, 0], cam: [slide * 3 / f, hc, -ahead, DEEP], w0, w1, sun: [sun[0] / sl, sun[1] / sl, sun[2] / sl, 1], glow: [sx, sy, gr, ga], colours };
-  // (fewer steps a ray on a slower tier; far rays, beyond aa[0], are taken aa[1] times against
-  // stair-steps, more on a faster tier)
-  const steps = tier === 'high' ? 14 : tier === 'mid' ? 11 : 8, aa = tier === 'high' ? [8, 3] : tier === 'mid' ? [12, 2] : [0, 1];
+  // (fewer steps a ray on a slower tier; rays that meet the tops beyond aa[0] are taken aa[1] times,
+  // spread down the pixel, against stair-steps along the heaps' edges)
+  const steps = tier === 'high' ? 12 : tier === 'mid' ? 10 : 8, aa = tier === 'high' ? [4, 2] : tier === 'mid' ? [6, 2] : [0, 1];
   const pass = (rect, r0, r1, d, a = alpha, thin = NOTHIN) => {
     if (rect[3] <= rect[1] + 1 || !(a > 0.002)) return;
     for (const side of halves) {
@@ -539,8 +540,9 @@ function pushSea(into, sc, off, po, sky, u, alpha) {
   if (name.alpha > 0.002 && !(name.part > 0.5)) {
     const b = name.b, s2 = P / (P - zName), X0 = ox + (b.l - ox) / name.s, X1 = ox + (b.l + b.w - ox) / name.s, Yb = oy + (b.t + b.h - oy) / name.s;
     const at = (X) => po[0] + (X + off[0] - po[0]) * s2, yb = po[1] + (Yb + off[1] + name.dy - po[1]) * s2;
-    // (marched just as the pass before, so the two agree on every heap, but cut off past the name)
-    pass([Math.max(0, at(X0)), Math.max(hz, hz + f * hc / sea.near), Math.min(W, at(X1)), Math.min(H, yb + 4)], 0, sea.far, zName + 0.5, alpha * name.alpha, [sea.near, sea.near * 1.001]);
+    // (marched just as the pass before, so the two agree on every heap, but thinning out past the
+    // name, so its letters go down into the cloud softly rather than cut along a line)
+    pass([Math.max(0, at(X0)), Math.max(hz, hz + f * hc / (sea.near * 1.12)), Math.min(W, at(X1)), Math.min(H, yb + 4)], 0, sea.far, zName + 0.5, alpha * name.alpha, [sea.near * 0.9, sea.near * 1.12]);
   }
 }
 
@@ -666,6 +668,38 @@ document.addEventListener('click', (e) => {
   if (i >= 0) { e.preventDefault(); goTo(i); }
 });
 
+/* ------------------------------------------------------------------ the thread */
+// No scroll bar (unfold.css): where you are shows on a faint thread at the right edge, a camp for
+// each scene and a light in the colour of that scene's sun, there only while you move. Dragging
+// along it scrolls the page there, as a scroll bar's thumb would.
+const thread = $('#thread'), THREAD_IN = 0.2; // the camps run from THREAD_IN to 1 - THREAD_IN down it
+const mark = thread ? document.createElement('b') : null;
+let threadH = 0, threadOn = false, threadUntil = 0, shownThread = -1;
+if (thread) {
+  thread.innerHTML = scenes.map((sc) => `<i style="top:${((THREAD_IN + (1 - 2 * THREAD_IN) * sc.i / (N - 1)) * 100).toFixed(1)}%"></i>`).join('');
+  thread.append(mark);
+  const to = (e) => {
+    const r = thread.getBoundingClientRect(), q = clamp(((e.clientY - r.top) / r.height - THREAD_IN) / (1 - 2 * THREAD_IN));
+    scrollTo(0, q * (N - 1) * STEP);
+  };
+  thread.addEventListener('pointerdown', (e) => { thread.setPointerCapture(e.pointerId); thread.classList.add('held'); to(e); });
+  thread.addEventListener('pointermove', (e) => { if (thread.hasPointerCapture(e.pointerId)) to(e); });
+  const up = () => thread.classList.remove('held');
+  thread.addEventListener('pointerup', up); thread.addEventListener('pointercancel', up);
+}
+function threadAt(i) {
+  if (!thread || i === shownThread) return;
+  shownThread = i;
+  const sun = PAL[scenes[i].id].sun.c;
+  thread.style.setProperty('--sun', sun);
+  thread.style.setProperty('--glow', rgba(sun, 0.5));
+}
+function threadMove(now, moved) {
+  if (!thread) return;
+  if (moved) { threadUntil = now + 1100; if (!threadOn) { threadOn = true; thread.classList.add('on'); } }
+  else if (threadOn && now > threadUntil) { threadOn = false; thread.classList.remove('on'); }
+}
+
 /* ------------------------------------------------------------------ the frame */
 // Where the eye is, in scenes: it slows near each scene, so there is time to read it, and moves
 // fastest between two.
@@ -693,6 +727,7 @@ function frame(now) {
     if (p !== was || introT < 1) { settle = now + 180; if (!coarse) { coarse = true; sizeCanvas(); } }
     else if (coarse && now > settle) { coarse = false; sizeCanvas(); }
   }
+  threadMove(now, p !== was);
   was = p;
   clock += dt;
   const idle = !dirty && TIERS[tier].idle && gl && !reduced && now - lastDraw > 33;
@@ -708,9 +743,11 @@ function render() {
   const cur = Math.round(eye);
   if (cur !== shownFolio) {
     shownFolio = cur;
+    threadAt(cur);
     folio.querySelector('b').textContent = cur + 1;
     folio.querySelector('i').textContent = scenes[cur].el.dataset.name;
   }
+  if (mark) mark.style.transform = `translateY(${((THREAD_IN + (1 - 2 * THREAD_IN) * p / (N - 1)) * threadH).toFixed(1)}px)`;
   live.work = Math.abs(eye - 2) < 0.35;
   live.craft = Math.abs(eye - 3) < 0.35;
   // the eye drifts a little with the pointer, so the layers part
