@@ -19,7 +19,7 @@
 // Everything is a function of the scroll position, so scrolling back plays it all in reverse.
 import { mountSpecimens } from '../book/specimens.js';
 import { createScenery } from './scenery.js';
-import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintCloud, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
+import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintCloud, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
 
 const D = window.PORTFOLIO, F = window.Figs;
 const $ = (s, r = document) => r.querySelector(s);
@@ -39,6 +39,15 @@ const stand = (t) => {
 const narrow = () => innerWidth <= 760;
 
 for (const el of $$('[data-md]')) el.innerHTML = md(get(el.dataset.md));
+// ?sea: the opening as a sea of cloud at dawn, the peaks standing out of it (a variant, to compare
+// with the ridges at first light): the far mist and the near ridge become two sheets of cloud, and the
+// ridge between them goes under
+const SEA = new URLSearchParams(location.search).has('sea') || document.documentElement.classList.contains('sea');
+if (SEA) {
+  [['m1', 0], ['r4', 1]].forEach(([c, n]) => { const el = $('#cover .' + c); el.className = `gl sea s${n}`; el.dataset.art = 'sea'; el.dataset.sea = n; el.dataset.tear = ''; });
+  $('#cover .r3').remove();
+}
+const rk = (el) => +el.className.match(/\br(\d)\b/)[1] - 1; // which ridge: r1 is the farthest
 
 /* ------------------------------------------------------------------ how much the landscape may cost */
 // The cost is all in pixels, so below high the canvas is drawn coarser while the scroll moves
@@ -69,7 +78,10 @@ const reduced = !gl || matchMedia('(prefers-reduced-motion: reduce)').matches;
 // camp for the work, golden hour for the craft, and last light at contact.
 const PAL = {
   cover: { sky: ['#090b11', '#151826', '#463645', '#a8694a'], sun: { x: 0.6, y: 0.93, r: 0.05, c: '#ffe1b0', glow: ['#ffaa60', 0.5] },
-    ridges: ['#6f5f6a', '#4d4555', '#34303f', '#22212c', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.45, 0.32, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa' },
+    ridges: ['#6f5f6a', '#4d4555', '#34303f', '#22212c', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.45, 0.32, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa',
+    // ?sea: the far sea of cloud, toward the sun, and the near one
+    sea: [{ light: '#ffd9b0', body: '#8a7488', deep: '#4a3e52', haze: '#a8694a', seed: 3, rows: 4, R: [5, 10], top: 0.12, heap: 1.4, glare: 0.3, fade: 0.3 },
+      { light: '#ffd2a6', body: '#5e5068', deep: '#2a2433', haze: '#7a5a62', seed: 5, rows: 5, R: [12, 34], top: 0.07, heap: 1.8, glare: 0.25 }] },
   climb: { sky: ['#070a10', '#111925', '#2a3a4d', '#64798e'], sun: { x: 0.86, y: 0.5, r: 0, c: '#f3f6f8', glow: ['#dcebf5', 0.22] },
     ridges: ['#566a7e', '#12171e'], mountain: '#33414f', face: { at: [0.56, 0.8], side: 1, light: '#9fb6cb', a: 0.32 }, rim: '#e8f0f6', rimA: [0.6, 0.3], haze: 'rgba(215,230,240,0.18)', cloud: { light: '#ffffff', body: '#c5d0da', deep: '#8193a5' } },
   work: { sky: ['#080c13', '#111b29', '#24364b', '#5d6f80'], sun: { x: 0.18, y: 0.2, r: 0, c: '#ffffff', glow: ['#e6eef6', 0.12] },
@@ -113,6 +125,12 @@ const SHAPE = {
   // the same summit, seen from the camp in the afternoon, and clear at last light
   summit: { seed: 13, base: 0.08, peaks: [[0.5, 0.99, 0.085], [0.38, 0.64, 0.08], [0.63, 0.72, 0.07], [0.2, 0.36, 0.1], [0.86, 0.42, 0.1]], rough: 0.035 }
 };
+// ?sea: the cover's far ridges as peaks, standing out of the cloud
+const SEA_SHAPE = [
+  { seed: 11, base: 0.22, peaks: [[0.1, 0.62, 0.05], [0.4, 0.98, 0.055], [0.52, 0.7, 0.05], [0.76, 0.74, 0.06]], rough: 0.12 },
+  { seed: 23, base: 0.25, peaks: [[0.2, 0.82, 0.05], [0.63, 0.55, 0.06], [0.9, 0.92, 0.055]], rough: 0.12 }
+];
+const shapeOf = (id, k) => (SEA && id === 'cover' && SEA_SHAPE[k]) || SHAPE[id][k];
 // the trail up the mountain, in fractions of its box (x, y from the top): to the camp, then on into
 // the cloud
 const TRAIL = [[0.14, 0.92], [0.28, 0.84], [0.23, 0.74], [0.37, 0.66], [0.33, 0.56], [0.46, 0.47], [0.56, 0.31]];
@@ -245,7 +263,6 @@ function layout() {
     const hz = parseFloat(getComputedStyle(sc.el).getPropertyValue('--hz')) / 100 || 0.5;
     sc.hy = hz * H; sc.skyS = sFrom(sc.hy); sc.skyZ = P * (1 - 1 / sc.skyS);
     sc.items = [];
-    const ridges = $$('.gl[data-art="ridge"]', sc.el);
     // every box gets its depth from its bottom edge (or says where it stands, as "sky+0.03")
     const item = (el, role, b, s) => {
       const z = P * (1 - 1 / s), bot = Math.max(b.t + b.h, oy + 40);
@@ -277,11 +294,18 @@ function layout() {
       if (art === 'text') {
         c = paintText(el, { l: b.l + sr.left, t: b.t + sr.top, w: b.w, h: b.h }, KT);
         it = item(el, 'text', b, sOf(el, b));
+      } else if (art === 'sea') {
+        // cloud runs on past each end like the land, and is lit from where the sky's sun stands (and
+        // painted coarser: it's soft, and big)
+        const o = pal.sea[+el.dataset.sea], sd = Math.round(b.w * 0.22), sunX = -0.12 * W + pal.sun.x * 1.24 * W;
+        c = paintSea(b.w + 2 * sd, b.h, K * 0.7, { ...o, sun: (sunX - b.l + sd) / (b.w + 2 * sd), R: o.R.map((v) => v * H / 900 * (narrow() ? 0.75 : 1)) });
+        it = item(el, 'paper', b, sOf(el, b));
+        it.art = art; it.color = o.body; it.side = sd; it.drift = W * 0.005; // (the land under cloud is cloud)
       } else {
-        const k = ridges.indexOf(el), big = art !== 'ridge';
+        const big = art !== 'ridge', k = big ? 0 : rk(el);
         // land runs on past each end, for when a scene is seen from further off than at rest
         const opt = { H, color: big ? pal[art] : pal.ridges[k], rim: pal.rim, rimA: big ? 0.7 : pal.rimA[k], haze: pal.haze, pad: big ? Math.round(H * 0.08) : 0, side: Math.round(b.w * 0.22), face: big ? pal.face : null };
-        if (art === 'ridge') c = paintRidge(b.w, b.h, K, SHAPE[sc.id][k], opt);
+        if (art === 'ridge') c = paintRidge(b.w, b.h, K, shapeOf(sc.id, k), opt);
         else if (art === 'mountain') c = paintRidge(b.w, b.h, K, SHAPE.mountain, opt, (x, f) => mountainMarks(x, f, b.w, b.h, W - b.l));
         else c = paintRidge(b.w, b.h, K, SHAPE.summit, opt, (x, f) => summitMarks(x, f, b.w, b.h, sc.id === 'contact'));
         it = item(el, 'paper', b, sOf(el, b));
@@ -295,7 +319,7 @@ function layout() {
         el.append(c);
       }
       // a sheet that tears in two: down its lowest point, or between its words
-      if ('tear' in el.dataset) it.pieces = tear(el, it, art === 'ridge' ? SHAPE[sc.id][ridges.indexOf(el)] : null, it.side || 0);
+      if ('tear' in el.dataset) it.pieces = tear(el, it, art === 'ridge' ? shapeOf(sc.id, rk(el)) : null, it.side || 0);
     }
     // the page's own content
     for (const el of $$('.layer', sc.el)) {
@@ -354,7 +378,9 @@ function layout() {
       }
     }
   }
-  // the clouds between the craft and contact: three banks, nearer ones paler and lit
+  // the clouds between the craft and contact: three banks, nearer ones paler and lit, billowing up
+  // and lit along their tops from the low sun on the left. Big and slow to paint, and not wanted
+  // until the fourth scene, so painted once the first is on screen (or when first wanted, if sooner).
   veil = [];
   const VEIL = [
     { s: 0.72, t: -0.16, light: '#ffc2a0', body: '#6a4a62', deep: '#2e2238', seed: 3 },
@@ -363,11 +389,12 @@ function layout() {
   ];
   VEIL.forEach((v, n) => {
     const b = { l: -0.3 * W, t: v.t * H, w: 1.6 * W, h: 1.3 * H };
-    const tex = T(paintCloud(b.w, b.h, Math.min(0.5, K), v));
-    const it = { role: 'veil', n, b, s: v.s, z: P * (1 - 1 / v.s), tex, cutX: 0.5 + (n - 1) * 0.04 };
+    const it = { role: 'veil', n, b, s: v.s, z: P * (1 - 1 / v.s), cutX: 0.5 + (n - 1) * 0.04 };
+    it.paint = () => T(paintSea(b.w, b.h, Math.min(0.5, K), { ...v, haze: v.body, sun: 0.27, rows: 3, R: [42, 80].map((r) => r * H / 900), top: 0.05, heap: 2.4, glare: 0.18, rim: 0.4 }));
     it.Yb = oy + (b.t + b.h - oy) / it.s;
     veil.push(it);
   });
+  if (gl && !reduced) later(() => veil.forEach(paintVeil));
 
   // where each scene stands in the world, and so how the camera moves between them
   const flyZ = P * 0.7, Z1 = camp.Z + flyZ, ty = H * 0.62;
@@ -398,6 +425,9 @@ function skyOf(sc, pal) {
 // Split a sheet in two for the cover's parting: down its lowest point (a ridge), or between its two
 // words (the name), as two pieces that share its texture, each keeping its own side of the cut.
 function tear(el, it, shape, side) {
+  // cloud parts down its middle, softly
+  // (each half runs on past the cut by its soft edge, so where they meet one is always whole)
+  if (it.art === 'sea') return [-1, 1].map((s) => ({ side: s, sub: s < 0 ? [0, 0, 0.56, 1] : [0.44, 0, 1, 1], cut: [0.5 - s * 0.03, s, 0.016, 24], soft: 0.03 }));
   if (shape) {
     const w = it.b.w, x = (side + valley(shape, 0.36, 0.64) * w) / (w + 2 * side);
     return [{ side: -1, sub: [0, 0, Math.min(1, x + 0.05), 1], cut: [x, -1, 0.012, 34] }, { side: 1, sub: [Math.max(0, x - 0.05), 0, 1, 1], cut: [x, 1, 0.012, 34] }];
@@ -522,6 +552,8 @@ const MOVES = {
     floorIn: (t) => clamp((t - 0.4) / 0.1)
   }
 };
+const later = (f) => (window.requestIdleCallback ? requestIdleCallback(f, { timeout: 1500 }) : setTimeout(f, 400));
+const paintVeil = (it) => { it.tex = it.tex || it.paint(); };
 // the cloud banks between craft and contact, by t of that move
 function veilPose(it, t) {
   const n = it.n, up = easeOut(clamp((t - 0.1 - n * 0.06) / 0.36));
@@ -530,10 +562,20 @@ function veilPose(it, t) {
   it.alpha = clamp((t - 0.1) / 0.08) * (1 - clamp((t - 0.88) / 0.12));
 }
 
+// The opening is first light: nothing moves into place, the light comes. It reaches the back ridges
+// first and the front ones last, the mist lifts out of the dark, and the name comes up after it.
+function dawn(it, t) {
+  if (it.role === 'mist') it.alpha *= smooth(0.2, 0.85, t);
+  else if (it.role === 'text') { const k = smooth(0.32, 0.78, t); it.alpha *= k; it.dy += (1 - k) * H * 0.02; }
+  else if (it.dom) it.alpha *= smooth(0.72, 1, t);
+  else it.light = 0.18 + 0.82 * smooth(it.ord * 0.3, it.ord * 0.3 + 0.56, t);
+}
+
 /* ------------------------------------------------------------------ scroll and pointer */
 // The scroll is the browser's own: nothing is held, snapped or hijacked. What is drawn follows it
 // a beat behind, so a flick of the wheel glides instead of jumping.
 let p = 0, dirty = true, introT = reduced ? 1 : 0, introStart = 0, lastNow = 0;
+const INTRO = 3000; // the opening, first light, in ms
 const ptr = { x: 0, y: 0, tx: 0, ty: 0 };
 addEventListener('pointermove', (e) => { ptr.tx = e.clientX / innerWidth * 2 - 1; ptr.ty = e.clientY / innerHeight * 2 - 1; }, { passive: true });
 addEventListener('scroll', () => { dirty = true; }, { passive: true });
@@ -570,7 +612,7 @@ function frame(now) {
   const target = want();
   if (reduced || Math.abs(target - p) < 0.0005) { if (p !== target) { p = target; dirty = true; } }
   else { p += (target - p) * (1 - Math.exp(-dt * 7)); dirty = true; }
-  if (introT < 1 && introStart) { introT = clamp((now - introStart) / 2200); dirty = true; }
+  if (introT < 1 && introStart) { introT = clamp((now - introStart) / INTRO); dirty = true; }
   if (!reduced && TIERS[tier].idle && (Math.abs(ptr.tx - ptr.x) > 0.001 || Math.abs(ptr.ty - ptr.y) > 0.001)) { ptr.x += (ptr.tx - ptr.x) * 0.05; ptr.y += (ptr.ty - ptr.y) * 0.05; dirty = true; }
   moving = dirty;
   // frames running slow while moving: step down a tier (not when one is pinned)
@@ -633,11 +675,11 @@ function render() {
     const into = reduced ? (whole[sc.i] = fresh()) : list;
     const inK = sc.i > 0 ? MOVES[KIND[sc.i - 1]] : null, outK = MOVES[KIND[sc.i]] || null;
     for (const it of sc.items) {
-      it.rise = 1; it.alpha = 1; it.dx = 0; it.dy = 0; it.part = 0;
+      it.rise = 1; it.alpha = 1; it.dx = 0; it.dy = 0; it.part = 0; it.light = 1;
       if (!reduced) {
         if (u < 0 && inK) inK.in(it, 1 + u);
         else if (u > 0 && outK) outK.out(it, u);
-        if (sc.i === 0 && introT < 1 && it.role !== 'mist') { const r = stand(clamp((introT - it.ord * 0.42) / 0.5)); if (r < it.rise) { it.rise = r; it.alpha = Math.min(it.alpha, clamp(r / 0.12)); } }
+        if (sc.i === 0 && introT < 1) dawn(it, introT);
       }
       it.alpha *= it.dom ? words : fade;
     }
@@ -651,8 +693,9 @@ function render() {
     if (gl) {
       const sa = (u < 0 && inK ? (inK.skyIn ? inK.skyIn(1 + u) : 1) : u > 0 && outK ? outK.sky(u) : 1) * fade;
       const fa = (u < 0 && inK ? (inK.floorIn ? inK.floorIn(1 + u) : 1) : u > 0 && outK ? outK.floor(u) : 1) * fade;
-      into.sky.push(skySprite(sc, off, po, sa));
-      into.floor.push({ mode: 1, tex: sc.floor.tex, box: [ox - sc.floor.half, 0, sc.floor.half * 2, 0], fl: [sc.floor.near, sc.floor.far, Yf, 0], off, alpha: fa, fade: [0.9, 0.12, 0, 0.16], i: sc.i });
+      into.sky.push(skySprite(sc, off, po, sa, sc.i === 0 ? introT : 1));
+      const lit = sc.i === 0 && introT < 1 ? 0.18 + 0.82 * smooth(0.02, 0.6, introT) : 1; // the land lights with the back ridges
+      into.floor.push({ mode: 1, tex: sc.floor.tex, box: [ox - sc.floor.half, 0, sc.floor.half * 2, 0], fl: [sc.floor.near, sc.floor.far, Yf, 0], off, alpha: fa, tint: [lit, lit, lit], fade: [0.9, 0.12, 0, 0.16], i: sc.i });
     }
   }
   if (!gl) return;
@@ -669,10 +712,13 @@ function render() {
   }
   // the clouds between craft and contact
   if (!reduced && i === 3 && t > 0.1) for (const it of veil) {
+    paintVeil(it);
     veilPose(it, t);
     for (const side of [-1, 1]) {
-      const cut = [it.cutX, side, 0.02, 22];
-      list.top.push({ tex: it.tex, box: [it.b.l, it.b.t, it.b.w, it.b.h], sub: side < 0 ? [0, 0, it.cutX + 0.06, 1] : [it.cutX - 0.06, 0, 1, 1], L: [it.s, it.z, it.Yb, 0], off: [side * it.part, it.dy, 0], alpha: it.alpha, cut, depth: 'none', d: it.z });
+      const cut = [it.cutX - side * 0.03, side, 0.02, 22];
+      // (its torn edge soft, as cloud; each half runs on past the cut by that much, so no seam shows
+      // before they draw apart)
+      list.top.push({ tex: it.tex, box: [it.b.l, it.b.t, it.b.w, it.b.h], sub: side < 0 ? [0, 0, it.cutX + 0.06, 1] : [it.cutX - 0.06, 0, 1, 1], L: [it.s, it.z, it.Yb, 0], off: [side * it.part, it.dy, 0], alpha: it.alpha, cut, fade: [2, 0, 0.03, 0], depth: 'none', d: it.z });
     }
   }
   // mid-flight, the cloud by the camp fills the screen, lit by the camp; one scene becomes the
@@ -695,14 +741,31 @@ function render() {
   gl.draw(view, [...list.sky, ...list.floor, ...mid, ...list.top]);
 }
 
-const GRAIN = [2, 0, 0, 0.16];
+// paper's grain, and its ends and foot softened, so a sheet seen from off its usual place (in a pan, or
+// standing on another scene's floor) never shows a hard edge
+const GRAIN = [0.85, 0.05, 0, 0.16];
 // a scene's sky: the horizon and sun where its floor's far edge and its sun now project
-function skySprite(sc, off, po, alpha) {
+// t: how far the day has come (the opening's first light; 1 for the rest of the time)
+function skySprite(sc, off, po, alpha, t = 1) {
   const k = sc.sky, Zs = sc.skyZ + off[2], w = (P - Zs) / P, mag = (P / (P - Zs)) / sc.skyS;
   const hy = po[1] + (Yf + off[1] - po[1]) / w;
   const sx = po[0] + (k.sunW[0] + off[0] - po[0]) / w, sy = po[1] + (k.sunW[1] + off[1] - po[1]) / w;
-  return { mode: 3, alpha, depth: 'none', sky: { colours: k.colours, g: [hy, k.span * mag, H * 0.5 * mag, 0.07], sun: [sx, sy, k.r * mag, k.gr * mag], glow: k.glow } };
+  let colours = k.colours, glow = k.glow, rise = 0;
+  if (t < 1) {
+    // before first light the sky is the night's, lightening from the horizon up; the sun comes up
+    // from below the ridges and its glow grows
+    colours = k.colours.slice();
+    for (let i = 0; i < 6; i++) {
+      const at = i < 4 ? (3 - i) * 0.08 : 0.02, m = smooth(at, at + (i < 4 ? 0.62 : 0.58), t);
+      for (let c = 0; c < 3; c++) colours[i * 3 + c] = lerp(NIGHT[i][c], k.colours[i * 3 + c], m);
+    }
+    glow = [k.glow[0], k.glow[1], k.glow[2], k.glow[3] * smooth(0.05, 0.85, t)];
+    rise = (1 - easeOut(t)) * H * 0.14;
+  }
+  return { mode: 3, alpha, depth: 'none', sky: { colours, g: [hy, k.span * mag, H * 0.5 * mag, 0.07], sun: [sx, sy + rise, k.r * mag, k.gr * mag], glow } };
 }
+// the sky an hour before dawn: top to horizon, then the ground under it
+const NIGHT = ['#04050a', '#070912', '#0d101c', '#171824', '#0a0a10', '#0a0a10'].map(tint);
 function pushSprite(list, it, off) {
   if (!(it.alpha > 0.002)) return;
   const th = (90 * (1 - it.rise)) * Math.PI / 180;
@@ -722,11 +785,13 @@ function pushSprite(list, it, off) {
     list.soft.push({ tex: it.tex, box: bx, L, th, off: [o[0] + dx, o[1], o[2]], alpha: a, tint: it.tintC, blend: it.blend || 'over', depth: 'test', d: depthNow });
     return;
   }
-  // paper; a torn sheet as its two pieces, parted
-  const bright = 1 - 0.45 * (1 - clamp(it.rise));
+  // paper; a torn sheet as its two pieces, parted. A sea of cloud drifts.
+  const bright = (1 - 0.45 * (1 - clamp(it.rise))) * it.light;
   const tnt = [bright, bright, bright];
+  if (it.drift && !reduced) o[0] += Math.sin(clock * 0.07 + it.ord * 4) * it.drift;
   if (it.pieces) {
-    for (const pc of it.pieces) list.paper.push({ tex: it.tex, box: bx, sub: pc.sub, cut: pc.cut, L, th, off: [o[0] + pc.side * (it.part || 0), o[1], o[2]], alpha: it.alpha, tint: tnt, depth: 'write', fade: GRAIN, d: depthNow });
+    // (soft halves blend where they overlap, so they test depth without writing it)
+    for (const pc of it.pieces) list.paper.push({ tex: it.tex, box: bx, sub: pc.sub, cut: pc.cut, L, th, off: [o[0] + pc.side * (it.part || 0), o[1], o[2]], alpha: it.alpha, tint: tnt, depth: pc.soft ? 'test' : 'write', fade: pc.soft ? [2, 0, pc.soft, 0.08] : GRAIN, d: depthNow });
   } else list.paper.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, tint: tnt, depth: 'write', fade: it.role === 'text' ? null : GRAIN, d: depthNow });
 }
 // the page's own content: the same fold, written as a CSS transform
@@ -818,5 +883,5 @@ Promise.all([document.fonts?.ready, document.fonts?.load('400 100px "Instrument 
 window.__unfold = {
   get p() { return p; }, get eye() { return eye; }, get scene() { return Math.round(eye); }, get intro() { return introT; }, get tier() { return tier; }, get gl() { return !!gl; },
   scenes, goTo,
-  catchUp() { p = want(); introT = introStart && performance.now() > introStart + 2200 ? 1 : introT; render(); }
+  catchUp() { p = want(); introT = introStart && performance.now() > introStart + INTRO ? 1 : introT; render(); }
 };

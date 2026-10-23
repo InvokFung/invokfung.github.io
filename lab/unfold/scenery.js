@@ -88,12 +88,16 @@ void main() {
   }
   // a piece of a torn sheet keeps only its side of a ragged line (down the sheet, or across it
   // when the frequency is negative)
+  // (soft over uFade.z, for cloud parting rather than paper)
+  float keep = 1.0;
   if (uCut.y != 0.0) {
     float a = uCut.w > 0.0 ? vUv.y : vUv.x, b = uCut.w > 0.0 ? vUv.x : vUv.y, f = abs(uCut.w);
-    float e = uCut.x + uCut.z * (sin(a * f) * 0.6 + sin(a * f * 2.31 + 1.7) * 0.4);
-    if ((b - e) * uCut.y < 0.0) discard;
+    float e = uCut.x + uCut.z * (sin(a * f) * 0.6 + sin(a * f * 2.31 + 1.7) * 0.4 + sin(a * f * 5.7 + 0.3) * 0.18);
+    float s = (b - e) * uCut.y;
+    if (s < 0.0) discard;
+    if (uFade.z > 0.0) keep = smoothstep(0.0, uFade.z, s);
   }
-  vec4 c = texture2D(uTex, vUv + uShift);
+  vec4 c = texture2D(uTex, vUv + uShift) * keep;
   // the floor fades out at its far edge and its sides
   if (uFade.x < 1.0) c *= 1.0 - smoothstep(uFade.x, 1.0, vUv.y);
   if (uFade.y > 0.0) c *= smoothstep(0.0, uFade.y, vUv.x) * smoothstep(0.0, uFade.y, 1.0 - vUv.x);

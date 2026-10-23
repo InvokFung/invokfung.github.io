@@ -73,6 +73,10 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
 .mist { left: -10%; right: -10%; }
 .cover .m1 { top: 40%; bottom: 36%; }
 .cover .m2 { top: 58%; bottom: 20%; }
+/* ?sea: the far sea of cloud, behind the name, and the near one, its billows round the name's feet */
+.gl.sea { left: -10%; right: -10%; }
+.cover .s0 { top: 44%; bottom: 36%; }
+.cover .s1 { top: 64%; bottom: 5%; }
 .role { position: absolute; left: 0; right: 0; bottom: 9vh; margin: 0; text-align: center; font: 500 clamp(11px, 0.95vw, 14px)/1 var(--mono); letter-spacing: 0.32em; text-transform: uppercase; color: var(--dim); }
 .cue { position: absolute; left: 0; right: 0; bottom: 3.6vh; margin: 0; text-align: center; font: 400 11px/1 var(--mono); letter-spacing: 0.12em; color: rgba(236, 235, 230, 0.38); }
 .cue i { display: block; width: 1px; height: 18px; margin: 8px auto 0; background: linear-gradient(var(--faint), transparent); animation: cue 2.4s ease-in-out infinite; transform-origin: top; }
@@ -182,6 +186,8 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
   .cover .r3 { top: 55%; bottom: 30%; }
   .cover .r4 { top: 63%; bottom: 17%; }
   .cover .r5 { top: 74%; bottom: 0; }
+  .cover .s0 { top: 40%; bottom: 40%; }
+  .cover .s1 { top: 60.5%; bottom: 8%; }
   .role { bottom: 10vh; letter-spacing: 0.22em; }
   .climb { --hz: 42%; }
   .climb .r1 { top: 33%; bottom: 58%; }

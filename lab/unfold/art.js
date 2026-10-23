@@ -286,6 +286,104 @@ export function paintCloud(w, h, k, { light, body, deep, seed = 1, top = 0.18, f
   }
   return c;
 }
+// A sea of cloud, seen from just above it toward a low sun, as paper: rows of billowing sheets, small
+// and hazy at its far edge (the top of the box) and bigger toward its near one. Each sheet's edge is
+// heaps of every size with smaller billows on their crowns; it is lit along that edge and goes over
+// into shade below it, so where a nearer sheet stands over a farther one, a line of light divides
+// them. R: the size of a billow in the far row and the near one, in CSS pixels; sun: where the sun
+// stands across the box (0..1); haze: the colour the far rows fade into; rows: how many; top: where
+// the far row sits; heap: how high the heaps rise, in billows; fade: how much of the box's foot thins
+// out to nothing, for a sheet whose foot would show.
+export function paintSea(w, h, k, { light, body, deep, haze, sun = 0.5, seed = 1, rows = 4, R = [8, 20], top = 0.1, heap = 1.6, glare = 0.4, rim = 0.3, fade = 0 }) {
+  const [c, x] = canvas(w, h, k), r = rng(seed);
+  // a billowing edge: the upper envelope of all the circles of its heaps and billows
+  const edge = (base, rad, hgt) => {
+    const C = [];
+    for (let px = -w * 0.05; px < w * 1.05;) {
+      // most heaps barely rise out of the sea; now and then one towers
+      const ra = rad * (1.6 + r() * 2.6), cy = base - rad * hgt * (0.2 + Math.pow(r(), 3) * 2.5) + ra * 1.1;
+      C.push([px, cy, ra]);
+      for (let m = 3 + Math.floor(r() * 4); m > 0; m--) {
+        const a = (r() * 2 - 1) * 1.2, rb = ra * (0.18 + r() * 0.22), o = ra - rb * 0.5, bx = px + Math.sin(a) * o, by = cy - Math.cos(a) * o;
+        C.push([bx, by, rb]);
+        // and smaller ones on those
+        if (r() < 0.6) { const a2 = a + (r() - 0.5) * 1.4, rc = rb * (0.35 + r() * 0.2), o2 = rb - rc * 0.4; C.push([bx + Math.sin(a2) * o2, by - Math.cos(a2) * o2, rc]); }
+      }
+      // one that towers has billows down its flanks, so it doesn't stand on a wall
+      for (let y = cy + ra * 0.45, n = 1; y < base + rad * 0.4; y += ra * 0.5, n++) for (const sd of [-1, 1]) { const rf = ra * (0.45 + r() * 0.25); C.push([px + sd * ra * (0.7 + n * 0.22), y + rf * 0.35, rf]); }
+      px += ra * (0.6 + r() * 0.9);
+    }
+    // bucketed by x, so each point only looks at the circles over it
+    const B = rad * 4.2, bins = new Map();
+    for (const q of C) for (let i = Math.floor((q[0] - q[2]) / B); i <= Math.floor((q[0] + q[2]) / B); i++) { if (!bins.has(i)) bins.set(i, []); bins.get(i).push(q); }
+    return (px) => { let y = base + rad * 0.4; for (const [cx, cy, rr] of bins.get(Math.floor(px / B)) || []) { const d = px - cx; if (d * d < rr * rr) y = Math.min(y, cy - Math.sqrt(rr * rr - d * d)); } return y; };
+  };
+  const ky = c.height / h;
+  let base0 = 0;
+  const sheet = (f, rad, col, dk, lit) => {
+    // the sheet, and a band of it under its crest (only there does the light go over into shade, so
+    // only there need it be blurred)
+    const p = new Path2D(), band = new Path2D(), step = Math.max(1, rad * 0.2), d = rad * 0.6, deep2 = rad * 3.5, ys = [];
+    for (let px = -rad * 2; px <= w + rad * 2; px += step) ys.push([px, f(px)]);
+    ys.forEach(([px, y], i) => { p[i ? 'lineTo' : 'moveTo'](px, y); band[i ? 'lineTo' : 'moveTo'](px, y); });
+    p.lineTo(w + rad * 2, h); p.lineTo(-rad * 2, h); p.closePath();
+    for (let i = ys.length - 1; i >= 0; i--) band.lineTo(ys[i][0], ys[i][1] + deep2);
+    band.closePath();
+    x.save(); x.clip(p);
+    x.fillStyle = mix(col, light, lit); x.fill(p);
+    // the shade: the band's blurred shadow, a little lower, so the light goes over into it slowly (the
+    // band is drawn far above the canvas and only its shadow brought back down); below it, plain shade
+    const far = h + 4 * rad + 200;
+    x.translate(0, -far);
+    x.shadowColor = col; x.shadowBlur = rad * 1.1 * ky; x.shadowOffsetY = (far + d) * ky;
+    x.fillStyle = '#000'; x.fill(band);
+    x.shadowColor = 'transparent';
+    x.translate(0, far + d + deep2 * 0.6);
+    x.fillStyle = col; x.fill(p);
+    x.translate(0, -(d + deep2 * 0.6));
+    // and deeper in shade further down the row
+    const g = x.createLinearGradient(0, base0, 0, base0 + rad * 8);
+    g.addColorStop(0, rgba(dk, 0)); g.addColorStop(1, rgba(dk, 0.45));
+    x.fillStyle = g; x.fillRect(-rad * 2, base0, w + rad * 4, h - base0);
+    x.restore();
+    if (rim) { x.strokeStyle = rgba(light, rim * lit); x.lineWidth = Math.max(0.8, rad * 0.05); x.lineJoin = 'round'; x.stroke(p); }
+  };
+  for (let j = 0; j < rows; j++) {
+    const v = rows > 1 ? j / (rows - 1) : 1, far = 1 - v;
+    // (the far row low enough that its tallest heaps still fit in the box)
+    const rad = lerp(R[0], R[1], v), hg = heap * (0.35 + 0.65 * v), base = Math.max(h * lerp(top, top + (1 - top) * 0.6, Math.pow(v, 1.15)), rad * (2.7 * hg + 1.4));
+    const col = mix(body, haze, far * 0.55), dk = mix(deep, haze, far * 0.35);
+    // backlit: the far tops, toward the sun, take the most light
+    const lit = lerp(0.7, 0.4, v);
+    base0 = base;
+    sheet(edge(base, rad, hg), rad, col, dk, lit);
+    // and the billows inside the row, a little lower, smaller and in more shade
+    sheet(edge(base + rad * 0.9, rad * 0.75, hg * 0.6), rad * 0.75, mix(col, dk, 0.2), dk, lit * 0.8);
+  }
+  // toward the sun the tops of the cloud take the light
+  if (glare) {
+    x.save(); x.globalCompositeOperation = 'source-atop';
+    x.translate(sun * w, h * top); x.scale(1, 0.45);
+    const g = x.createRadialGradient(0, 0, 0, 0, 0, w * 0.42);
+    g.addColorStop(0, rgba(light, glare)); g.addColorStop(0.4, rgba(light, glare * 0.35)); g.addColorStop(1, rgba(light, 0));
+    x.fillStyle = g; x.fillRect(-w * 0.42, -w * 0.42, w * 0.84, w * 0.84);
+    x.restore();
+  }
+  if (CAN_BLUR) {
+    const soft = document.createElement('canvas'); soft.width = c.width; soft.height = c.height;
+    const s = soft.getContext('2d');
+    s.filter = `blur(${Math.max(0.6, R[0] * k * 0.1).toFixed(1)}px)`;
+    s.drawImage(c, 0, 0);
+    x.save(); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, c.width, c.height); x.drawImage(soft, 0, 0); x.restore();
+  }
+  if (fade) {
+    const m = x.createLinearGradient(0, h * (1 - fade), 0, h);
+    m.addColorStop(0, 'rgba(0,0,0,1)'); m.addColorStop(1, 'rgba(0,0,0,0)');
+    x.save(); x.globalCompositeOperation = 'destination-in'; x.fillStyle = m; x.fillRect(0, 0, w, h); x.restore();
+  }
+  grain(x, w, h, 0.15);
+  return c;
+}
 // A cloud of soft puffs, lit from above, fuller in the middle and thinning at its ends: one that
 // hangs on a mountain's upper slopes.
 export function paintPuff(w, h, k, { light, body, seed = 1, n = 26 }) {
