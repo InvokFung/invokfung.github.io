@@ -145,3 +145,45 @@ Known limits, round 3:
 
 - Not yet seen on a real phone or a real GPU; frame rates in headless say little.
 - Root-relative links (`/explore/`, `/blog/`) only work on the real site.
+
+
+### 2026-10-23 · Round 4: one smooth scroll
+
+Alan's feedback on round 3: the book was only a way to describe the feel, not a request for a page
+that flips. "I expect a smooth scroll content but a flip is breaking the experience." What they want
+is the scene moving on to the next step with layers in motion, inside one continuous scroll. They
+also asked whether the remembered site had actually been found and studied. It hadn't been.
+
+Research, this time from the sites' own write-ups. This container can reach GitHub but not the
+award sites themselves (igloo.inc, lusion.co, awwwards.com and tympanus.net are blocked at the
+proxy), so nothing here was watched; it was read:
+
+- Igloo Inc (Awwwards case study): one scrollable journey with no page cuts. The camera travels through a single scene, the intro "flows seamlessly into the rest of the experience", and scene changes blend chromatic aberration, displacement and frost instead of cutting.
+- Firewatch: the classic layered landscape. Foreground, mountains and distant hills move at different speeds as you scroll.
+- Lusion's My Little Storybook (Awwwards SOTD, FWA SOTD, Webby 2022): a WebGL picture book with hand-drawn layers over 3D, read by scrolling.
+- Aimee's Papercraft World (WebGPU showcase, May 2026): a portfolio built from folded paper, where the scroll moves you along one path and the seasons change as you go, rather than paging.
+- Joseph Santamaria '26 (Awwwards HM, March 2026): listed elements are scroll-driven UI transitions, an auto-scroll narrative and a 3D WebGL transition.
+- What they share: the scroll moves a camera, not pages; scenes overlap as they change, so the screen is never empty; depth comes from layers moving at different speeds.
+
+The site Alan remembered is still not confirmed.
+
+`unfold/` is round 3 rebuilt on those rules: `index.html`, `unfold.css` and `unfold.js`, reusing
+round 3's specimens (`book/specimens.js`). The same five scenes and copy, with no page turn:
+
+- The scenes stand one behind the other, and the scroll moves the eye forward through them. The scene ahead starts a scene's depth away, with its layers lying on the floor. As you near it, they stand up back to front, a little past upright and back, while the whole scene comes toward you. The scene you are leaving keeps coming toward you, and its layers lie down front first.
+- The two overlap, so there is always paper standing. Paper lying down is darker, and it is only drawn once it is off the floor.
+- The eye slows near each scene, so it can be read, and moves fastest between two. There is no snapping. The page uses the browser's own scroll; what is drawn follows it a beat behind, so a flick of the wheel glides.
+- Each sky is a flat backdrop, scaled about the eye as if it stood at the far edge of its scene's floor, so the horizon moves with its mountains.
+- Each scene's floor sits a pixel below the one before it, so where two overlap mid-move, the scene you are leaving is the ground in front. Each floor's far edge fades into its sky.
+- Words that sat on the front ridges (the role and the scroll cue, the email and links) are now their own sheets in front. That lets every ridge, including the front ones, be wider than the screen, since a scene seen from further away would otherwise show their ends.
+- Reduced motion shows one scene at a time with everything standing.
+
+Checked in headless Chromium at 1440×900, 1024×768 and 390×844, and with reduced motion. Every move
+was filmed in tenths of a scene, with no console errors and no horizontal overflow. Each project
+panel, each specimen and each contact link takes clicks at its scene. `goTo` lands on the scene it names.
+
+Known limits, round 4:
+
+- Not yet seen on a real phone or a real GPU. The brightness on paper that is lying down is a CSS filter, which may cost frames on a slow phone.
+- Mid-move, the scene you are leaving can still show over the one arriving, which is as intended. The front sheet with the name looks large as it lies down.
+- Root-relative links (`/explore/`, `/blog/`) only work on the real site.
