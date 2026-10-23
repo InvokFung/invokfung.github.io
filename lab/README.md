@@ -311,7 +311,7 @@ tier, against 2.9 to 3.2 s for the live site). Its cost moved into each frame in
 graphics chip the opening's frames run slow, and that steps the page down a tier (fewer steps a ray,
 no extra far rays, a coarser canvas) as it already did for the scroll.
 
-### 2026-10-23 · Live: the sea of cloud, then its scroll bar and its foot
+### 2026-10-23 · Live: the sea of cloud, then its foot and a thread for the scroll bar
 
 The live sea of cloud went out (PR #7). Two things came back from Afung straight after:
 
@@ -319,12 +319,14 @@ The live sea of cloud went out (PR #7). Two things came back from Afung straight
   paper sheet fades out at its foot, so a strip of the sea showed through under it (the painted sea
   used to stop short of the bottom, so this never showed before). The rock now runs on past the
   bottom of the screen (`.cover .r3`), so its faded foot is always out of sight.
-- **The browser's grey scroll bar** broke the scene. It is still the browser's own bar (so it drags,
-  pages and reads out as one), styled: its track is the day on the mountain top to bottom, each
-  scene's sky where the thumb stands when you are in that scene, with a mark for each, and the thumb
-  is that scene's sun (`rail()` in `unfold.js`). Chrome, Edge and Safari take the gradient; Firefox
-  takes only flat colours, so there the track is the sky of the scene you are in. Phones keep their
-  own thin overlay bar.
+- **The browser's grey scroll bar** broke the scene. A first try styled it as the day (its track the
+  sky of each scene, its thumb that scene's sun), but a bar that sharp still ended the world at the
+  screen's edge. So the bar is gone. The page scrolls exactly as before; where you are shows on a
+  faint thread at the right edge (`#thread`, the thread section of `unfold.js`): a dot for each of
+  the five scenes and a light in the colour of that scene's sun, which comes up while you scroll and
+  fades a second after you stop, so the trip reads as five camps with an end. With a mouse it also
+  shows on pointing and drags like a thumb; on touch screens it only shows, so a swipe at the edge
+  still scrolls.
 
 On the way, the cloud's edges near the name stair-stepped on Afung's screen. Rays are now taken
 twice, down the pixel, over most of the sea (from a little way out; three times was too slow to

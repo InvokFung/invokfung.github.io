@@ -211,7 +211,7 @@ function layout() {
   STEP = H * (narrow() ? 0.8 : 0.9); // the scroll from one scene to the next
   DZ = P * 0.42;                      // and how far apart two scenes stand
   scroller.style.height = ((N - 1) * STEP + H) + 'px';
-  rail();
+  threadH = thread ? thread.clientHeight : 0;
   stage.style.perspective = P + 'px';
   for (const t of painted) gl?.release(t);
   painted = [];
@@ -668,28 +668,36 @@ document.addEventListener('click', (e) => {
   if (i >= 0) { e.preventDefault(); goTo(i); }
 });
 
-/* ------------------------------------------------------------------ the scroll bar */
-// The page's own scroll bar, styled (unfold.css), not replaced: its track is the day on the mountain,
-// top to bottom, each scene's sky where the thumb stands when you are in that scene, with a mark for
-// each; the thumb is that scene's sun. (Firefox takes only flat colours: there the track is the
-// sky of the scene you are in.)
-const railMix = (a, b, t) => { const x = tint(a), y = tint(b); return `rgb(${x.map((v, k) => Math.round((v + (y[k] - v) * t) * 255)).join(',')})`; };
-const railSky = (id) => railMix(PAL[id].sky[2], PAL[id].sky[3], 0.3);
-let shownRail = -1;
-function rail() {
-  const root = document.documentElement.style, k = H / ((N - 1) * STEP + H);
-  const at = scenes.map((sc) => ((sc.i / (N - 1)) * (1 - k) + k / 2) * 100);
-  const sky = scenes.map((sc, i) => `${railSky(sc.id)} ${at[i].toFixed(2)}%`).join(', ');
-  const marks = at.map((a) => `transparent calc(${a.toFixed(2)}% - 1px), rgba(255,240,225,0.4) calc(${a.toFixed(2)}% - 1px), rgba(255,240,225,0.4) calc(${a.toFixed(2)}% + 1px), transparent calc(${a.toFixed(2)}% + 1px)`).join(', ');
-  root.setProperty('--rail', `linear-gradient(${marks}), linear-gradient(${PAL[scenes[0].id].sky[1]}, ${sky}, ${PAL[scenes[N - 1].id].sky[1]})`);
-  shownRail = -1;
+/* ------------------------------------------------------------------ the thread */
+// No scroll bar (unfold.css): where you are shows on a faint thread at the right edge, a camp for
+// each scene and a light in the colour of that scene's sun, there only while you move. Dragging
+// along it scrolls the page there, as a scroll bar's thumb would.
+const thread = $('#thread'), THREAD_IN = 0.2; // the camps run from THREAD_IN to 1 - THREAD_IN down it
+const mark = thread ? document.createElement('b') : null;
+let threadH = 0, threadOn = false, threadUntil = 0, shownThread = -1;
+if (thread) {
+  thread.innerHTML = scenes.map((sc) => `<i style="top:${((THREAD_IN + (1 - 2 * THREAD_IN) * sc.i / (N - 1)) * 100).toFixed(1)}%"></i>`).join('');
+  thread.append(mark);
+  const to = (e) => {
+    const r = thread.getBoundingClientRect(), q = clamp(((e.clientY - r.top) / r.height - THREAD_IN) / (1 - 2 * THREAD_IN));
+    scrollTo(0, q * (N - 1) * STEP);
+  };
+  thread.addEventListener('pointerdown', (e) => { thread.setPointerCapture(e.pointerId); thread.classList.add('held'); to(e); });
+  thread.addEventListener('pointermove', (e) => { if (thread.hasPointerCapture(e.pointerId)) to(e); });
+  const up = () => thread.classList.remove('held');
+  thread.addEventListener('pointerup', up); thread.addEventListener('pointercancel', up);
 }
-function railAt(i) {
-  if (i === shownRail) return;
-  shownRail = i;
-  const root = document.documentElement.style, pal = PAL[scenes[i].id];
-  root.setProperty('--rail-thumb', rgba(pal.sun.c, 0.85));
-  root.setProperty('--rail-at', railSky(scenes[i].id));
+function threadAt(i) {
+  if (!thread || i === shownThread) return;
+  shownThread = i;
+  const sun = PAL[scenes[i].id].sun.c;
+  thread.style.setProperty('--sun', sun);
+  thread.style.setProperty('--glow', rgba(sun, 0.5));
+}
+function threadMove(now, moved) {
+  if (!thread) return;
+  if (moved) { threadUntil = now + 1100; if (!threadOn) { threadOn = true; thread.classList.add('on'); } }
+  else if (threadOn && now > threadUntil) { threadOn = false; thread.classList.remove('on'); }
 }
 
 /* ------------------------------------------------------------------ the frame */
@@ -719,6 +727,7 @@ function frame(now) {
     if (p !== was || introT < 1) { settle = now + 180; if (!coarse) { coarse = true; sizeCanvas(); } }
     else if (coarse && now > settle) { coarse = false; sizeCanvas(); }
   }
+  threadMove(now, p !== was);
   was = p;
   clock += dt;
   const idle = !dirty && TIERS[tier].idle && gl && !reduced && now - lastDraw > 33;
@@ -734,10 +743,11 @@ function render() {
   const cur = Math.round(eye);
   if (cur !== shownFolio) {
     shownFolio = cur;
-    railAt(cur);
+    threadAt(cur);
     folio.querySelector('b').textContent = cur + 1;
     folio.querySelector('i').textContent = scenes[cur].el.dataset.name;
   }
+  if (mark) mark.style.transform = `translateY(${((THREAD_IN + (1 - 2 * THREAD_IN) * p / (N - 1)) * threadH).toFixed(1)}px)`;
   live.work = Math.abs(eye - 2) < 0.35;
   live.craft = Math.abs(eye - 3) < 0.35;
   // the eye drifts a little with the pointer, so the layers part
