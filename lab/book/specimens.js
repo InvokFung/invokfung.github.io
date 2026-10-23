@@ -18,7 +18,9 @@ const SPECS = [
 const dpr = Math.min(devicePixelRatio || 1, 2);
 const clamp = (v, a = 0, b = 1) => (v < a ? a : v > b ? b : v);
 
-export function mountSpecimens(root, { isLive }) {
+// slow (optional): while it returns true, only the specimen under the pointer runs every frame and
+// the rest every other frame, for a page that needs the frame time for something else.
+export function mountSpecimens(root, { isLive, slow }) {
   root.innerHTML = SPECS.map((s) => `<a class="layer spec spec-${s.slug}" href="../${s.slug}/index.html">
     <span class="art" aria-hidden="true"></span>
     <span class="cap"><b>${s.name}</b><span>${s.line}</span><em>open</em></span>
@@ -31,13 +33,18 @@ export function mountSpecimens(root, { isLive }) {
     it.el.addEventListener('focus', () => { it.hot = true; });
     it.el.addEventListener('blur', () => { it.hot = false; });
   }
-  let mounted = false, last = performance.now();
+  let mounted = false, last = performance.now(), odd = false;
   function frame(now) {
     requestAnimationFrame(frame);
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
     if (!isLive()) return;
     if (!mounted) { mounted = true; for (const it of items) it.api = it.spec.mount(it.art, it, isLive); }
-    for (const it of items) it.api?.tick?.(dt, now / 1000);
+    const half = slow?.();
+    odd = !odd;
+    for (const it of items) {
+      if (!half || it.hot) it.api?.tick?.(dt, now / 1000);
+      else if (odd) it.api?.tick?.(Math.min(0.1, dt * 2), now / 1000);
+    }
   }
   requestAnimationFrame(frame);
   return { items };

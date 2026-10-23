@@ -187,3 +187,51 @@ Known limits, round 4:
 - Not yet seen on a real phone or a real GPU. The brightness on paper that is lying down is a CSS filter, which may cost frames on a slow phone.
 - Mid-move, the scene you are leaving can still show over the one arriving, which is as intended. The front sheet with the name looks large as it lies down.
 - Root-relative links (`/explore/`, `/blog/`) only work on the real site.
+
+### 2026-10-23 · Round 4, take 2: a day on the mountain
+
+Alan's feedback on round 4: they almost like it, but the middle feels empty, and it needs richer
+content without filler. Forward Deployed Engineer stood on the mountain top, which reads as the top
+of their career: true for now, but they want to go higher. They asked whether it runs on a low-end PC
+without lag, and for more in the background: something hidden behind the layers that the scroll
+reveals, layers that tell a story, and more variety in how one scene hands over to the next.
+
+Research, read rather than watched (the award sites themselves don't open from this container):
+
+- Utsubo's guide to immersive storytelling sites. On IVRESS (*Spin a Tale*, Awwwards SOTD, FWA of the Month) each scene has to "become" the next, with continuous camera and material changes rather than hard edits. A linear story fits five scenes: hook, context, journey, climax, resolution. Serve quality by device, and set a performance budget from day one.
+- Hon Tran's best award-winning websites of 2026. By-Kin's transitions "make the whole thing feel like a single continuous surface". Iventions (CSSDA Website of the Month) treats each project "like a spotlit installation", with the reveals paced like a guided walk-through.
+- Orpetron's ten award-winning sites for animation on scroll only lists tags, so it added nothing.
+
+What changed in `unfold/`:
+
+- The landscape is one WebGL canvas (`scenery.js`), painted from the layout by `art.js`: skies, ground, ridges, the mountain, mist, cloud and the two big words. The page's own content stays in the DOM in CSS 3D, under the same projection, so the two line up. One canvas is one composited layer instead of round 4's sixty-odd.
+- The story is a day on the mountain, first light to last. The year flags climb to a camp marked "2026 · so far". Past it the trail fades into cloud, toward a higher summit with an empty pennant marked "next". At contact the cloud has parted, the summit is clear and the trail goes up it.
+- The middle has more in it. Each year's flag has one line on what changed, on hover or focus; the current one always shows its line. The front four work panels show two real numbers each from `data.js`, and every panel shows its live line on hover.
+- Each handover is its own move, all on the plain scroll:
+  - Hello to How I got here: the ridges tear at their lowest point and part like a curtain, nearer sheets further, on the mountain behind.
+  - How I got here to Selected work: the camera flies to the camp and through the cloud beside it, lit by the camp. One scene becomes the next inside the cloud, and the work is there when it clears.
+  - Selected work to Craft: the camera cranes along the camp. The panels lie down in a wave from the left and the specimens stand up behind them.
+  - Craft to Contact: the camera climbs, cloud banks rise to fill the screen, and they part on the summit.
+- Speed. The cost is almost all in pixels, so the canvas has four quality tiers. Below the top tier it draws coarser while the scroll moves and sharp again the moment it stops. It starts from what the device reports (software rendering starts at the lowest tier), steps down when frames run slow, and `?q=least|low|mid|high` pins one. On low tiers nothing drifts on its own or with the pointer.
+- Reduced motion shows one scene at a time and crossfades whole scenes. Without WebGL the painted landscape lies flat in its boxes and the scenes crossfade; the Ink specimen says it needs WebGL.
+
+Checked in headless Chromium at 1440×900, 1024×768 and 390×844, with reduced motion and with WebGL
+switched off. Every move was filmed in steps of a tenth or less, with no console errors and no
+horizontal overflow. Each project panel, each specimen and each contact link takes clicks at its scene.
+
+Speed, measured the same way for both versions: a wheel scroll top to bottom in headless Chromium
+with no GPU (SwiftShader), the worst case, since everything a graphics chip would draw is drawn by
+the processor. A real GPU, even a laptop's built-in one, should be much faster; that is not measured
+here.
+
+| | round 4 | take 2 |
+|---|---|---|
+| 1440×900 | 11.2 fps (slowest 1%: 367 ms) | 22.3 fps (slowest 1%: 100 ms) |
+| 1440×900, CPU slowed 4× | 8.8 fps | 13.2 fps |
+| 390×844, CPU slowed 4× | 28.4 fps | 31.6 fps |
+
+Known limits, take 2:
+
+- Not yet seen on a real phone or a real GPU.
+- On the lowest tier, the painted words ("Alan Fung", "Say hello.") are a little soft while the scroll moves.
+- The fly passes through grey cloud for a moment, so for about a tenth of a scene's scroll there is nothing to read.

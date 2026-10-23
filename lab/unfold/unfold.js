@@ -1,15 +1,25 @@
-// The portfolio as one paper landscape you move through. The page is one sticky stage, and the
-// scroll carries the eye forward through five scenes, without a cut, a turn or a snap.
+// The portfolio as one paper landscape you move through: a day on a mountain, from first light on
+// the cover to last light at contact. The page is one sticky stage and the scroll is the browser's
+// own; it carries a camera through five scenes, without a cut, a turn or a snap.
 //
-// Every scene is a stack of paper layers. CSS lays each layer out flat, the way the scene looks when
-// everything stands. Here each layer gets a depth from where its bottom edge sits (lower on the
-// screen is nearer, as in a diorama seen from above) and a scale that keeps it exactly where CSS
-// put it. All layers stand on one floor, so each can lie flat around its bottom edge.
-// The scenes sit one behind the other. As the eye moves forward, the scene ahead stands up from the
-// floor back to front and comes toward you, while the one you are leaving lies down front first and
-// slides under you. The two overlap, so there is always paper standing. Everything is a function of
-// the scroll position, so scrolling back plays it in reverse.
+// Every scene is a stack of paper, laid out flat by CSS. Each box gets a depth from where its bottom
+// edge sits (lower on the screen is nearer, as in a diorama seen from above) and a scale that keeps
+// it exactly where CSS put it. The landscape is painted on one WebGL canvas (scenery.js); the page's
+// own words, flags, panels and specimens stand in front of it in CSS 3D, under the same projection.
+//
+// The scenes are placed in one world and the camera travels between them, a different way each
+// time, so each move tells you something:
+//   Hello → Climb    part:   the cover tears at its valleys and parts like a curtain; the mountain
+//                            stands up behind it
+//   Climb → Work     fly:    the camera flies to the 2026 camp; the work stands up there, under the
+//                            camp's light
+//   Work  → Craft    pan:    the camera pans along the camp; the panels lie down and the specimens
+//                            stand up, each in a wave
+//   Craft → Contact  clouds: the camera climbs; clouds rise, then part on the summit, now clear
+// Everything is a function of the scroll position, so scrolling back plays it all in reverse.
 import { mountSpecimens } from '../book/specimens.js';
+import { createScenery } from './scenery.js';
+import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintCloud, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
 
 const D = window.PORTFOLIO, F = window.Figs;
 const $ = (s, r = document) => r.querySelector(s);
@@ -17,85 +27,58 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const md = (t) => esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, w, u) => `<a href="${u}">${w}</a>`);
 const get = (path) => path.split('.').reduce((o, k) => o?.[k], D);
-const clamp = (v, a = 0, b = 1) => (v < a ? a : v > b ? b : v);
-const lerp = (a, b, t) => a + (b - a) * t;
 const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
-const rgb = (c) => { const n = parseInt(c.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255]; };
-const mix = (a, b, t) => { const B = rgb(b); return '#' + rgb(a).map((v, i) => Math.round(lerp(v, B[i], t)).toString(16).padStart(2, '0')).join(''); };
+const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+const bell = (t, c, w) => Math.exp(-(((t - c) / w) ** 2));
+const smooth = (a, b, t) => { const k = clamp((t - a) / (b - a)); return k * k * (3 - 2 * k); };
 // paper standing up: it lifts off the floor slowly, swings up, goes a little past upright and settles
 const stand = (t) => {
   const c = 1.2 * 1.525;
   return Math.max(0, t < 0.5 ? (Math.pow(2 * t, 2) * ((c + 1) * 2 * t - c)) / 2 : (Math.pow(2 * t - 2, 2) * ((c + 1) * (t * 2 - 2) + c) + 2) / 2);
 };
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const narrow = () => innerWidth <= 760;
 
 for (const el of $$('[data-md]')) el.innerHTML = md(get(el.dataset.md));
 
-const stage = $('#stage'), scroller = $('#scroll');
-const pages = $$('.page').map((el, i) => ({ el, i, id: el.id, layers: [], floor: null, sky: null }));
-const N = pages.length;
-// The skies stand behind the scenes as plain backdrops and cross-fade as you move. (As 3D layers this
-// deep and this large, Chrome skipped painting parts of them.)
-for (const pg of pages) {
-  const sky = $('.sky', pg.el), wrap = document.createElement('div');
-  wrap.className = 'skywrap ' + pg.id;
-  wrap.append(sky);
-  $('#skies').append(wrap);
-  // and under each sky, flat ground, for wherever the moving floors leave a gap
-  const ground = document.createElement('div');
-  ground.className = 'ground';
-  wrap.append(ground);
-  pg.sky = { el: sky, wrap, ground };
-}
+/* ------------------------------------------------------------------ how much the landscape may cost */
+// The cost is all in pixels, so below high the canvas is drawn coarser while the scroll moves
+// (res × move), where blur goes unseen, and sharp again the moment it stops, a single frame. high:
+// up to 1.5 device pixels per CSS pixel throughout; mid: 0.75 moving; low: 0.55 moving, and nothing
+// drifts on its own or with the pointer; least: 0.34 moving. It starts from what the device says
+// about itself, steps down a tier when frames run slow while moving, and ?q=least|low|mid|high pins
+// one.
+const TIERS = {
+  high: { res: Math.min(devicePixelRatio || 1, 1.5), move: 1, art: 1, idle: true },
+  mid: { res: 1, move: 0.75, art: 0.85, idle: true },
+  low: { res: 1, move: 0.55, art: 0.7, idle: false },
+  least: { res: 0.85, move: 0.4, art: 0.6, idle: false }
+};
+const ORDER = ['high', 'mid', 'low', 'least'];
+const pinned = new URLSearchParams(location.search).get('q');
+let tier = TIERS[pinned] ? pinned : (navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4 ? 'mid' : 'high';
 
-// Chrome paints a 3D layer only within about a screen's width of its own left edge, and the
-// ridges hang off both sides of the screen (so the eye can move without showing their ends). Each
-// is drawn in two halves, two layers that always share one transform but for where they start.
-for (const el of $$('.layer[data-art]')) {
-  const half = document.createElement('div');
-  half.className = 'layer-half';
-  half.setAttribute('aria-hidden', 'true');
-  el.after(half);
-  el._half = half;
-}
+const stage = $('#stage'), scroller = $('#scroll'), land = $('#land');
+const gl = createScenery(land, { onRestore: () => { dirty = true; } });
+if (gl?.software && !TIERS[pinned]) tier = 'least';
+// with no WebGL, the painted landscape sits flat in its boxes and the scenes cross-fade
+if (!gl) document.documentElement.classList.add('nogl');
+const reduced = !gl || matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ------------------------------------------------------------------ art: paper, skies and ridges */
-// mulberry32
-function rng(seed) {
-  let s = seed >>> 0;
-  return () => { s = (s + 0x6d2b79f5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
-}
-// smooth 1D value noise in [-1, 1]
-function noise1(seed) {
-  const r = rng(seed), v = Array.from({ length: 256 }, () => r() * 2 - 1);
-  return (x) => { const i = Math.floor(x), f = x - i, u = f * f * (3 - 2 * f); return lerp(v[i & 255], v[(i + 1) & 255], u); };
-}
-
-// one shared paper grain, referenced by every layer's art and laid on the floor
-const GRAIN = (function grain() {
-  const c = document.createElement('canvas'); c.width = c.height = 220;
-  const x = c.getContext('2d'), img = x.createImageData(220, 220), r = rng(7);
-  for (let i = 0; i < img.data.length; i += 4) { const v = 120 + r() * 135; img.data[i] = img.data[i + 1] = img.data[i + 2] = v; img.data[i + 3] = r() * 38; }
-  x.putImageData(img, 0, 0);
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('width', 0); svg.setAttribute('height', 0); svg.style.position = 'absolute';
-  svg.innerHTML = `<defs><pattern id="grain" patternUnits="userSpaceOnUse" width="220" height="220"><image href="${c.toDataURL()}" width="220" height="220"/></pattern></defs>`;
-  document.body.prepend(svg);
-  return c.toDataURL();
-})();
-
-// The light changes as you read: first light on the cover, a clear morning for the climb, dark
-// rooms for the work and the craft, and the last light at the back cover.
+/* ------------------------------------------------------------------ the light, and the land's shapes */
+// A day on the mountain: first light on the cover, a clear morning for the climb, afternoon at the
+// camp for the work, golden hour for the craft, and last light at contact.
 const PAL = {
-  cover: { floor: ['#121218', '#3b3341'], sky: ['#090b11', '#151826', '#463645', '#a8694a'], sun: { x: 0.6, y: 0.93, r: 0.05, c: '#ffe1b0', glow: 'rgba(255,170,96,0.5)' },
-    ridges: ['#6f5f6a', '#4d4555', '#34303f', '#22212c', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.45, 0.32, 0.22], haze: 'rgba(255,205,165,0.22)' },
-  climb: { floor: ['#12171e', '#3a4a5b'], sky: ['#070a10', '#111925', '#2a3a4d', '#64798e'], sun: { x: 0.86, y: 0.5, r: 0, c: '#f3f6f8', glow: 'rgba(220,235,245,0.22)' },
-    ridges: ['#566a7e', '#12171e'], rim: '#e8f0f6', rimA: [0.6, 0.3], haze: 'rgba(215,230,240,0.18)' },
-  work: { floor: ['#0b0c0f', '#16181e'], sky: ['#08090b', '#0a0b0e', '#0e1014', '#13161c'], ridges: ['#0c0d10'], rim: '#62b6ff', rimA: [0.3] },
-  craft: { floor: ['#0b0b0e', '#18151d'], sky: ['#08090b', '#0a0a0e', '#100e15', '#17131d'], ridges: ['#0c0b0f'], rim: '#a78bfa', rimA: [0.3] },
-  contact: { floor: ['#0c0b10', '#2c2433'], sky: ['#05060a', '#0c0f1d', '#2a2140', '#94523c'], sun: { x: 0.32, y: 1.0, r: 0.06, c: '#ffb07a', glow: 'rgba(255,130,80,0.45)' },
-    ridges: ['#43354a', '#2b2332', '#19151f', '#0c0b10'], rim: '#ffa679', rimA: [0.7, 0.45, 0.3, 0.2], haze: 'rgba(255,150,110,0.16)' }
+  cover: { sky: ['#090b11', '#151826', '#463645', '#a8694a'], sun: { x: 0.6, y: 0.93, r: 0.05, c: '#ffe1b0', glow: ['#ffaa60', 0.5] },
+    ridges: ['#6f5f6a', '#4d4555', '#34303f', '#22212c', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.45, 0.32, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa' },
+  climb: { sky: ['#070a10', '#111925', '#2a3a4d', '#64798e'], sun: { x: 0.86, y: 0.5, r: 0, c: '#f3f6f8', glow: ['#dcebf5', 0.22] },
+    ridges: ['#566a7e', '#12171e'], mountain: '#33414f', face: { at: [0.56, 0.8], side: 1, light: '#9fb6cb', a: 0.32 }, rim: '#e8f0f6', rimA: [0.6, 0.3], haze: 'rgba(215,230,240,0.18)', cloud: { light: '#ffffff', body: '#c5d0da', deep: '#8193a5' } },
+  work: { sky: ['#080c13', '#111b29', '#24364b', '#5d6f80'], sun: { x: 0.18, y: 0.2, r: 0, c: '#ffffff', glow: ['#e6eef6', 0.12] },
+    summit: '#2a394b', face: { at: [0.5], side: -1, light: '#a9c0d6', a: 0.3 }, ridges: ['#1d2937', '#131a24'], rim: '#d6e4f0', rimA: [0.42, 0.3], haze: 'rgba(205,222,240,0.12)', mist: '#cfdceb',
+    cloud: { light: '#f4f7fa', body: '#a9b6c4', deep: '#5d6d7e' } },
+  craft: { sky: ['#0a0910', '#1e1520', '#5c3430', '#d98c50'], sun: { x: 0.72, y: 0.97, r: 0.04, c: '#ffe6b8', glow: ['#ffa458', 0.55] },
+    ridges: ['#2a1c22', '#1b1217', '#0f0b0e'], rim: '#ffc27a', rimA: [0.75, 0.55, 0.4], haze: 'rgba(255,176,104,0.28)', mist: '#ffb27a' },
+  contact: { sky: ['#05060a', '#0c0f1d', '#2a2140', '#94523c'], sun: { x: 0.2, y: 1.0, r: 0.06, c: '#ffb07a', glow: ['#ff8250', 0.45] },
+    summit: '#3a2d43', face: { at: [0.5], side: -1, light: '#ff9d76', a: 0.3 }, ridges: ['#2b2332', '#19151f', '#0c0b10'], rim: '#ffa679', rimA: [0.55, 0.32, 0.2], haze: 'rgba(255,150,110,0.16)' }
 };
 // the silhouette of each ridge: where its peaks sit, as fractions of its own box
 const SHAPE = {
@@ -110,120 +93,70 @@ const SHAPE = {
     { seed: 91, base: 0.3, peaks: [[0.12, 0.8, 0.08], [0.3, 0.95, 0.07], [0.5, 0.6, 0.1]], rough: 0.14 },
     { seed: 97, base: 0.5, peaks: [[0.15, 0.85, 0.18], [0.8, 0.95, 0.16]], rough: 0.06 }
   ],
+  work: [
+    { seed: 31, base: 0.3, peaks: [[0.1, 0.75, 0.1], [0.34, 0.5, 0.1], [0.82, 0.8, 0.12]], rough: 0.12 },
+    { seed: 33, base: 0.35, peaks: [[0.22, 0.85, 0.15], [0.62, 0.55, 0.12], [0.96, 0.8, 0.1]], rough: 0.08 }
+  ],
+  craft: [
+    { seed: 43, base: 0.3, peaks: [[0.15, 0.75, 0.1], [0.45, 0.95, 0.08], [0.72, 0.6, 0.1]], rough: 0.14 },
+    { seed: 47, base: 0.35, peaks: [[0.05, 0.9, 0.1], [0.36, 0.62, 0.12], [0.86, 0.88, 0.12]], rough: 0.1 },
+    { seed: 49, base: 0.5, peaks: [[0.25, 0.85, 0.16], [0.7, 0.92, 0.15]], rough: 0.06 }
+  ],
   contact: [
-    { seed: 61, base: 0.4, peaks: [[0.22, 0.8, 0.12], [0.68, 0.96, 0.1]], rough: 0.14 },
     { seed: 67, base: 0.4, peaks: [[0.1, 0.9, 0.12], [0.46, 0.7, 0.14], [0.86, 0.85, 0.1]], rough: 0.12 },
     { seed: 71, base: 0.5, peaks: [[0.15, 0.95, 0.16], [0.82, 0.9, 0.16]], rough: 0.1, dip: [0.5, 0.35, 0.3] },
     { seed: 79, base: 0.62, peaks: [[0.3, 0.8, 0.22], [0.75, 0.86, 0.2]], rough: 0.05 }
   ],
-  // the climb's one mountain; the summit is where 2026 stands
-  mountain: { seed: 5, base: 0.3, peaks: [[0.73, 0.99, 0.0825], [0.52, 0.66, 0.075], [0.91, 0.7, 0.06], [0.34, 0.5, 0.06], [0.1, 0.42, 0.09]], rough: 0.06 }
+  // the climb's mountain: a trail to a camp on its shoulder, where 2026 stands, and a higher
+  // summit beyond it, in cloud
+  mountain: { seed: 5, base: 0.3, peaks: [[0.18, 0.42, 0.1], [0.36, 0.52, 0.08], [0.47, 0.62, 0.07], [0.56, 0.75, 0.07], [0.78, 0.86, 0.14], [0.8, 0.99, 0.05]], rough: 0.04 },
+  // the same summit, seen from the camp in the afternoon, and clear at last light
+  summit: { seed: 13, base: 0.08, peaks: [[0.5, 0.99, 0.085], [0.38, 0.64, 0.08], [0.63, 0.72, 0.07], [0.2, 0.36, 0.1], [0.86, 0.42, 0.1]], rough: 0.035 }
 };
-// the trail up the mountain, in fractions of its box (x, y from the top), bottom left to the summit
-const TRAIL = [[0.27, 0.9], [0.4, 0.8], [0.34, 0.69], [0.505, 0.58], [0.45, 0.46], [0.6, 0.35], [0.66, 0.2], [0.73, 0.05]];
+// the trail up the mountain, in fractions of its box (x, y from the top): to the camp, then on into
+// the cloud
+const TRAIL = [[0.14, 0.92], [0.28, 0.84], [0.23, 0.74], [0.37, 0.66], [0.33, 0.56], [0.46, 0.47], [0.56, 0.31]];
+const BEYOND = [[0.56, 0.31], [0.6, 0.38], [0.65, 0.41], [0.69, 0.33], [0.72, 0.26], [0.745, 0.2]];
+// and up the summit at contact, from where you stand to the top
+const TRAIL_UP = [[0.36, 1.02], [0.46, 0.86], [0.4, 0.72], [0.5, 0.58], [0.46, 0.44], [0.5, 0.26]];
+const peakOf = (sh, a, b) => { const f = skyline(sh); let x = a, y = 0; for (let q = a; q <= b; q += 0.002) if (f(q) > y) { y = f(q); x = q; } return [x, y]; };
 
-let uid = 0;
-// view: the part of the art this element shows, [x, width], for a layer drawn in halves
-function svg(w, h, body, view = [0, w]) {
-  return `<svg class="art" viewBox="${view[0].toFixed(1)} 0 ${view[1].toFixed(1)} ${h.toFixed(1)}" preserveAspectRatio="none" overflow="hidden" aria-hidden="true">${body}</svg>`;
-}
-function skyArt(w, h, pal) {
-  const id = 'sky' + uid++, [a, b, c, d] = pal.sky, s = pal.sun;
-  let sun = '';
-  if (s) {
-    const cx = s.x * w, cy = s.y * h, r = s.r * Math.min(w, h * 1.6), gr = Math.max(r, 0.05 * Math.min(w, h * 1.6));
-    sun = `<radialGradient id="${id}g"><stop offset="0" stop-color="${s.glow}"/><stop offset="1" stop-color="rgba(0,0,0,0)"/></radialGradient>
-      <circle cx="${cx}" cy="${cy}" r="${gr * 6}" fill="url(#${id}g)"/>
-      ${r ? `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${s.c}" opacity="0.92"/>` : ''}`;
-  }
-  return svg(w, h, `<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="0.45" stop-color="${b}"/><stop offset="0.8" stop-color="${c}"/><stop offset="1" stop-color="${d}"/></linearGradient></defs>
-    <rect width="${w}" height="${h}" fill="url(#${id})"/>${sun}<rect width="${w}" height="${h}" fill="url(#grain)" opacity="0.5"/>`);
-}
-// height of a ridge's skyline at x (0..1 of its width), as a fraction of its box (1 = top)
-function skyline(sh) {
-  const n = noise1(sh.seed);
-  return (x) => {
-    let y = sh.base;
-    for (const [cx, hgt, wd] of sh.peaks) { const d = (x - cx) / wd; y = Math.max(y, sh.base + (hgt - sh.base) * Math.exp(-d * d * 0.5) * (1 - Math.abs(d) * 0.02)); }
-    y += (n(x * 6) * 0.5 + n(x * 17 + 40) * 0.3 + n(x * 47 + 90) * 0.2) * sh.rough;
-    if (sh.dip) { const [cx, depth, wd] = sh.dip, d = (x - cx) / wd; y -= depth * Math.exp(-d * d * 2) * (y - 0.05); }
-    return clamp(y, 0.02, 1);
-  };
-}
-// the ground a ridge stands on: its own colour, in its own shade
-const foot = (color) => mix(color, '#000000', 0.34);
-function ridgeArt(w, h, sh, color, rim, rimA, haze, extra, view) {
-  const id = 'rg' + uid++, f = skyline(sh), step = Math.max(3, w / 420);
-  let top = '';
-  for (let x = 0; x <= w + step; x += step) top += `${top ? 'L' : 'M'}${Math.min(x, w).toFixed(1)} ${((1 - f(Math.min(x, w) / w)) * h).toFixed(1)}`;
-  const fill = `${top}L${w} ${h}L0 ${h}Z`;
-  // light catches the crest and fades down the slope; the base darkens into the ground it stands on
-  const hz = clamp(h * 0.09, 10, 44), fade = Math.min(h * 0.6, H * 0.18);
-  const glow = haze ? `<g clip-path="url(#${id}c)"><path d="${top}" fill="none" stroke="${haze}" stroke-width="${(hz * 2).toFixed(1)}" filter="url(#${id}b)"/></g>` : '';
-  return svg(w, h, `<defs><clipPath id="${id}c"><path d="${fill}"/></clipPath>
-    <filter id="${id}b" filterUnits="userSpaceOnUse" x="${-hz * 3}" y="${-hz * 3}" width="${w + hz * 6}" height="${h + hz * 6}"><feGaussianBlur stdDeviation="${(hz * 0.5).toFixed(1)}"/></filter>
-    <linearGradient id="${id}f" gradientUnits="userSpaceOnUse" x1="0" y1="${(h - fade).toFixed(1)}" x2="0" y2="${h.toFixed(1)}"><stop offset="0" stop-color="${foot(color)}" stop-opacity="0"/><stop offset="1" stop-color="${foot(color)}"/></linearGradient></defs>
-    <path d="${fill}" fill="${color}"/>${glow}<path d="${fill}" fill="url(#${id}f)"/><path d="${fill}" fill="url(#grain)"/>
-    <path d="${top}" fill="none" stroke="${rim}" stroke-opacity="${rimA}" stroke-width="1.3" stroke-linejoin="round"/>${extra || ''}`, view);
-}
-// the colour a layer's art is painted in, for the ridges and the mountain
-function artColor(pg, el) {
-  if (el.dataset.art === 'mountain') return '#33414f';
-  if (el.dataset.art !== 'ridge') return null;
-  return PAL[pg.id].ridges[$$('[data-art="ridge"]', pg.el).indexOf(el)];
-}
-
-/* ------------------------------------------------------------------ page 2: the climb, from data.js */
+/* ------------------------------------------------------------------ scene 2: the climb, from data.js */
 const steps = D.path; // oldest first
 const stepsEl = $('#steps');
-stepsEl.innerHTML = steps.map((s, k) => `
-  <li class="layer step-flag${k === steps.length - 1 ? ' now' : ''}" data-k="${k}">
+stepsEl.innerHTML = steps.map((s, k) => {
+  const now = k === steps.length - 1;
+  return `<li class="layer step-flag${now ? ' now' : ''}" data-k="${k}" tabindex="0">
     <span class="pole" aria-hidden="true"></span>
-    <p class="tag"><b>${esc(s.y)}</b><span>${esc(s.r)}</span></p>
-  </li>`).join('');
-// the trail as a smooth curve, and the points along it where each year's flag stands
-function trailPath(w, h) {
-  const P = TRAIL.map(([x, y]) => [x * w, y * h]);
-  let d = `M${P[0][0].toFixed(1)} ${P[0][1].toFixed(1)}`;
-  for (let i = 0; i < P.length - 1; i++) {
-    const p0 = P[i - 1] || P[i], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2] || p2;
-    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-    d += `C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
-  }
-  return d;
-}
-function trailPoints(n) {
-  const seg = [];
-  let total = 0;
-  for (let i = 1; i < TRAIL.length; i++) { const l = Math.hypot(TRAIL[i][0] - TRAIL[i - 1][0], (TRAIL[i][1] - TRAIL[i - 1][1]) * 0.8); seg.push(l); total += l; }
-  return Array.from({ length: n }, (_, k) => {
-    let want = (k / (n - 1)) * total, i = 0;
-    while (i < seg.length - 1 && want > seg[i]) { want -= seg[i]; i++; }
-    const f = Math.min(1, want / seg[i]);
-    return [lerp(TRAIL[i][0], TRAIL[i + 1][0], f), lerp(TRAIL[i][1], TRAIL[i + 1][1], f)];
-  });
-}
+    <p class="tag"><b>${esc(s.y)}${now ? ' · so far' : ''}</b><span>${esc(s.r)}</span></p>
+    <p class="d">${esc(s.d)}</p>
+  </li>`;
+}).join('');
 
-/* ------------------------------------------------------------------ page 3: the work, all seven */
+/* ------------------------------------------------------------------ scene 3: the work, all seven */
 const PROJ = Object.fromEntries(D.projects.map((p) => [p.id, p]));
 const FRONT = ['relay', 'tracewise', 'onboard', 'dispatch'], BACK = ['atlas', 'intonation', 'layerline'];
 const FIG = { relay: F.Relay, tracewise: F.Tracewise, onboard: F.Onboard, dispatch: F.Dispatch, atlas: F.Atlas, intonation: F.Studio, layerline: F.Layerline };
 const panelsEl = $('#panels');
 panelsEl.innerHTML = [...BACK, ...FRONT].map((id) => {
   const p = PROJ[id], L = D.live[id], back = BACK.includes(id);
-  return `<a class="layer panel${back ? ' back' : ''}" data-id="${id}" href="/explore/#work/${id}" style="--c:${p.color}" aria-label="${esc(p.name)}: ${esc(p.kind)}. ${esc(L.tag[0])} ${esc(L.tag[1])}.">
+  // the front row carries two of the project's own measurements; the back row its headline number
+  const nums = back ? '' : `<span class="nums">${p.metrics.slice(0, 2).map(([n, l]) => `<span><b>${esc(n)}</b><small>${esc(l)}</small></span>`).join('')}</span>`;
+  return `<a class="layer panel${back ? ' back' : ' has-nums'}" data-id="${id}" href="/explore/#work/${id}" style="--c:${p.color}" aria-label="${esc(p.name)}: ${esc(p.kind)}. ${esc(L.tag[0])} ${esc(L.tag[1])}.">
     <canvas aria-hidden="true"></canvas>
-    <span class="cap"><i></i><b>${esc(p.name)}</b><small>${esc(p.kind)}</small><span>${esc(L.tag[0])}</span></span>
+    <span class="hint" aria-hidden="true">${esc(L.line)}</span>
+    ${nums}
+    <span class="cap"><i></i><b>${esc(p.name)}</b><small>${esc(p.kind)}</small>${back ? `<span>${esc(L.tag[0])}</span>` : ''}</span>
   </a>`;
 }).join('');
-const panels = $$('.panel', panelsEl).map((el) => ({ el, id: el.dataset.id, c: $('canvas', el), fig: null, warm: false, w: 0, h: 0, hot: false, last: 0 }));
+const panels = $$('.panel', panelsEl).map((el) => ({ el, id: el.dataset.id, c: $('canvas', el), fig: null, w: 0, h: 0, hot: false, last: 0 }));
 function workLayout(W, H) {
   const ph = narrow(), out = {};
   if (!ph) {
     const g = Math.max(28, W * 0.04), gap = 18;
-    const fw = (W - 2 * g - 3 * gap) / 4, fh = Math.min(H * 0.33, fw * 0.95), fb = H * 0.93;
+    const fw = (W - 2 * g - 3 * gap) / 4, fh = Math.min(H * 0.36, fw * 1.02), fb = H * 0.93;
     FRONT.forEach((id, i) => { out[id] = { l: g + i * (fw + gap), t: fb - fh, w: fw, h: fh }; });
-    const bw = Math.min(fw * 0.92, (W * 0.6 - 2 * gap) / 3), bh = Math.min(H * 0.24, bw * 0.78), bb = H * 0.535;
+    const bw = Math.min(fw * 0.92, (W * 0.6 - 2 * gap) / 3), bh = Math.min(H * 0.22, bw * 0.74), bb = H * 0.5;
     const bl = W - g - (3 * bw + 2 * gap);
     BACK.forEach((id, i) => { out[id] = { l: bl + i * (bw + gap), t: bb - bh, w: bw, h: bh }; });
   } else {
@@ -236,8 +169,9 @@ function workLayout(W, H) {
   return out;
 }
 
-/* ------------------------------------------------------------------ page 4: the craft */
-const specs = mountSpecimens($('#specs'), { isLive: () => live.craft });
+/* ------------------------------------------------------------------ scene 4: the craft */
+let moving = false;
+const specs = mountSpecimens($('#specs'), { isLive: () => live.craft, slow: () => moving || tier !== 'high' });
 function craftLayout(W, H) {
   const ph = narrow(), out = [];
   if (!ph) {
@@ -254,9 +188,13 @@ function craftLayout(W, H) {
   return out;
 }
 
-/* ------------------------------------------------------------------ the scenes */
+/* ------------------------------------------------------------------ the scenes, measured */
 let W = 0, H = 0, P = 0, ox = 0, oy = 0, Yf = 0, STEP = 1, DZ = 0;
+const scenes = $$('.page').map((el, i) => ({ el, i, id: el.id, items: [], floor: null, sky: null }));
+const N = scenes.length;
 const live = { work: false, craft: false };
+let A = [], veil = [], camp = null, painted = [], radial = null;
+const mists = new Map();
 
 function place(el, r) { Object.assign(el.style, { left: r.l + 'px', top: r.t + 'px', width: r.w + 'px', height: r.h + 'px', right: 'auto', bottom: 'auto' }); }
 
@@ -265,29 +203,29 @@ function layout() {
   P = Math.max(W, H) * 1.2;
   ox = W / 2; oy = -0.4 * H; Yf = H;
   STEP = H * (narrow() ? 0.8 : 0.9); // the scroll from one scene to the next
-  DZ = P * 0.42;                      // and how far apart they stand
+  DZ = P * 0.42;                      // and how far apart two scenes stand
   scroller.style.height = ((N - 1) * STEP + H) + 'px';
   stage.style.perspective = P + 'px';
+  for (const t of painted) gl?.release(t);
+  painted = [];
+  const T = (c, o) => { if (!gl) return null; const t = gl.texture(c, o); painted.push(t); return t; };
+  const K = TIERS[tier].art, KT = Math.min(devicePixelRatio || 1, 2);
 
-  for (const pg of pages) {
-    pg.el.style.transform = '';
-    pg.el.classList.remove('off');
-    pg.layers = $$('.layer', pg.el).map((el) => ({ el }));
-    for (const L of pg.layers) {
-      L.el.style.transform = 'none';
-      if (L.el._half) { Object.assign(L.el.style, { left: '', width: '', right: '' }); L.el._half.style.display = 'none'; }
-    }
+  for (const sc of scenes) {
+    sc.el.style.transform = '';
+    sc.el.style.opacity = '';
+    sc.el.classList.remove('off');
+    for (const el of $$('.layer', sc.el)) Object.assign(el.style, { transform: 'none', opacity: '', visibility: '' });
   }
   // boxes that depend on the screen
-  const mt = $('.mountain');
-  const mr = mt.getBoundingClientRect(), so = stage.getBoundingClientRect();
-  const pts = trailPoints(steps.length);
+  const mt = $('.mountain'), sr0 = stage.getBoundingClientRect(), mr = mt.getBoundingClientRect();
+  const pts = along(TRAIL, steps.length);
   $$('.step-flag', stepsEl).forEach((el) => {
     const k = +el.dataset.k, [fx, fy] = pts[k];
-    const x = mr.left - so.left + fx * mr.width, y = mr.top - so.top + fy * mr.height, fh = H * (narrow() ? 0.075 : 0.095);
+    const x = mr.left - sr0.left + fx * mr.width, y = mr.top - sr0.top + fy * mr.height, fh = H * (narrow() ? 0.075 : 0.095);
     el.style.width = '';
     const fw = el.querySelector('.tag').offsetWidth + 2;
-    const left = x + fw > W - 12;
+    const left = x + fw > W - 12 || el.classList.contains('now');
     el.classList.toggle('left', left);
     place(el, { l: left ? x - fw : x, t: y - fh, w: fw, h: fh });
   });
@@ -295,91 +233,298 @@ function layout() {
   for (const p of panels) place(p.el, wl[p.id]);
   craftLayout(W, H).forEach((r, i) => place(specs.items[i].el, r));
 
-  // read every layer's flat box, then give it depth
-  $('#skies').style.transform = '';
   const sr = stage.getBoundingClientRect();
-  const mtS = (() => { const r = mt.getBoundingClientRect(); return (r.bottom - sr.top - oy) / (Yf - oy); })();
-  $$('.step-flag', stepsEl).forEach((el) => { const k = +el.dataset.k; el.dataset.s = (mtS + 0.015 + k * 0.002).toFixed(4); el.dataset.ord = (0.5 + k * 0.09).toFixed(3); });
-  for (const pg of pages) {
-    // the sky's foot is where the floor ends; layers just in front of it say so as "sky+0.03"
-    const skr = pg.sky.el.getBoundingClientRect();
-    const skyS = (skr.bottom - sr.top - oy) / (Yf - oy);
-    pg.sky.w = skr.width; pg.sky.h = skr.height;
-    pg.sky.z = P * (1 - 1 / skyS); // the sky stands at the far edge of the floor
-    pg.sky.wrap.style.transformOrigin = `${ox}px ${oy}px`;
-    paint(pg, pg.sky);
-    for (const L of pg.layers) {
-      const r = L.el.getBoundingClientRect();
-      const l = r.left - sr.left, t = r.top - sr.top, w = r.width, h = r.height;
-      // a layer that hangs off the screen is laid out from x = 0 in two halves, each moved back
-      // into place by its transform (see the halves at the top)
-      L.split = !!L.el._half && (l < -0.5 || w > W + 0.5);
-      if (L.split) {
-        Object.assign(L.el.style, { left: '0px', width: w / 2 + 'px', right: 'auto' });
-        Object.assign(L.el._half.style, { display: 'block', left: '0px', top: t + 'px', width: w / 2 + 'px', height: h + 'px' });
+  const box = (el) => { const r = el.getBoundingClientRect(); return { l: r.left - sr.left, t: r.top - sr.top, w: r.width, h: r.height }; };
+  const sFrom = (bottom) => (Math.max(bottom, oy + 40) - oy) / (Yf - oy);
+  const mtS = sFrom(box(mt).t + box(mt).h);
+  $$('.step-flag', stepsEl).forEach((el) => { const k = +el.dataset.k; el.dataset.s = (mtS + 0.015 + k * 0.002).toFixed(4); el.dataset.ord = (0.45 + k * 0.08).toFixed(3); });
+
+  stage.classList.add('paint'); // the words in the landscape, in their real colours, to paint them
+  for (const sc of scenes) {
+    const pal = PAL[sc.id];
+    const hz = parseFloat(getComputedStyle(sc.el).getPropertyValue('--hz')) / 100 || 0.5;
+    sc.hy = hz * H; sc.skyS = sFrom(sc.hy); sc.skyZ = P * (1 - 1 / sc.skyS);
+    sc.items = [];
+    const ridges = $$('.gl[data-art="ridge"]', sc.el);
+    // every box gets its depth from its bottom edge (or says where it stands, as "sky+0.03")
+    const item = (el, role, b, s) => {
+      const z = P * (1 - 1 / s), bot = Math.max(b.t + b.h, oy + 40);
+      const it = { el, role, b, s, z, Yb: oy + (bot - oy) / s, ord: 0, xf: clamp((b.l + b.w / 2) / W), alpha: 1, rise: 1, dx: 0, dy: 0 };
+      sc.items.push(it);
+      return it;
+    };
+    const sOf = (el, b) => { const ds = el.dataset.s; return ds ? (ds.startsWith('sky') ? sc.skyS + parseFloat(ds.slice(3)) : +ds) : sFrom(b.t + b.h); };
+
+    // the landscape
+    for (const el of $$('.gl', sc.el)) {
+      const art = el.dataset.art, b = box(el);
+      el.querySelector(':scope > canvas')?.remove();
+      if (art === 'sky') {
+        // drawn by the shader; painted only when there is no WebGL
+        if (!gl) el.append(paintSky(b.w, b.h, 0.5, { sky: pal.sky, sun: { ...pal.sun, glow: `rgba(${tint(pal.sun.glow[0]).map((v) => Math.round(v * 255))},${pal.sun.glow[1]})` }, ground: [foot(pal.summit || pal.ridges[0]), foot(pal.ridges[pal.ridges.length - 1])] }, sc.hy - b.t, -0.3 * H - b.t, -0.12 * W + pal.sun.x * 1.24 * W));
+        continue;
       }
-      const b = Math.max(t + h, oy + 40);
-      const ds = L.el.dataset.s;
-      L.s = ds ? (ds.startsWith('sky') ? skyS + parseFloat(ds.slice(3)) : +ds) : (b - oy) / (Yf - oy);
-      L.z = P * (1 - 1 / L.s);
-      L.yb = oy + (b - oy) / L.s - t; // the bottom edge, in the layer's own pixels: the fold's hinge
-      const at = (x0, dx) => { const cx = ox - x0, cy = oy - t; return `translate(${cx.toFixed(2)}px,${cy.toFixed(2)}px) scale(${(1 / L.s).toFixed(5)}) translate(${(-cx).toFixed(2)}px,${(-cy).toFixed(2)}px)` + (dx ? ` translate(${dx.toFixed(2)}px,0px)` : ''); };
-      L.place = L.split ? at(0, l) : at(l, 0);
-      if (L.split) L.place2 = at(0, l + w / 2);
-      L.w = w; L.h = h;
-      L.color = artColor(pg, L.el);
-      paint(pg, L);
+      let c, it;
+      if (art === 'mist') {
+        const key = pal.mist;
+        if (!mists.has(key) || !gl) mists.set(key, paintMist(pal.mist));
+        c = mists.get(key);
+        it = item(el, 'mist', b, sOf(el, b));
+        it.tex = T(c, { repeat: true }); it.tile = b.w / 640;
+        if (!gl) { const cv = document.createElement('canvas'); cv.width = c.width; cv.height = c.height; cv.getContext('2d').drawImage(c, 0, 0); el.append(cv); }
+        continue;
+      }
+      if (art === 'text') {
+        c = paintText(el, { l: b.l + sr.left, t: b.t + sr.top, w: b.w, h: b.h }, KT);
+        it = item(el, 'text', b, sOf(el, b));
+      } else {
+        const k = ridges.indexOf(el), big = art !== 'ridge';
+        // land runs on past each end, for when a scene is seen from further off than at rest
+        const opt = { H, color: big ? pal[art] : pal.ridges[k], rim: pal.rim, rimA: big ? 0.7 : pal.rimA[k], haze: pal.haze, pad: big ? Math.round(H * 0.08) : 0, side: Math.round(b.w * 0.22), face: big ? pal.face : null };
+        if (art === 'ridge') c = paintRidge(b.w, b.h, K, SHAPE[sc.id][k], opt);
+        else if (art === 'mountain') c = paintRidge(b.w, b.h, K, SHAPE.mountain, opt, (x, f) => mountainMarks(x, f, b.w, b.h, W - b.l));
+        else c = paintRidge(b.w, b.h, K, SHAPE.summit, opt, (x, f) => summitMarks(x, f, b.w, b.h, sc.id === 'contact'));
+        it = item(el, 'paper', b, sOf(el, b));
+        it.art = art; it.color = opt.color; it.pad = opt.pad; it.side = opt.side;
+      }
+      it.tex = T(c);
+      if (!gl) {
+        // without WebGL the painting sits in its box, running on past it as it does on the canvas
+        const pd = it.pad || 0, sd = it.side || 0;
+        c.style.cssText = `left:${-sd}px;top:${-pd}px;width:${b.w + 2 * sd}px;height:${b.h + pd}px`;
+        el.append(c);
+      }
+      // a sheet that tears in two: down its lowest point, or between its words
+      if ('tear' in el.dataset) it.pieces = tear(el, it, art === 'ridge' ? SHAPE[sc.id][ridges.indexOf(el)] : null, it.side || 0);
     }
-    // back to front: the order layers stand up in (and fold down in, reversed)
-    const sorted = [...pg.layers].sort((a, b) => a.s - b.s);
-    sorted.forEach((L, k) => { L.ord = L.el.dataset.ord ? +L.el.dataset.ord : sorted.length > 1 ? k / (sorted.length - 1) : 1; L.lift = k * 0.7; });
-    // the scene's floor, from just in front of the screen back to the foot of the sky. Where ridges
-    // stand, the ground under each is the shade its foot fades into, so land runs on between them.
-    // It is wide enough to fill the screen even from a scene away, and its far edge fades into the
-    // sky. (Drawn at its full size: scaled up from a smaller box, Chrome left parts unpainted.)
-    if (!pg.floor) { pg.floor = document.createElement('div'); pg.floor.className = 'floor'; pg.el.prepend(pg.floor); }
-    const far = -P * (1 - 1 / skyS) - 1, near = P * 0.15, span = far + near, fl = PAL[pg.id].floor;
-    const half = W * (0.6 + 0.5 * (far + DZ) / P);
-    const at = (z) => (clamp((near - z) / span) * 100).toFixed(2) + '%';
-    const ground = pg.layers.filter((L) => L.color).sort((a, b) => b.z - a.z);
-    Object.assign(pg.floor.style, {
-      // each scene's floor a hair below the one before, so where the two overlap mid-move the scene
-      // you are leaving is the ground in front, rather than two floors fighting in one plane
-      left: (ox - half) + 'px', top: (Yf + 0.5 + pg.i * 1.2) + 'px', width: half * 2 + 'px', height: span + 'px',
-      transform: `translate3d(0px,0,${near}px) rotateX(-90deg)`,
-      background: `url(${GRAIN}), ` +
-        (ground.length ? `linear-gradient(${ground.map((L) => `${foot(L.color)} ${at(L.z)}`).join(', ')})` : `linear-gradient(${fl[0]}, ${fl[0]} ${at(0)}, ${fl[1]})`)
-    });
-    const [gNear, gFar] = ground.length ? [foot(ground[0].color), foot(ground[ground.length - 1].color)] : fl;
-    Object.assign(pg.sky.ground.style, { top: (skr.bottom - sr.top) + 'px', background: `url(${GRAIN}), linear-gradient(${gFar}, ${gNear})` });
+    // the page's own content
+    for (const el of $$('.layer', sc.el)) {
+      const b = box(el), s = sOf(el, b);
+      const role = el.classList.contains('panel') ? 'panel' : el.classList.contains('spec') ? 'spec' : el.classList.contains('step-flag') ? 'flag' : el.classList.contains('foot') ? 'foot' : 'words';
+      const it = item(el, role, b, s);
+      it.dom = true;
+      it.yb = it.Yb - b.t; // the bottom edge, in the layer's own pixels: the fold's hinge
+      const cx = ox - b.l, cy = oy - b.t;
+      it.place = `translate(${cx.toFixed(2)}px,${cy.toFixed(2)}px) scale(${(1 / s).toFixed(5)}) translate(${(-cx).toFixed(2)}px,${(-cy).toFixed(2)}px)`;
+      if (role === 'flag') { it.k = +el.dataset.k; it.now = el.classList.contains('now'); }
+    }
+    // back to front: the order things stand up in (and lie down in, reversed)
+    const sorted = sc.items.filter((it) => it.role !== 'mist').sort((a, b) => a.s - b.s);
+    sorted.forEach((it, k) => { it.ord = it.el.dataset.ord ? +it.el.dataset.ord : sorted.length > 1 ? k / (sorted.length - 1) : 1; });
+    for (const it of sc.items) if (it.role === 'mist') it.ord = sorted.find((o) => o.s >= it.s)?.ord ?? 1;
+
+    // the floor, from just in front of the screen back to the foot of the sky. Under each ridge the
+    // ground is the shade its foot fades into, so land runs on between them; the far edge fades.
+    const near = P * 0.6, far = sc.skyZ, at = (z) => (near - z) / (near - far);
+    const ground = sc.items.filter((it) => it.color).sort((a, b) => b.z - a.z);
+    sc.ground = foot(ground[ground.length - 1].color); // the land at the horizon, under the farthest ridge
+    sc.floor = { tex: T(paintFloor(ground.map((it) => [at(it.z), foot(it.color)]))), near, far, half: W * 2.6 };
+    sc.sky = skyOf(sc, pal);
   }
+  stage.classList.remove('paint');
+
+  radial = radial || paintRadial();
+  const glow = T(radial);
+  // the camp on the climb's mountain: a warm light, and the point the camera flies to
+  {
+    const sc = scenes[1], mtI = sc.items.find((it) => it.art === 'mountain'), b = mtI.b, [cx, cy] = TRAIL[TRAIL.length - 1];
+    const fx = b.l + cx * b.w, fy = b.t + cy * b.h, r = Math.max(46, W * 0.05);
+    // (it folds about its mountain's foot, as if painted on it)
+    const g = { role: 'soft', b: { l: fx - r, t: fy - r * 0.8, w: r * 2, h: r * 1.6 }, s: mtI.s * 1.001, Yb: mtI.Yb, ord: mtI.ord, tex: glow, blend: 'add', tintC: tint('#ffb15e'), base: 0.55, pulse: true };
+    g.z = P * (1 - 1 / g.s);
+    sc.items.push(g);
+    camp = { X: ox + (fx - ox) / mtI.s, Y: oy + (fy - oy) / mtI.s, Z: mtI.z };
+    // and the cloud that hides the way from the camp to the summit
+    summitCloud(sc, mtI, peakOf(SHAPE.mountain, 0.7, 0.9), PAL.climb.cloud, T, 0.17, 0.26);
+  }
+  {
+    const sc = scenes[2], sm = sc.items.find((it) => it.art === 'summit');
+    summitCloud(sc, sm, peakOf(SHAPE.summit, 0.4, 0.6), PAL.work.cloud, T, 0.2, 0.34);
+  }
+  // pools of light under the panels and the specimens, and a glow behind each panel
+  for (const [sc, role, col] of [[scenes[2], 'panel', null], [scenes[3], 'spec', '#ffb36b']]) {
+    for (const it of sc.items.filter((o) => o.role === role)) {
+      const c = tint(col || PROJ[it.el.dataset.id].color), b = it.b;
+      const x0 = ox + (b.l - b.w * 0.25 - ox) / it.s, x1 = ox + (b.l + b.w * 1.25 - ox) / it.s;
+      sc.items.push({ role: 'pool', owner: it, mode: 1, b: { l: x0, t: 0, w: x1 - x0, h: 0 }, fl: [it.z + P * 0.07, it.z - P * 0.05, Yf, 0], z: it.z, s: it.s, ord: it.ord, tex: glow, blend: 'add', tintC: c, base: col ? 0.42 : 0.36 });
+      if (role === 'panel') {
+        const e = Math.max(b.w, b.h) * 0.22;
+        const hb = { l: b.l - e, t: b.t - e, w: b.w + 2 * e, h: b.h + 2 * e };
+        sc.items.push({ role: 'halo', owner: it, b: hb, s: it.s * 0.999, z: it.z - 1, Yb: it.Yb, ord: it.ord, tex: glow, blend: 'add', tintC: c, base: 0.26 });
+      }
+    }
+  }
+  // the clouds between the craft and contact: three banks, nearer ones paler and lit
+  veil = [];
+  const VEIL = [
+    { s: 0.72, t: -0.16, light: '#ffc2a0', body: '#6a4a62', deep: '#2e2238', seed: 3 },
+    { s: 0.88, t: 0.02, light: '#ffcfae', body: '#59405a', deep: '#2a1f34', seed: 5 },
+    { s: 1.04, t: 0.2, light: '#ffd9bc', body: '#4a3550', deep: '#1f1828', seed: 9 }
+  ];
+  VEIL.forEach((v, n) => {
+    const b = { l: -0.3 * W, t: v.t * H, w: 1.6 * W, h: 1.3 * H };
+    const tex = T(paintCloud(b.w, b.h, Math.min(0.5, K), v));
+    const it = { role: 'veil', n, b, s: v.s, z: P * (1 - 1 / v.s), tex, cutX: 0.5 + (n - 1) * 0.04 };
+    it.Yb = oy + (b.t + b.h - oy) / it.s;
+    veil.push(it);
+  });
+
+  // where each scene stands in the world, and so how the camera moves between them
+  const flyZ = P * 0.7, Z1 = camp.Z + flyZ, ty = H * 0.62;
+  const FLY = [camp.X - ox, camp.Y - (oy + (ty - oy) * (P - Z1) / P), -flyZ];
+  A = [[0, 0, 0]];
+  A[1] = [0, 0, -DZ];
+  A[2] = A[1].map((v, k) => v + FLY[k]);
+  A[3] = [A[2][0] + W * 1.25, A[2][1], A[2][2]];
+  A[4] = [A[3][0], A[3][1] - H * 1.0, A[3][2] - P * 0.25];
+
   for (const p of panels) sizePanel(p);
+  sizeCanvas();
   dirty = true;
 }
-
-// draw a layer's art at its own size (both halves, for a layer drawn in two)
-function paint(pg, L) {
-  const kind = L.el.dataset.art;
-  if (!kind) return;
-  const key = `${kind}:${L.w.toFixed(0)}x${L.h.toFixed(0)}:${L.split ? 2 : 1}`;
-  if (L.el._key === key) return;
-  L.el._key = key;
-  const pal = PAL[pg.id], { w, h } = L;
-  const art = (view) => {
-    if (kind === 'sky') return skyArt(w, h, pal);
-    if (kind === 'ridge') {
-      const k = $$('[data-art="ridge"]', pg.el).indexOf(L.el);
-      return ridgeArt(w, h, SHAPE[pg.id][k], L.color, pal.rim, pal.rimA[k], pal.haze, '', view);
-    }
-    // the mountain, with its trail and a dot for each year
-    const pts = trailPoints(steps.length);
-    const dots = pts.map(([x, y], k) => `<circle cx="${(x * w).toFixed(1)}" cy="${(y * h).toFixed(1)}" r="${k === pts.length - 1 ? 4 : 3}" fill="${k === pts.length - 1 ? '#ffb547' : '#e8f0f6'}"/>`).join('');
-    const trail = `<path d="${trailPath(w, h)}" fill="none" stroke="#e8f0f6" stroke-opacity="0.45" stroke-width="1.4" stroke-dasharray="2 6" stroke-linecap="round"/>${dots}`;
-    return ridgeArt(w, h, SHAPE.mountain, L.color, PAL.climb.rim, 0.75, PAL.climb.haze, trail, view);
+// the sky's colours and where its horizon and sun sit when the scene is at rest
+function skyOf(sc, pal) {
+  const s = pal.sun, g0 = sc.ground, g1 = sc.ground;
+  const span = sc.hy + 0.3 * H;
+  const sunX = -0.12 * W + s.x * 1.24 * W, sunY = -0.3 * H + s.y * span;
+  const r = s.r * Math.min(1.24 * W, span * 1.6), gr = Math.max(r, 0.05 * Math.min(1.24 * W, span * 1.6)) * 6;
+  return {
+    colours: new Float32Array([...pal.sky, g0, g1, s.c].flatMap(tint)),
+    span, sunX, sunY, r, gr, glow: [...tint(s.glow[0]), s.glow[1]],
+    // the sun stands at the far edge of the floor, with the horizon
+    sunW: [ox + (sunX - ox) / sc.skyS, oy + (sunY - oy) / sc.skyS]
   };
-  L.el.querySelector(':scope > svg.art')?.remove();
-  L.el.insertAdjacentHTML('afterbegin', art(L.split ? [0, w / 2] : [0, w]));
-  if (L.split) L.el._half.innerHTML = art([w / 2, w / 2]);
+}
+// Split a sheet in two for the cover's parting: down its lowest point (a ridge), or between its two
+// words (the name), as two pieces that share its texture, each keeping its own side of the cut.
+function tear(el, it, shape, side) {
+  if (shape) {
+    const w = it.b.w, x = (side + valley(shape, 0.36, 0.64) * w) / (w + 2 * side);
+    return [{ side: -1, sub: [0, 0, Math.min(1, x + 0.05), 1], cut: [x, -1, 0.012, 34] }, { side: 1, sub: [Math.max(0, x - 0.05), 0, 1, 1], cut: [x, 1, 0.012, 34] }];
+  }
+  const [a, b] = $$('span', el).map((s) => s.getBoundingClientRect()), r = el.getBoundingClientRect();
+  if (b.top >= a.bottom - 2) { // stacked, as on a phone: cut across, between the lines
+    const y = ((a.bottom + b.top) / 2 - r.top) / r.height;
+    return [{ side: -1, sub: [0, 0, 1, y], cut: [y, -1, 0, -1] }, { side: 1, sub: [0, y, 1, 1], cut: [y, 1, 0, -1] }];
+  }
+  const x = ((a.right + b.left) / 2 - r.left) / r.width;
+  return [{ side: -1, sub: [0, 0, x, 1], cut: [x, -1, 0, 1] }, { side: 1, sub: [x, 0, 1, 1], cut: [x, 1, 0, 1] }];
+}
+// A cloud hanging on a summit's upper slopes, in two drifting halves, just in front of it.
+function summitCloud(sc, mt, [px, py], col, T, top, hgt) {
+  const b = mt.b, w = Math.max(200, b.w * 0.19), h = b.h * hgt;
+  const cx = b.l + px * b.w, cy = b.t + (1 - py) * b.h + b.h * top;
+  [-1, 1].forEach((side, n) => {
+    const cb = { l: cx - w * 0.55 + side * w * 0.22, t: cy - h * 0.35, w, h };
+    const it = { role: 'soft', b: cb, s: mt.s * 1.003 + n * 0.001, ord: mt.ord, tex: T(paintPuff(cb.w, cb.h, 0.6, { ...col, seed: 21 + n * 7 })), drift: side * Math.max(10, w * 0.05), phase: n * 2.1, base: 0.8 };
+    it.z = P * (1 - 1 / it.s); it.Yb = mt.Yb; // it folds with its mountain
+    sc.items.push(it);
+  });
+}
+// the climb's mountain: the trail so far with a dot a year, the camp, the way on fading into cloud,
+// and on the summit a bare pole with an empty pennant
+function mountainMarks(x, f, w, h, room) {
+  const at = (P) => P.map(([a, b]) => [a * w, b * h]);
+  trail(x, at(TRAIL), '#e8f0f6', 0.5, 0.55);
+  trail(x, at(BEYOND), '#e8f0f6', 0.5, 0);
+  along(TRAIL, steps.length).forEach(([a, b], k) => {
+    x.fillStyle = k === steps.length - 1 ? '#ffb547' : '#e8f0f6';
+    x.beginPath(); x.arc(a * w, b * h, k === steps.length - 1 ? 4 : 3, 0, Math.PI * 2); x.fill();
+  });
+  // the camp: a tent beside the last flag
+  const [cx, cy] = TRAIL[TRAIL.length - 1], tx = cx * w + 14, ty = cy * h + 2, ts = Math.max(9, h * 0.018);
+  x.fillStyle = '#ffcf8a'; x.beginPath(); x.moveTo(tx, ty); x.lineTo(tx + ts * 0.7, ty - ts); x.lineTo(tx + ts * 1.4, ty); x.closePath(); x.fill();
+  const [sx] = peakOf(SHAPE.mountain, 0.7, 0.9);
+  // the pennant flies left if the screen ends too close on its right
+  const ps = Math.max(30, h * 0.075);
+  pennant(x, sx * w, (1 - f(sx)) * h + 1.5, ps, 'rgba(232,240,246,0.85)', 'next', room - sx * w < ps * 1.9 ? -1 : 1);
+}
+// the summit from the camp, with its pennant; at contact, with the trail up it too
+function summitMarks(x, f, w, h, climbed) {
+  const [sx] = peakOf(SHAPE.summit, 0.4, 0.6);
+  if (climbed) trail(x, TRAIL_UP.map(([a, b]) => [a * w, b * h]), '#ffd2b4', 0.15, 0.7, 1.6);
+  pennant(x, sx * w, (1 - f(sx)) * h + 1.5, Math.max(climbed ? 34 : 22, h * (climbed ? 0.09 : 0.06)), climbed ? 'rgba(255,214,186,0.9)' : 'rgba(232,240,246,0.7)', climbed ? 'next' : '');
+}
+
+/* ------------------------------------------------------------------ the moves */
+// Each move between two scenes has its own way in and out. t: how far through the move, 0 to 1.
+// Each sets an item's pose: rise (1 standing, 0 flat), alpha, and dx, dy (moved in the world).
+const KIND = ['part', 'fly', 'pan', 'clouds'];
+const rising = (it, t, from, span, gap = 0.36) => { const r = stand(clamp((t - from - it.ord * gap) / span)); it.rise = r; it.alpha = clamp(r / 0.12); };
+const MOVES = {
+  // the cover tears at its valleys and parts, nearer sheets further; the mountain stands up behind
+  part: {
+    out(it, t) {
+      if (it.role === 'mist') it.alpha = 1 - clamp(t / 0.3);
+      else if (it.role === 'foot') { it.alpha = 1 - clamp(t / 0.16); it.dy = t * H * 0.05; }
+      // each piece goes far enough to clear the screen, the nearer ones first
+      else { it.part = easeInOut(clamp((t - 0.03 - (1 - it.ord) * 0.14) / 0.56)) * W * 0.8 / it.s; it.alpha = 1 - clamp((t - 0.6) / 0.25); }
+    },
+    in(it, t) {
+      if (it.role === 'mist') it.alpha = clamp((t - 0.3) / 0.4);
+      else if (it.role === 'words') rising(it, t, 0.45, 0.4, 0);
+      else rising(it, t, 0.1, 0.42, 0.4);
+    },
+    sky: (t) => 1 - easeInOut(clamp((t - 0.18) / 0.45)),
+    floor: (t) => 1 - clamp((t - 0.12) / 0.3)
+  },
+  // the camera flies to the camp and into the cloud beside it; the years fall away, and the work is
+  // there when it clears
+  fly: {
+    out(it, t) {
+      if (it.role === 'flag') it.alpha = it.now ? 1 - clamp((t - 0.24) / 0.2) : 1 - clamp((t - (5 - it.k) * 0.02) / 0.18);
+      else if (it.role === 'words') { it.alpha = 1 - clamp(t / 0.2); it.dy = -t * H * 0.1; }
+      else it.alpha = 1 - clamp((t - 0.44) / 0.18);
+    },
+    in(it, t) {
+      if (it.dom) rising(it, t, 0.56, 0.3, 0.2);
+      else { it.alpha = clamp((t - 0.4) / 0.2); it.rise = 0.55 + 0.45 * stand(clamp((t - 0.4 - it.ord * 0.1) / 0.5)); }
+    },
+    sky: (t) => 1 - clamp((t - 0.44) / 0.18),
+    floor: (t) => 1 - clamp((t - 0.44) / 0.18),
+    skyIn: (t) => clamp((t - 0.3) / 0.15),
+    floorIn: (t) => clamp((t - 0.35) / 0.15)
+  },
+  // the camera pans along the camp: the panels lie down in a wave from the left, and the specimens
+  // stand up in one behind them
+  pan: {
+    out(it, t) {
+      if (it.role === 'panel') { const k = easeInOut(clamp((t - 0.02 - it.xf * 0.3) / 0.3)); it.rise = 1 - k; it.alpha = clamp(it.rise / 0.12); }
+      else if (it.role === 'words') it.alpha = 1 - clamp(t / 0.25);
+      else it.alpha = 1 - clamp((t - 0.35) / 0.35);
+    },
+    in(it, t) {
+      if (it.role === 'spec') { const r = stand(clamp((t - 0.36 - it.xf * 0.3) / 0.36)); it.rise = r; it.alpha = clamp(r / 0.12); }
+      else if (it.role === 'words') rising(it, t, 0.5, 0.35, 0);
+      else it.alpha = clamp((t - 0.2) / 0.35);
+    },
+    sky: (t) => 1 - easeInOut(clamp((t - 0.25) / 0.45)),
+    floor: (t) => 1 - clamp((t - 0.3) / 0.4),
+    // the camera draws back a little as it goes, like a crane
+    cam: (t, c) => { c[2] += P * 0.12 * Math.sin(Math.PI * t); c[1] -= H * 0.04 * Math.sin(Math.PI * t); }
+  },
+  // the camera climbs; the craft sinks away, clouds rise and fill the screen, then part on the
+  // summit, clear now, and the trail up it
+  clouds: {
+    // the page's own content goes before the clouds reach it (it is drawn over the canvas)
+    out(it, t) { it.alpha = it.dom ? 1 - clamp((t - 0.04) / 0.2) : 1 - clamp((t - 0.28) / 0.25); },
+    in(it, t) {
+      if (it.role === 'foot') { it.alpha = clamp((t - 0.8) / 0.18); it.dy = (1 - it.alpha) * H * 0.04; }
+      else if (it.role === 'text') { it.alpha = clamp((t - 0.66) / 0.2); it.rise = stand(clamp((t - 0.6) / 0.4)); }
+      else { it.alpha = clamp((t - 0.45) / 0.1); it.rise = 0.8 + 0.2 * easeOut(clamp((t - 0.58) / 0.42)); }
+    },
+    sky: (t) => 1 - clamp((t - 0.3) / 0.25),
+    floor: (t) => 1 - clamp((t - 0.3) / 0.25),
+    skyIn: (t) => clamp((t - 0.25) / 0.2),
+    floorIn: (t) => clamp((t - 0.4) / 0.1)
+  }
+};
+// the cloud banks between craft and contact, by t of that move
+function veilPose(it, t) {
+  const n = it.n, up = easeOut(clamp((t - 0.1 - n * 0.06) / 0.36));
+  it.dy = (1 - up) * (H * 1.05 - it.b.t) / it.s;
+  it.part = easeInOut(clamp((t - 0.6 - (2 - n) * 0.03) / 0.33)) * W * (0.75 + 0.35 * n) / it.s;
+  it.alpha = clamp((t - 0.1) / 0.08) * (1 - clamp((t - 0.88) / 0.12));
 }
 
 /* ------------------------------------------------------------------ scroll and pointer */
@@ -399,12 +544,12 @@ function goTo(i, instant) {
 // links and focus go to the scene that holds them
 document.addEventListener('focusin', (e) => {
   const pg = e.target.closest?.('.page');
-  const i = pg ? pages.findIndex((x) => x.el === pg) : -1;
+  const i = pg ? scenes.findIndex((x) => x.el === pg) : -1;
   if (i >= 0 && Math.abs(p - i) > 0.02) goTo(i, true);
 });
 document.addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="#"]');
-  const i = a ? pages.findIndex((x) => '#' + x.id === a.getAttribute('href')) : -1;
+  const i = a ? scenes.findIndex((x) => '#' + x.id === a.getAttribute('href')) : -1;
   if (i >= 0) { e.preventDefault(); goTo(i); }
 });
 
@@ -413,7 +558,9 @@ document.addEventListener('click', (e) => {
 // fastest between two.
 const travel = (q) => { const i = Math.min(Math.floor(q), N - 2), t = q - i; return i + t - 0.6 * Math.sin(2 * Math.PI * t) / (2 * Math.PI); };
 const folio = $('#folio');
-let shownFolio = -1, eye = 0;
+let shownFolio = -1, eye = 0, clock = 0, lastDraw = 0, slow = 0, was = 0, coarse = false, settle = 0;
+const view = { W: 0, H: 0, P: 0, po: [0, 0], o: [0, 0] };
+
 function frame(now) {
   requestAnimationFrame(frame);
   const dt = Math.min(0.05, (now - (lastNow || now)) / 1000); lastNow = now;
@@ -421,90 +568,181 @@ function frame(now) {
   if (reduced || Math.abs(target - p) < 0.0005) { if (p !== target) { p = target; dirty = true; } }
   else { p += (target - p) * (1 - Math.exp(-dt * 7)); dirty = true; }
   if (introT < 1 && introStart) { introT = clamp((now - introStart) / 2200); dirty = true; }
-  eye = reduced ? Math.round(p) : travel(p);
+  if (!reduced && TIERS[tier].idle && (Math.abs(ptr.tx - ptr.x) > 0.001 || Math.abs(ptr.ty - ptr.y) > 0.001)) { ptr.x += (ptr.tx - ptr.x) * 0.05; ptr.y += (ptr.ty - ptr.y) * 0.05; dirty = true; }
+  moving = dirty;
+  // frames running slow while moving: step down a tier (not when one is pinned)
+  if (moving && !pinned && gl) {
+    slow = dt > 0.05 ? slow + 4 : dt > 0.026 ? slow + 1 : Math.max(0, slow - 2);
+    if (slow > 30 && tier !== ORDER[ORDER.length - 1]) { tier = ORDER[ORDER.indexOf(tier) + 1]; slow = 0; sizeCanvas(); }
+  }
+  // coarse while the scroll moves, sharp once it has been still a moment
+  if (gl && TIERS[tier].move < 1) {
+    if (p !== was || introT < 1) { settle = now + 180; if (!coarse) { coarse = true; sizeCanvas(); } }
+    else if (coarse && now > settle) { coarse = false; sizeCanvas(); }
+  }
+  was = p;
+  clock += dt;
+  const idle = !dirty && TIERS[tier].idle && gl && !reduced && now - lastDraw > 33;
+  if (!dirty && !idle) { if (live.work) tickPanels(now); return; }
+  dirty = false;
+  lastDraw = now;
+  render();
+  if (live.work) tickPanels(now);
+}
 
-  // the eye drifts a little with the pointer, so the layers part
-  if (!reduced) {
-    ptr.x += (ptr.tx - ptr.x) * 0.05; ptr.y += (ptr.ty - ptr.y) * 0.05;
-    stage.style.perspectiveOrigin = `${(ox + ptr.x * W * 0.05).toFixed(1)}px ${(oy + ptr.y * H * 0.06).toFixed(1)}px`;
-  } else stage.style.perspectiveOrigin = `${ox}px ${oy}px`;
-
+function render() {
+  eye = travel(p);
   const cur = Math.round(eye);
   if (cur !== shownFolio) {
     shownFolio = cur;
     folio.querySelector('b').textContent = cur + 1;
-    folio.querySelector('i').textContent = pages[cur].el.dataset.name;
+    folio.querySelector('i').textContent = scenes[cur].el.dataset.name;
   }
-  live.work = Math.abs(eye - 2) < 0.8;
-  live.craft = Math.abs(eye - 3) < 0.8;
-  if (live.work) tickPanels(now);
+  live.work = Math.abs(eye - 2) < 0.35;
+  live.craft = Math.abs(eye - 3) < 0.35;
+  // the eye drifts a little with the pointer, so the layers part
+  const po = reduced ? [ox, oy] : [ox + ptr.x * W * 0.05, oy + ptr.y * H * 0.06];
+  stage.style.perspectiveOrigin = `${po[0].toFixed(1)}px ${po[1].toFixed(1)}px`;
+  Object.assign(view, { W, H, P, po, o: [ox, oy] });
 
-  // the backdrops shift a little with the pointer too, as the deepest thing in the scene
-  const sx = reduced ? 0 : -ptr.x * W * 0.05 * 0.42, sy = reduced ? 0 : -ptr.y * H * 0.06 * 0.42;
-  $('#skies').style.transform = `translate(${sx.toFixed(1)}px,${sy.toFixed(1)}px)`;
+  // the camera: from one scene's place toward the next's
+  const i = Math.min(Math.floor(eye), N - 2), t = eye - i, kind = KIND[i], mv = MOVES[kind];
+  const cam = A[i].map((v, k) => lerp(v, A[i + 1][k], t));
+  mv.cam?.(t, cam);
 
-  if (!dirty) return;
-  dirty = false;
-  for (const pg of pages) { move(pg); skyOf(pg); }
-}
-
-// u: where the eye is, from this scene's point of view. -1 is a scene before it, 0 is here, and
-// 1 is a scene past it.
-function skyOf(pg) {
-  const u = eye - pg.i;
-  let op = 1;
-  if (reduced) op = Math.round(eye) === pg.i ? 1 : 0;
-  else if (u < 0) op = easeInOut(clamp((1 + u - 0.3) / 0.4)); // the sky ahead comes in over this one
-  else if (u > 0) op = 1 - clamp((u - 0.7) / 0.2);
-  pg.sky.wrap.style.opacity = op.toFixed(3);
-  pg.sky.wrap.style.visibility = op > 0.001 ? 'visible' : 'hidden';
-  // the sky is flat, but it moves with its scene as if it stood at the end of its floor: scaled
-  // about the eye by just what that depth would do
-  const z = reduced ? 0 : u * DZ, k = (P - pg.sky.z) / (P - pg.sky.z - z);
-  pg.sky.wrap.style.transform = Math.abs(k - 1) > 1e-4 ? `scale(${k.toFixed(5)})` : '';
-}
-
-function move(pg) {
-  const u = eye - pg.i;
-  const visible = reduced ? Math.round(eye) === pg.i : u > -0.999 && u < 0.8;
-  pg.el.classList.toggle('off', !visible);
-  if (!visible) return;
-  // the whole scene moves toward the eye: from a scene's distance behind, to here, to past it
-  const z = reduced ? 0 : u * DZ;
-  pg.el.style.transform = Math.abs(z) > 0.01 ? `translate3d(0px,0px,${z.toFixed(2)}px)` : '';
-  // its floor comes in under the one before it, and goes when this scene's paper is down
-  let fo = 1;
-  if (!reduced) fo = u < 0 ? clamp((1 + u - 0.2) / 0.3) : 1 - clamp((u - 0.45) / 0.25);
-  pg.floor.style.opacity = fo.toFixed(3);
-  for (const L of pg.layers) {
-    // rise: 1 standing, 0 flat. Ahead, a layer lies on the floor and stands up as the eye nears,
-    // back layers first, a little past upright and back. Once the eye has been, it lies back down,
-    // front layers first. Paper is only drawn once it is off the floor.
-    let rise = 1, op = 1;
-    if (!reduced) {
-      if (u < 0) {
-        const k = clamp((1 + u - 0.22 - L.ord * 0.36) / 0.42);
-        rise = stand(k); op = clamp(rise / 0.12);
-      } else if (u > 0) {
-        const k = easeInOut(clamp((u - 0.02 - (1 - L.ord) * 0.3) / 0.42));
-        rise = 1 - k; op = clamp(rise / 0.12);
+  const fresh = () => ({ sky: [], floor: [], paper: [], soft: [], top: [] });
+  const list = fresh(), whole = [];
+  for (const sc of scenes) {
+    const u = eye - sc.i;
+    const vis = reduced ? Math.abs(p - sc.i) < 1 : u > -1 && u < 1;
+    sc.el.classList.toggle('off', !vis);
+    if (!vis) continue;
+    const off = reduced ? [0, 0, 0] : A[sc.i].map((v, k) => v - cam[k]);
+    sc.el.style.transform = reduced || Math.hypot(...off) < 0.01 ? '' : `translate3d(${off[0].toFixed(2)}px,${off[1].toFixed(2)}px,${off[2].toFixed(2)}px)`;
+    // with reduced motion, nothing moves: the scenes cross-fade, each drawn whole. On the canvas
+    // the next scene waits underneath and this one fades off it, while the words hand over without
+    // overlapping; without WebGL the next scene's own page fades in over this one.
+    const d = p - sc.i;
+    const fade = !reduced ? 1 : gl ? (d <= 0 ? 1 : 1 - smooth(0.2, 0.8, d)) : d <= 0 ? smooth(-0.65, -0.35, d) : d < 0.65 ? 1 : 0;
+    // (opacity on a section would flatten its 3D, so on the canvas each box of words fades itself)
+    const words = reduced && gl ? (d <= 0 ? smooth(-0.4, -0.1, d) : 1 - smooth(0.1, 0.4, d)) : 1;
+    if (reduced && !gl) sc.el.style.opacity = fade.toFixed(3);
+    const into = reduced ? (whole[sc.i] = fresh()) : list;
+    const inK = sc.i > 0 ? MOVES[KIND[sc.i - 1]] : null, outK = MOVES[KIND[sc.i]] || null;
+    for (const it of sc.items) {
+      it.rise = 1; it.alpha = 1; it.dx = 0; it.dy = 0; it.part = 0;
+      if (!reduced) {
+        if (u < 0 && inK) inK.in(it, 1 + u);
+        else if (u > 0 && outK) outK.out(it, u);
+        if (sc.i === 0 && introT < 1 && it.role !== 'mist') { const r = stand(clamp((introT - it.ord * 0.42) / 0.5)); if (r < it.rise) { it.rise = r; it.alpha = Math.min(it.alpha, clamp(r / 0.12)); } }
       }
-      if (pg.i === 0 && introT < 1) { const k = clamp((introT - L.ord * 0.42) / 0.5); rise = Math.min(rise, stand(k)); op = Math.min(op, clamp(rise / 0.12)); }
+      it.alpha *= it.dom ? words : fade;
     }
-    const gone = op < 0.002;
-    L.el.style.visibility = gone ? 'hidden' : '';
-    L.el.style.opacity = op < 0.999 ? op.toFixed(3) : '';
-    if (L.split) { L.el._half.style.visibility = gone ? 'hidden' : ''; L.el._half.style.opacity = L.el.style.opacity; }
-    if (gone) continue;
-    // paper lying down catches less light
-    const lit = rise > 0.999 ? '' : `brightness(${(1 - 0.5 * (1 - clamp(rise))).toFixed(3)})`;
-    L.el.style.filter = lit;
-    if (L.split) L.el._half.style.filter = lit;
-    const th = 90 * (1 - rise);
-    const fold = `translate3d(0px,${(L.yb - L.lift).toFixed(2)}px,${L.z.toFixed(2)}px) rotateX(${th.toFixed(2)}deg) translate3d(0px,${(-L.yb).toFixed(2)}px,0px) `;
-    L.el.style.transform = fold + L.place;
-    if (L.split) L.el._half.style.transform = fold + L.place2;
+    // what follows another (a pool under its panel) takes its pose
+    for (const it of sc.items) if (it.owner) { it.rise = it.owner.rise; it.alpha *= it.owner.alpha; }
+    for (const it of sc.items) {
+      if (it.dom) poseDom(it);
+      else pushSprite(into, it, off);
+    }
+    // sky and floor
+    if (gl) {
+      const sa = (u < 0 && inK ? (inK.skyIn ? inK.skyIn(1 + u) : 1) : u > 0 && outK ? outK.sky(u) : 1) * fade;
+      const fa = (u < 0 && inK ? (inK.floorIn ? inK.floorIn(1 + u) : 1) : u > 0 && outK ? outK.floor(u) : 1) * fade;
+      into.sky.push(skySprite(sc, off, po, sa));
+      into.floor.push({ mode: 1, tex: sc.floor.tex, box: [ox - sc.floor.half, 0, sc.floor.half * 2, 0], fl: [sc.floor.near, sc.floor.far, Yf, 0], off, alpha: fa, fade: [0.9, 0.12, 0, 0.16], i: sc.i });
+    }
   }
+  if (!gl) return;
+  const byDepth = (a, b) => a.d - b.d;
+  if (reduced) {
+    // the scene underneath first, then the one fading off it, each on a clean depth buffer
+    const out = [];
+    for (let j = whole.length - 1; j >= 0; j--) if (whole[j]) {
+      const L = whole[j];
+      out.push(...L.sky, ...L.floor, ...[...L.paper, ...L.soft].sort(byDepth), { clearDepth: true });
+    }
+    gl.draw(view, out);
+    return;
+  }
+  // the clouds between craft and contact
+  if (!reduced && i === 3 && t > 0.1) for (const it of veil) {
+    veilPose(it, t);
+    for (const side of [-1, 1]) {
+      const cut = [it.cutX, side, 0.02, 22];
+      list.top.push({ tex: it.tex, box: [it.b.l, it.b.t, it.b.w, it.b.h], sub: side < 0 ? [0, 0, it.cutX + 0.06, 1] : [it.cutX - 0.06, 0, 1, 1], L: [it.s, it.z, it.Yb, 0], off: [side * it.part, it.dy, 0], alpha: it.alpha, cut, depth: 'none', d: it.z });
+    }
+  }
+  // mid-flight, the cloud by the camp fills the screen, lit by the camp; one scene becomes the
+  // next inside it
+  if (!reduced && i === 1) {
+    const g = bell(t, 0.52, 0.17), fog = 0.92 * smooth(0.32, 0.47, t) * (1 - smooth(0.6, 0.74, t));
+    if (g > 0.01) {
+      const o = A[1].map((v, k) => v - cam[k]), Z = camp.Z + o[2], w = (P - Z) / P;
+      const x = po[0] + (camp.X + o[0] - po[0]) / w, y = po[1] + (camp.Y + o[1] - po[1]) / w;
+      if (fog > 0.01) list.top.push({ mode: 2, alpha: fog, tint: tint('#5f6a78'), fade: [x, y, Math.max(W, H) * 2, 1], blend: 'over', depth: 'none', d: 1e9 - 1 });
+      list.top.push({ mode: 2, alpha: g * 0.38, tint: tint('#ffa860'), fade: [x, y, Math.max(W, H * 0.65) * lerp(0.22, 0.8, clamp(t / 0.7)), 0], blend: 'add', depth: 'none', d: 1e9 });
+    }
+  }
+  // skies and floors: the scene coming in (behind) first, the one going out over it
+  list.sky.reverse(); list.floor.reverse();
+  // paper and the soft things between it (mist, cloud, light) in one order, back to front, so a
+  // nearer sheet covers a farther mist rather than cutting a hole in it
+  const mid = [...list.paper, ...list.soft].sort(byDepth);
+  list.top.sort(byDepth);
+  gl.draw(view, [...list.sky, ...list.floor, ...mid, ...list.top]);
+}
+
+const GRAIN = [2, 0, 0, 0.16];
+// a scene's sky: the horizon and sun where its floor's far edge and its sun now project
+function skySprite(sc, off, po, alpha) {
+  const k = sc.sky, Zs = sc.skyZ + off[2], w = (P - Zs) / P, mag = (P / (P - Zs)) / sc.skyS;
+  const hy = po[1] + (Yf + off[1] - po[1]) / w;
+  const sx = po[0] + (k.sunW[0] + off[0] - po[0]) / w, sy = po[1] + (k.sunW[1] + off[1] - po[1]) / w;
+  return { mode: 3, alpha, depth: 'none', sky: { colours: k.colours, g: [hy, k.span * mag, H * 0.5 * mag, 0.07], sun: [sx, sy, k.r * mag, k.gr * mag], glow: k.glow } };
+}
+function pushSprite(list, it, off) {
+  if (!(it.alpha > 0.002)) return;
+  const th = (90 * (1 - it.rise)) * Math.PI / 180;
+  const o = [off[0] + it.dx, off[1] + it.dy, off[2]];
+  const depthNow = it.z + o[2];
+  if (it.role === 'pool') { list.soft.push({ mode: 1, tex: it.tex, box: [it.b.l, 0, it.b.w, 0], fl: it.fl, off: o, alpha: it.alpha * it.base * it.rise, tint: it.tintC, blend: 'add', depth: 'test', fade: [2, 0, 0, 0], d: depthNow }); return; }
+  const L = [it.s, it.z, it.Yb, 0], pad = it.pad || 0, sd = it.side || 0, bx = [it.b.l - sd, it.b.t - pad, it.b.w + 2 * sd, it.b.h + pad];
+  if (it.role === 'mist') {
+    list.soft.push({ tex: it.tex, box: bx, sub: [0, 0, it.tile, 1], L, th, off: o, alpha: it.alpha, shift: [reduced ? 0 : clock * 0.006, 0], depth: 'test', d: depthNow });
+    return;
+  }
+  if (it.role === 'soft' || it.role === 'halo') {
+    const dx = it.drift && !reduced ? Math.sin(clock * 0.18 + it.phase) * it.drift : 0;
+    const a = it.alpha * (it.base ?? 1) * (it.pulse && !reduced ? 0.85 + 0.15 * Math.sin(clock * 1.3) : 1);
+    list.soft.push({ tex: it.tex, box: bx, L, th, off: [o[0] + dx, o[1], o[2]], alpha: a, tint: it.tintC, blend: it.blend || 'over', depth: 'test', d: depthNow });
+    return;
+  }
+  // paper; a torn sheet as its two pieces, parted
+  const bright = 1 - 0.45 * (1 - clamp(it.rise));
+  const tnt = [bright, bright, bright];
+  if (it.pieces) {
+    for (const pc of it.pieces) list.paper.push({ tex: it.tex, box: bx, sub: pc.sub, cut: pc.cut, L, th, off: [o[0] + pc.side * (it.part || 0), o[1], o[2]], alpha: it.alpha, tint: tnt, depth: 'write', fade: GRAIN, d: depthNow });
+  } else list.paper.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, tint: tnt, depth: 'write', fade: it.role === 'text' ? null : GRAIN, d: depthNow });
+}
+// the page's own content: the same fold, written as a CSS transform
+function poseDom(it) {
+  const el = it.el, gone = it.alpha < 0.002;
+  if (el._gone !== gone) { el.style.visibility = gone ? 'hidden' : ''; el._gone = gone; }
+  if (gone) return;
+  const op = it.alpha < 0.999 ? it.alpha.toFixed(3) : '';
+  if (el._op !== op) { el.style.opacity = op; el._op = op; }
+  // without WebGL nothing moves, and the page lies flat, each box where the layout put it
+  if (!gl) return;
+  const th = 90 * (1 - it.rise);
+  const shift = it.dx || it.dy ? `translate3d(${it.dx.toFixed(2)}px,${it.dy.toFixed(2)}px,0px) ` : '';
+  const tf = shift + `translate3d(0px,${it.yb.toFixed(2)}px,${it.z.toFixed(2)}px) rotateX(${th.toFixed(2)}deg) translate3d(0px,${(-it.yb).toFixed(2)}px,0px) ` + it.place;
+  if (el._tf !== tf) { el.style.transform = tf; el._tf = tf; }
+}
+
+function sizeCanvas() {
+  if (!gl) return;
+  gl.size(W, H, TIERS[tier].res * (coarse ? TIERS[tier].move : 1));
+  dirty = true;
 }
 
 /* ------------------------------------------------------------------ live figures on the work page */
@@ -542,30 +780,37 @@ for (const p of panels) {
   p.el.addEventListener('focus', () => { p.hot = true; });
   p.el.addEventListener('blur', () => { p.hot = false; });
 }
-// the one under the pointer runs every frame; the rest take turns, so all seven stay alive
+// The one under the pointer runs every frame; the rest take turns, two a frame (one on a slower
+// tier), so all seven stay alive without all seven costing a frame.
 let rr = 0, lastTick = 0;
 function tickPanels(now) {
   const dt = Math.min(0.05, (now - (lastTick || now)) / 1000); lastTick = now;
   for (const p of panels) if (!p.fig) { wake(p); return; } // one a frame, so waking them never stalls
   rr = (rr + 1) % panels.length;
+  const two = tier === 'high' && !moving;
   panels.forEach((p, k) => {
-    if (p.hot || reduced) { p.fig.step(dt); draw(p); p.last = now; return; }
-    if (k === rr || k === (rr + 3) % panels.length) { const d = Math.min(0.12, (now - (p.last || now)) / 1000) || dt; p.fig.step(d); draw(p); p.last = now; }
+    if (p.hot || (reduced && !gl)) { p.fig.step(dt); draw(p); p.last = now; return; }
+    if (k === rr || (two && k === (rr + 3) % panels.length)) { const d = Math.min(0.12, (now - (p.last || now)) / 1000) || dt; p.fig.step(d); draw(p); p.last = now; }
   });
 }
 
 /* ------------------------------------------------------------------ start */
 let rz = 0;
-addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { const i = p; layout(); scrollTo(0, i * STEP); p = want(); dirty = true; }, 120); });
+addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { const i = p; layout(); scrollTo(0, i * STEP); p = want(); dirty = true; }, 150); });
 function start() {
   layout();
-  const h = location.hash.slice(1), i = pages.findIndex((x) => x.id === h);
+  const h = location.hash.slice(1), i = scenes.findIndex((x) => x.id === h);
   if (i > 0) { scrollTo(0, i * STEP); introT = 1; }
   else if (scrollY > 2) introT = 1;
   p = want();
   introStart = performance.now() + 250;
   requestAnimationFrame(frame);
 }
-(document.fonts?.ready || Promise.resolve()).then(start);
+// the big words are painted from the page's fonts, so wait for them
+Promise.all([document.fonts?.ready, document.fonts?.load('400 100px "Instrument Serif"'), document.fonts?.load('italic 400 100px "Instrument Serif"'), document.fonts?.load('500 12px "JetBrains Mono"')].map((x) => Promise.resolve(x).catch(() => {}))).then(start);
 
-window.__unfold = { get p() { return p; }, get eye() { return eye; }, get scene() { return Math.round(eye); }, get intro() { return introT; }, pages, goTo, catchUp() { p = want(); eye = reduced ? Math.round(p) : travel(p); for (const pg of pages) { move(pg); skyOf(pg); } } };
+window.__unfold = {
+  get p() { return p; }, get eye() { return eye; }, get scene() { return Math.round(eye); }, get intro() { return introT; }, get tier() { return tier; }, get gl() { return !!gl; },
+  scenes, goTo,
+  catchUp() { p = want(); introT = introStart && performance.now() > introStart + 2200 ? 1 : introT; render(); }
+};

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="robots" content="noindex" />
 <title>Alan Fung · Forward Deployed Engineer</title>
-<meta name="description" content="A prototype of the portfolio as one paper landscape: the scroll carries you forward, the scene ahead stands up from the floor, and the one you leave lies down." />
+<meta name="description" content="A prototype of the portfolio as one paper landscape, a day on a mountain from first light to last: the scroll carries you through it, and each scene hands over to the next its own way." />
 <meta name="theme-color" content="#0a0b0d" />
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,50 +16,56 @@
 <body>
 <a class="skip" href="#contact">Skip to contact</a>
 
-<!-- A sticky stage the height of the screen. Scrolling carries the eye forward through five
-     scenes, one behind the other. Each is a stack of paper layers, back to front; unfold.js stands
-     them up as you near them and lays them down as you pass. -->
+<!-- A sticky stage the height of the screen. Scrolling carries the eye through five scenes, a day
+     on the mountain from first light to last. The landscape (every .gl box) is painted on one
+     canvas by scenery.js; the words, flags, panels and specimens (every .layer) stand in front of
+     it in CSS 3D. unfold.js measures both from this layout and moves them together. -->
 <div class="scroll" id="scroll">
 <div class="stage" id="stage">
-<!-- each scene's sky is lifted out into here: a backdrop at the horizon, not a layer -->
-<div class="skies" id="skies" aria-hidden="true"></div>
+<canvas class="land" id="land" aria-hidden="true"></canvas>
 <div class="world" id="world">
 
-  <!-- 1 · hello: the name in a landscape, and nothing else -->
+  <!-- 1 · hello: the name in a landscape at first light. The ridges tear at their lowest point and
+       part like a curtain on the mountain behind. -->
   <section class="page cover" id="cover" data-name="Hello" aria-labelledby="cover-h">
-    <div class="sky" data-art="sky"></div>
-    <div class="layer ridge r1" data-art="ridge"></div>
-    <div class="layer ridge r2" data-art="ridge"></div>
-    <div class="layer mist m1" aria-hidden="true"><i></i></div>
-    <div class="layer name"><h1 id="cover-h"><span>Alan</span> <span>Fung</span></h1></div>
-    <div class="layer ridge r3" data-art="ridge"></div>
-    <div class="layer mist m2" aria-hidden="true"><i></i></div>
-    <div class="layer ridge r4" data-art="ridge"></div>
-    <div class="layer ridge r5 front" data-art="ridge"></div>
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl ridge r1" data-art="ridge" data-tear></i>
+    <i class="gl ridge r2" data-art="ridge" data-tear></i>
+    <i class="gl mist m1" data-art="mist"></i>
+    <div class="gl name" data-art="text" data-tear><h1 id="cover-h"><span>Alan</span> <span>Fung</span></h1></div>
+    <i class="gl ridge r3" data-art="ridge" data-tear></i>
+    <i class="gl mist m2" data-art="mist"></i>
+    <i class="gl ridge r4" data-art="ridge" data-tear></i>
+    <i class="gl ridge r5" data-art="ridge" data-tear></i>
     <div class="layer foot">
       <p class="role">Forward Deployed Engineer</p>
       <p class="cue" aria-hidden="true">scroll<i></i></p>
     </div>
   </section>
 
-  <!-- 2 · the climb: one mountain, a title a year up its trail -->
+  <!-- 2 · the climb, in the morning: a flag a year up the trail to a camp, and above it a higher
+       summit still in cloud, with a pole and no flag -->
   <section class="page climb" id="climb" data-name="How I got here" aria-labelledby="climb-h">
-    <div class="sky" data-art="sky"></div>
-    <div class="layer ridge r1" data-art="ridge"></div>
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
     <div class="layer words" data-s="sky+0.03">
       <p class="kicker">How I got here</p>
       <h2 id="climb-h">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
-      <p class="lede">A new title every year since 2023, each one closer to the people using the software.</p>
+      <p class="lede">A new title every year since 2023, each one closer to the people using the software. The summit is still up there.</p>
     </div>
-    <div class="layer ridge mountain" data-art="mountain"></div>
+    <i class="gl mountain" data-art="mountain"></i>
     <!-- a flag a year, filled from data.js (path); they stand up in order, up the trail -->
     <ol class="steps" id="steps"></ol>
-    <div class="layer ridge r2 front" data-art="ridge"></div>
+    <i class="gl ridge r2" data-art="ridge"></i>
   </section>
 
-  <!-- 3 · the work: all seven at once -->
+  <!-- 3 · the work, in the afternoon at camp: all seven running, the summit behind -->
   <section class="page work" id="work" data-name="Selected work" aria-labelledby="work-h">
-    <div class="sky" data-art="sky"></div>
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl summit" data-art="summit"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <i class="gl mist m1" data-art="mist"></i>
+    <i class="gl ridge r2" data-art="ridge"></i>
     <div class="layer words" data-s="sky+0.03">
       <p class="kicker">Selected work</p>
       <h2 id="work-h">Seven of them, <em>all running.</em></h2>
@@ -68,9 +74,13 @@
     <div class="panels" id="panels"></div>
   </section>
 
-  <!-- 4 · the craft: six effects, each with a page of its own -->
+  <!-- 4 · the craft, at golden hour: six effects, each with a page of its own -->
   <section class="page craft" id="craft" data-name="Craft" aria-labelledby="craft-h">
-    <div class="sky" data-art="sky"></div>
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <i class="gl ridge r2" data-art="ridge"></i>
+    <i class="gl mist m1" data-art="mist"></i>
+    <i class="gl ridge r3" data-art="ridge"></i>
     <div class="layer words" data-s="sky+0.03">
       <p class="kicker">Craft</p>
       <h2 id="craft-h">I build the motion, <em>too.</em></h2>
@@ -79,17 +89,17 @@
     <div class="specs" id="specs"></div>
   </section>
 
-  <!-- 5 · contact -->
+  <!-- 5 · contact, at last light: the clouds part on the summit, and the trail up it -->
   <section class="page contact" id="contact" data-name="Contact" aria-labelledby="contact-h">
-    <div class="sky" data-art="sky"></div>
-    <div class="layer ridge r1" data-art="ridge"></div>
-    <div class="layer ridge r2" data-art="ridge"></div>
-    <div class="layer words hello">
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl summit" data-art="summit"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <div class="gl hello" data-art="text">
       <p class="kicker">contact()</p>
-      <h2 id="contact-h">Say <em>hello.</em></h2>
+      <h2 id="contact-h"><span>Say</span> <em>hello.</em></h2>
     </div>
-    <div class="layer ridge r3" data-art="ridge"></div>
-    <div class="layer ridge r4 front" data-art="ridge"></div>
+    <i class="gl ridge r2" data-art="ridge"></i>
+    <i class="gl ridge r3" data-art="ridge"></i>
     <div class="layer foot">
       <div class="reach">
         <p class="mail"><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
