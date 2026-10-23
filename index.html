@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Alan Fung · Forward Deployed Engineer</title>
 <meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. Selected work, running live as you scroll: an LLM gateway, tracing that names the broken service, customer-data matching, field-service dispatch, search with no server, a pitch detector and a slicer in WebAssembly." />
 <meta name="theme-color" content="#0a0b0d" />
@@ -16,45 +16,127 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/portfolio/live/live.css" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap" rel="stylesheet" />
+<!-- the page itself is the lab's round 4 prototype (lab/unfold/), now live; its code stays there -->
+<link rel="stylesheet" href="/lab/unfold/unfold.css" />
 </head>
 <body>
-  <a class="skip" href="#/contact">Skip to contact</a>
-  <h1 class="sr">Alan Fung, Forward Deployed Engineer. From the customer's desk to production.</h1>
+<a class="skip" href="#contact">Skip to contact</a>
 
-  <canvas id="map" aria-hidden="true"></canvas>
+<!-- A sticky stage the height of the screen. Scrolling carries the eye through five scenes, a day
+     on the mountain from first light to last. The landscape (every .gl box) is painted on one
+     canvas by scenery.js; the words, flags, panels and specimens (every .layer) stand in front of
+     it in CSS 3D. unfold.js measures both from this layout and moves them together. -->
+<div class="scroll" id="scroll">
+<div class="stage" id="stage">
+<canvas class="land" id="land" aria-hidden="true"></canvas>
+<div class="world" id="world">
 
-  <header class="hud top">
-    <a class="brand" id="brand" href="#/"><b>Alan Fung</b><span>Forward Deployed Engineer</span></a>
-    <div class="tools">
-      <p class="status" id="status" title=""><i aria-hidden="true"></i><span>connecting</span></p>
-      <button type="button" class="sound" id="sound" aria-pressed="false" title="Sound is off until you turn it on"><i aria-hidden="true"><b></b><b></b><b></b></i><span>sound off</span></button>
+  <!-- 1 · hello: the name in a landscape at first light. The ridges tear at their lowest point and
+       part like a curtain on the mountain behind. -->
+  <section class="page cover" id="cover" data-name="Hello" aria-labelledby="cover-h">
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl ridge r1" data-art="ridge" data-tear></i>
+    <i class="gl ridge r2" data-art="ridge" data-tear></i>
+    <i class="gl mist m1" data-art="mist"></i>
+    <div class="gl name" data-art="text" data-tear><h1 id="cover-h"><span>Alan</span> <span>Fung</span></h1></div>
+    <i class="gl ridge r3" data-art="ridge" data-tear></i>
+    <i class="gl mist m2" data-art="mist"></i>
+    <i class="gl ridge r4" data-art="ridge" data-tear></i>
+    <i class="gl ridge r5" data-art="ridge" data-tear></i>
+    <div class="layer foot">
+      <p class="role">Forward Deployed Engineer</p>
+      <p class="cue" aria-hidden="true">scroll<i></i></p>
     </div>
-  </header>
+  </section>
 
-  <div class="thread" id="thread" aria-hidden="true"></div>
-  <main class="flow" id="flow"></main>
+  <!-- 2 · the climb, in the morning: a flag a year up the trail to a camp, and above it a higher
+       summit still in cloud, with a pole and no flag -->
+  <section class="page climb" id="climb" data-name="How I got here" aria-labelledby="climb-h">
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <div class="layer words" data-s="sky+0.03">
+      <p class="kicker">How I got here</p>
+      <h2 id="climb-h">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
+      <p class="lede">A new title every year since 2023, each one closer to the people using the software. The summit is still up there.</p>
+    </div>
+    <i class="gl mountain" data-art="mountain"></i>
+    <!-- a flag a year, filled from data.js (path); they stand up in order, up the trail -->
+    <ol class="steps" id="steps"></ol>
+    <i class="gl ridge r2" data-art="ridge"></i>
+  </section>
 
-  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+  <!-- 3 · the work, in the afternoon at camp: all seven running, the summit behind -->
+  <section class="page work" id="work" data-name="Selected work" aria-labelledby="work-h">
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl summit" data-art="summit"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <i class="gl mist m1" data-art="mist"></i>
+    <i class="gl ridge r2" data-art="ridge"></i>
+    <div class="layer words" data-s="sky+0.03">
+      <p class="kicker">Selected work</p>
+      <h2 id="work-h">Seven of them, <em>all running.</em></h2>
+      <p class="lede">Selected work, not <a href="/explore/">the whole shelf</a>. Every piece is running live, here or <a href="/map/">on the map</a>.</p>
+    </div>
+    <div class="panels" id="panels"></div>
+  </section>
 
-  <noscript>
+  <!-- 4 · the craft, at golden hour: six effects, each with a page of its own -->
+  <section class="page craft" id="craft" data-name="Craft" aria-labelledby="craft-h">
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <i class="gl ridge r2" data-art="ridge"></i>
+    <i class="gl mist m1" data-art="mist"></i>
+    <i class="gl ridge r3" data-art="ridge"></i>
+    <div class="layer words" data-s="sky+0.03">
+      <p class="kicker">Craft</p>
+      <h2 id="craft-h">I build the motion, <em>too.</em></h2>
+      <p class="lede">Six effects I built, each with a page of its own.</p>
+    </div>
+    <div class="specs" id="specs"></div>
+  </section>
+
+  <!-- 5 · contact, at last light: the clouds part on the summit, and the trail up it -->
+  <section class="page contact" id="contact" data-name="Contact" aria-labelledby="contact-h">
+    <i class="gl sky" data-art="sky"></i>
+    <i class="gl summit" data-art="summit"></i>
+    <i class="gl ridge r1" data-art="ridge"></i>
+    <div class="gl hello" data-art="text">
+      <p class="kicker">contact()</p>
+      <h2 id="contact-h"><span>Say</span> <em>hello.</em></h2>
+    </div>
+    <i class="gl ridge r2" data-art="ridge"></i>
+    <i class="gl ridge r3" data-art="ridge"></i>
+    <div class="layer foot">
+      <div class="reach">
+        <p class="mail"><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+        <p class="links"><a href="https://github.com/InvokFung" target="_blank" rel="noopener">GitHub</a><a href="/explore/">The full portfolio</a><a href="/blog/">StudyLog</a></p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</div>
+
+<noscript>
     <div class="noscript">
-      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a live map and needs JavaScript. Selected work: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a scroll through a landscape and needs JavaScript. Selected work: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
     </div>
   </noscript>
 
-  <script src="/assets/portfolio/data.js"></script>
-  <script src="/assets/portfolio/notes.js"></script>
-  <script src="/assets/portfolio/live/kit.js"></script>
-  <script src="/assets/portfolio/live/relay.js"></script>
-  <script src="/assets/portfolio/live/tracewise.js"></script>
-  <script src="/assets/portfolio/live/onboard.js"></script>
-  <script src="/assets/portfolio/live/atlas.js"></script>
-  <script src="/assets/portfolio/live/studio.js"></script>
-  <script src="/assets/portfolio/live/dispatch.js"></script>
-  <script src="/assets/portfolio/live/layerline.js"></script>
-  <script src="/assets/portfolio/live/hub.js"></script>
-  <script src="/assets/portfolio/live/app.js"></script>
+<p class="folio" id="folio" aria-hidden="true"><b>1</b><span>/ 5</span><i></i></p>
+
+<script src="/assets/portfolio/data.js"></script>
+<script src="/assets/portfolio/notes.js"></script>
+<script src="/assets/portfolio/live/kit.js"></script>
+<script src="/assets/portfolio/live/relay.js"></script>
+<script src="/assets/portfolio/live/tracewise.js"></script>
+<script src="/assets/portfolio/live/onboard.js"></script>
+<script src="/assets/portfolio/live/dispatch.js"></script>
+<script src="/assets/portfolio/live/atlas.js"></script>
+<script src="/assets/portfolio/live/studio.js"></script>
+<script src="/assets/portfolio/live/layerline.js"></script>
+<script type="module" src="/lab/unfold/unfold.js"></script>
 </body>
 </html>

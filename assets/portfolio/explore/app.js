@@ -1030,7 +1030,7 @@
       ${metrics(p, "metrics")}
       <div class="actions top">${links}</div>
       ${mapStop(p)
-        ? `<a class="cover-link" href="/#/${mapStop(p)}" data-surface><canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas><span class="cover-cap">running live on the map <b aria-hidden="true">↖</b></span></a>`
+        ? `<a class="cover-link" href="/map/#/${mapStop(p)}" data-surface><canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas><span class="cover-cap">running live on the map <b aria-hidden="true">↖</b></span></a>`
         : `<canvas class="cover" data-seed="${hash(p.id)}" data-motif="${p.motif || "dots"}" aria-hidden="true"></canvas>`}
       <div class="case-grid">
         ${p.why ? `<h4>why</h4><p>${esc(p.why)}</p>` : ""}

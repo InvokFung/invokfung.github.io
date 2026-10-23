@@ -1,0 +1,68 @@
+/* Shared frame for the motion lab. Each experiment owns its stage; this file only draws the
+   thin bar around it (back to the lab, what it is, where the idea came from) and the notes drawer.
+   Tokens match the live site (assets/portfolio/live/live.css) so a winner can move over as is. */
+:root {
+  --bg: #0a0b0d;
+  --ink: #ecebe6;
+  --dim: rgba(236, 235, 230, 0.58);
+  --faint: rgba(236, 235, 230, 0.16);
+  --line: rgba(236, 235, 230, 0.1);
+  --panel: #111215;
+  --accent: #ffb547;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); }
+body { font: 15px/1.5 var(--sans); -webkit-font-smoothing: antialiased; overflow: hidden; }
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+
+/* the bar: one line at the top, quiet so the stage stays the focal point */
+.lab-bar {
+  position: fixed; inset: 0 0 auto; z-index: 20; display: flex; align-items: center; gap: 14px;
+  padding: calc(14px + env(safe-area-inset-top, 0px)) max(18px, env(safe-area-inset-right, 0px)) 14px max(18px, env(safe-area-inset-left, 0px));
+  font: 500 12px/1.2 var(--mono); letter-spacing: 0.02em; color: var(--dim); pointer-events: none;
+}
+.lab-bar > * { pointer-events: auto; }
+.lab-bar a { text-decoration: none; }
+.lab-bar a:hover { color: var(--ink); }
+.lab-bar .crumb b { color: var(--ink); font-weight: 500; }
+.lab-bar .spacer { flex: 1; }
+.lab-bar .src { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 42vw; }
+.lab-bar button { color: var(--dim); border: 1px solid var(--faint); border-radius: 999px; padding: 6px 11px; }
+.lab-bar button:hover, .lab-bar button[aria-expanded="true"] { color: var(--ink); border-color: var(--dim); }
+
+/* the notes drawer: what it is, where it came from, how it works, verdict */
+.lab-notes {
+  position: fixed; right: max(14px, env(safe-area-inset-right, 0px)); top: calc(56px + env(safe-area-inset-top, 0px)); z-index: 21;
+  width: min(380px, calc(100vw - 28px)); max-height: calc(100% - 80px); overflow: auto;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 16px;
+  font: 13.5px/1.55 var(--sans); color: var(--dim); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.lab-notes h2 { margin: 0 0 4px; font: 400 26px/1.1 var(--serif); color: var(--ink); }
+.lab-notes h3 { margin: 16px 0 4px; font: 500 11px/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+.lab-notes p { margin: 0 0 6px; }
+.lab-notes ul { margin: 0; padding-left: 18px; }
+.lab-notes a { color: var(--ink); }
+.lab-notes .verdict { margin-top: 14px; padding: 10px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.04); color: var(--ink); }
+
+/* a small readout some stages use to show the engineering under the effect */
+.lab-meter {
+  position: fixed; left: max(18px, env(safe-area-inset-left, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 15;
+  font: 500 11.5px/1.4 var(--mono); color: var(--dim); font-variant-numeric: tabular-nums; pointer-events: none;
+}
+.lab-hint {
+  position: fixed; right: max(18px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 15;
+  font: 500 11.5px/1.4 var(--mono); color: var(--dim); text-align: right; pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .lab-bar .src { display: none; }
+}

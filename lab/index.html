@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Motion Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  /* Layout: one reading column; the six experiments as a two-up grid of specimen cards, then the
+     shortlist that didn't get built. Dark only, same tokens as the live site. */
+  :root {
+    --bg: #0a0b0d;
+    --card: #101114;
+    --ink: #ecebe6;
+    --dim: rgba(236, 235, 230, 0.6);
+    --faint: rgba(236, 235, 230, 0.14);
+    --line: rgba(236, 235, 230, 0.09);
+    --accent: #ffb547;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body { font: 15px/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-block: 56px 80px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+  header { display: grid; gap: 14px; max-width: 720px; }
+  .eyebrow { font: 500 12px/1.2 var(--mono); letter-spacing: 0.06em; color: var(--dim); }
+  h1 { margin: 0; font: 400 clamp(48px, 7vw, 84px)/0.95 var(--serif); letter-spacing: -0.01em; text-wrap: balance; }
+  h1 em { color: var(--accent); }
+  .lede { margin: 0; font-size: 17px; color: var(--dim); max-width: 60ch; }
+  .pick { margin-top: 34px; padding: 18px 20px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); max-width: 780px; }
+  .pick b { display: block; font: 500 11px/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .pick p { margin: 0; font: 400 21px/1.35 var(--serif); }
+
+  h2 { margin: 72px 0 6px; font: 400 34px/1.1 var(--serif); }
+  .h2-lede { margin: 0 0 26px; color: var(--dim); max-width: 64ch; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .exp { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .exp .shot { display: block; position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: #000; }
+  .exp .shot img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .exp .shot:hover img { transform: scale(1.03); }
+  .exp .shot .open { position: absolute; right: 12px; bottom: 12px; padding: 7px 11px; border-radius: 999px; background: rgba(10, 11, 13, 0.82); border: 1px solid var(--faint); font: 500 12px/1 var(--mono); }
+  .exp .body { display: grid; gap: 12px; padding: 18px 20px 20px; }
+  .exp .name { display: flex; align-items: baseline; gap: 10px; }
+  .exp h3 { margin: 0; font: 400 32px/1 var(--serif); }
+  .exp .rank { font: 500 11px/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+  .exp .what { margin: 0; font-size: 16px; }
+  dl { margin: 0; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 8px 14px; font-size: 14px; }
+  dt { font: 500 11px/1.9 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--dim); }
+  dd { margin: 0; min-width: 0; }
+  dd a { text-decoration-color: var(--faint); text-underline-offset: 3px; }
+  .verdict { margin: 4px 0 0; padding: 12px 14px; border-radius: 10px; background: rgba(255, 255, 255, 0.035); font-size: 14.5px; }
+  .verdict b { font-weight: 600; }
+
+  .exp.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .exp.wide .shot { aspect-ratio: auto; min-height: 100%; border-bottom: 0; border-right: 1px solid var(--line); background: #0a0b0d; }
+  .exp.wide .shot img { object-fit: contain; }
+  .jobs { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 14.5px; }
+  .jobs li { padding-top: 8px; border-top: 1px solid var(--line); }
+  .jobs b { font-weight: 600; }
+  .skip-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 34px; margin: 0; padding: 0; list-style: none; }
+  .skip-list li { padding: 14px 0; border-top: 1px solid var(--line); font-size: 14.5px; color: var(--dim); }
+  .skip-list li b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 2px; }
+
+  .keep { margin: 0; padding-left: 18px; color: var(--dim); max-width: 70ch; }
+  .keep li { margin: 6px 0; }
+  code { font: 500 0.88em var(--mono); color: var(--ink); }
+  footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--line); font: 500 12px/1.5 var(--mono); color: var(--dim); }
+
+  @media (max-width: 820px) {
+    .grid, .skip-list, .exp.wide { grid-template-columns: minmax(0, 1fr); }
+    .exp.wide .shot { aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--line); }
+    dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    dd { margin-bottom: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">invokfung.github.io / lab · round 1 on 18 Oct 2026, rounds 2 to 4 on 23 Oct</span>
+    <h1>Motion <em>Lab</em></h1>
+    <p class="lede">Six effects that went viral from 2024 to 2026, each rebuilt with Alan's own name, copy and projects as a standalone page. None of it is on the live site. Pick what earns a place, and the rest stays here on record.</p>
+  </header>
+
+  <h2>Round 4: one smooth scroll</h2>
+  <p class="h2-lede">Round 3 again, without the page turn: one scroll through a paper landscape, a day on a mountain from first light to last. Each scene hands over to the next its own way. No flip, no snap. The live pages are untouched.</p>
+  <div class="grid">
+    <article class="exp wide" id="unfold">
+      <a class="shot" href="unfold/index.html"><img src="shots/unfold.jpg" alt="A paper mountain at morning with a flag for each year up the trail to a camp marked 2026 so far, and a higher summit in cloud behind it marked next" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Unfold</h3><span class="rank">round 4 · whole site</span></div>
+        <p class="what">One continuous move through a paper landscape, drawn on one canvas so it stays light. 2026 is a camp, not the top: the trail goes on into cloud, to a higher summit that clears at the end.</p>
+        <ul class="jobs">
+          <li><b>Hello.</b> The name between ridges at first light. The ridges tear at their valleys and part like a curtain.</li>
+          <li><b>How I got here.</b> A flag a year up the trail to the camp, each with a line on what changed.</li>
+          <li><b>Selected work.</b> The camera flies into the cloud by the camp and comes out at the work: seven live panels, the front four with two real numbers each.</li>
+          <li><b>Craft.</b> A crane along the camp at golden hour. The panels lie down in a wave and six live specimens stand up.</li>
+          <li><b>Contact.</b> Clouds rise and part on the summit at last light, with the trail up it and "Say hello."</li>
+        </ul>
+        <p class="verdict"><b>Live: the homepage since 23 Oct.</b> Replaces round 3. The browser's own scroll, eased, with no library. It drops its own quality on slow machines and works without WebGL. The map it replaced is at <a href="../map/">/map/</a>.</p>
+      </div>
+    </article>
+  </div>
+
+  <h2>Round 3: a pop-up book</h2>
+  <p class="h2-lede">The whole portfolio in five pages. Each scroll turns one: this page's paper layers fold flat, and the next page's stand up. The live pages are untouched.</p>
+  <div class="grid">
+    <article class="exp wide" id="book">
+      <a class="shot" href="book/index.html"><img src="shots/book.jpg" alt="Alan Fung's name set between layers of paper ridges at first light" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Book</h3><span class="rank">round 3 · whole site</span></div>
+        <p class="what">A cover to look at, then a little more of the story on every turn. Scroll back and it all folds up again.</p>
+        <ul class="jobs">
+          <li><b>Cover.</b> The name between ridges at first light, and nothing else.</li>
+          <li><b>How I got here.</b> One mountain, a flag a year up its trail, standing up in order.</li>
+          <li><b>Selected work.</b> All seven projects at a glance, every one running live. FDE work in front.</li>
+          <li><b>Craft.</b> The six effects from round 1 as small live specimens, each a door to its own page.</li>
+          <li><b>Contact.</b> Dusk, "Say hello." and the email.</li>
+        </ul>
+        <p class="verdict"><b>Replaced by round 4.</b> The page turn broke the scroll; kept here on record.</p>
+      </div>
+    </article>
+  </div>
+
+  <h2>Round 2: all of it, in one page</h2>
+  <p class="h2-lede">The six stopped being a gallery and went to work: one scroll with the seven projects, each effect placed where it has a job. A prototype of the whole site; the live pages are untouched.</p>
+  <div class="grid">
+    <article class="exp wide" id="flow">
+      <a class="shot" href="flow/index.html"><img src="shots/flow.jpg" alt="Alan's badge hanging in front of a wall of project copy that wraps around it" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Flow</h3><span class="rank">round 2 · whole site</span></div>
+        <p class="what">Who I am, the work running live, how I got here, what the page is made of, and how to reach me, in one scroll.</p>
+        <ul class="jobs">
+          <li><b>Hello: Badge + Reflow.</b> The badge hangs in front of the copy, and the copy re-flows around it every frame. Drag the card in and the text parts.</li>
+          <li><b>Work: the live figures + Assemble.</b> One stage runs each project's figure; between projects the figure breaks into points and rebuilds as the next one. FDE work first.</li>
+          <li><b>How I got here: Morph.</b> Titles turn into each other as you scroll, and the letters they share light up as they carry over.</li>
+          <li><b>Craft: Pressure.</b> "Hand-built, down to the type" leans toward your cursor, over a paragraph that names every effect and links here.</li>
+          <li><b>Contact: Badge again.</b> The same card comes back, turned over to the email and GitHub.</li>
+          <li><b>Sign-off: Ink.</b> The name as a fluid you can stir. It comes back.</li>
+        </ul>
+        <p class="verdict"><b>Candidate for the live site.</b> It replaces nothing until Alan says so. Content comes from <code>assets/portfolio/data.js</code>, the same file the live pages read.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="pick">
+    <b>Round 1: if one ships</b>
+    <p>Reflow as the first screen, Badge in place of contact(), and Morph for the career line. Reflow is this year's most shared effect, and what moves in it is the work itself.</p>
+  </div>
+
+  <h2>Round 1: the six</h2>
+  <p class="h2-lede">Ranked by how well each one would serve the site, not by how loud it is. Open one and press N for its notes.</p>
+
+  <div class="grid">
+    <article class="exp" id="reflow">
+      <a class="shot" href="reflow/index.html"><img src="shots/reflow.jpg" alt="A wall of project copy flowing around a giant A and an amber italic F" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Reflow</h3><span class="rank">1 · hero</span></div>
+        <p class="what">The work, as a wall of text that parts around two giant initials. Drag a letter through it and the lines re-flow every frame.</p>
+        <dl>
+          <dt>Went viral as</dt><dd><a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener">Pretext</a> by Cheng Lou, March 2026: 49.6k stars by October, and about 19M views on X in its first two days (VentureBeat).</dd>
+          <dt>Built with</dt><dd>Pretext 1.0 (MIT, vendored) and 300 lines of mine. About 1 ms per frame for 42 lines, with no DOM measuring.</dd>
+          <dt>Would go</dt><dd>The intro's first screen.</dd>
+        </dl>
+        <p class="verdict"><b>Ship it.</b> It is fresh, few portfolios use it yet, and the motion is made of real content. Keep the copy short, because lines that run across a letter read in an unusual order.</p>
+      </div>
+    </article>
+
+    <article class="exp" id="badge">
+      <a class="shot" href="badge/index.html"><img src="shots/badge.jpg" alt="An ID card hanging from a printed lanyard with a rainbow foil seal" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Badge</h3><span class="rank">2 · contact</span></div>
+        <p class="what">An ID card on a lanyard. Grab it, throw it, and tap it to flip over to the email and GitHub.</p>
+        <dl>
+          <dt>Went viral as</dt><dd><a href="https://reactbits.dev/components/lanyard" target="_blank" rel="noopener">Lanyard</a> from React Bits (48.8k stars, the #2 rising JS project of 2025), with foil after <a href="https://github.com/simeydotme/pokemon-cards-css" target="_blank" rel="noopener">pokemon-cards-css</a>.</dd>
+          <dt>Built with</dt><dd>No libraries: a verlet chain for the strap and card, CSS 3D for the tilt. The card stays real, selectable HTML.</dd>
+          <dt>Would go</dt><dd>The end of the intro, replacing the contact() ring.</dd>
+        </dl>
+        <p class="verdict"><b>Ship it.</b> The most fun per line of code, and it still reads professional. The original is a known component, so the foil in the seven project colours and the card copy are what make it Alan's.</p>
+      </div>
+    </article>
+
+    <article class="exp" id="morph">
+      <a class="shot" href="morph/index.html"><img src="shots/morph.jpg" alt="The year 2026 above the title Forward Deployed Engineer" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Morph</h3><span class="rank">3 · career line</span></div>
+        <p class="what">Each job title turns into the next while the year rolls. Three styles to compare: glide, decode and liquid.</p>
+        <dl>
+          <dt>Went viral as</dt><dd>Split and scramble text, the biggest category in <a href="https://github.com/DavidHDev/react-bits" target="_blank" rel="noopener">React Bits</a>. GSAP made SplitText and ScrambleText free in April 2025. Liquid is Magic UI's Morphing Text, and the year rolls like <a href="https://github.com/barvian/number-flow" target="_blank" rel="noopener">NumberFlow</a> (7.7k stars).</dd>
+          <dt>Built with</dt><dd>No libraries, about 200 lines. Glide matches letters the two titles share, so "Engineer" never leaves the screen.</dd>
+          <dt>Would go</dt><dd>The career line, 2020 to 2026.</dd>
+        </dl>
+        <p class="verdict"><b>Ship glide.</b> The quietest of the six and the easiest to ship. On its own it won't shock anyone, but as the career line it tells the whole path in one glance.</p>
+      </div>
+    </article>
+
+    <article class="exp" id="assemble">
+      <a class="shot" href="assemble/index.html"><img src="shots/assemble.jpg" alt="The name Alan Fung drawn in tens of thousands of white particles" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Assemble</h3><span class="rank">4 · photo hero</span></div>
+        <p class="what">42,000 particles that form the name, then a Layerline gear, a line of copy and the Tracewise map. Drop a photo on the page and they become it.</p>
+        <dl>
+          <dt>Went viral as</dt><dd>Image to particles, best known from Bruno Imbrizi's <a href="https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/" target="_blank" rel="noopener">Interactive Particles</a>. Igloo Inc, Awwwards Site of the Year 2024, morphs one particle cloud per link.</dd>
+          <dt>Built with</dt><dd>Plain WebGL, no three.js. Every particle flies in the vertex shader, so it is one draw call.</dd>
+          <dt>Would go</dt><dd>A hero that becomes Alan's photo, or the move between projects.</dd>
+        </dl>
+        <p class="verdict"><b>Needs a photo.</b> The biggest wow on a good GPU and the effect asked for by name. Save a headshot as <code>lab/assemble/portrait.jpg</code> to see it. Dashboards turn to mush as dots, so keep it to portraits and objects.</p>
+      </div>
+    </article>
+
+    <article class="exp" id="pressure">
+      <a class="shot" href="pressure/index.html"><img src="shots/pressure.jpg" alt="ALAN FUNG set wall to wall, with the letters near the cursor heavy and amber" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Pressure</h3><span class="rank">5 · type hero</span></div>
+        <p class="what">The name set wall to wall in a variable font. Letters near the cursor swell wide and heavy; left alone, a slow wave runs through them.</p>
+        <dl>
+          <dt>Went viral as</dt><dd><a href="https://reactbits.dev/text-animations/text-pressure" target="_blank" rel="noopener">TextPressure</a> and VariableProximity from React Bits, cloned across shadcn, Framer and 21st.dev.</dd>
+          <dt>Built with</dt><dd>No libraries. Roboto Flex's width, weight and optical size axes, set per letter each frame.</dd>
+          <dt>Would go</dt><dd>A typographic hero, or the name on /explore/.</dd>
+        </dl>
+        <p class="verdict"><b>Keep in reserve.</b> Instantly striking and cheap, but common now, so it reads as taste rather than invention.</p>
+      </div>
+    </article>
+
+    <article class="exp" id="ink">
+      <a class="shot" href="ink/index.html"><img src="shots/ink.jpg" alt="The name drawn in monospace characters, smeared by a swirl of amber fluid" loading="lazy" /><span class="open">open ↗</span></a>
+      <div class="body">
+        <div class="name"><h3>Ink</h3><span class="rank">6 · 404 or footer</span></div>
+        <p class="what">The name printed in characters on a fluid. Stir it into smoke and it settles back into the letters.</p>
+        <dl>
+          <dt>Went viral as</dt><dd><a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation" target="_blank" rel="noopener">WebGL Fluid Simulation</a> by Pavel Dobryakov (16.6k stars), plus the 2026 ASCII wave: Pretext's smoke demo and Alex Harri's "ASCII characters are not pixels" (1,353 points on Hacker News).</dd>
+          <dt>Built with</dt><dd>Stable fluids on the CPU, one cell per character, and one shader that draws all 10,920 characters.</dd>
+          <dt>Would go</dt><dd>A 404 page, or behind the footer.</dd>
+        </dl>
+        <p class="verdict"><b>Not for the hero.</b> The most original mix here, but it sits close to the dot-matrix look the site already has, and the name only reads when it is still.</p>
+      </div>
+    </article>
+  </div>
+
+  <h2>Looked at, not built</h2>
+  <p class="h2-lede">Each of these went viral too. Here is why none of them made the six.</p>
+  <ul class="skip-list">
+    <li><b>A desktop OS as the portfolio</b>Mitch Ivin's Windows XP site got 1,032 points on Hacker News in 2025; ryOS and Henry Heffernan's 3D desk did well too. It is a whole-site concept rather than an effect, and it has been cloned many times over.</li>
+    <li><b>Liquid glass</b>rdev/liquid-glass-react reached 6.4k stars from the day after WWDC 2025. The refraction only works in Chromium; Safari and Firefox show a flat panel.</li>
+    <li><b>Shader gradients and aurora backgrounds</b>React Bits' fastest-growing category. They look good and say nothing about the work.</li>
+    <li><b>Live state shared between visitors</b>Josh Comeau's rainbow and Bruno Simon's whispers. They need a server, and GitHub Pages can't run one.</li>
+    <li><b>Dithering shaders</b>Four Codrops tutorials in 2025 and 2026. Too close to the dot-matrix figures already on the intro.</li>
+    <li><b>A drivable 3D world</b>Bruno Simon's 2025 relaunch was Awwwards Site of the Month in January 2026. The car and the walkable city were already ruled out.</li>
+  </ul>
+
+  <h2>How this lab is kept</h2>
+  <ul class="keep">
+    <li>Every experiment has its own folder under <code>/lab/</code>: the page, the component it is built from, and its notes (press N on the page).</li>
+    <li><code>lab/README.md</code> logs each one with its date, source, license, files and verdict, so nothing tried gets lost.</li>
+    <li>Nothing on the live site links here, and every page carries <code>noindex</code>.</li>
+    <li>The only third-party code is Pretext (MIT), vendored unmodified in <code>lab/vendor/</code> with its license. Everything else is written from scratch.</li>
+  </ul>
+
+  <footer>Research and builds: 18 Oct 2026. Star counts read on each repo's GitHub page that day.</footer>
+</div>
+</body>
+</html>

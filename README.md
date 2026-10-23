@@ -1,30 +1,44 @@
 # invokfung.github.io
 
-Alan Fung's portfolio, served from GitHub Pages. It has two pages that link to each other:
+Alan Fung's portfolio, served from GitHub Pages. It has three pages that link to each other:
 
-- `/` is the intro: one live map you travel by scrolling, ending in `contact()`.
+- `/` is the homepage: a day on a paper mountain you scroll through, in five scenes from the name
+  to `contact()`.
+- `/map/` is the same work on one live map you travel by scrolling, also ending in `contact()`.
 - `/explore/` is the full portfolio: a tile you can break for every flagship, each with its case
   study, the skills patch bay, the history loop, a terminal and the page's own live source.
 
-They are two levels of one map, linked through the design rather than a menu:
+They are linked through the design rather than a menu:
 
-- On the intro, a project's name is the door to its case study (`/explore/#work/<id>`), and so is
+- On the homepage, Selected work opens with "Selected work, not the whole shelf" (`/explore/`) and
+  "running live, here or on the map" (`/map/`). Each project panel opens its case study
+  (`/explore/#work/<id>`), and each Craft specimen opens its page in the motion lab (`/lab/`).
+- On the map, a project's name is the door to its case study (`/explore/#work/<id>`), and so is
   the "How it works" after its measured result. Followed from the cell you are reading, the map
   dives into that cell first, and where the browser has cross-document view transitions the name
   carries over into the case study's title.
-- Each case study's cover leads back up to the project running live on the map (`/#/<id>`), and the
-  map surfaces out of that cell. The back button surfaces the same way.
-- The copy links the rest: "the whole shelf" in the opening line, "a new title every year" on the
-  path (`/explore/#history`), "one level down" at the very end, and "on one map" on `/explore/`.
+- Each case study's cover leads back up to the project running live on the map (`/map/#/<id>`),
+  and the map surfaces out of that cell. The back button surfaces the same way.
+- The copy links the rest: "the whole shelf" in the map's opening line, "a new title every year" on
+  the path (`/explore/#history`), "one level down" at the very end, and "on one map" on `/explore/`.
   Copy in `data.js` can carry `[words](/link/)`. The name in the corner of `/explore/` goes to `/`.
 
-Both pages read the same `data.js`.
+All three read the same `data.js`.
 
-## The intro
+## The homepage
 
-The landing page is one map you travel by scrolling. Seven projects, StudyLog and a hub sit on a
-3×3 grid, and every cell is the project itself running live in the browser. The words run down the
-left like any page (below the map on a phone), and the camera follows them: as you scroll, it flies
+`index.html` is round 4, take 2 of the motion lab, made the homepage on 23 Oct 2026. Its code stays
+where it was built, in `lab/unfold/` (`unfold.js`, `scenery.js`, `art.js`, `unfold.css`), and the
+Craft specimens come from `lab/book/specimens.js`; `lab/README.md` logs how it was made. The
+landscape is one WebGL canvas and the words, panels and links are ordinary DOM in front of it. It
+uses the browser's own scroll with no snap, drops its quality on slow machines, and works with
+reduced motion and without WebGL. `/lab/unfold/` serves the same page inside the lab.
+
+## The map
+
+`/map/` was the homepage from 11 to 23 Oct 2026. It is one map you travel by scrolling. Seven
+projects, StudyLog and a hub sit on a 3×3 grid, and every cell is the project itself running live
+in the browser. The words run down the left like any page (below the map on a phone), and the camera follows them: as you scroll, it flies
 from cell to cell, and the cell you are reading about develops from a dot-matrix print into the
 running project, with its slider, live numbers and the real project's result beside it.
 
@@ -39,7 +53,7 @@ to a section.
 
 Files:
 
-- `index.html`: page shell (canvas, HUD, the thread, an empty `main` the sections are written into)
+- `map/index.html`: page shell (canvas, HUD, the thread, an empty `main` the sections are written into)
 - `assets/portfolio/data.js`: **all content** (profile, home copy, path, projects, and the `live` copy per figure)
 - `assets/portfolio/live/kit.js`: shared drawing helpers and the `Fig` base class
 - `assets/portfolio/live/{relay,tracewise,onboard,dispatch,atlas,studio,layerline,hub}.js`: one live figure each
@@ -47,7 +61,7 @@ Files:
 - `assets/portfolio/live/live.css`: the HUD, the thread, the sections
 - `assets/portfolio/notes.js`: the note index Atlas searches; rebuild with `python3 assets/portfolio/notes.py`
 - `assets/portfolio/media/<id>.webp`: a still per flagship, used for link previews
-- `sw.js`: network-first cache for both pages
+- `sw.js`: network-first cache for `/map/` and `/explore/`
 
 A figure implements `size`, `step`, `draw`, pointer handlers, `set(v)` with a `slider`, and `stats()`.
 To add one, write it in `live/`, give it a cell in `CELL` and a place in `ORDER` in `live/app.js`,
@@ -63,7 +77,7 @@ on the map. Blog numbers in `writing` are a snapshot and need a manual refresh.
 - `assets/portfolio/explore/style.css`: the three themes and everything else
 
 Its headings are `explore` in `data.js`, and each project's case study cover is its `motif`. It opens
-dark like the intro; the theme is a live value in the source panel. TripleFind Arena is listed under
+dark like the map; the theme is a live value in the source panel. TripleFind Arena is listed under
 the tiles as an experiment rather than as a tile.
 
 Other corners: `/relay/` (Relay), `/tracewise/` (Tracewise), `/onboard/` (Onboard), `/dispatch/` (Dispatch), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/layerline/` (Layerline),
