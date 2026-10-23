@@ -270,7 +270,7 @@ function layout() {
         if (!mists.has(key) || !gl) mists.set(key, paintMist(pal.mist));
         c = mists.get(key);
         it = item(el, 'mist', b, sOf(el, b));
-        it.tex = T(c, { repeat: true }); it.tile = b.w / 640;
+        it.tex = T(c, { repeat: true });
         if (!gl) { const cv = document.createElement('canvas'); cv.width = c.width; cv.height = c.height; cv.getContext('2d').drawImage(c, 0, 0); el.append(cv); }
         continue;
       }
@@ -711,7 +711,9 @@ function pushSprite(list, it, off) {
   if (it.role === 'pool') { list.soft.push({ mode: 1, tex: it.tex, box: [it.b.l, 0, it.b.w, 0], fl: it.fl, off: o, alpha: it.alpha * it.base * it.rise, tint: it.tintC, blend: 'add', depth: 'test', fade: [2, 0, 0, 0], d: depthNow }); return; }
   const L = [it.s, it.z, it.Yb, 0], pad = it.pad || 0, sd = it.side || 0, bx = [it.b.l - sd, it.b.t - pad, it.b.w + 2 * sd, it.b.h + pad];
   if (it.role === 'mist') {
-    list.soft.push({ tex: it.tex, box: bx, sub: [0, 0, it.tile, 1], L, th, off: o, alpha: it.alpha, shift: [reduced ? 0 : clock * 0.006, 0], depth: 'test', d: depthNow });
+    // one width of mist across its box, drifting; it wraps round, so the box is always full (sub would
+    // also cut the sheet itself short, which on a phone left a hard edge in the cover's mist)
+    list.soft.push({ tex: it.tex, box: bx, L, th, off: o, alpha: it.alpha, shift: [reduced ? 0 : clock * 0.006, 0], depth: 'test', d: depthNow });
     return;
   }
   if (it.role === 'soft' || it.role === 'halo') {
@@ -808,6 +810,7 @@ function start() {
   p = want();
   introStart = performance.now() + 250;
   requestAnimationFrame(frame);
+  document.documentElement.classList.add('posed'); // the first frame poses every scene before this is painted
 }
 // the big words are painted from the page's fonts, so wait for them
 Promise.all([document.fonts?.ready, document.fonts?.load('400 100px "Instrument Serif"'), document.fonts?.load('italic 400 100px "Instrument Serif"'), document.fonts?.load('500 12px "JetBrains Mono"')].map((x) => Promise.resolve(x).catch(() => {}))).then(start);

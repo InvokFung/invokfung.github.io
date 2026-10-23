@@ -35,6 +35,9 @@ a { color: inherit; }
 .page a, .page button, .page input, .page [data-live], .page [tabindex] { pointer-events: auto; }
 .layer { position: absolute; transform-origin: 0 0; transform-style: flat; will-change: transform; backface-visibility: visible; }
 .page.off { visibility: hidden; }
+/* until unfold.js has posed the scenes, show none of them: on a cold load the fonts and scripts take
+   a moment, and every scene would show at once, flat and on top of each other */
+html:not(.posed) .page, html:not(.posed) .folio { visibility: hidden; }
 /* the landscape's boxes: measured, never drawn (but for the words in them, kept for reading aloud
    and selecting, in a see-through ink) */
 .gl { position: absolute; display: block; pointer-events: none; }

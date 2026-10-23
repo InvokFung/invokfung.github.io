@@ -32,7 +32,12 @@ where it was built, in `lab/unfold/` (`unfold.js`, `scenery.js`, `art.js`, `unfo
 Craft specimens come from `lab/book/specimens.js`; `lab/README.md` logs how it was made. The
 landscape is one WebGL canvas and the words, panels and links are ordinary DOM in front of it. It
 uses the browser's own scroll with no snap, drops its quality on slow machines, and works with
-reduced motion and without WebGL. `/lab/unfold/` serves the same page inside the lab.
+reduced motion and without WebGL. `/lab/unfold/` serves the same page inside the lab. Old links
+into the map from when it was the homepage (`/#/relay`) are sent on to `/map/#/relay`.
+
+Each page has its own share card, `assets/portfolio/media/card-{home,map,explore}.jpg`: a 1200×630
+screenshot of the page at rest, named in its `og:image`. Retake it when the page's look changes.
+`sitemap.xml` and `robots.txt` list the main pages.
 
 ## The map
 
