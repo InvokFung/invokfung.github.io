@@ -113,7 +113,7 @@ vec4 sea(vec2 s) {
   // it, glow
   float sunlit = max(dot(n, sun), 0.0);
   float ao = mix(0.22, 1.0, smoothstep(0.05, 0.85, h0));
-  float crest = pow(1.0 - clamp(dot(n, -d), 0.0, 1.0), 3.0) * smoothstep(0.35, 0.85, h0);
+  float crest = pow(1.0 - clamp(dot(n, -d), 0.0, 1.0), 2.0) * 0.8 * smoothstep(0.35, 0.85, h0);
   vec3 c = mix(cDeep, cShade, ao);
   c = mix(c, mix(cShade, cLit, 0.55), smoothstep(0.45, 0.95, h0) * 0.6 * lit);
   c = mix(c, cLit, clamp(sunlit * 1.5, 0.0, 1.0) * ao * lit);

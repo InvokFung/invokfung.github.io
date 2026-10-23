@@ -310,3 +310,23 @@ With the live sea the first posed frame comes as soon as before (2.5 to 3.0 s on
 tier, against 2.9 to 3.2 s for the live site). Its cost moved into each frame instead: on a slow
 graphics chip the opening's frames run slow, and that steps the page down a tier (fewer steps a ray,
 no extra far rays, a coarser canvas) as it already did for the scroll.
+
+### 2026-10-23 · Live: the sea of cloud, then its scroll bar and its foot
+
+The live sea of cloud went out (PR #7). Two things came back from Afung straight after:
+
+- **A gap at the very bottom.** The rock in front stopped at the bottom of the screen, and every
+  paper sheet fades out at its foot, so a strip of the sea showed through under it (the painted sea
+  used to stop short of the bottom, so this never showed before). The rock now runs on past the
+  bottom of the screen (`.cover .r3`), so its faded foot is always out of sight.
+- **The browser's grey scroll bar** broke the scene. It is still the browser's own bar (so it drags,
+  pages and reads out as one), styled: its track is the day on the mountain top to bottom, each
+  scene's sky where the thumb stands when you are in that scene, with a mark for each, and the thumb
+  is that scene's sun (`rail()` in `unfold.js`). Chrome, Edge and Safari take the gradient; Firefox
+  takes only flat colours, so there the track is the sky of the scene you are in. Phones keep their
+  own thin overlay bar.
+
+On the way, the cloud's edges near the name stair-stepped on Afung's screen. Rays are now taken
+twice, down the pixel, over most of the sea (from a little way out; three times was too slow to
+spread that far), the crests' glow is a little broader so it doesn't alias as a thin line, and the
+name goes down into the cloud through a short fade instead of being cut along a line.

@@ -17,7 +17,17 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html { background: var(--bg); overflow-x: clip; }
+html { background: var(--bg); overflow-x: clip; --rail: #151826; --rail-at: #2a2140; --rail-thumb: rgba(255, 225, 176, 0.85); }
+/* the scroll bar: the day on the mountain down its track, a mark for each scene, and the thumb a
+   sun moving through it (unfold.js sets the colours). Still the browser's own bar, so it drags,
+   pages and reads out as one. Firefox takes only two flat colours. */
+html::-webkit-scrollbar { width: 10px; height: 10px; background: #07080c; }
+html::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+html::-webkit-scrollbar-track { background: var(--rail); }
+html::-webkit-scrollbar-thumb { background: var(--rail-thumb); background-clip: padding-box; border: 2px solid transparent; border-radius: 10px; min-height: 36px; }
+html::-webkit-scrollbar-thumb:hover, html::-webkit-scrollbar-thumb:active { background-color: #fff4e6; }
+html::-webkit-scrollbar-corner { background: transparent; }
+@supports not selector(::-webkit-scrollbar) { html { scrollbar-width: thin; scrollbar-color: var(--rail-thumb) var(--rail-at); } }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
@@ -67,7 +77,7 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
 .cover .name { left: 0; right: 0; bottom: 33%; display: flex; justify-content: center; }
 .cover .name h1 { font-size: clamp(64px, 15.5vw, 300px); line-height: 0.8; color: var(--ink); white-space: nowrap; text-shadow: 0 0.04em 0.12em rgba(0, 0, 0, 0.35); }
 .cover .name h1 span:last-child { font-style: italic; }
-.cover .r3 { top: 85%; bottom: 0; }
+.cover .r3 { top: 85%; bottom: -8%; }   /* (past the bottom, so its faded foot never shows the sea under it) */
 .mist { left: -10%; right: -10%; }
 .cover .m1 { top: 58%; bottom: 20%; }
 /* thin cloud across the peaks, and lower, just over the name */
@@ -185,7 +195,7 @@ h2 em, h1 em { font-style: italic; color: var(--accent); }
   .cover .r2 { top: 29%; bottom: 46%; }
   .cover .name { bottom: 38%; }
   .cover .name h1 { font-size: 21vw; display: flex; flex-direction: column; align-items: center; line-height: 0.84; }
-  .cover .r3 { top: 84%; bottom: 0; }
+  .cover .r3 { top: 84%; bottom: -8%; }
   .cover .w1 { top: 26%; bottom: 57%; }
   .cover .w2 { top: 33%; bottom: 52%; }
   .cover .s0 { top: 40%; bottom: 40%; }

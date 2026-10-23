@@ -19,7 +19,7 @@
 // Everything is a function of the scroll position, so scrolling back plays it all in reverse.
 import { mountSpecimens } from '../book/specimens.js';
 import { createScenery } from './scenery.js';
-import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintWisp, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
+import { clamp, lerp, tint, rgba, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintWisp, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
 
 const D = window.PORTFOLIO, F = window.Figs;
 const $ = (s, r = document) => r.querySelector(s);
@@ -211,6 +211,7 @@ function layout() {
   STEP = H * (narrow() ? 0.8 : 0.9); // the scroll from one scene to the next
   DZ = P * 0.42;                      // and how far apart two scenes stand
   scroller.style.height = ((N - 1) * STEP + H) + 'px';
+  rail();
   stage.style.perspective = P + 'px';
   for (const t of painted) gl?.release(t);
   painted = [];
@@ -518,9 +519,9 @@ function pushSea(into, sc, off, po, sky, u, alpha) {
   const part = !reduced && u > 0 ? easeInOut(clamp((u - 0.1) / 0.56)) * W * 0.8 : 0;
   const halves = part > 0.5 ? [-1, 1] : [0];
   const base = { view: [hz, f, slide, 0], cam: [slide * 3 / f, hc, -ahead, DEEP], w0, w1, sun: [sun[0] / sl, sun[1] / sl, sun[2] / sl, 1], glow: [sx, sy, gr, ga], colours };
-  // (fewer steps a ray on a slower tier; far rays, beyond aa[0], are taken aa[1] times against
-  // stair-steps, more on a faster tier)
-  const steps = tier === 'high' ? 14 : tier === 'mid' ? 11 : 8, aa = tier === 'high' ? [8, 3] : tier === 'mid' ? [12, 2] : [0, 1];
+  // (fewer steps a ray on a slower tier; rays that meet the tops beyond aa[0] are taken aa[1] times,
+  // spread down the pixel, against stair-steps along the heaps' edges)
+  const steps = tier === 'high' ? 12 : tier === 'mid' ? 10 : 8, aa = tier === 'high' ? [4, 2] : tier === 'mid' ? [6, 2] : [0, 1];
   const pass = (rect, r0, r1, d, a = alpha, thin = NOTHIN) => {
     if (rect[3] <= rect[1] + 1 || !(a > 0.002)) return;
     for (const side of halves) {
@@ -539,8 +540,9 @@ function pushSea(into, sc, off, po, sky, u, alpha) {
   if (name.alpha > 0.002 && !(name.part > 0.5)) {
     const b = name.b, s2 = P / (P - zName), X0 = ox + (b.l - ox) / name.s, X1 = ox + (b.l + b.w - ox) / name.s, Yb = oy + (b.t + b.h - oy) / name.s;
     const at = (X) => po[0] + (X + off[0] - po[0]) * s2, yb = po[1] + (Yb + off[1] + name.dy - po[1]) * s2;
-    // (marched just as the pass before, so the two agree on every heap, but cut off past the name)
-    pass([Math.max(0, at(X0)), Math.max(hz, hz + f * hc / sea.near), Math.min(W, at(X1)), Math.min(H, yb + 4)], 0, sea.far, zName + 0.5, alpha * name.alpha, [sea.near, sea.near * 1.001]);
+    // (marched just as the pass before, so the two agree on every heap, but thinning out past the
+    // name, so its letters go down into the cloud softly rather than cut along a line)
+    pass([Math.max(0, at(X0)), Math.max(hz, hz + f * hc / (sea.near * 1.12)), Math.min(W, at(X1)), Math.min(H, yb + 4)], 0, sea.far, zName + 0.5, alpha * name.alpha, [sea.near * 0.9, sea.near * 1.12]);
   }
 }
 
@@ -666,6 +668,30 @@ document.addEventListener('click', (e) => {
   if (i >= 0) { e.preventDefault(); goTo(i); }
 });
 
+/* ------------------------------------------------------------------ the scroll bar */
+// The page's own scroll bar, styled (unfold.css), not replaced: its track is the day on the mountain,
+// top to bottom, each scene's sky where the thumb stands when you are in that scene, with a mark for
+// each; the thumb is that scene's sun. (Firefox takes only flat colours: there the track is the
+// sky of the scene you are in.)
+const railMix = (a, b, t) => { const x = tint(a), y = tint(b); return `rgb(${x.map((v, k) => Math.round((v + (y[k] - v) * t) * 255)).join(',')})`; };
+const railSky = (id) => railMix(PAL[id].sky[2], PAL[id].sky[3], 0.3);
+let shownRail = -1;
+function rail() {
+  const root = document.documentElement.style, k = H / ((N - 1) * STEP + H);
+  const at = scenes.map((sc) => ((sc.i / (N - 1)) * (1 - k) + k / 2) * 100);
+  const sky = scenes.map((sc, i) => `${railSky(sc.id)} ${at[i].toFixed(2)}%`).join(', ');
+  const marks = at.map((a) => `transparent calc(${a.toFixed(2)}% - 1px), rgba(255,240,225,0.4) calc(${a.toFixed(2)}% - 1px), rgba(255,240,225,0.4) calc(${a.toFixed(2)}% + 1px), transparent calc(${a.toFixed(2)}% + 1px)`).join(', ');
+  root.setProperty('--rail', `linear-gradient(${marks}), linear-gradient(${PAL[scenes[0].id].sky[1]}, ${sky}, ${PAL[scenes[N - 1].id].sky[1]})`);
+  shownRail = -1;
+}
+function railAt(i) {
+  if (i === shownRail) return;
+  shownRail = i;
+  const root = document.documentElement.style, pal = PAL[scenes[i].id];
+  root.setProperty('--rail-thumb', rgba(pal.sun.c, 0.85));
+  root.setProperty('--rail-at', railSky(scenes[i].id));
+}
+
 /* ------------------------------------------------------------------ the frame */
 // Where the eye is, in scenes: it slows near each scene, so there is time to read it, and moves
 // fastest between two.
@@ -708,6 +734,7 @@ function render() {
   const cur = Math.round(eye);
   if (cur !== shownFolio) {
     shownFolio = cur;
+    railAt(cur);
     folio.querySelector('b').textContent = cur + 1;
     folio.querySelector('i').textContent = scenes[cur].el.dataset.name;
   }
