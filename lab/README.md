@@ -260,3 +260,34 @@ And on phones the cover's mist stopped in a hard vertical edge behind the name: 
 passed its tiling as `sub`, which also cuts the sheet's own width, so on screens under about 530px
 wide the sheet ended short of the screen. It now spans its whole box with one width of mist across
 it, which is how it already looked on wider screens.
+
+### 2026-10-23 · The opening, a sea of cloud
+
+Afung found the cover flat: an empty dark ground, mist smears, and ridges that only stood up after
+the page had been dark for a moment. Two openings were built and compared side by side:
+
+- **A, first light.** The ridges are there from the start, dark, and the dawn lights them from the
+  back ridge to the front one while the sun comes up behind them.
+- **B, sea of cloud.** Two ranges of peaks and the sun rise out of a sea of cloud at dawn, the name
+  just above it with billows round its feet, and a dark rock in front. The same first light plays
+  over it.
+
+Afung picked B, so it is the cover now. The cloud is `paintSea` in `art.js`: rows of billowing
+sheets, small and hazy toward the horizon and bigger near, each sheet's edge heaps of every size with
+smaller billows on their crowns, lit along that edge and going over into shade below it (a blurred
+shadow of a band under the crest, so only that band is blurred). The far sea is behind the name and
+the near one in front of it. On the first scroll the cloud parts down the middle with a soft edge
+(`soft` on a torn piece: each half runs on past the cut by its soft width and only tests depth, so
+no seam shows at rest) while the peaks tear like the paper they are.
+
+On the way, two other spots got the same treatment:
+
+- The cloud banks between craft and contact were round bubbles. They are painted with `paintSea`
+  now, lit from the low sun on the left, and part with the same soft edge. They are big, so they
+  are painted once the first screen is showing, not before it.
+- In the pan from work to craft the incoming ridges showed hard vertical ends and a straight foot.
+  Every paper sheet now fades out at its ends and foot, beyond where it shows at rest.
+
+Speed, timed to the first posed frame at 4× CPU slowdown (SwiftShader, 1440×900, mid tier): the live
+site 3.4 s, A 3.1 s, B 3.4 s. Without the deferred banks it was 4.4 s and 5.5 s. Canvas 2D drawing is
+rasterised lazily in Chrome, so a painter can only be timed by reading a pixel back at the end.

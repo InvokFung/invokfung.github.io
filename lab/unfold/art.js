@@ -225,67 +225,6 @@ export function paintMist(color, seed = 3) {
   }
   return c;
 }
-// A bank of cloud, as paper: a scalloped top over a body that runs to the bottom of its box, so a bank
-// can rise from below and fill the screen. light: the rim the low sun puts on its edge; body: its
-// colour; deep: the shade it darkens to below. fade: the body thins out toward the bottom instead
-// (a cloud that hangs on a slope).
-export function paintCloud(w, h, k, { light, body, deep, seed = 1, top = 0.18, fade = false }) {
-  const [c, x] = canvas(w, h, k), r = rng(seed);
-  // two sheets in the bank, the back one lit more: each a row of billows of every size
-  const sheet = (y0, grow) => {
-    const bumps = [];
-    for (let px = -w * 0.1; px < w * 1.1;) {
-      const rr = h * (0.05 + r() * r() * 0.17) * grow;
-      bumps.push([px, y0 + rr * 0.6 + (r() - 0.5) * h * 0.05, rr]);
-      px += rr * (1.05 + r() * 0.8);
-    }
-    const yAt = (px) => { let y = Infinity; for (const [cx, cy, rr] of bumps) { const d = px - cx; if (d * d < rr * rr) y = Math.min(y, cy - Math.sqrt(rr * rr - d * d)); } return y === Infinity ? y0 + h * 0.1 : y; };
-    const edge = new Path2D(), fill = new Path2D(), step = Math.max(1.5, w / 900);
-    for (let px = -w * 0.06; px <= w * 1.06; px += step) { edge[px === -w * 0.06 ? 'moveTo' : 'lineTo'](px, yAt(px)); }
-    fill.addPath(edge); fill.lineTo(w * 1.06, h); fill.lineTo(-w * 0.06, h); fill.closePath();
-    return { edge, fill, bumps };
-  };
-  const paint = ({ edge, fill, bumps }, col, lit, rimA, y0) => {
-    const g = x.createLinearGradient(0, y0, 0, h);
-    g.addColorStop(0, col); g.addColorStop(0.4, mix(col, deep, 0.5)); g.addColorStop(1, deep);
-    x.fillStyle = g; x.fill(fill);
-    // each billow lit on its crown, so the bank reads as round, not as a cut-out
-    x.save(); x.clip(fill);
-    for (const [cx, cy, rr] of bumps) {
-      const bg = x.createRadialGradient(cx, cy - rr * 0.55, rr * 0.05, cx, cy - rr * 0.2, rr * 1.05);
-      bg.addColorStop(0, rgba(light, lit)); bg.addColorStop(0.55, rgba(light, lit * 0.3)); bg.addColorStop(1, rgba(light, 0));
-      x.fillStyle = bg; x.fillRect(cx - rr * 1.1, cy - rr * 1.2, rr * 2.2, rr * 2.3);
-    }
-    x.restore();
-    x.strokeStyle = rgba(light, rimA); x.lineWidth = Math.max(1, h * 0.0025); x.lineJoin = 'round'; x.stroke(edge);
-  };
-  const back = sheet(h * top, 1), front = sheet(h * (top + 0.08), 1.3);
-  paint(back, mix(body, light, 0.18), 0.3, 0.3, h * top);
-  paint(front, body, 0.2, 0.16, h * (top + 0.08));
-  // inside, a few broad patches of shade so it isn't one flat colour
-  x.save(); x.clip(front.fill);
-  for (let i = 0; i < 6; i++) {
-    const px = r() * w, py = h * (top + 0.25 + r() * 0.4), rr = h * (0.14 + r() * 0.2);
-    const pg = x.createRadialGradient(px, py, 0, px, py, rr);
-    pg.addColorStop(0, rgba(deep, 0.25)); pg.addColorStop(1, rgba(deep, 0));
-    x.fillStyle = pg; x.fillRect(px - rr, py - rr, rr * 2, rr * 2);
-  }
-  x.restore();
-  if (CAN_BLUR) {
-    // soften it all a touch, as cloud
-    const soft = document.createElement('canvas'); soft.width = c.width; soft.height = c.height;
-    const s = soft.getContext('2d');
-    s.filter = `blur(${Math.max(0.8, h * k * 0.003).toFixed(1)}px)`;
-    s.drawImage(c, 0, 0);
-    x.save(); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, c.width, c.height); x.drawImage(soft, 0, 0); x.restore();
-  }
-  if (fade) {
-    const m = x.createLinearGradient(0, h * top, 0, h);
-    m.addColorStop(0, 'rgba(0,0,0,1)'); m.addColorStop(0.45, 'rgba(0,0,0,0.75)'); m.addColorStop(1, 'rgba(0,0,0,0)');
-    x.save(); x.globalCompositeOperation = 'destination-in'; x.fillStyle = m; x.fillRect(0, 0, w, h); x.restore();
-  }
-  return c;
-}
 // A sea of cloud, seen from just above it toward a low sun, as paper: rows of billowing sheets, small
 // and hazy at its far edge (the top of the box) and bigger toward its near one. Each sheet's edge is
 // heaps of every size with smaller billows on their crowns; it is lit along that edge and goes over

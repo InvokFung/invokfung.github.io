@@ -9,8 +9,8 @@
 //
 // The scenes are placed in one world and the camera travels between them, a different way each
 // time, so each move tells you something:
-//   Hello → Climb    part:   the cover tears at its valleys and parts like a curtain; the mountain
-//                            stands up behind it
+//   Hello → Climb    part:   the sea of cloud parts down the middle and the peaks tear, like a
+//                            curtain; the mountain stands up behind it
 //   Climb → Work     fly:    the camera flies to the 2026 camp; the work stands up there, under the
 //                            camp's light
 //   Work  → Craft    pan:    the camera pans along the camp; the panels lie down and the specimens
@@ -19,7 +19,7 @@
 // Everything is a function of the scroll position, so scrolling back plays it all in reverse.
 import { mountSpecimens } from '../book/specimens.js';
 import { createScenery } from './scenery.js';
-import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintCloud, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
+import { clamp, lerp, tint, skyline, valley, foot, along, trail, pennant, paintSky, paintRidge, paintMist, paintSea, paintPuff, paintRadial, paintFloor, paintText } from './art.js';
 
 const D = window.PORTFOLIO, F = window.Figs;
 const $ = (s, r = document) => r.querySelector(s);
@@ -39,15 +39,8 @@ const stand = (t) => {
 const narrow = () => innerWidth <= 760;
 
 for (const el of $$('[data-md]')) el.innerHTML = md(get(el.dataset.md));
-// ?sea: the opening as a sea of cloud at dawn, the peaks standing out of it (a variant, to compare
-// with the ridges at first light): the far mist and the near ridge become two sheets of cloud, and the
-// ridge between them goes under
-const SEA = new URLSearchParams(location.search).has('sea') || document.documentElement.classList.contains('sea');
-if (SEA) {
-  [['m1', 0], ['r4', 1]].forEach(([c, n]) => { const el = $('#cover .' + c); el.className = `gl sea s${n}`; el.dataset.art = 'sea'; el.dataset.sea = n; el.dataset.tear = ''; });
-  $('#cover .r3').remove();
-}
 const rk = (el) => +el.className.match(/\br(\d)\b/)[1] - 1; // which ridge: r1 is the farthest
+const sk = (el) => +el.className.match(/\bs(\d)\b/)[1];      // which sea of cloud: s0 is the farther
 
 /* ------------------------------------------------------------------ how much the landscape may cost */
 // The cost is all in pixels, so below high the canvas is drawn coarser while the scroll moves
@@ -78,8 +71,8 @@ const reduced = !gl || matchMedia('(prefers-reduced-motion: reduce)').matches;
 // camp for the work, golden hour for the craft, and last light at contact.
 const PAL = {
   cover: { sky: ['#090b11', '#151826', '#463645', '#a8694a'], sun: { x: 0.6, y: 0.93, r: 0.05, c: '#ffe1b0', glow: ['#ffaa60', 0.5] },
-    ridges: ['#6f5f6a', '#4d4555', '#34303f', '#22212c', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.45, 0.32, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa',
-    // ?sea: the far sea of cloud, toward the sun, and the near one
+    ridges: ['#6f5f6a', '#4d4555', '#121218'], rim: '#ffd3a1', rimA: [0.85, 0.6, 0.22], haze: 'rgba(255,205,165,0.22)', mist: '#ffd6aa',
+    // the far sea of cloud, toward the sun, and the near one
     sea: [{ light: '#ffd9b0', body: '#8a7488', deep: '#4a3e52', haze: '#a8694a', seed: 3, rows: 4, R: [5, 10], top: 0.12, heap: 1.4, glare: 0.3, fade: 0.3 },
       { light: '#ffd2a6', body: '#5e5068', deep: '#2a2433', haze: '#7a5a62', seed: 5, rows: 5, R: [12, 34], top: 0.07, heap: 1.8, glare: 0.25 }] },
   climb: { sky: ['#070a10', '#111925', '#2a3a4d', '#64798e'], sun: { x: 0.86, y: 0.5, r: 0, c: '#f3f6f8', glow: ['#dcebf5', 0.22] },
@@ -94,11 +87,10 @@ const PAL = {
 };
 // the silhouette of each ridge: where its peaks sit, as fractions of its own box
 const SHAPE = {
+  // the cover: two far ranges of peaks standing out of the cloud, and the rock you stand on
   cover: [
-    { seed: 11, base: 0.35, peaks: [[0.18, 0.62, 0.12], [0.47, 0.95, 0.09], [0.78, 0.7, 0.14]], rough: 0.16 },
-    { seed: 23, base: 0.35, peaks: [[0.08, 0.7, 0.1], [0.34, 0.85, 0.12], [0.9, 0.95, 0.1]], rough: 0.14 },
-    { seed: 37, base: 0.42, peaks: [[0.06, 0.95, 0.12], [0.94, 0.9, 0.12]], rough: 0.12, dip: [0.5, 0.3, 0.26] },
-    { seed: 41, base: 0.45, peaks: [[0.25, 0.85, 0.16], [0.7, 0.8, 0.14]], rough: 0.1 },
+    { seed: 11, base: 0.22, peaks: [[0.1, 0.62, 0.05], [0.4, 0.98, 0.055], [0.52, 0.7, 0.05], [0.76, 0.74, 0.06]], rough: 0.12 },
+    { seed: 23, base: 0.25, peaks: [[0.2, 0.82, 0.05], [0.63, 0.55, 0.06], [0.9, 0.92, 0.055]], rough: 0.12 },
     { seed: 53, base: 0.6, peaks: [[0.1, 0.92, 0.2], [0.88, 0.95, 0.18]], rough: 0.06 }
   ],
   climb: [
@@ -125,12 +117,6 @@ const SHAPE = {
   // the same summit, seen from the camp in the afternoon, and clear at last light
   summit: { seed: 13, base: 0.08, peaks: [[0.5, 0.99, 0.085], [0.38, 0.64, 0.08], [0.63, 0.72, 0.07], [0.2, 0.36, 0.1], [0.86, 0.42, 0.1]], rough: 0.035 }
 };
-// ?sea: the cover's far ridges as peaks, standing out of the cloud
-const SEA_SHAPE = [
-  { seed: 11, base: 0.22, peaks: [[0.1, 0.62, 0.05], [0.4, 0.98, 0.055], [0.52, 0.7, 0.05], [0.76, 0.74, 0.06]], rough: 0.12 },
-  { seed: 23, base: 0.25, peaks: [[0.2, 0.82, 0.05], [0.63, 0.55, 0.06], [0.9, 0.92, 0.055]], rough: 0.12 }
-];
-const shapeOf = (id, k) => (SEA && id === 'cover' && SEA_SHAPE[k]) || SHAPE[id][k];
 // the trail up the mountain, in fractions of its box (x, y from the top): to the camp, then on into
 // the cloud
 const TRAIL = [[0.14, 0.92], [0.28, 0.84], [0.23, 0.74], [0.37, 0.66], [0.33, 0.56], [0.46, 0.47], [0.56, 0.31]];
@@ -297,7 +283,7 @@ function layout() {
       } else if (art === 'sea') {
         // cloud runs on past each end like the land, and is lit from where the sky's sun stands (and
         // painted coarser: it's soft, and big)
-        const o = pal.sea[+el.dataset.sea], sd = Math.round(b.w * 0.22), sunX = -0.12 * W + pal.sun.x * 1.24 * W;
+        const o = pal.sea[sk(el)], sd = Math.round(b.w * 0.22), sunX = -0.12 * W + pal.sun.x * 1.24 * W;
         c = paintSea(b.w + 2 * sd, b.h, K * 0.7, { ...o, sun: (sunX - b.l + sd) / (b.w + 2 * sd), R: o.R.map((v) => v * H / 900 * (narrow() ? 0.75 : 1)) });
         it = item(el, 'paper', b, sOf(el, b));
         it.art = art; it.color = o.body; it.side = sd; it.drift = W * 0.005; // (the land under cloud is cloud)
@@ -305,7 +291,7 @@ function layout() {
         const big = art !== 'ridge', k = big ? 0 : rk(el);
         // land runs on past each end, for when a scene is seen from further off than at rest
         const opt = { H, color: big ? pal[art] : pal.ridges[k], rim: pal.rim, rimA: big ? 0.7 : pal.rimA[k], haze: pal.haze, pad: big ? Math.round(H * 0.08) : 0, side: Math.round(b.w * 0.22), face: big ? pal.face : null };
-        if (art === 'ridge') c = paintRidge(b.w, b.h, K, shapeOf(sc.id, k), opt);
+        if (art === 'ridge') c = paintRidge(b.w, b.h, K, SHAPE[sc.id][k], opt);
         else if (art === 'mountain') c = paintRidge(b.w, b.h, K, SHAPE.mountain, opt, (x, f) => mountainMarks(x, f, b.w, b.h, W - b.l));
         else c = paintRidge(b.w, b.h, K, SHAPE.summit, opt, (x, f) => summitMarks(x, f, b.w, b.h, sc.id === 'contact'));
         it = item(el, 'paper', b, sOf(el, b));
@@ -319,7 +305,7 @@ function layout() {
         el.append(c);
       }
       // a sheet that tears in two: down its lowest point, or between its words
-      if ('tear' in el.dataset) it.pieces = tear(el, it, art === 'ridge' ? shapeOf(sc.id, rk(el)) : null, it.side || 0);
+      if ('tear' in el.dataset) it.pieces = tear(el, it, art === 'ridge' ? SHAPE[sc.id][rk(el)] : null, it.side || 0);
     }
     // the page's own content
     for (const el of $$('.layer', sc.el)) {
@@ -482,7 +468,7 @@ function summitMarks(x, f, w, h, climbed) {
 const KIND = ['part', 'fly', 'pan', 'clouds'];
 const rising = (it, t, from, span, gap = 0.36) => { const r = stand(clamp((t - from - it.ord * gap) / span)); it.rise = r; it.alpha = clamp(r / 0.12); };
 const MOVES = {
-  // the cover tears at its valleys and parts, nearer sheets further; the mountain stands up behind
+  // the cover's cloud and peaks part down the middle, nearer sheets further; the mountain stands up behind
   part: {
     out(it, t) {
       if (it.role === 'mist') it.alpha = 1 - clamp(t / 0.3);
