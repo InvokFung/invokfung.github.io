@@ -1,7 +1,7 @@
 /*
  * Everything the portfolio shows lives in this file.
  *
- * Two pages read it: the intro at / (assets/portfolio/live/) and the full portfolio at /explore/
+ * Two pages read it: the intro at / (assets/portfolio/live/) and the original portfolio at /explore/
  * (assets/portfolio/explore/).
  *
  *   New project   → add an object to `projects` (tier "flagship" or "experiment"); a flagship on the
@@ -27,7 +27,7 @@ window.PORTFOLIO = {
     focus: ["LLM systems", "observability", "customer data", "full-stack web", "search & retrieval", "graphics"]
   },
 
-  // Lines on the intro. [words](/link/) becomes a link; /explore/ is the full portfolio, one level down.
+  // Lines on the intro. [words](/link/) becomes a link; /explore/ is the original portfolio, one level down.
   home: {
     lede: "Selected work, not [the whole shelf](/explore/). Every piece here is running live, so go ahead and try it.",
     path: "Information Engineering, then [a new title every year](/explore/#history) since 2023, each one closer to the people using the software.",
@@ -59,7 +59,7 @@ window.PORTFOLIO = {
   },
 
   /*
-   * Headings on the full portfolio at /explore/. <em>…</em> is drawn in the accent italic. Placeholders:
+   * Headings on the original portfolio at /explore/. <em>…</em> is drawn in the accent italic. Placeholders:
    *   {skills} skill count · {Flagships} spelled flagship count · {chapters} spelled chapter count · {notes} note count
    *   {Hover} / {hover} "Hover" or "Tap"
    */

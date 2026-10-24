@@ -144,7 +144,7 @@
   };
   // copy in data.js may carry [words](/a/link/); everything else is escaped
   const md = (t) => esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, w, u) => `<a href="${u}">${w}</a>`);
-  // one level down: a project's case study on the full portfolio at /explore/. Its name is the door,
+  // one level down: a project's case study on the original portfolio at /explore/. Its name is the door,
   // and following it dives the map into the cell (see dive below).
   const caseURL = (pid) => `/explore/#work/${esc(pid)}`;
   const door = (n, pid, name) => `<h2 class="pn-name"><a class="pn-door" href="${caseURL(pid)}" data-dive="${n.id}"><span data-decode>${esc(name)}</span><i aria-hidden="true"></i><span class="sr">, the case study</span></a></h2>`;

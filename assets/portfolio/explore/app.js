@@ -4,7 +4,7 @@
  * work() is a wall of live sketches, skills() a patch bay and history a horizontal for-loop.
  * The hero is my name written as sound (spectro.js); the tiles run on sims.js.
  * "</> source" slides in the page's own source; its dotted values are live and recompile the page.
- * Everything is generated from data.js. This is the full portfolio at /explore/; the intro at / is
+ * Everything is generated from data.js. This is the original portfolio at /explore/; the intro at / is
  * assets/portfolio/live/.
  */
 (() => {
