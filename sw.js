@@ -1,5 +1,5 @@
 /*
- * Keeps the map (/map/) and the full portfolio (/explore/) working offline. Only those two pages and
+ * Keeps the map (/map/) and the original portfolio (/explore/) working offline. Only those two pages and
  * their own files are handled, always network first, so an online visit never sees a stale copy.
  * Everything else on the site (the blog, the project apps) is left alone.
  */

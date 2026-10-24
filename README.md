@@ -5,7 +5,7 @@ Alan Fung's portfolio, served from GitHub Pages. It has three pages that link to
 - `/` is the homepage: a day on a paper mountain you scroll through, in five scenes from the name
   to `contact()`.
 - `/map/` is the same work on one live map you travel by scrolling, also ending in `contact()`.
-- `/explore/` is the full portfolio: a tile you can break for every flagship, each with its case
+- `/explore/` is the original portfolio: a tile you can break for every flagship, each with its case
   study, the skills patch bay, the history loop, a terminal and the page's own live source.
 
 They are linked through the design rather than a menu:
@@ -73,7 +73,7 @@ To add one, write it in `live/`, give it a cell in `CELL` and a place in `ORDER`
 and a `live` entry in `data.js`. `live/arena.js` is the TripleFind Arena figure, kept but no longer
 on the map. Blog numbers in `writing` are a snapshot and need a manual refresh.
 
-## The full portfolio
+## The original portfolio
 
 - `explore/index.html`: page shell (nav, source editor, terminal, case study dialog)
 - `assets/portfolio/explore/app.js`: the sections, tiles, patch bay, history loop, case studies, terminal and live source

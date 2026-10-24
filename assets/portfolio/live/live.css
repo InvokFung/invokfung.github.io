@@ -1,5 +1,5 @@
 /* The map page. One canvas that never scrolls, and the words scrolling beside it (below it on a phone). */
-/* it and the full portfolio at /explore/ cross-fade into each other where the browser can, and a
+/* it and the original portfolio at /explore/ cross-fade into each other where the browser can, and a
    project's name carries over into its case study's title */
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.4s; }
