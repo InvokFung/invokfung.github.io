@@ -332,3 +332,65 @@ On the way, the cloud's edges near the name stair-stepped on Afung's screen. Ray
 twice, down the pixel, over most of the sea (from a little way out; three times was too slow to
 spread that far), the crests' glow is a little broader so it doesn't alias as a thin line, and the
 name goes down into the cloud through a short fade instead of being cut along a line.
+
+### 2026-10-24 · Round 5: the work up front
+
+Afung saw two Instagram reels of portfolios and felt ours was weak next to them. The reels were
+studied frame by frame (notes and frames in the project's files, `reference-reels/`): an
+influencer's roundup of three agency sites (sweet-tape.com; era-residence.com by The First The Last;
+nickho-motorsports.nl by Boring) and Jishnu Mondal's ECHO portfolio, filmed on localhost. What they
+share: huge type as the picture, real photos and materials, a short intro, sections that change
+through shaped masks (ERA's arch, its rising dome), one object per site you can grab (Nick Ho's
+helmet, ECHO's curved ribbon and hex drum), a mechanic per section, and a pointer that says what it
+does. Theirs are agency shoots and concept pages; ours runs seven real systems. The gap is
+presentation: on the live page the work is the smallest thing on screen (8 to 9 px labels in 300 px
+cards), a fifth of the scroll is fog, and scroll is the only input you'd notice.
+
+`ascent/` is round 4 take 2 with three changes. It loads `../unfold/unfold.css` and `../unfold/art.js`
+and `deck.js` from the live folder unchanged; `ascent.js` (from `unfold.js`), `scenery.js` (from the
+live one) and `ascent.css` are its own.
+
+- **The work is a drum.** The seven projects stand on a drum, FDE work first, one in front at a time
+  at half the screen's width (84% on a phone), its neighbours wrapping away in shade. The scroll holds
+  at the work for a stretch (0.55 of a screen a project) and that stretch turns the drum; it lingers
+  with each one in front, as the eye does at each scene, and never snaps. Grab it and drag (that
+  scrolls the page), flick it and it coasts; a tap on a side tile turns it to the front, a tap on the
+  front one opens its case study. Each figure draws at about 430 px wide and is scaled up to its tile,
+  so its own labels grow with it. The front project's name stands huge behind the drum, its letters
+  rolling up through a clip as the drum turns (scrubbed, so scrolling back rolls them back); its
+  number, kind and what to try sit at the top right. The light under the drum takes the front one's
+  colour.
+- **A window instead of the fog.** Climb to Work used to fly through grey cloud. Now the camp's light
+  swells into a window shaped like a peak, full of light while it is small; the work is drawn whole
+  through it, already where it will rest, coming the last stretch nearer as the window grows, foot
+  sinking and peak rising until it is past every corner of the screen. Its skyline has a lit edge.
+  `scenery.js` gained the window (any sprite can be cut to it, `win`) and a mode for its edge (4).
+- **A pointer that says what it does.** With a mouse, over the drum the pointer is a ring reading
+  Drag, or Open over the front one. Touch screens keep their own.
+
+Checked in headless Chromium at 1440×900, 1920×1080, 1024×768 and 390×844, with reduced motion
+(one project at a time, no turning) and with WebGL off (the same, on the painted landscape). Drag,
+flick and tap were driven with a mouse: a 450 px drag turns one project, a tap on a side tile turns
+it to the front without leaving the page, a tap on the front one follows its link. No console errors.
+
+Speed, the same way as before (a wheel scroll top to bottom, SwiftShader, no GPU, the worst case):
+
+| | live (take 2) | round 5 |
+|---|---|---|
+| 1440×900 | 17.0 fps (slowest 1%: 717 ms) | 16.5 fps (slowest 1%: 700 ms) |
+| 390×844, CPU slowed 4× | 25.6 fps (533 ms) | 22.7 fps (350 ms) |
+| turning the drum only, 1440×900 | | 25.7 fps |
+
+The first build turned the drum at 6.5 fps: every turn redrew the whole landscape at full
+resolution, since the eye wasn't moving and so it never dropped to coarse. Now while only the drum
+turns the landscape isn't drawn again, except when the light under it has changed colour enough to
+see; the front figure draws every third frame while it turns and the side ones wait.
+
+Known limits, round 5:
+
+- The page is longer: the hold adds about three screens of scroll (5,913 px against 3,240 px at 1440×900).
+- Not yet seen on a real GPU or a real phone. Touch drag relies on `touch-action: pan-y`; only the mouse was driven.
+- Mid-turn the huge name is between two words for a moment, the last letters of one going as the first of the next come.
+- While the window is small its lower part shows the work's dark floor; the drum stands up once it is nearly open.
+- The first frame into the craft scene stalls while its specimens wake (about 3 s in SwiftShader). The live page does the same; not fixed here.
+- Root-relative links (`/explore/`, `/map/`) only work on the real site.

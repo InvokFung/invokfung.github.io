@@ -1,0 +1,66 @@
+/* Round 5 on top of the live page's stylesheet (../unfold/unfold.css): the work as a drum, the huge
+   name behind it, the number and what to try, and a pointer that says what it does. */
+
+/* ---------------------------------------------------------------- the work: words, number */
+.work .words { right: 58%; }
+.work h2 { font-size: clamp(30px, 3.2vw, 52px); }
+.work .count { top: 7vh; bottom: 74%; left: auto; right: var(--gut); width: min(30vw, 400px); text-align: right; }
+.count p { margin: 0; }
+.count .n { display: flex; justify-content: flex-end; align-items: baseline; gap: 10px; font: 400 13px/1 var(--mono); color: var(--dim); letter-spacing: 0.08em; }
+.count .n b { font: 400 clamp(52px, 5.6vw, 92px)/0.8 var(--serif); color: var(--ink); letter-spacing: -0.02em; }
+.count .kind { margin-top: 1.6vh; font: 500 12px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--c, var(--accent)); }
+.count .try { margin-top: 1vh; margin-left: auto; max-width: 30ch; font-size: clamp(15px, 1.2vw, 18px); line-height: 1.45; color: var(--ink); }
+.count.swap .n b, .count.swap .kind, .count.swap .try { animation: swap 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.count.swap .kind { animation-delay: 0.04s; }
+.count.swap .try { animation-delay: 0.08s; }
+@keyframes swap { from { opacity: 0; transform: translateY(0.5em); } }
+
+/* ---------------------------------------------------------------- the huge name */
+/* one word per project, each in its own clipped line; its letters roll up through it as the drum
+   turns (ascent.js). It fades toward its foot, where the drum stands in front of it. */
+.work .title { pointer-events: none; }
+.title .word { position: absolute; left: 0; right: 0; top: 0; display: flex; justify-content: center; overflow: hidden; padding: 0 0 0.06em; font-family: var(--serif); line-height: 1.02; letter-spacing: -0.025em; white-space: nowrap; }
+.title .ch { display: block; will-change: transform;
+  background: linear-gradient(180deg, rgba(240, 238, 232, 0.96) 18%, rgba(240, 238, 232, 0.5) 62%, rgba(240, 238, 232, 0.12) 92%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* ---------------------------------------------------------------- the drum */
+.work .drum { transform-style: preserve-3d; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.tile { position: absolute; inset: 0; display: block; text-decoration: none; border-radius: 14px; background: #0e0f12; overflow: hidden;
+  box-shadow: 0 0 0 1px var(--line), 0 30px 70px -30px rgba(0, 0, 0, 0.9); backface-visibility: hidden; will-change: transform; -webkit-user-drag: none; }
+.tile canvas { position: absolute; left: 0; right: 0; top: 0; bottom: 74px; width: 100%; height: calc(100% - 74px); display: block; }
+/* round the side of the drum a tile is in shade */
+.tile::after { content: ""; position: absolute; inset: 0; background: #07080a; opacity: var(--shade, 0); pointer-events: none; }
+.tile.front { box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 45%, transparent), 0 40px 90px -30px rgba(0, 0, 0, 0.95); }
+.tile .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 74px; display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 18px; padding: 0 20px; border-top: 1px solid var(--line); background: #0c0d10; }
+.tile .num b { display: block; font: 400 30px/1 var(--serif); color: var(--c); letter-spacing: -0.01em; }
+.tile .num small { display: block; margin-top: 5px; font: 400 12px/1.25 var(--sans); color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile .nm { display: flex; align-items: center; gap: 8px; font: 500 11px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
+.tile .nm i { width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
+.tile:focus-visible { outline: 2px solid var(--c); outline-offset: 4px; }
+
+/* ---------------------------------------------------------------- a pointer that says what it does */
+.pointer { position: fixed; left: 0; top: 0; z-index: 20; pointer-events: none; display: none; }
+.ring .pointer { display: block; }
+.pointer span { position: absolute; left: -38px; top: -38px; width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%;
+  background: rgba(236, 235, 230, 0.92); color: #0a0b0d; font: 600 11px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase;
+  transform: scale(0.2); opacity: 0; transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s; }
+.pointer.on span { transform: scale(1); opacity: 1; }
+.pointer.held span { transform: scale(0.82, 0.74); }
+.ring .drum, .ring .drum * { cursor: none; }
+
+/* ---------------------------------------------------------------- phone */
+@media (max-width: 760px) {
+  .work .words { right: var(--gut); }
+  .work .count { top: 80.5%; bottom: 6%; left: var(--gut); right: var(--gut); width: auto; text-align: left; }
+  .count .n { justify-content: flex-start; }
+  .count .n b { font-size: 44px; }
+  .count .kind { margin-top: 1vh; }
+  .count .try { margin-left: 0; font-size: 14px; }
+  .tile { border-radius: 12px; }
+  .tile canvas { bottom: 58px; height: calc(100% - 58px); }
+  .tile .bar { height: 58px; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 14px; }
+  .tile .nm { display: none; }
+  .tile .num b { font-size: 22px; }
+  .tile .num small { font-size: 11px; }
+}
