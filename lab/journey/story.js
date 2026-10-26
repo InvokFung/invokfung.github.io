@@ -351,7 +351,8 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sec = el.closest?.('.part');
     if (!sec) return null;
     const id = sec.id, s = T[id];
-    return s ? s.t0 + Math.min(0.4, s.len * 0.3) : null;
+    // once the part's words have all arrived (see SETTLE in journey.js)
+    return s ? s.t0 + ({ work: 0.7, next: 1.2, contact: 0.95 }[id] ?? Math.min(0.4, s.len * 0.3)) : null;
   }
   return {
     build, seek, tool, toolAt, label, at,

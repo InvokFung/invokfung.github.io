@@ -51,8 +51,10 @@ const TOTAL = at;
 const T = Object.fromEntries(SEQ.map((s) => [s.id, s]));
 // a section starts where the move into its first shot starts
 const partAt = (k) => { const s = SEQ.find((x) => x.part === k); return s.t0 - (s.into ? s.into[1] : 0); };
-// where a section is best seen: a little way into it
-const partView = (k) => { const s = SEQ.find((x) => x.part === k); return k === 0 ? 0 : s.t0 + Math.min(0.35, s.len * 0.2); };
+// where a section is best seen: a little way into it, once its words have all arrived (what's next
+// lists its items one by one; contact's links and last line come in after the address)
+const SETTLE = { work: 0.7, next: 1.2, contact: 0.95 };
+const partView = (k) => { const s = SEQ.find((x) => x.part === k); return k === 0 ? 0 : s.t0 + (SETTLE[s.id] ?? Math.min(0.35, s.len * 0.2)); };
 
 /* ------------------------------------------------------------------ how much it may cost */
 // It starts from what the device says about itself, steps down when frames run slow while the page
@@ -229,10 +231,21 @@ document.addEventListener('click', (e) => {
   const k = ANCHOR.indexOf(a.getAttribute('href').slice(1));
   if (k >= 0) { e.preventDefault(); go(partView(k)); history.replaceState(null, '', '#' + ANCHOR[k]); }
 });
-// a link that takes focus brings its part of the film on screen
+// a link reached with the keyboard brings its part of the film on screen. Only the keyboard: a
+// press with the mouse focuses a link too, and moving the page under it then would whisk the link
+// away mid-click
+let pressed = 0;
+addEventListener('pointerdown', () => { pressed = performance.now(); }, { capture: true, passive: true });
 document.addEventListener('focusin', (e) => {
+  if (performance.now() - pressed < 800 || !e.target.matches?.(':focus-visible')) return;
   const t = story.at(e.target);
   if (t != null && Math.abs(t - tau) > 0.5) go(t, true);
+});
+// links and buttons don't come away as a dragged ghost, and a drag across the page selects nothing
+// (journey.css keeps the email selectable)
+document.addEventListener('dragstart', (e) => {
+  const el = e.target.nodeType === 1 ? e.target : e.target.parentElement;
+  if (el?.closest?.('.story, .top, .rail')) e.preventDefault();
 });
 
 /* ------------------------------------------------------------------ pointer: lean, drag, hover */
@@ -291,9 +304,9 @@ function cursorFrame(dt) {
     const r = m.getBoundingClientRect();
     if (!r.width) continue;
     const cx = r.left + r.width / 2 - (m._mx || 0), cy = r.top + r.height / 2 - (m._my || 0);
-    const dx = ptr.px - cx, dy = ptr.py - cy, d = Math.hypot(dx, dy), reach = Math.max(r.width, r.height) * 0.9 + 40;
-    const pull = d < reach ? (1 - d / reach) * 0.35 : 0;
-    const tx = dx * pull, ty = dy * pull;
+    const dx = ptr.px - cx, dy = ptr.py - cy, d = Math.hypot(dx, dy), reach = Math.max(r.width, r.height) * 0.5 + 28;
+    const pull = d < reach ? (1 - d / reach) * 0.16 : 0;
+    const tx = clamp(dx * pull, -5, 5), ty = clamp(dy * pull, -4, 4);
     m._mx = lerp(m._mx || 0, tx, k * 0.6); m._my = lerp(m._my || 0, ty, k * 0.6);
     if (Math.abs(m._mx) > 0.05 || Math.abs(m._my) > 0.05 || m._was) { m.style.translate = `${m._mx.toFixed(2)}px ${m._my.toFixed(2)}px`; m._was = Math.abs(m._mx) > 0.05 || Math.abs(m._my) > 0.05; }
   }
@@ -428,7 +441,7 @@ function update(sh, q, dt) {
   const sway = reduced ? [0, 0] : [ptr.x, ptr.y];
   const orbit = { x: drag.ox + sway[0] * 0.06, y: drag.oy + sway[1] * 0.03 };
   if (sh.scene === 'dawn') sc.update(q, clock, dt, { light: easeOut(introT), sway });
-  else if (sh.scene === 'dusk') sc.update(q, clock, dt, { light: 1, sway });
+  else if (sh.scene === 'dusk') sc.update(q, clock, dt, { light: 1, sway: [sway[0] * 1.6, sway[1]] });
   else if (sh.scene === 'climb') sc.update(sh.next ? 1 : q, clock, dt, { orbit, next: sh.next ? clamp(q, 0, 1.2) : undefined });
   else if (sh.scene === 'how') sc.update(q, clock, dt, { orbit });
   else if (sh.scene === 'tools') sc.update(q, clock, dt, {});

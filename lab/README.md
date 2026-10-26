@@ -724,3 +724,16 @@ you check?" I hadn't, not frame by frame. Now every screen has been, on desktop,
 Then Afung said deploy: round 9 is the homepage from 26 Oct. `/index.html` loads it from
 `lab/journey/`, which is live code from here on, as is `lab/unfold/art.js` (its ridges).
 `/lab/unfold/` keeps the mountain it replaced.
+
+Live the same afternoon, Afung found three things on the contact page: pressing and dragging on a
+button like GitHub made the row of links vanish; a drag across the page painted blue selection
+over everything, slabs and all; and the buttons moved too much with the pointer.
+
+- **Why the links vanished.** A press with the mouse focuses a link, and a helper meant for the
+  keyboard (bring a focused link's part on screen) then scrolled back to where contact starts,
+  before its links fade in. Only keyboard focus moves the page now, and the header's "Get in
+  touch" and the rail land where every word of a part has arrived.
+- **No stray selection.** The page's words can't be selected or dragged off as a ghost; the email
+  still can, to copy it.
+- **Calmer buttons.** They lean a few pixels at most, the big address not at all; at dusk the
+  landscape answers the pointer a little more instead.
