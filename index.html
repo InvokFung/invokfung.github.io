@@ -4,16 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Alan Fung · Forward Deployed Engineer</title>
-<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. Selected work, running live as you scroll: an LLM gateway, tracing that names the broken service, customer-data matching, field-service dispatch, search with no server, a pitch detector and a slicer in WebAssembly." />
-<meta name="theme-color" content="#0a0b0d" />
+<meta name="description" content="Alan Fung (InvokFung), Forward Deployed Engineer. One scroll through paper, from first light to dusk: the path from a first commit to the customer's desk, seven projects running live (an LLM gateway, tracing that names the broken service, customer-data matching, field-service dispatch, search with no server, a pitch detector, a slicer in WebAssembly), how I work and the toolbox." />
+<meta name="theme-color" content="#e9d6c8" />
 <meta property="og:title" content="Alan Fung · Forward Deployed Engineer" />
-<meta property="og:description" content="From the customer's desk to production. Selected work, every piece running live." />
+<meta property="og:description" content="From the customer's desk to production. Seven projects, every one running live." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://invokfung.github.io/" />
 <meta property="og:image" content="https://invokfung.github.io/assets/portfolio/media/card-home.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Alan Fung, Forward Deployed Engineer, over a sea of cloud at first light" />
+<meta property="og:image:alt" content="From the customer's desk to production: Alan Fung, Forward Deployed Engineer, over a sea of cloud at first light" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://invokfung.github.io/" />
 <!-- links into the map from when it was the homepage (/#/relay) still land on it -->
@@ -23,129 +23,192 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap" rel="stylesheet" />
-<!-- the page itself is the lab's round 4 prototype (lab/unfold/), now live; its code stays there -->
-<link rel="stylesheet" href="/lab/unfold/unfold.css" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<!-- the page itself is the lab's round 9 prototype (lab/journey/), now live; its code stays there -->
+<link rel="stylesheet" href="/lab/journey/journey.css" />
+<script type="importmap">{ "imports": { "three": "/lab/vendor/three/three.module.min.js" } }</script>
 </head>
 <body>
 <a class="skip" href="#contact">Skip to contact</a>
 
-<!-- A sticky stage the height of the screen. Scrolling carries the eye through five scenes, a day
-     on the mountain from first light to last. The landscape (every .gl box) is painted on one
-     canvas by scenery.js; the words, flags, panels and specimens (every .layer) stand in front of
-     it in CSS 3D. unfold.js measures both from this layout and moves them together. -->
-<div class="scroll" id="scroll">
-<div class="stage" id="stage">
-<canvas class="land" id="land" aria-hidden="true"></canvas>
-<div class="world" id="world">
+<!-- one canvas for every scene (journey.js), a layer that takes drags, and the words over both -->
+<canvas class="gl" id="gl" aria-hidden="true"></canvas>
+<div class="side" id="side" aria-hidden="true"></div>
+<div class="hit" id="hit" aria-hidden="true"></div>
 
-  <!-- 1 · hello: the name over a sea of cloud at first light, the peaks and the sun rising out of it.
-       The cloud parts down the middle and the peaks tear, like a curtain on the mountain behind. -->
-  <section class="page cover" id="cover" data-name="Hello" aria-labelledby="cover-h">
-    <i class="gl sky" data-art="sky"></i>
-    <i class="gl ridge r1" data-art="ridge" data-tear></i>
-    <i class="gl mist w1" data-art="wisp" data-seed="4" data-speed="0.7" data-s="sky+0.07"></i>
-    <i class="gl ridge r2" data-art="ridge" data-tear></i>
-    <i class="gl mist w2" data-art="wisp" data-seed="9" data-speed="1.2" data-s="sky+0.13"></i>
-    <i class="gl sea s0" data-art="sea" data-tear></i>
-    <div class="gl name" data-art="text" data-tear><h1 id="cover-h"><span>Alan</span> <span>Fung</span></h1></div>
-    <i class="gl mist m1" data-art="mist"></i>
-    <i class="gl sea s1" data-art="sea" data-tear></i>
-    <i class="gl ridge r3" data-art="ridge" data-tear></i>
-    <div class="layer foot">
-      <p class="role">Forward Deployed Engineer</p>
-      <p class="cue" aria-hidden="true">scroll<i></i></p>
-    </div>
-  </section>
-
-  <!-- 2 · the climb, in the morning: a flag a year up the trail to a camp, and above it a higher
-       summit still in cloud, with a pole and no flag -->
-  <section class="page climb" id="climb" data-name="How I got here" aria-labelledby="climb-h">
-    <i class="gl sky" data-art="sky"></i>
-    <i class="gl ridge r1" data-art="ridge"></i>
-    <div class="layer words" data-s="sky+0.03">
-      <p class="kicker">How I got here</p>
-      <h2 id="climb-h">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
-      <p class="lede">A new title every year since 2023, each one closer to the people using the software. The summit is still up there.</p>
-    </div>
-    <i class="gl mountain" data-art="mountain"></i>
-    <!-- a flag a year, filled from data.js (path); they stand up in order, up the trail -->
-    <ol class="steps" id="steps"></ol>
-    <i class="gl ridge r2" data-art="ridge"></i>
-  </section>
-
-  <!-- 3 · the work, in the afternoon at camp: all seven running, the summit behind -->
-  <section class="page work" id="work" data-name="Selected work" aria-labelledby="work-h">
-    <i class="gl sky" data-art="sky"></i>
-    <i class="gl summit" data-art="summit"></i>
-    <i class="gl ridge r1" data-art="ridge"></i>
-    <i class="gl mist m1" data-art="mist"></i>
-    <i class="gl ridge r2" data-art="ridge"></i>
-    <div class="layer words" data-s="sky+0.03">
-      <p class="kicker">Selected work</p>
-      <h2 id="work-h">Seven of them, <em>all running.</em></h2>
-      <p class="lede">Selected work, not <a href="/explore/">the whole shelf</a>. Every piece is running live, here or <a href="/map/">on the map</a>.</p>
-    </div>
-    <div class="panels" id="panels"></div>
-  </section>
-
-  <!-- 4 · the craft, at golden hour: six effects, each with a page of its own -->
-  <section class="page craft" id="craft" data-name="Craft" aria-labelledby="craft-h">
-    <i class="gl sky" data-art="sky"></i>
-    <i class="gl ridge r1" data-art="ridge"></i>
-    <i class="gl ridge r2" data-art="ridge"></i>
-    <i class="gl mist m1" data-art="mist"></i>
-    <i class="gl ridge r3" data-art="ridge"></i>
-    <div class="layer words" data-s="sky+0.03">
-      <p class="kicker">Craft</p>
-      <h2 id="craft-h">I build the motion, <em>too.</em></h2>
-      <p class="lede">Six effects I built, each with a page of its own.</p>
-    </div>
-    <div class="specs" id="specs"></div>
-  </section>
-
-  <!-- 5 · contact, at last light: the clouds part on the summit, and the trail up it -->
-  <section class="page contact" id="contact" data-name="Contact" aria-labelledby="contact-h">
-    <i class="gl sky" data-art="sky"></i>
-    <i class="gl summit" data-art="summit"></i>
-    <i class="gl ridge r1" data-art="ridge"></i>
-    <div class="gl hello" data-art="text">
-      <p class="kicker">contact()</p>
-      <h2 id="contact-h"><span>Say</span> <em>hello.</em></h2>
-    </div>
-    <i class="gl ridge r2" data-art="ridge"></i>
-    <i class="gl ridge r3" data-art="ridge"></i>
-    <div class="layer foot">
-      <div class="reach">
-        <p class="mail"><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
-        <p class="links"><a href="https://github.com/InvokFung" target="_blank" rel="noopener">GitHub</a><a href="/explore/">The original portfolio</a><a href="/blog/">StudyLog</a></p>
-      </div>
-    </div>
-  </section>
-
-</div>
-</div>
-</div>
+<header class="top" aria-label="Site">
+  <a class="mark" href="#hello">Alan Fung</a>
+  <p class="where" id="where" aria-hidden="true"><b>01</b><span>Hello</span></p>
+  <a class="reach" href="#contact" data-magnet>Get in touch</a>
+</header>
+<nav class="rail" id="rail" aria-label="Sections"><i class="line" aria-hidden="true"></i><i class="knob" aria-hidden="true"></i></nav>
+<div class="cursor" id="cursor" aria-hidden="true"><i></i><b>drag</b></div>
 
 <noscript>
-    <div class="noscript">
-      <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is a scroll through a landscape and needs JavaScript. Selected work: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
-    </div>
-  </noscript>
+  <div class="noscript">
+    <p><b>Alan Fung</b>, Forward Deployed Engineer. This page is one scroll through a paper landscape and needs JavaScript. Selected work: <a href="/relay/">Relay</a> · <a href="/tracewise/">Tracewise</a> · <a href="/onboard/">Onboard</a> · <a href="/dispatch/">Dispatch</a> · <a href="/atlas/">StudyLog Atlas</a> · <a href="/studio/">Intonation Studio</a> · <a href="/layerline/">Layerline</a> · <a href="/explore/">The original portfolio</a> · <a href="/blog/">StudyLog</a> · <a href="https://github.com/InvokFung">GitHub</a> · <a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></p>
+  </div>
+</noscript>
 
-<p class="folio" id="folio" aria-hidden="true"><b>1</b><span>/ 5</span><i></i></p>
-<div class="thread" id="thread" aria-hidden="true"></div>
+<main class="story" id="story">
+
+  <!-- 1 · first light over the sea of cloud: what I do -->
+  <section class="part hello" id="hello" aria-labelledby="hello-h">
+    <h1 id="hello-h" class="hero">From the customer's desk <em>to production.</em></h1>
+    <p class="role">Alan Fung · Forward Deployed Engineer</p>
+    <p class="cue" aria-hidden="true"><span>Scroll</span><i></i></p>
+    <div class="what">
+      <div class="rows" aria-hidden="true">
+        <p class="row">Support chat · Copilots · On-call teams · Online shops · Payments · B2B onboarding · CRM migrations · Support chat · Copilots ·</p>
+        <p class="row">Repairs and installs · Home care · Help centres · Product docs · Music lessons · Print services · Instant quotes · Repairs and installs ·</p>
+      </div>
+      <div class="lines">
+        <p class="ln">I sit next to the people who use the software.</p>
+        <p class="ln">I find what slows them down,</p>
+        <p class="ln em"><em>then I ship the fix.<i class="mark" aria-hidden="true"></i></em></p>
+      </div>
+      <ul class="counts">
+        <li><b data-count="flagships">7</b><span>projects, all live</span></li>
+        <li><b data-count="notes">174</b><span>notes on what I learn</span></li>
+        <li><b data-count="titles">4</b><span>titles in four years</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 · the climb: a flag a year up the paper mountain -->
+  <section class="part path" id="path" aria-labelledby="path-h">
+    <div class="intro">
+      <p class="kicker">How I got here</p>
+      <h2 id="path-h">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
+      <p class="lede">Information Engineering, then a new title every year since 2023, each one closer to the people using the software.</p>
+    </div>
+    <p class="stamp" aria-hidden="true"><b>2026</b></p>
+    <div class="track" aria-hidden="true"><i class="fill"></i></div>
+    <ol class="years" id="years"></ol>
+  </section>
+
+  <!-- 3 · the work, in the cloud by the camp: seven projects, each its own scene -->
+  <section class="part work" id="work" aria-labelledby="work-h">
+    <div class="intro">
+      <p class="kicker">Selected work</p>
+      <h2 id="work-h">Seven questions I couldn't <em>leave alone.</em></h2>
+      <p class="lede">Selected work, not <a href="/explore/">the whole shelf</a>. Every piece here is running live, so go ahead and try it.</p>
+    </div>
+    <div class="shade" aria-hidden="true"></div>
+
+    <article class="f-ch" data-name="Relay" style="--a:#ffb547" aria-labelledby="ch-relay">
+      <p class="f-k"><b>01</b> / 07 · <span data-t="LLM gateway">LLM gateway</span></p>
+      <h3 class="f-n" id="ch-relay">Relay</h3>
+      <p class="f-h">Your AI feature keeps answering when the model <em>goes down.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>Support chat</li><li>Copilots</li><li>Internal tools</li></ul>
+      <p class="f-proof"><b>99.98%</b><span>of calls answered through an outage. Without it, 68.6%.</span></p>
+      <a class="f-open" href="/relay/" data-magnet>Open Relay <i aria-hidden="true">↗</i></a>
+      <p class="f-note" data-q="0.34" data-len="0.4" aria-hidden="true"><i>us-east is down · breaker open · rerouting</i></p>
+    </article>
+
+    <article class="f-ch" data-name="Tracewise" style="--a:#62b6ff" aria-labelledby="ch-trace">
+      <p class="f-k"><b>02</b> / 07 · <span data-t="Observability">Observability</span></p>
+      <h3 class="f-n" id="ch-trace" data-t="Tracewise">Tracewise</h3>
+      <p class="f-h">When checkout slows down, it names the service <em>to fix.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>On-call teams</li><li>Online shops</li><li>Payments</li></ul>
+      <p class="f-proof"><b>98.9%</b><span>culprit named first, over 200 injected faults. The usual dashboard guess: 66.1%.</span></p>
+      <a class="f-open" href="/tracewise/" data-magnet>Open Tracewise <i aria-hidden="true">↗</i></a>
+      <p class="f-note" data-q="0.74" data-len="0.3" aria-hidden="true"><i>tracewise blames card-api</i></p>
+    </article>
+
+    <article class="f-ch" data-name="Onboard" style="--a:#4fe3c1" aria-labelledby="ch-onboard">
+      <p class="f-k"><b>03</b> / 07 · <span data-t="Customer data">Customer data</span></p>
+      <h3 class="f-n" id="ch-onboard">Onboard</h3>
+      <p class="f-h">Three messy exports in. One customer table <em>you can trust.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>B2B onboarding</li><li>CRM migrations</li><li>Data clean-up</li></ul>
+      <p class="f-proof"><b>0.977</b><span>match F1 on 10,200 messy records. Matching on email alone: 0.659.</span></p>
+      <a class="f-open" href="/onboard/" data-magnet>Open Onboard <i aria-hidden="true">↗</i></a>
+    </article>
+
+    <article class="f-ch" data-name="Dispatch" style="--a:#ff7ab6" aria-labelledby="ch-dispatch">
+      <p class="f-k"><b>04</b> / 07 · <span data-t="Field service">Field service</span></p>
+      <h3 class="f-n" id="ch-dispatch"><span class="f-blk" aria-hidden="true"></span>Dispatch</h3>
+      <p class="f-h">Someone calls in sick at nine. Every customer still <em>gets their visit.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>Repairs and installs</li><li>Home care</li><li>Deliveries</li></ul>
+      <p class="f-proof"><b>97.0%</b><span>of visits on time on a bad day. The unchanged morning plan: 90.8%.</span></p>
+      <a class="f-open" href="/dispatch/" data-magnet>Open Dispatch <i aria-hidden="true">↗</i></a>
+      <p class="f-note" data-q="0.32" data-len="0.5" aria-hidden="true"><i>09:00 · Sam goes home sick · re-planning</i></p>
+    </article>
+
+    <article class="f-ch" data-name="Atlas" style="--a:#a78bfa" aria-labelledby="ch-atlas">
+      <p class="f-k"><b>05</b> / 07 · <span data-t="Search engine">Search engine</span></p>
+      <h3 class="f-n" id="ch-atlas"><span class="f-hl" aria-hidden="true"></span>Atlas</h3>
+      <p class="f-h">Search that finds the right paragraph, <em>with no server.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>Help centres</li><li>Product docs</li><li>Offline apps</li></ul>
+      <p class="f-proof"><b>85%</b><span>right first time over 5,551 passages, in about half a millisecond.</span></p>
+      <a class="f-open" href="/atlas/" data-magnet>Open Atlas <i aria-hidden="true">↗</i></a>
+      <p class="f-note f-query" data-q="0.2" data-len="0.42" data-type="how do I write a design doc people read?" aria-hidden="true"><b>search my notes</b><i></i></p>
+    </article>
+
+    <article class="f-ch" data-name="Intonation Studio" style="--a:#c8ff4a" aria-labelledby="ch-studio">
+      <p class="f-k"><b>06</b> / 07 · <span data-t="Real-time audio">Real-time audio</span></p>
+      <h3 class="f-n" id="ch-studio">Intonation Studio</h3>
+      <p class="f-h">A browser tab that hears a violin <em>to the cent.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>Music lessons</li><li>Tuners</li><li>Ear training</li></ul>
+      <p class="f-proof"><b>0.17¢</b><span>worst error on clean tones, and no octave slips in 182 noisy ones.</span></p>
+      <a class="f-open" href="/studio/" data-magnet>Open Intonation Studio <i aria-hidden="true">↗</i></a>
+    </article>
+
+    <article class="f-ch" data-name="Layerline" style="--a:#ff8a65" aria-labelledby="ch-layer">
+      <p class="f-k"><b>07</b> / 07 · <span data-t="Geometry + WebAssembly">Geometry + WebAssembly</span></p>
+      <h3 class="f-n" id="ch-layer"><span class="f-noz" aria-hidden="true"></span>Layerline</h3>
+      <p class="f-h">Drop in a 3D model, get a file <em>the printer can run.</em></p>
+      <ul class="f-fits" aria-label="Where it fits"><li>Print services</li><li>Maker tools</li><li>Instant quotes</li></ul>
+      <p class="f-proof"><b>21 ms</b><span>to slice a whole gear, 8× faster than the same code in TypeScript.</span></p>
+      <a class="f-open" href="/layerline/" data-magnet>Open Layerline <i aria-hidden="true">↗</i></a>
+    </article>
+  </section>
+
+  <!-- 4 · how I work: three set pieces on one long sheet, and a belt of words that slides with them -->
+  <section class="part how" id="how" aria-labelledby="how-h">
+    <p class="kicker" id="how-h">How I work</p>
+    <div class="belt" id="belt"></div>
+  </section>
+
+  <!-- 5 · the toolbox: every tool on a paper tag -->
+  <section class="part tools" id="tools" aria-labelledby="tools-h">
+    <p class="kicker">Toolbox</p>
+    <h2 id="tools-h">Pick up <em>any tool.</em></h2>
+    <p class="lede"><span data-count="skills">33</span> of them, from my first repo to this year. Drag to turn them; point at one to see where I used it.</p>
+    <ul class="groups" id="groups"></ul>
+    <ul class="all-tools" id="all-tools"></ul>
+  </section>
+
+  <!-- 6 · what's next: from the camp, the way on into the cloud -->
+  <section class="part next" id="next" aria-labelledby="next-h">
+    <p class="kicker">What's next</p>
+    <h2 id="next-h">The summit is <em>still up there.</em></h2>
+    <ul class="soon" id="soon"></ul>
+  </section>
+
+  <!-- 7 · contact, at last light -->
+  <section class="part contact" id="contact" aria-labelledby="contact-h">
+    <p class="kicker">contact()</p>
+    <h2 id="contact-h">Get in <em>touch.</em></h2>
+    <p class="lede">A question about a project, or an idea worth building? Write to me.</p>
+    <p class="mail"><a href="mailto:aflung10@gmail.com" data-magnet>aflung10@gmail.com</a><button class="copy" type="button" data-magnet>Copy</button></p>
+    <p class="links"><a href="https://github.com/InvokFung" target="_blank" rel="noopener" data-magnet>GitHub</a><a href="/explore/" data-magnet>The original portfolio</a><a href="/blog/" data-magnet>StudyLog</a></p>
+    <p class="colophon">Paper, light and scroll, built by hand with Three.js, GLSL and GSAP.</p>
+  </section>
+</main>
+<div class="veil" id="veil" aria-hidden="true"></div>
+<div class="tip" id="tip" aria-hidden="true"><b></b><span></span><i></i></div>
+<div class="scroll" id="scroll"></div>
 
 <script src="/assets/portfolio/data.js"></script>
 <script src="/assets/portfolio/notes.js"></script>
 <script src="/assets/portfolio/live/kit.js"></script>
-<script src="/assets/portfolio/live/relay.js"></script>
-<script src="/assets/portfolio/live/tracewise.js"></script>
-<script src="/assets/portfolio/live/onboard.js"></script>
 <script src="/assets/portfolio/live/dispatch.js"></script>
-<script src="/assets/portfolio/live/atlas.js"></script>
-<script src="/assets/portfolio/live/studio.js"></script>
-<script src="/assets/portfolio/live/layerline.js"></script>
-<script type="module" src="/lab/unfold/unfold.js"></script>
+<script src="/lab/vendor/gsap/gsap.min.js"></script>
+<script src="/lab/vendor/gsap/SplitText.min.js"></script>
+<script src="/lab/vendor/gsap/ScrambleTextPlugin.min.js"></script>
+<script>gsap.registerPlugin(SplitText, ScrambleTextPlugin);</script>
+<script src="/lab/journey/fill.js"></script>
+<script type="module" src="/lab/journey/journey.js"></script>
 </body>
 </html>

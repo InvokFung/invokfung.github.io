@@ -242,7 +242,7 @@
 
     <section class="sec contact" id="contact" data-block="contact" aria-label="Contact">
       ${node("contact()", "05", "contact")}
-      <h2 class="title split">${secTitle("contact", "Say <em>hello</em>")}</h2>
+      <h2 class="title split">${secTitle("contact", "Get in <em>touch</em>")}</h2>
       <p class="lede rv">${secLede("contact", "Run the line below.")}</p>
       <button type="button" class="hire rv" id="hire" data-node-end><span><span class="kw">await</span> alan<span class="p">.</span><span class="fn">contact</span><span class="p">()</span></span><span class="caret" aria-hidden="true"></span></button>
       <div class="promise" id="promise" hidden></div>

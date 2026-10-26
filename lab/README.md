@@ -332,3 +332,395 @@ On the way, the cloud's edges near the name stair-stepped on Afung's screen. Ray
 twice, down the pixel, over most of the sea (from a little way out; three times was too slow to
 spread that far), the crests' glow is a little broader so it doesn't alias as a thin line, and the
 name goes down into the cloud through a short fade instead of being cut along a line.
+
+### 2026-10-26 · Round 6: the portfolio as the product
+
+Afung passed on a friend's feedback and agreed with three points:
+
+- "Say hello" reads as rude and too casual for a contact section.
+- The UI/UX shown on the page is still simple and rough.
+- A list of projects a recruiter can't place ("I built A, B and C") doesn't land. The page itself
+  should be the proof of the UI/UX skill, and the projects that aren't UI work should show what they
+  do for a product and where they get used, felt on the page rather than behind a click. Study the
+  reference reels with REA, use libraries rather than hand-building, and make sure it all works.
+
+Research. REA (Reverse Engineer Anything, `github.com/morluto/rea`, MIT) is an agent toolkit, and
+its companion skill `rea-websites` is a 16-part checklist for taking a website apart. REA's own
+installer needs Node 24 and a package from npm, and installing it was blocked in this container, so
+the same checklist was run by hand with Playwright over the Chrome DevTools Protocol on three sites
+from the reels (ERA, Nick Ho, Sweet Tape): scripts loaded, globals, every ScrollTrigger with its
+tweens, and screenshots through the scroll.
+
+- All three run GSAP 3.15 with ScrollTrigger, SplitText and CustomEase on Lenis smooth scroll.
+- ERA: Lenis at `duration 1.2` with an exponential ease, driven from `gsap.ticker`, and
+  `lagSmoothing(0)`; an arch that opens through a CSS mask whose size GSAP tweens as CSS variables;
+  three custom eases (Out `0.25,1,0.5,1`, InOut `0.75,0,0.25,1`, In `0.5,0,0.75,0`); magnetic
+  buttons; the header changing colour per section. It also snaps, which this site never does.
+- Nick Ho: a video that grows from 70% of the screen to full bleed on a scrub, sections overlapping
+  by 30vh, odometer numbers, a cursor with a label, and a marquee that turns round when you scroll up.
+- Sweet Tape: pinned scrubs, `clip-path: inset()` reveals, Matter.js and Three.js.
+
+What's in `product/`. It breaks the one-component rule on purpose: the page is meant to become the
+homepage, so it is five files (`index.html`, `product.css`, `product.js`, `demos.js` and
+`search.js`) and doesn't use the lab frame. Libraries are vendored unmodified: `vendor/gsap/` (GSAP
+3.15.0 and its plugins, free under GSAP's standard license) and `vendor/lenis.min.js` (1.3.26, MIT).
+
+- **Hero.** The name inside a selection frame that grows around it with a live size readout, the
+  letters rising from a mask (SplitText). With a mouse, each letter can be dragged and springs back.
+- **Statement.** A window that opens to full bleed as you scroll (ERA's mask, as `clip-path`), then
+  one sentence that lights up word by word on a pinned scrub, and three odometer counts.
+- **The work.** Seven cards that stack as you scroll (sticky, the one beneath scaling back and
+  dimming). Each says what the project does for a product in one line, where it fits, one measured
+  number from `assets/portfolio/data.js`, and runs a working demo beside it that plays once on its own:
+  - Relay: a support chat. Personal data is swapped for placeholders before the prompt leaves, and
+    with us-east switched off it retries, opens the breaker and answers from eu-west.
+  - Tracewise: a service map. Click any service to add 600 ms; the dashboard's guess and the trace's
+    answer disagree, and the trace is right.
+  - Onboard: three exports of the same customers. Match scores them (Fellegi-Sunter weights,
+    Jaro-Winkler names, union-find), Flip moves the rows into one table, and the threshold slider
+    shows wrong merges and split people with a live F1.
+  - Dispatch: a day of visits for three technicians. Send one home or click the map for an urgent
+    job and the day re-plans by cheapest insertion with time windows.
+  - Atlas: BM25 search over my 174 notes, as you type, offline.
+  - Intonation Studio: a tuner reading a synthetic violin string with the McLeod pitch method. Sound
+    and the microphone are both opt-in.
+  - Layerline: a gear sliced layer by layer, with walls, infill and a nozzle riding the path.
+- **Where this work fits.** Two marquees of the places it gets used, Nick Ho's: they speed up with
+  the scroll and turn round when you scroll up.
+- **Interface craft.** "The page you're scrolling is the UI work": tiles that switch the whole page
+  to dark (a circle that grows from the switch, View Transitions), show the 12-column grid with live
+  type specs on every element (design view), set the variable font's width and weight, check every
+  colour pair against WCAG, draw the motion curve, turn on calm mode, and measure this page's frame
+  rate on the visitor's device.
+- **How I got here.** The years, pinned and moving sideways, ending at 2026 with "So far. Still
+  climbing."
+- **Contact.** "Get in touch." A short line, the email with a copy button, and the links.
+- Everywhere: a search palette on `/` or Ctrl/Cmd+K over the page and the notes, a labelled
+  cursor and magnetic links on a mouse, a progress bar, a page counter, a header that hides going
+  down and changes tone with the section under it.
+
+"Say hello" is now "Get in touch." on every page that had it: `/`, `/map/`, `/explore/`, and the
+book and flow experiments.
+
+Checked in headless Chromium at 1440×900, 1024×768 and 390×844, in dark theme, design view, calm
+mode and with reduced motion: no console errors and no horizontal overflow. Every demo control was
+clicked through with a script (drag a letter, send a chat, slow a service, move each slider, send a
+technician home, add an urgent job, search, pick a string, copy the email), and jumping from the
+palette lands on the right card with the header in the right tone.
+
+Speed, measured as in round 4 (a wheel scroll top to bottom, headless Chromium with no GPU, so the
+worst case). The first build was slower than it needed to be: every stacked card stayed drawn under
+the next one, and the slicer redrew its whole layer every frame.
+
+| | first build | now |
+|---|---|---|
+| 1440×900 | 49.9 fps (slowest 5%: 33 ms) | 58.6 fps (slowest 5%: 17 ms) |
+| 1440×900, CPU slowed 4× | 40.1 fps | 48.6 fps |
+| 1440×900, CPU slowed 6× | 28.2 fps | 37.6 fps |
+| 390×844, CPU slowed 4× | | 52.5 fps |
+
+What changed for speed: a card the next one has covered is hidden; stacking only moves transform
+and opacity; the slicer paints a layer once and moves the nozzle on its own small canvas; the pitch
+detector only searches the lags a violin can play. Slow devices (two cores or fewer, Save-Data, or
+`?lite`) get a lite page with no scaling cards, no drift on the name and flat shadows, and a frame
+watcher switches to it if scrolling runs below about 33 fps.
+
+Known limits, round 6:
+
+- Not yet seen on a real phone or a real GPU.
+- The demos run the real methods on small sample data in the page; Relay's providers are simulated
+  and say so. The measured numbers on each card come from the real projects.
+- The fonts come from Google Fonts; offline, the page falls back to system fonts.
+- Round 5 (`ascent/`, PR #10) is on its own branch. This round answers the same reels more fully,
+  so it supersedes it.
+
+### 2026-10-26 · Round 7: the scroll is the show
+
+Afung's answer to round 6: not amazed. "There's not much scroll effect, none like the particle of
+forming myself, nor scrolling magic where crazy content transition on scroll; that plain card
+scrolling or text highlighting bores me." Recruiters aren't designers and won't click, so
+everything has to play from the scroll alone, with "more and more transition". And no copy that
+explains the craft to the reader: "we are showcasing but not teaching ... we let them experience
+instead".
+
+Research. 61 portfolio and studio sites known from Instagram and Awwwards reels were opened in
+headless Chromium and scrolled with the wheel like a visitor, recording the libraries on the page,
+every ScrollTrigger, WebGL contexts and shader keywords, with ten frames down each page
+(`scan.js`, kept outside the repo). The list with links and each site's special moment is in the
+project files (`reference-reels/round-7-sites.md`). What the best ones share:
+
+- One thing carried through the whole scroll: Oryzo's cork coaster, Igloo's igloo built from
+  wireframe to particles to ice, Lando Norris's helmet. The page is a film with one actor.
+- Windows that open onto the next scene: Zentry's polygon, Adcker's image growing out of a
+  bracket in the headline, K72's video inside a gap in the giant type.
+- Type as a set piece: Wodniack's wall of W O R K, Noth.in's morphing logo letter, counters on
+  every loader (Lusion, Refokus, Gianluca Gradogna, Mathis Biabiany).
+- A colour change per chapter (Duo Studio, Dogstudio), and a dark scene that slides up over a
+  light one (Ochi, Cuberto, Dennis Snellenberg's curved edge).
+- Nearly all run GSAP with ScrollTrigger on Lenis, and Three.js for anything 3D.
+
+What's in `reel/`. Five files: `index.html`, `reel.css`, `reel.js` (the film), `shapes.js` (the
+shapes the dust can take). It adds Three.js 0.184.0 to `vendor/three/` (MIT, unmodified) beside the
+GSAP and Lenis already there.
+
+The whole page is one pinned stage and one timeline; the scroll is the playhead, counted in screen
+heights. 32,768 points of dust (16,384 on a phone) on a WebGL canvas behind the text carry every
+scene: each shape is sampled once into a float texture, and the vertex shader moves each point
+from one texture to the next with its own delay, a swirl in flight and a swing through depth. The
+same canvas paints the background, so the window and the wipes cost one draw.
+
+- **Name.** The dust gathers into ALAN FUNG. The first scroll throws the line under it apart word
+  by word and pours the name into a rippling floor.
+- **What I do.** Three lines turn up out of the floor letter by letter; three numbers count up.
+- **The window.** The floor draws into a ring, a dark window opens inside it, tilts, and grows to
+  the whole screen while the ring grows with it (Zentry's polygon).
+- **The work.** Seven chapters, each with its own tint. The ring bursts into what the project is
+  (a reply that still arrives, a service map with the slow one ringed, three tables that merge into
+  one, a day's route that bends, a lit paragraph under a lens, a violin, a vase printed in layers
+  that spins and pulls apart), then that shape breaks up into the number it moved (99.98%, 98.9%,
+  0.977, 97.0%, 85%, 0.17¢, 21 ms). The name and headline rise in 3D; the copy leans with scroll
+  speed.
+- **How I got here.** A circle of paper wipes up from the bottom; the dust rebuilds the year from
+  2018 to 2026 while the title rolls over with it.
+- **Contact.** The camera flies into the 0 of 2026, the hole opens into orange, and the dust
+  bursts out of it into a signature beside "Get in touch."
+- A photo can replace the signature: name it in `<body data-face="me.jpg">` and the dust draws the
+  face as a halftone (contrast stretched, edges faded to an oval). None is in the repo yet.
+
+The header takes the colour of whatever is behind it, including halfway through a wipe. With a
+mouse, the cursor parts the dust.
+
+Checked in headless Chromium at 1440×900, 1280×800 and 390×844, with reduced motion (no swirl, no
+fly-through, fades instead of 3D) and without WebGL (`?nogl`: the name, numbers and years as text,
+the colours on the stage): no console errors, and the bundled preview loads Three.js from jsDelivr
+with none either.
+
+Speed. The page's own work is small: 0.5 ms of script a frame (1.1 ms with the CPU slowed 4×), and
+without WebGL the scroll holds 60 fps. The container has no GPU, so WebGL is drawn on the CPU
+(SwiftShader) at about 14 fps, which says nothing about a real graphics chip but does show the
+safety net working: the frame watcher drops to the lite page (half the dust, one pixel per CSS
+pixel, smaller points) when frames run slow. Shapes are built in idle time after the name has
+gathered, 9 to 47 ms each.
+
+Known limits, round 7:
+
+- Not yet seen on a real phone or a real GPU.
+- No photo yet, so the dust ends on a signature rather than a face.
+- The projects' live demos from round 6 aren't on this page; each chapter links to its project.
+
+### 2026-10-26 · Round 8: the climb, with every trick on the way
+
+Afung on round 7: "why now everything is particle, nothing you built from the research reel ... and
+why our earlier motion and design all gave up and gone? i said show every cool shit together into
+one place with seamless experience". Also: stop animating the name ("awkward and cringe"), take
+the reference sites apart for how they work and combine their features instead of picking one,
+look wider (award-winning portfolios, not only Instagram), and find our own thing among them.
+Igloo Inc and Resn were examples of the level, not the target.
+
+So round 8 starts from the live homepage, not a blank page. `lab/climb/` is a fork of
+`lab/unfold/` (the day on the mountain): the cover, the climb, the shelf of live work, the craft
+and contact all keep their motion, their paper and their cloud deck. The cover no longer says the
+name; it says what the job is ("From the customer's desk to production."), and the name sits
+still in the header.
+
+**The film in the cloud.** On the flight from the climb to the camp, where the world is deep in
+fog, the scroll holds the world still for 23 screens and plays a film over it, then lets the
+world go on. It is native scroll, eased, never snapped; every frame is a function of the scroll
+position, so scrolling back plays it backwards and the browser's own scrollbar and keys work.
+
+- **What I do.** Three lines and three counts (7 projects, 174 notes, 4 titles) in dark ink on
+  the fog, over giant outlined rows of the kinds of team I work with, crawling both ways.
+- **Selected work.** A window cut in the paper, its top edge the mountain's skyline, opens on the
+  first project, tilts toward you and grows to fill the screen.
+- **Seven chapters**, each a paper diorama in Three.js built from the project's real data, with
+  its words on the left: Relay (a request through nine arches; us-east folds flat, the breaker
+  flashes, chips reroute), Tracewise (the real service map; the slow one heats up and a ring of ink
+  closes round card-api), Onboard (28 people's records fly in from three piles and merge into one
+  table), Dispatch (the real planner re-plans the day when Sam goes home sick), Atlas (174 real
+  note titles on a leaning wall; a scan finds the paragraph and the card flies to you), Intonation
+  Studio (the A string rings and the needle settles in cents), Layerline (a gear printed layer by
+  layer, then pulled apart).
+- **Between chapters, a different move every time**, all in one compositor pass:
+  tear (Igloo Inc's diagonal cut, in paper), mosaic (Fiddle.Digital), contour lines (Lando Norris),
+  the next name as a window you dive into (K72, Adcker), ink blooms (Noth.in), slats (Exo Ape),
+  and a ring of paper out of the film (Ashfall).
+- **Type.** Each project's name arrives its own way: Zentry's 3D letters (Relay), scrambled
+  (Tracewise), from three sides (Onboard), a block wipe (Dispatch), a highlighter (Atlas), an
+  elastic wave (Studio), printed line by line under a nozzle (Layerline). Numbers roll on odometer
+  digits or count up. Each chapter leaves the way Zentry's titles do, turning away in depth.
+- Over everything: paper grain, a vignette, and colour fringes that follow scroll speed.
+
+How each trick was taken apart, with what their code does and where it lands here:
+`reference-reels/round-8-teardown.md` in the project files.
+
+Files: `index.html` and `climb.css` (the markup and the film's words), `world.js` (unfold's
+engine with the hold), `film.js` (the clock and the DOM timeline, GSAP paused and driven by the
+scroll), `film-gl.js` (the compositor and its nine moves), `film-scenes.js` (the seven scenes and
+the cloud). Three.js 0.184.0 from `vendor/three/`; GSAP 3.15 with SplitText and ScrambleText from
+`vendor/gsap/`. It reuses `../unfold/scenery.js`, `art.js` and `deck.js` unchanged.
+
+Speed. Scenes are built in idle time before they're needed, then compiled. The heaviest chapter
+is 169 draws (Dispatch) and the most triangles 53,000 (Layerline). The tier watcher from unfold
+also steps the film down: shadows and multisampling on the top tier, no multisampling on mid, no
+shadows below.
+
+Checked in headless Chromium at 1280×800, 960×600 and 390×844 (touch), with reduced motion (every
+move becomes a cross-fade and nothing moves on its own) and without WebGL (the film's words on a
+dark ground, the landscape painted flat): no console errors.
+
+Known limits, round 8:
+
+- Not yet seen on a real GPU or a real phone; the container draws WebGL on the CPU.
+- On phones the window opens onto mostly floor before Relay is framed.
+- The old round 7 dust is not in this page; it stays in `lab/reel/`.
+
+### 2026-10-26 · Round 9: one journey, one world
+
+Afung on round 8: "i see a huge improvement but the key is now the original part became super
+plain compare to the new part ... the two part clearly look like 2 separate design mixed". Also:
+where did the particles go; the shelf of live work and the craft section repeat what the film
+already shows; more content; more GSAP and scroll effects across the whole page, not only between
+projects; more to play with (pointer, drag); "bring super elegant uiux modern design to max".
+
+So round 9 is not a fork. `lab/journey/` puts the whole page on one canvas: every part is a small
+3D scene in the same paper, and every part hands over to the next with its own move. There is no
+film inside a page any more; the page is the film. The browser's own scroll drives it, eased,
+never held or snapped, and scrolling back plays it in reverse.
+
+The seven parts, in order:
+
+- **Hello.** First light over the homepage's sea of cloud, now in the same renderer as the rest,
+  with paper ridges standing in it. "From the customer's desk to production." and the role, then
+  the dive into the cloud: three lines about the job, two rows of the kinds of team I work with
+  running both ways (they lean and speed up with the scroll), and three counts that roll.
+- **How I got here.** The mountain as a paper relief model, a sheet of card for every contour,
+  with the trail in orange, a flag a year and the tent where 2026 stands, so far. The camera walks
+  the trail; a year stamp rolls on odometer digits and a card for each year comes in beside it.
+  Drag to turn the mountain.
+- **Selected work.** Into the cloud by the camp, then round 8's seven project scenes and their
+  type, each handing over with a different move.
+- **How I work.** One long sheet with three set pieces the camera trucks along (a city with a pin
+  dropped on one desk, the whole stack built as four slabs, a chart of what naming the culprit
+  first is worth), and a belt of words that slides with it: FDE scrambles, 7 rolls, 98.9% counts.
+- **Toolbox.** All 33 tools on paper tags in a globe you can spin; as you scroll it sorts itself
+  into shelves by kind. Point at a tag to see since when and where I used it.
+- **What's next.** Back on the mountain, the camera looks past the camp up the trail still to
+  climb, with the one milestone each flagship has left.
+- **Contact.** The sea of cloud at last light, embers in it, "Get in touch." and the email with a
+  Copy button.
+
+**Dust is back,** refined: a few thousand motes over everything, drawn after the frame, and their
+light changes with the place. Motes in the low sun on the cover, a graphite line that draws the
+mountain's outline as the cover turns into the climb, specks rushing past in the cloud, a sparse
+haze in the chapters, fireflies round the toolbox, embers at dusk. They part round the pointer
+with a swirl and ring out from a click. They're kept to a band and few in number on the light
+scenes so they never read as stars.
+
+**Moves between parts,** all in one compositor pass, on top of round 8's nine: mist (cloud rolls
+in and thins onto the next place; the sea of cloud the page lives in), fold (the page folds up
+along a slanting crease, its back showing the print through: Lusion's page turn, flat) and shards
+(the sheet breaks into cut pieces that turn away: the Voronoi cut in Active Theory's work, in
+paper). Far jumps from the rail or the header cut under a paper veil instead of scrolling through
+everything in between.
+
+**Words.** One paused GSAP timeline whose time is the scroll, with SplitText for lines, words and
+characters and ScrambleText for labels. Headings rise by character with Zentry's 3D turn and
+leave the same way; ledes come in by line; numbers roll on odometer digits or count; the cover
+words scatter as you leave.
+
+**To play with.** A cursor ring that grows over links and turns into "drag" over what can be
+dragged; magnetic buttons; drag to orbit the mountain and the how sheet and to spin the toolbox;
+a rail on the right with a tick per part (hover for its name, click to go, drag to scrub); a
+header that scrambles to the part you're in; the dust around the pointer.
+
+Removed, as asked: the "Seven of them, all running" shelf and the "I build the motion, too"
+section. The work is shown once, in the film. The name is in the header and never animates.
+
+Files: `index.html` and `journey.css`; `journey.js` (the engine: the clock, the sequence of
+shots, tiers, the pointer, rail and header); `story.js` (the words' timeline); `fill.js` (fills
+the lists from `assets/portfolio/data.js`); `comp.js` (the compositor and its twelve moves);
+`dust.js`; `sky.js` (dawn and dusk); `places.js` (the mountain, the how sheet, the toolbox);
+`works.js` (the cloud and the seven project scenes, from round 8). It reuses `../unfold/art.js`.
+Three.js 0.184.0 from `vendor/three/`; GSAP 3.15 with SplitText and ScrambleText from
+`vendor/gsap/`.
+
+Speed. One renderer and two render targets for the whole page; each scene is built when it's
+next and compiled in idle time. Four tiers: shadows, multisampling and 2,400 motes on the top;
+800 motes and no shadows on low; no dust at all on the lowest, which is also where a software
+renderer lands. It steps down on slow frames, draws coarser while the page is moving, and on the
+lower tiers draws every other frame when nothing moves. Debug: `?q=high|mid|low|least` pins a
+tier, `?t=` jumps to a point in screens.
+
+Checked in headless Chromium at 1280×800 and 390×844 (touch), with reduced motion (moves become
+cross-fades, the dust holds still) and without WebGL (the words on flat grounds in each part's
+colour): no console errors.
+
+Known limits, round 9:
+
+- Not yet seen on a real GPU or a real phone; the container draws WebGL on the CPU.
+- About 45 screens long. Every part earns its screens, but it is a long walk; the rail is the
+  shortcut.
+
+Round 9, later the same day. Afung: "why the trail seems not moving, and please check performance
+smooth or not, and phone view, especially thin width".
+
+- **The trail moves.** The camera keeps the walker in frame, so the thread's growth hardly showed.
+  Now a bead of light stands at its tip with a ring rippling out from it, light runs up the walked
+  part to where you are, and the dashes still to walk creep uphill.
+- **A stall at the start of every part, gone.** Scenes were compiled ahead of time for the screen,
+  but drawn into a render target, which needs different shaders, so each part's first frame
+  compiled them again: 160 to 740 ms in headless Chromium. Each scene is now drawn once, small and
+  out of sight, as it's built (shaders compile in the background where the browser can, and the
+  first draw waits for a pause in the scroll, up to 3 s). Over a steady 40-second scroll, no
+  frame's script took more than about 12 ms, where each part used to start with 160 to 740 ms.
+- The type mask for the Atlas dive read a large canvas back from the GPU (3 s in headless
+  Chromium); it now measures a quarter-size copy kept in memory.
+- The frame no longer changes size while you scroll (that was a hitch of its own on phones), and
+  split words and letters no longer each ask for their own layer.
+- Script time per frame is about 1 ms; no part draws more than 170 times or 64,000 triangles a
+  frame. A meter in the corner shows how a real phone copes: `?fps`, F, or a tap on the last line
+  of the page turns it on.
+- **Thin phones** (checked at 320, 360 and 390 wide): the dawn ridges keep their shape instead of
+  squeezing into spikes; the words of how I work and what's next sit on a sheet of paper at the
+  foot of the screen; what's next stacks each item under its name; the toolbox drops its group
+  counts, which sat on top of the shelves (the shelves name their groups themselves); and a
+  number's digits each take their own width, so 2018 no longer reads as "201 8".
+
+Then, an hour later. Afung, with screenshots: "why a gap at bottom again, and its floating, also i
+still don't see the right side trait moving", and of the colour split on a fast scroll, "specially
+made or a glitch?"
+
+- **The near hill stands on the bottom edge again.** It was drawn into the sea of cloud, and the
+  ray-marched cloud in front of it won the depth test, so a pink strip showed under it. The hill
+  now always draws over the cloud (its own depth still writes, so what's in front of it holds).
+  Checked at dawn and dusk, desktop and phone.
+- **The progress line on the right moves.** Forty-four screens on a 350-pixel line is 8 pixels a
+  screen, which reads as still. The line now magnifies where you are, like a dock: one fine tick
+  per screen, spread out around the knob and bunched up far from it, so the ticks stream past as
+  you scroll. The walked part fills in ember, the knob stretches with speed, and while you scroll
+  the part's name rides beside it. Dragging it still scrubs; the lens holds still while you drag.
+- **The colour split was on purpose**, a little chromatic edge that grows with scroll speed, but
+  at full strength it read as a glitch. It's now capped at a faint edge of a pixel or two.
+
+The same afternoon, before it went live. Afung, with a screenshot of the year's tags on the mountain
+piled on one another: "label overlapped, please fix, and better on phone not stacked too, haven't
+you check?" I hadn't, not frame by frame. Now every screen has been, on desktop, tablet and phone.
+
+- **The year's tags sit in rows by their flag.** They were hung round the flag in the world, so
+  from most angles they stacked up and covered the year. Now they're set out on the screen: rows
+  above the flag, or beside or below it where the room is, clear of each other, the year on the
+  flag and the caption and big year on the page. Each chip is as wide as its word.
+- **The scene falls away behind the words.** In the projects, how I work, the toolbox and what's
+  next, the side of the screen with the words fades into the part's own colour, so the Atlas wall,
+  the city or a tag never runs through a line of copy. The toolbox's fall clears once its shelves
+  sort; on a phone only the projects need it.
+- The toolbox names are whole (long ones set a little smaller instead of cut short with "…"), and
+  the far side of its globe falls back so the tags facing you read clear.
+- The opening words drift apart from the middle of their line as you scroll, where before two of
+  them ran into each other on the way out.
+- On a phone, Atlas's note comes to the middle at a size that fits, and the part's name by the
+  progress line stays hidden (it ran across the picture).
+
+Then Afung said deploy: round 9 is the homepage from 26 Oct. `/index.html` loads it from
+`lab/journey/`, which is live code from here on, as is `lab/unfold/art.js` (its ridges).
+`/lab/unfold/` keeps the mountain it replaced.

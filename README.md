@@ -2,17 +2,18 @@
 
 Alan Fung's portfolio, served from GitHub Pages. It has three pages that link to each other:
 
-- `/` is the homepage: a day on a paper mountain you scroll through, in five scenes from the name
-  to `contact()`.
+- `/` is the homepage: one scroll through paper and light, from first light over a sea of cloud to
+  dusk, by way of the path up a paper mountain, seven projects, how I work, the toolbox and what's
+  next.
 - `/map/` is the same work on one live map you travel by scrolling, also ending in `contact()`.
 - `/explore/` is the original portfolio: a tile you can break for every flagship, each with its case
   study, the skills patch bay, the history loop, a terminal and the page's own live source.
 
 They are linked through the design rather than a menu:
 
-- On the homepage, Selected work opens with "Selected work, not the whole shelf" (`/explore/`) and
-  "running live, here or on the map" (`/map/`). Each project panel opens its case study
-  (`/explore/#work/<id>`), and each Craft specimen opens its page in the motion lab (`/lab/`).
+- On the homepage, Selected work opens with "Selected work, not the whole shelf" (`/explore/`),
+  each project opens running in its own page (`/relay/` and the rest), and the last part links
+  GitHub, the original portfolio and StudyLog.
 - On the map, a project's name is the door to its case study (`/explore/#work/<id>`), and so is
   the "How it works" after its measured result. Followed from the cell you are reading, the map
   dives into that cell first, and where the browser has cross-document view transitions the name
@@ -27,13 +28,17 @@ All three read the same `data.js`.
 
 ## The homepage
 
-`index.html` is round 4, take 2 of the motion lab, made the homepage on 23 Oct 2026. Its code stays
-where it was built, in `lab/unfold/` (`unfold.js`, `scenery.js`, `art.js`, `unfold.css`), and the
-Craft specimens come from `lab/book/specimens.js`; `lab/README.md` logs how it was made. The
-landscape is one WebGL canvas and the words, panels and links are ordinary DOM in front of it. It
-uses the browser's own scroll with no snap, drops its quality on slow machines, and works with
-reduced motion and without WebGL. `/lab/unfold/` serves the same page inside the lab. Old links
-into the map from when it was the homepage (`/#/relay`) are sent on to `/map/#/relay`.
+`index.html` is round 9 of the motion lab, made the homepage on 26 Oct 2026 (from 23 Oct it was
+round 4, take 2, the mountain in `lab/unfold/`). Its code stays where it was built, in
+`lab/journey/`: `journey.js` runs the film, `sky.js`, `places.js` and `works.js` hold the scenes,
+`comp.js` the moves between them, `story.js` the words' GSAP timeline, `dust.js` the particles,
+`fill.js` the lists, and `journey.css` the page; the dawn and dusk ridges come from
+`lab/unfold/art.js`. `lab/README.md` logs how it was made. Every scene draws on one WebGL canvas
+and the words are ordinary DOM in front of it. It uses the browser's own scroll with no snap,
+steps its quality down on slow machines (`?q=high|mid|low|least` pins it, `?fps` shows a frame
+meter), and works with reduced motion and without WebGL. `/lab/journey/` serves the same page
+inside the lab, and `/lab/unfold/` still has the mountain. Old links into the map from when it was
+the homepage (`/#/relay`) are sent on to `/map/#/relay`.
 
 Each page has its own share card, `assets/portfolio/media/card-{home,map,explore}.jpg`: a 1200×630
 screenshot of the page at rest, named in its `og:image`. Retake it when the page's look changes.

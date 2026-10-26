@@ -386,7 +386,7 @@ export function paintFloor(stops) {
 
 /* ------------------------------------------------------------------ words */
 // The text inside an element, painted where the page laid it out, in the font and colour CSS gave
-// it. Good for a line or two of plain text (the name on the cover, "Say hello."), not for wrapping
+// it. Good for a line or two of plain text (the name on the cover, "Get in touch."), not for wrapping
 // paragraphs.
 export function paintText(el, box, k) {
   const [c, x] = canvas(box.w, box.h, k);
