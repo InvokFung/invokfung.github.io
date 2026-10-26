@@ -685,3 +685,19 @@ smooth or not, and phone view, especially thin width".
   foot of the screen; what's next stacks each item under its name; the toolbox drops its group
   counts, which sat on top of the shelves (the shelves name their groups themselves); and a
   number's digits each take their own width, so 2018 no longer reads as "201 8".
+
+Then, an hour later. Afung, with screenshots: "why a gap at bottom again, and its floating, also i
+still don't see the right side trait moving", and of the colour split on a fast scroll, "specially
+made or a glitch?"
+
+- **The near hill stands on the bottom edge again.** It was drawn into the sea of cloud, and the
+  ray-marched cloud in front of it won the depth test, so a pink strip showed under it. The hill
+  now always draws over the cloud (its own depth still writes, so what's in front of it holds).
+  Checked at dawn and dusk, desktop and phone.
+- **The progress line on the right moves.** Forty-four screens on a 350-pixel line is 8 pixels a
+  screen, which reads as still. The line now magnifies where you are, like a dock: one fine tick
+  per screen, spread out around the knob and bunched up far from it, so the ticks stream past as
+  you scroll. The walked part fills in ember, the knob stretches with speed, and while you scroll
+  the part's name rides beside it. Dragging it still scrubs; the lens holds still while you drag.
+- **The colour split was on purpose**, a little chromatic edge that grows with scroll speed, but
+  at full strength it read as a glitch. It's now capped at a faint edge of a pixel or two.

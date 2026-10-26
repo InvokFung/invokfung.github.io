@@ -300,22 +300,70 @@ function cursorFrame(dt) {
 }
 
 /* ------------------------------------------------------------------ the rail: where you are */
-// A thin line down the right edge with a mark for each part. Dragging along it scrolls the page,
-// as a scroll bar's thumb would; a mark takes you to its part.
+// A thin line down the right edge with a mark for each part, a dot for each project and a fine
+// tick for every screen. It works as a magnifier: round the knob the line opens up, so the ticks
+// stream past it as you scroll (over 44 screens a plain bar would barely creep), while the knob
+// itself still only ever goes down the line as you go down the page. An orange thread fills behind
+// the knob, the knob draws out with the scroll's speed, and where you are rides beside it.
+// Dragging along it scrolls the page, as a scroll bar's thumb would; a mark takes you to its part.
 const rail = $('#rail'), knob = rail ? $('.knob', rail) : null;
-let railH = 0, railTop = 0;
+const LW = 2.6, LA = 0.19, SQ = Math.sqrt(Math.PI) / 2;
+const erf = (x) => { const s = Math.sign(x), a = Math.abs(x), t = 1 / (1 + 0.3275911 * a); return s * (1 - ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-a * a)); };
+// how far down the line τ = t sits, with the magnifier at c (0 to 1)
+const cum = (t, c) => t / TOTAL + LA * LW * SQ * (erf((t - c) / LW) + erf(c / LW));
+let railH = 0, railTop = 0, railHeld = false, railBack = false, lensC = 0, railFill = null, railNow = null, railMarks = [];
+const railY = (t) => (cum(t, lensC) / cum(TOTAL, lensC)) * railH;
+const railT = (y) => {
+  const want = clamp(y / railH) * cum(TOTAL, lensC);
+  let lo = 0, hi = TOTAL;
+  for (let i = 0; i < 26; i++) { const m = (lo + hi) / 2; if (cum(m, lensC) < want) lo = m; else hi = m; }
+  return (lo + hi) / 2;
+};
 function railLayout() {
   if (!rail) return;
   const r = rail.getBoundingClientRect(); railH = r.height; railTop = r.top;
-  $$('.tick', rail).forEach((el, k) => { el.style.top = (partAt(k) / TOTAL * 100).toFixed(3) + '%'; });
 }
 if (rail) {
-  rail.innerHTML += PARTS.map((p, k) => `<a class="tick" href="#${ANCHOR[k]}" aria-label="${p}"><span>${p}</span></a>`).join('');
-  const to = (e) => { const q = clamp((e.clientY - railTop) / railH); go(q * TOTAL, true); };
-  rail.addEventListener('pointerdown', (e) => { if (e.target.closest('.tick')) return; rail.setPointerCapture(e.pointerId); rail.classList.add('held'); to(e); });
+  const fine = Array.from({ length: Math.floor(TOTAL) }, (_, k) => k + 1);
+  rail.insertAdjacentHTML('beforeend', '<i class="fill" aria-hidden="true"></i><span class="now" aria-hidden="true"></span>'
+    + fine.map(() => '<i class="mn" aria-hidden="true"></i>').join('')
+    + SEQ.filter((s) => s.ch != null).map(() => '<i class="dot" aria-hidden="true"></i>').join('')
+    + PARTS.map((p, k) => `<a class="tick" href="#${ANCHOR[k]}" aria-label="${p}"><span>${p}</span></a>`).join(''));
+  railFill = $('.fill', rail); railNow = $('.now', rail);
+  const chStart = SEQ.filter((s) => s.ch != null).map((s) => s.t0 - s.into[1]);
+  railMarks = [
+    ...$$('.mn', rail).map((el, k) => ({ el, t: fine[k], fine: true })),
+    ...$$('.dot', rail).map((el, k) => ({ el, t: chStart[k] })),
+    ...$$('.tick', rail).map((el, k) => ({ el, t: partAt(k) }))
+  ];
+  // (while held, the magnifier stays where it was, so the line under the finger means one thing)
+  const to = (e) => go(railT(e.clientY - railTop), true);
+  rail.addEventListener('pointerdown', (e) => { if (e.target.closest('.tick')) return; rail.setPointerCapture(e.pointerId); rail.classList.add('held'); railHeld = true; to(e); });
   rail.addEventListener('pointermove', (e) => { if (rail.hasPointerCapture(e.pointerId)) to(e); });
-  const up = () => rail.classList.remove('held');
+  const up = () => { rail.classList.remove('held'); railHeld = false; };
   rail.addEventListener('pointerup', up); rail.addEventListener('pointercancel', up);
+}
+let railLast = '';
+function railFrame(dt, now) {
+  if (!rail || !railH) return;
+  rail.classList.toggle('moving', now - lastMove < 900 || railHeld);
+  // (the magnifier sits on the knob; only after a drag lets go does it glide back to it)
+  if (railHeld) railBack = true;
+  else if (railBack && !reduced && Math.abs(tau - lensC) > 0.01) lensC += (tau - lensC) * (1 - Math.exp(-dt * 6));
+  else { lensC = tau; railBack = false; }
+  const y = railY(tau), stretch = reduced ? 1 : 1 + Math.min(Math.abs(vel) * 0.9, 2.4);
+  const key = tau.toFixed(3) + lensC.toFixed(3) + stretch.toFixed(2) + railH;
+  if (key === railLast) return;
+  railLast = key;
+  knob.style.transform = `translateY(${y.toFixed(1)}px) scaleY(${stretch.toFixed(2)})`;
+  railFill.style.transform = `scaleY(${(y / railH).toFixed(4)})`;
+  railNow.style.transform = `translateY(${y.toFixed(1)}px)`;
+  railMarks.forEach((m) => {
+    const ty = railY(m.t);
+    m.el.style.transform = `translateY(${ty.toFixed(1)}px)`;
+    m.el.classList.toggle('past', m.t <= tau + 0.001);
+    if (m.fine) { const d = (m.t - lensC) / LW; m.el.style.opacity = (0.75 * Math.exp(-d * d)).toFixed(2); }
+  });
 }
 const where = $('#where');
 let shownPart = -1, shownCh = -1;
@@ -328,6 +376,7 @@ function header(s) {
   document.documentElement.dataset.part = ANCHOR[k];
   document.documentElement.dataset.tone = ch >= 0 || s.id === 'tools' || s.id === 'contact' ? 'dark' : 'light';
   $$('.tick', rail).forEach((el, i) => el.classList.toggle('on', i === k));
+  if (railNow) railNow.textContent = `${String(k + 1).padStart(2, '0')} · ${ch >= 0 ? story.chapterName(ch) : PARTS[k]}`;
 }
 
 /* ------------------------------------------------------------------ the frame */
@@ -357,7 +406,7 @@ function frame(now) {
   story.seek(tau, vel, introT);
   const s = shotAt(tau);
   header(s);
-  if (rail && knob) knob.style.transform = `translateY(${(tau / TOTAL * railH).toFixed(1)}px)`;
+  railFrame(dt, now);
   cursorFrame(dt);
   if (!gl) { document.body.style.setProperty('--bg', story.bg(s.id)); return; }
 

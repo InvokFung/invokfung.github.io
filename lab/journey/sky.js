@@ -304,6 +304,11 @@ export function skyScene(which, { tier = 'mid' } = {}) {
   L.ridges.forEach((r, k) => ranges.push(mkRidge(r, k)));
   const rock = mkRidge({ c: L.rock, d: 3.2, top: 0.8, foot: 1.15, sh: { seed: 53, base: 0.6, peaks: [[0.1, 0.92, 0.2], [0.88, 0.95, 0.18]], rough: 0.06 }, near: true }, 9);
   rock.U.uRimA.value = 0.55; rock.U.uFog.value = 0.0;
+  // The rock is the nearest thing there is, so it's drawn over the sea, never into it: otherwise the
+  // cloud between you and the rock's foot shows as a strip under it, and the rock floats. (It still
+  // writes depth, so the mist and the camp's light stay behind it.)
+  rock.mesh.material.depthFunc = THREE.AlwaysDepth;
+  rock.mesh.renderOrder = 1.5;
 
   // mist between the ranges
   const mists = [0, 1].map((k) => {

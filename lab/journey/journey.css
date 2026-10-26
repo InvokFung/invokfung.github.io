@@ -66,10 +66,19 @@ html[data-tone="dark"] .reach:hover { color: var(--dark); }
 
 .rail { position: fixed; right: max(10px, calc(var(--gut) * 0.4)); top: 50%; height: 44vh; width: 26px; transform: translateY(-50%); z-index: 8; color: var(--hd); cursor: ns-resize; touch-action: none; transition: color 0.5s; }
 .rail .line { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: currentColor; opacity: 0.22; }
-.rail .knob { position: absolute; left: calc(50% - 4px); top: -4px; width: 9px; height: 9px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ember) 25%, transparent); }
-.rail .tick { position: absolute; left: calc(50% - 5px); width: 11px; height: 11px; margin-top: -5px; display: grid; place-items: center; text-decoration: none; }
-.rail .tick::before { content: ""; width: 5px; height: 1px; background: currentColor; opacity: 0.6; transition: width 0.3s; }
+.rail .fill { position: absolute; left: calc(50% - 0.5px); top: 0; width: 1px; height: 100%; background: var(--ember); transform-origin: 50% 0; transform: scaleY(0); }
+.rail .knob { position: absolute; left: calc(50% - 4px); top: -4px; width: 9px; height: 9px; border-radius: 5px; background: var(--ember); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ember) 25%, transparent); }
+.rail .tick { position: absolute; left: calc(50% - 5px); top: 0; width: 11px; height: 11px; margin-top: -5px; display: grid; place-items: center; text-decoration: none; }
+.rail .tick::before { content: ""; width: 5px; height: 1px; background: currentColor; opacity: 0.6; transition: width 0.3s, background 0.3s; }
 .rail .tick.on::before { width: 11px; opacity: 1; }
+.rail .tick.past::before { background: var(--ember); opacity: 1; }
+.rail .mn { position: absolute; left: calc(50% - 3px); top: 0; width: 7px; height: 1px; background: currentColor; opacity: 0; pointer-events: none; }
+.rail .mn.past { background: var(--ember); }
+.rail .dot { position: absolute; left: calc(50% - 1.5px); top: -1.5px; width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.4; transition: background 0.3s, opacity 0.3s; }
+.rail .dot.past { background: var(--ember); opacity: 0.9; }
+.rail .now { position: absolute; right: 20px; top: -5px; white-space: nowrap; font: 500 10px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; opacity: 0; transition: opacity 0.4s; pointer-events: none; }
+.rail.moving .now { opacity: 0.8; }
+.rail:hover .now, .rail.held .now { opacity: 0; }
 .rail .tick span { position: absolute; right: 22px; white-space: nowrap; font: 500 10.5px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; opacity: 0; transform: translateX(6px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
 .rail:hover .tick span, .rail.held .tick span, .rail .tick:focus-visible span { opacity: 0.85; transform: none; }
 

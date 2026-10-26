@@ -59,10 +59,11 @@ in vec2 vUv;
 out highp vec4 fragColor;
 ${NOISE}
 float asp;
-// a sample with its colours pulled apart along y by the scroll's speed
+// a sample with its colours pulled apart along y by the scroll's speed: a faint edge, at most a
+// couple of pixels, so a fast flick feels fast without reading as a glitch
 vec3 samp(sampler2D t, vec2 uv) {
-  float k = clamp(uVel, -2.5, 2.5) * 0.004;
-  if (abs(k) < 0.0002) return texture(t, uv).rgb;
+  float k = clamp(uVel, -2.0, 2.0) * 0.0011;
+  if (abs(k) < 0.0003) return texture(t, uv).rgb;
   return vec3(texture(t, uv + vec2(0.0, k)).r, texture(t, uv).g, texture(t, uv - vec2(0.0, k)).b);
 }
 vec3 sampCA(sampler2D t, vec2 uv, vec2 dir) {
