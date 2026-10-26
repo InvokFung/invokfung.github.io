@@ -348,12 +348,13 @@ export function skyScene(which, { tier = 'mid' } = {}) {
     f = Math.max(H * 0.9, W * 0.75);
     camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(H / 2 / f));
     camera.aspect = W / H;
-    // the ranges: each wide enough to fill the view at its distance, with room to slide
-    const hz = L.hz * H;
+    // the ranges: each wide enough to fill the view at its distance, with room to slide (on a tall
+    // phone screen, wider than the view, so the peaks keep their shape and only the middle shows)
+    const hz = L.hz * H, span = Math.max(W / f, 1.0);
     // the sun: its place in the sky, as a direction, so it stays put while the camera moves
     sunDir.set((L.sun.x * W - W / 2) / f, (hz - (L.sun.y * hz)) / f, -1).normalize();
     for (const r of [...ranges, rock]) {
-      const s = r.spec, wd = s.d * (W / f) * 1.14 + 2;
+      const s = r.spec, wd = s.d * span * 1.14 + 2;
       // (a world height that shows at a given height on screen, at this distance)
       const Y = (sy) => CAM - (sy * H - hz) / f * s.d;
       const base = s.near ? Y(s.foot) : -DEEP - 0.6, ht = s.near ? Y(s.top) - base : s.h * H / f * s.d + DEEP + 0.6;

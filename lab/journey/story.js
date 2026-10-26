@@ -31,12 +31,23 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     el.innerHTML = [...txt].map((ch) => /\d/.test(ch)
       ? `<span class="od" aria-hidden="true"><span class="od-col" data-d="${ch}">${'0123456789'.repeat(2).split('').map((d) => `<span>${d}</span>`).join('')}</span></span>`
       : `<span aria-hidden="true">${ch}</span>`).join('');
+    // each digit's own width, in em: the serif has no tabular figures, and a narrow 1 in a column
+    // as wide as an 8 reads as a gap ("201 8"), so each column narrows to the digit it shows
+    const m = document.createElement('span'), fs = parseFloat(getComputedStyle(el).fontSize) || 16;
+    m.style.cssText = 'position:absolute;visibility:hidden;white-space:pre;display:inline-block';
+    el.appendChild(m);
+    el.dw = [...'0123456789'].map((d) => { m.textContent = d; return m.offsetWidth / fs; });
+    m.remove();
+    $$('.od', el).forEach((o) => (o.style.width = el.dw[0] + 'em'));
     return $$('.od-col', el);
   }
+  // roll one column to digit d (its window narrows or widens to fit)
+  const toDigit = (el, c, d) => ({ col: { yPercent: -((10 + d) / 20) * 100 }, box: { width: el.dw[d] + 'em' } });
   function roll(t, el, at, dur = 0.6) {
     odometer(el).forEach((c, k, all) => {
-      const d = +c.dataset.d;
-      t.fromTo(c, { yPercent: 0 }, { yPercent: -((10 + d) / 20) * 100, duration: dur, ease: 'power3.out' }, at + (all.length - 1 - k) * 0.05);
+      const d = +c.dataset.d, to = toDigit(el, c, d), when = at + (all.length - 1 - k) * 0.05;
+      t.fromTo(c, { yPercent: 0 }, { ...to.col, duration: dur, ease: 'power3.out' }, when);
+      t.fromTo(c.parentNode, { width: el.dw[0] + 'em' }, { ...to.box, duration: dur, ease: 'power3.out' }, when);
     });
   }
   function count(t, el, at, from, to, digits, suffix, dur = 0.6, ease = 'power2.out') {
@@ -120,7 +131,12 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const cols = odometer(big);
     const years = (D.path || []).map((p) => p.y);
     years.forEach((y, j) => {
-      [...y].forEach((d, c) => { if (!cols[c]) return; const to = -((10 + +d) / 20) * 100; if (j === 0) tl.fromTo(cols[c], { yPercent: 0 }, { yPercent: to, duration: 0.5, ease: 'power3.out' }, at(0) - 0.3 + (3 - c) * 0.05); else tl.to(cols[c], { yPercent: to, duration: 0.45, ease: 'power3.inOut' }, at(j) - 0.32 + (3 - c) * 0.04); });
+      [...y].forEach((d, c) => {
+        if (!cols[c]) return;
+        const to = toDigit(big, cols[c], +d), box = cols[c].parentNode;
+        if (j === 0) { const w = at(0) - 0.3 + (3 - c) * 0.05; tl.fromTo(cols[c], { yPercent: 0 }, { ...to.col, duration: 0.5, ease: 'power3.out' }, w); tl.fromTo(box, { width: big.dw[0] + 'em' }, { ...to.box, duration: 0.5, ease: 'power3.out' }, w); }
+        else { const w = at(j) - 0.32 + (3 - c) * 0.04; tl.to(cols[c], { ...to.col, duration: 0.45, ease: 'power3.inOut' }, w); tl.to(box, { ...to.box, duration: 0.45, ease: 'power3.inOut' }, w); }
+      });
     });
     tl.fromTo(stamp, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3 }, at(0) - 0.3);
     tl.to(stamp, { opacity: 0, y: -30, duration: 0.3, ease: 'power2.in' }, s.t1 - 0.1);

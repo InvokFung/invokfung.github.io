@@ -660,3 +660,27 @@ Known limits, round 9:
 - Not yet seen on a real GPU or a real phone; the container draws WebGL on the CPU.
 - About 45 screens long. Every part earns its screens, but it is a long walk; the rail is the
   shortcut.
+
+Round 9, later the same day. Afung: "why the trail seems not moving, and please check performance
+smooth or not, and phone view, especially thin width".
+
+- **The trail moves.** The camera keeps the walker in frame, so the thread's growth hardly showed.
+  Now a bead of light stands at its tip with a ring rippling out from it, light runs up the walked
+  part to where you are, and the dashes still to walk creep uphill.
+- **A stall at the start of every part, gone.** Scenes were compiled ahead of time for the screen,
+  but drawn into a render target, which needs different shaders, so each part's first frame
+  compiled them again: 160 to 740 ms in headless Chromium. Each scene is now drawn once, small and
+  out of sight, as it's built (shaders compile in the background where the browser can, and the
+  first draw waits for a pause in the scroll, up to 3 s). Over a steady 40-second scroll, no
+  frame's script took more than about 12 ms, where each part used to start with 160 to 740 ms.
+- The type mask for the Atlas dive read a large canvas back from the GPU (3 s in headless
+  Chromium); it now measures a quarter-size copy kept in memory.
+- The frame no longer changes size while you scroll (that was a hitch of its own on phones), and
+  split words and letters no longer each ask for their own layer.
+- Script time per frame is about 1 ms; no part draws more than 170 times or 64,000 triangles a
+  frame. `?fps` shows a meter in the corner, to see how a real phone copes.
+- **Thin phones** (checked at 320, 360 and 390 wide): the dawn ridges keep their shape instead of
+  squeezing into spikes; the words of how I work and what's next sit on a sheet of paper at the
+  foot of the screen; what's next stacks each item under its name; the toolbox drops its group
+  counts, which sat on top of the shelves (the shelves name their groups themselves); and a
+  number's digits each take their own width, so 2018 no longer reads as "201 8".

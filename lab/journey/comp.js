@@ -478,9 +478,16 @@ export function typeMask(word, fontCss) {
   c.width = w; c.height = h;
   x.font = fontCss; x.fillStyle = '#fff'; x.textBaseline = 'alphabetic'; x.textAlign = 'center';
   x.fillText(word, w / 2, h * 0.8);
-  const g = 4, gw = Math.ceil(w / g), gh = Math.ceil(h / g), a = x.getImageData(0, 0, w, h).data;
+  // the distance inside the letters, on a quarter-size copy kept in memory (reading the big one back
+  // off the GPU can stall the page for a long moment)
+  const g = 4, gw = Math.ceil(w / g), gh = Math.ceil(h / g);
+  const sc = document.createElement('canvas'); sc.width = gw; sc.height = gh;
+  const sx = sc.getContext('2d', { willReadFrequently: true });
+  sx.font = fontCss.replace(/(\d+)px/, (_, n) => n / g + 'px'); sx.fillStyle = '#fff'; sx.textBaseline = 'alphabetic'; sx.textAlign = 'center';
+  sx.fillText(word, w / 2 / g, h * 0.8 / g);
+  const a = sx.getImageData(0, 0, gw, gh).data;
   const D = new Float32Array(gw * gh);
-  for (let j = 0; j < gh; j++) for (let i = 0; i < gw; i++) D[j * gw + i] = a[((j * g + 2) * w + (i * g + 2)) * 4 + 3] > 127 ? 1e6 : 0;
+  for (let k = 0; k < D.length; k++) D[k] = a[k * 4 + 3] > 127 ? 1e6 : 0;
   for (let j = 0; j < gh; j++) for (let i = 0; i < gw; i++) { const k = j * gw + i; if (!D[k]) continue; D[k] = Math.min(D[k], i ? D[k - 1] + 1 : 1, j ? D[k - gw] + 1 : 1, i && j ? D[k - gw - 1] + 1.414 : 1, j && i < gw - 1 ? D[k - gw + 1] + 1.414 : 1); }
   for (let j = gh - 1; j >= 0; j--) for (let i = gw - 1; i >= 0; i--) { const k = j * gw + i; if (!D[k]) continue; D[k] = Math.min(D[k], i < gw - 1 ? D[k + 1] + 1 : 1, j < gh - 1 ? D[k + gw] + 1 : 1, i < gw - 1 && j < gh - 1 ? D[k + gw + 1] + 1.414 : 1, j < gh - 1 && i ? D[k + gw - 1] + 1.414 : 1); }
   let best = 0, bi = 0;

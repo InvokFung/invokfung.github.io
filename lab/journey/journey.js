@@ -57,14 +57,14 @@ const partView = (k) => { const s = SEQ.find((x) => x.part === k); return k === 
 /* ------------------------------------------------------------------ how much it may cost */
 // It starts from what the device says about itself, steps down when frames run slow while the page
 // moves, and ?q=high|mid|low|least pins it. high: up to 1.5 device pixels per CSS pixel, soft
-// shadows, 4× MSAA; mid: 1×, shadows; low: 0.85×, no shadows; least: 0.6×, no dust. Below high the
-// frame drops a little coarser while the scroll moves, and comes back sharp when it stops.
+// shadows, 4× MSAA; mid: 1×, shadows; low: 0.85×, no shadows; least: 0.6×, no dust. The size of the
+// frame never changes while you scroll (resizing it costs a hitch of its own on a phone).
 const dpr = devicePixelRatio || 1;
 const TIERS = {
-  high: { res: Math.min(dpr, 1.5), move: 1, shadows: 1024, samples: 4, dust: 2400 },
-  mid: { res: 1, move: 0.8, shadows: 1024, samples: 0, dust: 1500 },
-  low: { res: 0.85, move: 0.7, shadows: 0, samples: 0, dust: 800 },
-  least: { res: 0.6, move: 0.6, shadows: 0, samples: 0, dust: 0 }
+  high: { res: Math.min(dpr, 1.5), shadows: 1024, samples: 4, dust: 2400 },
+  mid: { res: 1, shadows: 1024, samples: 0, dust: 1500 },
+  low: { res: 0.85, shadows: 0, samples: 0, dust: 800 },
+  least: { res: 0.6, shadows: 0, samples: 0, dust: 0 }
 };
 const ORDER = ['high', 'mid', 'low', 'least'];
 const pinned = TIERS[params.get('q')] ? params.get('q') : null;
@@ -85,6 +85,7 @@ if (gl) {
   if (/swiftshader|llvmpipe|software/i.test(name) && !pinned) tier = 'least';
   renderer.shadowMap.enabled = TIERS[tier].shadows > 0;
   renderer.shadowMap.type = THREE.PCFShadowMap;
+  renderer.info.autoReset = false;
   canvas.addEventListener('webglcontextlost', (e) => e.preventDefault());
 } else {
   canvas?.remove();
@@ -109,24 +110,65 @@ const BUILD = {
   layer: () => layerScene({ shadows: TIERS[tier].shadows })
 };
 const scenes = {};
-let W = innerWidth, H = innerHeight, narrow = W <= 760, res = 1, coarse = false;
+let W = innerWidth, H = innerHeight, narrow = W <= 760, res = 1;
 function want(key) {
   if (!gl) return null;
   let sc = scenes[key];
-  if (!sc) {
-    sc = scenes[key] = BUILD[key]();
-    sc.size(W, H, narrow, res);
-    sc.update(0, 0, 0, {});
-    renderer.compile(sc.scene, sc.camera);
-  }
+  if (!sc) sc = make(key);
+  if (!sc.warmed) warm(sc);
   return sc;
+}
+function make(key) {
+  const a = performance.now(), sc = scenes[key] = BUILD[key]();
+  sc.key = key;
+  sc.size(W, H, narrow, res);
+  sc.update(0, 0, 0, {});
+  builds[key] = [Math.round(performance.now() - a)];
+  return sc;
+}
+// Draw a new scene once, small and out of sight, so its first real frame has nothing left to do:
+// shaders compiled as they'll be used (into a render target, not the screen, which changes them),
+// the shadow pass's too, and textures up on the GPU. Ahead of time, the shaders compile in the
+// background where the browser can (compileAsync), so the next scene never holds up the scroll.
+let warmRT = null;
+const builds = {};
+function warmTarget() {
+  if (!warmRT) { warmRT = new THREE.WebGLRenderTarget(8, 8, { depthBuffer: true }); warmRT.texture.colorSpace = THREE.SRGBColorSpace; }
+  return warmRT;
+}
+function warm(sc) {
+  const a = performance.now(), prev = renderer.getRenderTarget(), hidden = [];
+  // (everything, even what only shows up later in the scene)
+  sc.scene.traverse((o) => { if (!o.visible) { hidden.push(o); o.visible = true; } });
+  renderer.setRenderTarget(warmTarget());
+  renderer.compile(sc.scene, sc.camera);
+  renderer.render(sc.scene, sc.camera);
+  renderer.setRenderTarget(prev);
+  hidden.forEach((o) => (o.visible = false));
+  sc.warmed = true;
+  builds[sc.key]?.push(Math.round(performance.now() - a));
+}
+function compileLater(sc) {
+  const prev = renderer.getRenderTarget();
+  renderer.setRenderTarget(warmTarget());
+  const done = renderer.extensions.has('KHR_parallel_shader_compile') ? renderer.compileAsync(sc.scene, sc.camera) : Promise.resolve(renderer.compile(sc.scene, sc.camera));
+  renderer.setRenderTarget(prev);
+  return done;
 }
 // build the rest while the page is idle, in the order they come
 if (gl) {
   const order = [...new Set(SEQ.map((s) => s.scene))];
   const idle = (fn) => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout: 2000 }) : setTimeout(fn, 200));
   let k = 0;
-  const next = () => { if (k < order.length) { want(order[k++]); idle(next); } else typeMaskNow(); };
+  const next = () => {
+    if (k >= order.length) { typeMaskNow(); return; }
+    const key = order[k++];
+    if (scenes[key]) { idle(next); return; }
+    const sc = make(key);
+    compileLater(sc).then(() => calm(() => { if (!sc.warmed) warm(sc); idle(next); }), () => idle(next));
+  };
+  // (the first draw can take a moment on a phone: wait for the scroll to rest, though not forever)
+  const calm = (fn, waited = 0) => (performance.now() - lastMove < 400 && waited < 3000 ? setTimeout(() => calm(fn, waited + 250), 250) : idle(fn));
   idle(next);
 }
 let comp = null, rtA = null, rtB = null;
@@ -156,7 +198,7 @@ function layout() {
 function sizeGL() {
   if (!gl) return;
   const t = TIERS[tier];
-  res = t.res * (coarse ? t.move : 1);
+  res = t.res;
   renderer.setPixelRatio(res);
   renderer.setSize(W, H, false);
   const bw = Math.max(1, Math.round(W * res)), bh = Math.max(1, Math.round(H * res));
@@ -324,13 +366,9 @@ function frame(now) {
     slow = dt > 0.05 ? slow + 4 : dt > 0.026 ? slow + 1 : Math.max(0, slow - 2);
     if (slow > 30 && tier !== 'least') { tier = ORDER[ORDER.indexOf(tier) + 1]; slow = 0; setTier(); }
   }
-  // coarse while the scroll moves, sharp once it has been still a moment
-  if (TIERS[tier].move < 1) {
-    if (moving && !coarse) { coarse = true; sizeGL(); }
-    else if (!moving && coarse && now - lastMove > 200) { coarse = false; sizeGL(); }
-  }
   // standing still on a slower tier, half the frames are enough
   if (!moving && tier !== 'high' && frames % 2 && introT >= 1) return;
+  renderer?.info.reset();
   render(s, dt);
   drawn++;
 }
@@ -431,6 +469,18 @@ copy?.addEventListener('click', () => {
   if (navigator.clipboard && mail) navigator.clipboard.writeText(mail).then(done, () => {}); 
 });
 
+// ?fps: a small meter in the corner, to see how a real phone copes (frames drawn, the worst frame
+// in the last half second, the tier it settled on)
+if (params.has('fps')) {
+  const m = document.createElement('p');
+  m.style.cssText = 'position:fixed;left:8px;bottom:8px;z-index:99;margin:0;padding:4px 7px;border-radius:6px;background:rgba(0,0,0,.6);color:#fff;font:11px/1.3 ui-monospace,monospace;pointer-events:none';
+  document.body.appendChild(m);
+  let n = 0, worst = 0, last = performance.now(), d0 = 0;
+  const tick = (now) => { requestAnimationFrame(tick); n++; worst = Math.max(worst, now - last); last = now; };
+  requestAnimationFrame(tick);
+  setInterval(() => { m.textContent = `${n * 2} fps · drawn ${(drawn - d0) * 2} · worst ${worst.toFixed(0)} ms · ${tier}`; n = 0; worst = 0; d0 = drawn; }, 500);
+}
+
 /* ------------------------------------------------------------------ start */
 let rz = 0, lastW = W, lastH = H;
 addEventListener('resize', () => {
@@ -461,7 +511,7 @@ function start() {
 Promise.all([document.fonts?.ready, document.fonts?.load('400 100px "Instrument Serif"'), document.fonts?.load('italic 400 100px "Instrument Serif"'), document.fonts?.load('500 12px "JetBrains Mono"')].map((x) => Promise.resolve(x).catch(() => {}))).then(start);
 
 window.__journey = {
-  get tau() { return tau; }, get tier() { return tier; }, get gl() { return gl; }, get intro() { return introT; }, get frames() { return drawn; },
+  get tau() { return tau; }, get tier() { return tier; }, builds, scenes, info: () => renderer && { calls: renderer.info.render.calls, tris: renderer.info.render.triangles }, get gl() { return gl; }, get intro() { return introT; }, get frames() { return drawn; },
   SEQ, T, TOTAL, PARTS, partAt, partView,
   // jump straight to τ and draw it (for checks)
   set(t) { go(t, true); target = tau = clamp(t, 0, TOTAL); introT = 1; },

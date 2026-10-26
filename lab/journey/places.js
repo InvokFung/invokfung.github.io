@@ -200,15 +200,26 @@ export function climbScene({ shadows = 0 } = {}) {
   const rough = new THREE.CatmullRomCurve3(TRAIL.map((p) => toV(p)), false, 'catmullrom', 0.4);
   const dense = rough.getSpacedPoints(500).map((p) => toV([p.x, p.z]));
   const trail = new THREE.CatmullRomCurve3(dense, false, 'centripetal');
-  const trailU = { uDraw: { value: 0 }, uLen: { value: trail.getLength() }, cA: { value: new THREE.Color('#ff6a2b') }, cB: { value: new THREE.Color('#5e6880') } };
+  // Walked, it's a thicker orange thread with light running up it to where you are; still to walk,
+  // it's dashes that creep uphill, so the way on always reads as a way on.
+  const trailU = { uDraw: { value: 0 }, uLen: { value: trail.getLength() }, uTime: { value: 0 }, cA: { value: new THREE.Color('#ff6a2b') }, cB: { value: new THREE.Color('#5e6880') }, cHi: { value: new THREE.Color('#ffe2b8') } };
   const tube = new THREE.Mesh(new THREE.TubeGeometry(trail, 700, 0.02, 6, false), new THREE.ShaderMaterial({
     uniforms: trailU,
-    vertexShader: 'varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
-    fragmentShader: `uniform float uDraw, uLen; uniform vec3 cA, cB; varying vec2 vUv;
+    vertexShader: `uniform float uDraw; varying vec2 vUv;
+      void main() { vUv = uv; vec3 p = position + normal * (uv.x < uDraw ? 0.011 : 0.0); gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`,
+    fragmentShader: `uniform float uDraw, uLen, uTime; uniform vec3 cA, cB, cHi; varying vec2 vUv;
       void main() {
-        bool walked = vUv.x < uDraw;
-        if (!walked && fract(vUv.x * uLen * 6.0) < 0.5) discard;
-        gl_FragColor = vec4(walked ? cA : cB, 1.0);
+        float d = vUv.x * uLen, tip = uDraw * uLen;
+        vec3 c;
+        if (vUv.x < uDraw) {
+          float run = smoothstep(0.7, 1.0, fract((d - uTime * 1.3) / 2.4));
+          float head = smoothstep(tip - 0.7, tip, d);
+          c = mix(cA, cHi, max(run * 0.8, head * 0.55));
+        } else {
+          if (fract(d * 6.0 - uTime * 1.5) < 0.5) discard;
+          c = cB;
+        }
+        gl_FragColor = vec4(c, 1.0);
         #include <colorspace_fragment>
       }`
   }));
@@ -226,6 +237,19 @@ export function climbScene({ shadows = 0 } = {}) {
     transparent: true, depthWrite: false
   }));
   scene.add(future);
+  // you, on the trail: a bead of light with a ring that keeps rippling out from your feet
+  const walker = new THREE.Group();
+  const bead = new THREE.Mesh(new THREE.SphereGeometry(0.045, 16, 12), new THREE.MeshBasicMaterial({ color: '#fff4e4' }));
+  bead.position.y = 0.06;
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: puffTexture(), color: '#ff9a52', transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+  halo.scale.setScalar(0.42); halo.position.y = 0.06;
+  const rings = [0, 1].map(() => {
+    const r = new THREE.Mesh(new THREE.RingGeometry(0.07, 0.085, 40), new THREE.MeshBasicMaterial({ color: '#ff6a2b', transparent: true, depthWrite: false, side: THREE.DoubleSide }));
+    r.rotation.x = -Math.PI / 2; r.position.y = 0.012; r.renderOrder = 4;
+    walker.add(r); return r;
+  });
+  walker.add(bead, halo);
+  scene.add(walker);
 
   // a flag a year
   const flags = PATH.map((p, k) => {
@@ -319,6 +343,12 @@ export function climbScene({ shadows = 0 } = {}) {
       const nx = o.next ?? -1, isNext = nx >= 0;
       const w = isNext ? 1 : walk(q);
       trailU.uDraw.value = isNext ? 1 : clamp(w + 0.003);
+      trailU.uTime.value = t;
+      // the walker stands where the thread ends, and its ring ripples out every second or so
+      walker.position.copy(trail.getPointAt(clamp(w)));
+      bead.position.y = 0.06 + Math.sin(t * 3.2) * 0.012;
+      halo.material.opacity = 0.65 + 0.25 * Math.sin(t * 2.3);
+      rings.forEach((r, k) => { const ph = (t * 0.7 + k * 0.5) % 1; r.scale.setScalar(1 + ph * 3.2); r.material.opacity = (1 - ph) * 0.85; });
       future.material.uniforms.uA.value = isNext ? easeInOut(smooth(0.05, 0.7, nx)) : smooth(0.9, 1, q) * 0.15;
       // flags rise as the walk reaches them
       flags.forEach((f, k) => {
