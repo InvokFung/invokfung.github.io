@@ -573,3 +573,90 @@ Known limits, round 8:
 - Not yet seen on a real GPU or a real phone; the container draws WebGL on the CPU.
 - On phones the window opens onto mostly floor before Relay is framed.
 - The old round 7 dust is not in this page; it stays in `lab/reel/`.
+
+### 2026-10-26 · Round 9: one journey, one world
+
+Afung on round 8: "i see a huge improvement but the key is now the original part became super
+plain compare to the new part ... the two part clearly look like 2 separate design mixed". Also:
+where did the particles go; the shelf of live work and the craft section repeat what the film
+already shows; more content; more GSAP and scroll effects across the whole page, not only between
+projects; more to play with (pointer, drag); "bring super elegant uiux modern design to max".
+
+So round 9 is not a fork. `lab/journey/` puts the whole page on one canvas: every part is a small
+3D scene in the same paper, and every part hands over to the next with its own move. There is no
+film inside a page any more; the page is the film. The browser's own scroll drives it, eased,
+never held or snapped, and scrolling back plays it in reverse.
+
+The seven parts, in order:
+
+- **Hello.** First light over the homepage's sea of cloud, now in the same renderer as the rest,
+  with paper ridges standing in it. "From the customer's desk to production." and the role, then
+  the dive into the cloud: three lines about the job, two rows of the kinds of team I work with
+  running both ways (they lean and speed up with the scroll), and three counts that roll.
+- **How I got here.** The mountain as a paper relief model, a sheet of card for every contour,
+  with the trail in orange, a flag a year and the tent where 2026 stands, so far. The camera walks
+  the trail; a year stamp rolls on odometer digits and a card for each year comes in beside it.
+  Drag to turn the mountain.
+- **Selected work.** Into the cloud by the camp, then round 8's seven project scenes and their
+  type, each handing over with a different move.
+- **How I work.** One long sheet with three set pieces the camera trucks along (a city with a pin
+  dropped on one desk, the whole stack built as four slabs, a chart of what naming the culprit
+  first is worth), and a belt of words that slides with it: FDE scrambles, 7 rolls, 98.9% counts.
+- **Toolbox.** All 33 tools on paper tags in a globe you can spin; as you scroll it sorts itself
+  into shelves by kind. Point at a tag to see since when and where I used it.
+- **What's next.** Back on the mountain, the camera looks past the camp up the trail still to
+  climb, with the one milestone each flagship has left.
+- **Contact.** The sea of cloud at last light, embers in it, "Get in touch." and the email with a
+  Copy button.
+
+**Dust is back,** refined: a few thousand motes over everything, drawn after the frame, and their
+light changes with the place. Motes in the low sun on the cover, a graphite line that draws the
+mountain's outline as the cover turns into the climb, specks rushing past in the cloud, a sparse
+haze in the chapters, fireflies round the toolbox, embers at dusk. They part round the pointer
+with a swirl and ring out from a click. They're kept to a band and few in number on the light
+scenes so they never read as stars.
+
+**Moves between parts,** all in one compositor pass, on top of round 8's nine: mist (cloud rolls
+in and thins onto the next place; the sea of cloud the page lives in), fold (the page folds up
+along a slanting crease, its back showing the print through: Lusion's page turn, flat) and shards
+(the sheet breaks into cut pieces that turn away: the Voronoi cut in Active Theory's work, in
+paper). Far jumps from the rail or the header cut under a paper veil instead of scrolling through
+everything in between.
+
+**Words.** One paused GSAP timeline whose time is the scroll, with SplitText for lines, words and
+characters and ScrambleText for labels. Headings rise by character with Zentry's 3D turn and
+leave the same way; ledes come in by line; numbers roll on odometer digits or count; the cover
+words scatter as you leave.
+
+**To play with.** A cursor ring that grows over links and turns into "drag" over what can be
+dragged; magnetic buttons; drag to orbit the mountain and the how sheet and to spin the toolbox;
+a rail on the right with a tick per part (hover for its name, click to go, drag to scrub); a
+header that scrambles to the part you're in; the dust around the pointer.
+
+Removed, as asked: the "Seven of them, all running" shelf and the "I build the motion, too"
+section. The work is shown once, in the film. The name is in the header and never animates.
+
+Files: `index.html` and `journey.css`; `journey.js` (the engine: the clock, the sequence of
+shots, tiers, the pointer, rail and header); `story.js` (the words' timeline); `fill.js` (fills
+the lists from `assets/portfolio/data.js`); `comp.js` (the compositor and its twelve moves);
+`dust.js`; `sky.js` (dawn and dusk); `places.js` (the mountain, the how sheet, the toolbox);
+`works.js` (the cloud and the seven project scenes, from round 8). It reuses `../unfold/art.js`.
+Three.js 0.184.0 from `vendor/three/`; GSAP 3.15 with SplitText and ScrambleText from
+`vendor/gsap/`.
+
+Speed. One renderer and two render targets for the whole page; each scene is built when it's
+next and compiled in idle time. Four tiers: shadows, multisampling and 2,400 motes on the top;
+800 motes and no shadows on low; no dust at all on the lowest, which is also where a software
+renderer lands. It steps down on slow frames, draws coarser while the page is moving, and on the
+lower tiers draws every other frame when nothing moves. Debug: `?q=high|mid|low|least` pins a
+tier, `?t=` jumps to a point in screens.
+
+Checked in headless Chromium at 1280×800 and 390×844 (touch), with reduced motion (moves become
+cross-fades, the dust holds still) and without WebGL (the words on flat grounds in each part's
+colour): no console errors.
+
+Known limits, round 9:
+
+- Not yet seen on a real GPU or a real phone; the container draws WebGL on the CPU.
+- About 45 screens long. Every part earns its screens, but it is a long walk; the rail is the
+  shortcut.
