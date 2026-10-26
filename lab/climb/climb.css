@@ -1,0 +1,96 @@
+/* Round 8: the homepage's landscape (../unfold/unfold.css), with the cover's words changed, a header,
+   and the film that plays inside the cloud by the camp. */
+
+/* ---------------------------------------------------------------- header: the name, still */
+.top { position: fixed; left: 0; right: 0; top: 0; z-index: 8; display: flex; justify-content: space-between; align-items: center; padding: max(14px, env(safe-area-inset-top, 0px)) var(--gut) 0; pointer-events: none; }
+.top a { pointer-events: auto; text-decoration: none; font: 500 12px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: rgba(236, 235, 230, 0.72); padding: 8px 0; }
+.top a:hover { color: var(--ink); }
+.top .reach-top { padding: 8px 12px; border: 1px solid rgba(236, 235, 230, 0.22); border-radius: 999px; }
+
+/* ---------------------------------------------------------------- cover: what I do, not my name */
+.cover .name { bottom: 31%; }
+.cover .name h1 { font-size: clamp(40px, 7.2vw, 150px); line-height: 0.92; white-space: normal; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.cover .name h1 span { display: block; white-space: nowrap; }
+.cover .name h1 span:last-child { color: #ffd3a1; }
+/* with no WebGL the painted mist is opaque, so the words sit over it, not in it */
+.nogl .cover .name { z-index: 1; }
+@media (max-width: 760px) {
+  .cover .name { bottom: 37%; }
+  .cover .name h1 { font-size: 11.4vw; line-height: 0.95; }
+}
+
+/* ---------------------------------------------------------------- the film */
+.film-gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 2; opacity: 0; visibility: hidden; pointer-events: none; }
+.film { position: absolute; inset: 0; z-index: 3; pointer-events: none; visibility: hidden; color: var(--ink); }
+.film.on { visibility: visible; }
+.nofilm .film { background: #101318; }
+/* (and with no film, the words that sat on the cloud sit on the dark) */
+.nofilm .f-ln, .nofilm .f-counts b, .nofilm .f-win { color: var(--ink); }
+.nofilm .f-ln.em em { color: #f0a46a; }
+.nofilm .f-counts li > span { color: rgba(236, 235, 230, 0.68); }
+.nofilm .f-row { -webkit-text-stroke-color: rgba(236, 235, 230, 0.1); }
+.film a { pointer-events: auto; }
+.f-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7, 8, 11, 0.82), rgba(7, 8, 11, 0.5) 34%, rgba(7, 8, 11, 0) 58%); visibility: hidden; }
+
+/* what I do, in the cloud */
+.f-say { position: absolute; inset: 0; display: grid; place-items: center; visibility: hidden; perspective: 1000px; }
+.f-rows { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); display: grid; gap: 1vh; }
+.f-row { margin: 0; white-space: nowrap; font: 400 clamp(60px, 11vw, 200px)/1 var(--serif); color: transparent; -webkit-text-stroke: 1px rgba(20, 24, 30, 0.13); }
+.f-lines { position: relative; text-align: center; padding: 0 var(--gut); transform-style: preserve-3d; }
+.f-ln { margin: 0; font: 400 clamp(30px, 4.6vw, 84px)/1.06 var(--serif); color: #12151a; transform-origin: 50% 100%; }
+.f-ln.em em { color: #8a3f12; }
+.f-counts { position: absolute; left: 0; right: 0; bottom: 11vh; display: flex; justify-content: center; gap: clamp(28px, 6vw, 110px); margin: 0; padding: 0 var(--gut); list-style: none; }
+.f-counts li { display: grid; justify-items: center; gap: 6px; }
+.f-counts b { font: 400 clamp(40px, 4.4vw, 76px)/1 var(--serif); color: #12151a; }
+.f-counts li > span { font: 500 11px/1.3 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(18, 21, 26, 0.72); text-align: center; }
+.f-win { position: absolute; left: 0; right: 0; top: 13vh; text-align: center; color: #12151a; visibility: hidden; }
+
+/* a number on its digits */
+.od { display: inline-block; height: 1em; overflow: hidden; vertical-align: top; line-height: 1; }
+.od-col { display: block; }
+.od-col span { display: block; height: 1em; line-height: 1; }
+
+/* a chapter: its words on the left, its scene on the right */
+.f-ch { position: absolute; left: var(--gut); top: 0; bottom: 0; width: min(42vw, 600px); display: flex; flex-direction: column; justify-content: center; gap: 0; visibility: hidden; perspective: 1000px; }
+.f-ch > * { transform-origin: 0% 50%; }
+.f-k { margin: 0 0 2.2vh; font: 500 12px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: rgba(236, 235, 230, 0.6); white-space: nowrap; }
+.f-k b { color: var(--a); font-weight: 500; }
+.f-n { position: relative; margin: 0; font: 400 clamp(58px, 7.6vw, 140px)/0.95 var(--serif); letter-spacing: -0.015em; color: var(--ink); width: fit-content; }
+.f-n .ch { display: inline-block; will-change: transform; }
+.f-h { margin: 2.2vh 0 0; max-width: 17em; font: 400 clamp(21px, 2vw, 34px)/1.18 var(--serif); color: rgba(236, 235, 230, 0.92); }
+.f-h em { color: var(--a); }
+.f-h .ln { padding-bottom: 0.08em; }
+.f-fits { display: flex; flex-wrap: wrap; gap: 8px; margin: 2.6vh 0 0; padding: 0; list-style: none; }
+.f-fits li { padding: 6px 11px; border-radius: 999px; font: 500 11.5px/1 var(--mono); color: rgba(236, 235, 230, 0.82); background: rgba(236, 235, 230, 0.07); box-shadow: inset 0 0 0 1px rgba(236, 235, 230, 0.14); }
+.f-proof { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 14px; margin: 4vh 0 0; max-width: 34em; }
+.f-proof b { font: 400 clamp(46px, 5.2vw, 96px)/0.9 var(--serif); color: var(--a); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.f-proof > span { padding-bottom: 6px; font-size: clamp(12.5px, 0.95vw, 14.5px); line-height: 1.4; color: rgba(236, 235, 230, 0.68); max-width: 26ch; }
+.f-open { align-self: flex-start; margin-top: 3vh; font: 500 12.5px/1 var(--mono); letter-spacing: 0.04em; color: var(--ink); text-decoration: none; padding: 9px 14px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(236, 235, 230, 0.25); }
+.f-open:hover { background: var(--a); color: #111; box-shadow: none; }
+.f-note { position: absolute; right: calc(2 * var(--gut) + min(42vw, 600px) - 100vw); top: 12vh; margin: 0; padding: 9px 14px; border-radius: 10px; font: 500 12px/1.2 var(--mono); color: #111; background: var(--a); opacity: 0; white-space: nowrap; }
+.f-note i { font-style: normal; }
+.f-query { display: grid; gap: 6px; min-width: min(420px, 60vw); padding: 12px 16px; background: rgba(242, 238, 230, 0.96); }
+.f-query b { font-weight: 500; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #6b5aa8; }
+.f-query i { font: 400 20px/1.2 var(--serif); color: #1e1a28; min-height: 1.2em; }
+/* the name's own pieces: a block of colour (Dispatch), a highlighter (Atlas), a nozzle (Layerline) */
+.f-blk { position: absolute; inset: 0.08em -0.06em 0.02em; background: var(--a); transform: scaleX(0); z-index: 1; }
+.f-hl { position: absolute; left: -0.08em; right: -0.08em; bottom: 0.08em; height: 0.42em; background: color-mix(in srgb, var(--a) 42%, transparent); transform: scaleX(0); transform-origin: 0 50%; z-index: -1; }
+.f-noz { position: absolute; left: -0.1em; right: -0.1em; bottom: 0; height: 100%; border-top: 2px solid var(--a); box-shadow: 0 -1px 12px var(--a); opacity: 0; }
+
+@media (max-width: 760px) {
+  .f-shade { background: linear-gradient(0deg, rgba(7, 8, 11, 0.9), rgba(7, 8, 11, 0.62) 42%, rgba(7, 8, 11, 0) 62%); }
+  .f-ch { left: 16px; right: 16px; width: auto; top: auto; bottom: max(64px, 9vh); justify-content: flex-end; }
+  .f-k { margin-bottom: 1.4vh; font-size: 10.5px; }
+  .f-n { font-size: clamp(46px, 13vw, 80px); }
+  .f-h { font-size: 20px; margin-top: 1.4vh; }
+  .f-fits { margin-top: 1.6vh; }
+  .f-fits li { font-size: 10.5px; padding: 5px 9px; }
+  .f-proof { margin-top: 2vh; gap: 10px; }
+  .f-proof b { font-size: 44px; }
+  .f-proof > span { font-size: 12px; }
+  .f-open { margin-top: 1.8vh; }
+  .f-note { top: auto; bottom: calc(100% + 14px); right: 0; font-size: 10.5px; }
+  .f-query i { font-size: 16px; }
+  .f-counts { bottom: 12vh; gap: 22px; }
+  .f-counts li > span { font-size: 9.5px; }
+}

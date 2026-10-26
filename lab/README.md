@@ -507,3 +507,69 @@ Known limits, round 7:
 - Not yet seen on a real phone or a real GPU.
 - No photo yet, so the dust ends on a signature rather than a face.
 - The projects' live demos from round 6 aren't on this page; each chapter links to its project.
+
+### 2026-10-26 · Round 8: the climb, with every trick on the way
+
+Afung on round 7: "why now everything is particle, nothing you built from the research reel ... and
+why our earlier motion and design all gave up and gone? i said show every cool shit together into
+one place with seamless experience". Also: stop animating the name ("awkward and cringe"), take
+the reference sites apart for how they work and combine their features instead of picking one,
+look wider (award-winning portfolios, not only Instagram), and find our own thing among them.
+Igloo Inc and Resn were examples of the level, not the target.
+
+So round 8 starts from the live homepage, not a blank page. `lab/climb/` is a fork of
+`lab/unfold/` (the day on the mountain): the cover, the climb, the shelf of live work, the craft
+and contact all keep their motion, their paper and their cloud deck. The cover no longer says the
+name; it says what the job is ("From the customer's desk to production."), and the name sits
+still in the header.
+
+**The film in the cloud.** On the flight from the climb to the camp, where the world is deep in
+fog, the scroll holds the world still for 23 screens and plays a film over it, then lets the
+world go on. It is native scroll, eased, never snapped; every frame is a function of the scroll
+position, so scrolling back plays it backwards and the browser's own scrollbar and keys work.
+
+- **What I do.** Three lines and three counts (7 projects, 174 notes, 4 titles) in dark ink on
+  the fog, over giant outlined rows of the kinds of team I work with, crawling both ways.
+- **Selected work.** A window cut in the paper, its top edge the mountain's skyline, opens on the
+  first project, tilts toward you and grows to fill the screen.
+- **Seven chapters**, each a paper diorama in Three.js built from the project's real data, with
+  its words on the left: Relay (a request through nine arches; us-east folds flat, the breaker
+  flashes, chips reroute), Tracewise (the real service map; the slow one heats up and a ring of ink
+  closes round card-api), Onboard (28 people's records fly in from three piles and merge into one
+  table), Dispatch (the real planner re-plans the day when Sam goes home sick), Atlas (174 real
+  note titles on a leaning wall; a scan finds the paragraph and the card flies to you), Intonation
+  Studio (the A string rings and the needle settles in cents), Layerline (a gear printed layer by
+  layer, then pulled apart).
+- **Between chapters, a different move every time**, all in one compositor pass:
+  tear (Igloo Inc's diagonal cut, in paper), mosaic (Fiddle.Digital), contour lines (Lando Norris),
+  the next name as a window you dive into (K72, Adcker), ink blooms (Noth.in), slats (Exo Ape),
+  and a ring of paper out of the film (Ashfall).
+- **Type.** Each project's name arrives its own way: Zentry's 3D letters (Relay), scrambled
+  (Tracewise), from three sides (Onboard), a block wipe (Dispatch), a highlighter (Atlas), an
+  elastic wave (Studio), printed line by line under a nozzle (Layerline). Numbers roll on odometer
+  digits or count up. Each chapter leaves the way Zentry's titles do, turning away in depth.
+- Over everything: paper grain, a vignette, and colour fringes that follow scroll speed.
+
+How each trick was taken apart, with what their code does and where it lands here:
+`reference-reels/round-8-teardown.md` in the project files.
+
+Files: `index.html` and `climb.css` (the markup and the film's words), `world.js` (unfold's
+engine with the hold), `film.js` (the clock and the DOM timeline, GSAP paused and driven by the
+scroll), `film-gl.js` (the compositor and its nine moves), `film-scenes.js` (the seven scenes and
+the cloud). Three.js 0.184.0 from `vendor/three/`; GSAP 3.15 with SplitText and ScrambleText from
+`vendor/gsap/`. It reuses `../unfold/scenery.js`, `art.js` and `deck.js` unchanged.
+
+Speed. Scenes are built in idle time before they're needed, then compiled. The heaviest chapter
+is 169 draws (Dispatch) and the most triangles 53,000 (Layerline). The tier watcher from unfold
+also steps the film down: shadows and multisampling on the top tier, no multisampling on mid, no
+shadows below.
+
+Checked in headless Chromium at 1280×800, 960×600 and 390×844 (touch), with reduced motion (every
+move becomes a cross-fade and nothing moves on its own) and without WebGL (the film's words on a
+dark ground, the landscape painted flat): no console errors.
+
+Known limits, round 8:
+
+- Not yet seen on a real GPU or a real phone; the container draws WebGL on the CPU.
+- On phones the window opens onto mostly floor before Relay is framed.
+- The old round 7 dust is not in this page; it stays in `lab/reel/`.
