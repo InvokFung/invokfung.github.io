@@ -332,3 +332,18 @@ On the way, the cloud's edges near the name stair-stepped on Afung's screen. Ray
 twice, down the pixel, over most of the sea (from a little way out; three times was too slow to
 spread that far), the crests' glow is a little broader so it doesn't alias as a thin line, and the
 name goes down into the cloud through a short fade instead of being cut along a line.
+
+### 2026-10-26 · Rebuilds: Resn's about page and Igloo Inc, taken apart
+
+Afung asked how [Resn's about page](https://resn.co.nz/#!/about) and [Igloo Inc](https://www.igloo.inc)
+are built, and for both rebuilt in full with his content: real reverse engineering, not an imitation.
+REA's installer was refused again, so its method was run by hand (every response saved, every GLSL
+program the page compiles recorded, the bundles formatted and read). Both are rebuilt in
+`rebuild/`, with the teardown, what maps to what, and what is simpler in `rebuild/README.md`.
+
+| Rebuild | Folder | Original's license | Ours uses |
+|---|---|---|---|
+| Resn's about page: the copy over a glass drop, split red and cyan | `rebuild/resn/` | proprietary (nothing copied) | three.js r184, GSAP; drop, texture and shaders our own |
+| Igloo Inc: igloo, one ice block per flagship, a fall through 2023 to 2025 into the "Get in touch." room | `rebuild/igloo/` | proprietary (nothing copied) | three.js r184, GSAP 3.15 + CustomEase; every mesh, texture, volume and shader our own |
+
+Verdict: not deployed. Waiting on Afung.
