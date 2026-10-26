@@ -332,3 +332,104 @@ On the way, the cloud's edges near the name stair-stepped on Afung's screen. Ray
 twice, down the pixel, over most of the sea (from a little way out; three times was too slow to
 spread that far), the crests' glow is a little broader so it doesn't alias as a thin line, and the
 name goes down into the cloud through a short fade instead of being cut along a line.
+
+### 2026-10-26 · Round 6: the portfolio as the product
+
+Afung passed on a friend's feedback and agreed with three points:
+
+- "Say hello" reads as rude and too casual for a contact section.
+- The UI/UX shown on the page is still simple and rough.
+- A list of projects a recruiter can't place ("I built A, B and C") doesn't land. The page itself
+  should be the proof of the UI/UX skill, and the projects that aren't UI work should show what they
+  do for a product and where they get used, felt on the page rather than behind a click. Study the
+  reference reels with REA, use libraries rather than hand-building, and make sure it all works.
+
+Research. REA (Reverse Engineer Anything, `github.com/morluto/rea`, MIT) is an agent toolkit, and
+its companion skill `rea-websites` is a 16-part checklist for taking a website apart. REA's own
+installer needs Node 24 and a package from npm, and installing it was blocked in this container, so
+the same checklist was run by hand with Playwright over the Chrome DevTools Protocol on three sites
+from the reels (ERA, Nick Ho, Sweet Tape): scripts loaded, globals, every ScrollTrigger with its
+tweens, and screenshots through the scroll.
+
+- All three run GSAP 3.15 with ScrollTrigger, SplitText and CustomEase on Lenis smooth scroll.
+- ERA: Lenis at `duration 1.2` with an exponential ease, driven from `gsap.ticker`, and
+  `lagSmoothing(0)`; an arch that opens through a CSS mask whose size GSAP tweens as CSS variables;
+  three custom eases (Out `0.25,1,0.5,1`, InOut `0.75,0,0.25,1`, In `0.5,0,0.75,0`); magnetic
+  buttons; the header changing colour per section. It also snaps, which this site never does.
+- Nick Ho: a video that grows from 70% of the screen to full bleed on a scrub, sections overlapping
+  by 30vh, odometer numbers, a cursor with a label, and a marquee that turns round when you scroll up.
+- Sweet Tape: pinned scrubs, `clip-path: inset()` reveals, Matter.js and Three.js.
+
+What's in `product/`. It breaks the one-component rule on purpose: the page is meant to become the
+homepage, so it is five files (`index.html`, `product.css`, `product.js`, `demos.js` and
+`search.js`) and doesn't use the lab frame. Libraries are vendored unmodified: `vendor/gsap/` (GSAP
+3.15.0 and its plugins, free under GSAP's standard license) and `vendor/lenis.min.js` (1.3.26, MIT).
+
+- **Hero.** The name inside a selection frame that grows around it with a live size readout, the
+  letters rising from a mask (SplitText). With a mouse, each letter can be dragged and springs back.
+- **Statement.** A window that opens to full bleed as you scroll (ERA's mask, as `clip-path`), then
+  one sentence that lights up word by word on a pinned scrub, and three odometer counts.
+- **The work.** Seven cards that stack as you scroll (sticky, the one beneath scaling back and
+  dimming). Each says what the project does for a product in one line, where it fits, one measured
+  number from `assets/portfolio/data.js`, and runs a working demo beside it that plays once on its own:
+  - Relay: a support chat. Personal data is swapped for placeholders before the prompt leaves, and
+    with us-east switched off it retries, opens the breaker and answers from eu-west.
+  - Tracewise: a service map. Click any service to add 600 ms; the dashboard's guess and the trace's
+    answer disagree, and the trace is right.
+  - Onboard: three exports of the same customers. Match scores them (Fellegi-Sunter weights,
+    Jaro-Winkler names, union-find), Flip moves the rows into one table, and the threshold slider
+    shows wrong merges and split people with a live F1.
+  - Dispatch: a day of visits for three technicians. Send one home or click the map for an urgent
+    job and the day re-plans by cheapest insertion with time windows.
+  - Atlas: BM25 search over my 174 notes, as you type, offline.
+  - Intonation Studio: a tuner reading a synthetic violin string with the McLeod pitch method. Sound
+    and the microphone are both opt-in.
+  - Layerline: a gear sliced layer by layer, with walls, infill and a nozzle riding the path.
+- **Where this work fits.** Two marquees of the places it gets used, Nick Ho's: they speed up with
+  the scroll and turn round when you scroll up.
+- **Interface craft.** "The page you're scrolling is the UI work": tiles that switch the whole page
+  to dark (a circle that grows from the switch, View Transitions), show the 12-column grid with live
+  type specs on every element (design view), set the variable font's width and weight, check every
+  colour pair against WCAG, draw the motion curve, turn on calm mode, and measure this page's frame
+  rate on the visitor's device.
+- **How I got here.** The years, pinned and moving sideways, ending at 2026 with "So far. Still
+  climbing."
+- **Contact.** "Get in touch." A short line, the email with a copy button, and the links.
+- Everywhere: a search palette on `/` or Ctrl/Cmd+K over the page and the notes, a labelled
+  cursor and magnetic links on a mouse, a progress bar, a page counter, a header that hides going
+  down and changes tone with the section under it.
+
+"Say hello" is now "Get in touch." on every page that had it: `/`, `/map/`, `/explore/`, and the
+book and flow experiments.
+
+Checked in headless Chromium at 1440×900, 1024×768 and 390×844, in dark theme, design view, calm
+mode and with reduced motion: no console errors and no horizontal overflow. Every demo control was
+clicked through with a script (drag a letter, send a chat, slow a service, move each slider, send a
+technician home, add an urgent job, search, pick a string, copy the email), and jumping from the
+palette lands on the right card with the header in the right tone.
+
+Speed, measured as in round 4 (a wheel scroll top to bottom, headless Chromium with no GPU, so the
+worst case). The first build was slower than it needed to be: every stacked card stayed drawn under
+the next one, and the slicer redrew its whole layer every frame.
+
+| | first build | now |
+|---|---|---|
+| 1440×900 | 49.9 fps (slowest 5%: 33 ms) | 58.6 fps (slowest 5%: 17 ms) |
+| 1440×900, CPU slowed 4× | 40.1 fps | 48.6 fps |
+| 1440×900, CPU slowed 6× | 28.2 fps | 37.6 fps |
+| 390×844, CPU slowed 4× | | 52.5 fps |
+
+What changed for speed: a card the next one has covered is hidden; stacking only moves transform
+and opacity; the slicer paints a layer once and moves the nozzle on its own small canvas; the pitch
+detector only searches the lags a violin can play. Slow devices (two cores or fewer, Save-Data, or
+`?lite`) get a lite page with no scaling cards, no drift on the name and flat shadows, and a frame
+watcher switches to it if scrolling runs below about 33 fps.
+
+Known limits, round 6:
+
+- Not yet seen on a real phone or a real GPU.
+- The demos run the real methods on small sample data in the page; Relay's providers are simulated
+  and say so. The measured numbers on each card come from the real projects.
+- The fonts come from Google Fonts; offline, the page falls back to system fonts.
+- Round 5 (`ascent/`, PR #10) is on its own branch. This round answers the same reels more fully,
+  so it supersedes it.

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Alan Fung · Forward Deployed Engineer</title>
+<meta name="description" content="Alan Fung, Forward Deployed Engineer. Seven projects shown by what they do for a product, each one running live in the page: an LLM gateway, tracing that names the broken service, customer-data matching, field-service re-planning, search with no server, a pitch detector and a slicer in WebAssembly." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#f2efe8" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../vendor/lenis.css" />
+<link rel="stylesheet" href="product.css" />
+<script>
+  // first paint: theme and motion choices from last visit, and whether to play the long intro
+  (function () {
+    var d = document.documentElement, s = {};
+    try { s = JSON.parse(localStorage.getItem("af.product") || "{}"); } catch (e) {}
+    if (s.theme === "dark" || (!s.theme && matchMedia("(prefers-color-scheme: dark)").matches)) d.dataset.theme = "dark";
+    if (s.calm || matchMedia("(prefers-reduced-motion: reduce)").matches) d.classList.add("calm");
+    try { if (sessionStorage.getItem("af.seen")) d.classList.add("seen"); } catch (e) {}
+    d.classList.add("js");
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#contact">Skip to contact</a>
+
+<header class="top" id="top">
+  <a class="mark" href="#hero" data-spec aria-label="Alan Fung, back to the top"><b>AF</b><span>Alan Fung</span></a>
+  <div class="top-tools">
+    <button class="sw" id="sw-grid" type="button" aria-pressed="false" data-cursor="Grid"><i aria-hidden="true"></i><span>Design view</span></button>
+    <button class="sw" id="sw-theme" type="button" aria-pressed="false" data-cursor="Theme"><i aria-hidden="true"></i><span>Dark</span></button>
+    <button class="find" id="find" type="button" aria-label="Search this page and my notes" data-cursor="Search"><span>Search</span><kbd>/</kbd></button>
+  </div>
+</header>
+
+<div class="bar" aria-hidden="true"><i id="bar"></i></div>
+<p class="folio" id="folio" aria-hidden="true"><b>01</b><span>/ 09</span></p>
+<div class="cursor" id="cursor" aria-hidden="true"><i></i><span></span></div>
+<div class="grid-overlay" aria-hidden="true"><div class="cols"></div></div>
+<div class="specs" id="specs" aria-hidden="true"></div>
+
+<main id="main">
+
+  <!-- 01 · the name, drawn like a frame on a canvas, then handed over -->
+  <section class="hero" id="hero" data-tone="light" data-n="01" aria-labelledby="hero-h">
+    <div class="hero-row hero-meta">
+      <p data-spec>Portfolio · 2026</p>
+      <p class="status" data-spec><i aria-hidden="true"></i>Forward Deployed Engineer</p>
+    </div>
+    <div class="frame" id="frame" aria-hidden="true"><i></i><i></i><i></i><i></i><b id="frame-size">0 × 0</b></div>
+    <h1 class="name" id="hero-h" data-spec="Display" data-cursor="Drag"><span class="nw">Alan</span> <span class="nw">Fung</span></h1>
+    <div class="hero-row hero-foot">
+      <p class="tag" data-spec="Serif">From the customer's desk <em>to production.</em></p>
+      <p class="intro" data-spec>I build software beside the people who use it, end to end, and I care how every screen feels.</p>
+      <p class="cue" aria-hidden="true"><span class="hint">Drag a letter</span><span class="down">Scroll<i></i></span></p>
+    </div>
+  </section>
+
+  <!-- 02 · a window opens on the dark: what the job is, in one breath -->
+  <section class="statement" id="statement" data-tone="dark" data-n="02" aria-label="What I do">
+    <div class="st-pin">
+      <p class="kicker" data-spec>What I do</p>
+      <p class="big" id="big" data-spec="Lead">I work beside the people who use the software. I find what slows them down, <em>then I ship the fix,</em> from the screen they click to the servers behind it.</p>
+      <ul class="counts">
+        <li><b class="odo" data-odo="7">7</b><span>projects, each one live in your browser</span></li>
+        <li><b class="odo" data-odo="174">174</b><span>notes written on what I learn</span></li>
+        <li><b class="odo" data-odo="4">4</b><span>titles in four years, each one closer to the user</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 · the work: seven chapters, each a card that stacks over the last -->
+  <section class="work" id="work" data-tone="dark" data-n="03" aria-labelledby="work-h">
+    <header class="work-head">
+      <p class="kicker" data-spec>Selected work · 01 to 07</p>
+      <h2 id="work-h" data-split data-spec="H2">What I build, shown by what it <em>does.</em></h2>
+      <p class="lede">Seven projects, each one running below. Try them. Every number is measured, and <a href="/explore/">the rest of the shelf</a> is one level down.</p>
+    </header>
+
+    <article class="ch" id="relay" aria-labelledby="relay-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>01</b><a href="/relay/">Relay</a><span>LLM gateway</span></p>
+          <h3 id="relay-h" data-spec="H3">Your AI feature keeps answering when the model <em>goes down.</em></h3>
+          <p class="ch-p">A gateway in front of every model call. It takes customer data out before the prompt leaves, and when a provider fails, another one answers.</p>
+          <ul class="fits" aria-label="Where it fits"><li>Support chat</li><li>Copilots</li><li>Internal tools</li></ul>
+          <p class="proof"><b class="odo">99.98%</b><span>of calls answered through an outage. Without it, 68.6%.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-relay" data-demo="relay"></div></div>
+      </div>
+    </article>
+
+    <article class="ch" id="tracewise" aria-labelledby="tracewise-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>02</b><a href="/tracewise/">Tracewise</a><span>Observability</span></p>
+          <h3 id="tracewise-h" data-spec="H3">When checkout slows down, it names the service <em>to fix.</em></h3>
+          <p class="ch-p">It reads the trace every request leaves behind and follows the slow ones to where the time is really spent, not where the alarm went off.</p>
+          <ul class="fits" aria-label="Where it fits"><li>On-call teams</li><li>Online shops</li><li>Payments</li></ul>
+          <p class="proof"><b class="odo">98.9%</b><span>culprit named first, over 200 injected faults. The usual dashboard guess: 66.1%.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-trace" data-demo="trace"></div></div>
+      </div>
+    </article>
+
+    <article class="ch" id="onboard" aria-labelledby="onboard-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>03</b><a href="/onboard/">Onboard</a><span>Customer data</span></p>
+          <h3 id="onboard-h" data-spec="H3">Three messy exports in. One customer table <em>you can trust.</em></h3>
+          <p class="ch-p">It works out who is who across systems that spell people differently, and sends the unsure ones to a person instead of guessing.</p>
+          <ul class="fits" aria-label="Where it fits"><li>B2B onboarding</li><li>CRM migrations</li><li>Data clean-up</li></ul>
+          <p class="proof"><b class="odo">0.977</b><span>match F1 on 10,200 messy records. Matching on email alone: 0.659.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-onboard" data-demo="onboard"></div></div>
+      </div>
+    </article>
+
+    <article class="ch" id="dispatch" aria-labelledby="dispatch-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>04</b><a href="/dispatch/">Dispatch</a><span>Field service</span></p>
+          <h3 id="dispatch-h" data-spec="H3">Someone calls in sick at nine. Every customer still <em>gets their visit.</em></h3>
+          <p class="ch-p">It plans a day of home visits, then re-plans in milliseconds when the day changes, moving as few jobs as it can.</p>
+          <ul class="fits" aria-label="Where it fits"><li>Repairs and installs</li><li>Home care</li><li>Deliveries</li></ul>
+          <p class="proof"><b class="odo">97.0%</b><span>of visits on time on a bad day. The unchanged morning plan: 90.8%.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-dispatch" data-demo="dispatch"></div></div>
+      </div>
+    </article>
+
+    <article class="ch" id="atlas" aria-labelledby="atlas-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>05</b><a href="/atlas/">Atlas</a><span>Search engine</span></p>
+          <h3 id="atlas-h" data-spec="H3">Search that finds the right paragraph, <em>with no server.</em></h3>
+          <p class="ch-p">Keyword and meaning search fused, running on the visitor's own device. Here it searches my notes. Press <kbd>/</kbd> anywhere on this page and it searches the page too.</p>
+          <ul class="fits" aria-label="Where it fits"><li>Help centres</li><li>Product docs</li><li>Offline apps</li></ul>
+          <p class="proof"><b class="odo">85%</b><span>right first time over 5,551 passages, in about half a millisecond.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-atlas" data-demo="atlas"></div></div>
+      </div>
+    </article>
+
+    <article class="ch" id="studio" aria-labelledby="studio-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>06</b><a href="/studio/">Intonation Studio</a><span>Real-time audio</span></p>
+          <h3 id="studio-h" data-spec="H3">A browser tab that hears a violin <em>to the cent.</em></h3>
+          <p class="ch-p">Pitch detection written from scratch, fast enough to score a whole scale while you play it. I play the violin, so this one was personal.</p>
+          <ul class="fits" aria-label="Where it fits"><li>Music lessons</li><li>Tuners</li><li>Ear training</li></ul>
+          <p class="proof"><b class="odo">0.17¢</b><span>worst error on clean tones, and no octave slips in 182 noisy ones.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-studio" data-demo="studio"></div></div>
+      </div>
+    </article>
+
+    <article class="ch" id="layerline" aria-labelledby="layerline-h">
+      <div class="card">
+        <div class="ch-copy">
+          <p class="ch-n"><b>07</b><a href="/layerline/">Layerline</a><span>Geometry + WebAssembly</span></p>
+          <h3 id="layerline-h" data-spec="H3">Drop in a 3D model, get a file <em>the printer can run.</em></h3>
+          <p class="ch-p">A whole slicer in 66 KB of WebAssembly. It turns a part into walls, infill and a nozzle path, right in the browser, with nothing to install.</p>
+          <ul class="fits" aria-label="Where it fits"><li>Print services</li><li>Maker tools</li><li>Instant quotes</li></ul>
+          <p class="proof"><b class="odo">21 ms</b><span>to slice a whole gear, 8× faster than the same code in TypeScript.</span></p>
+        </div>
+        <div class="ch-demo"><div class="app" id="demo-layer" data-demo="layer"></div></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- 04 · where it fits, rolling with the scroll -->
+  <section class="fit" id="fit" data-tone="light" data-n="04" aria-label="Where this work fits">
+    <p class="kicker" data-spec>Where this work fits</p>
+    <div class="marquee" data-dir="-1" aria-hidden="true"><div class="mq-track"><span>Support desks</span><span>On-call teams</span><span>Customer onboarding</span><span>Field service</span><span>Help centres</span></div></div>
+    <div class="marquee alt" data-dir="1" aria-hidden="true"><div class="mq-track"><span>Music lessons</span><span>Print shops</span><span>Copilots</span><span>Payments</span><span>Data migrations</span></div></div>
+    <p class="sr">Support desks, on-call teams, customer onboarding, field service, help centres, music lessons, print shops, copilots, payments and data migrations.</p>
+  </section>
+
+  <!-- 05 · the craft: the page itself, with its switches out on the table -->
+  <section class="craft" id="craft" data-tone="light" data-n="05" aria-labelledby="craft-h">
+    <header class="craft-head">
+      <p class="kicker" data-spec>Interface craft</p>
+      <h2 id="craft-h" data-split data-spec="H2">The page you're scrolling <em>is the UI work.</em></h2>
+      <p class="lede">Designed and built by hand. Flip a switch below and the whole page changes, for real.</p>
+    </header>
+    <div class="bento">
+      <div class="tile t-theme" data-spec="Tile">
+        <p class="t-k">Theme</p>
+        <h3>Light and dark, from one set of tokens.</h3>
+        <button class="big-sw" id="big-theme" type="button" aria-pressed="false" data-cursor="Switch"><span>Light</span><span>Dark</span><i aria-hidden="true"></i></button>
+        <ul class="tokens" id="tokens" aria-label="Colour tokens"></ul>
+      </div>
+      <div class="tile t-grid" data-spec="Tile">
+        <p class="t-k">Layout</p>
+        <h3>Twelve columns under everything.</h3>
+        <p>Turn on design view to see the grid and the type specs of whatever is on screen.</p>
+        <button class="big-sw" id="big-grid" type="button" aria-pressed="false" data-cursor="Switch"><span>Off</span><span>Design view</span><i aria-hidden="true"></i></button>
+      </div>
+      <div class="tile t-type" data-spec="Tile">
+        <p class="t-k">Type</p>
+        <p class="aa" id="aa" aria-hidden="true">Aa</p>
+        <label class="rng"><span>Width <b id="wdth-v">75</b></span><input id="wdth" type="range" min="62" max="125" value="75" /></label>
+        <label class="rng"><span>Weight <b id="wght-v">800</b></span><input id="wght" type="range" min="100" max="900" value="800" step="10" /></label>
+        <p class="t-note">Archivo, one variable file for every headline here.</p>
+      </div>
+      <div class="tile t-contrast" data-spec="Tile">
+        <p class="t-k">Contrast</p>
+        <h3>Every pair checked against WCAG.</h3>
+        <ul class="pairs" id="pairs"></ul>
+      </div>
+      <div class="tile t-motion" data-spec="Tile">
+        <p class="t-k">Motion</p>
+        <h3>Smooth by default, calm on request.</h3>
+        <svg class="curve" viewBox="0 0 200 120" aria-hidden="true"><path class="axis" d="M10 110H190M10 110V10" /><path class="c" id="curve" d="" /><circle id="curve-dot" r="5" /></svg>
+        <button class="big-sw" id="big-calm" type="button" aria-pressed="false" data-cursor="Switch"><span>Smooth</span><span>Calm</span><i aria-hidden="true"></i></button>
+      </div>
+      <div class="tile t-perf" data-spec="Tile">
+        <p class="t-k">Speed</p>
+        <h3>Measured on your device, right now.</h3>
+        <canvas id="fps" width="320" height="90" aria-hidden="true"></canvas>
+        <dl class="perf"><div><dt>Frames</dt><dd id="pf-fps">60 fps</dd></div><div><dt>Long tasks</dt><dd id="pf-long">0</dd></div><div><dt>Transferred</dt><dd id="pf-kb">0 KB</dd></div></dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · how I got here, sideways -->
+  <section class="path" id="path" data-tone="dark" data-n="06" aria-labelledby="path-h">
+    <div class="path-pin">
+      <header class="path-head">
+        <p class="kicker" data-spec>How I got here</p>
+        <h2 id="path-h" data-spec="H2">One repo in 2018. <em>Forward deployed</em> in 2026.</h2>
+      </header>
+      <ol class="years" id="years"></ol>
+      <div class="path-line" aria-hidden="true"><i id="path-fill"></i></div>
+    </div>
+  </section>
+
+  <!-- 07 · contact -->
+  <section class="contact" id="contact" data-tone="accent" data-n="07" aria-labelledby="contact-h">
+    <p class="kicker" data-spec>Contact</p>
+    <h2 id="contact-h" class="huge" data-spec="Display">Get in <em>touch.</em></h2>
+    <p class="c-lede">A question about the work, or an idea worth building? Write to me.</p>
+    <div class="reach">
+      <a class="mail" id="mail" href="mailto:aflung10@gmail.com" data-cursor="Write">aflung10@gmail.com</a>
+      <button class="copy" id="copy" type="button" data-cursor="Copy"><span>Copy email</span></button>
+    </div>
+    <ul class="pills">
+      <li><a class="pill" href="https://github.com/InvokFung" target="_blank" rel="noopener" data-magnetic>GitHub <i aria-hidden="true">↗</i></a></li>
+      <li><a class="pill" href="/blog/" data-magnetic>StudyLog, my notes <i aria-hidden="true">↗</i></a></li>
+      <li><a class="pill" href="/explore/" data-magnetic>The original portfolio <i aria-hidden="true">↗</i></a></li>
+    </ul>
+    <footer class="foot">
+      <p>Alan Fung © 2026</p>
+      <p>Designed and built by hand with GSAP and Lenis. <a href="https://github.com/InvokFung/invokfung.github.io" target="_blank" rel="noopener">Source</a></p>
+      <button class="totop" id="totop" type="button">Back to top <i aria-hidden="true">↑</i></button>
+    </footer>
+  </section>
+</main>
+
+<!-- the search palette: page sections, projects and my notes, ranked by BM25 as you type -->
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Search" hidden>
+  <div class="pal-box">
+    <label class="pal-in"><span class="sr">Search</span><input id="pal-q" type="search" autocomplete="off" spellcheck="false" placeholder="Search the page and 174 notes" role="combobox" aria-expanded="true" aria-controls="pal-list" /></label>
+    <ul class="pal-list" id="pal-list" role="listbox"></ul>
+    <p class="pal-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span><span class="pal-t" id="pal-t"></span></p>
+  </div>
+</div>
+
+<noscript><p class="noscript">This page runs its demos with JavaScript. Everything above still reads without it, and every project opens on its own page.</p></noscript>
+
+<script src="../vendor/gsap/gsap.min.js"></script>
+<script src="../vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="../vendor/gsap/SplitText.min.js"></script>
+<script src="../vendor/gsap/Flip.min.js"></script>
+<script src="../vendor/gsap/Draggable.min.js"></script>
+<script src="../vendor/gsap/InertiaPlugin.min.js"></script>
+<script src="../vendor/gsap/CustomEase.min.js"></script>
+<script src="../vendor/gsap/ScrambleTextPlugin.min.js"></script>
+<script src="../vendor/lenis.min.js"></script>
+<script src="/assets/portfolio/data.js"></script>
+<script src="/assets/portfolio/notes.js"></script>
+<script src="search.js"></script>
+<script src="demos.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

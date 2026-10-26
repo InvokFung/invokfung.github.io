@@ -79,7 +79,7 @@ window.PORTFOLIO = {
       lede: "Keep scrolling. The years run sideways."
     },
     contact: {
-      title: "Say <em>hello</em>",
+      title: "Get in <em>touch</em>",
       lede: "A question about a project, or an idea worth building? Run the line."
     }
   },

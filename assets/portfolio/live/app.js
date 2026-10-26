@@ -195,7 +195,7 @@
   function contactHTML() {
     return `
       <p class="pn-kind"><b>contact()</b></p>
-      <h2 class="pn-name" data-decode>Say hello.</h2>
+      <h2 class="pn-name" data-decode>Get in touch.</h2>
       <p class="pn-lede">${esc(D.home.contact)}</p>
       <a class="pn-mail" href="mailto:${esc(P.email)}">${esc(P.email)}</a>
       <div class="pn-links"><button type="button" class="btn" id="pn-copy">Copy email</button><a class="btn ghost" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a><a class="btn ghost" href="/blog/">StudyLog</a></div>
