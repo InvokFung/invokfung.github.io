@@ -701,3 +701,26 @@ made or a glitch?"
   the part's name rides beside it. Dragging it still scrubs; the lens holds still while you drag.
 - **The colour split was on purpose**, a little chromatic edge that grows with scroll speed, but
   at full strength it read as a glitch. It's now capped at a faint edge of a pixel or two.
+
+The same afternoon, before it went live. Afung, with a screenshot of the year's tags on the mountain
+piled on one another: "label overlapped, please fix, and better on phone not stacked too, haven't
+you check?" I hadn't, not frame by frame. Now every screen has been, on desktop, tablet and phone.
+
+- **The year's tags sit in rows by their flag.** They were hung round the flag in the world, so
+  from most angles they stacked up and covered the year. Now they're set out on the screen: rows
+  above the flag, or beside or below it where the room is, clear of each other, the year on the
+  flag and the caption and big year on the page. Each chip is as wide as its word.
+- **The scene falls away behind the words.** In the projects, how I work, the toolbox and what's
+  next, the side of the screen with the words fades into the part's own colour, so the Atlas wall,
+  the city or a tag never runs through a line of copy. The toolbox's fall clears once its shelves
+  sort; on a phone only the projects need it.
+- The toolbox names are whole (long ones set a little smaller instead of cut short with "…"), and
+  the far side of its globe falls back so the tags facing you read clear.
+- The opening words drift apart from the middle of their line as you scroll, where before two of
+  them ran into each other on the way out.
+- On a phone, Atlas's note comes to the middle at a size that fits, and the part's name by the
+  progress line stays hidden (it ran across the picture).
+
+Then Afung said deploy: round 9 is the homepage from 26 Oct. `/index.html` loads it from
+`lab/journey/`, which is live code from here on, as is `lab/unfold/art.js` (its ridges).
+`/lab/unfold/` keeps the mountain it replaced.

@@ -90,9 +90,12 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
       intro.fromTo(sp.chars, { ...ZIN }, { ...REST, duration: 1.1, ease: 'power4.out', stagger: 0.022 }, 0.25);
       intro.fromTo([role, cue], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.12 }, 1.0);
     }
-    // on the scroll: the words come apart and drift off, each its own way, as you sink into the cloud
+    // on the scroll: the words come apart and drift off as you sink into the cloud, each away from
+    // the middle of the line it's on, so no two ever run into each other
+    const mid = h1.clientWidth / 2;
+    const away = heroWords.map((w) => (w.offsetLeft != null ? w.offsetLeft + w.offsetWidth / 2 - mid : 0));
     tl.fromTo(heroWords, { ...REST }, {
-      opacity: 0, x: (k) => (k % 2 ? 1 : -1) * (40 + k * 18), y: (k) => -60 - k * 14, rotateZ: (k) => (k % 2 ? 6 : -6), rotateX: 50, z: 120,
+      opacity: 0, x: (k) => Math.sign(away[k] || 1) * (36 + Math.abs(away[k]) * 0.45), y: (k) => -56 - k * 6, rotateZ: (k) => Math.sign(away[k] || 1) * 6, rotateX: 50, z: 120,
       duration: 0.5, ease: 'power2.in', stagger: 0.03, immediateRender: false
     }, 0.05);
     tl.fromTo([role, cue], { opacity: 1 }, { opacity: 0, y: -20, duration: 0.25, ease: 'none', immediateRender: false }, 0.02);

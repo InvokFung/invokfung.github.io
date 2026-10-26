@@ -286,3 +286,6 @@ html[data-tone="dark"] .reach:hover { color: var(--dark); }
 }
 @media (prefers-reduced-motion: reduce) { .cue i { animation: none; } }
 .still .cue i { animation: none; }
+.noscript { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 24px; background: #ebe5d8; color: #1b1f27; }
+.noscript p { max-width: 640px; font: 400 17px/1.8 var(--sans); }
+.noscript a { color: inherit; }
