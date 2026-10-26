@@ -1,0 +1,187 @@
+/* Resn's about page, rebuilt. Measurements follow the original stylesheet: the root font size is
+   set by resn.js from the window width (10px at 1536px wide, 6 to 12px), and everything below is
+   in rem so the whole page scales as one. Fort (Resn's face) is commercial; Outfit stands in. */
+
+* { box-sizing: border-box; }
+html { font-size: 10px; background: #000; }
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", "Arial", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+.u-sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ── loader ─────────────────────────────────────────────────────────────── */
+.loader {
+  position: fixed; inset: 0; z-index: 2000; background: #121212;
+  display: grid; place-items: center;
+  transition: opacity 0.6s ease;
+}
+.loader.is-done { opacity: 0; pointer-events: none; }
+.loader__inner { width: 154px; text-align: center; }
+.loader__drop { width: 24px; height: 30px; fill: #fff; display: inline-block; }
+.loader__bar { position: relative; height: 1px; margin-top: 22px; background: #282828; }
+.loader__bar i { position: absolute; inset: 0; background: #fff; transform-origin: 0 0; transform: scaleX(0); }
+
+/* ── the glass drop ─────────────────────────────────────────────────────── */
+.background { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+.background canvas { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
+
+/* ── the page ───────────────────────────────────────────────────────────── */
+.about-page {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 2;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  will-change: transform;
+  cursor: pointer;
+}
+.about__inner {
+  position: relative;
+  width: 118.4rem;
+  max-width: 100%;
+  margin: 12rem auto 30rem;
+  padding: 3rem 8rem 5rem;
+  cursor: default;
+}
+.about-page h2, .about-page h3, .about-page p { font-weight: inherit; margin: 0; }
+.about-page h2 {
+  line-height: 1;
+  margin-bottom: 9.6rem;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+}
+.about-page hr { border: 0; height: 1px; margin: 9.6rem 0; background: #333; }
+.about-page ul { padding: 0; margin: 0; }
+.about-page li { display: inline-block; list-style: none; }
+
+.about__resnTitle { font-size: 6rem !important; padding-top: 1rem; margin-top: -1rem; }
+.about__storyTitle { line-height: 1.2 !important; margin-bottom: 4.4rem !important; }
+.about__storySkills { font-size: 2.2rem; line-height: 1.4; }
+
+.about__clientContent {
+  display: flex; flex-direction: row; align-items: flex-end;
+  margin-bottom: 6.4rem;
+}
+.about__clientCategory {
+  width: 33.3%; flex: none;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.about__clientList li + li::before { content: "\00A0·\00A0"; }
+.about__clientList a { background: linear-gradient(#fff, #fff) 0 100% / 0 1px no-repeat; transition: background-size 0.45s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.about__clientList a:hover, .about__clientList a:focus-visible { background-size: 100% 1px; outline: none; }
+
+.about_awardsList li { width: 33.3%; font-size: 2.2rem; margin-bottom: 4.8rem; vertical-align: top; padding-right: 2rem; }
+.about_awardsList li span {
+  display: block; margin-bottom: 1.2rem;
+  font-size: 1.2rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: #9a9a9a;
+}
+
+/* Text revealed through spinning triangles (resn.js, shards). The ghost is the 5% base the
+   original draws under the shards. */
+[data-shards] { position: relative; }
+span[data-shards], a[data-shards] { display: inline-block; }
+.shards-text { display: block; }
+.shards-ghost { position: absolute; inset: 0; pointer-events: none; opacity: 0; }
+.js [data-fade-in] { opacity: 0; visibility: hidden; }
+.force-height { width: 1px; pointer-events: none; }
+
+/* ── shell: the four corner buttons ─────────────────────────────────────── */
+.shell { position: fixed; inset: 0; z-index: 1000; pointer-events: none; font-size: 16px; line-height: 1; }
+.shell__button {
+  position: fixed; pointer-events: auto; cursor: pointer; color: #fff;
+  background: none; border: 0; padding: 0; font: inherit;
+  font-family: "Outfit", "Arial", sans-serif; font-weight: 400;
+}
+.shell__button::before { content: ""; position: absolute; width: 90px; height: 90px; border-radius: 50%; }
+.shell__button .button__text {
+  position: absolute; white-space: nowrap; opacity: 0; visibility: hidden;
+  transition: opacity 0.35s ease, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.35s;
+}
+.shell__button:hover .button__text, .shell__button:focus-visible .button__text { opacity: 1; visibility: visible; transform: none !important; }
+.shell__button:focus-visible { outline: 1px solid rgba(255, 255, 255, 0.5); outline-offset: 6px; }
+
+.shell__button--drop { left: 23px; top: 15px; width: 18px; height: 24px; }
+.shell__button--drop::before { left: -40px; top: -50px; }
+.shell__button--drop svg { width: 18px; height: 24px; fill: none; stroke: #fff; stroke-width: 1.3; }
+.shell__button--drop .button__text { left: 30px; top: 6px; transform: translate3d(-6px, 0, 0); }
+
+.shell__button--menu { right: 23px; top: 20px; width: 18px; height: 18px; }
+.shell__button--menu::before { right: -40px; top: -50px; }
+.shell__button--menu .button__icon { position: absolute; inset: 0; }
+.shell__button--menu .button__icon i {
+  position: absolute; left: 0; width: 18px; height: 2px; background: #fff;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+}
+.shell__button--menu .button__icon i:nth-child(1) { top: 2px; }
+.shell__button--menu .button__icon i:nth-child(2) { top: 8px; }
+.shell__button--menu .button__icon i:nth-child(3) { top: 14px; }
+.shell__button--menu .button__text { right: 30px; top: 1px; transform: translate3d(6px, 0, 0); }
+.is-menu .shell__button--menu .button__icon i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.is-menu .shell__button--menu .button__icon i:nth-child(2) { opacity: 0; }
+.is-menu .shell__button--menu .button__icon i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.shell__button--sound { right: 23px; bottom: 21px; width: 24px; height: 16px; }
+.shell__button--sound::before { right: -40px; bottom: -50px; }
+.shell__button--sound canvas { position: absolute; right: 0; top: 0; width: 24px; height: 16px; }
+.shell__button--sound .button__text { right: 32px; top: -1px; transform: translate3d(6px, 0, 0); }
+
+/* ── menu ───────────────────────────────────────────────────────────────── */
+.menu {
+  position: fixed; inset: 0; z-index: 900;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+}
+.menu[hidden] { display: none; }
+.menu__list { list-style: none; margin: 0; padding: 0; }
+.menu__list li { display: block; }
+.menu__list a {
+  display: inline-block; padding: 2.5rem 0;
+  font-size: 7.2rem; font-weight: 200; letter-spacing: -0.04em; line-height: 1;
+}
+.menu__list a:focus-visible { outline: 1px solid rgba(255, 255, 255, 0.4); outline-offset: 8px; }
+.menu__note {
+  position: absolute; bottom: 22px; left: 0; right: 0; margin: 0;
+  font-size: 12px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: #8d8d8d;
+}
+.menu__note a { color: #d6d6d6; }
+
+.is-menu .about-page { pointer-events: none; }
+
+/* ── small screens: Resn's tablet layout keeps the same column, just narrower ── */
+@media (max-width: 760px) {
+  .about__inner { margin: 9rem auto 20rem; padding: 3rem 2.4rem 5rem; }
+  .about-page { font-size: 2.6rem; }
+  .about__resnTitle { font-size: 5.4rem !important; }
+  .about__name { display: block; }
+  .about__dot { display: none; }
+  .about-page h2 { font-size: 4.4rem; margin-bottom: 6rem; }
+  .about-page hr { margin: 7rem 0; }
+  .about__clientContent { flex-direction: column; align-items: flex-start; gap: 1.2rem; margin-bottom: 4.8rem; }
+  .about__clientCategory { width: auto; font-size: 1.6rem; }
+  .about_awardsList li { width: 50%; font-size: 2.6rem; }
+  .about_awardsList li span { font-size: 1.6rem; }
+  .menu__list a { font-size: 9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell__button .button__text { transition: none; }
+}
+@media (scripting: none) {
+  [data-fade-in] { opacity: 1; visibility: visible; }
+}

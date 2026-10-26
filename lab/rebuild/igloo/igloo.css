@@ -1,0 +1,231 @@
+/* igloo.inc, rebuilt. Their interface is MSDF text in WebGL laid out on a grid: 125px side margin
+   and 90px top on big screens, 50/45 under 1600×800, 25/25 under 640 either way. Text lines sit
+   in boxes: titles knocked out of a #3C3C54 box, lines knocked out of a white one (the scene shows
+   through the glyphs). DOM can't knock out cheaply, so the glyphs take the scene's grey instead. */
+
+:root {
+  --gx: 125px; --gy: 90px; --w: 250px; --logo: 200px; --fs: 13px; --dfs: 15px;
+  --visit: 220px; --close: 120px; --icon: 22px;
+  --title-bg: #3c3c54; --title-fg: #d1d6e3; --box-bg: rgba(255, 255, 255, 0.94); --box-fg: #5b6170;
+  --project-title: #67707e; --project-text: #a1aab7;
+}
+@media (max-width: 1599px), (max-height: 799px) {
+  :root { --gx: 50px; --gy: 45px; --w: 200px; --logo: 160px; --fs: 12px; --dfs: 14px; --visit: 180px; --close: 95px; --icon: 18px; }
+}
+@media (max-width: 639px), (max-height: 639px) {
+  :root { --gx: 25px; --gy: 25px; --w: 175px; --logo: 140px; --fs: 11px; --dfs: 13px; --visit: 150px; --close: 85px; }
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%; overflow: hidden;
+  background: #8b909d; color: #fff;
+  font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none; touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+:focus-visible { outline: 1px solid #fff; outline-offset: 4px; }
+
+#gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* ── loader ───────────────────────────────────────────────────────────────── */
+.loader {
+  position: fixed; inset: 0; z-index: 50; background: #8b909d;
+  display: grid; place-content: center; justify-items: center; gap: 14px;
+  transition: opacity 0.8s ease;
+}
+.loader.is-done { opacity: 0; pointer-events: none; }
+.loader__count { margin: 0; font-size: 12px; letter-spacing: 0.2em; color: rgba(255, 255, 255, 0.9); }
+.loader__bar { position: relative; width: 120px; height: 1px; background: rgba(255, 255, 255, 0.25); }
+.loader__bar i { position: absolute; inset: 0; background: #fff; transform-origin: 0 0; transform: scaleX(0); transition: transform 0.3s ease; }
+
+/* ── the frame ────────────────────────────────────────────────────────────── */
+.ui { position: fixed; inset: 0; z-index: 10; pointer-events: none; font-size: var(--fs); line-height: 1.85; }
+.ui a, .ui button { pointer-events: auto; }
+
+/* A line in a box. Boxes are inline: a <br> between two ends a line, and a wrapped line gets a box per row. */
+.box {
+  display: inline; margin: 0; padding: 0.18em 0.4em;
+  background: var(--box-bg); color: var(--box-fg);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  visibility: hidden; white-space: pre-wrap;
+}
+.box--title { background: var(--title-bg); color: var(--title-fg); }
+.box.is-on { visibility: visible; animation: flick 0.32s linear; }
+@keyframes flick {
+  0% { opacity: 0; } 15% { opacity: 0.85; } 30% { opacity: 0.25; } 45% { opacity: 1; } 60% { opacity: 0.55; } 100% { opacity: 1; }
+}
+.block { position: absolute; width: var(--w); }
+.block--left { width: max-content; max-width: calc(100vw - var(--gx) * 2); }
+.block__lines { margin-top: 0.55em; }
+.block--left { left: var(--gx); top: calc(var(--gy) + var(--logo) * 0.21 + 1.6em); }
+.block--right { right: var(--gx); top: var(--gy); text-align: right; }
+.slot .block__lines + .box--title { display: inline-block; margin-top: 1.2em; }
+
+.logo { position: absolute; left: var(--gx); top: var(--gy); width: var(--logo); height: calc(var(--logo) * 0.21); visibility: hidden; }
+.is-started .logo { visibility: visible; }
+.logo svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.logo text { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 72px; fill: none; stroke: #fff; stroke-width: 3.2; stroke-linejoin: round; }
+
+.hint { position: absolute; left: var(--gx); bottom: calc(var(--gy) + var(--icon) + 1.4em); }
+
+.sound { position: absolute; left: var(--gx); bottom: var(--gy); display: flex; align-items: center; gap: 0.7em; visibility: hidden; }
+.is-started .sound { visibility: visible; }
+.sound__icon { display: flex; align-items: flex-end; gap: 2px; width: var(--icon); height: var(--icon); padding: 3px; background: var(--box-bg); }
+.sound__icon i { flex: 1; height: 30%; background: var(--title-bg); transform-origin: 50% 100%; }
+.sound.is-playing .sound__icon i { animation: bars 0.9s ease-in-out infinite alternate; }
+.sound.is-playing .sound__icon i:nth-child(2) { animation-delay: -0.3s; }
+.sound.is-playing .sound__icon i:nth-child(3) { animation-delay: -0.6s; }
+.sound.is-playing .sound__icon i:nth-child(4) { animation-delay: -0.15s; }
+@keyframes bars { from { height: 25%; } to { height: 100%; } }
+.sound b { font-weight: 600; color: var(--title-bg); }
+
+.explore { position: absolute; left: 50%; bottom: var(--gy); transform: translateX(-50%); }
+
+/* ── skip links (keyboard only) ───────────────────────────────────────────── */
+.skip { position: absolute; left: 8px; top: 8px; display: flex; flex-wrap: wrap; gap: 6px; max-width: calc(100% - 16px); z-index: 30; }
+.skip__btn {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.skip__btn:focus-visible {
+  position: static; width: auto; height: auto; clip-path: none; overflow: visible;
+  padding: 0.3em 0.6em; background: var(--title-bg); color: #fff;
+}
+
+/* ── the room ─────────────────────────────────────────────────────────────── */
+.arrow {
+  position: absolute; top: 50%; width: 64px; height: 28px; margin-top: -14px;
+  opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0s 0.4s;
+}
+.arrow svg { width: 100%; height: 100%; fill: none; stroke: #fff; stroke-width: 1.2; overflow: visible; }
+.arrow--prev { left: calc(50% - min(30vw, 420px) - 32px); }
+.arrow--next { left: calc(50% + min(30vw, 420px) - 32px); }
+.arrow:hover svg, .arrow:focus-visible svg { stroke-width: 2; }
+.is-room .arrow { opacity: 1; visibility: visible; transition: opacity 0.6s ease 0.2s, visibility 0s; }
+@media (max-width: 639px) {
+  .arrow { width: 44px; }
+  .arrow--prev { left: var(--gx); }
+  .arrow--next { left: auto; right: var(--gx); }
+}
+
+.room {
+  position: absolute; left: 50%; bottom: calc(var(--gy) + 20px); width: 0; height: calc(var(--visit) / 3.125);
+  visibility: hidden;
+}
+@media (max-width: 639px), (max-height: 639px) { .room { bottom: calc(var(--gy) + 64px); } }
+.is-room .room { visibility: visible; }
+.room__strip { position: absolute; left: 0; top: 50%; }
+.room__name {
+  position: absolute; left: 0; top: 0; transform: translate(-50%, -50%) translateX(calc(var(--d) * (var(--visit) * 0.5 + 70px)));
+  opacity: calc(1 - min(1, max(var(--d), calc(var(--d) * -1))) * 0.35);
+  transition: transform 0.6s cubic-bezier(0.6, 0, 0, 1), opacity 0.6s ease;
+  white-space: nowrap;
+}
+.room__name.is-current { opacity: 0 !important; }
+.visit {
+  position: absolute; left: calc(var(--visit) * -0.5); top: 0; width: var(--visit); height: 100%;
+  display: grid; place-content: center; justify-items: center; text-decoration: none;
+  background: rgba(255, 255, 255, 0.95); color: var(--title-bg);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.55), 0 0 64px rgba(200, 220, 255, 0.35);
+  opacity: 0; transform: scale(0.96); transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+}
+.is-room .visit { opacity: 1; transform: none; transition-delay: 0.15s; }
+.visit:hover { box-shadow: 0 0 34px rgba(255, 255, 255, 0.8), 0 0 90px rgba(200, 220, 255, 0.5); }
+.visit__label { font-size: 0.8em; letter-spacing: 0.2em; color: var(--project-title); line-height: 1.2; }
+.visit__label::before { content: "/// "; }
+.visit__title { font-size: 1.35em; font-weight: 600; letter-spacing: 0.08em; line-height: 1.2; }
+.visit__corners { position: absolute; inset: -6px; pointer-events: none;
+  background:
+    linear-gradient(#fff, #fff) 0 0 / 10px 1px, linear-gradient(#fff, #fff) 0 0 / 1px 10px,
+    linear-gradient(#fff, #fff) 100% 0 / 10px 1px, linear-gradient(#fff, #fff) 100% 0 / 1px 10px,
+    linear-gradient(#fff, #fff) 0 100% / 10px 1px, linear-gradient(#fff, #fff) 0 100% / 1px 10px,
+    linear-gradient(#fff, #fff) 100% 100% / 10px 1px, linear-gradient(#fff, #fff) 100% 100% / 1px 10px;
+  background-repeat: no-repeat; }
+.room__note { position: absolute; left: 0; top: calc(100% + 12px); transform: translateX(-50%); white-space: nowrap; }
+
+/* ── the project view ─────────────────────────────────────────────────────── */
+.detail {
+  position: fixed; inset: 0; z-index: 5; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y;
+  opacity: 0; visibility: hidden; pointer-events: none; outline: none;
+  font-size: var(--dfs); line-height: 1.6;
+  transition: opacity 0.35s ease, visibility 0s 0.35s;
+}
+.detail.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.2s ease, visibility 0s; }
+.detail__column {
+  width: min(100% - 40px, 500px); min-height: 100%; margin: 0 auto; padding: 130px 0;
+  display: flex; flex-direction: column; justify-content: center; gap: 25px;
+}
+.detail__column > * { margin: 0; }
+.detail [data-text] { visibility: hidden; }
+.detail [data-text].is-on { visibility: visible; }
+.detail__head { display: grid; gap: 4px; }
+.detail__head p { margin: 0; }
+.detail__title { color: var(--project-title); }
+.detail__text { color: var(--project-text); }
+.detail__name { margin: 0; font-size: 2.3em; line-height: 1.1; font-weight: 500; color: #fff; letter-spacing: -0.01em; }
+.detail__metrics { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.detail__metrics li { display: grid; grid-template-columns: 8.5em 1fr; gap: 1em; align-items: baseline; }
+.detail__metrics b { font-weight: 600; color: #fff; font-size: 1.15em; }
+.detail__metrics span { color: var(--project-text); }
+.detail__links { display: flex; flex-wrap: wrap; gap: 0.6em 2em; }
+.detail__links a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.35); }
+.detail__links a::after { content: " ↗"; }
+.detail__links a:hover { border-color: #fff; }
+@media (max-aspect-ratio: 1/1) {
+  /* The object stands above the text on a tall screen; the text scrolls up over a dark ground. */
+  .detail__column {
+    justify-content: flex-start; padding: 40vh 20px 140px; width: min(100%, 540px);
+    background: linear-gradient(rgba(9, 18, 31, 0) 30vh, rgba(9, 18, 31, 0.86) 42vh);
+  }
+}
+@media (max-width: 639px) { .detail__metrics li { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 639px) and (max-aspect-ratio: 1/1) {
+  /* Phones: the manifesto has the top right, so who-this-is moves down above the hint. */
+  .block--left { top: auto; bottom: calc(var(--gy) + var(--icon) + 4.4em); }
+}
+
+.close {
+  position: fixed; z-index: 12; right: var(--gx); top: var(--gy);
+  display: grid; justify-items: center; gap: 6px;
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+.close.is-open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.6s ease 1s, visibility 0s; }
+.close__box { position: relative; width: var(--close); height: calc(var(--close) * 0.45); border: 1px solid rgba(255, 255, 255, 0.7); }
+.close__box::before, .close__box::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 32%; height: 1px; background: #fff;
+  transform: translate(-50%, -50%) rotate(14deg);
+}
+.close__box::after { transform: translate(-50%, -50%) rotate(-14deg); }
+.close:hover .close__box { background: rgba(255, 255, 255, 0.1); border-color: #fff; }
+.close__label { font-size: var(--fs); color: #fff; }
+
+/* ── the page as text ─────────────────────────────────────────────────────── */
+.about {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.no-webgl body { overflow: auto; touch-action: auto; }
+.no-webgl #gl, .no-webgl .ui { display: none; }
+.no-webgl .about {
+  position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal;
+  max-width: 640px; margin: 0 auto; padding: 48px 20px 80px; line-height: 1.6; font-size: 15px;
+}
+.no-webgl .about h1 { font-size: 34px; margin: 0 0 8px; }
+.no-webgl .about h2 { font-size: 15px; color: var(--title-bg); margin: 40px 0 12px; }
+.no-webgl .about h2::before { content: "/// "; }
+.no-webgl .about h3 { margin: 0; font-size: 18px; }
+.no-webgl .about small { font-weight: 400; color: #e6e9f0; }
+.no-webgl .about ol, .no-webgl .about ul { padding-left: 1.2em; }
+.no-webgl .about li { margin-bottom: 14px; }
+.noscript { position: fixed; inset: 0; z-index: 60; overflow: auto; background: #8b909d; padding: 48px max(20px, calc(50% - 320px)); line-height: 1.6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .box.is-on { animation: none; }
+  .sound.is-playing .sound__icon i { animation: none; height: 70%; }
+  * { transition-duration: 0.01s !important; }
+}
+
+/* On a tall screen the project text runs past the bottom corner, so sound steps aside while it's open. */
+@media (max-aspect-ratio: 1/1) { .is-detail .sound { visibility: hidden; } }

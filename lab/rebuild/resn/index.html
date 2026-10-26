@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex" />
+<title>Alan Fung · About</title>
+<meta name="description" content="A rebuild of Resn's about page with Alan Fung's work in it: the copy over a glass drop you look straight through, split red and cyan." />
+<meta name="theme-color" content="#000000" />
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="resn.css" />
+<script>document.documentElement.classList.add("js");</script>
+<script type="importmap">{ "imports": { "three": "../../vendor/three/three.module.min.js" } }</script>
+</head>
+<body>
+
+<!-- Loader: the drop and a one pixel bar, as on the original. -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__drop" viewBox="0 0 24 30"><path d="M12 1.5C9.4 6.6 3.5 12.6 3.5 19a8.5 8.5 0 0 0 17 0c0-6.4-5.9-12.4-8.5-17.5Z" /></svg>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+</div>
+
+<!-- The glass drop. One WebGL canvas, fixed behind the copy. -->
+<div class="background" aria-hidden="true"><canvas id="gem"></canvas></div>
+
+<!-- The page is a fixed layer; the document only has its height (see resn.js, scroll). -->
+<main class="about-page" id="page">
+  <div class="about__inner">
+    <h1 class="u-sr-only">About Alan Fung</h1>
+
+    <h2 class="about__resnTitle"><span class="about__name">Alan Fung</span> <span class="about__role" data-shards="heading"><span class="about__dot">· </span>Forward Deployed Engineer</span></h2>
+    <hr data-fade-in />
+
+    <h2 class="about__storyTitle" data-fade-in>Built next to the people who use it.</h2>
+    <h3 class="about__storySkills" data-shards="paragraph">Frontend · Backend · Data · In the field</h3>
+    <hr data-fade-in />
+
+    <h2 class="about__clientTitle" data-fade-in>Selected Work</h2>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">LLM gateway</h3>
+      <ul class="about__clientList"><li><a href="../../../relay/">Relay</a></li><li>99.98% answered in an outage</li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Observability</h3>
+      <ul class="about__clientList"><li><a href="../../../tracewise/">Tracewise</a></li><li>98.9% culprit named first</li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Customer data</h3>
+      <ul class="about__clientList"><li><a href="../../../onboard/">Onboard</a></li><li>0.977 match F1</li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Field service</h3>
+      <ul class="about__clientList"><li><a href="../../../dispatch/">Dispatch</a></li><li>97.0% on time on a bad day</li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Search engine</h3>
+      <ul class="about__clientList"><li><a href="../../../atlas/">Atlas</a></li><li>85% right first time, no server</li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Real-time audio</h3>
+      <ul class="about__clientList"><li><a href="../../../studio/">Intonation Studio</a></li><li>0.17¢ worst error</li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Geometry + WebAssembly</h3>
+      <ul class="about__clientList"><li><a href="../../../layerline/">Layerline</a></li><li>66 KB of WebAssembly</li></ul>
+    </div>
+    <hr data-fade-in />
+
+    <h2 class="about__awardsTitle" data-fade-in>Career</h2>
+    <div data-fade-in>
+      <ul class="about_awardsList">
+        <li><span>Degree</span>Information Engineering</li>
+        <li><span>2023</span>Web Developer</li>
+        <li><span>2024</span>Full Stack Engineer</li>
+        <li><span>2025</span>Software Engineer</li>
+        <li><span>2026</span>Forward Deployed Engineer</li>
+      </ul>
+    </div>
+    <hr data-fade-in />
+
+    <h2 class="about__contactTitle" data-fade-in>Get in touch.</h2>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Email</h3>
+      <ul class="about__clientList"><li><a href="mailto:aflung10@gmail.com">aflung10@gmail.com</a></li></ul>
+    </div>
+    <div class="about__clientContent" data-fade-in>
+      <h3 class="about__clientCategory">Code</h3>
+      <ul class="about__clientList"><li><a href="https://github.com/InvokFung" target="_blank" rel="noopener">github.com/InvokFung</a></li></ul>
+    </div>
+    <hr data-fade-in />
+  </div>
+</main>
+
+<!-- Shell: the four corner buttons. Their labels slide in on hover. -->
+<nav class="shell" aria-label="Site">
+  <a class="shell__button shell__button--drop" href="../../../" aria-label="Home">
+    <svg class="button__icon" viewBox="0 0 18 24" aria-hidden="true"><path d="M9 1.2C7.1 5 2 9.6 2 15a7 7 0 0 0 14 0c0-5.4-5.1-10-7-13.8Z" /></svg>
+    <span class="button__text">Home</span>
+  </a>
+  <button class="shell__button shell__button--menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span class="button__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="button__text">Discover</span>
+  </button>
+  <button class="shell__button shell__button--sound" id="soundBtn" type="button" aria-label="Sound off" aria-pressed="false">
+    <canvas class="button__icon" width="48" height="32" aria-hidden="true"></canvas>
+    <span class="button__text">Audio</span>
+  </button>
+</nav>
+
+<!-- Menu: what Resn's hamburger opens. The drop pulls back to show the whole gem behind it. -->
+<div class="menu" id="menu" hidden>
+  <ul class="menu__list">
+    <li><a href="../../../explore/" data-shards="menu">Work</a></li>
+    <li><a href="../../../" data-shards="menu">Showreel</a></li>
+    <li><a href="#" data-close data-shards="menu">About</a></li>
+    <li><a href="../igloo/" data-shards="menu">Igloo</a></li>
+  </ul>
+  <p class="menu__note">Rebuilt from resn.co.nz/#!/about · <a href="../">notes</a></p>
+</div>
+
+<script src="../../vendor/gsap/gsap.min.js"></script>
+<script type="module" src="resn.js"></script>
+</body>
+</html>
