@@ -443,7 +443,7 @@ everything has to play from the scroll alone, with "more and more transition". A
 explains the craft to the reader: "we are showcasing but not teaching ... we let them experience
 instead".
 
-Research. 59 portfolio and studio sites known from Instagram and Awwwards reels were opened in
+Research. 61 portfolio and studio sites known from Instagram and Awwwards reels were opened in
 headless Chromium and scrolled with the wheel like a visitor, recording the libraries on the page,
 every ScrollTrigger, WebGL contexts and shader keywords, with ten frames down each page
 (`scan.js`, kept outside the repo). The list with links and each site's special moment is in the
