@@ -678,7 +678,8 @@ smooth or not, and phone view, especially thin width".
 - The frame no longer changes size while you scroll (that was a hitch of its own on phones), and
   split words and letters no longer each ask for their own layer.
 - Script time per frame is about 1 ms; no part draws more than 170 times or 64,000 triangles a
-  frame. `?fps` shows a meter in the corner, to see how a real phone copes.
+  frame. A meter in the corner shows how a real phone copes: `?fps`, F, or a tap on the last line
+  of the page turns it on.
 - **Thin phones** (checked at 320, 360 and 390 wide): the dawn ridges keep their shape instead of
   squeezing into spikes; the words of how I work and what's next sit on a sheet of paper at the
   foot of the screen; what's next stacks each item under its name; the toolbox drops its group

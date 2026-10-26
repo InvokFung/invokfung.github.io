@@ -469,17 +469,26 @@ copy?.addEventListener('click', () => {
   if (navigator.clipboard && mail) navigator.clipboard.writeText(mail).then(done, () => {}); 
 });
 
-// ?fps: a small meter in the corner, to see how a real phone copes (frames drawn, the worst frame
-// in the last half second, the tier it settled on)
-if (params.has('fps')) {
-  const m = document.createElement('p');
+// A small meter in the corner, to see how a real phone copes (frames a second, frames drawn, the
+// worst frame in the last half second, the tier it settled on). ?fps shows it from the start; F,
+// or a tap on the last line of the page, turns it on and off.
+let meterEl = null, meterIv = 0;
+function meter() {
+  if (meterEl) { meterEl.remove(); meterEl = null; clearInterval(meterIv); return; }
+  const m = meterEl = document.createElement('p');
   m.style.cssText = 'position:fixed;left:8px;bottom:8px;z-index:99;margin:0;padding:4px 7px;border-radius:6px;background:rgba(0,0,0,.6);color:#fff;font:11px/1.3 ui-monospace,monospace;pointer-events:none';
   document.body.appendChild(m);
-  let n = 0, worst = 0, last = performance.now(), d0 = 0;
-  const tick = (now) => { requestAnimationFrame(tick); n++; worst = Math.max(worst, now - last); last = now; };
+  let n = 0, worst = 0, last = performance.now(), d0 = drawn;
+  const tick = (now) => { if (meterEl !== m) return; requestAnimationFrame(tick); n++; worst = Math.max(worst, now - last); last = now; };
   requestAnimationFrame(tick);
-  setInterval(() => { m.textContent = `${n * 2} fps · drawn ${(drawn - d0) * 2} · worst ${worst.toFixed(0)} ms · ${tier}`; n = 0; worst = 0; d0 = drawn; }, 500);
+  meterIv = setInterval(() => { m.textContent = `${n * 2} fps · drawn ${(drawn - d0) * 2} · worst ${worst.toFixed(0)} ms · ${gl ? tier : 'no WebGL'}`; n = 0; worst = 0; d0 = drawn; }, 500);
 }
+if (params.has('fps')) meter();
+addEventListener('keydown', (e) => { if ((e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey && !e.altKey) meter(); });
+addEventListener('pointerup', (e) => {
+  const c = $('.colophon'), r = c?.getBoundingClientRect();
+  if (r && r.height && shotAt(tau).id === 'contact' && e.clientY >= r.top - 10 && e.clientY <= r.bottom + 10) meter();
+});
 
 /* ------------------------------------------------------------------ start */
 let rz = 0, lastW = W, lastH = H;
