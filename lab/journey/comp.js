@@ -463,9 +463,15 @@ export function textTexture(lines, { w = 512, h = 128, font = '500 44px "JetBrai
   if (bg) { x.fillStyle = bg; x.fillRect(0, 0, w, h); }
   x.font = font; x.fillStyle = color; x.textAlign = align; x.textBaseline = 'middle';
   const L = [].concat(lines), size = parseFloat(font.match(/(\d+(\.\d+)?)px/)[1]);
-  L.forEach((s, i) => x.fillText(s, align === 'center' ? w / 2 : align === 'left' ? pad : w - pad, h / 2 + (i - (L.length - 1) / 2) * size * lh));
+  // a line that would run past the canvas (another font, a longer word) is set smaller, never cut
+  const room = w - 2 * Math.max(pad, size * 0.2), widest = Math.max(...L.map((s) => x.measureText(s).width));
+  const k = widest > room ? room / widest : 1;
+  if (k < 1) x.font = font.replace(/(\d+(\.\d+)?)px/, (n) => (parseFloat(n) * k).toFixed(1) + 'px');
+  L.forEach((s, i) => x.fillText(s, align === 'center' ? w / 2 : align === 'left' ? pad : w - pad, h / 2 + (i - (L.length - 1) / 2) * size * k * lh));
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4;
+  // how much of the width the words take, for laying other things out round them
+  t.userData.ink = Math.min(widest * k, room) / w;
   return t;
 }
 

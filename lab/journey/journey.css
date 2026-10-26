@@ -34,10 +34,16 @@ html[data-tone="dark"] { --hd: var(--light); }
    through the words (journey.js sets --sc and the opacity for the projects, how I work, the toolbox
    and what's next) */
 .side { --sc: 16 19 23; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0; background: linear-gradient(90deg, rgb(var(--sc) / 0.94) 0%, rgb(var(--sc) / 0.84) 24%, rgb(var(--sc) / 0.42) 42%, rgb(var(--sc) / 0) 58%); }
+/* the climb: a soft pool of the mountain's grey behind the big year, nothing more */
+.side.low { background: radial-gradient(ellipse 34% 36% at 15% 85%, rgb(var(--sc) / 0.88) 0%, rgb(var(--sc) / 0.6) 48%, rgb(var(--sc) / 0) 100%); }
+/* what's next: its list runs wider at the foot, so the fall of colour reaches further there */
+.side.wide { background: radial-gradient(ellipse 48% 44% at 22% 80%, rgb(var(--sc) / 0.92) 0%, rgb(var(--sc) / 0.78) 50%, rgb(var(--sc) / 0) 100%), linear-gradient(90deg, rgb(var(--sc) / 0.94) 0%, rgb(var(--sc) / 0.84) 24%, rgb(var(--sc) / 0.42) 42%, rgb(var(--sc) / 0) 58%); }
 .dragging .hit { cursor: grabbing; }
 .story { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; perspective: 1100px; }
 .story a, .story button { pointer-events: auto; }
-.story, .top, .rail { -webkit-user-select: none; user-select: none; }
+/* a drag turns the scene, so nothing on the page gets selected (the cursor's own label included);
+   the email still can be, to copy it. Without the script, the plain page selects as usual. */
+.ready body { -webkit-user-select: none; user-select: none; }
 .story a, .top a { -webkit-user-drag: none; }
 .mail a { -webkit-user-select: text; user-select: text; }
 .part { position: absolute; inset: 0; }
@@ -89,12 +95,14 @@ html[data-tone="dark"] .reach:hover { color: var(--dark); }
 .rail .tick span { position: absolute; right: 22px; white-space: nowrap; font: 500 10.5px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; opacity: 0; transform: translateX(6px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
 .rail:hover .tick span, .rail.held .tick span, .rail .tick:focus-visible span { opacity: 0.85; transform: none; }
 
-.cursor { position: fixed; left: 0; top: 0; z-index: 20; pointer-events: none; color: #fff; mix-blend-mode: difference; display: none; }
+/* the cursor takes the header's colour for the part (no blend mode: blending over the film costs a
+   whole extra pass of the screen every frame) */
+.cursor { position: fixed; left: 0; top: 0; z-index: 20; pointer-events: none; color: var(--hd); display: none; transition: color 0.5s; }
 @media (pointer: fine) { .ready .cursor { display: block; } }
 .cursor i { position: absolute; left: -15px; top: -15px; width: 30px; height: 30px; border-radius: 50%; box-shadow: inset 0 0 0 1px currentColor; transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s; }
 .cursor i::after { content: ""; position: absolute; left: 13px; top: 13px; width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
 .cursor b { position: absolute; left: 22px; top: -6px; font: 500 10px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0; transform: translateX(-6px); transition: opacity 0.25s, transform 0.25s; }
-.cursor[data-mode="link"] i { transform: scale(1.7); background: rgba(255, 255, 255, 0.12); }
+.cursor[data-mode="link"] i { transform: scale(1.7); background: color-mix(in srgb, currentColor 12%, transparent); }
 .cursor[data-mode="drag"] i { transform: scale(1.35); }
 .cursor[data-mode="drag"] b { opacity: 1; transform: none; }
 

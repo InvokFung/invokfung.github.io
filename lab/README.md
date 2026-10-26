@@ -737,3 +737,34 @@ over everything, slabs and all; and the buttons moved too much with the pointer.
   still can, to copy it.
 - **Calmer buttons.** They lean a few pixels at most, the big address not at all; at dusk the
   landscape answers the pointer a little more instead.
+
+The same evening Afung sent a screenshot of the camp's year with its 2 cut off ("have you uat"),
+so the whole page went through a proper test: every screen at 1440, 1280, 1024, 390, 360 and 320
+wide, and every control pressed, dragged, held, hovered and tabbed to. What it found, all fixed:
+
+- **Years on the mountain are whole or gone.** They were drawn into the scene, so a sheet of card
+  in front could cut one in half. Now every year is drawn over the scene and fades out while the
+  mountain stands between it and you, or while it would sit on the page's words. The camp's chips
+  keep clear of its year too, and a label too long for its canvas is set smaller, never cut.
+- **Resizing no longer blanks the page.** Turning a phone or resizing the window rebuilt the words'
+  timeline from the page as it stood, when every heading still to come was blank, so they stayed
+  blank. The words are read once and kept.
+- **Scrambles always finish.** A scrambled word played with the scroll, so stopping halfway left it
+  garbled ("scratmu"); now it plays on the clock once you pass its moment.
+- **What's next and the climb keep their words clear.** The fall of colour reaches the foot of the
+  list in what's next, past years step aside there, and a soft pool of grey sits behind the big
+  year on the climb so flags and trail don't run through it.
+- **The toolbox's tag stays on screen,** flipping to the other side of the pointer near an edge.
+- **The big year comes back on the way up.** Scrolling back up to the climb from further down left
+  its year hidden: the part was shown with GSAP's autoAlpha, and stepping back past its end put back
+  the faded opacity and, with it, `visibility: hidden`. Parts are now shown by visibility alone.
+- **Relay's window opens after the words leave.** It used to open in the middle of the screen while
+  "Seven questions I couldn't leave alone" was still there, a dark shape through the heading.
+- **The toolbox fits its room.** On a tablet the globe and the shelves ran over the words and off
+  the right edge under the rail (at 1440 the last shelf touched the edge). The page now says where
+  its words end, and the globe turns right of them while the shelves sit right of them or, on a
+  squarer screen, under them, whichever gives the bigger tags.
+- **No selection while dragging.** A drag across the page no longer paints the words blue; the
+  email can still be selected to copy.
+- **The cursor takes the part's colour** instead of a blend mode, which also spares the browser a
+  pass over the whole film every frame.

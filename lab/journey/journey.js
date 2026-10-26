@@ -11,7 +11,7 @@ import * as THREE from 'three';
 import { createCompositor, MODE, windowHomography, typeMask } from './comp.js';
 import { cloudScene, relayScene, traceScene, onboardScene, dispatchScene, atlasScene, studioScene, layerScene } from './works.js';
 import { skyScene } from './sky.js';
-import { climbScene, howScene, toolsScene } from './places.js';
+import { climbScene, howScene, toolsScene, WALK } from './places.js';
 import { createDust } from './dust.js';
 import { createStory } from './story.js';
 
@@ -120,9 +120,19 @@ function want(key) {
   if (!sc.warmed) warm(sc);
   return sc;
 }
+// the room the toolbox's tags have on a wide screen: right of the words, or under them, clear of
+// the rail and the counts (from the page's layout, which the timeline's moves don't touch)
+function toolsRoom() {
+  const sec = $('.tools');
+  if (narrow || !sec) return null;
+  const k = $('.kicker', sec), h = $('h2', sec), l = $('.lede', sec), g = $('.groups', sec);
+  const right = Math.max(...[k, h, l].map((e) => e.offsetLeft + e.offsetWidth)) + 40;
+  return { x0: h.offsetLeft, right, top: k.offsetTop, under: l.offsetTop + l.offsetHeight + 32, x1: $('#rail').getBoundingClientRect().left - 16, bottom: g.offsetTop - 28 };
+}
 function make(key) {
   const a = performance.now(), sc = scenes[key] = BUILD[key]();
   sc.key = key;
+  if (key === 'tools') sc.room(toolsRoom());
   sc.size(W, H, narrow, res);
   sc.update(0, 0, 0, {});
   builds[key] = [Math.round(performance.now() - a)];
@@ -206,6 +216,7 @@ function sizeGL() {
   const bw = Math.max(1, Math.round(W * res)), bh = Math.max(1, Math.round(H * res));
   rtA.setSize(bw, bh); rtB.setSize(bw, bh);
   comp.u.uRes.value.set(W, H);
+  scenes.tools?.room(toolsRoom());
   for (const k in scenes) scenes[k].size(W, H, narrow, res);
   dust?.size(W, H, res);
 }
@@ -453,7 +464,7 @@ function update(sh, q, dt) {
   return sc;
 }
 // the fall of colour behind the words (see .side in journey.css): a part's own background
-const SIDE = { how: '235 229 216', tools: '16 19 23', next: '236 230 222' };
+const SIDE = { path: '214 211 216', how: '235 229 216', tools: '16 19 23', next: '236 230 222' };
 const sideEl = document.getElementById('side');
 let sideKey = '';
 const sideOf = (sh) => {
@@ -467,17 +478,23 @@ const sideAmt = (sh) => {
   if (!sideOf(sh)) return 0;
   // on a phone the words of how I work and what's next have their own sheet, and the toolbox's sit up top
   if (narrow && sh.ch == null) return 0;
-  return sh.id === 'tools' ? 1 - smooth(0.42, 0.6, (tau - sh.t0) / sh.len) : 1;
+  const q = (tau - sh.t0) / sh.len;
+  // the climb: only behind the big year, while it's up
+  if (sh.id === 'path') return smooth(WALK[0] - 0.06, WALK[0], q) * (1 - smooth(0.97, 1.02, q));
+  return sh.id === 'tools' ? 1 - smooth(0.42, 0.6, q) : 1;
 };
 function side(a, b, p) {
   const ca = sideOf(a), cb = b ? sideOf(b) : null;
   const o = b ? lerp(sideAmt(a), sideAmt(b), p) : sideAmt(a);
-  const c = (b && cb && (p > 0.5 || !ca)) ? cb : (ca || cb || '16 19 23');
-  const key = `${c}|${o.toFixed(2)}`;
+  const useB = b && cb && (p > 0.5 || !ca);
+  const id = (useB ? b : a).id, c = useB ? cb : (ca || cb || '16 19 23'), wide = !narrow && id === 'next', low = id === 'path';
+  const key = `${c}|${o.toFixed(2)}|${wide}|${low}`;
   if (key === sideKey || !sideEl) return;
   sideKey = key;
   sideEl.style.setProperty('--sc', c);
   sideEl.style.opacity = o.toFixed(2);
+  sideEl.classList.toggle('wide', wide);
+  sideEl.classList.toggle('low', low);
 }
 function render(s, dt) {
   let A, B = null, mode = MODE.fade, p = 0, mv = null;
@@ -519,11 +536,12 @@ function render(s, dt) {
     renderer.autoClear = true;
   }
 }
-// the window: tilted and small in the cloud, it turns to face you, then grows past the screen
+// the window: tilted and small in the cloud, it turns to face you, then grows past the screen. It
+// opens once the cloud's words have left the middle of the screen.
 function windowAt(p) {
   const asp = narrow ? 0.95 : 1.4;
-  const appear = easeOut(smooth(0, 0.2, p)), face = easeInOut(smooth(0.1, 0.62, p)), grow = easeInOut(smooth(0.45, 1, p));
-  const w0 = (narrow ? 0.7 : 0.36) * W * (0.6 + 0.4 * appear);
+  const appear = easeOut(smooth(0.3, 0.48, p)), face = easeInOut(smooth(0.34, 0.72, p)), grow = easeInOut(smooth(0.55, 1, p));
+  const w0 = (narrow ? 0.7 : 0.36) * W * (0.2 + 0.8 * appear);
   const wEnd = Math.max(W * 1.7, H * 2.8 * asp * 0.6), hEnd = H * 2.8;
   const w = lerp(w0, wEnd, grow), h = lerp(w0 / asp, hEnd, grow);
   const o = { w, h, rx: 16 * (1 - face), ry: -30 * (1 - face), rz: -7 * (1 - face), x: 0, y: lerp(H * 0.03, -H * 0.42, grow), z: 240 * (1 - face), fl: 800 };
@@ -531,7 +549,8 @@ function windowAt(p) {
   const u = comp.u;
   u.uHinv.value.copy(H3);
   u.uWin.value.set(0.06, 1 - grow * 0.6, w / h, (1 - smooth(0.85, 1, p)) * appear);
-  if (appear < 0.02) u.uP.value = 0;
+  // not open yet: just the cloud (the window's cut doesn't depend on p)
+  if (appear < 0.02) { u.uMode.value = 0; u.uP.value = 0; }
 }
 function typeAt() {
   const m = typeMaskNow(), u = comp.u, asp = W / H;
@@ -607,7 +626,9 @@ function start() {
   document.documentElement.classList.add('ready');
 }
 // the words in the scenes are drawn from the page's fonts, so wait for them
-Promise.all([document.fonts?.ready, document.fonts?.load('400 100px "Instrument Serif"'), document.fonts?.load('italic 400 100px "Instrument Serif"'), document.fonts?.load('500 12px "JetBrains Mono"')].map((x) => Promise.resolve(x).catch(() => {}))).then(start);
+// (each weight the canvases use, or a label is drawn in a stand-in font)
+const FACES = ['400 100px "Instrument Serif"', 'italic 400 100px "Instrument Serif"', '400 12px "JetBrains Mono"', '500 12px "JetBrains Mono"', '600 12px "JetBrains Mono"', '500 12px Inter', '600 12px Inter'];
+Promise.all([document.fonts?.ready, ...FACES.map((f) => document.fonts?.load(f))].map((x) => Promise.resolve(x).catch(() => {}))).then(start);
 
 window.__journey = {
   get tau() { return tau; }, get tier() { return tier; }, builds, scenes, info: () => renderer && { calls: renderer.info.render.calls, tris: renderer.info.render.triangles }, get gl() { return gl; }, get intro() { return introT; }, get frames() { return drawn; },
