@@ -331,8 +331,10 @@
   }
   $("#copy").addEventListener("click", function () {
     var b = this, s = b.firstChild;
-    var done = function () { gsap.to(s, { duration: 0.6, scrambleText: { text: "Copied ✓", chars: "abcdefghij", speed: 0.6 } }); setTimeout(function () { gsap.to(s, { duration: 0.6, scrambleText: { text: "Copy email", chars: "abcdefghij" } }); }, 2200); };
-    if (navigator.clipboard) navigator.clipboard.writeText(P.profile ? P.profile.email : "aflung10@gmail.com").then(done, done); else done();
+    var say = function (t) { gsap.to(s, { duration: 0.6, scrambleText: { text: t, chars: "abcdefghij", speed: 0.6 } }); setTimeout(function () { gsap.to(s, { duration: 0.6, scrambleText: { text: "Copy email", chars: "abcdefghij" } }); }, 2200); };
+    // where the clipboard is refused, select the address so the visitor can copy it themselves
+    var pick = function () { var r = document.createRange(); r.selectNodeContents($("#mail")); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); say("Selected"); };
+    if (navigator.clipboard) navigator.clipboard.writeText(P.profile ? P.profile.email : "aflung10@gmail.com").then(function () { say("Copied ✓"); }, pick); else pick();
   });
   $("#totop").addEventListener("click", function () { scrollToEl("#hero"); $(".mark").focus({ preventScroll: true }); });
 
@@ -369,7 +371,7 @@
   function press(btns, on) { btns.forEach(function (b) { b.setAttribute("aria-pressed", on ? "true" : "false"); }); }
 
   function applyTheme(dark) {
-    if (dark) html.dataset.theme = "dark"; else delete html.dataset.theme;
+    html.dataset.theme = dark ? "dark" : "light";
     press(swTheme, dark);
     $("meta[name=theme-color]").setAttribute("content", dark ? "#161512" : "#f2efe8");
     save("theme", dark ? "dark" : "light");

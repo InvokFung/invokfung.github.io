@@ -18,7 +18,7 @@
   (function () {
     var d = document.documentElement, s = {};
     try { s = JSON.parse(localStorage.getItem("af.product") || "{}"); } catch (e) {}
-    if (s.theme === "dark" || (!s.theme && matchMedia("(prefers-color-scheme: dark)").matches)) d.dataset.theme = "dark";
+    d.dataset.theme = s.theme || d.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (s.calm || matchMedia("(prefers-reduced-motion: reduce)").matches) d.classList.add("calm");
     try { if (sessionStorage.getItem("af.seen")) d.classList.add("seen"); } catch (e) {}
     d.classList.add("js");
