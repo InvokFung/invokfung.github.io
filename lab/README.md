@@ -433,3 +433,77 @@ Known limits, round 6:
 - The fonts come from Google Fonts; offline, the page falls back to system fonts.
 - Round 5 (`ascent/`, PR #10) is on its own branch. This round answers the same reels more fully,
   so it supersedes it.
+
+### 2026-10-26 · Round 7: the scroll is the show
+
+Afung's answer to round 6: not amazed. "There's not much scroll effect, none like the particle of
+forming myself, nor scrolling magic where crazy content transition on scroll; that plain card
+scrolling or text highlighting bores me." Recruiters aren't designers and won't click, so
+everything has to play from the scroll alone, with "more and more transition". And no copy that
+explains the craft to the reader: "we are showcasing but not teaching ... we let them experience
+instead".
+
+Research. 59 portfolio and studio sites known from Instagram and Awwwards reels were opened in
+headless Chromium and scrolled with the wheel like a visitor, recording the libraries on the page,
+every ScrollTrigger, WebGL contexts and shader keywords, with ten frames down each page
+(`scan.js`, kept outside the repo). The list with links and each site's special moment is in the
+project files (`reference-reels/round-7-sites.md`). What the best ones share:
+
+- One thing carried through the whole scroll: Oryzo's cork coaster, Igloo's igloo built from
+  wireframe to particles to ice, Lando Norris's helmet. The page is a film with one actor.
+- Windows that open onto the next scene: Zentry's polygon, Adcker's image growing out of a
+  bracket in the headline, K72's video inside a gap in the giant type.
+- Type as a set piece: Wodniack's wall of W O R K, Noth.in's morphing logo letter, counters on
+  every loader (Lusion, Refokus, Gianluca Gradogna, Mathis Biabiany).
+- A colour change per chapter (Duo Studio, Dogstudio), and a dark scene that slides up over a
+  light one (Ochi, Cuberto, Dennis Snellenberg's curved edge).
+- Nearly all run GSAP with ScrollTrigger on Lenis, and Three.js for anything 3D.
+
+What's in `reel/`. Five files: `index.html`, `reel.css`, `reel.js` (the film), `shapes.js` (the
+shapes the dust can take). It adds Three.js 0.184.0 to `vendor/three/` (MIT, unmodified) beside the
+GSAP and Lenis already there.
+
+The whole page is one pinned stage and one timeline; the scroll is the playhead, counted in screen
+heights. 32,768 points of dust (16,384 on a phone) on a WebGL canvas behind the text carry every
+scene: each shape is sampled once into a float texture, and the vertex shader moves each point
+from one texture to the next with its own delay, a swirl in flight and a swing through depth. The
+same canvas paints the background, so the window and the wipes cost one draw.
+
+- **Name.** The dust gathers into ALAN FUNG. The first scroll throws the line under it apart word
+  by word and pours the name into a rippling floor.
+- **What I do.** Three lines turn up out of the floor letter by letter; three numbers count up.
+- **The window.** The floor draws into a ring, a dark window opens inside it, tilts, and grows to
+  the whole screen while the ring grows with it (Zentry's polygon).
+- **The work.** Seven chapters, each with its own tint. The ring bursts into what the project is
+  (a reply that still arrives, a service map with the slow one ringed, three tables that merge into
+  one, a day's route that bends, a lit paragraph under a lens, a violin, a vase printed in layers
+  that spins and pulls apart), then that shape breaks up into the number it moved (99.98%, 98.9%,
+  0.977, 97.0%, 85%, 0.17¢, 21 ms). The name and headline rise in 3D; the copy leans with scroll
+  speed.
+- **How I got here.** A circle of paper wipes up from the bottom; the dust rebuilds the year from
+  2018 to 2026 while the title rolls over with it.
+- **Contact.** The camera flies into the 0 of 2026, the hole opens into orange, and the dust
+  bursts out of it into a signature beside "Get in touch."
+- A photo can replace the signature: name it in `<body data-face="me.jpg">` and the dust draws the
+  face as a halftone (contrast stretched, edges faded to an oval). None is in the repo yet.
+
+The header takes the colour of whatever is behind it, including halfway through a wipe. With a
+mouse, the cursor parts the dust.
+
+Checked in headless Chromium at 1440×900, 1280×800 and 390×844, with reduced motion (no swirl, no
+fly-through, fades instead of 3D) and without WebGL (`?nogl`: the name, numbers and years as text,
+the colours on the stage): no console errors, and the bundled preview loads Three.js from jsDelivr
+with none either.
+
+Speed. The page's own work is small: 0.5 ms of script a frame (1.1 ms with the CPU slowed 4×), and
+without WebGL the scroll holds 60 fps. The container has no GPU, so WebGL is drawn on the CPU
+(SwiftShader) at about 14 fps, which says nothing about a real graphics chip but does show the
+safety net working: the frame watcher drops to the lite page (half the dust, one pixel per CSS
+pixel, smaller points) when frames run slow. Shapes are built in idle time after the name has
+gathered, 9 to 47 ms each.
+
+Known limits, round 7:
+
+- Not yet seen on a real phone or a real GPU.
+- No photo yet, so the dust ends on a signature rather than a face.
+- The projects' live demos from round 6 aren't on this page; each chapter links to its project.

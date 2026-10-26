@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Alan Fung · Forward Deployed Engineer</title>
+<meta name="description" content="Alan Fung, Forward Deployed Engineer. Seven projects and what each one changed: an LLM gateway, tracing that names the broken service, customer-data matching, field-service re-planning, search with no server, a violin pitch detector and a slicer in WebAssembly." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#f2efe8" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../vendor/lenis.css" />
+<link rel="stylesheet" href="reel.css" />
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add("js");
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches || /[?&]calm\b/.test(location.search)) d.classList.add("calm");
+  })();
+</script>
+<script type="importmap">{ "imports": { "three": "../vendor/three/three.module.min.js" } }</script>
+</head>
+<body>
+<a class="skip" href="#contact">Skip to contact</a>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="mark" href="#top" data-go="0">Alan Fung</a>
+  <p class="chap" id="chap" aria-hidden="true">Forward Deployed Engineer</p>
+  <a class="hdr-reach" href="#contact" data-go="contact">Get in touch</a>
+  <i class="prog" id="prog" aria-hidden="true"></i>
+</header>
+
+<main id="movie">
+  <div class="stage" id="top">
+
+    <!-- the name, assembled from dust; then it falls into a floor that ripples -->
+    <section class="layer hero" id="hero" aria-labelledby="hero-h">
+      <h1 class="name gl-alt" id="hero-h">Alan Fung</h1>
+      <p class="tag" id="tag">From the customer's desk <em>to production.</em></p>
+      <div class="hero-foot">
+        <p class="role">Forward Deployed Engineer</p>
+        <p class="cue" aria-hidden="true">Scroll<i></i></p>
+      </div>
+    </section>
+
+    <!-- what I do, one line at a time -->
+    <section class="layer say" id="say" aria-label="What I do">
+      <div class="say-in">
+        <p class="ln">I work beside the people who use the software.</p>
+        <p class="ln">I find what slows them down,</p>
+        <p class="ln em"><em>then I ship the fix.</em></p>
+        <p class="ln sm">From the screen they click to the servers behind it.</p>
+      </div>
+      <ul class="counts">
+        <li><b data-to="7">7</b><span>projects, all live</span></li>
+        <li><b data-to="174">174</b><span>notes on what I learn</span></li>
+        <li><b data-to="4">4</b><span>titles in four years</span></li>
+      </ul>
+    </section>
+
+    <!-- a window opens on the work -->
+    <section class="layer win" id="win" aria-labelledby="work-h">
+      <div class="win-in">
+        <p class="kicker">01 / 07</p>
+        <h2 id="work-h">Selected <em>work</em></h2>
+      </div>
+    </section>
+
+    <!-- seven projects: what it does, then the number it moved -->
+    <article class="layer pj" data-i="0" style="--a:#ff5a1f" aria-labelledby="pj-relay">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>01</b><span>LLM gateway</span></p>
+        <h3 class="pj-n" id="pj-relay">Relay</h3>
+        <p class="pj-h">Your AI feature keeps answering when the model <em>goes down.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>Support chat</li><li>Copilots</li><li>Internal tools</li></ul>
+        <a class="pj-open" href="/relay/">Open Relay <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">99.98%</b><span>of calls answered through an outage. Without it, 68.6%.</span></p>
+    </article>
+
+    <article class="layer pj" data-i="1" style="--a:#ff4d4d" aria-labelledby="pj-trace">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>02</b><span>Observability</span></p>
+        <h3 class="pj-n" id="pj-trace">Tracewise</h3>
+        <p class="pj-h">When checkout slows down, it names the service <em>to fix.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>On-call teams</li><li>Online shops</li><li>Payments</li></ul>
+        <a class="pj-open" href="/tracewise/">Open Tracewise <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">98.9%</b><span>culprit named first, over 200 injected faults. The usual dashboard guess: 66.1%.</span></p>
+    </article>
+
+    <article class="layer pj" data-i="2" style="--a:#2dd4bf" aria-labelledby="pj-onboard">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>03</b><span>Customer data</span></p>
+        <h3 class="pj-n" id="pj-onboard">Onboard</h3>
+        <p class="pj-h">Three messy exports in. One customer table <em>you can trust.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>B2B onboarding</li><li>CRM migrations</li><li>Data clean-up</li></ul>
+        <a class="pj-open" href="/onboard/">Open Onboard <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">0.977</b><span>match F1 on 10,200 messy records. Matching on email alone: 0.659.</span></p>
+    </article>
+
+    <article class="layer pj" data-i="3" style="--a:#facc15" aria-labelledby="pj-dispatch">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>04</b><span>Field service</span></p>
+        <h3 class="pj-n" id="pj-dispatch">Dispatch</h3>
+        <p class="pj-h">Someone calls in sick at nine. Every customer still <em>gets their visit.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>Repairs and installs</li><li>Home care</li><li>Deliveries</li></ul>
+        <a class="pj-open" href="/dispatch/">Open Dispatch <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">97.0%</b><span>of visits on time on a bad day. The unchanged morning plan: 90.8%.</span></p>
+    </article>
+
+    <article class="layer pj" data-i="4" style="--a:#60a5fa" aria-labelledby="pj-atlas">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>05</b><span>Search engine</span></p>
+        <h3 class="pj-n" id="pj-atlas">Atlas</h3>
+        <p class="pj-h">Search that finds the right paragraph, <em>with no server.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>Help centres</li><li>Product docs</li><li>Offline apps</li></ul>
+        <a class="pj-open" href="/atlas/">Open Atlas <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">85%</b><span>right first time over 5,551 passages, in about half a millisecond.</span></p>
+    </article>
+
+    <article class="layer pj" data-i="5" style="--a:#f59e0b" aria-labelledby="pj-studio">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>06</b><span>Real-time audio</span></p>
+        <h3 class="pj-n" id="pj-studio">Intonation Studio</h3>
+        <p class="pj-h">A browser tab that hears a violin <em>to the cent.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>Music lessons</li><li>Tuners</li><li>Ear training</li></ul>
+        <a class="pj-open" href="/studio/">Open Intonation Studio <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">0.17¢</b><span>worst error on clean tones, and no octave slips in 182 noisy ones.</span></p>
+    </article>
+
+    <article class="layer pj" data-i="6" style="--a:#a3e635" aria-labelledby="pj-layer">
+      <div class="pj-copy skew">
+        <p class="pj-i"><b>07</b><span>Geometry + WebAssembly</span></p>
+        <h3 class="pj-n" id="pj-layer">Layerline</h3>
+        <p class="pj-h">Drop in a 3D model, get a file <em>the printer can run.</em></p>
+        <ul class="fits" aria-label="Where it fits"><li>Print services</li><li>Maker tools</li><li>Instant quotes</li></ul>
+        <a class="pj-open" href="/layerline/">Open Layerline <i aria-hidden="true">↗</i></a>
+      </div>
+      <p class="pj-proof"><b class="gl-alt">21 ms</b><span>to slice a whole gear, 8× faster than the same code in TypeScript.</span></p>
+    </article>
+
+    <!-- how I got here: the year rebuilds itself as the title changes -->
+    <section class="layer path" id="path" aria-labelledby="path-h">
+      <h2 class="kicker" id="path-h">How I got here</h2>
+      <ol class="yrs" id="yrs">
+        <li><span class="y gl-alt">2018</span><h3>First commit</h3><p>A Java group project became repo one.</p></li>
+        <li><span class="y gl-alt">2020</span><h3>Information Engineering</h3><p>Signals, probability, networks. Half my projects run on them.</p></li>
+        <li><span class="y gl-alt">2023</span><h3>Web Developer</h3><p>Small games and tools, finished and live.</p></li>
+        <li><span class="y gl-alt">2024</span><h3>Full Stack Engineer</h3><p>Photos into 3D models, then a web metaverse.</p></li>
+        <li><span class="y gl-alt">2025</span><h3>Software Engineer</h3><p>Databases, C++, shaders, containers: 86 notes.</p></li>
+        <li><span class="y gl-alt">2026</span><h3>Forward Deployed Engineer</h3><p>Building beside the people who use the software. So far.</p></li>
+      </ol>
+      <ol class="ticks" aria-hidden="true"><li>2018</li><li>2020</li><li>2023</li><li>2024</li><li>2025</li><li>2026</li></ol>
+    </section>
+
+    <!-- contact -->
+    <section class="layer contact" id="contact" aria-labelledby="contact-h">
+      <div class="c-copy">
+        <p class="kicker">Contact</p>
+        <h2 class="huge" id="contact-h">Get in <em>touch.</em></h2>
+        <p class="c-lede">A question about the work, or an idea worth building? Write to me.</p>
+        <div class="reach">
+          <a class="mail" id="mail" href="mailto:aflung10@gmail.com">aflung10@gmail.com</a>
+          <button class="copy" id="copy" type="button"><span>Copy email</span></button>
+        </div>
+        <ul class="pills">
+          <li><a href="https://github.com/InvokFung" target="_blank" rel="noopener">GitHub <i aria-hidden="true">↗</i></a></li>
+          <li><a href="/blog/">StudyLog, my notes <i aria-hidden="true">↗</i></a></li>
+          <li><a href="/explore/">The original portfolio <i aria-hidden="true">↗</i></a></li>
+        </ul>
+      </div>
+      <footer class="foot">
+        <p>Alan Fung © 2026</p>
+        <a href="https://github.com/InvokFung/invokfung.github.io" target="_blank" rel="noopener">Source</a>
+        <a href="#top" data-go="0">Back to top <i aria-hidden="true">↑</i></a>
+      </footer>
+    </section>
+
+  </div>
+</main>
+
+<p class="toast" id="toast" role="status" aria-live="polite"></p>
+<noscript><style>.layer { position: static; visibility: visible; opacity: 1; } .gl-alt { position: static; }</style></noscript>
+
+<script src="../vendor/gsap/gsap.min.js"></script>
+<script src="../vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="../vendor/gsap/SplitText.min.js"></script>
+<script src="../vendor/gsap/ScrambleTextPlugin.min.js"></script>
+<script src="../vendor/lenis.min.js"></script>
+<script type="module" src="reel.js"></script>
+</body>
+</html>
