@@ -137,3 +137,11 @@ and for the same thing rebuilt in full with his content: real reverse engineerin
 imitation. Both were taken apart from their shipped code (above) and rebuilt at full scale:
 `resn/` (3 files) and `igloo/` (8 files, about 4,000 lines). Checked at 1440×900 and 390×844 in
 headless Chromium: every scene, the cuts, the project view, the room and its links. Not deployed.
+
+### 2026-10-26 · Previews that load
+
+Both preview links hung on their loaders: the host didn't run the multi-file build (an import map
+pointing `three` at published module files). The previews are now one file each: CSS, GSAP and the
+data inline, and the modules bundled with three.js into one classic script. Both boots also fall
+back now (the igloo to its text page, Resn to the page without the drop) instead of hanging if
+anything throws while starting, and the project view still works where history is refused.

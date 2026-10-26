@@ -292,6 +292,13 @@ class Controller {
 }
 
 // ─── boot ─────────────────────────────────────────────────────────────────────────────────
+let shell = null; // the UI, kept so a failed boot can still show the page as text
+
+// History can be refused in a locked-down frame (a preview, an embed); the page works without it.
+function tryHistory(fn) {
+  try { fn(); } catch (_) { /* the project view still opens and closes, it just isn't in Back */ }
+}
+
 async function boot() {
   const data = window.PORTFOLIO;
   const profile = data.profile;
@@ -302,7 +309,7 @@ async function boot() {
     { title: 'GitHub', url: profile.github, shape: 'code', scale: 1.2, note: profile.github.replace('https://', '') },
     { title: 'StudyLog', url: '/blog/', shape: 'book', scale: 1.2, note: `${data.writing.total} notes` },
   ];
-  const ui = new UI({ profile, projects, links, career, path: data.path, calm: CALM });
+  const ui = (shell = new UI({ profile, projects, links, career, path: data.path, calm: CALM }));
 
   const canvas = document.getElementById('gl');
   let renderer;
@@ -461,7 +468,7 @@ async function boot() {
     detailIndex = i;
     controller.enabled = false;
     const p = projects[i];
-    if (push) history.pushState({ project: p.id }, '', `#${p.id}`);
+    if (push) tryHistory(() => history.pushState({ project: p.id }, '', `#${p.id}`));
     detail.show(i, p.color);
     if (instant) {
       centerDetailScene(false);
@@ -482,7 +489,7 @@ async function boot() {
     if (!controller.detailOpen) return;
     if (!fromHistory) {
       if (history.state && history.state.project) { history.back(); return; }
-      history.replaceState(null, '', location.pathname + location.search);
+      tryHistory(() => history.replaceState(null, '', location.pathname + location.search));
     }
     centerDetailScene(false);
     gsap.to(U.uDetailProgress, { value: 0, ease: 'power2.out', duration: 1.25, overwrite: true });
@@ -585,4 +592,8 @@ async function boot() {
   window.__igloo = { controller, scenes, passes, U, openDetail, closeDetail, ui };
 }
 
-boot();
+// Anything that throws while starting shows the page as text, not a loader that never ends.
+boot().catch((err) => {
+  if (self.reportError) self.reportError(err); else console.error(err);
+  if (shell) shell.noWebGL();
+});

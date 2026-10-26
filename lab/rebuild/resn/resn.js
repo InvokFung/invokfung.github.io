@@ -789,4 +789,9 @@ async function boot() {
   gem.setMode('ABOUT');
   showPage(true);
 }
-boot();
+// Anything that throws while starting still shows the page, without the drop if need be.
+boot().catch((err) => {
+  if (self.reportError) self.reportError(err); else console.error(err);
+  $('#loader').classList.add('is-done');
+  try { showPage(true); } catch (_) { gsap.set(fadeEls, { autoAlpha: 1 }); }
+});
