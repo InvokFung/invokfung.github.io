@@ -30,6 +30,10 @@ html[data-tone="dark"] { --hd: var(--light); }
 .scroll { position: relative; pointer-events: none; }
 .gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
 .hit { position: fixed; inset: 0; z-index: 1; touch-action: pan-y; }
+/* the words' side of the screen falls away into the part's own colour, so a scene never runs
+   through the words (journey.js sets --sc and the opacity for the projects, how I work, the toolbox
+   and what's next) */
+.side { --sc: 16 19 23; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0; background: linear-gradient(90deg, rgb(var(--sc) / 0.94) 0%, rgb(var(--sc) / 0.84) 24%, rgb(var(--sc) / 0.42) 42%, rgb(var(--sc) / 0) 58%); }
 .dragging .hit { cursor: grabbing; }
 .story { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; perspective: 1100px; }
 .story a, .story button { pointer-events: auto; }
@@ -225,6 +229,8 @@ html[data-tone="dark"] .reach:hover { color: var(--dark); }
 
 /* ---------------------------------------------------------------- phones */
 @media (max-width: 760px) {
+  .side { background: linear-gradient(0deg, rgb(var(--sc) / 0.95) 0%, rgb(var(--sc) / 0.86) 26%, rgb(var(--sc) / 0.4) 46%, rgb(var(--sc) / 0) 62%); }
+  .rail .now { display: none; }   /* on a phone the name would run across the picture */
   .top { grid-template-columns: 1fr auto; }
   .where { display: none; }
   .rail { right: 4px; height: 36vh; }

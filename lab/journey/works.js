@@ -745,9 +745,12 @@ export function atlasScene(o) {
     out.set(xx, 2.85 - row * (CHh + GY), zz);
     rot.set(0, -Math.atan(dz), 0);
   };
+  // on a phone the note comes to the middle, sized to sit inside the screen above the words
+  const fr = framer(camera, 0.08);
+  let thin = false;
   return {
     scene, camera, bg: S.scene.background, ink: color,
-    size: framer(camera, 0.08),
+    size: (W, H, narrow) => { fr(W, H, narrow); thin = narrow; },
     update(q, t) {
       const c = clamp(q, -0.3, 1.3);
       camera.position.set(lerp(-3.4, -0.6, easeOut(c)), 1.9, lerp(10.4, 9.6, c));
@@ -774,12 +777,13 @@ export function atlasScene(o) {
       wallAt(best, lean, bend, far, E);
       Q.setFromEuler(E);
       near.copy(camera.position).add(new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion).multiplyScalar(3.4));
-      near.add(new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion).multiplyScalar(0.55));
+      near.add(new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion).multiplyScalar(thin ? 0 : 0.55));
       card.position.copy(far).lerp(near, fly);
       card.position.y += Math.sin(Math.PI * fly) * 0.5;
       cq.copy(Q).slerp(camera.quaternion, fly);
       card.quaternion.copy(cq);
-      card.scale.setScalar(lerp(1, 2.8, fly));
+      const vh = 2 * 3.4 * Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2);
+      card.scale.setScalar(lerp(1, thin ? Math.min(2.8, 0.84 * vh * camera.aspect / CW, 0.46 * vh / CHh) : 2.8, fly));
       card.visible = fly > 0;
     },
     query: QUERY, best: notes[best]

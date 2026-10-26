@@ -94,8 +94,10 @@ function labelSprite(text, w, o = {}) {
   return sp;
 }
 // a paper chip with a word on it, drawn once
-function chipTexture(text, { fg = '#1c2027', bg = '#f2ede3', dot = null, w = 512, h = 112, font = `500 40px ${MONO}` } = {}) {
-  const c = document.createElement('canvas'); c.width = w; c.height = h;
+function chipTexture(text, { fg = '#1c2027', bg = '#f2ede3', dot = null, w = 512, h = 112, font = `500 40px ${MONO}`, fit = false } = {}) {
+  const c = document.createElement('canvas');
+  if (fit) { const m = c.getContext('2d'); m.font = font; w = Math.ceil(m.measureText(text).width + h * 0.9); }
+  c.width = w; c.height = h;
   const x = c.getContext('2d'), r = h / 2 - 6;
   x.fillStyle = bg; x.beginPath(); x.roundRect(4, 4, w - 8, h - 8, r); x.fill();
   x.strokeStyle = 'rgba(0,0,0,0.12)'; x.lineWidth = 2; x.stroke();
@@ -266,6 +268,8 @@ export function climbScene({ shadows = 0 } = {}) {
     cloth.castShadow = true;
     const year = labelSprite(now ? `${p.y} · so far` : p.y, now ? 0.8 : 0.42, { font: `600 54px ${MONO}`, color: now ? '#ff6a2b' : '#262b33' });
     year.position.set(0.12, 0.66, 0);
+    // the camp's year stays clear of the summit's cloud drifting past it
+    if (now) { year.material.depthTest = false; year.renderOrder = 4; }
     g.add(pole, cloth, year);
     g.scale.setScalar(0.001);
     scene.add(g);
@@ -286,23 +290,96 @@ export function climbScene({ shadows = 0 } = {}) {
   tent.position.y = surface(tent.position.x, tent.position.z);
   scene.add(tent);
 
-  // what each year added, on paper tags round its flag
+  // what each year added, on paper chips by its flag
   const tags = [];
   const yearOf = (y) => ERAS.find((e) => e.id === y);
   PATH.forEach((p, k) => {
     const e = yearOf(p.y) || (k === PATH.length - 1 ? yearOf('2026') : null);
-    const list = (e?.picked || []).slice(0, 5);
+    const list = (e?.picked || []).slice(0, 6);
     list.forEach((name, j) => {
-      const tex = chipTexture(name, { font: `500 38px ${MONO}`, w: 420, h: 96 });
+      const tex = chipTexture(name, { font: `500 38px ${MONO}`, h: 96, fit: true });
       const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false, depthTest: false }));
       sp.renderOrder = 5;
-      const a = -1.2 + j * 0.62, r = 0.7 + (j % 2) * 0.18;
-      sp.userData = { k, j, off: new THREE.Vector3(Math.cos(a) * r, 0.42 + j * 0.15, Math.sin(a) * r * 0.6) };
+      sp.userData = { k, j, aspect: tex.image.width / tex.image.height };
       sp.material.opacity = 0;
+      sp.visible = false;
       scene.add(sp);
       tags.push(sp);
     });
   });
+  // The chips are set out on the screen, not in the world, so whichever way the camera looks they
+  // sit in tidy rows and never cover one another, the year on the flag, or the words of the page
+  // (the caption and the big year, see .yr and .stamp in journey.css). Rows go above the flag, or
+  // beside or below it when that's where the room is, and stay put while you're at that flag.
+  let vw = 1, vh = 1, thin = false, spot = { k: -1 };
+  const fr = framer(camera, 0.17), P = new THREE.Vector3();
+  const toPx = (v) => { P.copy(v).project(camera); return [(P.x + 1) / 2 * vw, (1 - P.y) / 2 * vh, P.z]; };
+  function room() {
+    const gut = Math.max(16, vw * 0.044);
+    if (thin) {
+      // the big year sits top right; the caption fills the foot
+      const top = vh * 0.12, sw = vw * 0.56;
+      return { L: 14, R: vw - 34, T: 62, B: vh * 0.9 - 132, avoid: [[vw - gut - sw, top - 6, vw, top + vw * 0.26 * 0.86 + 10]] };
+    }
+    // the caption, the big year and the track hold the left column
+    return { L: gut + 30 + Math.min(vw * 0.36, 520) + 28, R: vw - 72, T: 70, B: vh - 40, avoid: [] };
+  }
+  function rows(list, h, max) {
+    const gap = h * 0.32, out = [[]];
+    let w = 0;
+    list.forEach((sp) => {
+      const cw = h * sp.userData.aspect;
+      if (out[out.length - 1].length && w + gap + cw > max) { out.push([]); w = 0; }
+      w += (w ? gap : 0) + cw;
+      out[out.length - 1].push([sp, cw]);
+    });
+    return out.map((r) => ({ r, w: r.reduce((a, [, cw]) => a + cw, 0) + gap * (r.length - 1) }));
+  }
+  function layTags(k0, near, t) {
+    tags.forEach((sp) => { if (sp.userData.k !== k0) { sp.visible = false; sp.material.opacity = 0; } });
+    const mine = k0 < 0 ? [] : tags.filter((sp) => sp.userData.k === k0);
+    if (!mine.length || near <= 0) { spot = { k: -1 }; mine.forEach((sp) => { sp.visible = false; }); return; }
+    const f = flags[k0];
+    camera.updateMatrixWorld();
+    const [fx, fy] = toPx(f.at);
+    f.year.getWorldPosition(tmp);
+    const [, ly, lz] = toPx(tmp);
+    const depth = -tmp.applyMatrix4(camera.matrixWorldInverse).z;
+    const wpp = 2 * depth * Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2) / vh;
+    const labTop = ly - f.year.scale.y / wpp / 2;
+    const h = thin ? 26 : clamp(vh * 0.036, 24, 34), lead = h * 0.36;
+    const A = room();
+    const set = rows(mine, h, thin ? A.R - A.L : Math.min(470, A.R - A.L));
+    const cw = Math.max(...set.map((r) => r.w)), ch = set.length * h + (set.length - 1) * lead;
+    // where the rows go: chosen once per flag, then they follow it
+    if (spot.k !== k0) {
+      const tries = [['above', fx - cw / 2, labTop - 12 - ch], ...(thin ? [] : [['right', fx + 36, (fy + labTop) / 2 - ch / 2]]), ['below', fx - cw / 2, fy + 24]];
+      const fits = ([, x, y]) => {
+        x = clamp(x, A.L, Math.max(A.L, A.R - cw));
+        if (y < A.T || y + ch > A.B) return false;
+        return !A.avoid.some(([a, b, c, d]) => x < c && x + cw > a && y < d && y + ch > b);
+      };
+      spot = { k: k0, how: (tries.find(fits) || tries[0])[0] };
+    }
+    let x0 = spot.how === 'right' ? fx + 36 : fx - cw / 2;
+    let y0 = spot.how === 'above' ? labTop - 12 - ch : spot.how === 'right' ? (fy + labTop) / 2 - ch / 2 : fy + 24;
+    x0 = clamp(x0, A.L, Math.max(A.L, A.R - cw));
+    y0 = clamp(y0, A.T, Math.max(A.T, A.B - ch));
+    set.forEach(({ r, w }, i) => {
+      let x = x0 + (cw - w) / 2;
+      r.forEach(([sp, w1]) => {
+        const { j } = sp.userData;
+        const on = back(clamp(near * 1.7 - j * 0.12));
+        sp.material.opacity = clamp(on);
+        sp.visible = on > 0.01;
+        const cx = x + w1 / 2, cy = y0 + i * (h + lead) + h / 2 + Math.sin(t * 1.3 + j) * 1.5;
+        sp.position.set(cx / vw * 2 - 1, 1 - cy / vh * 2, lz).unproject(camera);
+        const s = h * wpp * Math.max(0.001, on);
+        sp.scale.set(s * sp.userData.aspect, s, 1);
+        x += w1 + h * 0.32;
+      });
+    });
+  }
   // the years to come: flags along the way to the summit, into the cloud (what's next)
   const nexts = [0, 1, 2, 3].map((k) => {
     const at = beyond.getPointAt(0.22 + k * 0.2);
@@ -336,7 +413,7 @@ export function climbScene({ shadows = 0 } = {}) {
   const at = (q) => Math.round(clamp((q - WALK[0]) / WALK[1]) * (CAMP_T.length - 1));
   return {
     scene, camera, ink, bg: scene.background,
-    size: framer(camera, 0.17),
+    size: (W, H, narrow) => { fr(W, H, narrow); vw = W; vh = H; thin = narrow; spot = { k: -1 }; },
     camp: at,
     // o.next: 0 to 1 through what's next (the camera at the camp, looking up the trail into the cloud)
     update(q, t, dt, o = {}) {
@@ -358,18 +435,9 @@ export function climbScene({ shadows = 0 } = {}) {
         for (let i = 0; i < a.count; i++) { const s = b[i * 3] / 0.26; a.array[i * 3 + 2] = Math.sin(s * 5 - t * 4 + k) * 0.025 * s; }
         a.needsUpdate = true;
       });
-      // the tags of the year you're at
+      // the chips of the year you're at (laid out once the camera is set, below)
       const k0 = isNext ? -1 : at(q);
       const near = isNext ? 0 : 1 - Math.min(1, Math.abs(w - CAMP_T[Math.max(0, k0)]) * 10);
-      tags.forEach((sp) => {
-        const { k, j, off } = sp.userData;
-        const on = k === k0 ? back(clamp(near * 1.7 - j * 0.14)) : 0;
-        sp.material.opacity = clamp(on);
-        sp.position.copy(flags[k].at).add(off).add(tmp.set(0, Math.sin(t * 1.3 + j) * 0.02, 0));
-        const s = 0.56 * Math.max(0.001, on);
-        sp.scale.set(s, s * 96 / 420, 1);
-        sp.visible = on > 0.01;
-      });
       nexts.forEach((g, k) => g.scale.setScalar(Math.max(0.001, isNext ? back(smooth(0.12 + k * 0.13, 0.28 + k * 0.13, nx)) : 0)));
       glow.material.opacity = 0.7 + 0.3 * Math.sin(t * 2.1) * Math.sin(t * 1.3);
       // the camera: the whole mountain first, then round it, keeping the walker in front
@@ -391,6 +459,7 @@ export function climbScene({ shadows = 0 } = {}) {
       }
       camera.position.copy(cpos); look.copy(lk);
       aim(camera, look, o.orbit);
+      layTags(k0, near, t);
       // cloud drifts, faces you, and thins out where it would fill the lens
       const qc = camera.quaternion;
       PU.forEach(([x, y, z, s, r], i) => {
@@ -596,9 +665,11 @@ export function toolsScene({ shadows = 0 } = {}) {
     const x0 = (k % COLS) * CW, y0 = Math.floor(k / COLS) * CH, r = CH / 2 - 8;
     ax.fillStyle = '#f2ede3'; ax.beginPath(); ax.roundRect(x0 + 6, y0 + 6, CW - 12, CH - 12, r); ax.fill();
     ax.fillStyle = HUE[it.gi]; ax.beginPath(); ax.arc(x0 + 44, y0 + CH / 2, 11, 0, 7); ax.fill();
+    // the whole name, set smaller when it's long rather than cut short
     ax.fillStyle = '#16191e'; ax.font = `500 40px ${MONO}`; ax.textBaseline = 'middle'; ax.textAlign = 'left';
-    let s = it.name; while (ax.measureText(s).width > CW - 110 && s.length > 3) s = s.slice(0, -2) + '…';
-    ax.fillText(s, x0 + 72, y0 + CH / 2 + 2);
+    const fit = Math.min(40, Math.floor(40 * (CW - 104) / ax.measureText(it.name).width));
+    ax.font = `500 ${fit}px ${MONO}`;
+    ax.fillText(it.name, x0 + 72, y0 + CH / 2 + 2);
   });
   const tex = new THREE.CanvasTexture(atlas); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
   const geo = new THREE.PlaneGeometry(1, CH / CW);
@@ -617,9 +688,10 @@ export function toolsScene({ shadows = 0 } = {}) {
         gl_Position = projectionMatrix * viewMatrix * w; }`,
     fragmentShader: `uniform sampler2D uMap; uniform float uDim; varying vec2 vUv; varying float vGlow; varying float vFace;
       void main() { vec4 c = texture2D(uMap, vUv); if (c.a < 0.05) discard;
-        float back = smoothstep(0.1, -0.3, vFace);
-        c.rgb = mix(c.rgb, c.rgb * 0.35, back) * (1.0 - uDim * (1.0 - vGlow) * 0.55) + vGlow * vec3(0.18, 0.14, 0.06);
-        gl_FragColor = vec4(c.rgb, c.a);
+        // the far side of the globe falls back, so the tags facing you read clear of it
+        float back = smoothstep(0.15, -0.25, vFace);
+        c.rgb = mix(c.rgb, c.rgb * 0.3, back) * (1.0 - uDim * (1.0 - vGlow) * 0.55) + vGlow * vec3(0.18, 0.14, 0.06);
+        gl_FragColor = vec4(c.rgb, c.a * (1.0 - back * 0.8));
         #include <colorspace_fragment>
       }`,
     side: THREE.DoubleSide, transparent: true

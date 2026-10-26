@@ -439,6 +439,33 @@ function update(sh, q, dt) {
   }
   return sc;
 }
+// the fall of colour behind the words (see .side in journey.css): a part's own background
+const SIDE = { how: '235 229 216', tools: '16 19 23', next: '236 230 222' };
+const sideEl = document.getElementById('side');
+let sideKey = '';
+const sideOf = (sh) => {
+  if (SIDE[sh.id]) return SIDE[sh.id];
+  if (sh.ch == null) return null;
+  const h = scenes[sh.scene]?.bg?.getHexString?.();
+  return h ? [0, 2, 4].map((k) => parseInt(h.slice(k, k + 2), 16)).join(' ') : null;
+};
+// how much of it a shot wants: the toolbox only while its globe turns, its shelves stand clear
+const sideAmt = (sh) => {
+  if (!sideOf(sh)) return 0;
+  // on a phone the words of how I work and what's next have their own sheet, and the toolbox's sit up top
+  if (narrow && sh.ch == null) return 0;
+  return sh.id === 'tools' ? 1 - smooth(0.42, 0.6, (tau - sh.t0) / sh.len) : 1;
+};
+function side(a, b, p) {
+  const ca = sideOf(a), cb = b ? sideOf(b) : null;
+  const o = b ? lerp(sideAmt(a), sideAmt(b), p) : sideAmt(a);
+  const c = (b && cb && (p > 0.5 || !ca)) ? cb : (ca || cb || '16 19 23');
+  const key = `${c}|${o.toFixed(2)}`;
+  if (key === sideKey || !sideEl) return;
+  sideKey = key;
+  sideEl.style.setProperty('--sc', c);
+  sideEl.style.opacity = o.toFixed(2);
+}
 function render(s, dt) {
   let A, B = null, mode = MODE.fade, p = 0, mv = null;
   const i = SEQ.indexOf(s);
@@ -451,6 +478,7 @@ function render(s, dt) {
     B = update(s, (tau - s.t0) / s.len, dt);
     mv = s.into[0]; mode = reduced ? MODE.fade : MODE[mv];
   }
+  side(B ? SEQ[i - 1] : s, B ? s : null, p);
   if (s.scene === 'tools' && tau >= s.t0 && !drag.on) hoverTools(scenes.tools);
   else if (hovered >= 0) { hovered = -1; scenes.tools?.hover(-1); story.tool(null); }
   renderer.setRenderTarget(rtA); renderer.render(A.scene, A.camera);
