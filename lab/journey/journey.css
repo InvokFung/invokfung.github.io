@@ -37,6 +37,9 @@ html[data-tone="dark"] { --hd: var(--light); }
 .dragging .hit { cursor: grabbing; }
 .story { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; perspective: 1100px; }
 .story a, .story button { pointer-events: auto; }
+.story, .top, .rail { -webkit-user-select: none; user-select: none; }
+.story a, .top a { -webkit-user-drag: none; }
+.mail a { -webkit-user-select: text; user-select: text; }
 .part { position: absolute; inset: 0; }
 /* until the film has posed itself, show nothing (fonts and scripts take a moment on a cold load) */
 html:not(.ready) .story, html:not(.ready) .top, html:not(.ready) .rail { visibility: hidden; }
