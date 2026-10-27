@@ -268,12 +268,13 @@ export function climbScene({ shadows = 0 } = {}) {
     cloth.castShadow = true;
     const year = labelSprite(now ? `${p.y} · so far` : p.y, now ? 0.8 : 0.42, { font: `600 54px ${MONO}`, color: now ? '#ff6a2b' : '#262b33' });
     year.position.set(0.12, 0.66, 0);
-    // the camp's year stays clear of the summit's cloud drifting past it
-    if (now) { year.material.depthTest = false; year.renderOrder = 4; }
+    // A year is drawn over the card and the cloud, and fades out while the mountain stands between it
+    // and you (see update), so it's always whole or gone, never cut off by the edge of a sheet.
+    year.material.depthTest = false; year.renderOrder = 4;
     g.add(pole, cloth, year);
     g.scale.setScalar(0.001);
     scene.add(g);
-    return { g, cloth, year, base: fg.attributes.position.array.slice(), at, now };
+    return { g, cloth, year, base: fg.attributes.position.array.slice(), at, now, seen: 0 };
   });
   // the camp: a small tent, lit from inside
   const tent = new THREE.Group();
@@ -324,6 +325,14 @@ export function climbScene({ shadows = 0 } = {}) {
     // the caption, the big year and the track hold the left column
     return { L: gut + 30 + Math.min(vw * 0.36, 520) + 28, R: vw - 72, T: 70, B: vh - 40, avoid: [] };
   }
+  // where the page's words are while you walk (the caption and the big year): a year on the
+  // mountain fades rather than sit on them
+  function wordsAt() {
+    const gut = Math.max(16, vw * 0.044);
+    if (thin) return [[vw - gut - vw * 0.56, vh * 0.12 - 8, vw, vh * 0.12 + vw * 0.26 * 0.86 + 10], [0, vh * 0.9 - 150, vw, vh]];
+    const fs = clamp(vw * 0.155, 110, 280);
+    return [[gut + 16, vh * 0.22 - 12, gut + 30 + Math.min(vw * 0.36, 520) + 16, vh * 0.22 + 175], [gut + 16, vh * 0.93 - fs * 0.86, gut + 30 + fs * 2.0 + 16, vh * 0.93 + 10]];
+  }
   function rows(list, h, max) {
     const gap = h * 0.32, out = [[]];
     let w = 0;
@@ -343,25 +352,29 @@ export function climbScene({ shadows = 0 } = {}) {
     camera.updateMatrixWorld();
     const [fx, fy] = toPx(f.at);
     f.year.getWorldPosition(tmp);
-    const [, ly, lz] = toPx(tmp);
+    const [lx, ly, lz] = toPx(tmp);
     const depth = -tmp.applyMatrix4(camera.matrixWorldInverse).z;
     const wpp = 2 * depth * Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2) / vh;
     const labTop = ly - f.year.scale.y / wpp / 2;
+    // the year's own words, which the chips keep clear of
+    const lw = f.year.scale.x * (f.year.material.map.userData.ink || 1) / wpp / 2 + 10, lh = f.year.scale.y / wpp * 0.25 + 6;
+    const lab = [lx - lw, ly - lh, lx + lw, ly + lh];
     const h = thin ? 26 : clamp(vh * 0.036, 24, 34), lead = h * 0.36;
     const A = room();
     const set = rows(mine, h, thin ? A.R - A.L : Math.min(470, A.R - A.L));
     const cw = Math.max(...set.map((r) => r.w)), ch = set.length * h + (set.length - 1) * lead;
+    const rightX = Math.max(fx + 36, lab[2] + 14);
     // where the rows go: chosen once per flag, then they follow it
     if (spot.k !== k0) {
-      const tries = [['above', fx - cw / 2, labTop - 12 - ch], ...(thin ? [] : [['right', fx + 36, (fy + labTop) / 2 - ch / 2]]), ['below', fx - cw / 2, fy + 24]];
+      const tries = [['above', fx - cw / 2, labTop - 12 - ch], ...(thin ? [] : [['right', rightX, (fy + labTop) / 2 - ch / 2]]), ['below', fx - cw / 2, fy + 24]];
       const fits = ([, x, y]) => {
         x = clamp(x, A.L, Math.max(A.L, A.R - cw));
         if (y < A.T || y + ch > A.B) return false;
-        return !A.avoid.some(([a, b, c, d]) => x < c && x + cw > a && y < d && y + ch > b);
+        return ![...A.avoid, lab].some(([a, b, c, d]) => x < c && x + cw > a && y < d && y + ch > b);
       };
       spot = { k: k0, how: (tries.find(fits) || tries[0])[0] };
     }
-    let x0 = spot.how === 'right' ? fx + 36 : fx - cw / 2;
+    let x0 = spot.how === 'right' ? rightX : fx - cw / 2;
     let y0 = spot.how === 'above' ? labTop - 12 - ch : spot.how === 'right' ? (fy + labTop) / 2 - ch / 2 : fy + 24;
     x0 = clamp(x0, A.L, Math.max(A.L, A.R - cw));
     y0 = clamp(y0, A.T, Math.max(A.T, A.B - ch));
@@ -411,6 +424,12 @@ export function climbScene({ shadows = 0 } = {}) {
     return lerp(CAMP_T[i], CAMP_T[i + 1], easeInOut(smooth(0.12, 0.88, f)));
   }
   const at = (q) => Math.round(clamp((q - WALK[0]) / WALK[1]) * (CAMP_T.length - 1));
+  // nothing of the mountain between a and b (the card's top, sampled along the line of sight)
+  const Q = new THREE.Vector3();
+  function inView(a, b) {
+    for (let i = 1; i < 24; i++) { Q.lerpVectors(a, b, i / 24); if (Q.y < surface(Q.x, Q.z) - 0.02) return false; }
+    return true;
+  }
   return {
     scene, camera, ink, bg: scene.background,
     size: (W, H, narrow) => { fr(W, H, narrow); vw = W; vh = H; thin = narrow; spot = { k: -1 }; },
@@ -460,6 +479,19 @@ export function climbScene({ shadows = 0 } = {}) {
       camera.position.copy(cpos); look.copy(lk);
       aim(camera, look, o.orbit);
       layTags(k0, near, t);
+      // each year fades while the card is in the way or it would sit on the page's words (and in
+      // what's next only the camp's stays)
+      const zones = wordsAt(), fov = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2);
+      flags.forEach((f) => {
+        f.year.getWorldPosition(tmp);
+        const [lx, ly] = toPx(tmp), wpp = 2 * Q.copy(tmp).applyMatrix4(camera.matrixWorldInverse).z * -fov / vh;
+        const lw = f.year.scale.x * (f.year.material.map.userData.ink || 1) / wpp / 2, lh = f.year.scale.y / wpp * 0.25;
+        const onWords = zones.some(([a, b, c, d]) => lx - lw < c && lx + lw > a && ly - lh < d && ly + lh > b);
+        const want = (isNext && !f.now) || onWords ? 0 : inView(camera.position, tmp) ? 1 : 0;
+        f.seen += (want - f.seen) * Math.min(1, dt * 9);
+        f.year.material.opacity = f.seen;
+        f.year.visible = f.seen > 0.01;
+      });
       // cloud drifts, faces you, and thins out where it would fill the lens
       const qc = camera.quaternion;
       PU.forEach(([x, y, z, s, r], i) => {
@@ -723,13 +755,34 @@ export function toolsScene({ shadows = 0 } = {}) {
   const spin = { a: 0.4, b: -0.25, va: 0, vb: 0 };
   const fr = framer(camera, 0.17, -0.1);
   let narrowNow = false;
+  // On a wide screen the page says where its words leave room (px, see toolsRoom in journey.js). The
+  // globe turns right of the words; the shelves sit right of them or, on a squarer screen, under
+  // them, whichever gives the bigger tags. Each is a camera distance and a shift of the view.
+  let room = null, fitG = null, fitS = null, Wn = 1, Hn = 1;
+  const GW = 4 * SX + 1.6, GT = 2.25, GB = -0.99;
+  function refit() {
+    fitG = fitS = null;
+    if (!room || narrowNow) return;
+    const T = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2), r = room;
+    const place = (x0, y0, x1, y1, w, h, cy) => {
+      const ppu = Math.max(20, Math.min((x1 - x0) / w, (y1 - y0) / h));
+      return { ppu, d: Hn / (2 * T * ppu), ox: (x0 + x1) / 2 - Wn / 2, oy: (y0 + y1) / 2 - Hn / 2 + cy * ppu };
+    };
+    const right = place(r.right, r.top, r.x1, r.bottom, GW, GT - GB, (GT + GB) / 2);
+    const under = place(r.x0, r.under, r.x1, r.bottom, GW, GT - GB, (GT + GB) / 2);
+    fitS = under.ppu > right.ppu * 1.15 ? under : right;
+    // the globe may run off the top and bottom a little, never across the words (under them when
+    // there's hardly any room beside them)
+    fitG = r.x1 - r.right > Wn * 0.3 ? place(r.right, r.top, r.x1, r.bottom, 7.2, 5.6, 0) : place(r.x0, r.under, r.x1, r.bottom, 7.2, 5.6, 0);
+  }
   const M = new THREE.Matrix4(), P = new THREE.Vector3(), Qt = new THREE.Quaternion(), Qs = new THREE.Quaternion(), E = new THREE.Euler(), Sc = new THREE.Vector3(1, 1, 1);
   const look = new THREE.Vector3(0, 0, 0);
   let hover = -1;
   const ink = new THREE.Color('#ffb547');
   return {
     scene, camera, ink, bg: scene.background, all, tags,
-    size(W, H, narrow) { fr(W, H, narrow); narrowNow = narrow; shelves(narrow); heads.forEach((h, gi) => h.position.copy(headAt[gi])); },
+    size(W, H, narrow) { fr(W, H, narrow); narrowNow = narrow; Wn = W; Hn = H; shelves(narrow); heads.forEach((h, gi) => h.position.copy(headAt[gi])); refit(); },
+    room(r) { room = r; refit(); },
     hover(i) { hover = i; },
     // a drag turns the globe
     spinBy(dx, dy) { spin.va += dx; spin.vb += dy; },
@@ -759,7 +812,9 @@ export function toolsScene({ shadows = 0 } = {}) {
       geo.attributes.aGlow.needsUpdate = true;
       mat.uniforms.uDim.value = hover >= 0 ? 1 : 0;
       heads.forEach((h, gi) => { h.material.opacity = smooth(0.62 + gi * 0.03, 0.78 + gi * 0.03, q); });
-      camera.position.set(Math.sin(t * 0.1) * 0.3 * (1 - sort), 0.15 + (narrowNow ? sort * 1.0 : 0), lerp(9.6, narrowNow ? 8.8 : 12.2, sort));
+      const z = fitG ? lerp(fitG.d, fitS.d, sort) : lerp(9.6, narrowNow ? 8.8 : 12.2, sort);
+      camera.position.set(Math.sin(t * 0.1) * 0.3 * (1 - sort), 0.15 + (narrowNow ? sort * 1.0 : 0), z);
+      if (fitG) { camera.setViewOffset(Wn, Hn, -lerp(fitG.ox, fitS.ox, sort), -lerp(fitG.oy, fitS.oy, sort), Wn, Hn); camera.updateProjectionMatrix(); }
       look.set(0, narrowNow ? sort * 1.0 : 0, 0);
       aim(camera, look, null);
     }

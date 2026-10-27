@@ -60,16 +60,35 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
   // Zentry's perspective fade, for lines of copy: up from below, tipped back
   const lineIn = (t, els, at, stagger = 0.08) => t.fromTo(els, { yPercent: 110, rotateX: -40, opacity: 0 }, { yPercent: 0, rotateX: 0, opacity: 1, duration: 0.45, ease: 'power4.out', stagger }, at);
   const leave = (t, els, at, stagger = 0.035) => t.fromTo(els, { ...REST }, { ...ZOUT, duration: 0.4, ease: 'power2.in', stagger, immediateRender: false }, at);
-  const scramble = (t, el, at, text, chars = 'lowerCase', dur = 0.4) => {
-    if (!has('ScrambleTextPlugin')) return t.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur }, at);
-    return t.fromTo(el, { scrambleText: { text: ' ' } }, { scrambleText: { text, chars, speed: 0.6 }, duration: dur, ease: 'none' }, at);
+  // A scrambled word plays on the clock once the scroll passes its moment (and blanks again above
+  // it), so it's never left half-scrambled when the scroll stops. The words are read once and kept,
+  // since a rebuild (a resize) finds them blank or mid-scramble.
+  const words = (el) => el.dataset.t ?? (el.dataset.t = el.textContent);
+  let marks = [];
+  const scramble = (t, el, at, text, chars = 'lowerCase', dur = 0.4, o = {}) => {
+    if (!el) return;
+    if (!has('ScrambleTextPlugin') || reduced) { el.textContent = text; return t.fromTo(el, { opacity: 0 }, { opacity: 1, duration: dur }, at); }
+    marks.push({ el, at, text, chars, dur, o, on: null, tw: null });
   };
-  const show = (t, el, a, b) => { t.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.01, ease: 'none' }, a); if (b != null) t.set(el, { autoAlpha: 0 }, b); };
+  function playMarks(tau) {
+    marks.forEach((m) => {
+      const on = tau >= m.at;
+      if (on === m.on) return;
+      m.on = on; m.tw?.kill(); m.tw = null;
+      if (!on) { m.el.textContent = ' '; return; }
+      m.tw = gsap.fromTo(m.el, { scrambleText: { text: ' ' } }, { scrambleText: { text: m.text, chars: m.chars, speed: 0.6, ...m.o }, duration: 0.3 + m.dur, ease: 'none' });
+    });
+  }
+  // in from a to b. Only visibility: with autoAlpha, scrolling back past b put back the opacity the
+  // part had faded to, and with it hidden, so the big year never came back on the way up.
+  const show = (t, el, a, b) => { t.fromTo(el, { visibility: 'hidden' }, { visibility: 'visible', duration: 0.01, ease: 'none' }, a); if (b != null) t.set(el, { visibility: 'hidden' }, b); };
 
   /* ------------------------------------------------------------------ the timeline */
   function build() {
     if (!gsap) return;
     if (tl) { tl.kill(); splits.forEach((s) => s.revert()); splits = []; }
+    marks.forEach((m) => { m.tw?.kill(); m.el.textContent = m.text; });
+    marks = [];
     tl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
     const SplitText = window.SplitText;
     const split = (el, type) => { if (!SplitText || !el) return null; const s = new SplitText(el, { type, mask: type === 'lines' ? 'lines' : undefined, linesClass: 'ln', charsClass: 'ch', wordsClass: 'wd' }); splits.push(s); return s; };
@@ -117,7 +136,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sec = $('.path'), s = T.path, len = s.len;
     const head = $('.intro', sec), k = $('.kicker', head), h2 = $('h2', head), lede = $('.lede', head);
     show(tl, head, s.t0 - 0.35, s.t0 + 1.05);
-    scramble(tl, k, s.t0 - 0.3, k.textContent);
+    scramble(tl, k, s.t0 - 0.3, words(k));
     const hw = split(h2, 'words');
     tl.fromTo(hw ? hw.words : h2, { yPercent: 120, opacity: 0, rotate: 4 }, { yPercent: 0, opacity: 1, rotate: 0, duration: 0.4, stagger: 0.04, ease: 'power4.out' }, s.t0 - 0.25);
     const ll = split(lede, 'lines');
@@ -147,7 +166,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
       const a = at(j) - 0.3, b = j < yrs.length - 1 ? at(j + 1) - 0.5 : s.t1 - 0.1;
       const r = $('.r', li), d = $('.d', li);
       show(tl, li, a, b + 0.3);
-      scramble(tl, r, a, r.textContent, 'upperAndLowerCase', 0.3);
+      scramble(tl, r, a, words(r), 'upperAndLowerCase', 0.3);
       const dl = split(d, 'lines');
       lineIn(tl, dl ? dl.lines : d, a + 0.06, 0.05);
       tl.fromTo([r, ...(dl ? dl.lines : [d])], { ...REST }, { opacity: 0, yPercent: -40, rotateX: 30, duration: 0.25, ease: 'power2.in', stagger: 0.02, immediateRender: false }, b);
@@ -159,12 +178,13 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sec = $('.work'), s = T.work;
     const head = $('.intro', sec), k = $('.kicker', head), h2 = $('h2', head), lede = $('.lede', head);
     show(tl, head, s.t0 - 0.3, s.t1 + 0.6);
-    scramble(tl, k, s.t0 - 0.25, k.textContent);
+    scramble(tl, k, s.t0 - 0.25, words(k));
     const hc = split(h2, 'words,chars');
     tl.fromTo(hc ? hc.chars : h2, { ...ZIN }, { ...REST, duration: 0.55, stagger: 0.012, ease: 'power4.out' }, s.t0 - 0.2);
     const ll = split(lede, 'lines');
     lineIn(tl, ll ? ll.lines : lede, s.t0 + 0.2);
-    leave(tl, [k, ...(hc ? hc.words : [h2]), ...(ll ? ll.lines : [lede])], s.t1 + 0.05, 0.02);
+    // gone before Relay's window opens in the middle of the screen, where they sit
+    leave(tl, [k, ...(hc ? hc.words : [h2]), ...(ll ? ll.lines : [lede])], s.t1 - 0.15, 0.015);
     const shade = $('.shade', sec), first = CH[0], lastCh = CH[CH.length - 1];
     tl.fromTo(shade, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: 'none' }, first.t0 - 0.6);
     tl.to(shade, { autoAlpha: 0, duration: 0.4, ease: 'none' }, lastCh.t1 + 0.1);
@@ -174,7 +194,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
       tl.fromTo(ch, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.01, ease: 'none' }, st - 0.5);
       tl.fromTo(k, { opacity: 0 }, { opacity: 1, duration: 0.1, ease: 'none' }, st - 0.45);
       const ks = $('span', k);
-      scramble(tl, ks, st - 0.45, ks.dataset.t || ks.textContent);
+      scramble(tl, ks, st - 0.45, words(ks));
       nameIn(tl, ch, name, i, st - 0.4, split);
       const hl = split(head, 'lines');
       lineIn(tl, hl ? hl.lines : head, st - 0.05);
@@ -185,7 +205,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
       if (note) {
         const at = st + (+note.dataset.q || 0.35) * sh.len;
         tl.fromTo(note, { opacity: 0, y: 10, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: 'back.out(2)' }, at);
-        if (note.dataset.type && has('ScrambleTextPlugin')) tl.fromTo($('i', note), { scrambleText: { text: ' ' } }, { scrambleText: { text: note.dataset.type, chars: ' ', speed: 1, revealDelay: 0 }, duration: 0.4, ease: 'none' }, at + 0.1);
+        if (note.dataset.type) scramble(tl, $('i', note), at + 0.1, note.dataset.type, ' ', 0.4, { speed: 1, revealDelay: 0 });
         tl.to(note, { opacity: 0, duration: 0.2 }, at + (+note.dataset.len || 0.5) * sh.len);
       }
       leave(tl, [k, name, head, ...fits, proof, open].filter(Boolean), out);
@@ -197,7 +217,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sp = split(el, 'words,chars'), chars = sp ? sp.chars : [el];
     t.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.01 }, at);
     if (i === 0) t.fromTo(chars, { ...ZIN }, { ...REST, duration: 0.6, ease: 'power4.out', stagger: 0.035 }, at);
-    else if (i === 1 && has('ScrambleTextPlugin')) { sp?.revert(); t.fromTo(el, { scrambleText: { text: ' ' } }, { scrambleText: { text: el.dataset.t, chars: '01<>/{}#', revealDelay: 0.15, speed: 0.8 }, duration: 0.6, ease: 'none' }, at); }
+    else if (i === 1 && has('ScrambleTextPlugin') && !reduced) { sp?.revert(); scramble(t, el, at, el.dataset.t, '01<>/{}#', 0.6, { revealDelay: 0.15, speed: 0.8 }); }
     else if (i === 2) t.fromTo(chars, { opacity: 0, x: (k) => ['-1.4em', '0em', '1.4em'][k % 3], y: (k) => ['0.7em', '-1em', '0.7em'][k % 3], rotate: (k) => [-25, 0, 25][k % 3] }, { opacity: 1, x: 0, y: 0, rotate: 0, duration: 0.6, ease: 'power3.out', stagger: 0.02 }, at);
     else if (i === 3) {
       const blk = $('.f-blk', ch);
@@ -219,7 +239,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
   function proofIn(t, el, i, at) {
     const txt = el.dataset.v || (el.dataset.v = el.textContent);
     if (i === 0 || i === 3) roll(t, el, at, 0.7);
-    else if (i === 1 && has('ScrambleTextPlugin')) t.fromTo(el, { scrambleText: { text: ' ' } }, { scrambleText: { text: txt, chars: '0123456789', revealDelay: 0.2, speed: 0.6 }, duration: 0.6, ease: 'none' }, at);
+    else if (i === 1 && has('ScrambleTextPlugin') && !reduced) scramble(t, el, at, txt, '0123456789', 0.6, { revealDelay: 0.2 });
     else if (i === 2) count(t, el, at, 0, 0.977, 3, '', 0.7);
     else if (i === 4) count(t, el, at, 0, 85, 0, '%', 0.6);
     else if (i === 5) count(t, el, at, 50, 0.17, 2, '¢', 0.8, 'expo.out');
@@ -233,7 +253,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     belt = $('.belt', sec); ways = $$('.way', sec);
     const k = $('.kicker', sec);
     show(tl, sec, s.t0 - 0.5, s.t1 + 0.55);
-    scramble(tl, k, s.t0 - 0.4, k.textContent);
+    scramble(tl, k, s.t0 - 0.4, words(k));
     ways.forEach((w, j) => {
       // piece j has a third of the scroll; its words come in as the camera arrives
       const a = s.t0 + len * j / 3 - (j ? len * 0.08 : 0.35);
@@ -241,8 +261,9 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
       tl.fromTo(i, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, a);
       const hc = split(h3, 'words,chars');
       tl.fromTo(hc ? hc.chars : h3, { yPercent: 110, opacity: 0, rotateX: -60 }, { yPercent: 0, opacity: 1, rotateX: 0, duration: 0.45, stagger: 0.014, ease: 'power4.out' }, a + 0.05);
-      if (/^\d/.test(big.textContent)) { if (big.textContent.includes('.')) count(tl, big, a + 0.3, 0, parseFloat(big.textContent), 1, '%', 0.6); else roll(tl, big, a + 0.3, 0.6); }
-      else scramble(tl, big, a + 0.3, big.textContent, 'upperCase', 0.5);
+      const bt = words(big);
+      if (/^\d/.test(bt)) { if (bt.includes('.')) count(tl, big, a + 0.3, 0, parseFloat(bt), 1, '%', 0.6); else roll(tl, big, a + 0.3, 0.6); }
+      else scramble(tl, big, a + 0.3, bt, 'upperCase', 0.5);
       tl.fromTo(unit, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, a + 0.42);
       const pl = split(proof, 'lines');
       lineIn(tl, pl ? pl.lines : proof, a + 0.5);
@@ -255,7 +276,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sec = $('.tools'), s = T.tools;
     const k = $('.kicker', sec), h2 = $('h2', sec), lede = $('.lede', sec), groups = $$('.groups li', sec);
     show(tl, sec, s.t0 - 0.45, s.t1 + 0.5);
-    scramble(tl, k, s.t0 - 0.4, k.textContent);
+    scramble(tl, k, s.t0 - 0.4, words(k));
     const hc = split(h2, 'words,chars');
     tl.fromTo(hc ? hc.chars : h2, { opacity: 0, filter: 'blur(8px)', y: 20 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 0.4, stagger: 0.018 }, s.t0 - 0.3);
     const ll = split(lede, 'lines');
@@ -271,14 +292,14 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sec = $('.next'), s = T.next;
     const k = $('.kicker', sec), h2 = $('h2', sec), items = $$('.soon li', sec);
     show(tl, sec, s.t0 - 0.45, s.t1 + 0.55);
-    scramble(tl, k, s.t0 - 0.4, k.textContent);
+    scramble(tl, k, s.t0 - 0.4, words(k));
     const hw = split(h2, 'words');
     tl.fromTo(hw ? hw.words : h2, { yPercent: 120, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.4, stagger: 0.05, ease: 'power4.out' }, s.t0 - 0.3);
     items.forEach((li, j) => {
       const a = s.t0 + 0.1 + j * 0.13;
       tl.fromTo(li, { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: 0.3 }, a);
       tl.fromTo($('i', li), { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: 'power2.inOut' }, a + 0.05);
-      scramble(tl, $('span', li), a + 0.05, $('span', li).textContent, 'lowerCase', 0.4);
+      scramble(tl, $('span', li), a + 0.05, words($('span', li)), 'lowerCase', 0.4);
     });
     leave(tl, [k, ...(hw ? hw.words : [h2]), ...items], s.t1 - 0.05, 0.02);
   }
@@ -288,7 +309,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     const sec = $('.contact'), s = T.contact;
     const k = $('.kicker', sec), h2 = $('h2', sec), lede = $('.lede', sec), mail = $('.mail', sec), links = $$('.links a', sec), colo = $('.colophon', sec);
     show(tl, sec, s.t0 - 0.5);
-    scramble(tl, k, s.t0 - 0.4, k.textContent, 'lowerCase', 0.4);
+    scramble(tl, k, s.t0 - 0.4, words(k), 'lowerCase', 0.4);
     const hc = split(h2, 'words,chars');
     tl.fromTo(hc ? hc.chars : h2, { yPercent: 100, opacity: 0, rotateX: -80 }, { yPercent: 0, opacity: 1, rotateX: 0, duration: 0.6, stagger: 0.03, ease: 'power4.out' }, s.t0 - 0.3);
     const ll = split(lede, 'lines');
@@ -303,7 +324,7 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
   let skew = 0, beltX = 0;
   function seek(tau, vel, introT) {
     if (intro && introT != null) intro.progress(clamp(introT * 1.15));
-    if (tl && tau !== last) { tl.time(clamp(tau, 0, TOTAL)); last = tau; }
+    if (tl && tau !== last) { tl.time(clamp(tau, 0, TOTAL)); playMarks(tau); last = tau; }
     // things that follow the scroll's speed
     skew = lerp(skew, clamp(-vel * 3.5, -10, 10), 0.18);
     const rs = rows();
@@ -331,7 +352,13 @@ export function createStory({ root, T, SEQ, TOTAL, reduced }) {
     $('i', tip).textContent = u.length ? `in ${u.slice(0, 3).join(', ')}${u.length > 3 ? ` +${u.length - 3}` : ''}` : (it.proof || '');
     tip.classList.add('on');
   }
-  function toolAt(x, y) { if (tip) tip.style.transform = `translate3d(${Math.min(x + 18, W - 300)}px,${y + 18}px,0)`; }
+  // beside the pointer, flipped to its other side near the right edge or the foot of the screen
+  function toolAt(x, y) {
+    if (!tip) return;
+    const tw = tip.offsetWidth || 290, th = tip.offsetHeight || 80;
+    const tx = x + 18 + tw > W - 10 ? Math.max(10, x - 18 - tw) : x + 18, ty = y + 18 + th > H - 10 ? Math.max(10, y - 18 - th) : y + 18;
+    tip.style.transform = `translate3d(${tx}px,${ty}px,0)`;
+  }
 
   /* ------------------------------------------------------------------ the header's label */
   function label(el, name, num) {
