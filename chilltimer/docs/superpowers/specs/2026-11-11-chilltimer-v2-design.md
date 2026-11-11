@@ -237,11 +237,11 @@ deck) and picked the ring. What is built now replaces §2 where they differ.
   "19 / 36 · Bookworm — Purrple Cat"); the pick is made on release, so a slide past twenty scenes
   does not load twenty. It is a real range input (`pickHTML` / `wirePick` in `js/ring.js`), so keys
   and touch work by themselves. On short screens the line stands up (written top to bottom).
-- **Tracks.** 36 now. The 30 new ones are Creative Commons (CC0, CC BY, CC BY-SA) from archive.org,
-  each with `license` and `page` in `js/tracks.js`; the name under the line links to that page and
-  its tip shows the licence, which is the credit those licences ask for. The six from v1 come from
-  an archive.org item with no licence field; they are kept as they were, and that is the owner's
-  call to revisit.
+- **Tracks.** 36, all Creative Commons (CC0, CC BY, CC BY-SA) from archive.org, each with `url`,
+  `license` and `page` in `js/tracks.js`. The name under the line links to that page and its tip
+  shows the licence, which is the credit those licences ask for. The six tracks carried over from
+  v1 came from an archive.org item with no licence stated, so the owner had them replaced by six
+  licensed lofi tracks; `test.mjs` now fails if a track has no licence or source page.
 - **Live music variants.** The generated Beat and Piano each come in eight kinds (`BEATS` and
   `PIANOS` in `js/sound.js`; settings `beatKit`, `pianoKit`). Beats: Mellow (the first one), Boom
   bap, Sleepy, Jazzy, Bossa, Dusty tape, Sunny, Night drive. Pianos: Felt (the first one),
@@ -267,3 +267,5 @@ deck) and picked the ring. What is built now replaces §2 where they differ.
   (`filter: brightness(.74)`) and the small controls have a dark edge, because pale clips (snow, a
   dusk sky) made the light controls hard to read. Not checked: how each clip looks at its loop
   point ("Foggy night road" at 60 s is the longest). "Warm tree lights" is a Christmas tree.
+- **Published.** v2 replaced v1 on 2026-11-11 and lives at `/chilltimer/`. `/ptimer/` keeps one
+  small page that sends old links and bookmarks to the new address.
