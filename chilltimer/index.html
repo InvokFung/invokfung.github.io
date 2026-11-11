@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-i18n-attr="content:meta.description" content="ChillTimer — a focus timer inside a quiet, living scene. Vibes, alarms, and a box where you just type what you want.">
+  <meta name="theme-color" content="#120a08">
+  <title>ChillTimer</title>
+  <link rel="icon" id="favicon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:wght@400;500;600&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/tour.css">
+</head>
+<body class="is-idle booting">
+
+  <canvas class="scene" id="sceneA" aria-hidden="true"></canvas>
+  <canvas class="scene" id="sceneB" aria-hidden="true"></canvas>
+  <div class="yt" id="yt" aria-hidden="true"></div>
+  <div class="bloom" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <canvas class="wave" id="wave" aria-hidden="true"></canvas>
+
+  <header class="top fade">
+    <div class="brand">
+      <span class="brand-name">ChillTimer</span>
+      <span class="brand-vibe" id="vibeLabel"></span>
+    </div>
+    <div class="top-right">
+      <button class="next-alarm glass" id="nextAlarm" data-tip="Next alarm" data-i18n-attr="data-tip:top.nextAlarm" hidden></button>
+      <button class="help-dot glass" id="tourBtn" aria-label="How to use" data-tip="How to use" data-i18n-attr="aria-label:tour.open; data-tip:tour.open">?</button>
+      <time class="clock" id="clock"></time>
+    </div>
+  </header>
+  <div class="scenes fade glass" id="scenes"></div>
+
+  <div class="chapter" id="chapter" aria-hidden="true">
+    <span class="chapter-no" id="chapterNo"></span>
+    <span class="chapter-name" id="chapterName"></span>
+  </div>
+
+  <main class="center" id="center">
+    <!-- The face: the clock with the sound ring around it. No buttons: taps on the picture do the work (js/ring.js). -->
+    <div class="face" id="face">
+      <svg class="dial" id="dial" role="group" aria-label="Sound" data-i18n-attr="aria-label:strip.sound"></svg>
+      <div class="mode-wrap"><div class="mode" id="mode"></div><div class="ring-say" id="ringSay" aria-live="polite"></div></div>
+      <div class="digits-wrap">
+        <button class="digits" id="digits" data-tip="digits" aria-label="Time left. Click to type a time." data-i18n-attr="aria-label:aria.digits"></button>
+        <input class="digits-edit" id="digitsEdit" inputmode="numeric" autocomplete="off" aria-label="Set time, for example 25 or 12:30" data-i18n-attr="aria-label:aria.digitsEdit" hidden>
+        <span class="bump" id="bump" aria-hidden="true"></span>
+      </div>
+      <div class="plan" id="plan" role="list" aria-label="Session plan" data-i18n-attr="aria-label:aria.plan"></div>
+      <p class="state" id="stateLine"></p>
+      <!-- Kept for screen readers; out of sight and out of the tab order. -->
+      <div class="controls sr">
+        <button tabindex="-1" class="orb glass" id="btnReset" data-tip="Reset this block" aria-label="Reset this block" data-i18n-attr="data-tip:action.reset; aria-label:action.reset"></button>
+        <button tabindex="-1" class="orb main glass" id="btnToggle" data-tip="toggle" data-key="Space" aria-label="Start"></button>
+        <button tabindex="-1" class="orb glass" id="btnSkip" data-tip="Skip to the next block" aria-label="Skip to the next block" data-i18n-attr="data-tip:action.skip; aria-label:action.skip"></button>
+      </div>
+    </div>
+    <div class="tunes fade" id="tunes"></div>
+    <!-- The hint line is filled from the dictionary (hint.line) by ui.js. -->
+    <p class="hint fade" id="hint"></p>
+    <span class="sr" id="live" aria-live="polite"></span>
+  </main>
+
+  <nav class="dock glass fade" id="dock" aria-label="Controls" data-i18n-attr="aria-label:aria.dock">
+    <i class="blob" aria-hidden="true"></i>
+    <button hidden class="chip dial" data-k="vibe" data-pop="vibe" data-tip="vibe" aria-label="Scene" data-i18n-attr="aria-label:rail.vibe.label"><span class="ico" data-icon="vibe"></span><small data-i18n="rail.vibe">Scene</small></button>
+    <button hidden class="chip dial" data-k="sound" data-pop="sound" data-tip="sound" aria-label="Sound" data-i18n-attr="aria-label:rail.sound.label"><span class="ico" id="icoSound"></span><small data-i18n="rail.sound">Sound</small></button>
+    <button hidden class="chip dial" data-k="mood" data-tip="mood" aria-label="Room sounds" data-i18n-attr="aria-label:rail.mood.label"><span class="ico" data-icon="mood"></span><small data-i18n="rail.mood">Room</small></button>
+    <button class="chip" data-k="alarms" data-pop="alarms" data-tip="alarms" aria-label="Alarm" data-i18n-attr="aria-label:rail.alarms.label"><span class="ico" data-icon="bell"></span><i class="dot" aria-hidden="true"></i><small data-i18n="rail.alarms">Alarm</small></button>
+    <button class="chip dial" data-k="stats" data-pop="stats" data-tip="stats" aria-label="Today" data-i18n-attr="aria-label:rail.stats.label"><span class="ico" data-icon="flame"></span><small data-i18n="rail.stats">Today</small></button>
+    <span class="dock-gap" aria-hidden="true"></span>
+    <button class="chip" data-act="cmd" data-tip="Type what you want, and it happens" aria-label="Just type what you want" data-i18n-attr="aria-label:rail.cmd.label; data-tip:rail.cmd.tip"><span class="ico" data-icon="keyboard"></span><small data-i18n="rail.cmd">Just type</small></button>
+    <button class="chip" data-pop="settings" data-tip="Settings" aria-label="Settings" data-i18n-attr="aria-label:rail.settings.label; data-tip:rail.settings.label"><span class="ico" data-icon="sliders"></span><small data-i18n="rail.settings">Settings</small></button>
+    <button class="chip" data-act="mini" id="chipMini" data-tip="Floating mini window" aria-label="Floating mini window" data-i18n-attr="aria-label:rail.mini.label; data-tip:rail.mini.label"><span class="ico" data-icon="mini"></span><small data-i18n="rail.mini">Mini</small></button>
+    <button class="chip" data-act="full" data-tip="Fullscreen" aria-label="Fullscreen" data-i18n-attr="aria-label:rail.full.label; data-tip:rail.full.label"><span class="ico" data-icon="full"></span><small data-i18n="rail.full">Full</small></button>
+  </nav>
+  <i class="edge" aria-hidden="true"></i>
+  <div class="strip glass" id="strip" hidden></div>
+  <section class="pop glass" id="pop" hidden></section>
+
+  <div class="cmd glass" id="cmd" hidden>
+    <div class="cmd-row">
+      <span class="cmd-caret" data-icon="keyboard" aria-hidden="true"></span>
+      <input id="cmdInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type what you want" placeholder="45 · 14:30 standup · every 30m water · lofi" data-i18n-attr="aria-label:cmd.aria; placeholder:cmd.placeholder">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmd-read" id="cmdRead"></div>
+    <ul class="cmd-list" id="cmdList"></ul>
+    <!-- Shown while the box is empty: examples in small groups, filled by ui.js from the dictionary (cmd.groups). -->
+    <div class="cmd-ideas" id="cmdIdeas"></div>
+  </div>
+
+  <div class="ring glass" id="ring" role="alertdialog" aria-labelledby="ringLabel" hidden>
+    <div class="ring-bell" data-icon="bell"></div>
+    <div class="ring-label" id="ringLabel"></div>
+    <div class="ring-sub" id="ringSub"></div>
+    <div class="ring-actions">
+      <button class="soft" id="ringSnooze"><span data-i18n="ring.snooze">Snooze 5 min</span> <kbd>S</kbd></button>
+      <button class="soft strong" id="ringDismiss"><span data-i18n="ring.dismiss">Dismiss</span> <kbd>↵</kbd></button>
+    </div>
+  </div>
+
+  <div class="tap-fx" id="tapFx" aria-hidden="true"></div>
+  <div class="menu glass" id="menu" role="menu" hidden></div>
+  <!-- The tour is built by js/ring.js: a welcome card, then steps with a moving finger. Styles: css/tour.css. -->
+  <div class="tour" id="tour" role="dialog" aria-modal="true" hidden></div>
+  <div class="tip glass" id="tip" role="tooltip"></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div class="zenline" aria-hidden="true"><i id="zenFill"></i></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

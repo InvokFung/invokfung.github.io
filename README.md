@@ -91,4 +91,4 @@ dark like the map; the theme is a live value in the source panel. TripleFind Are
 the tiles as an experiment rather than as a tile.
 
 Other corners: `/relay/` (Relay), `/tracewise/` (Tracewise), `/onboard/` (Onboard), `/dispatch/` (Dispatch), `/blog/` (StudyLog), `/atlas/` (StudyLog Atlas), `/studio/` (Intonation Studio), `/layerline/` (Layerline),
-`/arena/` (TripleFind Arena), `/ptimer/` (ChillTimer), `/triplefind/` (TripleFind).
+`/arena/` (TripleFind Arena), `/chilltimer/` (ChillTimer; `/ptimer/` sends old links there), `/triplefind/` (TripleFind).

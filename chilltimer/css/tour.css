@@ -1,0 +1,108 @@
+/* ==========================================================================================
+   The tour (js/ring.js): a welcome card, then six steps. On each step a finger shows the move.
+   Also here: the side light of a double tap, because the tour plays the same one.
+   ========================================================================================== */
+
+/* two quick taps on a side: a soft light from that side (real taps and the tour both use it) */
+.tap-fx b { position: absolute; top: 0; bottom: 0; width: 48%; opacity: 0; animation: tapSweep .85s var(--out) forwards; }
+.tap-fx b.right { right: 0; background: radial-gradient(95% 72% at 100% 50%, color-mix(in srgb, var(--ink) 24%, transparent), transparent 72%); }
+.tap-fx b.left { left: 0; background: radial-gradient(95% 72% at 0% 50%, color-mix(in srgb, var(--ink) 24%, transparent), transparent 72%); }
+@keyframes tapSweep { 0% { opacity: 0; } 22% { opacity: 1; } 100% { opacity: 0; } }
+body.touring .tap-fx { z-index: 21; }                               /* above the dimmed picture */
+
+.tour { position: fixed; inset: 0; z-index: 20; }
+.tour-spot {
+  position: fixed; pointer-events: none;
+  box-shadow: 0 0 0 200vmax color-mix(in srgb, var(--shade) 68%, transparent), 0 0 0 1.5px color-mix(in srgb, var(--ink) 50%, transparent), 0 0 30px 2px color-mix(in srgb, var(--accent) 40%, transparent);
+  transition: left .5s var(--out), top .5s var(--out), width .5s var(--out), height .5s var(--out), border-radius .4s ease, box-shadow .5s ease;
+}
+.tour.hello .tour-spot { box-shadow: 0 0 0 200vmax color-mix(in srgb, var(--shade) 62%, transparent); }
+.tour.wide .tour-spot { box-shadow: 0 0 0 200vmax color-mix(in srgb, var(--shade) 42%, transparent); }   /* the picture stays in view */
+
+/* ---------- the card ---------- */
+.tour-card {
+  position: fixed; z-index: 2; left: 50%; bottom: clamp(18px, 7vh, 64px); width: min(440px, calc(100vw - 28px)); translate: -50% 0;
+  padding: 16px 18px 14px; border-radius: 26px; text-align: center;
+}
+.tour-card.top { bottom: auto; top: clamp(18px, 9vh, 80px); }
+.tour-hello, .tour.hello .tour-step { display: none; }
+.tour.hello .tour-hello { display: block; }
+.tour.hello .tour-card { bottom: auto; top: 50%; translate: -50% -50%; width: min(410px, calc(100vw - 28px)); padding: 30px 26px 20px; border-radius: 32px; animation: tourIn .6s var(--out) both; }
+@keyframes tourIn { from { opacity: 0; transform: translateY(14px) scale(.97); } }
+
+/* welcome: a small picture of the main move (a tap and its ripple), a title, two choices */
+.tour-mark { display: block; width: 64px; height: 64px; margin: 0 auto 16px; overflow: visible; }
+.tour-mark circle { fill: none; transform-box: fill-box; transform-origin: center; }
+.tour-mark .rim { stroke: color-mix(in srgb, var(--ink) 26%, transparent); stroke-width: 2.5; stroke-dasharray: 16 5.5; stroke-linecap: round; }
+.tour-mark .wave { stroke: var(--accent); stroke-width: 2; animation: tourWave 2.4s var(--out) infinite; }
+.tour-mark .dot { fill: var(--accent); animation: tourDot 2.4s ease-in-out infinite; }
+@keyframes tourWave { 0%, 12% { transform: scale(.2); opacity: 0; } 22% { opacity: .9; } 70%, 100% { transform: scale(1); opacity: 0; } }
+@keyframes tourDot { 0%, 100% { transform: scale(1); } 10% { transform: scale(.72); } 24% { transform: scale(1); } }
+.tour-hello h2 { margin: 0 0 10px; font: italic 400 1.7rem/1.15 var(--head); letter-spacing: .005em; }
+body[data-vibe="lofi"] .tour-hello h2 { font-style: normal; font-size: 2rem; }
+html:is([lang="zh-Hans"], [lang="zh-Hant"], [lang="ja"], [lang="ko"]) .tour-hello h2,
+html:is([lang="zh-Hans"], [lang="zh-Hant"], [lang="ja"], [lang="ko"]) body[data-vibe="lofi"] .tour-hello h2 { font-style: normal; font-size: 1.35rem; font-weight: 600; line-height: 1.3; }
+.tour-hello p { margin: 0 auto 20px; max-width: 30ch; font-size: .95rem; line-height: 1.6; color: color-mix(in srgb, var(--ink) 82%, transparent); }
+.tour-go { display: flex; justify-content: center; gap: 10px; }
+.tour-go button { min-height: 44px; padding: 0 1.5em; border-radius: 99px; font-size: .88rem; transition: color .2s ease, background-color .2s ease, box-shadow .2s ease; }
+.tour-start, .tour-next { background: var(--accent); color: var(--shade); font-weight: 600; box-shadow: 0 8px 22px -10px var(--accent); }
+.tour-start:hover, .tour-next:hover { box-shadow: 0 8px 26px -6px var(--accent); }
+.tour-later { color: var(--dim); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 20%, transparent); }
+.tour-later:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 10%, transparent); }
+.tour-hello small { display: block; margin-top: 16px; font-size: .72rem; line-height: 1.5; color: var(--dim); }
+
+/* a step: which one, what to do, then Skip on the left and Next on the right */
+.tour-count { display: block; margin-bottom: 6px; font-size: .62rem; font-weight: 600; letter-spacing: .26em; color: var(--accent); }
+.tour-step p { margin: 0 0 14px; font-size: .96rem; line-height: 1.55; text-wrap: balance; }
+.tour-foot { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; }
+.tour-foot button { min-height: 38px; border-radius: 99px; font-size: .8rem; white-space: nowrap; transition: color .2s ease, background-color .2s ease, box-shadow .2s ease; }
+.tour-skip { justify-self: start; padding: 0 .9em; color: var(--dim); }
+.tour-skip:hover, .tour-back:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 10%, transparent); }
+.tour-nav { justify-self: end; display: flex; align-items: center; gap: 6px; }
+.tour-back { display: grid; place-items: center; width: 38px; color: var(--dim); }
+.tour-next { padding: 0 1.3em; }
+.tour-dots { display: flex; justify-content: center; gap: 6px; }
+.tour-dots i { width: 6px; height: 6px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 30%, transparent); transition: background-color .3s ease, width .3s var(--out); }
+.tour-dots i.on { width: 16px; border-radius: 3px; background: var(--accent); }
+
+/* ---------- the finger: a soft round touch point that glides, presses and holds ---------- */
+.tour-finger {
+  position: fixed; z-index: 3; left: 0; top: 0; width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 50%; pointer-events: none; opacity: 0;
+  background: color-mix(in srgb, var(--ink) 16%, transparent);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 86%, transparent), 0 6px 18px rgba(0, 0, 0, .45);
+  transition: transform .7s cubic-bezier(.4, 0, .2, 1), opacity .35s ease;
+}
+.tour-finger.on { opacity: 1; }
+.tour-finger::before { content: ''; position: absolute; inset: 9px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 60%, transparent); transition: inset .12s ease, background-color .12s ease; }
+.tour-finger.down::before { inset: 4px; background: var(--ink); }   /* pressed */
+.tour-finger.hold::after {                                          /* held: a ring fills around it */
+  content: ''; position: absolute; inset: -9px; border-radius: 50%; --tour-p: 0deg;
+  background: conic-gradient(var(--accent) var(--tour-p), color-mix(in srgb, var(--ink) 18%, transparent) 0);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3.5px), #000 calc(100% - 3px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - 3.5px), #000 calc(100% - 3px));
+  animation: tourHold .5s linear forwards;
+}
+@property --tour-p { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes tourHold { to { --tour-p: 360deg; } }
+
+/* what the move just did, said next to the finger */
+.tour-note {
+  position: fixed; z-index: 3; translate: -50% 0; padding: .5em 1.05em; border-radius: 99px; white-space: nowrap; pointer-events: none; opacity: 0;
+  font-size: .78rem; font-weight: 600; letter-spacing: .02em; color: var(--shade); background: var(--accent); box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .7);
+}
+.tour-note.on { animation: tourNote 1.9s var(--out) both; }
+@keyframes tourNote { 0% { opacity: 0; transform: translateY(6px) scale(.94); } 12%, 80% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-4px); } }
+
+/* after the tour closes, the "?" glows twice: this is where it lives */
+.help-dot.nudge { color: var(--ink); animation: tourNudge 1.3s ease-in-out 2; }
+@keyframes tourNudge { 50% { box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 34%, transparent), 0 0 18px var(--accent); } }
+
+@media (max-width: 700px) {
+  .tour-go { flex-direction: column-reverse; }
+  .tour-step p { font-size: .92rem; }
+}
+/* narrow phones: the "2 / 6" count already says where you are, so the dots make room for the buttons */
+@media (max-width: 480px) {
+  .tour-dots { display: none; }
+  .tour-foot { grid-template-columns: 1fr auto; }
+}

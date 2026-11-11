@@ -161,7 +161,7 @@ window.PORTFOLIO = {
       id: "2023", label: "2023", title: "Shipping small things", role: "Web developer",
       text: "My first title. Interfaces for other people by day, small games and tools of my own by night. Small, finished and live became the habit.",
       picked: ["React", "Responsive UI", "DOM", "Game logic"],
-      built: [["TripleFind", "/triplefind/"], ["Pomodoro timer", "/ptimer/"], ["Shape Calculator", "https://github.com/InvokFung/ShapeCalculator"]],
+      built: [["TripleFind", "/triplefind/"], ["Pomodoro timer", "/chilltimer/"], ["Shape Calculator", "https://github.com/InvokFung/ShapeCalculator"]],
       events: [["2023", "Start as a web developer"], ["2023-02", "TripleFind goes live"], ["2023-03", "A pomodoro timer, later ChillTimer"], ["2023", "Shape Calculator"]]
     },
     {

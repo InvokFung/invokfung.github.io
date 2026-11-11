@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChillTimer sound lab</title>
+  <style>
+    body { margin: 0; padding: 16px; background: #14161c; color: #dde1ea; font: 14px/1.5 system-ui, sans-serif; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    section { margin: 0 0 14px; }
+    label { display: flex; align-items: center; gap: 10px; margin: 4px 0; }
+    label span { width: 70px; }
+    input[type=range] { width: 220px; }
+    button { background: #2a2f3d; color: inherit; border: 1px solid #454c60; border-radius: 6px; padding: 5px 12px; cursor: pointer; }
+    button.on { background: #4a6fd8; border-color: #4a6fd8; }
+    canvas { display: block; width: 100%; max-width: 640px; height: 120px; background: #0c0d11; border-radius: 6px; }
+    #meter { font: 13px ui-monospace, monospace; }
+  </style>
+</head>
+<body>
+  <h1>ChillTimer sound lab</h1>
+  <section>
+    <button id="unlock">Unlock sound</button>
+    <span id="state">not started</span>
+  </section>
+  <section>
+    <label><span>Master</span><input id="master" type="range" min="0" max="1" step="0.01" value="0.8"></label>
+    <label><span>Mute</span><input id="mute" type="checkbox"></label>
+  </section>
+  <section id="layers"></section>
+  <section>
+    <button id="play">Music play</button>
+    <button data-style="beat" class="style on">Beat</button>
+    <button data-style="piano" class="style">Piano</button>
+    <label><span>Music vol</span><input id="mvol" type="range" min="0" max="1" step="0.01" value="1"></label>
+  </section>
+  <section>
+    Chime:
+    <button data-chime="soft">soft</button>
+    <button data-chime="bell">bell</button>
+    <button data-chime="digital">digital</button>
+    Ring:
+    <button id="ringStart">start</button>
+    <button id="ringStop">stop</button>
+  </section>
+  <section id="meter">Master RMS: <b id="rms">-120.0 dBFS</b> &nbsp; peak: <b id="peak">-120.0</b> dBFS</section>
+  <canvas id="wave" width="640" height="120"></canvas>
+
+  <script type="module">
+    import { sound } from './js/sound.js';
+    const $ = id => document.getElementById(id);
+
+    $('unlock').onclick = async () => { await sound.unlock(); show(); };
+    const show = () => { $('state').textContent = sound.ready ? 'running' : 'suspended'; };
+    $('master').oninput = e => sound.setMaster(+e.target.value);
+    $('mute').onchange = e => sound.mute(e.target.checked);
+    $('mvol').oninput = e => sound.music.setVolume(+e.target.value);
+
+    for (const name of sound.LAYERS) {
+      const l = document.createElement('label');
+      l.innerHTML = `<span>${name}</span><input type="range" min="0" max="1" step="0.01" value="0">`;
+      l.querySelector('input').oninput = e => sound.setLayer(name, +e.target.value);
+      $('layers').append(l);
+    }
+
+    $('play').onclick = () => {
+      sound.music.toggle();
+      $('play').textContent = sound.music.playing ? 'Music pause' : 'Music play';
+    };
+    document.querySelectorAll('.style').forEach(b => b.onclick = () => {
+      sound.music.setStyle(b.dataset.style);
+      document.querySelectorAll('.style').forEach(x => x.classList.toggle('on', x === b));
+    });
+    document.querySelectorAll('[data-chime]').forEach(b => b.onclick = () => sound.chime(b.dataset.chime));
+    $('ringStart').onclick = () => sound.ringStart();
+    $('ringStop').onclick = () => sound.ringStop();
+
+    // Level meter: read the analyser every 15 ms (the window is 21 ms, so nothing is missed).
+    const buf = new Float32Array(1024);
+    let ms = 0, acc = 0, cnt = 0, pk = 0;
+    const db = x => (x > 1e-12 ? 10 * Math.log10(x) : -120);
+    setInterval(() => {
+      const an = sound.analyser();
+      if (!an) return;
+      an.getFloatTimeDomainData(buf);
+      let s = 0, p = 0;
+      for (const v of buf) { s += v * v; p = Math.max(p, Math.abs(v)); }
+      ms = ms * 0.97 + (s / buf.length) * 0.03;
+      acc += s; cnt += buf.length; pk = Math.max(pk, p);
+    }, 15);
+    setInterval(() => {
+      $('rms').textContent = db(ms).toFixed(1) + ' dBFS';
+      $('peak').textContent = (20 * Math.log10(Math.max(pk, 1e-6))).toFixed(1);
+      show();
+    }, 250);
+
+    // For scripts: await lab.measure(5000) gives RMS and peak (dBFS) over that time.
+    window.lab = {
+      sound,
+      measure(msec) {
+        acc = 0; cnt = 0; pk = 0;
+        return new Promise(res => setTimeout(() => res({
+          rms: +db(acc / Math.max(cnt, 1)).toFixed(1),
+          peak: +(20 * Math.log10(Math.max(pk, 1e-6))).toFixed(1),
+          peakLin: +pk.toFixed(4),
+        }), msec));
+      },
+    };
+
+    // Spectrum
+    const cv = $('wave'), g = cv.getContext('2d'), bins = new Uint8Array(512);
+    (function draw() {
+      requestAnimationFrame(draw);
+      g.clearRect(0, 0, cv.width, cv.height);
+      const an = sound.analyser();
+      if (!an) return;
+      an.getByteFrequencyData(bins);
+      const w = cv.width / 128;
+      g.fillStyle = '#6f9cff';
+      for (let i = 0; i < 128; i++) {
+        // log spacing: bar i covers a growing range of bins
+        const a = Math.floor(2 ** (i / 128 * 9)) - 1, b = Math.max(a + 1, Math.floor(2 ** ((i + 1) / 128 * 9)) - 1);
+        let m = 0;
+        for (let j = a; j < b; j++) m = Math.max(m, bins[j]);
+        const h = m / 255 * cv.height;
+        g.fillRect(i * w, cv.height - h, w - 1, h);
+      }
+    })();
+  </script>
+</body>
+</html>

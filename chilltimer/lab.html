@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChillTimer scene lab</title>
+  <style>html,body{margin:0;height:100%;background:#000;overflow:hidden}canvas{position:fixed;inset:0;width:100%;height:100%}</style>
+</head>
+<body>
+  <!-- Dev page: one scene, no UI. lab.html?vibe=lofi&scene=1&story=0.5&round=0.3 -->
+  <canvas id="sceneA"></canvas>
+  <canvas id="sceneB"></canvas>
+  <script type="module">
+    import { stage } from './js/scenes/engine.js';
+    const q = new URLSearchParams(location.search);
+    const id = q.get('vibe') || 'cozy';
+    stage.register((await import(`./js/scenes/${id}.js`)).default);
+    stage.init(document.getElementById('sceneA'), document.getElementById('sceneB'));
+    stage.setVibe(id, +q.get('scene') || 0);
+    stage.setStory({ session: +q.get('story') || 0, round: +q.get('round') || 0, mode: q.get('mode') || 'focus', running: true });
+    if (q.get('play')) stage.preview(+q.get('play'));
+    window.stage = stage;
+  </script>
+</body>
+</html>
